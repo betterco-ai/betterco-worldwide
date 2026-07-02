@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Documents worldwide · BetterCo</title>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+ /* BetterCo brand tokens (betterco.ai design system) */
+ :root{--ink:#1a2340;--muted:#5a6478;--line:#d8dde8;--bg:#f8f9fc;
+   --req:#ff3b30;--req-bg:#fff1f0;--opt:#1f9d54;--opt-bg:#e9faf0;
+   --accent:#4A75DD;--accent-light:#6895FF;--chip:#eef1f6;--chip-ink:#4A75DD;--part-bg:#eef1f6;--part-ink:#1a2340}
+ *{box-sizing:border-box}
+ body{font-family:Montserrat,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+   margin:0;background:var(--bg);line-height:1.45}
+ header{background:linear-gradient(120deg,#1a2340 0%,#2a3558 45%,#4A75DD 100%);color:#fff;padding:16px 28px;display:flex;align-items:center;gap:14px}
+ header img.logo{width:32px;height:32px;border-radius:7px;background:#fff;padding:2px}
+ header h1{margin:0;font-size:19px;flex:1}
+ .mode{font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+ .mode.dry{background:#1e293b;color:#7dd3fc}
+ .mode.live{background:#7f1d1d;color:#fecaca}
+ .lang{display:flex;border:1px solid #334155;border-radius:8px;overflow:hidden}
+ .lang button{background:transparent;color:#94a3b8;border:none;padding:5px 11px;font-size:12px;font-weight:700;cursor:pointer}
+ .lang button.on{background:#4A75DD;color:#fff}
+ .wrap{max-width:980px;margin:0 auto;padding:20px 18px 70px}
+ .tabs{display:flex;gap:6px;margin:18px 0 6px}
+ .tabs .tab{background:#eef1f6;color:var(--accent);padding:9px 18px}
+ .tabs .tab.on{background:var(--accent);color:#fff}
+ .combo{position:relative}
+ .combo-list{position:fixed;max-height:320px;overflow:auto;
+   background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px #1a234022;z-index:1000}
+ .combo-item{padding:9px 12px;font-size:13.5px;cursor:pointer;border-bottom:1px solid #f1f3f5}
+ .combo-item:last-child{border-bottom:none}
+ .combo-item:hover,.combo-item.active{background:var(--chip)}
+ .combo-empty{padding:10px 12px;color:var(--muted);font-size:13px}
+ .card{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:16px;overflow:hidden}
+ .card h3{margin:0;padding:12px 16px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;
+   color:var(--muted);border-bottom:1px solid var(--line);background:#fafbfc;display:flex;gap:8px;align-items:center}
+ .card h3 .step{background:var(--accent);color:#fff;width:20px;height:20px;border-radius:50%;
+   display:inline-flex;align-items:center;justify-content:center;font-size:11px}
+ .body{padding:16px}
+ .row{display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+ label{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);display:block;margin-bottom:5px}
+ select,input{padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fff}
+ input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px #4A75DD22}
+ .grow{flex:1;min-width:220px}
+ button{font-size:14px;font-weight:600;border:none;border-radius:8px;padding:10px 18px;cursor:pointer;background:var(--accent);color:#fff}
+ button:hover{filter:brightness(1.05)} button:disabled{opacity:.45;cursor:not-allowed}
+ button.ghost{background:#eef1f6;color:var(--accent)}
+ button.danger{background:var(--req)}
+ .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700}
+ .badge.req{color:var(--req);background:var(--req-bg);border:1px solid #fecaca}
+ .badge.opt{color:var(--opt);background:var(--opt-bg);border:1px solid #bbf7d0}
+ .res{border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-top:9px;cursor:pointer;display:flex;gap:12px;align-items:flex-start}
+ .res:hover{border-color:var(--accent);background:#f8fbff}
+ .res.sel{border-color:var(--accent);background:#eff6ff}
+ .res .nm{flex:1}.res .nm b{font-size:14px}.res .nm small{color:var(--muted);display:block}
+ .res .st{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}
+ .st.active{background:var(--opt-bg);color:var(--opt)} .st.other{background:#f1f5f9;color:var(--muted)}
+ .fcard{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--line);
+   border-radius:9px;margin-top:8px;cursor:pointer}
+ .fcard:hover{border-color:var(--accent);background:#f8fbff}.fcard.sel{border-color:var(--accent);background:#eff6ff}
+ .fcard .fl{flex:1}.fcard .fl b{font-size:13.5px}.fcard .fl small{color:var(--muted);font-variant:small-caps;display:block}
+ .et{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--chip);color:var(--chip-ink)}
+ .et.part{background:var(--part-bg);color:var(--part-ink)}
+ .ct{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#f1f5f9;padding:3px 8px;border-radius:6px}
+ pre{margin:0;background:#0f172a;color:#e2e8f0;padding:14px;border-radius:8px;font-size:12.5px;overflow:auto;white-space:pre-wrap}
+ .pkey{color:#7dd3fc}.pstr{color:#bef264}.pnull{color:#fca5a5}
+ .hint{font-size:12px;color:var(--muted);margin-top:8px}
+ .err{background:var(--req-bg);color:var(--req);border:1px solid #fecaca;border-radius:8px;padding:10px 12px;font-size:13px;margin-top:10px}
+ .ok{background:var(--opt-bg);color:var(--opt);border:1px solid #bbf7d0;border-radius:8px;padding:10px 12px;font-size:13px;margin-top:10px}
+ .muted{color:var(--muted)} .hidden{display:none}
+ .dlrow{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid #f1f3f5;font-size:13px}
+ .dlrow .code{font-family:ui-monospace,Menlo,monospace;font-size:11px;background:#f1f5f9;padding:2px 7px;border-radius:5px}
+ .spin{display:inline-block;width:13px;height:13px;border:2px solid #cbd5e1;border-top-color:var(--accent);
+   border-radius:50%;animation:s .7s linear infinite;vertical-align:-2px}
+ @keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<header>
+ <img class="logo" alt="BetterCo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEtklEQVR42u1WTWxUVRT+zr3vzR8tMDPAQgvTTislNWnUkaSdThmDQLoBE+PAxpULUZOqC3/iAhGVxLBQdiZuxGgkceJGV4SomVgKpqnBxhBSoGWaxnSM7XSA6XTmvnuPizcDJe3UQusKbvI27557fr7znR/g4XnQD62BDoFkUqxIMrOFgbReQ/9TcrVB06oiB0wwGttG7NsDEo+6v5kWCxKzgDJKZ/LZwfNVu7wKB44K4JgJt3S/BmF/Km2vl42pr40BEIGNhtHqpZmxgS9d9NKa7g/2tA5Hu3cLy/+T0WqSmd9nqCtwiOugziSogaT1DWBK09cGWmoIWPdEsgyA2BhhGIYhPmFmOI7eX8gOXlyJ66HWXk3Muoq8WUEGji7J7lBzfN/m9j0cbImfrI9S9Wvr8wIQoeZ4/5Yd+zgcTbzryiSt/+KAS7LWp7cKBA6CTQeDPAQ2DPQKaTWzds4yOOcqEszAFTU///nNv4am79Ld1ucJc3EUROudiokWJgbyNSJay5EsGOnqE+Q5LaR3IxsFYuNyGgBrhyHEPnHbDkNKL8D8HJq6dmHyQhmxmMTwsAo5Nw9JX2CbKhc/LkwM5t3oM049BAQANLQlwl4Wl0EIsHJe1exkpC4peNb/QFJ2Qjl7japcZaMFez1EJFgQvSc9gcOqMrdrdnzwVzcNf1Moqv8kIZpKqtQ2lx3KLeDAUiRMEZDWtqPfkD5/SM0XX85nB08BQDDak7Bs35Nalb6dyQ7+sogb0Z51Lsd0wf2T1qFoz/OWJ9CuysWTc9mhKaRSEuk73VAsjj5tGrbHNglp92tVGs8HZr+qEYoYJ9gYJs0fubJJq0omsam19ylp+180TiUzO/7bSJXAAqAjxqlUQPQZAEK6gxfBfXf0YFt5X5e2bz0bPo5LlypAWm+ITHYK29ttdPn0dPb8Zbc0MwaxWwQAxuiDbMx10vjAdfgYB5u790rb94R21Nf5sXMTSKUEcMwsx3pq3LEzHG7bNRtu7b0eiUR8tX6/sTl+YHP7HhOMxF9Z6WALRRPnNj32jNPYktju3i8u6wUcSAog41hlq196fRtU+dZb2Wx2Hh3rPLgEDfAfRlcMWdaboZau35nUFEoAAsQoAUJqzcYWxpaSBBqJZL9l++O6PHfq5vi50Soqup7XBIAbH9kZ9gT818BcaHBEezabKVdTI4C0DjbH37Y8/hMAg41Tp4gYIAkSFrRT+lkrvFCYGChUWy/XccCty1C054jlWfehUnOH89cGvkAyaSHj1mutMYWj3btB1gFmEwaIXB2sCe4cYDABdAMCmZmrA98vaLlcL2/uZSxmh/P+MYBgFQs7crlgNfotdx7GxgSGh9V9zH+ud3mbA00525rzIgQ2o7ncSHFJ6WHclcNwNPEsCTtiqHRm5srWKcTGBBoaeMH2Y5YzviAFtRGb+E7YvpRRpeOa+QyR5kUj1gKEFh4W1Cdt/ztaz085ZefxG5MX8gum/z2vRwIAB6M9WwXJH6Xt7WQ21UViqeXCfWqcykUypUP/jA+N1ubHavYzAsBNTV3+olfuJxbtS69XgCFSzBjJ+6bPuo1q+Tz/31uyWGuDBCQlkitasc1aRf7wPLjnX3MZF3ONsfx4AAAAAElFTkSuQmCC" style="object-fit:contain">
+ <h1 id="appTitle"></h1>
+ <div class="lang" id="lang"><button data-l="de">DE</button><button data-l="en">EN</button></div>
+ <button class="ghost" id="settingsBtn"></button>
+ <span class="mode" id="mode">…</span>
+</header>
+<div class="wrap">
+
+ <div id="viewSetup" class="card hidden"></div>
+
+ <div class="tabs" id="tabs">
+  <button class="tab on" data-v="create" id="tab_create"></button>
+  <button class="tab" data-v="docs" id="tab_docs"></button>
+ </div>
+
+ <div id="viewCreate">
+
+ <!-- STEP 1 — search -->
+ <div class="card">
+  <h3><span class="step">1</span> <span id="t_step1"></span></h3>
+  <div class="body">
+   <div class="row">
+    <div class="grow"><label id="t_lblJur"></label>
+      <div class="combo">
+        <input id="jurSearch" autocomplete="off" style="width:100%" placeholder="">
+        <div class="combo-list hidden" id="jurList"></div>
+      </div></div>
+   </div>
+   <div class="row" style="margin-top:10px">
+    <div class="grow"><label id="t_lblName"></label>
+      <input id="q" placeholder="" style="width:100%"></div>
+    <button id="searchBtn"></button>
+   </div>
+   <div class="hint" id="searchHint"></div>
+   <div id="searchMsg"></div>
+   <div id="results"></div>
+  </div>
+ </div>
+
+ <!-- STEP 2 — legal form -->
+ <div class="card hidden" id="formCard">
+  <h3><span class="step">2</span> <span id="t_step2"></span></h3>
+  <div class="body" id="formBody"></div>
+ </div>
+
+ <!-- STEP 3 — create -->
+ <div class="card hidden" id="createCard">
+  <h3><span class="step">3</span> <span id="t_step3"></span></h3>
+  <div class="body">
+   <div class="hint" style="margin-top:0"><span id="t_payloadIntro"></span></div>
+   <pre id="payload"></pre>
+   <div class="row" style="margin-top:12px">
+    <button id="createBtn" class="danger"></button>
+    <button id="dryBtn" class="ghost"></button>
+    <span class="hint" id="createHint" style="margin:0"></span>
+   </div>
+   <div id="createMsg"></div>
+  </div>
+ </div>
+
+ <!-- STEP 4 — status + documents -->
+ <div class="card hidden" id="caseCard">
+  <h3><span class="step">4</span> <span id="t_step4"></span></h3>
+  <div class="body" id="caseBody"></div>
+ </div>
+
+ </div><!-- /viewCreate -->
+
+ <!-- ===== DOCUMENTS TAB (mock document-retrieval API) ===== -->
+ <div id="viewDocs" class="hidden">
+  <div class="card">
+   <h3><span class="step">1</span> <span id="t_docStep1"></span></h3>
+   <div class="body">
+    <input id="docQ" placeholder="" style="width:100%">
+    <div class="hint" id="t_mockNote"></div>
+    <div id="caseList" style="margin-top:6px"></div>
+   </div>
+  </div>
+  <div class="card hidden" id="docsCard">
+   <h3><span class="step">2</span> <span id="docsCardTitle"></span></h3>
+   <div class="body" id="docsList"></div>
+  </div>
+ </div>
+
+</div>
+<script>
+let REF=null, sel=null, selForm=null, genCT=null, lastCase=null;
+let lang = localStorage.getItem('documentSearchLang') || localStorage.getItem('kycLang') || 'de';
+
+const T = {
+ en:{
+  appTitle:"Get Documents worldwide",
+  settings:"⚙ Settings",
+  setupTitle:"Connect to a workspace",
+  setupIntro:"Enter your BetterCo API connection details. They are stored locally and used for every request.",
+  lblBaseUrl:"Base URL", lblWorkspace:"Workspace ID", lblKey:"API key", lblSecret:"API secret",
+  secretKeep:"leave blank to keep current", btnConnect:"Connect", connecting:"connecting…",
+  step1:"Find the company", step2:"Confirm the legal form",
+  step3:"Create the case", step4:"Case status & documents",
+  lblJur:"Jurisdiction", lblName:"Company name (or registry no.)",
+  selJur:"— select jurisdiction —", namePlaceholder:"e.g. Example Holding Ltd",
+  hintChoose:"Choose a jurisdiction, then enter the company name.  (A = automatic search · M = manual, legal form required · then the price band · ★ = curated legal-form mapping)",
+  chooseJur:"Please select a jurisdiction.",
+  btnSearch:"Search", btnContinue:"Continue →",
+  hintAuto:"Search is free — searches the official company registry for the chosen country.",
+  hintManual:"<b>Manual jurisdiction</b> — no registry search available. Enter the name and we go straight to legal-form + create.",
+  payloadIntro:"Request payload to create the case:",
+  btnPreview:"Preview payload only",
+  modeLive:"LIVE — billable", modeDry:"DRY-RUN",
+  dropReq:" — companyType required",
+  ctReq:"● companyType REQUIRED", ctOpt:"✓ companyType optional",
+  autoNote:" is automated — the legal form is inferred automatically. You can still set it.",
+  manualNote:" is a manual jurisdiction — you MUST pick the legal form or the case fails.",
+  manualBanner:n=>esc(n)+" is a <b>manual jurisdiction</b> — no registry search is available here, so the case is created directly from the name + legal form below.",
+  lblCompanyName:"Company name", lblAddr:"Address — street (optional)",
+  lblPostcode:"Postcode", lblCity:"City",
+  lblSelectCT:"Select company type", lblGenericCT:"companyType (generic master list)",
+  selDash:"— select —",
+  noMapping:(code,n)=>"No curated mapping for "+code+" — pick from the "+n+" valid values.",
+  enterName:"Enter a company name.",
+  searching:"searching…",
+  results:(n,q,jur)=>n+" result"+(n===1?"":"s")+" for “"+esc(q)+"” in "+jur,
+  pickFormReq:"Pick a legal form — required for this jurisdiction.",
+  firesReal:"Fires a real, billable create.",
+  dryNote:"Server in dry-run mode — returns the payload, does not create.",
+  btnDryRun:"Dry run (preview only)",
+  mockTitle:"Dry run — mocked locally.",
+  mockNote:"This is exactly what would be sent. No request was made.",
+  serverDryTitle:"Server dry-run.",
+  serverDryNote:"The server is in dry-run mode, so no case was created. Resolved payload:",
+  priceBand:"Price band",
+  btnCreateLive:"Create case (BILLABLE)", btnCreateDry:"Create (dry-run)",
+  confirmCreate:n=>"Create a REAL, billable case for “"+n+"”?",
+  submitting:"creating — this can take a moment…", dryRun:"Dry-run.", created:"Case created.",
+  processingTitle:"✓ Case creation started.", goCases:"View cases",
+  processingNote:"It is being built and will appear in your cases shortly.",
+  caseWord:"Case", statusWord:"status", ready:"✓ Ready", processing:"processing",
+  refresh:"Refresh", loadDocs:"Load documents",
+  crawlNote:" · processing can take a while — refresh later.",
+  loadingCase:"loading case", loadingDocs:"loading documents…",
+  noDocs:"No documents yet (they populate once the case is Ready).",
+  tabCreate:"Create case", tabDocs:"Retrieve documents",
+  docStep1:"Search cases", selectCase:"Select a case", docsFor:"Documents — ",
+  docPlaceholder:"Search all cases by name, ID or country…",
+  mockNote:"Live — real cases (read-only, free). Pick a case to list and download its documents.",
+  noCases:"No cases found.", docDownload:"Download", docsWord:"docs", loadingCases:"loading cases…"
+ },
+ de:{
+  appTitle:"Dokumente weltweit abrufen",
+  settings:"⚙ Einstellungen",
+  setupTitle:"Mit einem Workspace verbinden",
+  setupIntro:"Geben Sie Ihre BetterCo-API-Zugangsdaten ein. Sie werden lokal gespeichert und für jede Anfrage verwendet.",
+  lblBaseUrl:"Basis-URL", lblWorkspace:"Workspace-ID", lblKey:"API-Schlüssel", lblSecret:"API-Secret",
+  secretKeep:"leer lassen, um aktuelles zu behalten", btnConnect:"Verbinden", connecting:"verbinde…",
+  step1:"Unternehmen finden", step2:"Rechtsform bestätigen",
+  step3:"Fall anlegen", step4:"Fall-Status & Dokumente",
+  lblJur:"Jurisdiktion", lblName:"Firmenname (oder Registernummer)",
+  selJur:"— Jurisdiktion wählen —", namePlaceholder:"z. B. Muster GmbH",
+  hintChoose:"Wählen Sie eine Jurisdiktion und geben Sie den Firmennamen ein.  (A = automatische Suche · M = manuell, Rechtsform erforderlich · dann das Preisband · ★ = kuratierte Rechtsform-Zuordnung)",
+  chooseJur:"Bitte wählen Sie eine Jurisdiktion.",
+  btnSearch:"Suchen", btnContinue:"Weiter →",
+  hintAuto:"Die Suche ist kostenlos — durchsucht das offizielle Unternehmensregister des gewählten Landes.",
+  hintManual:"<b>Manuelle Jurisdiktion</b> — keine Registersuche verfügbar. Name eingeben, danach direkt Rechtsform + Anlegen.",
+  payloadIntro:"Anfrage-Payload zum Anlegen des Falls:",
+  btnPreview:"Nur Payload anzeigen",
+  modeLive:"LIVE — kostenpflichtig", modeDry:"TESTLAUF",
+  dropReq:" — companyType erforderlich",
+  ctReq:"● companyType ERFORDERLICH", ctOpt:"✓ companyType optional",
+  autoNote:" ist automatisiert — die Rechtsform wird automatisch ermittelt. Sie können sie dennoch setzen.",
+  manualNote:" ist eine manuelle Jurisdiktion — Sie MÜSSEN die Rechtsform wählen, sonst schlägt die Anlage fehl.",
+  manualBanner:n=>esc(n)+" ist eine <b>manuelle Jurisdiktion</b> — hier ist keine Registersuche verfügbar, daher wird der Fall direkt aus Name + Rechtsform unten angelegt.",
+  lblCompanyName:"Firmenname", lblAddr:"Adresse — Straße (optional)",
+  lblPostcode:"PLZ", lblCity:"Stadt",
+  lblSelectCT:"Company type wählen", lblGenericCT:"companyType (generische Hauptliste)",
+  selDash:"— wählen —",
+  noMapping:(code,n)=>"Keine kuratierte Zuordnung für "+code+" — aus den "+n+" gültigen Werten wählen.",
+  enterName:"Bitte einen Firmennamen eingeben.",
+  searching:"suche…",
+  results:(n,q,jur)=>n+" Treffer für „"+esc(q)+"“ in "+jur,
+  pickFormReq:"Rechtsform wählen — für diese Jurisdiktion erforderlich.",
+  firesReal:"Löst einen echten, kostenpflichtigen POST aus.",
+  dryNote:"Server im Testlauf-Modus — gibt die Payload zurück, legt nichts an.",
+  btnDryRun:"Testlauf (nur Vorschau)",
+  mockTitle:"Testlauf — lokal simuliert.",
+  mockNote:"Genau das würde gesendet. Es wurde keine Anfrage gestellt.",
+  serverDryTitle:"Server-Testlauf.",
+  serverDryNote:"Der Server ist im Testlauf-Modus, es wurde kein Fall angelegt. Aufgelöste Payload:",
+  priceBand:"Preisband",
+  btnCreateLive:"Fall anlegen (KOSTENPFLICHTIG)", btnCreateDry:"Anlegen (Testlauf)",
+  confirmCreate:n=>"Einen ECHTEN, kostenpflichtigen Fall für „"+n+"“ anlegen?",
+  submitting:"lege an — kann einen Moment dauern…", dryRun:"Testlauf.", created:"Fall angelegt.",
+  processingTitle:"✓ Fallerstellung gestartet.", goCases:"Fälle ansehen",
+  processingNote:"Der Fall wird aufgebaut und erscheint in Kürze in Ihren Fällen.",
+  caseWord:"Fall", statusWord:"Status", ready:"✓ Bereit", processing:"in Bearbeitung",
+  refresh:"Aktualisieren", loadDocs:"Dokumente laden",
+  crawlNote:" · die Verarbeitung kann etwas dauern — später aktualisieren.",
+  loadingCase:"lade Fall", loadingDocs:"lade Dokumente…",
+  noDocs:"Noch keine Dokumente (erscheinen, sobald der Fall bereit ist).",
+  tabCreate:"Fall anlegen", tabDocs:"Dokumente abrufen",
+  docStep1:"Fälle suchen", selectCase:"Fall auswählen", docsFor:"Dokumente — ",
+  docPlaceholder:"Alle Fälle nach Name, ID oder Land durchsuchen…",
+  mockNote:"Live — echte Fälle (nur Lesen, kostenlos). Fall wählen, um Dokumente aufzulisten und herunterzuladen.",
+  noCases:"Keine Fälle gefunden.", docDownload:"Herunterladen", docsWord:"Dok.", loadingCases:"lade Fälle…"
+ }
+};
+function t(k){const v=T[lang][k];return typeof v==="function"?v.apply(null,[].slice.call(arguments,1)):v;}
+
+function esc(s){return (s||"").replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function j(o){return JSON.stringify(o);}
+async function api(path,opts){const r=await fetch(path,opts);const d=await r.json();return {ok:r.ok,d};}
+
+function applyStatic(){
+ document.documentElement.lang=lang;
+ document.title=t('appTitle');
+ setTxt('appTitle','appTitle'); setTxt('t_step1','step1'); setTxt('t_step2','step2');
+ setTxt('t_step3','step3'); setTxt('t_step4','step4'); setTxt('t_lblJur','lblJur');
+ setTxt('t_lblName','lblName'); setTxt('t_payloadIntro','payloadIntro');
+ setTxt('tab_create','tabCreate'); setTxt('tab_docs','tabDocs');
+ setTxt('t_docStep1','docStep1'); setTxt('t_mockNote','mockNote');
+ document.getElementById('docQ').placeholder=t('docPlaceholder');
+ document.getElementById('q').placeholder=t('namePlaceholder');
+ document.getElementById('dryBtn').textContent=t('btnPreview');
+ setTxt('settingsBtn','settings');
+ // language toggle highlight
+ document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===lang));
+ // mode pill
+ if(REF){const m=document.getElementById('mode');
+   m.textContent=REF.createEnabled?t('modeLive'):t('modeDry');
+   m.className='mode '+(REF.createEnabled?'live':'dry');}
+}
+function setTxt(id,key){const e=document.getElementById(id);if(e)e.textContent=t(key);}
+
+function setLang(l){
+ lang=l; localStorage.setItem('documentSearchLang',l);
+ applyStatic();
+ if(REF) buildJurOptions();
+ updateSearchUI();
+ if(sel) renderForm();          // re-render the open form/payload in the new language
+}
+document.querySelectorAll('#lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+
+async function boot(){
+ const {d}=await api('/api/reference');
+ REF=d;
+ applyStatic();
+ buildJurOptions();
+ updateSearchUI();
+}
+
+// ── searchable jurisdiction combobox ────────────────────────────────────────
+let JURS=[];       // priced jurisdictions, sorted (curated first)
+let jurCode='';    // selected ISO code ('' = none)
+
+function jurLabel(x){
+ const tag = REF.mappings[x.code] ? ' ★' : '';     // ★ = curated legal-form mapping
+ const sa = x.auto ? 'A' : 'M';                     // A = automatic search · M = manual
+ const band = x.priceBand ? (' · '+x.priceBand) : '';
+ return x.name+' ('+x.code+')'+tag+' · '+sa+band;
+}
+
+function buildJurOptions(){
+ const curated=new Set(Object.keys(REF.mappings));
+ JURS=[...REF.jurisdictions].filter(x=>x.priceBand).sort((a,b)=>{
+   const ca=curated.has(a.code), cb=curated.has(b.code);
+   if(ca!==cb) return cb?1:-1;
+   return a.name.localeCompare(b.name);
+ });
+ const inp=document.getElementById('jurSearch');
+ inp.placeholder=t('selJur');
+ if(jurCode){ const x=JURS.find(j=>j.code===jurCode); if(x) inp.value=jurLabel(x); }
+ renderJurList('');
+}
+
+function renderJurList(q){
+ q=(q||'').toLowerCase().trim();
+ const items = JURS.filter(x=>!q || x.name.toLowerCase().includes(q) || x.code.toLowerCase().includes(q));
+ const list=document.getElementById('jurList');
+ list.innerHTML = items.length
+   ? items.map(x=>'<div class="combo-item" data-code="'+x.code+'">'+esc(jurLabel(x))+'</div>').join('')
+   : '<div class="combo-empty">—</div>';
+ list.querySelectorAll('.combo-item').forEach(el=>el.onmousedown=(e)=>{
+   e.preventDefault();                              // fire before input blur
+   jurCode=el.dataset.code;
+   const x=JURS.find(j=>j.code===jurCode);
+   document.getElementById('jurSearch').value=jurLabel(x);
+   document.getElementById('jurList').classList.add('hidden');
+   resetFlow(); updateSearchUI();
+ });
+}
+function getJur(){ return jurCode; }
+
+// clear results, selection and all downstream steps (called when the jurisdiction changes)
+function resetFlow(){
+ sel=null; selForm=null; genCT=null; lastCase=null;
+ document.getElementById('searchMsg').innerHTML='';
+ document.getElementById('results').innerHTML='';
+ hide('formCard'); hide('createCard'); hide('caseCard');
+}
+
+function updateSearchUI(){
+ const jv = getJur();
+ if(!jv){
+   document.getElementById('searchBtn').textContent = t('btnSearch');
+   document.getElementById('searchHint').innerHTML = t('hintChoose');
+   return;
+ }
+ const auto = jinfo(jv).auto;
+ document.getElementById('searchBtn').textContent = auto ? t('btnSearch') : t('btnContinue');
+ document.getElementById('searchHint').innerHTML = auto ? t('hintAuto') : t('hintManual');
+}
+
+function jinfo(code){
+ const ju=REF.jurisdictions.find(x=>x.code===code)||{};
+ return {auto:!!ju.auto, name:ju.name||code, forms:REF.mappings[code]||null,
+         band:ju.priceBand||null, price:(ju.priceUsd!=null?ju.priceUsd:null)};
+}
+function priceStr(info){ return info.band || ''; }
+
+document.getElementById('searchBtn').onclick = doSearch;
+document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch();});
+
+// jurisdiction combobox interactions
+(function(){
+ const inp=document.getElementById('jurSearch'), list=document.getElementById('jurList');
+ function pos(){ const r=inp.getBoundingClientRect();
+   list.style.left=r.left+'px'; list.style.top=(r.bottom+4)+'px'; list.style.width=r.width+'px'; }
+ function open(){ pos(); list.classList.remove('hidden'); }
+ const close=()=>list.classList.add('hidden');
+ inp.addEventListener('focus',()=>{ renderJurList(''); open(); inp.select(); });
+ inp.addEventListener('input',()=>{ jurCode=''; renderJurList(inp.value); open(); resetFlow(); updateSearchUI(); });
+ inp.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
+ inp.addEventListener('blur',()=>{ setTimeout(close,150); });
+ window.addEventListener('scroll',()=>{ if(!list.classList.contains('hidden')) pos(); }, true);
+ window.addEventListener('resize',()=>{ if(!list.classList.contains('hidden')) pos(); });
+})();
+
+async function doSearch(){
+ const jur=getJur(), query=document.getElementById('q').value.trim();
+ const msg=document.getElementById('searchMsg'), box=document.getElementById('results');
+ if(!jur){msg.innerHTML='<div class="err">'+t('chooseJur')+'</div>';return;}
+ if(!query){msg.innerHTML='<div class="err">'+t('enterName')+'</div>';return;}
+ sel=null; selForm=null; genCT=null; hide('formCard'); hide('createCard'); hide('caseCard');
+ // manual jurisdictions have no registry search (upstream 500s) — go straight to manual entry
+ if(!jinfo(jur).auto){ return manualEntry(jur, query); }
+ msg.innerHTML='<div class="hint"><span class="spin"></span> '+t('searching')+'</div>'; box.innerHTML='';
+ const {ok,d}=await api('/api/search?jurisdiction='+encodeURIComponent(jur)+'&query='+encodeURIComponent(query));
+ if(!ok){msg.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
+ const rs=d.results||[];
+ msg.innerHTML='<div class="hint">'+t('results',rs.length,query,jur)+'</div>';
+ box.innerHTML = rs.map((r,i)=>{
+   const act=(r.companyStatus||'').toLowerCase()==='active';
+   return '<div class="res" data-i="'+i+'">'
+    +'<div class="nm"><b>'+esc(r.rawname||r.name||'?')+'</b>'
+    +'<small>'+esc(r.externalCode||'')+'</small>'
+    +'<small>'+esc(r.rawAddress||[r.street,r.zip,r.city].filter(Boolean).join(', '))+'</small></div>'
+    +'<span class="st '+(act?'active':'other')+'">'+esc(r.companyStatus||'—')+'</span></div>';
+ }).join('');
+ box.querySelectorAll('.res').forEach(el=>el.onclick=()=>{
+   box.querySelectorAll('.res').forEach(x=>x.classList.remove('sel'));
+   el.classList.add('sel');
+   sel={...rs[+el.dataset.i], jurisdiction:jur}; selForm=null; genCT=null;
+   renderForm();
+ });
+}
+
+function manualEntry(jur, query){
+ const info=jinfo(jur);
+ document.getElementById('searchMsg').innerHTML=
+   '<div class="ok" style="background:#fffbeb;color:#92400e;border-color:#fde68a">'+t('manualBanner',info.name)+'</div>';
+ document.getElementById('results').innerHTML='';
+ sel={rawname:query, jurisdiction:jur, externalCode:null, manual:true};
+ selForm=null; genCT=null;
+ renderForm();
+}
+
+function renderForm(){
+ const info=jinfo(sel.jurisdiction);
+ show('formCard');
+ let h='<div style="display:flex;gap:12px;align-items:center;margin-bottom:6px">'
+   +'<b style="font-size:15px">'+esc(sel.rawname||sel.name)+'</b>'
+   +'<span class="badge '+(info.auto?'opt':'req')+'">'+(info.auto?t('ctOpt'):t('ctReq'))+'</span>'
+   +(info.band?'<span class="badge" style="background:var(--chip);color:var(--ink)">'+t('priceBand')+': '+info.band+'</span>':'')
+   +'</div>'
+   +'<div class="hint" style="margin-top:0">'+esc(info.name)+(info.auto?t('autoNote'):t('manualNote'))+'</div>';
+
+ if(sel.manual){
+   h+='<div class="row" style="margin-top:12px">'
+     +'<div class="grow"><label>'+t('lblCompanyName')+'</label><input id="mName" style="width:100%" value="'+esc(sel.rawname)+'"></div></div>'
+     +'<div class="row" style="margin-top:8px">'
+     +'<div class="grow"><label>'+t('lblAddr')+'</label><input id="mAddr" style="width:100%"></div>'
+     +'<div><label>'+t('lblPostcode')+'</label><input id="mZip" style="width:110px"></div>'
+     +'<div><label>'+t('lblCity')+'</label><input id="mCity"></div></div>';
+ }
+
+ if(info.forms){
+   h+='<label style="margin-top:12px">'+t('lblSelectCT')+'</label>'
+     +'<div style="margin-top:0">'+info.forms.map((x,i)=>
+     '<div class="fcard'+(selForm===i?' sel':'')+'" data-i="'+i+'">'
+     +'<div class="fl"><b>'+esc(x.local)+'</b><small>'+esc(x.abbr)+'</small></div>'
+     +'<span class="et'+(x.et==="Partnership"?' part':'')+'">'+x.et+'</span>'
+     +'<span class="ct">'+esc(x.ct)+'</span></div>').join('')+'</div>';
+ } else {
+   h+='<div style="margin-top:10px"><label>'+t('lblGenericCT')+'</label>'
+     +'<select id="genCT" style="width:100%"><option value="">'+t('selDash')+'</option>'
+     + REF.companyTypes.map(c=>'<option'+(genCT===c?' selected':'')+'>'+esc(c)+'</option>').join('')
+     +'</select><div class="hint">'+t('noMapping',sel.jurisdiction,REF.companyTypes.length)+'</div></div>';
+ }
+ document.getElementById('formBody').innerHTML=h;
+ const fb=document.getElementById('formBody');
+ fb.querySelectorAll('.fcard').forEach(c=>c.onclick=()=>{selForm=+c.dataset.i;renderForm();renderPayload();});
+ const g=fb.querySelector('#genCT'); if(g) g.onchange=()=>{genCT=g.value||null;renderPayload();};
+ const mn=fb.querySelector('#mName'); if(mn) mn.oninput=()=>{sel.rawname=mn.value;renderPayload();};
+ ['mAddr','mZip','mCity'].forEach(id=>{const el=fb.querySelector('#'+id); if(el) el.oninput=renderPayload;});
+ renderPayload();
+}
+
+function resolved(){
+ const info=jinfo(sel.jurisdiction);
+ if(info.forms && selForm!=null){const f=info.forms[selForm];return {et:f.et,ct:f.ct};}
+ if(!info.forms && genCT){return {et:'Company',ct:genCT};}
+ return {et:null,ct:null};
+}
+
+function renderPayload(){
+ show('createCard');
+ const info=jinfo(sel.jurisdiction); const {et,ct}=resolved();
+ const need=!info.auto;
+ const k=s=>'<span class="pkey">"'+s+'"</span>';
+ const v=s=> s===null||s===undefined? '<span class="pnull">null</span>' : '<span class="pstr">"'+esc(s)+'"</span>';
+ const pl='{\n'
+  +'  '+k('jurisdiction')+': '+v(sel.jurisdiction)+',\n'
+  +'  '+k('name')+': '+v(sel.rawname||sel.name)+',\n'
+  +'  '+k('journeyName')+': '+v('All')+',\n'
+  +'  '+k('externalCode')+': '+v(sel.externalCode||null)+',\n'
+  +'  '+k('entityType')+': '+v(et)+',\n'
+  +'  '+k('companyType')+': '+v(ct)+(need&&!ct?'   <span class="pnull">// REQUIRED</span>':'')+'\n'
+  +'}';
+ document.getElementById('payload').innerHTML=pl;
+ const blocked = need && !ct;
+ const btn=document.getElementById('createBtn');
+ btn.disabled=blocked;
+ btn.textContent = t('btnCreateLive');
+ document.getElementById('dryBtn').textContent = t('btnDryRun');
+ const cost = info.band ? '<b>'+t('priceBand')+': '+info.band+'</b> · ' : '';
+ document.getElementById('createHint').innerHTML = blocked
+   ? '<span style="color:var(--req)">'+t('pickFormReq')+'</span>'
+   : cost + t('firesReal');
+}
+
+function gv(id){const e=document.getElementById(id);return e&&e.value.trim()?e.value.trim():null;}
+function createBody(confirm){
+ const {et,ct}=resolved();
+ return {jurisdiction:sel.jurisdiction, name:sel.rawname||sel.name,
+   externalCode:sel.externalCode||null, entityType:et, companyType:ct,
+   datasource:sel.dataSource||null, journeyName:'All',
+   addressLine1:gv('mAddr'), postcode:gv('mZip'), city:gv('mCity'),
+   confirm:!!confirm};
+}
+
+// The would-be create payload, built entirely client-side.
+function mockPayload(){
+ const {et,ct}=resolved();
+ return {jurisdiction:sel.jurisdiction, name:sel.rawname||sel.name, journeyName:'All',
+   externalCode:sel.externalCode||null, entityType:et, companyType:ct,
+   addressLine1:gv('mAddr'), postcode:gv('mZip'), city:gv('mCity')};
+}
+
+// Dry run — mocked on the frontend: build + show the payload, send nothing.
+document.getElementById('dryBtn').onclick=()=>{
+ document.getElementById('createMsg').innerHTML =
+   '<div class="ok"><b>'+t('mockTitle')+'</b> '+t('mockNote')
+   +'<pre>'+esc(JSON.stringify(mockPayload(),null,2))+'</pre></div>';
+};
+
+// Create — a real, billable create via the backend.
+document.getElementById('createBtn').onclick=()=>{
+ if(!confirm(t('confirmCreate',sel.rawname||sel.name))) return;
+ fireCreate();
+};
+
+async function fireCreate(){
+ const msg=document.getElementById('createMsg');
+ msg.innerHTML='<div class="hint"><span class="spin"></span> '+t('submitting')+'</div>';
+ const {ok,d}=await api('/api/create-case',{method:'POST',headers:{'Content-Type':'application/json'},body:j(createBody(true))});
+ if(!ok){msg.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
+ if(d.processing){
+   msg.innerHTML='<div class="ok"><b>'+t('processingTitle')+'</b> '+esc(d.message||t('processingNote'))
+     +' <button class="ghost" id="goCasesBtn">'+t('goCases')+'</button></div>';
+   const gc=document.getElementById('goCasesBtn'); if(gc) gc.onclick=()=>switchTab('docs');
+   return;
+ }
+ if(d.dryRun){
+   msg.innerHTML='<div class="ok"><b>'+t('serverDryTitle')+'</b> '+t('serverDryNote')
+     +'<pre>'+esc(JSON.stringify(d.wouldPost||{},null,2))+'</pre></div>';
+   return;
+ }
+ if(d.created){
+   lastCase=d.caseCommonId;
+   msg.innerHTML='<div class="ok"><b>'+t('created')+'</b> caseCommonId = <b>'+esc(d.caseCommonId)+'</b> · '+t('statusWord')+' '+esc(d.statusName||'?')+'</div>';
+   show('caseCard'); pollCase();
+ }
+}
+
+async function pollCase(){
+ const b=document.getElementById('caseBody');
+ b.innerHTML='<div class="hint"><span class="spin"></span> '+t('loadingCase')+' '+esc(lastCase)+'…</div>';
+ const {ok,d}=await api('/api/case?id='+encodeURIComponent(lastCase));
+ if(!ok){b.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
+ let h='<div class="row" style="align-items:center"><b>'+t('caseWord')+' '+esc(lastCase)+'</b>'
+   +'<span class="badge '+(d.ready?'opt':'req')+'">'+(d.ready?t('ready'):'⏳ '+esc(d.statusName||t('processing')))+'</span>'
+   +'<button class="ghost" id="refreshBtn">'+t('refresh')+'</button>'
+   +(d.ready?'<button class="ghost" id="docBtn">'+t('loadDocs')+'</button>':'')+'</div>'
+   +'<div class="hint">'+t('statusWord')+': '+esc(d.statusName||'?')+' · complete '+esc(d.complete)+'%'
+   +(d.ready?'':t('crawlNote'))+'</div>'
+   +'<div id="docs"></div>';
+ b.innerHTML=h;
+ document.getElementById('refreshBtn').onclick=pollCase;
+ const db=document.getElementById('docBtn'); if(db) db.onclick=loadDocs;
+}
+
+async function loadDocs(){
+ const box=document.getElementById('docs');
+ box.innerHTML='<div class="hint"><span class="spin"></span> '+t('loadingDocs')+'</div>';
+ const {ok,d}=await api('/api/documents?id='+encodeURIComponent(lastCase));
+ if(!ok){box.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
+ // flatten the CompanyDocuments structure into a flat list of {name,category,code}
+ const flat=[]; const cd=d.documents||{};
+ const grp=cd.documents||{};
+ Object.keys(grp).forEach(cat=>(grp[cat]||[]).forEach(doc=>flat.push({
+   name:doc.name||doc.documentName, category:cat,
+   code:doc.mandatoryCode||doc.code||'', id:doc.caseDocumentId||doc.documentId})));
+ if(!flat.length){box.innerHTML='<div class="hint">'+t('noDocs')+'</div>';return;}
+ box.innerHTML='<div style="margin-top:10px">'+flat.map(x=>
+   '<div class="dlrow"><span class="code">'+esc(x.code||'?')+'</span>'
+   +'<b style="flex:1">'+esc(x.name||'document')+'</b>'
+   +'<span class="muted">'+esc(x.category)+'</span></div>').join('')+'</div>';
+}
+
+// ── Documents tab (mock document-retrieval API) ─────────────────────────────
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchTab(b.dataset.v));
+function switchTab(v){
+ document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+ if(v==='docs'){ hide('viewCreate'); show('viewDocs'); loadCases(document.getElementById('docQ').value); }
+ else { hide('viewDocs'); show('viewCreate'); }
+}
+
+let docQTimer=null;
+document.getElementById('docQ').addEventListener('input',e=>{
+ clearTimeout(docQTimer); docQTimer=setTimeout(()=>loadCases(e.target.value),200);});
+
+async function loadCases(q){
+ const box=document.getElementById('caseList');
+ box.innerHTML='<div class="hint"><span class="spin"></span> '+t('loadingCases')+'</div>';
+ const {ok,d}=await api('/api/cases?q='+encodeURIComponent(q||''));
+ if(!ok){box.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
+ const cs=d.cases||[];
+ if(!cs.length){box.innerHTML='<div class="hint">'+t('noCases')+'</div>';return;}
+ box.innerHTML=cs.map(c=>
+   '<div class="res" data-id="'+esc(String(c.caseCommonId))+'">'
+   +'<div class="nm"><b>'+esc(c.name)+'</b>'
+   +'<small>Case '+esc(String(c.caseCommonId))+(c.docCount?(' · '+c.docCount+' '+t('docsWord')):'')+'</small></div></div>').join('');
+ box.querySelectorAll('.res').forEach(el=>el.onclick=()=>{
+   box.querySelectorAll('.res').forEach(x=>x.classList.remove('sel')); el.classList.add('sel');
+   selectCase(el.dataset.id);});
+}
+
+async function selectCase(id){
+ show('docsCard');
+ const body=document.getElementById('docsList');
+ body.innerHTML='<div class="hint"><span class="spin"></span> '+t('loadingDocs')+'</div>';
+ const {ok,d}=await api('/api/case-docs?id='+encodeURIComponent(id));
+ if(!ok){body.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
+ document.getElementById('docsCardTitle').textContent=t('docsFor')+(d.name||('Case '+id));
+ const docs=d.documents||[];
+ if(!docs.length){body.innerHTML='<div class="hint">'+t('noDocs')+'</div>';return;}
+ body.innerHTML=docs.map(doc=>
+   '<div class="dlrow"><span class="code">'+esc(doc.type||'?')+'</span>'
+   +'<b style="flex:1">'+esc(doc.name)+'</b>'
+   +'<span class="muted">'+esc(doc.category||'')+'</span>'
+   +(doc.docId?('<button class="ghost" data-c="'+esc(id)+'" data-d="'+esc(doc.docId)+'">'+t('docDownload')+'</button>'):'')
+   +'</div>').join('');
+ body.querySelectorAll('button[data-d]').forEach(b=>b.onclick=()=>{
+   const a=document.createElement('a');
+   a.href='/api/case-doc?id='+encodeURIComponent(b.dataset.c)+'&doc='+encodeURIComponent(b.dataset.d);
+   document.body.appendChild(a); a.click(); a.remove();});
+}
+
+function show(id){document.getElementById(id).classList.remove('hidden');}
+function hide(id){document.getElementById(id).classList.add('hidden');}
+
+// ── Setup / workspace connection ────────────────────────────────────────────
+function val(id){const e=document.getElementById(id);return e?e.value.trim():'';}
+
+function showMain(){ hide('viewSetup'); show('tabs'); show('viewCreate'); hide('viewDocs'); }
+
+function openSetup(cfg){
+ cfg=cfg||{};
+ hide('tabs'); hide('viewCreate'); hide('viewDocs');
+ const keep = flag => cfg[flag] ? t('secretKeep') : '';
+ document.getElementById('viewSetup').innerHTML =
+   '<h3>'+esc(t('setupTitle'))+'</h3><div class="body">'
+   +'<div class="hint" style="margin-top:0">'+esc(t('setupIntro'))+'</div>'
+   +'<label style="margin-top:10px">'+esc(t('lblBaseUrl'))+'</label>'
+   +'<input id="setBaseUrl" style="width:100%" value="'+esc(cfg.baseUrl||'')+'">'
+   +'<label style="margin-top:8px">'+esc(t('lblWorkspace'))+'</label>'
+   +'<input id="setWorkspace" style="width:100%" value="'+esc(cfg.workspaceId||'')+'">'
+   +'<label style="margin-top:8px">'+esc(t('lblKey'))+'</label>'
+   +'<input id="setKey" style="width:100%" autocomplete="off" placeholder="'+esc(keep('hasKey'))+'">'
+   +'<label style="margin-top:8px">'+esc(t('lblSecret'))+'</label>'
+   +'<input id="setSecret" type="password" style="width:100%" autocomplete="off" placeholder="'+esc(keep('hasSecret'))+'">'
+   +'<div class="row" style="margin-top:12px"><button id="setBtn" class="danger">'+esc(t('btnConnect'))+'</button>'
+   +'<span class="hint" id="setupMsg" style="margin:0"></span></div></div>';
+ show('viewSetup');
+ document.getElementById('setBtn').onclick=saveSetup;
+}
+
+async function saveSetup(){
+ const m=document.getElementById('setupMsg');
+ m.innerHTML='<span class="spin"></span> '+esc(t('connecting'));
+ const body={baseUrl:val('setBaseUrl'), workspaceId:val('setWorkspace'),
+   apiKey:val('setKey'), apiSecret:val('setSecret')};
+ const {ok,d}=await api('/api/config',{method:'POST',headers:{'Content-Type':'application/json'},body:j(body)});
+ if(ok && d && d.ok){ REF=null; showMain(); boot(); }
+ else { m.innerHTML='<span style="color:var(--req)">'+esc((d&&d.error)||'Failed')+'</span>'; }
+}
+
+document.getElementById('settingsBtn').onclick=async()=>{
+ const {d}=await api('/api/config'); openSetup(d||{});
+};
+
+applyStatic();
+(async function start(){
+ const {ok,d}=await api('/api/config');
+ if(ok && d && d.configured){ showMain(); boot(); }
+ else { openSetup(d||{}); }
+})();
+</script>
+</body>
+</html>
