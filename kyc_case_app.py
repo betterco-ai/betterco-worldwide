@@ -37,7 +37,19 @@ from kyc_gateway_client import KycGatewayClient
 gw = KycGatewayClient()
 
 INDEX = os.path.join(os.path.dirname(os.path.abspath(__file__)), "kyc_case.html")
+TOKENS_CSS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "betterco-tokens.css")
 ENV_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+MATRIX_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "jurisdiction_matrix.json")
+
+_matrix = {}
+def jurisdiction_matrix():
+    """Static KYC.com jurisdiction coverage (data fields + documents + SLA per
+    jurisdiction), pre-parsed from the Excel workbook by build_jurisdiction_matrix.py.
+    Info-only, no backend call — cached after first read."""
+    if not _matrix:
+        with open(MATRIX_PATH, encoding="utf-8") as f:
+            _matrix.update(json.load(f))
+    return _matrix
 
 
 def persist_env(updates: dict):
@@ -151,6 +163,18 @@ class H(BaseHTTPRequestHandler):
                     "mappings": ref["mappings"],
                     "createEnabled": bool(args.enable_create),
                 })
+            elif u.path == "/betterco-tokens.css":
+                # BetterCo design-system tokens (styling only). Linked, not inlined,
+                # so the app reads the current token snapshot on every load.
+                with open(TOKENS_CSS, "rb") as f:
+                    body = f.read()
+                self.send_response(200)
+                self.send_header("Content-Type", "text/css; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+            elif u.path == "/api/jurisdiction-matrix":
+                _json(self, jurisdiction_matrix())
             elif u.path == "/api/search":
                 jur = (q.get("jurisdiction", [""])[0] or "").strip().upper()
                 query = (q.get("query", [""])[0] or "").strip()

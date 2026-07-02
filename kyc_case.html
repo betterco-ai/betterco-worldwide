@@ -4,16 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Get Documents worldwide · BetterCo</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNyIgZmlsbD0iIzU3OGZmZiIvPjxwYXRoIGQ9Ik0xMSA4aDcuMmMzIDAgNC44IDEuNSA0LjggNCAwIDEuNy0uOSAyLjktMi4zIDMuNCAxLjcuNCAyLjggMS43IDIuOCAzLjYgMCAyLjctMiA0LjQtNS4yIDQuNEgxMVY4em0zLjMgNi40aDMuMWMxLjIgMCAxLjktLjYgMS45LTEuNnMtLjctMS42LTEuOS0xLjZoLTMuMXYzLjJ6bTAgNi41aDMuNGMxLjMgMCAyLS42IDItMS43cy0uNy0xLjctMi0xLjdoLTMuNHYzLjR6IiBmaWxsPSIjZmZmIi8+PC9zdmc+">
+<!-- BetterCo Design System — tokens only (linked, not inlined, so styling stays current). -->
+<link rel="stylesheet" href="betterco-tokens.css?v=2026-07-02">
 <style>
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
- /* BetterCo brand tokens (betterco.ai design system) */
- :root{--ink:#1a2340;--muted:#5a6478;--line:#d8dde8;--bg:#f8f9fc;
-   --req:#ff3b30;--req-bg:#fff1f0;--opt:#1f9d54;--opt-bg:#e9faf0;
-   --accent:#4A75DD;--accent-light:#6895FF;--chip:#eef1f6;--chip-ink:#4A75DD;--part-bg:#eef1f6;--part-ink:#1a2340}
+ /* App aliases mapped onto BetterCo Design System tokens (betterco-tokens.css).
+    Every rule below keeps referencing these names, so the whole UI adopts the
+    design system without touching markup. shadcn roles are HSL triples → hsl();
+    widget/primitive tokens are full values → var(). */
+ :root{
+   --ink:var(--text);                --muted:var(--text-muted);
+   --line:var(--card-border);        --bg:var(--color-page);
+   --req:var(--danger);              --req-bg:var(--danger-bg);
+   --opt:var(--success);             --opt-bg:var(--success-bg);
+   --accent:var(--color-brand-blue-accent);   --accent-light:var(--color-brand-blue-01);
+   --chip:var(--color-brand-blue-03);          --chip-ink:var(--color-brand-blue-accent);
+   --part-bg:var(--color-brand-blue-03);       --part-ink:var(--text);
+ }
  *{box-sizing:border-box}
- body{font-family:Montserrat,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
-   margin:0;background:var(--bg);line-height:1.45}
- header{background:linear-gradient(120deg,#1a2340 0%,#2a3558 45%,#4A75DD 100%);color:#fff;padding:16px 28px;display:flex;align-items:center;gap:14px}
+ body{font-family:var(--font-body);color:var(--ink);
+   margin:0;background:var(--bg);line-height:var(--lh-normal)}
+ header{background:linear-gradient(120deg,var(--color-brand-darkblue-02) 0%,var(--color-brand-navy) 45%,var(--color-brand-blue-accent) 100%);color:#fff;padding:16px 28px;display:flex;align-items:center;gap:14px}
  header img.logo{width:32px;height:32px;border-radius:7px;background:#fff;padding:2px}
  header h1{margin:0;font-size:19px;flex:1}
  .mode{font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
@@ -24,16 +35,16 @@
  .lang button.on{background:#4A75DD;color:#fff}
  .wrap{max-width:980px;margin:0 auto;padding:20px 18px 70px}
  .tabs{display:flex;gap:6px;margin:18px 0 6px}
- .tabs .tab{background:#eef1f6;color:var(--accent);padding:9px 18px}
+ .tabs .tab{background:var(--chip);color:var(--accent);padding:9px 18px}
  .tabs .tab.on{background:var(--accent);color:#fff}
  .combo{position:relative}
  .combo-list{position:fixed;max-height:320px;overflow:auto;
-   background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px #1a234022;z-index:1000}
+   background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);z-index:1000}
  .combo-item{padding:9px 12px;font-size:13.5px;cursor:pointer;border-bottom:1px solid #f1f3f5}
  .combo-item:last-child{border-bottom:none}
  .combo-item:hover,.combo-item.active{background:var(--chip)}
  .combo-empty{padding:10px 12px;color:var(--muted);font-size:13px}
- .card{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:16px;overflow:hidden}
+ .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);margin-bottom:16px;overflow:hidden}
  .card h3{margin:0;padding:12px 16px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;
    color:var(--muted);border-bottom:1px solid var(--line);background:#fafbfc;display:flex;gap:8px;align-items:center}
  .card h3 .step{background:var(--accent);color:#fff;width:20px;height:20px;border-radius:50%;
@@ -41,16 +52,16 @@
  .body{padding:16px}
  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:end}
  label{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);display:block;margin-bottom:5px}
- select,input{padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fff}
- input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px #4A75DD22}
+ select,input{padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius-md);font-size:var(--fs-base);background:var(--surface)}
+ input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px hsl(var(--primary) / .22)}
  .grow{flex:1;min-width:220px}
- button{font-size:14px;font-weight:600;border:none;border-radius:8px;padding:10px 18px;cursor:pointer;background:var(--accent);color:#fff}
+ button{font-size:var(--fs-base);font-weight:600;border:none;border-radius:var(--radius-md);padding:10px 18px;cursor:pointer;background:var(--accent);color:#fff}
  button:hover{filter:brightness(1.05)} button:disabled{opacity:.45;cursor:not-allowed}
- button.ghost{background:#eef1f6;color:var(--accent)}
+ button.ghost{background:var(--chip);color:var(--accent)}
  button.danger{background:var(--req)}
  .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700}
- .badge.req{color:var(--req);background:var(--req-bg);border:1px solid #fecaca}
- .badge.opt{color:var(--opt);background:var(--opt-bg);border:1px solid #bbf7d0}
+ .badge.req{color:var(--req);background:var(--req-bg);border:1px solid var(--danger-border)}
+ .badge.opt{color:var(--opt);background:var(--opt-bg);border:1px solid var(--success-border)}
  .res{border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-top:9px;cursor:pointer;display:flex;gap:12px;align-items:flex-start}
  .res:hover{border-color:var(--accent);background:#f8fbff}
  .res.sel{border-color:var(--accent);background:#eff6ff}
@@ -92,6 +103,7 @@
  <div class="tabs" id="tabs">
   <button class="tab on" data-v="create" id="tab_create"></button>
   <button class="tab" data-v="docs" id="tab_docs"></button>
+  <button class="tab" data-v="info" id="tab_info"></button>
  </div>
 
  <div id="viewCreate">
@@ -163,9 +175,25 @@
   </div>
  </div>
 
+ <!-- ===== JURISDICTION INFO TAB (static coverage matrix, info only) ===== -->
+ <div id="viewInfo" class="hidden">
+  <div class="card">
+   <h3><span class="step">i</span> <span id="t_infoStep1"></span></h3>
+   <div class="body">
+    <input id="infoQ" placeholder="" style="width:100%">
+    <div class="hint" id="t_infoIntro"></div>
+    <div id="jurInfoList" style="margin-top:8px;max-height:340px;overflow:auto"></div>
+   </div>
+  </div>
+  <div class="card hidden" id="infoCard">
+   <h3><span id="infoCardTitle"></span></h3>
+   <div class="body" id="infoDetail"></div>
+  </div>
+ </div>
+
 </div>
 <script>
-let REF=null, sel=null, selForm=null, genCT=null, lastCase=null;
+let REF=null, sel=null, selForm=null, genCT=null, lastCase=null, MATRIX=null;
 let lang = localStorage.getItem('documentSearchLang') || localStorage.getItem('kycLang') || 'de';
 
 const T = {
@@ -224,7 +252,21 @@ const T = {
   docStep1:"Search cases", selectCase:"Select a case", docsFor:"Documents — ",
   docPlaceholder:"Search all cases by name, ID or country…",
   mockNote:"Live — real cases (read-only, free). Pick a case to list and download its documents.",
-  noCases:"No cases found.", docDownload:"Download", docsWord:"docs", loadingCases:"loading cases…"
+  noCases:"No cases found.", docDownload:"Download", docsWord:"docs", loadingCases:"loading cases…",
+  tabInfo:"Jurisdiction coverage",
+  infoStep1:"Filter jurisdiction",
+  infoIntro:"Reference only — the data fields and documents returned per jurisdiction, and the registry SLA. Nothing is created or billed here.",
+  infoPlaceholder:"Search jurisdiction, e.g. Germany, Alaska, Alberta…",
+  infoSelect:"Select a jurisdiction to see the data and documents returned.",
+  noJur:"No jurisdiction matches.",
+  slaWord:"Registry SLA",
+  mandatoryWord:"Base", nonMandatoryWord:"Additional (against charge)",
+  colIdentity:"Company identity",
+  colControl:"Controlling entities & individuals",
+  colShare:"Shareholders, partners & beneficial owners",
+  colDocs:"Documents",
+  shareNa:"Not available — the registry returns no shareholder / UBO layer for this jurisdiction.",
+  docNote:"Coverage is fluid — new jurisdictions are added over time. Documents split into <b>Base</b> (provided as standard) and <b>Additional</b> (available on request, not commonly needed, and billed as an extra charge). The split keeps onboarding cost-effective."
  },
  de:{
   appTitle:"Dokumente weltweit abrufen",
@@ -281,7 +323,21 @@ const T = {
   docStep1:"Fälle suchen", selectCase:"Fall auswählen", docsFor:"Dokumente — ",
   docPlaceholder:"Alle Fälle nach Name, ID oder Land durchsuchen…",
   mockNote:"Live — echte Fälle (nur Lesen, kostenlos). Fall wählen, um Dokumente aufzulisten und herunterzuladen.",
-  noCases:"Keine Fälle gefunden.", docDownload:"Herunterladen", docsWord:"Dok.", loadingCases:"lade Fälle…"
+  noCases:"Keine Fälle gefunden.", docDownload:"Herunterladen", docsWord:"Dok.", loadingCases:"lade Fälle…",
+  tabInfo:"Jurisdiktionen",
+  infoStep1:"Jurisdiktion filtern",
+  infoIntro:"Nur zur Information — welche Datenfelder und Dokumente je Jurisdiktion geliefert werden und die Register-SLA. Hier wird nichts angelegt oder berechnet.",
+  infoPlaceholder:"Jurisdiktion suchen, z. B. Germany, Alaska, Alberta…",
+  infoSelect:"Wählen Sie eine Jurisdiktion, um die gelieferten Daten und Dokumente zu sehen.",
+  noJur:"Keine passende Jurisdiktion.",
+  slaWord:"Register-SLA",
+  mandatoryWord:"Basis", nonMandatoryWord:"Zusätzlich (kostenpflichtig)",
+  colIdentity:"Unternehmensidentität",
+  colControl:"Kontrollierende Personen & Einheiten",
+  colShare:"Gesellschafter, Partner & wirtschaftlich Berechtigte",
+  colDocs:"Dokumente",
+  shareNa:"Nicht verfügbar — das Register liefert für diese Jurisdiktion keine Gesellschafter-/wB-Ebene.",
+  docNote:"Die Abdeckung wird laufend um neue Jurisdiktionen erweitert. Dokumente sind unterteilt in <b>Basis</b> (standardmäßig geliefert) und <b>Zusätzlich</b> (auf Anfrage verfügbar, selten benötigt und kostenpflichtig). Diese Trennung hält das Onboarding kosteneffizient."
  }
 };
 function t(k){const v=T[lang][k];return typeof v==="function"?v.apply(null,[].slice.call(arguments,1)):v;}
@@ -296,8 +352,12 @@ function applyStatic(){
  setTxt('appTitle','appTitle'); setTxt('t_step1','step1'); setTxt('t_step2','step2');
  setTxt('t_step3','step3'); setTxt('t_step4','step4'); setTxt('t_lblJur','lblJur');
  setTxt('t_lblName','lblName'); setTxt('t_payloadIntro','payloadIntro');
- setTxt('tab_create','tabCreate'); setTxt('tab_docs','tabDocs');
+ setTxt('tab_create','tabCreate'); setTxt('tab_docs','tabDocs'); setTxt('tab_info','tabInfo');
  setTxt('t_docStep1','docStep1'); setTxt('t_mockNote','mockNote');
+ setTxt('t_infoStep1','infoStep1'); setTxt('t_infoIntro','infoIntro');
+ document.getElementById('infoQ').placeholder=t('infoPlaceholder');
+ if(MATRIX && !document.getElementById('viewInfo').classList.contains('hidden'))
+   renderJurInfoList(document.getElementById('infoQ').value);
  document.getElementById('docQ').placeholder=t('docPlaceholder');
  document.getElementById('q').placeholder=t('namePlaceholder');
  document.getElementById('dryBtn').textContent=t('btnPreview');
@@ -621,8 +681,76 @@ async function loadDocs(){
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchTab(b.dataset.v));
 function switchTab(v){
  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
- if(v==='docs'){ hide('viewCreate'); show('viewDocs'); loadCases(document.getElementById('docQ').value); }
- else { hide('viewDocs'); show('viewCreate'); }
+ hide('viewCreate'); hide('viewDocs'); hide('viewInfo');
+ if(v==='docs'){ show('viewDocs'); loadCases(document.getElementById('docQ').value); }
+ else if(v==='info'){ show('viewInfo'); loadMatrix(); }
+ else { show('viewCreate'); }
+}
+
+// ── Jurisdiction coverage tab (static matrix, info only) ────────────────────
+async function loadMatrix(){
+ const list=document.getElementById('jurInfoList');
+ if(MATRIX){ renderJurInfoList(document.getElementById('infoQ').value); return; }
+ list.innerHTML='<div class="hint"><span class="spin"></span> …</div>';
+ const {ok,d}=await api('/api/jurisdiction-matrix');
+ if(!ok){ list.innerHTML='<div class="err">'+esc(d.error||'error')+'</div>'; return; }
+ MATRIX=d;
+ renderJurInfoList('');
+}
+
+let infoQTimer=null;
+document.getElementById('infoQ').addEventListener('input',e=>{
+ clearTimeout(infoQTimer);
+ infoQTimer=setTimeout(()=>{ if(MATRIX) renderJurInfoList(e.target.value); },150);
+});
+
+function renderJurInfoList(q){
+ q=(q||'').toLowerCase().trim();
+ const items=MATRIX.jurisdictions.filter(x=>!q || x.name.toLowerCase().includes(q) || (x.group||'').toLowerCase().includes(q));
+ const list=document.getElementById('jurInfoList');
+ if(!items.length){ list.innerHTML='<div class="hint">'+t('noJur')+'</div>'; return; }
+ list.innerHTML=items.map(x=>{
+   const idx=MATRIX.jurisdictions.indexOf(x);
+   const nm=x.documentsMandatory.length, nn=x.documentsNonMandatory.length;
+   return '<div class="res" data-i="'+idx+'"><div class="nm"><b>'+esc(x.name)+'</b>'
+     +'<small>'+esc(x.group)+' · '+t('slaWord')+': '+esc(x.sla||'—')+'</small></div>'
+     +'<span class="et" style="background:var(--opt-bg);color:var(--opt)">'+nm+' '+t('mandatoryWord')+'</span>'
+     +(nn?'<span class="et" style="background:#fffbeb;color:#92400e">'+nn+' '+t('nonMandatoryWord')+'</span>':'')
+     +'</div>';
+ }).join('');
+ list.querySelectorAll('.res').forEach(el=>el.onclick=()=>{
+   list.querySelectorAll('.res').forEach(x=>x.classList.remove('sel')); el.classList.add('sel');
+   renderJurDetail(MATRIX.jurisdictions[+el.dataset.i]);
+ });
+}
+
+function chips(arr,na){
+ if(!arr||!arr.length) return '<div class="hint" style="margin-top:2px">'+(na||'—')+'</div>';
+ return '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">'
+   +arr.map(x=>'<span class="et" style="background:var(--chip);color:var(--ink)">'+esc(x)+'</span>').join('')+'</div>';
+}
+function docBadges(arr,style){
+ if(!arr||!arr.length) return '<div class="hint" style="margin-top:2px">—</div>';
+ return '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">'
+   +arr.map(d=>'<span class="badge" style="'+style+'">'+esc(d)+'</span>').join('')+'</div>';
+}
+function renderJurDetail(x){
+ show('infoCard');
+ document.getElementById('infoCardTitle').textContent=x.name;
+ document.getElementById('infoDetail').innerHTML=
+   '<div class="row" style="align-items:center;margin-bottom:2px">'
+   +'<span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(x.group)+'</span>'
+   +'<span class="badge opt">'+t('slaWord')+': '+esc(x.sla||'—')+'</span>'
+   +(x.registryAccess?'<span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(x.registryAccess)+'</span>':'')
+   +'</div>'
+   +'<label style="margin-top:12px">'+t('colIdentity')+'</label>'+chips(x.companyIdentity)
+   +'<label style="margin-top:12px">'+t('colControl')+'</label>'+chips(x.controlling)
+   +'<label style="margin-top:12px">'+t('colShare')+'</label>'+chips(x.shareholders,t('shareNa'))
+   +'<label style="margin-top:14px">'+t('colDocs')+' — '+t('mandatoryWord')+'</label>'
+   +docBadges(x.documentsMandatory,'color:var(--opt);background:var(--opt-bg);border:1px solid #bbf7d0')
+   +'<label style="margin-top:12px">'+t('colDocs')+' — '+t('nonMandatoryWord')+'</label>'
+   +docBadges(x.documentsNonMandatory,'color:#92400e;background:#fffbeb;border:1px solid #fde68a')
+   +'<div class="hint" style="margin-top:14px">'+t('docNote')+'</div>';
 }
 
 let docQTimer=null;
@@ -672,11 +800,11 @@ function hide(id){document.getElementById(id).classList.add('hidden');}
 // ── Setup / workspace connection ────────────────────────────────────────────
 function val(id){const e=document.getElementById(id);return e?e.value.trim():'';}
 
-function showMain(){ hide('viewSetup'); show('tabs'); show('viewCreate'); hide('viewDocs'); }
+function showMain(){ hide('viewSetup'); show('tabs'); show('viewCreate'); hide('viewDocs'); hide('viewInfo'); }
 
 function openSetup(cfg){
  cfg=cfg||{};
- hide('tabs'); hide('viewCreate'); hide('viewDocs');
+ hide('tabs'); hide('viewCreate'); hide('viewDocs'); hide('viewInfo');
  const keep = flag => cfg[flag] ? t('secretKeep') : '';
  document.getElementById('viewSetup').innerHTML =
    '<h3>'+esc(t('setupTitle'))+'</h3><div class="body">'

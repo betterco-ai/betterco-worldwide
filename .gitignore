@@ -11,3 +11,7 @@
 __pycache__/
 *.pyc
 .idea/
+
+# Secrets — never commit (use .env.example as the template)
+.env
+.env.local

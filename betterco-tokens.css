@@ -1,0 +1,794 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   BetterCo Design Tokens — theme "BetterCo (Blue)"
+   Reset-free. CSS custom properties only — no Tailwind Preflight, no
+   utility classes, no widget recipe classes. Safe to link into any HTML
+   app without disturbing its existing element styling.
+
+   Generated from runner/src/styles.css + public/themes/themes.json
+   Theme: BetterCo (Blue) v11   Library: spartan-ng v40
+
+   USAGE:
+     - shadcn/spartan roles are HSL TRIPLES -> hsl(var(--primary))
+     - widget/component tokens are FULL COLOURS -> var(--u-zone-bg)
+     - primitives / radii / shadows / fonts -> var(--radius-md) etc.
+   Rebrand by overriding a primitive on :root (e.g. --color-brand-blue-accent).
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Inter — remove if the host app supplies its own font (repoint --font-body). */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ── Base token layer (Primitives -> Semantic -> Component) ─────────────── */
+:root {
+  /* Brand palette (hex) — the single source of truth. Semantic roles link to
+     these; the shadcn roles' HSL values are computed live by ThemeService. */
+  --color-neutral-slate-50:  #F5F6F8;
+  /* Page canvas — own brandable primitive (default = white, like the wrapper portal). */
+  --color-page:              #FFFFFF;
+  --color-neutral-slate-100: #EAEBEE;
+  --color-neutral-slate-200: #D4D6DB;
+  --color-neutral-slate-300: #B4B8C0;
+  --color-neutral-slate-400: #9197A1;
+  --color-neutral-slate-500: #767D8A;
+  --color-neutral-slate-600: #5C6573;
+  --color-neutral-slate-700: #434D5D;
+  --color-neutral-slate-800: #2C3647;
+  --color-neutral-slate-900: #1B2638;
+  --color-neutral-slate-950: #071224;
+  --color-brand-500:         #071224;
+  --color-brand-darkblue-02: #0F1F3D;
+  --color-brand-navy:        #16335C;  /* lighter navy — primary button */
+  --color-brand-blue-accent: #2F6FED;  /* mid accent — links / accents */
+  --color-brand-blue-01:     #8EC3FF;
+  --color-brand-blue-02:     #CFE6FF;
+  --color-brand-blue-03:     #F0F7FF;
+  --color-brand-beige:       #F2F0EE;
+  --color-white:             #FFFFFF;
+
+  /* Navy shades (50–950) — navy-900 = the given #0F1F3D. */
+  --color-navy-50:           #ECF1F9;
+  --color-navy-100:          #D4E0F1;
+  --color-navy-200:          #AAC1E3;
+  --color-navy-300:          #7A9BCE;
+  --color-navy-400:          #4E72B0;
+  --color-navy-500:          #305391;
+  --color-navy-600:          #234072;
+  --color-navy-700:          #193156;
+  --color-navy-800:          #132743;
+  --color-navy-900:          #0F1F3D;
+  --color-navy-950:          #0A1428;
+
+  /* Status colours — not in the brand palette yet (extend when needed). */
+  --p-green:        #1b6b3e;
+  --p-green-bg:     #e5f3ec;
+  --p-green-border: #c2e6cf;
+  --p-amber-text:   #6b4f0e;
+  --p-amber-bg:     #fef6dc;
+  --p-amber-border: #f0d588;
+  --p-red:          #c92a2a;
+  --p-red-bg:       #fdeaea;
+  --p-red-border:   #f3bcbf;
+
+  /* Font primitives (Brand level — shared across all UI libraries). */
+  --font-headline:        'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-headline-weight: 700;
+  --font-headline-lh:     1.2;
+  --font-headline-ls:     -0.01em;
+  --font-headline-color:  var(--color-neutral-slate-900);
+  --font-body:            'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body-weight:     400;
+  --font-body-lh:         1.5;
+  --font-body-ls:         0em;
+  --font-body-color:      var(--color-neutral-slate-900);
+}
+:root {
+  --font-display:   var(--font-headline);
+  --font-sans:      var(--font-body);
+  --text-base:      14px;
+  --leading-base:   1.5;
+  --tracking-tight: -0.01em;
+}
+:root {
+  --radius-none: 0px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-full: 9999px;
+}
+:root {
+  --shadow-none-x: 0px; --shadow-none-y: 0px; --shadow-none-blur: 0px;  --shadow-none-color: transparent;
+  --shadow-sm-x:   0px; --shadow-sm-y:   1px; --shadow-sm-blur:   2px;  --shadow-sm-color:   rgba(0,0,0,0.05);
+  --shadow-md-x:   0px; --shadow-md-y:   2px; --shadow-md-blur:   8px;  --shadow-md-color:   rgba(0,0,0,0.08);
+  --shadow-lg-x:   0px; --shadow-lg-y:   8px; --shadow-lg-blur:   24px; --shadow-lg-color:   rgba(0,0,0,0.12);
+
+  --shadow-none: var(--shadow-none-x) var(--shadow-none-y) var(--shadow-none-blur) var(--shadow-none-color);
+  --shadow-sm:   var(--shadow-sm-x)   var(--shadow-sm-y)   var(--shadow-sm-blur)   var(--shadow-sm-color);
+  --shadow-md:   var(--shadow-md-x)   var(--shadow-md-y)   var(--shadow-md-blur)   var(--shadow-md-color);
+  --shadow-lg:   var(--shadow-lg-x)   var(--shadow-lg-y)   var(--shadow-lg-blur)   var(--shadow-lg-color);
+}
+:root {
+  --fs-xs: 11px;  --fs-sm: 12px;  --fs-md: 13px;  --fs-base: 14px;  --fs-lg: 16px;  --fs-xl: 18px;  --fs-2xl: 22px;  --fs-3xl: 28px;
+  --fw-normal: 400;  --fw-medium: 500;  --fw-semibold: 600;  --fw-bold: 700;
+  --lh-tight: 1.2;  --lh-snug: 1.35;  --lh-normal: 1.5;  --lh-relaxed: 1.7;
+  --ls-tight: -0.01em;  --ls-normal: 0em;  --ls-wide: 0.03em;
+  /* Spacing scale (padding / margin / gap). */
+  --sp-0: 0px;  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;  --sp-4: 16px;  --sp-5: 20px;  --sp-6: 24px;  --sp-7: 28px;  --sp-8: 32px;
+  /* Height scale (control heights). */
+  --h-7: 28px;  --h-8: 32px;  --h-9: 36px;  --h-10: 40px;  --h-11: 44px;
+}
+:root {
+  /* Label */
+  --label-fs: var(--fs-md);
+  --label-fw: var(--fw-medium);
+  --label-lh: var(--lh-normal);
+  --label-ls: var(--ls-normal);
+  --label-color: var(--text);
+  /* Value-Label — in-field hint/placeholder. */
+  --label-value-fs: var(--fs-base);
+  --label-value-fw: var(--fw-normal);
+  --label-value-color: var(--text-muted);
+  /* Alert (box) */
+  --alert-py: var(--sp-3);
+  --alert-px: var(--sp-4);
+  --alert-gap: var(--sp-3);
+  --alert-radius: var(--radius-md);
+  --alert-fs: var(--fs-md);
+  /* Button (box) */
+  --btn-radius: var(--radius-md);
+  /* Outline button resting bg — own token, editable per variant. */
+  --btn-outline-bg: var(--surface);
+  /* Button sizes (height / padding-x / font-size) */
+  --btn-sm-h: var(--h-8);  --btn-sm-px: var(--sp-3);  --btn-sm-fs: var(--fs-sm);
+  --btn-md-h: var(--h-9);  --btn-md-px: var(--sp-4);  --btn-md-fs: var(--fs-base);
+  --btn-lg-h: var(--h-10); --btn-lg-px: var(--sp-8);  --btn-lg-fs: var(--fs-base);
+  /* Card (box) */
+  --card-padding: var(--sp-6);
+  --card-radius: var(--radius-lg);
+  --card-shadow: var(--shadow-sm);
+  /* Tag (box) */
+  --tag-radius: var(--radius-full);
+  --tag-px: var(--sp-2);
+  --tag-py: var(--sp-1);
+  --tag-fs: var(--fs-sm);
+  /* Headlines + body — weight / line-height / colour wired to the Brand
+     Headline & Body roles (--font-headline-* / --font-body-*). */
+  --h1-fs: var(--fs-2xl);  --h1-fw: var(--font-headline-weight); --h1-color: var(--font-headline-color);
+  --h2-fs: var(--fs-xl);   --h2-fw: var(--font-headline-weight); --h2-color: var(--font-headline-color);
+  --h3-fs: var(--fs-lg);   --h3-fw: var(--font-headline-weight); --h3-color: var(--font-headline-color);
+  --h4-fs: var(--fs-base); --h4-fw: var(--font-headline-weight); --h4-color: var(--font-headline-color);
+  --h5-fs: var(--fs-xs);   --h5-fw: var(--fw-semibold);          --h5-color: var(--text-muted);
+  --body-fs: var(--fs-base); --body-lh: var(--font-body-lh); --body-color: var(--font-body-color);
+
+  /* Headline / body / label spacing — per side (margin + padding). */
+  --h1-mt:16px; --h1-mr:0px; --h1-mb:6px; --h1-ml:0px;  --h1-pt:0px; --h1-pr:0px; --h1-pb:0px; --h1-pl:0px;
+  --h2-mt:14px; --h2-mr:0px; --h2-mb:6px; --h2-ml:0px;  --h2-pt:0px; --h2-pr:0px; --h2-pb:0px; --h2-pl:0px;
+  --h3-mt:12px; --h3-mr:0px; --h3-mb:6px; --h3-ml:0px;  --h3-pt:0px; --h3-pr:0px; --h3-pb:0px; --h3-pl:0px;
+  --h4-mt:10px; --h4-mr:0px; --h4-mb:4px; --h4-ml:0px;  --h4-pt:0px; --h4-pr:0px; --h4-pb:0px; --h4-pl:0px;
+  --h5-mt:8px;  --h5-mr:0px; --h5-mb:4px; --h5-ml:0px;  --h5-pt:0px; --h5-pr:0px; --h5-pb:0px; --h5-pl:0px;
+  --body-mt:0px;  --body-mr:0px;  --body-mb:0px;  --body-ml:0px;   --body-pt:0px;  --body-pr:0px;  --body-pb:0px;  --body-pl:0px;
+  --label-mt:0px; --label-mr:0px; --label-mb:0px; --label-ml:0px;  --label-pt:0px; --label-pr:0px; --label-pb:0px; --label-pl:0px;
+  --divider-mt:8px; --divider-mr:0px; --divider-mb:0px; --divider-ml:0px;  --divider-pt:12px; --divider-pr:0px; --divider-pb:0px; --divider-pl:0px;
+
+  /* Divider (.fld-divider) line. */
+  --divider-color: var(--card-border);
+  --divider-thickness: 1px;
+
+  /* Input (global field component) — bg / text / border per state. */
+  --input-bg: var(--surface);            --input-text: var(--text);        --input-border: var(--card-border);
+  --input-bg-hover: var(--field-bg-hover); --input-text-hover: var(--text); --input-border-hover: var(--card-border);
+  --input-bg-focus: var(--surface);      --input-text-focus: var(--text);  --input-border-focus: var(--field-focus);
+  --input-bg-disabled: var(--field-bg);  --input-text-disabled: var(--text-muted); --input-border-disabled: var(--card-border);
+  --input-bg-error: var(--surface);      --input-text-error: var(--text);  --input-border-error: var(--danger);
+  /* Input box — radius + shadow + margin/padding per side. */
+  --input-radius: var(--radius-md);
+  --input-shadow: var(--shadow-sm);
+  --input-border-w: 1px;
+  --input-border-w-focus: 1px;
+  --input-value-fs: var(--fs-base);
+  --input-mt:0px; --input-mr:0px; --input-mb:0px; --input-ml:0px;
+  --input-pt:8px; --input-pr:12px; --input-pb:8px; --input-pl:12px;
+
+  /* Radio (global) — bg / text / border per state. */
+  --radio-bg: var(--surface);            --radio-text: var(--text);            --radio-border: var(--card-border);
+  --radio-bg-selected: var(--field-focus); --radio-text-selected: var(--surface); --radio-border-selected: var(--field-focus);
+  --radio-bg-hover: var(--field-bg-hover); --radio-text-hover: var(--text);      --radio-border-hover: var(--card-border);
+  --radio-bg-disabled: var(--field-bg);  --radio-text-disabled: var(--text-muted); --radio-border-disabled: var(--card-border);
+  /* Radio layout — size / label / spacing per variant. */
+  --radio-size: 16px;
+  --radio-dot-size: 8px;
+  --radio-list-gap: 10px;
+  --radio-list-item-gap: 10px;
+  --radio-list-label-fs: var(--fs-base);
+  --radio-list-label-color: var(--text);
+  --radio-card-label-fs: var(--fs-base);
+  --radio-card-align: flex-start;
+  --radio-card-icon-display: inline-flex;
+  --radio-pill-mt:0px; --radio-pill-mr:0px; --radio-pill-mb:0px; --radio-pill-ml:0px;
+  --radio-pill-pt:6px; --radio-pill-pr:16px; --radio-pill-pb:6px; --radio-pill-pl:16px;
+  --radio-card-mt:0px; --radio-card-mr:0px; --radio-card-mb:0px; --radio-card-ml:0px;
+  --radio-card-pt:10px; --radio-card-pr:12px; --radio-card-pb:10px; --radio-card-pl:12px;
+  /* XL-Radio-Card — Avatar + Headline/Desc + Radio rechts, Doppel-Outline aktiv.
+     State-Farben aus dem globalen Radio-System (--radio-bg/-border/...). */
+  --radio-xl-radius: 12px; --radio-xl-px: 18px; --radio-xl-py: 16px; --radio-xl-gap: 14px;
+  --radio-xl-ring-w: 3px; --radio-xl-ring-color: var(--color-brand-blue-02);
+  --radio-xl-avatar-size: 40px; --radio-xl-avatar-radius: 9999px; --radio-xl-avatar-svg: 18px;
+  --radio-xl-avatar-bg: var(--color-brand-blue-03); --radio-xl-avatar-color: var(--field-focus);
+  --radio-xl-headline-fs: var(--fs-md); --radio-xl-headline-fw: var(--fw-semibold); --radio-xl-headline-color: var(--text);
+  --radio-xl-desc-fs: var(--fs-sm); --radio-xl-desc-color: var(--text-muted);
+
+  /* Checkbox (global) — bg / text(checkmark) / border per state.
+     --checkbox-check is the GLOBAL checkmark colour; the per-state checkmark
+     tokens reference it by default (override per state in the states editor). */
+  --checkbox-check: var(--surface);
+  --checkbox-bg: var(--surface);          --checkbox-text: var(--checkbox-check);   --checkbox-border: var(--card-border);
+  --checkbox-bg-checked: var(--field-focus); --checkbox-text-checked: var(--checkbox-check); --checkbox-border-checked: var(--field-focus);
+  --checkbox-bg-hover: var(--field-bg-hover); --checkbox-text-hover: var(--checkbox-check); --checkbox-border-hover: var(--card-border);
+  --checkbox-bg-disabled: var(--field-bg); --checkbox-text-disabled: var(--text-muted); --checkbox-border-disabled: var(--card-border);
+  /* Page — the canvas every card & menu sits on (html/body + runner main column).
+     White by default, matching the wrapper portal's page background. */
+  --page-bg: var(--color-page);
+  /* Prozess-Cards — Verfahrens-Kacheln (Immobilienkauf, Schenkung, …).
+     bg/text/border per state (default · hover · focus · disabled). */
+  --proc-card-bg: var(--color-brand-blue-03); --proc-card-text: var(--text); --proc-card-border: transparent;
+  --proc-card-bg-hover: var(--color-brand-blue-02); --proc-card-text-hover: var(--text); --proc-card-border-hover: transparent;
+  --proc-card-bg-focus: var(--color-brand-blue-03); --proc-card-text-focus: var(--text); --proc-card-border-focus: var(--field-focus);
+  --proc-card-bg-disabled: var(--field-bg); --proc-card-text-disabled: var(--text-muted); --proc-card-border-disabled: transparent;
+  --proc-card-border-w: 1px;
+  --proc-card-shadow: var(--shadow-none); --proc-card-shadow-hover: var(--shadow-none);
+  --proc-card-shadow-focus: var(--shadow-none);
+  --proc-card-fs: var(--fs-base);
+  --proc-card-radius: var(--radius-lg); --proc-card-min-h: 130px;
+  --proc-card-mt:0px; --proc-card-mr:0px; --proc-card-mb:0px; --proc-card-ml:0px;
+  --proc-card-pt:22px; --proc-card-pr:18px; --proc-card-pb:16px; --proc-card-pl:18px;
+  --proc-grid-gap: 18px; --proc-grid-cols: 3;
+  /* Pill ("Starten"-Button) — full button settings. */
+  --proc-pill-bg: var(--surface); --proc-pill-text: var(--text); --proc-pill-fs: var(--fs-xs);
+  --proc-pill-border: transparent; --proc-pill-border-w: 1px;
+  --proc-pill-radius: 9999px; --proc-pill-px: 10px; --proc-pill-py: 4px;
+  --proc-pill-shadow: var(--shadow-none);
+  /* Icon-Kachel (oben links; invertiert bei Hover). */
+  --proc-icon-bg: var(--color-brand-blue-03); --proc-icon-color: var(--field-focus);
+  --proc-icon-bg-hover: var(--field-focus); --proc-icon-color-hover: var(--color-white);
+  --proc-icon-size: 44px; --proc-icon-radius: 11px; --proc-icon-svg: 22px; --proc-icon-mb: 16px;
+  /* Tag-Pill + Desc + Name. */
+  --proc-tag-bg: var(--color-brand-blue-03); --proc-tag-color: var(--field-focus);
+  --proc-tag-fs: var(--fs-xs); --proc-tag-radius: 9999px;
+  --proc-tag-px: 10px; --proc-tag-py: 3px; --proc-tag-mb: 14px;
+  --proc-desc-color: var(--text-muted); --proc-desc-fs: var(--fs-sm); --proc-desc-mb: 14px;
+  --proc-label-fw: var(--fw-semibold);
+  /* Hover-Verstärkung: Lift + Akzent-Balken links. */
+  --proc-card-lift: -2px; --proc-bar-color: var(--field-focus); --proc-bar-w: 3px;
+  /* Filter-Menü — linke Kategorie-Navigation der Zwei-Spalten-Metapher. */
+  --filter-gap: 4px; --filter-cat-px: 14px; --filter-cat-py: 12px; --filter-cat-radius: 9px;
+  --filter-cat-fs: var(--fs-base); --filter-cat-fw: var(--fw-medium); --filter-cat-color: var(--text-muted);
+  --filter-cat-bg-hover: var(--color-brand-blue-03); --filter-cat-color-hover: var(--text);
+  --filter-cat-bg-active: var(--color-brand-blue-03); --filter-cat-color-active: var(--field-focus);
+  --filter-cat-fw-active: var(--fw-semibold);
+  --filter-count-fs: var(--fs-sm); --filter-count-color: var(--text-muted);
+  /* Prozess-Liste — horizontale Card (rechter Bereich der Zwei-Spalten-Metapher). */
+  --plist-gap: 6px;
+  --plist-item-bg: var(--surface); --plist-item-border-c: var(--card-border); --plist-item-border-w: 1px;
+  --plist-item-bg-hover: var(--color-brand-blue-03); --plist-item-border-hover: var(--field-focus);
+  --plist-item-radius: 10px; --plist-item-px: 16px; --plist-item-py: 14px; --plist-item-gap: 16px;
+  --plist-icon-bg: var(--color-brand-blue-03); --plist-icon-color: var(--field-focus);
+  --plist-icon-size: 38px; --plist-icon-radius: 9px; --plist-icon-svg: 20px;
+  --plist-name-fs: var(--fs-base); --plist-name-fw: var(--fw-semibold); --plist-name-color: var(--text);
+  --plist-desc-fs: var(--fs-sm); --plist-desc-color: var(--text-muted);
+  --plist-tag-bg: var(--color-brand-blue-03); --plist-tag-color: var(--field-focus); --plist-tag-fs: var(--fs-xs);
+  --plist-arrow-color: var(--field-focus);
+  /* Schritt-Übersicht — Fortschritt-Header des Anliegen-Assistenten (Metapher 9). */
+  --stepsum-gap: 10px; --stepsum-seg-px: 12px; --stepsum-seg-py: 9px; --stepsum-seg-radius: 10px;
+  --stepsum-active-bg: var(--color-brand-blue-03); --stepsum-active-border: transparent;
+  --stepsum-inactive-opacity: 0.4;
+  --stepsum-dot-size: 26px; --stepsum-dot-fs: var(--fs-sm);
+  --stepsum-dot-bg: var(--field-focus); --stepsum-dot-color: var(--color-white);
+  --stepsum-label-fs: var(--fs-xs); --stepsum-label-color: var(--text-muted);
+  --stepsum-value-fs: var(--fs-md); --stepsum-value-color: var(--text);
+  --stepsum-link-color: var(--card-border); --stepsum-link-w: 24px;
+  /* Zurück-Link — „‹ Zurück" Schritt-zurück-Link (Anliegen-Assistent). */
+  --back-color: var(--text-muted); --back-color-hover: var(--field-focus);
+  --back-fs: var(--fs-sm); --back-gap: 5px; --back-icon-size: 16px;
+  /* Trust-Strip — Icon+Label-Vertrauensleiste unter dem Hero ("Verschlüsselte
+     Übertragung · …"). Spiegel der Wrapper-Portal-.pt-trust-Leiste. */
+  --trust-icon-size: 16px; --trust-icon-color: var(--field-focus); --trust-item-gap: 8px;
+  --trust-ff: var(--font-body); --trust-fs: var(--fs-sm); --trust-fw: var(--fw-normal);
+  --trust-lh: var(--lh-normal); --trust-text: var(--text-muted);
+  --trust-gap: 22px; --trust-align: flex-start;
+  --trust-border-c: var(--card-border); --trust-border-w: 1px;
+  --trust-pt: 18px; --trust-mt: 20px;
+  /* Anliegen-Suche — Launcher-Suchfeld + Live-Ergebnis-Dropdown über dem
+     Katalog. Spiegel der Wrapper-Portal-.pt-search. */
+  --search-box-bg: var(--input-bg); --search-box-text: var(--input-text);
+  --search-box-border-c: var(--input-border); --search-box-border-w: 1px;
+  --search-box-radius: var(--radius-md); --search-box-fs: var(--fs-base);
+  --search-box-icon: var(--text-muted); --search-box-px: 14px; --search-box-py: 11px;
+  --search-panel-bg: var(--surface); --search-panel-border-c: var(--card-border);
+  --search-panel-radius: var(--radius-md); --search-panel-shadow: var(--shadow-lg);
+  --search-panel-maxh: 320px; --search-panel-gap: 6px;
+  --search-row-bg-hover: var(--color-brand-blue-03);
+  --search-row-icon-color: var(--field-focus); --search-row-icon-size: 20px;
+  --search-row-name-c: var(--text); --search-row-name-fs: var(--fs-base); --search-row-name-fw: var(--fw-medium);
+  --search-row-cat-c: var(--text-muted); --search-row-cat-fs: var(--fs-sm);
+  --search-row-arrow-c: var(--text-muted); --search-row-gap: 12px;
+  --search-row-px: 14px; --search-row-py: 10px;
+
+  /* Footer action bar (step/phase/scroll pages). */
+  --foot-bg: var(--field-bg); --foot-border-c: var(--card-border); --foot-border-w: 1px;
+  --foot-px: 24px; --foot-py: 16px;
+  /* Field-Meta — error + help copy under every field. */
+  --error-text: var(--danger); --error-fs: var(--fs-sm);
+  --help-text: var(--text-muted); --help-fs: var(--fs-sm);
+  /* Sections — grouped blocks (gap + divider; titles = Trenn-Label). */
+  --section-gap: 24px;
+  --section-divider-c: var(--card-border); --section-divider-w: 1px;
+  /* Trenn-Label — Abschnitts-Überschrift (Step-Sektionen, Divider, Sections). */
+  --tl-fs: var(--fs-base); --tl-fw: var(--fw-semibold); --tl-color: var(--text-muted);
+  --tl-lh: var(--lh-normal); --tl-ls: var(--ls-wide); --tl-tt: uppercase;
+  --tl-mt:0px; --tl-mr:0px; --tl-mb:0px; --tl-ml:0px;
+  --tl-pt:0px; --tl-pr:0px; --tl-pb:0px; --tl-pl:0px;
+  /* Gruppen-Überschrift — Titel + horizontale Linie daneben (Spiegel der
+     Wrapper-Portal-.pt-group-head). Titel-Typo unabhängig vom Trenn-Label. */
+  --ghead-title-ff: var(--font-body); --ghead-title-fs: var(--fs-base);
+  --ghead-title-fw: var(--fw-semibold); --ghead-title-lh: 1;
+  --ghead-title-ls: var(--ls-wide); --ghead-title-tt: uppercase;
+  --ghead-title-color: var(--text-muted);
+  --ghead-gap: 12px; --ghead-rule-color: var(--card-border); --ghead-rule-h: 1px;
+  --ghead-mt: 0px; --ghead-mb: 14px;
+  /* Spacer — vertical gap sizes (.spacer-s/-m/-l). */
+  --spacer-s: 8px; --spacer-m: 16px; --spacer-l: 32px;
+
+  /* Step-Navigation (Workflow-Sidebar) — container / group label / step / indicator. */
+  --nav-bg: var(--surface); --nav-border-c: var(--card-border); --nav-border-w: 1px;
+  --nav-w: 288px; --nav-gap: 24px;
+  --nav-mt:0px; --nav-mr:0px; --nav-mb:0px; --nav-ml:0px;
+  --nav-pt:24px; --nav-pr:24px; --nav-pb:24px; --nav-pl:24px;
+  --nav-group-ff: var(--font-body); --nav-group-fs: var(--fs-sm);
+  --nav-group-fw: var(--fw-semibold); --nav-group-ls: var(--ls-wide);
+  --nav-group-tt: uppercase; --nav-group-color: var(--text-muted); --nav-group-mb: 8px;
+  --nav-step-fs: var(--fs-base); --nav-step-color: var(--text-muted);
+  --nav-step-color-active: var(--text); --nav-step-bg-active: var(--color-neutral-slate-100);
+  --nav-step-bg-hover: var(--color-neutral-slate-100);
+  --nav-step-radius: 6px; --nav-step-gap: 10px;
+  --nav-step-mt:0px; --nav-step-mr:0px; --nav-step-mb:0px; --nav-step-ml:0px;
+  --nav-step-pt:6px; --nav-step-pr:8px; --nav-step-pb:6px; --nav-step-pl:8px;
+  --nav-ind-size: 20px; --nav-ind-fs: 10px;
+  --nav-ind-done-bg: var(--p-green); --nav-ind-done-color: var(--color-white);
+  --nav-ind-err-bg: var(--p-red); --nav-ind-err-color: var(--color-white);
+  --nav-ind-idle-color: var(--color-neutral-slate-300); --nav-ind-idle-dot: 8px;
+
+  /* Summary (global) — card shell / heading / entry rows (label + value). */
+  --sum-card-bg: var(--surface); --sum-card-border-c: var(--card-border);
+  --sum-card-border-w: 1px; --sum-card-radius: var(--radius-md);
+  --sum-card-mt:0px; --sum-card-mr:0px; --sum-card-mb:0px; --sum-card-ml:0px;
+  --sum-card-pt:20px; --sum-card-pr:20px; --sum-card-pb:20px; --sum-card-pl:20px;
+  --sum-heading-ff: var(--font-headline); --sum-heading-fs: var(--fs-base);
+  --sum-heading-fw: var(--fw-semibold); --sum-heading-lh: var(--lh-normal);
+  --sum-heading-ls: var(--ls-wide); --sum-heading-tt: uppercase;
+  --sum-heading-color: var(--text-muted); --sum-heading-mb: 12px;
+  --sum-entry-gap: 8px;
+  --sum-entry-mt:0px; --sum-entry-mr:0px; --sum-entry-mb:0px; --sum-entry-ml:0px;
+  --sum-entry-pt:0px; --sum-entry-pr:0px; --sum-entry-pb:0px; --sum-entry-pl:0px;
+  --sum-label-ff: var(--font-body); --sum-label-fs: var(--fs-base);
+  --sum-label-fw: var(--fw-normal); --sum-label-lh: var(--lh-normal);
+  --sum-label-tt: none; --sum-label-color: var(--text-muted);
+  --sum-value-ff: var(--font-body); --sum-value-fs: var(--fs-base);
+  --sum-value-fw: var(--fw-medium); --sum-value-lh: var(--lh-normal);
+  --sum-value-tt: none; --sum-value-color: var(--text);
+
+  /* Checkbox layout — size / spacing / label. */
+  --checkbox-size: 16px;
+  --checkbox-gap: 10px;
+  --checkbox-list-gap: 10px;
+  --checkbox-label-fs: var(--fs-base);
+  --checkbox-label-color: var(--text);
+}
+:root {
+  /* HSL triples — pre-JS fallback; ThemeService recomputes these live from the
+     linked hex primitives (see rederiveHsl) so they stay real links, not copies. */
+  --background: 220 18% 97%;
+  --foreground: 217 35% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 217 35% 16%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 217 35% 16%;
+  --primary: 215 61% 22%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 225 11% 93%;
+  --secondary-foreground: 217 35% 16%;
+  --muted: 225 11% 93%;
+  --muted-foreground: 219 8% 50%;
+  --accent: 225 11% 93%;
+  --accent-foreground: 217 35% 16%;
+  --destructive: 0 60% 48%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 223 9% 85%;
+  --input: 223 9% 85%;
+  --ring: 215 61% 22%;
+  --radius: var(--radius-md);
+}
+:root {
+  --text:           var(--color-neutral-slate-900);
+  --text-muted:     var(--color-neutral-slate-500);
+  --text-soft:      var(--color-neutral-slate-400);
+  --link:           var(--color-brand-blue-accent);
+  --link-hover:     var(--color-brand-darkblue-02);
+  --surface:        var(--color-white);
+  --card-border:    var(--color-neutral-slate-200);
+  --hairline:       var(--color-neutral-slate-100);
+  --field-bg:       var(--color-neutral-slate-50);
+  --field-bg-hover: var(--color-neutral-slate-100);
+  --field-focus:    var(--color-brand-navy);
+  --success:        var(--p-green);
+  --success-bg:     var(--p-green-bg);
+  --success-border: var(--p-green-border);
+  --warn-text:      var(--p-amber-text);
+  --warn-bg:        var(--p-amber-bg);
+  --warn-border:    var(--p-amber-border);
+  --danger:         var(--p-red);
+  --danger-bg:      var(--p-red-bg);
+  --danger-border:  var(--p-red-border);
+  --info:           var(--color-brand-darkblue-02);
+  --info-bg:        var(--color-brand-blue-03);
+  --info-border:    var(--color-brand-blue-01);
+}
+:root {
+  --u-zone-bg:          var(--field-bg);
+  --u-zone-bg-hover:    var(--field-bg-hover);
+  --u-zone-border:      var(--card-border);
+  --u-zone-border-hover:var(--card-border);
+  --u-zone-border-active:var(--field-focus);
+  --u-zone-bg-active:   var(--field-bg-hover);
+  --u-card-hover:       var(--field-bg);
+  --u-radius:           var(--radius-md);
+  --u-radius-lg:        var(--radius-lg);
+}
+:root {
+  --a-field-radius:     var(--radius-md);
+}
+:root {
+  --cs-row-active:    #dde3f1;
+  --cs-radius:         var(--radius-md);
+}
+:root {
+  --t-row-selected:   var(--field-bg-hover);
+  --t-radius:         var(--radius-sm);
+  --t-pill-bg:        var(--field-focus);
+}
+:root {
+  --s-pad-bg: var(--field-bg);
+  --s-pad-bg-active: var(--field-bg-hover);
+  --s-pad-border: var(--card-border);
+  --s-pad-border-active: var(--field-focus);
+  --s-radius: var(--radius-md);
+}
+:root {
+  /* Alert (--al-*) */
+  --al-text: var(--text);
+  --al-text-mute: var(--text-muted);
+  --al-link: var(--link);
+  --al-link-hover: var(--link-hover);
+  /* Alert state colours → status tokens (theme-driven). */
+  --al-info-bg: var(--info-bg);
+  --al-info-border: var(--info-border);
+  --al-info-text: var(--info);
+  --al-info-ico: var(--info);
+  --al-ok-bg: var(--success-bg);
+  --al-ok-border: var(--success-border);
+  --al-ok-text: var(--success);
+  --al-ok-ico: var(--success);
+  --al-warn-bg: var(--warn-bg);
+  --al-warn-border: var(--warn-border);
+  --al-warn-text: var(--warn-text);
+  --al-warn-ico: var(--warn-text);
+  --al-err-bg: var(--danger-bg);
+  --al-err-border: var(--danger-border);
+  --al-err-text: var(--danger);
+  --al-err-ico: var(--danger);
+
+  /* Upload (--u-*) */
+  --u-text: var(--text);
+  --u-text-mute: var(--text-muted);
+  --u-text-soft: var(--text-soft);
+  --u-link: var(--link);
+  --u-link-hover: var(--link-hover);
+  --u-danger: var(--danger);
+  --u-danger-bg: var(--danger-bg);
+  --u-success: var(--success);
+  --u-success-bg: var(--success-bg);
+  --u-warn: var(--warn-text);
+  --u-warn-bg: var(--warn-bg);
+  --u-card-border: var(--card-border);
+  --u-hairline: var(--hairline);
+  --u-bg: var(--surface);
+  --u-card-bg: var(--surface);
+
+  /* Adresse (--a-*) */
+  --a-bg: var(--surface);
+  --a-card-bg: var(--surface);
+  --a-text: var(--text);
+  --a-text-mute: var(--text-muted);
+  --a-text-soft: var(--text-soft);
+  --a-link: var(--link);
+  --a-link-hover: var(--link-hover);
+  --a-field-bg: var(--field-bg);
+  --a-field-bg-hover: var(--field-bg-hover);
+  --a-field-focus: var(--field-focus);
+  --a-card-border: var(--card-border);
+  --a-hairline: var(--hairline);
+  --a-success: var(--success);
+  --a-success-bg: var(--success-bg);
+  --a-success-border: var(--success-border);
+  --a-warn-text: var(--warn-text);
+  --a-warn-bg: var(--warn-bg);
+  --a-danger: var(--danger);
+  --a-danger-bg: var(--danger-bg);
+
+  /* Country-select (--cs-*) */
+  --cs-bg: var(--surface);
+  --cs-text: var(--text);
+  --cs-text-mute: var(--text-muted);
+  --cs-text-soft: var(--text-soft);
+  --cs-link: var(--link);
+  --cs-link-hover: var(--link-hover);
+  --cs-field-bg: var(--field-bg);
+  --cs-field-bg-hover: var(--field-bg-hover);
+  --cs-field-focus: var(--field-focus);
+  --cs-card-border: var(--card-border);
+  --cs-hairline: var(--hairline);
+  --cs-row-hover: var(--field-bg);
+
+  /* Tree-select (--t-*) */
+  --t-bg: var(--surface);
+  --t-text: var(--text);
+  --t-text-mute: var(--text-muted);
+  --t-text-soft: var(--text-soft);
+  --t-link: var(--link);
+  --t-link-hover: var(--link-hover);
+  --t-field-bg: var(--field-bg);
+  --t-field-bg-hover: var(--field-bg-hover);
+  --t-field-focus: var(--field-focus);
+  --t-card-border: var(--card-border);
+  --t-hairline: var(--hairline);
+  --t-row-hover: var(--field-bg);
+  --t-pill-bg-active: var(--link);
+
+  /* Signature (--s-*) */
+  --s-bg: var(--surface);
+  --s-text: var(--text);
+  --s-text-mute: var(--text-muted);
+  --s-text-soft: var(--text-soft);
+  --s-link: var(--link);
+  --s-link-hover: var(--link-hover);
+  --s-card-border: var(--card-border);
+  --s-hairline: var(--hairline);
+  --s-ok: var(--success);
+  --s-ok-bg: var(--success-bg);
+  --s-ok-border: var(--success-border);
+
+  /* Search / Kontakt widget (--sw-*) — declared global-first (no legacy hex
+     block to rewire; the widget's recipes live inline in
+     search-widget.component.ts and consume these from :root). */
+  --sw-bg: var(--surface);
+  --sw-text: var(--text);
+  --sw-text-mute: var(--text-muted);
+  --sw-text-soft: var(--text-soft);
+  --sw-link: var(--link);
+  --sw-link-hover: var(--link-hover);
+  --sw-field-bg: var(--field-bg);
+  --sw-field-bg-hover: var(--field-bg-hover);
+  --sw-field-focus: var(--field-focus);
+  --sw-divider: var(--card-border);
+  --sw-hairline: var(--hairline);
+  --sw-row-hover: var(--field-bg);
+  --sw-banner-info-bg: var(--field-bg-hover);
+  --sw-banner-info-text: var(--text);
+  --sw-banner-warn-bg: var(--warn-bg);
+  --sw-banner-warn-text: var(--warn-text);
+  --sw-banner-ok-bg: var(--success-bg);
+  --sw-banner-ok-text: var(--success);
+  --sw-banner-soft-bg: var(--field-bg);
+  --sw-ok-border: var(--success-border);
+  --sw-radius: var(--radius-md);
+  --sw-card-radius: var(--radius-md);
+  /* Big-choice card (Kind-Chooser) — fully tokenised: colours alias semantic
+     roles (editable in the component settings), layout/type values are
+     editable via the layout editor (target 'search'). */
+  --sw-choice-bg: var(--surface);
+  --sw-choice-border: var(--card-border);
+  --sw-choice-border-hover: var(--field-focus);
+  --sw-choice-border-w: 1.5px;
+  --sw-choice-radius: 10px;
+  --sw-choice-mt: 0px; --sw-choice-mr: 0px; --sw-choice-mb: 0px; --sw-choice-ml: 0px;
+  --sw-choice-pt: 18px; --sw-choice-pr: 20px; --sw-choice-pb: 18px; --sw-choice-pl: 20px;
+  --sw-choice-title-fs: var(--fs-base);
+  --sw-choice-title-fw: var(--fw-bold);
+  --sw-choice-title-lh: var(--lh-snug);
+  --sw-choice-title-color: var(--text);
+  --sw-choice-sub-fs: var(--fs-sm);
+  --sw-choice-sub-fw: var(--fw-normal);
+  --sw-choice-sub-lh: var(--lh-normal);
+  --sw-choice-sub-color: var(--text-soft);
+  --sw-icon-size: 38px;
+  --sw-icon-radius: var(--radius-md);
+  --sw-icon-bg: var(--field-bg);
+  --sw-icon-color: var(--field-focus);
+  /* Widget-specific values (no semantic equivalent — intentionally literal,
+     like the country row-active / tree row-selected exceptions above). */
+  --sw-host-radius: 10px;
+  --sw-mark-bg: #fff4c4;       /* <mark> highlight in dropdown results */
+  --sw-prefill-bg: linear-gradient(180deg, #f6f8ff 0%, #eef2fc 100%);
+  --sw-prefill-border: #dbe2f5;
+  --sw-prefill-text: #3a4870;
+}
+:root {
+  --fa-num-bg: var(--field-bg-hover);
+  --fa-num-fs: var(--fs-sm);
+  --fa-num-color: var(--text);
+  --fa-num-fw: var(--fw-medium);
+  --fa-title-fs: var(--fs-base);
+  --fa-title-fw: var(--fw-medium);
+  --fa-title-color: var(--text);
+  --fa-body-bg: var(--field-bg);
+  --fa-body-pad: 16px;
+  /* Card header — bg (on the header bar) + border (on the card) per state. */
+  --fa-header-bg: transparent;            --fa-header-border: var(--card-border);
+  --fa-header-bg-hover: var(--field-bg);   --fa-header-border-hover: var(--card-border);
+  --fa-header-bg-focus: var(--field-bg);   --fa-header-border-focus: var(--field-focus);
+  --fa-header-bg-expanded: transparent;    --fa-header-border-expanded: var(--field-focus);
+}
+:root {
+  /* Title (H1) */
+  --trc-title-fs: var(--fs-2xl);
+  --trc-title-fw: var(--fw-bold);
+  --trc-title-lh: var(--lh-tight);
+  --trc-title-mb: 6px;
+  --trc-title-color: var(--text);
+  /* Subtitle (description) */
+  --trc-sub-fs: var(--fs-md);
+  --trc-sub-fw: var(--fw-normal);
+  --trc-sub-lh: var(--lh-normal);
+  --trc-sub-mb: 16px;
+  --trc-sub-color: var(--text-muted);
+  /* Step (number badge) */
+  --trc-step-bg: var(--field-bg);
+  --trc-step-bg-done: var(--success);
+  --trc-step-color: var(--text-muted);
+  --trc-step-border-c: transparent;
+  --trc-step-border-w: 0px;
+  --trc-step-radius: var(--radius-full);
+  --trc-step-fs: var(--fs-sm);
+  --trc-step-fw: var(--fw-semibold);
+  /* Step label */
+  --trc-steplabel-fs: var(--fs-md);
+  --trc-steplabel-fw: var(--fw-medium);
+  --trc-steplabel-color: var(--text-muted);
+  /* Connector line */
+  --trc-line-bg: var(--hairline);
+  --trc-line-fill: var(--success);
+  --trc-line-h: 2px;
+  --trc-line-radius: 1px;
+  /* Info box */
+  --trc-info-bg: var(--info-bg);
+  --trc-info-icon-size: 22px;
+  --trc-info-icon-color: var(--info);
+  --trc-info-border-c: var(--info-border);
+  --trc-info-border-w: 1px;
+  --trc-info-radius: var(--radius-lg);
+  --trc-info-pad: 14px;
+  --trc-info-fs: var(--fs-md);
+  --trc-info-fw: var(--fw-semibold);
+  /* Consent (checkbox card) */
+  --trc-consent-bg: var(--field-bg);
+  --trc-consent-border-c: var(--info-border);
+  --trc-consent-border-w: 1px;
+  --trc-consent-radius: var(--radius-md);
+  --trc-consent-pad: 12px;
+  --trc-consent-fs: var(--fs-md);
+  --trc-consent-fw: var(--fw-normal);
+}
+:root {
+  --ph-headline-fs: var(--fs-2xl);
+  --ph-headline-fw: var(--fw-semibold);
+  --ph-headline-lh: var(--lh-tight);
+  --ph-headline-color: var(--text);
+  --ph-subline-fs: var(--fs-base);
+  --ph-subline-fw: var(--fw-normal);
+  --ph-subline-color: var(--text-muted);
+  --ph-subline-mt: 6px;
+  --ph-headline-mb: 0px;
+  --ph-pad-x: 32px;
+  --ph-pad-y: 24px;
+  --ph-divider-w: 1px;
+  --ph-divider-c: var(--card-border);
+}
+
+/* ═══ BetterCo (Blue) — baked overrides (applied last, win over base) ═══ */
+
+/* Shared Library layer — spartan-ng v40: component-token wiring */
+:root {
+  --label-fs: var(--fs-md);
+  --card-padding: var(--sp-4);
+  --border: 0 0% 100%;   /* var(--color-white) -> #FFFFFF (HSL triple for hsl()) */
+  --h1-fw: var(--fw-medium);
+  --h5-fw: var(--fw-normal);
+  --input-pr: 14px;
+  --input-pb: 12px;
+  --input-pt: 12px;
+  --tag-py: var(--sp-2);
+  --tag-px: var(--sp-3);
+  --input-shadow: var(--shadow-none);
+  --sw-choice-radius: 12px;
+  --sw-choice-border-w: 1px;
+  --sw-choice-title-fw: var(--fw-medium);
+  --input-border-w: 1px;
+  --input-border-w-focus: 0.5px;
+  --label-value-color: var(--color-neutral-slate-400);
+  --fa-num-bg: var(--color-neutral-slate-50);
+  --fa-body-bg: var(--color-white);
+  --radio-bg-selected: var(--surface);
+  --radio-text-selected: var(--text);
+  --radio-bg-hover: var(--field-bg);
+  --trc-title-fw: var(--fw-semibold);
+  --trc-line-fill: var(--color-brand-blue-accent);
+  --trc-info-icon-size: 16px;
+  --trc-info-icon-color: var(--color-brand-blue-accent);
+  --trc-consent-border-c: var(--color-neutral-slate-200);
+  --spacer-l: 80px;
+  --spacer-m: 40px;
+  --spacer-s: 20px;
+  --ph-headline-fw: var(--fw-medium);
+  --ph-divider-w: 1px;
+  --sum-entry-pt: 4px;
+  --sum-entry-pb: 4px;
+  --sum-label-fs: var(--fs-md);
+  --sum-value-fs: var(--fs-md);
+  --sum-value-fw: var(--fw-normal);
+  --sum-heading-tt: none;
+  --sum-heading-fw: var(--fw-medium);
+  --sum-heading-color: var(--color-neutral-slate-950);
+  --sum-heading-ls: var(--ls-normal);
+  --nav-group-tt: none;
+  --nav-group-fw: var(--fw-medium);
+  --nav-group-color: var(--color-neutral-slate-800);
+  --nav-group-ls: var(--ls-normal);
+  --nav-group-mb: 12px;
+  --nav-step-bg-active: var(--color-brand-darkblue-02);
+  --nav-step-color-active: var(--color-white);
+  --nav-step-bg-hover: var(--color-neutral-slate-50);
+  --u-link: var(--color-brand-navy);
+  --s-link: var(--color-brand-navy);
+  --nav-ind-size: 16px;
+  --foot-border-c: var(--color-neutral-slate-100);
+  --foot-bg: var(--color-white);
+  --t-link: var(--color-brand-navy);
+  --input-bg-hover: var(--field-bg);
+  --tl-tt: none;
+  --tl-fw: var(--fw-normal);
+  --tl-mt: 36px;
+  --tl-mb: 20px;
+  --tl-ls: var(--ls-normal);
+  --tl-color: var(--color-neutral-slate-400);
+  --proc-card-bg: var(--color-white);
+  --proc-card-bg-hover: var(--color-white);
+  --nav-border-w: 1px;
+  --nav-border-c: var(--color-neutral-slate-100);
+  --proc-card-bg-focus: var(--surface);
+  --proc-card-border-hover: var(--surface);
+  --proc-pill-shadow: var(--shadow-none);
+  --proc-card-shadow-hover: var(--shadow-md);
+  --secondary: 223 47% 97%;   /* var(--color-page) -> #F4F6FB (HSL triple for hsl()) */
+  --primary-foreground: 0 0% 100%;   /* var(--color-white) -> #FFFFFF (HSL triple for hsl()) */
+  --input: 223 9% 85%;   /* var(--color-neutral-slate-200) -> #D4D6DB (HSL triple for hsl()) */
+  --accent: 220 18% 97%;   /* var(--color-neutral-slate-50) -> #F5F6F8 (HSL triple for hsl()) */
+  --info-border: var(--color-brand-blue-02);
+}
+
+/* Theme layer — BetterCo (Blue) v11: brand primitives + foundations */
+:root {
+  --font-headline-weight: 600;
+  --color-page: #F4F6FB;
+  --primary: 220 100% 67%;   /* var(--color-brand-blue-accent) -> #578fff (HSL triple for hsl()) */
+  --primary-foreground: 0 0% 100%;   /* var(--color-white) -> #FFFFFF (HSL triple for hsl()) */
+  --field-focus: var(--color-brand-blue-accent);
+  --field-bg-hover: var(--color-neutral-slate-50);
+  --color-brand-blue-accent: #578fff;
+}

@@ -1,0 +1,7300 @@
+{
+ "source": "Jurisdiction coverage matrix",
+ "note": "Coverage is fluid and extended into new jurisdictions over time. Documents are split into Base (provided as standard) and Additional (available on request, not commonly needed, billed as an extra charge) so onboarding stays cost-effective.",
+ "groups": [
+  {
+   "name": "Live jurisdictions",
+   "count": 153
+  },
+  {
+   "name": "Canada",
+   "count": 14
+  },
+  {
+   "name": "USA",
+   "count": 50
+  }
+ ],
+ "total": 217,
+ "jurisdictions": [
+  {
+   "name": "Aaland Islands",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Previous Names",
+    "Other Identifiers",
+    "Registration Date",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Birth Date",
+    "Nationality",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Registered financial statements",
+    "Rules in electronic form"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Albania",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Historical Extract"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Angola",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Capital",
+    "Activity Type",
+    "Tax Identification Number"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Tax Identification Number"
+   ],
+   "shareholders": [
+    "Name",
+    "Address"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Anguilla",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Argentina",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Armenia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Tax Identification Number",
+    "Other Identifiers",
+    "Registration Date",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Passport Number"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Address",
+    "Role",
+    "Passport Number"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Registration Certificate",
+    "Certificate enclosure",
+    "Charter"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Aruba",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Issued Capital",
+    "Trade Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Birth Date",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Photo-static copy of deed",
+    "Authenticated Copy of deed",
+    "Trade Registry Forms Duplicate",
+    "Modification deed of incorporation",
+    "Historical Extract of a corporation (EN/Dutch)",
+    "Declaration of good standing (EN/Dutch)",
+    "Declaration of registration (EN/Dutch)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Australia",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Creation Date",
+    "Dissolution Date",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality",
+    "Birth Date"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Current and historical company information",
+    "Satisfied charges",
+    "Roles and relationship extract",
+    "Details of registration of corporations(s)",
+    "Application For Registration as a Proprietary Company (201C)",
+    "Change To Company Details (484)",
+    "Change To Company Details Changes To (Members) Share Holdings (484N)",
+    "Change To Company Details Appointment Or Cessation Of A Company Officeholder (484E)",
+    "Application For Extension Of A Name Reservation (410F)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Austria",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Share Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Registration number (if entity)",
+    "Birth Date",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Registration number (if entity)",
+    "Birth Date",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Jahresabschluss (annual accounts)",
+    "Aktuelle Fassung (Current version)",
+    "Gesellschaftsvertrag (social contract)",
+    "Musterzeichnung (pattern drawing)",
+    "Protokoll d. Generalversammlung (log d. general assembly)",
+    "Beschluss d. Gesellschafter (decision d. shareholder)",
+    "Nachtrag zum Gesellschaftsvertrag (Addendum to the Articles of Association)",
+    "Antrag (application)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Azerbaijan",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Authorized Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Bahamas",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Authorized Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Bahrain",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Registration Expiry Date",
+    "Activity Type",
+    "Other Names",
+    "Authorized Capital",
+    "Issued Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Other Names"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Role",
+    "Nationality",
+    "Other Names"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Belarus",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Activity Type"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Belgium",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Other Names",
+    "Entity Status",
+    "Entity Type",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Trade Names",
+    "Other Names",
+    "Previous Names",
+    "Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Constitution",
+    "Annual Accounts",
+    "Change of Name"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Belize",
+   "registryAccess": "Registry Services",
+   "sla": "7 days",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Share Capital",
+    "Authorized Capital",
+    "Registration Date",
+    "Activity Type",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Bermuda",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Authorized Share Capital",
+    "Previous names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Annual Return",
+    "Migrated Filing"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Bolivia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Activity Type",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Return"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Bonaire, Sint Eustatius and Saba",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Trade Names",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Birth Date",
+    "Nationality",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Bosnia Herzegovina",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Identifiers",
+    "Other Names",
+    "Activity Type",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Sharecount",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Botswana",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality",
+    "Sharecount",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Annual Return"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Brazil",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Capital",
+    "Tax Identification Number"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Tax Identification Number",
+    "National Country ID"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Share count",
+    "Tax Identification Number",
+    "National Country ID"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Ficha Cadastral Completa (Complete Registration Form)",
+    "Ficha Cadastral Simplificada (dados atuais da empresa) (Simplified Registration Form (current company data))",
+    "Cópia Digitalizada de Documentos Arquivados (cópia simples - não tem valor jurídico de certidão) (Scanned Copy of Archived Documents (simple copy - has no legal certificate value))",
+    "Certidão Específica Pré-formatada (Pre-formatted Specific Certificate)",
+    "Certidão Específica com Teor Solicitado (Specific Certificate with Requested Content)",
+    "Certidão Específica com Teor Solicitado - Registro de Livros (Specific Certificate with Requested Content - Book Registration)",
+    "Certidão de Inteiro Teor (Full Content Certificate)",
+    "Solicitação de Correção de Dados Cadastrais (Registration Data Correction Request)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "British Virgin Island (BVI)",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Authorized Capital",
+    "Registration Date",
+    "Previous Names",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Phone number",
+    "Fax number"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certified/Uncertified copy of a certificate of:",
+    "- Incorporation",
+    "- Restoration",
+    "- Merger",
+    "- Consolidation",
+    "- Arrangement",
+    "- Continuation",
+    "- Discontinuance",
+    "- Dissolution",
+    "Certificate of Goodstanding",
+    "Certified/uncertified copy of a memorandum and/or Articles",
+    "Duplicate Certificate"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Brunei",
+   "registryAccess": "Registry Services",
+   "sla": "70 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Role",
+    "Sharecount",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Incorporate a Private Company",
+    "Allotment of Shares",
+    "Historical – General Details",
+    "Historical – Registered Office Addresses",
+    "Historical – Directors",
+    "Historical – Shareholders",
+    "Register a Business Name",
+    "Request of Information – Business Names Profile",
+    "File Annual Return",
+    "Register Branch of Foreign Company",
+    "Increase Share Capital",
+    "Application to Strike off Company",
+    "Update Director Foreign Company",
+    "Change Business Name Details",
+    "Update Director Details",
+    "Transfer of Shares",
+    "Lodge General Form of Application to the Register",
+    "Incorporate a Public Company",
+    "Update Address Details",
+    "Update Director Structure"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Bulgaria",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Names",
+    "Previous Names",
+    "Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Registration number (if entity)",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Registration number (if entity)",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Current act of establishment",
+    "Announced acts (Annual financial report)",
+    "Company case",
+    "Case"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Burkina Faso",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Tax Identification Number",
+    "Activity Type",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Cambodia",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Tax Identification Number",
+    "Tax Registration Date",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Other Names"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Other Names"
+   ],
+   "documentsMandatory": [
+    "General Details",
+    "Addresses",
+    "Controlling Parties, Officers",
+    "Shareholders, Partners and Beneficial Owners"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Canada",
+   "registryAccess": "Registry Services",
+   "sla": "-",
+   "companyIdentity": [],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Cayman Islands",
+   "registryAccess": "Hybrid",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Creation Date"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Company Identity"
+   ],
+   "documentsNonMandatory": [
+    "Director Details",
+    "Detailed Search"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Chile",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Share Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Tax Identification Number"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Constitution",
+    "Modification"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Annotation",
+    "Certificate of Migration"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "China",
+   "registryAccess": "Hybrid",
+   "sla": "12 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Activity Type",
+    "Registered Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Report"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Christmas Island",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Creation Date",
+    "Dissolution Date",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality",
+    "Birth Date"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Current and historical company information",
+    "Satisfied charges",
+    "Roles and relationship extract",
+    "Details of registration of corporations(s)",
+    "Application For Registration as a Proprietary Company (201C)",
+    "Change To Company Details (484)",
+    "Change To Company Details Changes To (Members) Share Holdings (484N)",
+    "Change To Company Details Appointment Or Cessation Of A Company Officeholder (484E)",
+    "Application For Extension Of A Name Reservation (410F)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Cocos (Keeling) Islands",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Creation Date",
+    "Dissolution Date",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality",
+    "Birth Date"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Current and historical company information",
+    "Satisfied charges",
+    "Roles and relationship extract",
+    "Details of registration of corporations(s)",
+    "Application For Registration as a Proprietary Company (201C)",
+    "Change To Company Details (484)",
+    "Change To Company Details Changes To (Members) Share Holdings (484N)",
+    "Change To Company Details Appointment Or Cessation Of A Company Officeholder (484E)",
+    "Application For Extension Of A Name Reservation (410F)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Colombia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Identifiers",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "National Country ID"
+   ],
+   "shareholders": [
+    "Name",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Cook Islands",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Costa Rica",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On",
+    "Passport Number",
+    "National Country ID"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Croatia",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Other Names",
+    "Share Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Other Identifiers"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Registration number (if entity)",
+    "Role",
+    "Share count",
+    "Other Identifiers"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Historical Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Zaprimljeno rješenje (Received solution)",
+    "Obavijest o elektroničkom upisu (Electronic enrollment notice)",
+    "Rješenje o upisu (Decision on enrollment)",
+    "Prilog uz rješenje o upisu (Attachment to the decision on enrollment)",
+    "Oglas (advertisement)",
+    "Financijska izvješća (Financial reports)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Curaçao",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Trade Names",
+    "Registration Date",
+    "Nominal Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Birth Date"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Cyprus",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Nationality",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Registration number (if entity)",
+    "Nationality",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Memorandum and Articles in Foreign Language",
+    "Memorandum and Articles",
+    "Certificate of Incorporation"
+   ],
+   "documentsNonMandatory": [
+    "Particulars in relation to the first directors and secretary",
+    "Communication of the address of the Registered Office or change to it",
+    "Compliance Declaration According to the Law",
+    "Annual Return",
+    "Sworn affidavit in Court",
+    "Notification of change of Officers and of their particulars",
+    "Letter",
+    "Communication of the address of the Registered Office or change to it",
+    "Transfer of shares of private companies",
+    "Certificate of change of name",
+    "Resolution",
+    "Accounts"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Czech Republic",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Capital",
+    "Registration Date",
+    "Previous Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Jurisdiction (if entity)",
+    "Registration number (if entity)",
+    "Role",
+    "Birth Date"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Jurisdiction (if entity)",
+    "Registration number (if entity)",
+    "Birth Date",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "účetní závěrka (financial statements)",
+    "ostatní Zápis z jednání řádné valné hromady (others Minutes of the Ordinary General Meeting)",
+    "ostatní zahajovací rozvaha (other opening balance sheet)",
+    "notářský zápis (notarial record)",
+    "změna právní formy, fúze Projekt rozdělení společnosti (change of legal form, merger Company division project)",
+    "zakladatelské dokumenty, notářský zápis (founding documents , notarial record)",
+    "zpráva o vztazích (Relationship Report)",
+    "zakladatelské dokumenty (founding documents)",
+    "smlouvy o převodu obchod. podílu (business transfer agreement. share)",
+    "ostatní - překlad výpisu z OR (others - translation of an extract from the Commercial Register)",
+    "zpráva auditora + účetní závěrka (auditor 's report + financial statements)",
+    "rozhod. o statut. orgánu - Rozhodnutí jed.spol. (decision. the statute. of the body - Decision of the single company)",
+    "zakladatelské dokumenty - ZL - úplné znění (founding documents - ZL - full text)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Denmark",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Previous Names",
+    "Registered Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Registration number (if entity)",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Report",
+    "Registration Certificate",
+    "Annual Accounts"
+   ],
+   "documentsNonMandatory": [
+    "Navneændringscertifikatet (name change certificate)",
+    "Serviceattest (service certificate)",
+    "Vedtægter (Articles of association)",
+    "Kapitaldokumentation (capital documentation)",
+    "Stiftelsesdokument (foundation document)",
+    "Generalforsamlingsprotokollat (Minutes of the general meeting)",
+    "Vurderingsberetning (assessment report)",
+    "Åbningsbalance (opening balance)",
+    "Fusionsplan (merger plan)",
+    "Anmeldelsesblanket (notification form)",
+    "Ledelseserklæring (management statement)",
+    "Spaltningsplan (demerger plan)",
+    "Redegørelse om efterfølgende erhvervelser (statement of subsequent acquisitions)",
+    "Redegørelse om selvfinansiering (statement on self-financing)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Djibouti",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Ecuador",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Capital",
+    "Trade Names",
+    "Tax Identification Number"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Identification Number",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Nationality",
+    "Sharecount",
+    "Role",
+    "Identification Number"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Shareholders Certificate"
+   ],
+   "documentsNonMandatory": [
+    "Balance / Statement of Financial Position",
+    "Certificate of Compliance with Obligations and Legal Existence"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Estonia",
+   "registryAccess": "Registry Services",
+   "sla": "70 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "National Country ID",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Registration number (if entity)",
+    "Role",
+    "Share count",
+    "National Country ID"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "History of the registry card",
+    "Beneficial owners",
+    "Annual Report",
+    "Articles of Association"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Faroe Islands",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Address",
+    "Share Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Fiji",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Identification Number",
+    "Identification Type",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Share count",
+    "Identification Number",
+    "Identification Type"
+   ],
+   "documentsMandatory": [
+    "Business Profile"
+   ],
+   "documentsNonMandatory": [
+    "Certificate / Notices",
+    "FOREIGN INVESTMENT REGISTRATION CERTIFICATE"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Finland",
+   "registryAccess": "Hybrid",
+   "sla": "70 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Previous Names",
+    "Other Identifiers",
+    "Registration Date",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Birth Date",
+    "Nationality",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Registered financial statements",
+    "Rules in electronic form"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "France",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Number",
+    "Creation Date",
+    "Other Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Birth Date",
+    "Registration number (if entity)",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Memorandum & Articles of Association"
+   ],
+   "documentsNonMandatory": [
+    "History Of Modifications",
+    "Full Debt Report",
+    "Annual Accounts",
+    "Bankruptcy Proceedings",
+    "Certificate of registration"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "French Polynesia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Other Names"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Georgia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Other Names"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Role",
+    "Nationality",
+    "Other Names"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Registry Extract_English"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Germany",
+   "registryAccess": "Hybrid",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Creation Date",
+    "Other Names",
+    "Total Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Birth Date (if individual)",
+    "Registration Number (if entity)",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Birth Date (if individual)",
+    "Registration Number (if entity)",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Official Registry Extract",
+    "List of Shareholders",
+    "Memorandum & Articles of Association",
+    "Registration Certificate",
+    "Articles of Association"
+   ],
+   "documentsNonMandatory": [
+    "Application",
+    "List of supervisory board members",
+    "List of entrepreneurs",
+    "Report/decision/record",
+    "Further document/file",
+    "Notification after registration",
+    "Notification after receipt"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Gibraltar",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Previous Names",
+    "Nominal Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Company Profile"
+   ],
+   "documentsNonMandatory": [
+    "Complete Archives Bundle (All Documents Showing As Available For This Company)",
+    "Memorandum Of Association",
+    "Articles Of Association",
+    "Notice Of Situation Of Registered Office",
+    "Statement Of Nominal Share Capital",
+    "Declaration Of Compliance",
+    "Duplicate Of Certificate Of Incorporation",
+    "Substituted Particulars Of Directors, And Of Any Change Therein",
+    "Particulars Of Directors, And Of Any Change Therein",
+    "Letter Of Substitution",
+    "Return Of Allotment Of Shares",
+    "Special Resolution Amending Memorandum Of Association",
+    "Annual Return",
+    "Special Resolution Amending Name",
+    "Amended Memorandum Of Association",
+    "Amended Articles Of Association",
+    "Dup. Certificate Of Change Of Name",
+    "Voluntary Return Of Members",
+    "Particulars Of Directors, Managers And Secretaries, And Of Any Change Therein",
+    "Letter Of Substitution",
+    "Form Of Particulars For Registration Of Charge",
+    "Certificate Of Registration",
+    "Entry In Register Of Charges",
+    "Annual Filing Of Accounts",
+    "Letter Of Consent To Act As Secretary",
+    "Return Of Members, And Of Any Change Therein",
+    "Electronic Annual Filing Of Accounts",
+    "Mortgages & Charges"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Greece",
+   "registryAccess": "Automated",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Creation Date",
+    "Other Names",
+    "Other Names (Latin)",
+    "VAT Number",
+    "Activity Type",
+    "Secondary Activities"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Articles of Association",
+    "YMS Document"
+   ],
+   "documentsNonMandatory": [
+    "Αίτηση καταχώρισης αποδεικτικού φορολογικής δήλωσης (Application for registration of a tax return receipt)",
+    "Γενική Αίτηση (General Application)",
+    "ΜΕΤΑΒΙΒΑΣΗ ΜΕΤΟΧΩΝ-ΕΠΕΚΤΑΣΗ ΣΚΟΠΟΥ-ΜΕΤΑΦΟΡΑ ΕΔΡΑΣ (Transfer Of Shares-expansion Of Purpose-transfer Of Headquarters)",
+    "ΑΠΟΧΩΡΗΣΗ ΕΤΑΙΡΟΥ, ΕΠΕΚΤΑΣΗ ΣΚΟΠΟΥ, ΑΛΛΑΓΗ ΔΙΑΧΕΙΡΗΣΗΣ (ΤΡΟΠΟΠΟΙΗΣΗ ΤΩΝ ΑΡΘΡΩΝ 3,5,6,8,9,11)ΚΑΙ ΚΩΔΙΚΟΠΟΙΗΣΗ ΚΑΤΑΣΤΑΤΙΚΟΥ (Departure Of Partner, Extension Of Purpose, Change Of Management (Amendment Of Articles 3,5,6,8,9,11) And Code Of Statutes.)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Greenland",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Previous Names",
+    "Registered Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount",
+    "Address"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Registration Certificate",
+    "Annual Accounts"
+   ],
+   "documentsNonMandatory": [
+    "Navneændringscertifikatet (name change certificate)",
+    "Serviceattest (service certificate)",
+    "Vedtægter (Articles of association)",
+    "Kapitaldokumentation (capital documentation)",
+    "Stiftelsesdokument (foundation document)",
+    "Generalforsamlingsprotokollat (Minutes of the general meeting)",
+    "Vurderingsberetning (assessment report)",
+    "Åbningsbalance (opening balance)",
+    "Fusionsplan (merger plan)",
+    "Anmeldelsesblanket (notification form)",
+    "Ledelseserklæring (management statement)",
+    "Spaltningsplan (demerger plan)",
+    "Redegørelse om efterfølgende erhvervelser (statement of subsequent acquisitions)",
+    "Redegørelse om selvfinansiering (statement on self-financing)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Guadeloupe",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Creation Date",
+    "Share capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Birth Date (if individual)",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Guernsey",
+   "registryAccess": "Hybrid",
+   "sla": "30 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Other Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Good Standing",
+    "Certificate of Incorporation",
+    "Annual Return",
+    "Re-Registration Form",
+    "Annual Validation Form",
+    "Annual Validation Form - Additional Information",
+    "Change of Director Form",
+    "Articles of Association",
+    "Memorandum of Association",
+    "Pre July 08 Incorporation Documents",
+    "Change of Reg Office Address Form",
+    "Resolution Form",
+    "Resolution Attachment",
+    "Foundation - Change of Particulars",
+    "Annual Renewal - Foundation",
+    "Foundation registration form",
+    "Charter",
+    "Councillors consent to act",
+    "Disenfranchised beneficiaries declaration",
+    "Guardian consent to act",
+    "LLP Incorporation form",
+    "LLP - Change of Particulars",
+    "Annual Validation - LLP",
+    "Change of Particulars",
+    "AV Amendment",
+    "Limited Partnership Registration Form"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "HK CR",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Dissolution Date",
+    "Important Note",
+    "Incorporation Date",
+    "Other Names",
+    "Previous names",
+    "Register of Charges",
+    "Remarks",
+    "Share capital",
+    "Total shares",
+    "Winding Up Mode",
+    "Former Company Number",
+    "Origin Jurisdiction of Incorporation"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality (if individual)",
+    "National Country ID (if individual)",
+    "Other Names",
+    "Passport Country",
+    "Passport Number",
+    "Appointed On",
+    "Important Note"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "HK CR Company Particulars",
+    "Certificate of Incorporation / Certificate of Incorporation issued in the place of incorporation",
+    "Certificate of Change of Name",
+    "NSC1 Allotment",
+    "Memorandum & Articles of Association",
+    "Annual Return (FNAR1) or FNNC1 (Incorporation Form)"
+   ],
+   "documentsNonMandatory": [
+    "FND2A - Notice of Change of Company Secretary and Director (Appointment/Cessation)",
+    "FND2B - Notice of Change in Particulars of Company Secretary and Director",
+    "FND4 - Notice of Resignation of Company Secretary and Director",
+    "FND5 Notice of Change of Reserve Director (Nomination/Cessation)",
+    "FND7 Notice of Change in Particulars of Reserve Director",
+    "FND8 Notice of Resignation of Reserve Director",
+    "FNR1 - Notice of Change of Address of Registered Office",
+    "FNR2 - Notice of Location of Registers and Company Records",
+    "FNAA1 - Notice of Alteration of Company's Articles",
+    "Altered Articles of Association",
+    "Special resolution",
+    "FNNC1G - Incorporation Form (Company Not Limited by Shares)",
+    "FNN3 - Annual Return of Registered Non-Hong Kong Company",
+    "FNN1 - Application for Registration as Registered Non-Hong Kong Company",
+    "Certificate of Registration of Change of Corporate Name of Non-Hong Kong Company",
+    "Instrument",
+    "FNM1 - Statement of Particulars of Charge",
+    "Certificate of Registration of Charge",
+    "FNM2 - Notification of Payment / Satisfaction of Debt, Release from Charge, etc.",
+    "FM2 - Memorandum of Satisfaction or Release of Property from Charge"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "HK IRD",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Business Nature",
+    "Creation Date",
+    "Other Names",
+    "Business/Branch Name in Chinese",
+    "Business/Branch Name in English",
+    "Date of Expiry"
+   ],
+   "controlling": [],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On",
+    "ID Card Number",
+    "Other Names"
+   ],
+   "documentsMandatory": [
+    "Electronic Extract of Information on the Business Register",
+    "Duplicate of a valid business/branch registration certificate"
+   ],
+   "documentsNonMandatory": [
+    "Certified extract of information on the Business Register",
+    "Certified copy of a valid business/branch registration certificate"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Honduras",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Names",
+    "Trade Names",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Hungary",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Other Names",
+    "Activity Type",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Jurisdiction (if entity)",
+    "Birth Date (if individual)",
+    "Registration Number (if entity)",
+    "Other Identifiers"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Jurisdiction (if entity)",
+    "Birth Date (if individual)",
+    "Registration Number (if entity)",
+    "Share count",
+    "Other Identifiers"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Iceland",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "ÁrsreikningurKaupa"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "India",
+   "registryAccess": "Hybrid",
+   "sla": "48 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Certificate of Incorporation",
+    "Certificate of Change of Name",
+    "Annual Return"
+   ],
+   "documentsNonMandatory": [
+    "Certificate Of Registration Of Order For The Reduction Of The Share Capital (In Case Of Govt. Companies",
+    "Certificate Of Registration Of Charge",
+    "Certificate Of Registration Of The Special Resolution Confirming Alteration Of Object Clause(S)",
+    "Fresh Certificate Of Incorporation Consequent Upon Change Of Name",
+    "Certificate Of Registration Of Order For The Reduction Of The Share Capital",
+    "Change in Directors",
+    "Charge Documents",
+    "Audited Financial Statements (Form AOC-4)",
+    "Copy of court order or NCLT or CLB or order by any other competent authority",
+    "Copy of resolution passed by the company",
+    "Copy of the intimation sent by company",
+    "Copy of written consent given by auditor",
+    "Optional Attachment",
+    "Resignation letter",
+    "List of share holders, debenture holders"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Indonesia",
+   "registryAccess": "Hybrid",
+   "sla": "8 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Nationality",
+    "Role",
+    "Birth Date (if individual)"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Birth Date (if individual)",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Original Document",
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Iran",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Iraq",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Capital",
+    "Activity Type"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Ireland",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Creation Date",
+    "Incorporation Date",
+    "Last Accounts Date",
+    "Next Accounts Date",
+    "VAT"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Birth Date (if individual)",
+    "Role",
+    "Nationality"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "B1 Annual Return",
+    "Company Constitution",
+    "A1 Application to Register as a New Company"
+   ],
+   "documentsNonMandatory": [
+    "Letter of status - Companies",
+    "Duplicate Cert - Certificate of Incorporation of Company",
+    "Company Printout",
+    "Last Months Statement",
+    "Short Certificate (Public Service use only)",
+    "Short Certificate for Business Names (Public Service use only)",
+    "Certificate of Charge Companies",
+    "Migrated Certificate",
+    "Business Name Profile",
+    "Financial Statement",
+    "Financial Statement Certificate",
+    "Form B10 - Change Director or Secretary Details",
+    "Account Details",
+    "Accounts Certification Page",
+    "C6 Memo Of Satisfaction Of A Charge-full",
+    "C17 Changes To Particulars Of Charge Holder",
+    "B5 Return Of Allotments",
+    "B5N- Allotment Of Shares- No Fee",
+    "B7 Variation of Company Capital",
+    "B77 Authorise Agent",
+    "B9 Notice of increase in members (CLG - Companies Limited by Guarantee and PULC - Public Unlimited Company with no share capital only)",
+    "G1P - Special Resolution",
+    "H5 Return By A Company Purchasing Its Own Shares",
+    "C1 Mort/ Charge Created By Irish Company",
+    "B2 Change In Situation Of Reg Office",
+    "B21 Statutory Declaration Pursuant To S. 60",
+    "G2 Ordinary Resolution",
+    "Notice of increase in nominal capital",
+    "Capital duty statement",
+    "M1 Notice Of Chg. To Single Members Company Reg 5",
+    "B47 Notice(Letter) Of Resignation Of Auditor",
+    "Auditors Report",
+    "More forms listed here"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Isle of Man",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Nationality",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Annual Return",
+    "Change In Director/Secretary",
+    "Registration Certificate",
+    "Memorandum of Association (only downloaded if no Annual Return filed yet)"
+   ],
+   "documentsNonMandatory": [
+    "Articles of Association",
+    "First Directors/Secretary & Registered Office"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Israel",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Nationality",
+    "ID Number",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Nationality",
+    "Share count",
+    "ID Number",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Annual Return",
+    "Certificate of Incorporation",
+    "Certificate of change of name"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Italy",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Creation Date",
+    "Other identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Birth Date (if individual)",
+    "Role",
+    "Nationality",
+    "Appointed on"
+   ],
+   "shareholders": [
+    "Name",
+    "Nationality",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Visura ordinaria (Ordinary certificate)",
+    "Visura Storica (Historical search)",
+    "Fascicolo Storico (Historical File)",
+    "Ultimo Bilancio (Latest Budget)",
+    "Balance sheets"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Japan",
+   "registryAccess": "Registry Services",
+   "sla": "70 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Authorized Shares",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Jamaica",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Letter of Good Standing",
+    "Letter of Confirmation",
+    "Additional documents may be requested, subject to availability"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Jersey",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Birth Date (if individual)",
+    "Role",
+    "Address",
+    "Nationality"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Nationality",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registration Certificate",
+    "Certificate of Continuance (when Certificate of Incorporation is not available)",
+    "Certificate of Partnership (for Limited Partnership entities only)",
+    "Entity Profile"
+   ],
+   "documentsNonMandatory": [
+    "Annual Administration Fee",
+    "Authorisaton use of Registered Office",
+    "Certificate Change of Declaration",
+    "Certificate of Change of Name",
+    "Certificate of good standing",
+    "Change in Status",
+    "Company Incorporation - Memorandum / Articles",
+    "Annual return",
+    "Public Company Prospectus",
+    "Registration",
+    "Registrars Consent",
+    "Register Partnership",
+    "Special Resolution"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Jordan",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Role",
+    "Nationality (if individual)"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Kazakhstan",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Kenya",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Nominal Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Role",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Kosovo",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Trade Names",
+    "Other Identifiers",
+    "Tax Identification Number",
+    "Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Kuwait",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Authorized Capital",
+    "Activity Type",
+    "Other Identifiers",
+    "Registration Expiry Date"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality (if individual)"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Nationality (if individual)"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Kyrgyzstan",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Tax Identification Number",
+    "Other Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Certificate"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Laos",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Latvia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Equity Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Birth Date",
+    "Appointed On",
+    "National Country ID",
+    "Identification Number"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Birth Date",
+    "Registration number (if entity)",
+    "Sharecount",
+    "National Country ID",
+    "Identification Number"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Lesotho",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Trade Names",
+    "Share Capital",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Liechtenstein",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Share Capital",
+    "Other Names",
+    "Previous Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality (if individual)"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality (if individual)",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Registerauszug unbeglaubigt aktuelle informationen (Register extract not certified current information)",
+    "Registerauszug elektr Amissignatur akluelle informationen (Register excerpt electronic signature current information)",
+    "Registerauszug elektr. Amtssignatur alle Informationen (Register excerpt electronic Official signature all information)",
+    "Registerauszug manuell beglaubigt aktuelle informationen (Register extract manually notarized current information)",
+    "Registerauszug manuell beglaubigt alle informationen (Register extract manually notarizes all information)",
+    "Gesamter Akt unbeglaubigt (Entire act uncertified)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Lithuania",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Identifiers",
+    "Registration Date",
+    "Activity Type",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Birth Date"
+   ],
+   "documentsMandatory": [
+    "Company Profile",
+    "Company Appointments"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Luxembourg",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Dissolution Date",
+    "Activity Type",
+    "Termination of domiciliation agreement",
+    "EUID Number",
+    "Foreign Company Jurisdiction",
+    "Foreign Company Number",
+    "Foreign Company Register"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality (if individual)",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registration Extract",
+    "Articles of association",
+    "Registration Certificate",
+    "Annual Accounts"
+   ],
+   "documentsNonMandatory": [
+    "Modification",
+    "Branch registration",
+    "Non-statutory modification of the agents (corrective)",
+    "Non-statutory modification of the agents",
+    "Negative Certification",
+    "Resignation"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Macau S.A.R. China",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Activity Type",
+    "Capital",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Other Names"
+   ],
+   "shareholders": [
+    "Name",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Macedonia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Names",
+    "Registration Date",
+    "Tax Identification Number",
+    "Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Информација за поврзани субјекти-тековна состојба (Information on related entities - current situation)",
+    "Историјат на промени (History of change)",
+    "Тековна состојба на трансакциски сметки на субјект (Current balance of transaction accounts of an entity)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Malaysia",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Document ID Number",
+    "Appointment date"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality (if individual)",
+    "Birth Date (if individual)",
+    "Share count",
+    "Document ID Number"
+   ],
+   "documentsMandatory": [
+    "Company/Business Profile"
+   ],
+   "documentsNonMandatory": [
+    "Certificates Of Incorporation/Registration",
+    "Certificates Of Change Of Name",
+    "Certificates Of Conversion",
+    "Particular Of Directors/Officers",
+    "Particular Of Registered Address",
+    "Particular Of Shareholders",
+    "Particular Of Share Capital",
+    "Particular Of Company Secretary",
+    "Company Charges",
+    "Financial Historical Comparison",
+    "Attestation of Company Good Standing",
+    "Memorandum And Articles Of Association",
+    "Return for allotment of shares",
+    "Notice Of Resolution",
+    "Notification of change in the Register of Members",
+    "Register Of Directors, Managers And Secretaries / S. 58 - Notification of change in the Register of Directors, Managers and Secretaries",
+    "Annual Return",
+    "Annual Report",
+    "Notification of change in the Business Address and / or Nature of Business",
+    "Notice Of Place Where Register",
+    "Registered Office And Office Hours / S. 46 - Notification for change in the registered address",
+    "Copy of Minute By Representative of Holding Company",
+    "Increase In Share Capital",
+    "Statutory Declaration"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Maldives",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Trade Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Malta",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Authorized Shares",
+    "Issued Shares"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality (if individual)"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality (if individual)",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registration Certificate",
+    "Annual Return",
+    "Memorandum and Articles of Association"
+   ],
+   "documentsNonMandatory": [
+    "Beneficial Owner Printout",
+    "Accounts",
+    "Alterations to the Memorandum and Articles",
+    "Transfer/Transmission of Shares",
+    "Notification of changes amongst directors or company secretary or in the representation of a company",
+    "Alteration of the Accounting Reference Period",
+    "Notice of claim for extension of period allowed for laying accounts",
+    "Change in Registered Office",
+    "Change amongst Company Secretary",
+    "Notice that a company has ceased to be a single member company",
+    "Removal of Auditor",
+    "Notification of compliance with Companies Act before the end of the transitional period",
+    "Report in terms of Sec. 73(6) - Non-Cash Consideration",
+    "Return of Allotments"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Marshall Islands",
+   "registryAccess": "Registry Services",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Martinique",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Creation Date",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Birth Date (if individual)",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Mauritius",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Jurisdiction (if entity)",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Jurisdiction (if entity)",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Mexico",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Nationality",
+    "Birth Date",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Birth Date",
+    "Sharecount",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Incorporation"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Moldova",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity type"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Monaco",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Birth Date (if individual)",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Montenegro",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Identifiers",
+    "Other Names",
+    "Activity Type",
+    "Capital",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registration Document",
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Morocco",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Registration Date",
+    "Other Identifiers",
+    "Capital",
+    "Activity Type",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Company Statutes"
+   ],
+   "documentsNonMandatory": [
+    "Historical Extract",
+    "Simplified financial statement",
+    "Detailed financial statement"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Myanmar",
+   "registryAccess": "Registry Services",
+   "sla": "70 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Other Names",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality (if individual)",
+    "National Country ID"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Company Extract - Historical",
+    "Certified Copy of the Company Certificate"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Nepal",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Netherlands",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Activity Type",
+    "Creation Date",
+    "Other Identifiers",
+    "Other Names",
+    "Total Share Capital",
+    "Dissolution Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Nationality (if individual)",
+    "Jurisdiction (if entity)",
+    "Birth Date (if individual)",
+    "Appointed on"
+   ],
+   "shareholders": [
+    "Name",
+    "Birth Date (if individual)",
+    "Jurisdiction (if entity)",
+    "Address",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Company Registration Extract"
+   ],
+   "documentsNonMandatory": [
+    "Bedrijfsprofiel (Company profile)",
+    "Historie (History)",
+    "Concernrelaties (Group relations)",
+    "Deponeringen (Deposits)",
+    "Jaarrekeningen (Financial Statements)",
+    "Documenten zoals statuten, fusie- ofsplitsingsvoorstellen (Documents such as articles of association, merger or division proposals)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "New Zealand",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Date",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Trade Names",
+    "Previous Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Annual Return",
+    "Particulars of Shareholding",
+    "Particulars of Director",
+    "Director Consent",
+    "Notice Of Issue Of Shares",
+    "Consent Of Shareholder",
+    "Application To Incorporate A Company",
+    "Certificate of Incorporation",
+    "Change of Company Name",
+    "New Company Incorporation",
+    "Update Shares",
+    "Amalgamation Certificate",
+    "Adoption of a Constitution"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Nigeria",
+   "registryAccess": "Registry Services",
+   "sla": "24hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Birth date",
+    "Nationality",
+    "Other Names"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role",
+    "Other Names"
+   ],
+   "documentsMandatory": [
+    "Company Profile",
+    "List of Officers",
+    "List of Persons with significant control"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Norway",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Birth Date (if individual)"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Annual Accounts",
+    "Certificate"
+   ],
+   "documentsNonMandatory": [
+    "Rolleoversikt organisasjonsnummer (Role overview organization number)",
+    "Firmaattest vanlig (Company certificate regular)",
+    "Firmaattest notarialbekreftet (Company certificate notarially confirmed)",
+    "Firmaattest på engelsk notarialbekreftet (Company certificate in English notarized)",
+    "Pantattest (Mortgage certificate)",
+    "Bekreftelse fra Konkursregisteret (Confirmation from the Bankruptcy Register)",
+    "Vedtekter (Articles of association)",
+    "Stiftelsesdokumenter (Foundation documents)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Oman",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Registration Expiry Date",
+    "Total Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Birth Date (if individual)",
+    "Nationality (if individual)",
+    "Other Names"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Role",
+    "Birth Date (if individual)",
+    "Nationality (if individual)",
+    "Other Names"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Palestine",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Pakistan",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Authorized Capital",
+    "Paidup Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Role",
+    "National Country ID",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Role",
+    "Sharecount",
+    "National Country ID"
+   ],
+   "documentsMandatory": [
+    "Company Profile"
+   ],
+   "documentsNonMandatory": [
+    "Company Address",
+    "Company Officer",
+    "Certificate of Incorporation",
+    "Form 3, Form 10, Form 21, Form 26, Form 27, Form 28, Form 29, Form 30, Form 45",
+    "Annual Accounts",
+    "Form A or Form B",
+    "Latest Memorandum and Article"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Panama",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Papua New Guinea",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Other Identifiers",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Address",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Address",
+    "Sharecount",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Paraguay",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Status",
+    "Registration Number",
+    "Other Identifiers"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Peru",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Trade Names",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Registration number (if entity)",
+    "National Country ID (if individual)",
+    "Appointment On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Registration number (if entity)",
+    "National Country ID (if individual)"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Legal representative"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Philippines - SEC",
+   "registryAccess": "Registry Services",
+   "sla": "7 days",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Trade Names",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Nationality (if individual)"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Nationality (if individual)",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Articles of Partnership (for partnership type only)"
+   ],
+   "documentsNonMandatory": [
+    "Combined Articles of Incorporation and By-Laws",
+    "Audited Financial Statement",
+    "Amended By-Laws"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Philippines - DTI",
+   "registryAccess": "Registry Services",
+   "sla": "70 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [],
+   "shareholders": [
+    "Name",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Certificate"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Poland",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Tax Identification Number",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Jurisdiction (if entity)",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Register Report"
+   ],
+   "documentsNonMandatory": [
+    "Register Report (Historical)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Portugal",
+   "registryAccess": "Registry Services",
+   "sla": "3 days",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Capital",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Tax Identification Number",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Share count",
+    "Tax Identification Number"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certidão de Registo e Documentos (Certificate of Registration and Documents)",
+    "Certidão do Último Pacto Social/Estatutos Actualizados (Certificate of the Last Articles of Association/Updated Statutes)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Puerto Rico",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "Registry Extract",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Annual Report",
+    "Balance Sheet",
+    "Financial Statement",
+    "Certificate of Good Standing",
+    "Certificate of Existence"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Qatar",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Registered capital",
+    "Registration expiry date"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Romania",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Share Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Birth Date",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Birth Date",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificat constatator de bază (Basic finding certificate)",
+    "Certificat constatator fonduri IMM (Certificate of SME funds)",
+    "Certificat constatator pentru insolvență (Certificate of insolvency)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Russia",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Tax Identification Number",
+    "Authorized Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Tax Identification Number"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Share count",
+    "Tax Identification Number"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Saint Vincent and the Grenadines",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Samoa",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names",
+    "Trade Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Birth date",
+    "Nationality",
+    "Sharecount",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Notice Of Change Of Shareholder Details Or Transfer In Shares",
+    "Registrar Notice Of Change Of Status",
+    "Form 12 Annual Return",
+    "Form 10 Notice Of Change Of Directors Or Director Details",
+    "Form 6 Notice Of Change Of Registered Office Or Postal Address",
+    "Form 4 Application To Change Name Of Company",
+    "Form 1 Application For Incorporation Of Company"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "San Marino",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Share Capital",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Birth date",
+    "Nationality"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Saudi Arabia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Registration Expiry Date",
+    "Other Identifiers"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Senegal",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Other Identifiers"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Serbia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Names",
+    "Registration Date",
+    "Capital",
+    "Activity Type",
+    "Tax Identification Number"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "National Country ID",
+    "Passport Number",
+    "Passport Country"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount",
+    "National Country ID"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Seychelles - Business Register",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Seychelles - FSA",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Singapore",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Activity Type",
+    "Registration Date",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Registration Number (if entity)",
+    "Role",
+    "National Country ID",
+    "Appointment Date"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Jurisdiction (if entity)",
+    "Registration Number (if entity)",
+    "Role",
+    "Share count",
+    "National Country ID"
+   ],
+   "documentsMandatory": [
+    "Business Profile"
+   ],
+   "documentsNonMandatory": [
+    "Enhanced Business Profile (EBPF)",
+    "Comprehensive Business Profile (CBPF)",
+    "Basic Essential Corporate Information (ECI)",
+    "Enhanced Essential Corporate Information (EECI)",
+    "Comprehensive Information (CCI)",
+    "Strategic Corporate Information (SCI)",
+    "Enhanced Strategic Corporate Information (ESCI)",
+    "Financial Statement Extract (FSH)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Slovakia",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Capital",
+    "Previous Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Full Registry Extract"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Slovenia",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Tax Identification Number",
+    "Other Names",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role",
+    "Share count",
+    "Registration Number (if entity)",
+    "Tax Identification Number",
+    "Passport Number",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Annual Report"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Solomon Islands",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Sharecount",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "Registry Extract",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Form 17 - Application For Restoration For Failure To File Annual Return",
+    "Form 13 - Annual Return Of Public Or Private Company",
+    "Form 11 - Notice Of Change Of Directors, Or In The Name, Residential Address Or Postal Address Of Directors",
+    "Form 7 - Notice Of Change Of Address Of Registered Office Or Postal Address",
+    "Form 1 - Application For Registration Of A Company",
+    "Involuntary Removal For Failure To File Annual Return"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "South Africa",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Identification Number"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "South Korea",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Name",
+    "Other Identifiers",
+    "Taxpayer Identification Number",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "List of Major Stockholders"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Spain",
+   "registryAccess": "Hybrid",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Activity Type",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Appointed On",
+    "National Country ID"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Sri Lanka",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Total Shares Issued"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "National Country ID",
+    "Passport Number",
+    "Passport Country"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Role",
+    "Address"
+   ],
+   "documentsMandatory": [
+    "Annual Return",
+    "Form 1 - Application of Registration of a Company"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Sweden",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Other Names",
+    "Share Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "National Country ID"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Register Report",
+    "Memorandum & Articles of Association"
+   ],
+   "documentsNonMandatory": [
+    "Årsredovisning (Annual report)",
+    "Protokoll (Protocols)",
+    "Uppgifter ur registret över verkliga huvudmän (Information from the register of real principals)"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Switzerland",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Registration Number",
+    "Entity Status",
+    "Address",
+    "Activity Type",
+    "Creation Date",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Nationality (if individual)",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Company Registration"
+   ],
+   "documentsNonMandatory": [
+    "Commercial register extrait - certified",
+    "Register document - certified",
+    "Statutes - certified",
+    "Certificate of incorporation - certified"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Taiwan",
+   "registryAccess": "Registry Services",
+   "sla": "40 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration number",
+    "Address",
+    "Previous Names",
+    "Other Names",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Shares",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Report",
+    "Registry Report_English"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Thailand",
+   "registryAccess": "Hybrid",
+   "sla": "8 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration number",
+    "Address",
+    "Registration Date",
+    "Registered Capital",
+    "Activity Type",
+    "Previous Names",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Shares",
+    "Role",
+    "Other Names"
+   ],
+   "documentsMandatory": [
+    "Company Information Report",
+    "Financial Statement Report",
+    "Investment by Nationality Report",
+    "Information Change Tracking Report",
+    "List of Shareholders"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Tonga",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Tax Identification Number"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Address",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Nationality",
+    "Address",
+    "Sharecount",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "Registry Extract",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Togo",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifier",
+    "Other Names"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Trinidad and Tobago",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Identifiers"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Tunisia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Names",
+    "Trade Names",
+    "Other Identifiers",
+    "Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Historical Extract"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Turkey",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Address",
+    "Other Identifiers",
+    "Registration Date",
+    "Capital",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "U.S. Virgin Islands",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Trade Names",
+    "Activity Type",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "UAE",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Names",
+    "Other Identifiers",
+    "Registration Date",
+    "Registration Expiry Date",
+    "Activity Type"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Ukraine",
+   "registryAccess": "Registry Services",
+   "sla": "24",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Other Names",
+    "Activity Type",
+    "Registration Date",
+    "Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality (if individual)",
+    "Address"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Nationality (if individual)",
+    "Address",
+    "Share count"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "UK",
+   "registryAccess": "Automated",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Creation Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality (if individual)",
+    "Address",
+    "Birth Date (if individual)",
+    "Appointed on",
+    "Occupations"
+   ],
+   "shareholders": [
+    "Name",
+    "Share count",
+    "Role",
+    "Address (if available)"
+   ],
+   "documentsMandatory": [
+    "New Incorporation",
+    "CS01",
+    "Annual Return",
+    "Form SH01 Return of Allotment of Shares",
+    "Form SH03 Notify a purchase of own shares",
+    "Form SH06 Notify a cancellation of shares",
+    "Accounts",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "CH01 - Director's details changed",
+    "CH03 - Secretary's details changed",
+    "AP01 - Appointment",
+    "AP03 - Appointment",
+    "TM01 - Termination of appointment",
+    "TM02 - Termination of appointment",
+    "Memorandum and Articles of Association",
+    "SH08 - Change of share class name or designation",
+    "AD01 - Registered office address changed",
+    "MR04 - Satisfaction of charge",
+    "MR01 - Registration of charge",
+    "AA01 - Previous accounting period extended",
+    "Resolutions",
+    "PSC01 - Notice of Individual PSC",
+    "PSC07 - Notice of ceasing to be a PSC",
+    "PSC04 - Change of individual PSC details"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "USA",
+   "registryAccess": "Registry Services",
+   "sla": "-",
+   "companyIdentity": [],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Uzbekistan",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Authorized Capital",
+    "Other Names",
+    "Tax Identification Number",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Tax Identification Number"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Sharecount"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Vanuatu",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address",
+    "Sharecount",
+    "Appointed On"
+   ],
+   "documentsMandatory": [
+    "Certificate of Incorporation",
+    "Registry Extract",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Annual Return",
+    "Application To Change Name Of Company",
+    "Application For Registration Of A Company",
+    "Notice Of Change Of Directors And Particulars Of Directors",
+    "Notice Of Transfer Of Shares In Company",
+    "Notice Of Change Of Postal Address",
+    "Articles Of Association"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Viet Nam - NBR",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address",
+    "Nationality (if individual)",
+    "National Country ID",
+    "Passport Number"
+   ],
+   "shareholders": [
+    "Name",
+    "Sharecount",
+    "Role",
+    "Address"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Historical Registry Extract",
+    "Business Certificate"
+   ],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Viet Nam - GDT",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Trade Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Address"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Address"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Yemen",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Address"
+   ],
+   "controlling": [],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Zambia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Entity Type",
+    "Entity Status",
+    "Registration Number",
+    "Address",
+    "Registration Date",
+    "Nominal Capital",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Role",
+    "Nationality (if individual)",
+    "National Country ID",
+    "Passport Number"
+   ],
+   "shareholders": [
+    "Name",
+    "Role",
+    "Nationality (if individual)",
+    "Sharecount",
+    "National Country ID",
+    "Passport Number"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Live jurisdictions"
+  },
+  {
+   "name": "Canada Federal Companies",
+   "registryAccess": "Registry Services",
+   "sla": "25 minutes",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Registration Date",
+    "Previous Names",
+    "Other Names",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Amendment"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Canada"
+  },
+  {
+   "name": "Alberta",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Canada"
+  },
+  {
+   "name": "British Columbia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Corporate Summary / Business Summary",
+    "Certificate of Incorporation",
+    "BC Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Letter Under Seal"
+   ],
+   "group": "Canada"
+  },
+  {
+   "name": "Manitoba",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration  Date",
+    "Activity Type",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "File Summary"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Canada"
+  },
+  {
+   "name": "Nova Scotia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Entity Snapshot"
+   ],
+   "documentsNonMandatory": [
+    "Entity Profile Report",
+    "Certificate of Status - Company",
+    "Entity Documents On File",
+    "Change of Directors: Notice of Officers and Directors",
+    "Appoint an Agent: Appointment of Agent",
+    "Date of Filing Amalgamation: Amalgamation Court Order",
+    "Date of Filing Amalgamation: Amalgamation Agreement",
+    "Special Resolution: Special Resolution - Acquire Own Shares",
+    "Annual Statement Filed: Annual Statement/No Changes",
+    "Annual Statement Filed: Annual Statement",
+    "Company Annual Renewal Statement",
+    "Company Special Resolution - Other",
+    "Change Address for Agent: Document to Change Agents Address",
+    "Company Change of Directors and Officers"
+   ],
+   "group": "Canada"
+  },
+  {
+   "name": "Ontario",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Status"
+   ],
+   "group": "Canada"
+  },
+  {
+   "name": "Quebec",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Canada"
+  },
+  {
+   "name": "Saskatchewan",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Other Identifiers",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Entity Profile Report"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Status",
+    "Certificate of Incorporation",
+    "Certificate of Amendment",
+    "Notice of Shareholders",
+    "Business Corporation - Annual Return",
+    "Notice of Change of Directors/Officers",
+    "Business Corporation - File Unanimous Shareholder Agreement",
+    "Business Corporation - Amend Articles",
+    "General Information",
+    "Condominium - Bylaws",
+    "Condominium - Incorporation",
+    "Limited Liability Partnership - Registration",
+    "Limited Liability Partnership - Annual Return"
+   ],
+   "group": "Canada"
+  },
+  {
+   "name": "New Brunswick",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Status",
+    "Copy of a document (i.e. Articles of Incorporation, Articles of Amendment, Annual Return for a particular year(s), Certificate of Business Name)"
+   ],
+   "group": "Canada"
+  },
+  {
+   "name": "Newfoundland and Labrador",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Good Standing"
+   ],
+   "group": "Canada"
+  },
+  {
+   "name": "Nunavut",
+   "registryAccess": "Registry Services",
+   "sla": "96 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Profile Search"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Canada"
+  },
+  {
+   "name": "Prince Edward Island",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Other Identifiers",
+    "Registration Date",
+    "Previous Names",
+    "Activity Type",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "Canada"
+  },
+  {
+   "name": "Northwest Territories",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Entity Profile",
+    "Annual Return",
+    "Certificate of Incorporation"
+   ],
+   "documentsNonMandatory": [
+    "Directors and Officers",
+    "Registered and Head Offices",
+    "Constating Documents"
+   ],
+   "group": "Canada"
+  },
+  {
+   "name": "Yukon",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Profile Report",
+    "Annual Return",
+    "Certificate of Incorporation"
+   ],
+   "documentsNonMandatory": [
+    "Address of Corporation",
+    "Change of Address of Corporation",
+    "Change of Directors and Directors' Addresses",
+    "Directors"
+   ],
+   "group": "Canada"
+  },
+  {
+   "name": "Alabama",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Authorized Capital"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Incorporation"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Alaska",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Share count",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Bienniel Report"
+   ],
+   "documentsNonMandatory": [
+    "Agent Change",
+    "Correction",
+    "Amendment",
+    "Change of Officials",
+    "Certificate of Compliance"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Arizona",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Affidavit of Publication",
+    "Statement of Change - Corps",
+    "Articles of Amendment - LLC"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Arkansas",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Good Standing"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "California",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Statement of Information",
+    "Initial Filing"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Status",
+    "Certified copies of document"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Colorado",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Filing history and documents",
+    "certificate of good standing",
+    "certified copies of documents"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Connecticut",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Legal Existence",
+    "Merger"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Delaware",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Phone Number"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Status Report"
+   ],
+   "documentsNonMandatory": [
+    "Status, Tax & History Information Report"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Florida",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Annual Return",
+    "Articles of Organization",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [],
+   "group": "USA"
+  },
+  {
+   "name": "Georgia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Annual Registration",
+    "Business Formation",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [],
+   "group": "USA"
+  },
+  {
+   "name": "Hawaii",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Trade Names",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Good Standing",
+    "Annual Filing",
+    "Articles of Incorporation"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Idaho",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Annual Report",
+    "Certificate of Incorporation",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Change of Registered Office/Agent/Both (by Entity)",
+    "Legacy Amendment",
+    "Certificate of Existence/Filing"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Illinois",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Good Standing",
+    "Certificate of Existence"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Indiana",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Change of Principal Address",
+    "Articles of Amendment",
+    "Articles of Amendment",
+    "Business Entity Report",
+    "Articles of Restatement",
+    "Certificate of Assumed Business Name",
+    "Articles of Merger",
+    "Change of Governing Person"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Iowa",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Bienniel Report",
+    "Certificate",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Adoption Of Fictitious Name",
+    "Miscellaneous Filing",
+    "Articles Of Amendment",
+    "Agent's Change Of Office",
+    "Certificate Of Existence"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Kansas",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Certificate Of Good Standing",
+    "Miscellaneous Change",
+    "Conversion",
+    "Change Of Ro Or Ra",
+    "Change Of Name"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Kentucky",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Authorized Shares"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Principal Office Address Change",
+    "Registered Agent name/address change",
+    "Certificate of Assumed Name",
+    "Statement of Change",
+    "Certificate of Existence / Authorization"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Louisiana",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Information Certificate",
+    "Certificate of Existence",
+    "Certificate of Good Standing",
+    "Original Documents",
+    "Original Documents, Amendments, and Last Annual Report (if applicable)"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Maine",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Annual Return"
+   ],
+   "documentsNonMandatory": [
+    "Articles Of Incorporation",
+    "Articles Of Organization",
+    "Certificate Of Limited Partnership",
+    "Change Of Clerk And Registered Office",
+    "Notice - Failure To File An Annual Report",
+    "Change Of Address By Non Commercial Clerk/Registered Agent",
+    "Resolution/Authorization For Use Of Similar Name",
+    "Change Of Legal Name",
+    "Resignation Of Clerk/Agent"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Maryland",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Resident Agent Change Of Address",
+    "Resignation Of Resident Agent",
+    "Resolution",
+    "Articles Of Amendment / Name Change",
+    "Certificate Of Renewal"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Massachusetts",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Statement of Change of Registered/Resident Agent Office",
+    "Statement of Change of Supplemental Information",
+    "Statement of Appointment of Registered Agent",
+    "Revocation Certificate For Failure to File the Annual Report for the Year",
+    "Statement of Abandonment of Use of Fictitious Business Name",
+    "Application for Certificate of Authority",
+    "Fictitious Business Name Statement",
+    "Certificate of Change of Directors or Officers",
+    "Amended Foreign Corporations Certificate"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Michigan",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Certificate Of Change Of Registered Office And/Or Resident Agent",
+    "Certificate Of Amendment To The Articles Of Incorporation",
+    "Restated Certificate Of Limited Partnership",
+    "Certificate Of Amendment"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Minnesota",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Number of shares",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Incorporation / Original Filing",
+    "Registered Office and/or Agent",
+    "Business Corporation (Domestic) Restated Articles",
+    "Annual Reinstatement",
+    "Administrative Dissolution",
+    "Certificate of Good Standing",
+    "Statement of Amendment"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Mississippi",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Business Conversion",
+    "Registered Agent Change of Address",
+    "Amendment Form",
+    "Reinstatement"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Missouri",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Biennial Report or Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Reminder Notice to File the Registration Report",
+    "Change of Registered Agent and/or Registered Office",
+    "Amendment to Articles of Organization"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Montana",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Existence",
+    "Certificate of Fact",
+    "Certified Copies of Documents",
+    "Missing Document Request",
+    "Principal Extract"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Nebraska",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Biennial/Annual Report",
+    "Incorporation",
+    "Tax Return",
+    "Certificate of Revival",
+    "Proof of Publication",
+    "Record of Determination"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Nevada",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Identifiers"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Annual List",
+    "Incorporation",
+    "Initial List"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "New Hampshire",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names",
+    "Trade Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Commercial Registered Agent Address Change",
+    "Conversion",
+    "Amendment",
+    "Agent Change/Resign"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "New Jersey",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Business Status Report"
+   ],
+   "documentsNonMandatory": [
+    "Short Form Standing Certificate",
+    "Long Form Standing Certificate With Filing History",
+    "Long Form Standing Certificate With Officers",
+    "Original Certificate",
+    "Annual Reports"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "New Mexico",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "USA"
+  },
+  {
+   "name": "New York",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "USA"
+  },
+  {
+   "name": "North Carolina",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Change of Address of Registered Office/Agent"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "North Dakota",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Good Standing"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Ohio",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed on"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation"
+   ],
+   "documentsNonMandatory": [],
+   "group": "USA"
+  },
+  {
+   "name": "Oklahoma",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Register Report"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Record",
+    "Information Printout",
+    "Certificate of Fact",
+    "Copies of the Filed Document"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Oregon",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names",
+    "Other Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role",
+    "Appointed On"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Renewal Of Registration",
+    "Change Of Registered Agent/Address",
+    "Change Of Mailing Address",
+    "Restated Articles",
+    "Articles Of Amendment",
+    "Certificate Of Amendment"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Pennsylvania",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate Of Authority",
+    "Certificate Of Registration",
+    "Index And Docket Report",
+    "Index And Docket Certified Report"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Rhode Island",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Previous Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Statement of Change of Registered/Resident Agent Office",
+    "Revocation Certificate For Failure to File the Annual Report for the Year",
+    "Statement of Abandonment of Use of Fictitious Business Name",
+    "Application for Certificate of Authority",
+    "Fictitious Business Name Statement"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "South Carolina",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Existence"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "South Dakota",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Initial Filing",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Good Standing",
+    "Certified Copies"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Tennessee",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Existence"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Texas",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Tax Identification Number"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Public Information Report"
+   ],
+   "documentsNonMandatory": [
+    "Change Of Registered Agent/Office",
+    "Articles Of Amendment",
+    "Certificate of Amendment"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Utah",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Names",
+    "Previous Names",
+    "Activity Type"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "List of Officers"
+   ],
+   "documentsNonMandatory": [
+    "Reinstatement",
+    "Public_Applications",
+    "Annual Report - Change Request",
+    "Amendment",
+    "Miscellaneous",
+    "Certificate of Existence"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Vermont",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Other Identifiers",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Registered Agent Change",
+    "Business Amendment"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Virginia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report",
+    "Certificate of Change of Name"
+   ],
+   "documentsNonMandatory": [
+    "Statement of Change of Registered Office and/or Registered Agent",
+    "Certificate of Amendment of a Certificate of Limited Partnership"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Washington",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Incorporation",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Statement Of Change",
+    "Annual Report Due Date Notice",
+    "Statement Of Correction",
+    "Amendment"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "West Virginia",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Activity Type",
+    "Trade Names",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract"
+   ],
+   "documentsNonMandatory": [],
+   "group": "USA"
+  },
+  {
+   "name": "Wisconsin",
+   "registryAccess": "Registry Services",
+   "sla": "10 business days",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [],
+   "documentsMandatory": [
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Certificate of Status",
+    "Certified Copy-Articles of Incorporation/Organization",
+    "Certified Copy of Single-year Annual Report",
+    "Certified Copy of a Specific Document",
+    "Copy of a Specific Charter Document",
+    "Copy-Articles of Incorporation/Organization",
+    "Identification Report"
+   ],
+   "group": "USA"
+  },
+  {
+   "name": "Wyoming",
+   "registryAccess": "Registry Services",
+   "sla": "24 hours",
+   "companyIdentity": [
+    "Entity Name",
+    "Registration Number",
+    "Entity Type",
+    "Entity Status",
+    "Address",
+    "Registration Date",
+    "Previous Names"
+   ],
+   "controlling": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "shareholders": [
+    "Name",
+    "Address",
+    "Role"
+   ],
+   "documentsMandatory": [
+    "Registry Extract",
+    "Initial Filing",
+    "Annual Report"
+   ],
+   "documentsNonMandatory": [
+    "Name Change",
+    "RA Address Change",
+    "Address Update"
+   ],
+   "group": "USA"
+  }
+ ]
+}
