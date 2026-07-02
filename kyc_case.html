@@ -342,7 +342,7 @@ const T = {
 };
 function t(k){const v=T[lang][k];return typeof v==="function"?v.apply(null,[].slice.call(arguments,1)):v;}
 
-function esc(s){return (s||"").replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function j(o){return JSON.stringify(o);}
 async function api(path,opts){const r=await fetch(path,opts);const d=await r.json();return {ok:r.ok,d};}
 
