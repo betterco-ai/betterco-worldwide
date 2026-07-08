@@ -21,7 +21,7 @@ Usage:
 
 Zero extra deps — built on http.server + kyc_gateway_client.
 """
-import os, sys, json, argparse, threading, webbrowser
+import os, sys, re, json, argparse, threading, webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
@@ -50,6 +50,47 @@ def jurisdiction_matrix():
         with open(MATRIX_PATH, encoding="utf-8") as f:
             _matrix.update(json.load(f))
     return _matrix
+
+
+# ── India CIN decoder ────────────────────────────────────────────────────────
+# CIN = [L|U][5-digit industry][2-letter STATE][4-digit year][3-letter class][6-digit reg#].
+# The STATE segment is the Registrar-of-Companies jurisdiction = the registering city.
+# This lets us reconstruct the CITY from a search hit whose address is truncated to the
+# state — a FREE pre-purchase check (customer gives name+city → confirm before billing).
+_CIN_STATE = {
+    "TG": ("Telangana", "Hyderabad"), "AP": ("Andhra Pradesh", "Vijayawada"),
+    "MH": ("Maharashtra", "Mumbai / Pune"), "DL": ("Delhi", "Delhi"), "HR": ("Haryana", "Delhi"),
+    "KA": ("Karnataka", "Bengaluru"), "TN": ("Tamil Nadu", "Chennai"), "GJ": ("Gujarat", "Ahmedabad"),
+    "WB": ("West Bengal", "Kolkata"), "UP": ("Uttar Pradesh", "Kanpur"), "RJ": ("Rajasthan", "Jaipur"),
+    "KL": ("Kerala", "Ernakulam (Kochi)"), "MP": ("Madhya Pradesh", "Gwalior"), "PB": ("Punjab", "Chandigarh"),
+    "CH": ("Chandigarh", "Chandigarh"), "BR": ("Bihar", "Patna"), "OR": ("Odisha", "Cuttack"),
+    "GA": ("Goa", "Goa"), "AS": ("Assam", "Guwahati/Shillong"), "JH": ("Jharkhand", "Ranchi"),
+    "CT": ("Chhattisgarh", "Bilaspur"), "UT": ("Uttarakhand", "Dehradun"), "UK": ("Uttarakhand", "Dehradun"),
+    "HP": ("Himachal Pradesh", "Shimla"), "JK": ("Jammu & Kashmir", "Jammu"), "PY": ("Puducherry", "Puducherry"),
+}
+_CIN_CLASS = {"PLC": "Public Limited Company", "PTC": "Private Limited Company", "OPC": "One Person Company",
+              "NPL": "Not-for-Profit (Sec 8)", "GOI": "Government of India company", "SGC": "State Government company",
+              "ULL": "Unlimited (public)", "ULT": "Unlimited (private)", "FLC": "Foreign public", "FTC": "Foreign private"}
+
+
+def decode_cin(cin):
+    """Decode an Indian CIN → {listed, state, rocCity, class, year, regNo, label}.
+    Returns None if the string is not a valid CIN."""
+    m = re.match(r"^([LU])(\d{5})([A-Z]{2})(\d{4})([A-Z]{3})(\d{6})$", (cin or "").strip().upper())
+    if not m:
+        return None
+    listed, _ind, st, year, cls, reg = m.groups()
+    state, roc = _CIN_STATE.get(st, (None, None))
+    return {
+        "cin": m.group(0), "listed": listed == "L",
+        "stateCode": st, "state": state, "rocCity": roc,
+        "classCode": cls, "class": _CIN_CLASS.get(cls, cls),
+        "year": int(year), "regNo": reg,
+        "label": "%s %s · RoC %s%s · est. %d" % (
+            "Listed" if listed == "L" else "Unlisted",
+            _CIN_CLASS.get(cls, cls), roc or "?",
+            (" (%s)" % state) if state else "", int(year)),
+    }
 
 
 def _doc_type(label: str) -> str:
@@ -237,6 +278,14 @@ class H(BaseHTTPRequestHandler):
                 if not jur or not query:
                     return _json(self, {"error": "jurisdiction and query required"}, 400)
                 results = gw.search(jurisdiction=jur, query=query, datasource=ds)
+                # India: decode each hit's CIN so the registering city is visible at the
+                # (free) search stage — the address is often truncated to the state.
+                if jur == "IN" and isinstance(results, list):
+                    for r in results:
+                        if isinstance(r, dict):
+                            dec = decode_cin(r.get("externalCode"))
+                            if dec:
+                                r["cin"] = dec
                 _json(self, {"jurisdiction": jur, "query": query, "results": results})
             elif u.path == "/api/case":
                 cid = q.get("id", [None])[0]

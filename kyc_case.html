@@ -122,6 +122,8 @@
    <div class="row" style="margin-top:10px">
     <div class="grow"><label id="t_lblName"></label>
       <input id="q" placeholder="" style="width:100%"></div>
+    <div><label id="t_lblCityOpt"></label>
+      <input id="city" placeholder="" style="width:150px"></div>
     <button id="searchBtn"></button>
    </div>
    <div class="hint" id="searchHint"></div>
@@ -207,6 +209,8 @@ const T = {
   step1:"Find the company", step2:"Confirm the legal form",
   step3:"Create the case", step4:"Case status & documents",
   lblJur:"Jurisdiction", lblName:"Company name (or registry no.)",
+  lblCityOpt:"City (optional)", cityPlaceholder:"e.g. Hyderabad",
+  cinMatch:"location matches", cinCheck:"verify location",
   selJur:"— select jurisdiction —", namePlaceholder:"e.g. Example Holding Ltd",
   hintChoose:"Choose a jurisdiction, then enter the company name.  (A = automatic search · M = manual, legal form required · then the price band · ★ = curated legal-form mapping)",
   chooseJur:"Please select a jurisdiction.",
@@ -278,6 +282,8 @@ const T = {
   step1:"Unternehmen finden", step2:"Rechtsform bestätigen",
   step3:"Fall anlegen", step4:"Fall-Status & Dokumente",
   lblJur:"Jurisdiktion", lblName:"Firmenname (oder Registernummer)",
+  lblCityOpt:"Ort (optional)", cityPlaceholder:"z. B. Hyderabad",
+  cinMatch:"Standort passt", cinCheck:"Standort prüfen",
   selJur:"— Jurisdiktion wählen —", namePlaceholder:"z. B. Muster GmbH",
   hintChoose:"Wählen Sie eine Jurisdiktion und geben Sie den Firmennamen ein.  (A = automatische Suche · M = manuell, Rechtsform erforderlich · dann das Preisband · ★ = kuratierte Rechtsform-Zuordnung)",
   chooseJur:"Bitte wählen Sie eine Jurisdiktion.",
@@ -351,7 +357,8 @@ function applyStatic(){
  document.title=t('appTitle');
  setTxt('appTitle','appTitle'); setTxt('t_step1','step1'); setTxt('t_step2','step2');
  setTxt('t_step3','step3'); setTxt('t_step4','step4'); setTxt('t_lblJur','lblJur');
- setTxt('t_lblName','lblName'); setTxt('t_payloadIntro','payloadIntro');
+ setTxt('t_lblName','lblName'); setTxt('t_lblCityOpt','lblCityOpt'); setTxt('t_payloadIntro','payloadIntro');
+ document.getElementById('city').placeholder=t('cityPlaceholder');
  setTxt('tab_create','tabCreate'); setTxt('tab_docs','tabDocs'); setTxt('tab_info','tabInfo');
  setTxt('t_docStep1','docStep1'); setTxt('t_mockNote','mockNote');
  setTxt('t_infoStep1','infoStep1'); setTxt('t_infoIntro','infoIntro');
@@ -488,12 +495,27 @@ async function doSearch(){
  if(!ok){msg.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
  const rs=d.results||[];
  msg.innerHTML='<div class="hint">'+t('results',rs.length,query,jur)+'</div>';
+ const city=(document.getElementById('city').value||'').trim().toLowerCase();
  box.innerHTML = rs.map((r,i)=>{
    const act=(r.companyStatus||'').toLowerCase()==='active';
+   let cinHtml='';
+   if(r.cin){
+     const c=r.cin, roc=(c.rocCity||'').toLowerCase(), st=(c.state||'').toLowerCase();
+     let badge='';
+     if(city){
+       const rocMain=roc.split(' /')[0];
+       const m = (roc && roc.indexOf(city)>=0) || (st && st.indexOf(city)>=0) || (rocMain && city.indexOf(rocMain)>=0);
+       badge = m
+         ? '<span class="badge opt" style="margin-left:6px">✓ '+t('cinMatch')+'</span>'
+         : '<span class="badge" style="margin-left:6px;color:var(--warn-text);background:var(--warn-bg);border:1px solid var(--warn-border)">⚠ '+t('cinCheck')+'</span>';
+     }
+     cinHtml='<div style="margin-top:5px"><span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(c.label)+'</span>'+badge+'</div>';
+   }
    return '<div class="res" data-i="'+i+'">'
     +'<div class="nm"><b>'+esc(r.rawname||r.name||'?')+'</b>'
     +'<small>'+esc(r.externalCode||'')+'</small>'
-    +'<small>'+esc(r.rawAddress||[r.street,r.zip,r.city].filter(Boolean).join(', '))+'</small></div>'
+    +'<small>'+esc(r.rawAddress||[r.street,r.zip,r.city].filter(Boolean).join(', '))+'</small>'
+    +cinHtml+'</div>'
     +'<span class="st '+(act?'active':'other')+'">'+esc(r.companyStatus||'—')+'</span></div>';
  }).join('');
  box.querySelectorAll('.res').forEach(el=>el.onclick=()=>{
