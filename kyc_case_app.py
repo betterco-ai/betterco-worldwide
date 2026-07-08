@@ -52,6 +52,51 @@ def jurisdiction_matrix():
     return _matrix
 
 
+def _doc_type(label: str) -> str:
+    """Canonical machine type derived from a document label:
+    'Registered financial statements' -> 'REGISTERED_FINANCIAL_STATEMENTS'."""
+    s = "".join(c if c.isalnum() else "_" for c in (label or "").upper())
+    while "__" in s:
+        s = s.replace("__", "_")
+    return s.strip("_")
+
+
+def jurisdiction_detail(code=None, name=None):
+    """Structured coverage for ONE jurisdiction, looked up by ISO code (baked into
+    the matrix) or by exact matrix name. Returns None if not found. Documents are
+    shaped as {type, description}. No backend call — pure static matrix."""
+    juris = jurisdiction_matrix().get("jurisdictions", [])
+    entry = None
+    if code:
+        cu = code.strip().upper()
+        entry = next((j for j in juris if (j.get("code") or "").upper() == cu), None)
+    if entry is None and name:
+        nl = name.strip().lower()
+        entry = next((j for j in juris if (j.get("name") or "").strip().lower() == nl), None)
+    if entry is None:
+        return None
+
+    def docs(arr):
+        return [{"type": _doc_type(x), "description": x} for x in (arr or [])]
+
+    access = entry.get("registryAccess") or ""
+    registries = [r.strip() for r in access.replace("/", ",").split(",") if r.strip()] or ([access] if access else [])
+    return {
+        "code": entry.get("code"),
+        "name": entry.get("name"),
+        "group": entry.get("group"),
+        "sla": entry.get("sla"),
+        "registries": registries,
+        "dataFields": {
+            "companyIdentity": entry.get("companyIdentity") or [],
+            "controllingEntitiesAndIndividuals": entry.get("controlling") or [],
+            "shareholdersPartnersAndUBOs": entry.get("shareholders") or [],
+        },
+        "baseDocuments": docs(entry.get("documentsMandatory")),
+        "additionalDocuments": docs(entry.get("documentsNonMandatory")),
+    }
+
+
 def persist_env(updates: dict):
     """Upsert KEY=VALUE lines into the local .env, preserving other lines/comments."""
     lines = []
@@ -175,6 +220,16 @@ class H(BaseHTTPRequestHandler):
                 self.wfile.write(body)
             elif u.path == "/api/jurisdiction-matrix":
                 _json(self, jurisdiction_matrix())
+            elif u.path == "/api/jurisdiction":
+                code = (q.get("code", [None])[0] or "").strip() or None
+                name = (q.get("name", [None])[0] or q.get("q", [None])[0] or "").strip() or None
+                if not code and not name:
+                    return _json(self, {"error": "code or name required"}, 400)
+                detail = jurisdiction_detail(code=code, name=name)
+                if detail is None:
+                    return _json(self, {"error": "jurisdiction not found",
+                                        "hint": "use an ISO code (e.g. DE) or exact matrix name (e.g. Germany, Alberta, Alabama)"}, 404)
+                _json(self, detail)
             elif u.path == "/api/search":
                 jur = (q.get("jurisdiction", [""])[0] or "").strip().upper()
                 query = (q.get("query", [""])[0] or "").strip()

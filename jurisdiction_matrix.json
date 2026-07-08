@@ -46,7 +46,8 @@
     "Registered financial statements",
     "Rules in electronic form"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AX"
   },
   {
    "name": "Albania",
@@ -78,7 +79,8 @@
    "documentsNonMandatory": [
     "Historical Extract"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AL"
   },
   {
    "name": "Angola",
@@ -108,7 +110,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AO"
   },
   {
    "name": "Anguilla",
@@ -133,7 +136,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Argentina",
@@ -152,7 +156,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AR"
   },
   {
    "name": "Armenia",
@@ -189,7 +194,8 @@
     "Charter"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AM"
   },
   {
    "name": "Aruba",
@@ -225,7 +231,8 @@
     "Declaration of good standing (EN/Dutch)",
     "Declaration of registration (EN/Dutch)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Australia",
@@ -268,7 +275,8 @@
     "Change To Company Details Appointment Or Cessation Of A Company Officeholder (484E)",
     "Application For Extension Of A Name Reservation (410F)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AU"
   },
   {
    "name": "Austria",
@@ -313,7 +321,8 @@
     "Nachtrag zum Gesellschaftsvertrag (Addendum to the Articles of Association)",
     "Antrag (application)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AT"
   },
   {
    "name": "Azerbaijan",
@@ -337,7 +346,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AZ"
   },
   {
    "name": "Bahamas",
@@ -369,7 +379,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BS"
   },
   {
    "name": "Bahrain",
@@ -405,7 +416,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BH"
   },
   {
    "name": "Belarus",
@@ -427,7 +439,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BY"
   },
   {
    "name": "Belgium",
@@ -464,7 +477,8 @@
     "Change of Name"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BE"
   },
   {
    "name": "Belize",
@@ -492,7 +506,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BZ"
   },
   {
    "name": "Bermuda",
@@ -521,7 +536,8 @@
     "Annual Return",
     "Migrated Filing"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BM"
   },
   {
    "name": "Bolivia",
@@ -551,7 +567,8 @@
     "Annual Return"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Bonaire, Sint Eustatius and Saba",
@@ -580,7 +597,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Bosnia Herzegovina",
@@ -611,7 +629,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BA"
   },
   {
    "name": "Botswana",
@@ -649,7 +668,8 @@
    "documentsNonMandatory": [
     "Annual Return"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BW"
   },
   {
    "name": "Brazil",
@@ -694,7 +714,8 @@
     "Certidão de Inteiro Teor (Full Content Certificate)",
     "Solicitação de Correção de Dados Cadastrais (Registration Data Correction Request)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BR"
   },
   {
    "name": "British Virgin Island (BVI)",
@@ -736,7 +757,8 @@
     "Certified/uncertified copy of a memorandum and/or Articles",
     "Duplicate Certificate"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "VG"
   },
   {
    "name": "Brunei",
@@ -791,7 +813,8 @@
     "Update Address Details",
     "Update Director Structure"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BN"
   },
   {
    "name": "Bulgaria",
@@ -830,7 +853,8 @@
     "Company case",
     "Case"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "BG"
   },
   {
    "name": "Burkina Faso",
@@ -857,7 +881,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Cambodia",
@@ -895,7 +920,8 @@
     "Shareholders, Partners and Beneficial Owners"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "KH"
   },
   {
    "name": "Canada",
@@ -906,7 +932,8 @@
    "shareholders": [],
    "documentsMandatory": [],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CA"
   },
   {
    "name": "Cayman Islands",
@@ -929,7 +956,8 @@
     "Director Details",
     "Detailed Search"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "KY"
   },
   {
    "name": "Chile",
@@ -963,7 +991,8 @@
     "Certificate of Annotation",
     "Certificate of Migration"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CL"
   },
   {
    "name": "China",
@@ -993,7 +1022,8 @@
     "Registry Report"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CN"
   },
   {
    "name": "Christmas Island",
@@ -1036,7 +1066,8 @@
     "Change To Company Details Appointment Or Cessation Of A Company Officeholder (484E)",
     "Application For Extension Of A Name Reservation (410F)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CX"
   },
   {
    "name": "Cocos (Keeling) Islands",
@@ -1079,7 +1110,8 @@
     "Change To Company Details Appointment Or Cessation Of A Company Officeholder (484E)",
     "Application For Extension Of A Name Reservation (410F)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CC"
   },
   {
    "name": "Colombia",
@@ -1108,7 +1140,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CO"
   },
   {
    "name": "Cook Islands",
@@ -1129,7 +1162,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Costa Rica",
@@ -1157,7 +1191,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CR"
   },
   {
    "name": "Croatia",
@@ -1201,7 +1236,8 @@
     "Oglas (advertisement)",
     "Financijska izvješća (Financial reports)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "HR"
   },
   {
    "name": "Curaçao",
@@ -1229,7 +1265,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CW"
   },
   {
    "name": "Cyprus",
@@ -1278,7 +1315,8 @@
     "Resolution",
     "Accounts"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CY"
   },
   {
    "name": "Czech Republic",
@@ -1330,7 +1368,8 @@
     "rozhod. o statut. orgánu - Rozhodnutí jed.spol. (decision. the statute. of the body - Decision of the single company)",
     "zakladatelské dokumenty - ZL - úplné znění (founding documents - ZL - full text)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CZ"
   },
   {
    "name": "Denmark",
@@ -1381,7 +1420,8 @@
     "Redegørelse om efterfølgende erhvervelser (statement of subsequent acquisitions)",
     "Redegørelse om selvfinansiering (statement on self-financing)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "DK"
   },
   {
    "name": "Djibouti",
@@ -1405,7 +1445,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Ecuador",
@@ -1445,7 +1486,8 @@
     "Balance / Statement of Financial Position",
     "Certificate of Compliance with Obligations and Legal Existence"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "EC"
   },
   {
    "name": "Estonia",
@@ -1486,7 +1528,8 @@
     "Annual Report",
     "Articles of Association"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "EE"
   },
   {
    "name": "Faroe Islands",
@@ -1510,7 +1553,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "FO"
   },
   {
    "name": "Fiji",
@@ -1548,7 +1592,8 @@
     "Certificate / Notices",
     "FOREIGN INVESTMENT REGISTRATION CERTIFICATE"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Finland",
@@ -1579,7 +1624,8 @@
     "Registered financial statements",
     "Rules in electronic form"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "FI"
   },
   {
    "name": "France",
@@ -1619,7 +1665,8 @@
     "Bankruptcy Proceedings",
     "Certificate of registration"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "FR"
   },
   {
    "name": "French Polynesia",
@@ -1641,7 +1688,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PF"
   },
   {
    "name": "Georgia",
@@ -1673,7 +1721,8 @@
     "Registry Extract_English"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "GE"
   },
   {
    "name": "Germany",
@@ -1720,7 +1769,8 @@
     "Notification after registration",
     "Notification after receipt"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "DE"
   },
   {
    "name": "Gibraltar",
@@ -1782,7 +1832,8 @@
     "Electronic Annual Filing Of Accounts",
     "Mortgages & Charges"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "GI"
   },
   {
    "name": "Greece",
@@ -1821,7 +1872,8 @@
     "ΜΕΤΑΒΙΒΑΣΗ ΜΕΤΟΧΩΝ-ΕΠΕΚΤΑΣΗ ΣΚΟΠΟΥ-ΜΕΤΑΦΟΡΑ ΕΔΡΑΣ (Transfer Of Shares-expansion Of Purpose-transfer Of Headquarters)",
     "ΑΠΟΧΩΡΗΣΗ ΕΤΑΙΡΟΥ, ΕΠΕΚΤΑΣΗ ΣΚΟΠΟΥ, ΑΛΛΑΓΗ ΔΙΑΧΕΙΡΗΣΗΣ (ΤΡΟΠΟΠΟΙΗΣΗ ΤΩΝ ΑΡΘΡΩΝ 3,5,6,8,9,11)ΚΑΙ ΚΩΔΙΚΟΠΟΙΗΣΗ ΚΑΤΑΣΤΑΤΙΚΟΥ (Departure Of Partner, Extension Of Purpose, Change Of Management (Amendment Of Articles 3,5,6,8,9,11) And Code Of Statutes.)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "GR"
   },
   {
    "name": "Greenland",
@@ -1871,7 +1923,8 @@
     "Redegørelse om efterfølgende erhvervelser (statement of subsequent acquisitions)",
     "Redegørelse om selvfinansiering (statement on self-financing)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "GL"
   },
   {
    "name": "Guadeloupe",
@@ -1897,7 +1950,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Guernsey",
@@ -1952,7 +2006,8 @@
     "AV Amendment",
     "Limited Partnership Registration Form"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "GG"
   },
   {
    "name": "HK CR",
@@ -2024,7 +2079,8 @@
     "FNM2 - Notification of Payment / Satisfaction of Debt, Release from Charge, etc.",
     "FM2 - Memorandum of Satisfaction or Release of Property from Charge"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "HK"
   },
   {
    "name": "HK IRD",
@@ -2060,7 +2116,8 @@
     "Certified extract of information on the Business Register",
     "Certified copy of a valid business/branch registration certificate"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "HK"
   },
   {
    "name": "Honduras",
@@ -2089,7 +2146,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Hungary",
@@ -2130,7 +2188,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "HU"
   },
   {
    "name": "Iceland",
@@ -2161,7 +2220,8 @@
    "documentsNonMandatory": [
     "ÁrsreikningurKaupa"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "IS"
   },
   {
    "name": "India",
@@ -2210,7 +2270,8 @@
     "Resignation letter",
     "List of share holders, debenture holders"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "IN"
   },
   {
    "name": "Indonesia",
@@ -2245,7 +2306,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "ID"
   },
   {
    "name": "Iran",
@@ -2266,7 +2328,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "IR"
   },
   {
    "name": "Iraq",
@@ -2288,7 +2351,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "IQ"
   },
   {
    "name": "Ireland",
@@ -2360,7 +2424,8 @@
     "Auditors Report",
     "More forms listed here"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "IE"
   },
   {
    "name": "Isle of Man",
@@ -2398,7 +2463,8 @@
     "Articles of Association",
     "First Directors/Secretary & Registered Office"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "IM"
   },
   {
    "name": "Israel",
@@ -2439,7 +2505,8 @@
     "Certificate of Incorporation",
     "Certificate of change of name"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "IL"
   },
   {
    "name": "Italy",
@@ -2477,7 +2544,8 @@
     "Ultimo Bilancio (Latest Budget)",
     "Balance sheets"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "IT"
   },
   {
    "name": "Japan",
@@ -2504,7 +2572,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "JP"
   },
   {
    "name": "Jamaica",
@@ -2540,7 +2609,8 @@
     "Letter of Confirmation",
     "Additional documents may be requested, subject to availability"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Jersey",
@@ -2589,7 +2659,8 @@
     "Register Partnership",
     "Special Resolution"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "JE"
   },
   {
    "name": "Jordan",
@@ -2620,7 +2691,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "JO"
   },
   {
    "name": "Kazakhstan",
@@ -2647,7 +2719,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Kenya",
@@ -2679,7 +2752,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "KE"
   },
   {
    "name": "Kosovo",
@@ -2711,7 +2785,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Kuwait",
@@ -2743,7 +2818,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "KW"
   },
   {
    "name": "Kyrgyzstan",
@@ -2774,7 +2850,8 @@
     "Certificate"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "KG"
   },
   {
    "name": "Laos",
@@ -2795,7 +2872,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "LA"
   },
   {
    "name": "Latvia",
@@ -2832,7 +2910,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "LV"
   },
   {
    "name": "Lesotho",
@@ -2868,7 +2947,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "LS"
   },
   {
    "name": "Liechtenstein",
@@ -2910,7 +2990,8 @@
     "Registerauszug manuell beglaubigt alle informationen (Register extract manually notarizes all information)",
     "Gesamter Akt unbeglaubigt (Entire act uncertified)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "LI"
   },
   {
    "name": "Lithuania",
@@ -2942,7 +3023,8 @@
     "Company Appointments"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Luxembourg",
@@ -2990,7 +3072,8 @@
     "Negative Certification",
     "Resignation"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "LU"
   },
   {
    "name": "Macau S.A.R. China",
@@ -3019,7 +3102,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Macedonia",
@@ -3056,7 +3140,8 @@
     "Историјат на промени (History of change)",
     "Тековна состојба на трансакциски сметки на субјект (Current balance of transaction accounts of an entity)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MK"
   },
   {
    "name": "Malaysia",
@@ -3115,7 +3200,8 @@
     "Increase In Share Capital",
     "Statutory Declaration"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MY"
   },
   {
    "name": "Maldives",
@@ -3143,7 +3229,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Malta",
@@ -3193,7 +3280,8 @@
     "Report in terms of Sec. 73(6) - Non-Cash Consideration",
     "Return of Allotments"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MT"
   },
   {
    "name": "Marshall Islands",
@@ -3217,7 +3305,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MH"
   },
   {
    "name": "Martinique",
@@ -3243,7 +3332,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Mauritius",
@@ -3277,7 +3367,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MU"
   },
   {
    "name": "Mexico",
@@ -3309,7 +3400,8 @@
     "Incorporation"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MX"
   },
   {
    "name": "Moldova",
@@ -3337,7 +3429,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MD"
   },
   {
    "name": "Monaco",
@@ -3365,7 +3458,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MC"
   },
   {
    "name": "Montenegro",
@@ -3397,7 +3491,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "ME"
   },
   {
    "name": "Morocco",
@@ -3432,7 +3527,8 @@
     "Simplified financial statement",
     "Detailed financial statement"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MA"
   },
   {
    "name": "Myanmar",
@@ -3462,7 +3558,8 @@
     "Company Extract - Historical",
     "Certified Copy of the Company Certificate"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "MM"
   },
   {
    "name": "Nepal",
@@ -3482,7 +3579,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "NP"
   },
   {
    "name": "Netherlands",
@@ -3529,7 +3627,8 @@
     "Jaarrekeningen (Financial Statements)",
     "Documenten zoals statuten, fusie- ofsplitsingsvoorstellen (Documents such as articles of association, merger or division proposals)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "NL"
   },
   {
    "name": "New Zealand",
@@ -3578,7 +3677,8 @@
     "Amalgamation Certificate",
     "Adoption of a Constitution"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "NZ"
   },
   {
    "name": "Nigeria",
@@ -3615,7 +3715,8 @@
     "List of Persons with significant control"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Norway",
@@ -3653,7 +3754,8 @@
     "Vedtekter (Articles of association)",
     "Stiftelsesdokumenter (Foundation documents)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "NO"
   },
   {
    "name": "Oman",
@@ -3690,7 +3792,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "OM"
   },
   {
    "name": "Palestine",
@@ -3710,7 +3813,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PS"
   },
   {
    "name": "Pakistan",
@@ -3755,7 +3859,8 @@
     "Form A or Form B",
     "Latest Memorandum and Article"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PK"
   },
   {
    "name": "Panama",
@@ -3779,7 +3884,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PA"
   },
   {
    "name": "Papua New Guinea",
@@ -3816,7 +3922,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PG"
   },
   {
    "name": "Paraguay",
@@ -3834,7 +3941,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PY"
   },
   {
    "name": "Peru",
@@ -3869,7 +3977,8 @@
     "Legal representative"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PE"
   },
   {
    "name": "Philippines - SEC",
@@ -3908,7 +4017,8 @@
     "Audited Financial Statement",
     "Amended By-Laws"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PH"
   },
   {
    "name": "Philippines - DTI",
@@ -3931,7 +4041,8 @@
     "Certificate"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PH"
   },
   {
    "name": "Poland",
@@ -3963,7 +4074,8 @@
    "documentsNonMandatory": [
     "Register Report (Historical)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PL"
   },
   {
    "name": "Portugal",
@@ -4001,7 +4113,8 @@
     "Certidão de Registo e Documentos (Certificate of Registration and Documents)",
     "Certidão do Último Pacto Social/Estatutos Actualizados (Certificate of the Last Articles of Association/Updated Statutes)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PT"
   },
   {
    "name": "Puerto Rico",
@@ -4035,7 +4148,8 @@
     "Certificate of Good Standing",
     "Certificate of Existence"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "PR"
   },
   {
    "name": "Qatar",
@@ -4060,7 +4174,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "QA"
   },
   {
    "name": "Romania",
@@ -4099,7 +4214,8 @@
     "Certificat constatator fonduri IMM (Certificate of SME funds)",
     "Certificat constatator pentru insolvență (Certificate of insolvency)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "RO"
   },
   {
    "name": "Russia",
@@ -4132,7 +4248,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "RU"
   },
   {
    "name": "Saint Vincent and the Grenadines",
@@ -4152,7 +4269,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Samoa",
@@ -4196,7 +4314,8 @@
     "Form 4 Application To Change Name Of Company",
     "Form 1 Application For Incorporation Of Company"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "WS"
   },
   {
    "name": "San Marino",
@@ -4223,7 +4342,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SM"
   },
   {
    "name": "Saudi Arabia",
@@ -4245,7 +4365,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SA"
   },
   {
    "name": "Senegal",
@@ -4263,7 +4384,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SN"
   },
   {
    "name": "Serbia",
@@ -4299,7 +4421,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "RS"
   },
   {
    "name": "Seychelles - Business Register",
@@ -4316,7 +4439,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SC"
   },
   {
    "name": "Seychelles - FSA",
@@ -4338,7 +4462,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SC"
   },
   {
    "name": "Singapore",
@@ -4386,7 +4511,8 @@
     "Enhanced Strategic Corporate Information (ESCI)",
     "Financial Statement Extract (FSH)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SG"
   },
   {
    "name": "Slovakia",
@@ -4421,7 +4547,8 @@
    "documentsNonMandatory": [
     "Full Registry Extract"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SK"
   },
   {
    "name": "Slovenia",
@@ -4460,7 +4587,8 @@
    "documentsNonMandatory": [
     "Annual Report"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SI"
   },
   {
    "name": "Solomon Islands",
@@ -4502,7 +4630,8 @@
     "Form 1 - Application For Registration Of A Company",
     "Involuntary Removal For Failure To File Annual Return"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SB"
   },
   {
    "name": "South Africa",
@@ -4526,7 +4655,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "ZA"
   },
   {
    "name": "South Korea",
@@ -4558,7 +4688,8 @@
     "List of Major Stockholders"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "KR"
   },
   {
    "name": "Spain",
@@ -4584,7 +4715,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "ES"
   },
   {
    "name": "Sri Lanka",
@@ -4618,7 +4750,8 @@
     "Form 1 - Application of Registration of a Company"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "LK"
   },
   {
    "name": "Sweden",
@@ -4651,7 +4784,8 @@
     "Protokoll (Protocols)",
     "Uppgifter ur registret över verkliga huvudmän (Information from the register of real principals)"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "SE"
   },
   {
    "name": "Switzerland",
@@ -4688,7 +4822,8 @@
     "Statutes - certified",
     "Certificate of incorporation - certified"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "CH"
   },
   {
    "name": "Taiwan",
@@ -4718,7 +4853,8 @@
     "Registry Report_English"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "TW"
   },
   {
    "name": "Thailand",
@@ -4754,7 +4890,8 @@
     "List of Shareholders"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "TH"
   },
   {
    "name": "Tonga",
@@ -4791,7 +4928,8 @@
     "Certificate of Change of Name"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "TO"
   },
   {
    "name": "Togo",
@@ -4813,7 +4951,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Trinidad and Tobago",
@@ -4834,7 +4973,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "TT"
   },
   {
    "name": "Tunisia",
@@ -4864,7 +5004,8 @@
    "documentsNonMandatory": [
     "Historical Extract"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "TN"
   },
   {
    "name": "Turkey",
@@ -4893,7 +5034,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "TR"
   },
   {
    "name": "U.S. Virgin Islands",
@@ -4922,7 +5064,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "VI"
   },
   {
    "name": "UAE",
@@ -4946,7 +5089,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "AE"
   },
   {
    "name": "Ukraine",
@@ -4980,7 +5124,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "UA"
   },
   {
    "name": "UK",
@@ -5038,7 +5183,8 @@
     "PSC07 - Notice of ceasing to be a PSC",
     "PSC04 - Change of individual PSC details"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "GB"
   },
   {
    "name": "USA",
@@ -5049,7 +5195,8 @@
    "shareholders": [],
    "documentsMandatory": [],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "US"
   },
   {
    "name": "Uzbekistan",
@@ -5081,7 +5228,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "UZ"
   },
   {
    "name": "Vanuatu",
@@ -5124,7 +5272,8 @@
     "Notice Of Change Of Postal Address",
     "Articles Of Association"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "VU"
   },
   {
    "name": "Viet Nam - NBR",
@@ -5161,7 +5310,8 @@
     "Historical Registry Extract",
     "Business Certificate"
    ],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "VN"
   },
   {
    "name": "Viet Nam - GDT",
@@ -5190,7 +5340,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "VN"
   },
   {
    "name": "Yemen",
@@ -5207,7 +5358,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": "YE"
   },
   {
    "name": "Zambia",
@@ -5242,7 +5394,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Live jurisdictions"
+   "group": "Live jurisdictions",
+   "code": null
   },
   {
    "name": "Canada Federal Companies",
@@ -5270,7 +5423,8 @@
     "Amendment"
    ],
    "documentsNonMandatory": [],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Alberta",
@@ -5300,7 +5454,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "British Columbia",
@@ -5334,7 +5489,8 @@
    "documentsNonMandatory": [
     "Letter Under Seal"
    ],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Manitoba",
@@ -5364,7 +5520,8 @@
     "File Summary"
    ],
    "documentsNonMandatory": [],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Nova Scotia",
@@ -5407,7 +5564,8 @@
     "Change Address for Agent: Document to Change Agents Address",
     "Company Change of Directors and Officers"
    ],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Ontario",
@@ -5434,7 +5592,8 @@
    "documentsNonMandatory": [
     "Certificate of Status"
    ],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Quebec",
@@ -5465,7 +5624,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Saskatchewan",
@@ -5512,7 +5672,8 @@
     "Limited Liability Partnership - Registration",
     "Limited Liability Partnership - Annual Return"
    ],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "New Brunswick",
@@ -5540,7 +5701,8 @@
     "Certificate of Status",
     "Copy of a document (i.e. Articles of Incorporation, Articles of Amendment, Annual Return for a particular year(s), Certificate of Business Name)"
    ],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Newfoundland and Labrador",
@@ -5566,7 +5728,8 @@
    "documentsNonMandatory": [
     "Certificate of Good Standing"
    ],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Nunavut",
@@ -5590,7 +5753,8 @@
     "Profile Search"
    ],
    "documentsNonMandatory": [],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Prince Edward Island",
@@ -5621,7 +5785,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Northwest Territories",
@@ -5652,7 +5817,8 @@
     "Registered and Head Offices",
     "Constating Documents"
    ],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Yukon",
@@ -5685,7 +5851,8 @@
     "Change of Directors and Directors' Addresses",
     "Directors"
    ],
-   "group": "Canada"
+   "group": "Canada",
+   "code": null
   },
   {
    "name": "Alabama",
@@ -5713,7 +5880,8 @@
    "documentsNonMandatory": [
     "Incorporation"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Alaska",
@@ -5750,7 +5918,8 @@
     "Change of Officials",
     "Certificate of Compliance"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Arizona",
@@ -5782,7 +5951,8 @@
     "Statement of Change - Corps",
     "Articles of Amendment - LLC"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Arkansas",
@@ -5809,7 +5979,8 @@
    "documentsNonMandatory": [
     "Certificate of Good Standing"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "California",
@@ -5837,7 +6008,8 @@
     "Certificate of Status",
     "Certified copies of document"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Colorado",
@@ -5865,7 +6037,8 @@
     "certificate of good standing",
     "certified copies of documents"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Connecticut",
@@ -5897,7 +6070,8 @@
     "Certificate of Legal Existence",
     "Merger"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Delaware",
@@ -5924,7 +6098,8 @@
    "documentsNonMandatory": [
     "Status, Tax & History Information Report"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Florida",
@@ -5952,7 +6127,8 @@
     "Certificate of Change of Name"
    ],
    "documentsNonMandatory": [],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Georgia",
@@ -5979,7 +6155,8 @@
     "Certificate of Change of Name"
    ],
    "documentsNonMandatory": [],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Hawaii",
@@ -6009,7 +6186,8 @@
     "Annual Filing",
     "Articles of Incorporation"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Idaho",
@@ -6040,7 +6218,8 @@
     "Legacy Amendment",
     "Certificate of Existence/Filing"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Illinois",
@@ -6067,7 +6246,8 @@
     "Certificate of Good Standing",
     "Certificate of Existence"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Indiana",
@@ -6103,7 +6283,8 @@
     "Articles of Merger",
     "Change of Governing Person"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Iowa",
@@ -6141,7 +6322,8 @@
     "Agent's Change Of Office",
     "Certificate Of Existence"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Kansas",
@@ -6179,7 +6361,8 @@
     "Change Of Ro Or Ra",
     "Change Of Name"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Kentucky",
@@ -6212,7 +6395,8 @@
     "Statement of Change",
     "Certificate of Existence / Authorization"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Louisiana",
@@ -6244,7 +6428,8 @@
     "Original Documents",
     "Original Documents, Amendments, and Last Annual Report (if applicable)"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Maine",
@@ -6285,7 +6470,8 @@
     "Change Of Legal Name",
     "Resignation Of Clerk/Agent"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Maryland",
@@ -6321,7 +6507,8 @@
     "Articles Of Amendment / Name Change",
     "Certificate Of Renewal"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Massachusetts",
@@ -6359,7 +6546,8 @@
     "Certificate of Change of Directors or Officers",
     "Amended Foreign Corporations Certificate"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Michigan",
@@ -6392,7 +6580,8 @@
     "Restated Certificate Of Limited Partnership",
     "Certificate Of Amendment"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Minnesota",
@@ -6430,7 +6619,8 @@
     "Certificate of Good Standing",
     "Statement of Amendment"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Mississippi",
@@ -6466,7 +6656,8 @@
     "Amendment Form",
     "Reinstatement"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Missouri",
@@ -6501,7 +6692,8 @@
     "Change of Registered Agent and/or Registered Office",
     "Amendment to Articles of Organization"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Montana",
@@ -6536,7 +6728,8 @@
     "Missing Document Request",
     "Principal Extract"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Nebraska",
@@ -6572,7 +6765,8 @@
     "Proof of Publication",
     "Record of Determination"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Nevada",
@@ -6601,7 +6795,8 @@
     "Incorporation",
     "Initial List"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "New Hampshire",
@@ -6639,7 +6834,8 @@
     "Amendment",
     "Agent Change/Resign"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "New Jersey",
@@ -6669,7 +6865,8 @@
     "Original Certificate",
     "Annual Reports"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "New Mexico",
@@ -6694,7 +6891,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "New York",
@@ -6719,7 +6917,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "North Carolina",
@@ -6748,7 +6947,8 @@
    "documentsNonMandatory": [
     "Change of Address of Registered Office/Agent"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "North Dakota",
@@ -6778,7 +6978,8 @@
    "documentsNonMandatory": [
     "Certificate of Good Standing"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Ohio",
@@ -6805,7 +7006,8 @@
     "Incorporation"
    ],
    "documentsNonMandatory": [],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Oklahoma",
@@ -6834,7 +7036,8 @@
     "Certificate of Fact",
     "Copies of the Filed Document"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Oregon",
@@ -6871,7 +7074,8 @@
     "Articles Of Amendment",
     "Certificate Of Amendment"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Pennsylvania",
@@ -6905,7 +7109,8 @@
     "Index And Docket Report",
     "Index And Docket Certified Report"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Rhode Island",
@@ -6940,7 +7145,8 @@
     "Application for Certificate of Authority",
     "Fictitious Business Name Statement"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "South Carolina",
@@ -6966,7 +7172,8 @@
    "documentsNonMandatory": [
     "Certificate of Existence"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "South Dakota",
@@ -6999,7 +7206,8 @@
     "Certificate of Good Standing",
     "Certified Copies"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Tennessee",
@@ -7026,7 +7234,8 @@
    "documentsNonMandatory": [
     "Certificate of Existence"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Texas",
@@ -7057,7 +7266,8 @@
     "Articles Of Amendment",
     "Certificate of Amendment"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Utah",
@@ -7092,7 +7302,8 @@
     "Miscellaneous",
     "Certificate of Existence"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Vermont",
@@ -7128,7 +7339,8 @@
     "Registered Agent Change",
     "Business Amendment"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Virginia",
@@ -7163,7 +7375,8 @@
     "Statement of Change of Registered Office and/or Registered Agent",
     "Certificate of Amendment of a Certificate of Limited Partnership"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Washington",
@@ -7196,7 +7409,8 @@
     "Statement Of Correction",
     "Amendment"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "West Virginia",
@@ -7227,7 +7441,8 @@
     "Registry Extract"
    ],
    "documentsNonMandatory": [],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Wisconsin",
@@ -7259,7 +7474,8 @@
     "Copy-Articles of Incorporation/Organization",
     "Identification Report"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   },
   {
    "name": "Wyoming",
@@ -7294,7 +7510,8 @@
     "RA Address Change",
     "Address Update"
    ],
-   "group": "USA"
+   "group": "USA",
+   "code": null
   }
  ]
 }
