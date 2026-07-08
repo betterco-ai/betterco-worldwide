@@ -1,0 +1,2312 @@
+[
+ {
+  "jurisdiction": "MC",
+  "local": "Société à Responsabilité Limitée",
+  "abbr": "SARL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société Anonyme Monégasque",
+  "abbr": "SAM",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société en Nom Collectif",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société en Commandite Simple",
+  "abbr": "SCS",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société en Commandite par Actions",
+  "abbr": "SCA",
+  "entityType": "Partnership",
+  "companyType": "Partnership Limited by Shares"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société Civile",
+  "abbr": "SC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Fondation",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Aktiengesellschaft",
+  "abbr": "AG",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Gesellschaft mit beschränkter Haftung",
+  "abbr": "GmbH",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Anstalt",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Other Corporation"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Stiftung",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Treuunternehmen (Trust reg.)",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Trust"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Treuhänderschaft",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Trust"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Kollektivgesellschaft",
+  "abbr": "KG",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Kommanditgesellschaft",
+  "abbr": "KmG",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Genossenschaft",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Cooperative"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Societas Europaea",
+  "abbr": "SE",
+  "entityType": "Company",
+  "companyType": "European Company"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Società a Responsabilità Limitata",
+  "abbr": "SRL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Società per Azioni",
+  "abbr": "SpA",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Società in Nome Collettivo",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Società in Accomandita Semplice",
+  "abbr": "SAS",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Fondazione",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Osaühing",
+  "abbr": "OÜ",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Aktsiaselts",
+  "abbr": "AS",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Täisühing",
+  "abbr": "TÜ",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Usaldusühing",
+  "abbr": "UÜ",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Tulundusühistu",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Cooperative"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Sihtasutus",
+  "abbr": "SA",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Mittetulundusühing",
+  "abbr": "MTÜ",
+  "entityType": "Company",
+  "companyType": "Non-profit organization"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Private Company",
+  "abbr": "(Pty) Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Public Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Personal Liability Company",
+  "abbr": "Inc",
+  "entityType": "Company",
+  "companyType": "Incorporated"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "State Owned Company",
+  "abbr": "SOC Ltd",
+  "entityType": "Company",
+  "companyType": "State-Owned Enterprise"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Non-Profit Company",
+  "abbr": "NPC",
+  "entityType": "Company",
+  "companyType": "Non-profit organization"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Close Corporation",
+  "abbr": "CC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Private Company (Chevra Ba'am)",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Public Company",
+  "abbr": "Public Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Shutafut (Partnership)",
+  "abbr": "—",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Limited Partnership",
+  "abbr": "LP",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Amuta (Non-profit association)",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Non-profit organization"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Agudah Shitufit (Cooperative)",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Cooperative"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Foreign Company",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Foreign Company"
+ },
+ {
+  "jurisdiction": "AL",
+  "local": "Shoqëri me Përgjegjësi të Kufizuar",
+  "abbr": "SH.P.K.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "AL",
+  "local": "Shoqëri Aksionare",
+  "abbr": "SH.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "AL",
+  "local": "Shoqëri Kolektive",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AL",
+  "local": "Shoqëri Komandite",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "AX",
+  "local": "Osakeyhtiö (Åland)",
+  "abbr": "Oy",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "AX",
+  "local": "Julkinen osakeyhtiö",
+  "abbr": "Oyj",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "AX",
+  "local": "Avoin yhtiö",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AX",
+  "local": "Kommandiittiyhtiö",
+  "abbr": "Ky",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "BA",
+  "local": "Društvo sa ograničenom odgovornošću",
+  "abbr": "d.o.o.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "BA",
+  "local": "Dioničko društvo",
+  "abbr": "d.d.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BA",
+  "local": "Javno trgovačko društvo",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "BA",
+  "local": "Komanditno društvo",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "BG",
+  "local": "Дружество с ограничена отговорност",
+  "abbr": "ООД / OOD",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "BG",
+  "local": "Акционерно дружество",
+  "abbr": "АД / AD",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BG",
+  "local": "Събирателно дружество",
+  "abbr": "СД",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "BG",
+  "local": "Командитно дружество",
+  "abbr": "КД",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "BY",
+  "local": "Общество с ограниченной ответственностью",
+  "abbr": "ООО / OOO",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "BY",
+  "local": "Открытое акционерное общество",
+  "abbr": "ОАО / OAO",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BY",
+  "local": "Закрытое акционерное общество",
+  "abbr": "ЗАО / ZAO",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BY",
+  "local": "Унитарное предприятие",
+  "abbr": "УП",
+  "entityType": "Company",
+  "companyType": "State-Owned Enterprise"
+ },
+ {
+  "jurisdiction": "IS",
+  "local": "Einkahlutafélag",
+  "abbr": "ehf.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "IS",
+  "local": "Hlutafélag",
+  "abbr": "hf.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "IS",
+  "local": "Sameignarfélag",
+  "abbr": "sf.",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "IS",
+  "local": "Samlagsfélag",
+  "abbr": "slf.",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "IS",
+  "local": "Samvinnufélag",
+  "abbr": "svf.",
+  "entityType": "Company",
+  "companyType": "Cooperative"
+ },
+ {
+  "jurisdiction": "LV",
+  "local": "Sabiedrība ar ierobežotu atbildību",
+  "abbr": "SIA",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "LV",
+  "local": "Akciju sabiedrība",
+  "abbr": "AS",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "LV",
+  "local": "Pilnsabiedrība",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "LV",
+  "local": "Komandītsabiedrība",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "MD",
+  "local": "Societate cu răspundere limitată",
+  "abbr": "SRL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MD",
+  "local": "Societate pe acțiuni",
+  "abbr": "SA",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MD",
+  "local": "Societate în nume colectiv",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MD",
+  "local": "Societate în comandită",
+  "abbr": "SC",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "ME",
+  "local": "Društvo sa ograničenom odgovornošću",
+  "abbr": "d.o.o.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "ME",
+  "local": "Akcionarsko društvo",
+  "abbr": "a.d.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "ME",
+  "local": "Ortačko društvo",
+  "abbr": "o.d.",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "ME",
+  "local": "Komanditno društvo",
+  "abbr": "k.d.",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "MK",
+  "local": "Друштво со ограничена одговорност",
+  "abbr": "ДОО / DOO",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MK",
+  "local": "Акционерско друштво",
+  "abbr": "АД / AD",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MK",
+  "local": "Јавно трговско друштво",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MK",
+  "local": "Командитно друштво",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "RO",
+  "local": "Societate cu răspundere limitată",
+  "abbr": "SRL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "RO",
+  "local": "Societate pe acțiuni",
+  "abbr": "SA",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "RO",
+  "local": "Societate în nume colectiv",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "RO",
+  "local": "Societate în comandită simplă",
+  "abbr": "SCS",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "RO",
+  "local": "Societate în comandită pe acțiuni",
+  "abbr": "SCA",
+  "entityType": "Partnership",
+  "companyType": "Partnership Limited by Shares"
+ },
+ {
+  "jurisdiction": "RS",
+  "local": "Društvo s ograničenom odgovornošću",
+  "abbr": "d.o.o.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "RS",
+  "local": "Akcionarsko društvo",
+  "abbr": "a.d.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "RS",
+  "local": "Ortačko društvo",
+  "abbr": "o.d.",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "RS",
+  "local": "Komanditno društvo",
+  "abbr": "k.d.",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "SI",
+  "local": "Družba z omejeno odgovornostjo",
+  "abbr": "d.o.o.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "SI",
+  "local": "Delniška družba",
+  "abbr": "d.d.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "SI",
+  "local": "Družba z neomejeno odgovornostjo",
+  "abbr": "d.n.o.",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "SI",
+  "local": "Komanditna družba",
+  "abbr": "k.d.",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "SK",
+  "local": "Spoločnosť s ručením obmedzeným",
+  "abbr": "s.r.o.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "SK",
+  "local": "Akciová spoločnosť",
+  "abbr": "a.s.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "SK",
+  "local": "Verejná obchodná spoločnosť",
+  "abbr": "v.o.s.",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "SK",
+  "local": "Komanditná spoločnosť",
+  "abbr": "k.s.",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "UA",
+  "local": "Товариство з обмеженою відповідальністю",
+  "abbr": "ТОВ / TOV",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "UA",
+  "local": "Акціонерне товариство",
+  "abbr": "АТ / AT",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "UA",
+  "local": "Повне товариство",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "UA",
+  "local": "Командитне товариство",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "AE",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "AE",
+  "local": "Public Joint Stock Company",
+  "abbr": "PJSC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "AE",
+  "local": "Private Joint Stock Company",
+  "abbr": "PrJSC",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "AE",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AE",
+  "local": "Limited Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "BH",
+  "local": "With Limited Liability",
+  "abbr": "W.L.L.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "BH",
+  "local": "Bahraini Shareholding Company (Public)",
+  "abbr": "B.S.C.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BH",
+  "local": "Bahraini Shareholding Company (Closed)",
+  "abbr": "B.S.C.(c)",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BH",
+  "local": "Partnership Company",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "KW",
+  "local": "With Limited Liability",
+  "abbr": "W.L.L.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "KW",
+  "local": "Kuwaiti Shareholding Company (Public)",
+  "abbr": "K.S.C.P.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "KW",
+  "local": "Kuwaiti Shareholding Company (Closed)",
+  "abbr": "K.S.C.C.",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "KW",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "QA",
+  "local": "Limited Liability Company",
+  "abbr": "LLC / W.L.L.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "QA",
+  "local": "Public Shareholding Company",
+  "abbr": "Q.P.S.C.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "QA",
+  "local": "Private Shareholding Company",
+  "abbr": "Q.S.C.",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "QA",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "OM",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "OM",
+  "local": "Public Joint Stock Company",
+  "abbr": "SAOG",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "OM",
+  "local": "Closed Joint Stock Company",
+  "abbr": "SAOC",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "OM",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "SA",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "SA",
+  "local": "Joint Stock Company",
+  "abbr": "JSC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "SA",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "SA",
+  "local": "Limited Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "JO",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "JO",
+  "local": "Public Shareholding Company",
+  "abbr": "PLC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "JO",
+  "local": "Private Shareholding Company",
+  "abbr": "PSC",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "JO",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "IQ",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "IQ",
+  "local": "Joint Stock Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "IQ",
+  "local": "Simple Company",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "IR",
+  "local": "Private Joint Stock Company",
+  "abbr": "Sahami Khass",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "IR",
+  "local": "Public Joint Stock Company",
+  "abbr": "Sahami Am",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "IR",
+  "local": "Limited Liability Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "IR",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "YE",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "YE",
+  "local": "Joint Stock Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "YE",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AM",
+  "local": "Սահմանափակ պատասխանատվությամբ ընկերություն",
+  "abbr": "ՍՊԸ / LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "AM",
+  "local": "Բաժնետիրական ընկերություն",
+  "abbr": "ԲԸ / JSC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "AM",
+  "local": "Full Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AZ",
+  "local": "Məhdud Məsuliyyətli Cəmiyyət",
+  "abbr": "MMC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "AZ",
+  "local": "Səhmdar Cəmiyyət",
+  "abbr": "SC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "AZ",
+  "local": "Tam Ortaqlıq",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AZ",
+  "local": "Kommandit Ortaqlıq",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "GE",
+  "local": "შეზღუდული პასუხისმგებლობის საზოგადოება",
+  "abbr": "შ.პ.ს. / LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "GE",
+  "local": "სააქციო საზოგადოება",
+  "abbr": "ს.ს. / JSC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "GE",
+  "local": "სოლიდარული პასუხისმგებლობის საზოგადოება",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "GE",
+  "local": "კომანდიტური საზოგადოება",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "KG",
+  "local": "Жоопкерчилиги чектелген коом",
+  "abbr": "ЖЧК / OsOO",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "KG",
+  "local": "Ачык акционердик коом",
+  "abbr": "ААК / OAO",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "KG",
+  "local": "Жабык акционердик коом",
+  "abbr": "ЖАК / ZAO",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "UZ",
+  "local": "Mas'uliyati cheklangan jamiyat",
+  "abbr": "MChJ / LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "UZ",
+  "local": "Ochiq aksiyadorlik jamiyati",
+  "abbr": "OAJ",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "UZ",
+  "local": "Yopiq aksiyadorlik jamiyati",
+  "abbr": "YoAJ",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "JP",
+  "local": "株式会社 (Kabushiki Kaisha)",
+  "abbr": "K.K.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "JP",
+  "local": "合同会社 (Godo Kaisha)",
+  "abbr": "G.K.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "JP",
+  "local": "合名会社 (Gomei Kaisha)",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "JP",
+  "local": "合資会社 (Goshi Kaisha)",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "KR",
+  "local": "주식회사 (Jusik Hoesa)",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "KR",
+  "local": "유한회사 (Yuhan Hoesa)",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "KR",
+  "local": "유한책임회사 (Yuhan Chaegim Hoesa)",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "KR",
+  "local": "합명회사 (Hapmyeong Hoesa)",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "KR",
+  "local": "합자회사 (Hapja Hoesa)",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "TW",
+  "local": "有限公司 (Limited Company)",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "TW",
+  "local": "股份有限公司 (Company Limited by Shares)",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "TW",
+  "local": "無限公司 (Unlimited Company)",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Corporation"
+ },
+ {
+  "jurisdiction": "TW",
+  "local": "兩合公司 (Limited Partnership)",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "BD",
+  "local": "Private Limited Company",
+  "abbr": "Pvt Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BD",
+  "local": "Public Limited Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BD",
+  "local": "Partnership Firm",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "PK",
+  "local": "Private Limited Company",
+  "abbr": "Pvt Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PK",
+  "local": "Public Limited Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PK",
+  "local": "Single Member Company",
+  "abbr": "SMC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "PK",
+  "local": "Partnership Firm",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "LK",
+  "local": "Private Limited Company",
+  "abbr": "Pvt Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "LK",
+  "local": "Public Limited Company",
+  "abbr": "PLC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "LK",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "NP",
+  "local": "Private Limited Company",
+  "abbr": "Pvt Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "NP",
+  "local": "Public Limited Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "NP",
+  "local": "Partnership Firm",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MM",
+  "local": "Private Company Limited by Shares",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MM",
+  "local": "Public Company Limited by Shares",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MM",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "TH",
+  "local": "Private Limited Company",
+  "abbr": "Co., Ltd.",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "TH",
+  "local": "Public Limited Company",
+  "abbr": "PLC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "TH",
+  "local": "Registered Ordinary Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "TH",
+  "local": "Limited Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "KH",
+  "local": "Private Limited Company",
+  "abbr": "Pte Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "KH",
+  "local": "Public Limited Company",
+  "abbr": "Plc",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "KH",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "KH",
+  "local": "Limited Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "LA",
+  "local": "Limited Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "LA",
+  "local": "Public Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "LA",
+  "local": "Ordinary Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AF",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "AF",
+  "local": "Corporation",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Corporation"
+ },
+ {
+  "jurisdiction": "AF",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "TR",
+  "local": "Limited Şirket",
+  "abbr": "Ltd. Şti.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "TR",
+  "local": "Anonim Şirket",
+  "abbr": "A.Ş.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "TR",
+  "local": "Kollektif Şirket",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "TR",
+  "local": "Komandit Şirket",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "BN",
+  "local": "Private Limited Company",
+  "abbr": "Sdn Bhd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BN",
+  "local": "Public Limited Company",
+  "abbr": "Berhad / Bhd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BN",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "PS",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "PS",
+  "local": "Public Shareholding Company",
+  "abbr": "PLC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PS",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AO",
+  "local": "Sociedade por Quotas",
+  "abbr": "Lda.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "AO",
+  "local": "Sociedade Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "AO",
+  "local": "Sociedade em Nome Colectivo",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "AO",
+  "local": "Sociedade em Comandita",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "GH",
+  "local": "Company Limited by Shares (Private)",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "GH",
+  "local": "Company Limited by Shares (Public)",
+  "abbr": "PLC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "GH",
+  "local": "Company Limited by Guarantee",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Company Limited by Guarantee"
+ },
+ {
+  "jurisdiction": "GH",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "KE",
+  "local": "Private Company Limited by Shares",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "KE",
+  "local": "Public Company Limited by Shares",
+  "abbr": "PLC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "KE",
+  "local": "Company Limited by Guarantee",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Company Limited by Guarantee"
+ },
+ {
+  "jurisdiction": "KE",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "KE",
+  "local": "Limited Liability Partnership",
+  "abbr": "LLP",
+  "entityType": "Partnership",
+  "companyType": "Limited Liability Partnership"
+ },
+ {
+  "jurisdiction": "LS",
+  "local": "Private Company",
+  "abbr": "(Pty) Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "LS",
+  "local": "Public Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "LS",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MA",
+  "local": "Société à Responsabilité Limitée",
+  "abbr": "SARL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MA",
+  "local": "Société Anonyme",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MA",
+  "local": "Société en Nom Collectif",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MA",
+  "local": "Société en Commandite Simple",
+  "abbr": "SCS",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "MU",
+  "local": "Private Company Limited by Shares",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MU",
+  "local": "Public Company Limited by Shares",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MU",
+  "local": "Global Business Company",
+  "abbr": "GBC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MU",
+  "local": "Authorised Company",
+  "abbr": "AC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MU",
+  "local": "Foundation",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "SN",
+  "local": "Société à Responsabilité Limitée",
+  "abbr": "SARL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "SN",
+  "local": "Société Anonyme",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "SN",
+  "local": "Société par Actions Simplifiée",
+  "abbr": "SAS",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "SN",
+  "local": "Société en Nom Collectif",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "TN",
+  "local": "Société à Responsabilité Limitée",
+  "abbr": "SARL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "TN",
+  "local": "Société Anonyme",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "TN",
+  "local": "Société en Nom Collectif",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "TN",
+  "local": "Société en Commandite Simple",
+  "abbr": "SCS",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "BS",
+  "local": "Company Limited by Shares",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BS",
+  "local": "International Business Company",
+  "abbr": "IBC",
+  "entityType": "Company",
+  "companyType": "Corporation"
+ },
+ {
+  "jurisdiction": "BS",
+  "local": "Foundation",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "BS",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "PR",
+  "local": "Corporation",
+  "abbr": "Inc / Corp",
+  "entityType": "Company",
+  "companyType": "Corporation"
+ },
+ {
+  "jurisdiction": "PR",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "PR",
+  "local": "Limited Partnership",
+  "abbr": "LP",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "TT",
+  "local": "Private Limited Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "TT",
+  "local": "Public Limited Company",
+  "abbr": "PLC",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "TT",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "VI",
+  "local": "Corporation",
+  "abbr": "Inc / Corp",
+  "entityType": "Company",
+  "companyType": "Corporation"
+ },
+ {
+  "jurisdiction": "VI",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "VI",
+  "local": "General Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "CR",
+  "local": "Sociedad de Responsabilidad Limitada",
+  "abbr": "S.R.L.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "CR",
+  "local": "Sociedad Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "CR",
+  "local": "Sociedad en Nombre Colectivo",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "CR",
+  "local": "Sociedad en Comandita",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "MX",
+  "local": "Sociedad de Responsabilidad Limitada",
+  "abbr": "S. de R.L.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MX",
+  "local": "Sociedad Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MX",
+  "local": "Sociedad por Acciones Simplificada",
+  "abbr": "S.A.S.",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MX",
+  "local": "Sociedad en Nombre Colectivo",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MX",
+  "local": "Sociedad en Comandita Simple",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "PA",
+  "local": "Sociedad de Responsabilidad Limitada",
+  "abbr": "S. de R.L.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "PA",
+  "local": "Sociedad Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PA",
+  "local": "Private Interest Foundation",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "PA",
+  "local": "Sociedad en Comandita",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "BR",
+  "local": "Sociedade Limitada",
+  "abbr": "Ltda.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "BR",
+  "local": "Sociedade Anônima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "BR",
+  "local": "Empresa Individual de Responsabilidade Limitada",
+  "abbr": "EIRELI",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "BR",
+  "local": "Sociedade em Nome Coletivo",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "BR",
+  "local": "Sociedade em Comandita Simples",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "CL",
+  "local": "Sociedad de Responsabilidad Limitada",
+  "abbr": "Ltda.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "CL",
+  "local": "Sociedad Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "CL",
+  "local": "Sociedad por Acciones",
+  "abbr": "SpA",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "CL",
+  "local": "Sociedad Colectiva",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "CL",
+  "local": "Sociedad en Comandita",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "CO",
+  "local": "Sociedad por Acciones Simplificada",
+  "abbr": "S.A.S.",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "CO",
+  "local": "Sociedad Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "CO",
+  "local": "Sociedad de Responsabilidad Limitada",
+  "abbr": "Ltda.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "CO",
+  "local": "Sociedad Colectiva",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "CO",
+  "local": "Sociedad en Comandita",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "EC",
+  "local": "Compañía de Responsabilidad Limitada",
+  "abbr": "Cía. Ltda.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "EC",
+  "local": "Sociedad Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "EC",
+  "local": "Sociedad por Acciones Simplificada",
+  "abbr": "S.A.S.",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "EC",
+  "local": "Compañía en Nombre Colectivo",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "PE",
+  "local": "Sociedad Comercial de Responsabilidad Limitada",
+  "abbr": "S.R.L.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "PE",
+  "local": "Sociedad Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PE",
+  "local": "Sociedad Anónima Cerrada",
+  "abbr": "S.A.C.",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PE",
+  "local": "Sociedad en Comandita",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "PY",
+  "local": "Sociedad de Responsabilidad Limitada",
+  "abbr": "S.R.L.",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "PY",
+  "local": "Sociedad Anónima",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PY",
+  "local": "Sociedad en Nombre Colectivo",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "PY",
+  "local": "Sociedad en Comandita",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "NZ",
+  "local": "Limited Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "NZ",
+  "local": "Unlimited Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Unlimited Company"
+ },
+ {
+  "jurisdiction": "NZ",
+  "local": "Co-operative Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Cooperative"
+ },
+ {
+  "jurisdiction": "NZ",
+  "local": "Limited Partnership",
+  "abbr": "LP",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "PG",
+  "local": "Company Limited by Shares",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PG",
+  "local": "Foreign Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Foreign Company"
+ },
+ {
+  "jurisdiction": "PG",
+  "local": "Business Group",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "SB",
+  "local": "Company Limited by Shares",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "SB",
+  "local": "Community Company",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "SB",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "TO",
+  "local": "Limited Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "TO",
+  "local": "Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "VU",
+  "local": "International Company",
+  "abbr": "IC",
+  "entityType": "Company",
+  "companyType": "Corporation"
+ },
+ {
+  "jurisdiction": "VU",
+  "local": "Local Company Limited by Shares",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "VU",
+  "local": "Foundation",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "VU",
+  "local": "Limited Partnership",
+  "abbr": "",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "PF",
+  "local": "Société à Responsabilité Limitée",
+  "abbr": "SARL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "PF",
+  "local": "Société Anonyme",
+  "abbr": "S.A.",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "PF",
+  "local": "Société en Nom Collectif",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MH",
+  "local": "Non-Resident Domestic Corporation",
+  "abbr": "Inc / Corp",
+  "entityType": "Company",
+  "companyType": "Corporation"
+ },
+ {
+  "jurisdiction": "MH",
+  "local": "Limited Liability Company",
+  "abbr": "LLC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MH",
+  "local": "Limited Partnership",
+  "abbr": "LP",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "MH",
+  "local": "Foundation",
+  "abbr": "",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "GL",
+  "local": "Anpartsselskab",
+  "abbr": "ApS",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "GL",
+  "local": "Aktieselskab",
+  "abbr": "A/S",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "GL",
+  "local": "Interessentskab",
+  "abbr": "I/S",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "GL",
+  "local": "Kommanditselskab",
+  "abbr": "K/S",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "CX",
+  "local": "Proprietary Limited Company",
+  "abbr": "Pty Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "CX",
+  "local": "Public Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "CC",
+  "local": "Proprietary Limited Company",
+  "abbr": "Pty Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "CC",
+  "local": "Public Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ }
+]

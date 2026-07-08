@@ -1,0 +1,296 @@
+[
+ {
+  "jurisdiction": "MC",
+  "local": "Société à Responsabilité Limitée",
+  "abbr": "SARL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société Anonyme Monégasque",
+  "abbr": "SAM",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société en Nom Collectif",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société en Commandite Simple",
+  "abbr": "SCS",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société en Commandite par Actions",
+  "abbr": "SCA",
+  "entityType": "Partnership",
+  "companyType": "Partnership Limited by Shares"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Société Civile",
+  "abbr": "SC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "MC",
+  "local": "Fondation",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Aktiengesellschaft",
+  "abbr": "AG",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Gesellschaft mit beschränkter Haftung",
+  "abbr": "GmbH",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Anstalt",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Other Corporation"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Stiftung",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Treuunternehmen (Trust reg.)",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Trust"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Treuhänderschaft",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Trust"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Kollektivgesellschaft",
+  "abbr": "KG",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Kommanditgesellschaft",
+  "abbr": "KmG",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Genossenschaft",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Cooperative"
+ },
+ {
+  "jurisdiction": "LI",
+  "local": "Societas Europaea",
+  "abbr": "SE",
+  "entityType": "Company",
+  "companyType": "European Company"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Società a Responsabilità Limitata",
+  "abbr": "SRL",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Società per Azioni",
+  "abbr": "SpA",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Società in Nome Collettivo",
+  "abbr": "SNC",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Società in Accomandita Semplice",
+  "abbr": "SAS",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "SM",
+  "local": "Fondazione",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Osaühing",
+  "abbr": "OÜ",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Aktsiaselts",
+  "abbr": "AS",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Täisühing",
+  "abbr": "TÜ",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Usaldusühing",
+  "abbr": "UÜ",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Tulundusühistu",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Cooperative"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Sihtasutus",
+  "abbr": "SA",
+  "entityType": "Company",
+  "companyType": "Foundation"
+ },
+ {
+  "jurisdiction": "EE",
+  "local": "Mittetulundusühing",
+  "abbr": "MTÜ",
+  "entityType": "Company",
+  "companyType": "Non-profit organization"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Private Company",
+  "abbr": "(Pty) Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Public Company",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Personal Liability Company",
+  "abbr": "Inc",
+  "entityType": "Company",
+  "companyType": "Incorporated"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "State Owned Company",
+  "abbr": "SOC Ltd",
+  "entityType": "Company",
+  "companyType": "State-Owned Enterprise"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Non-Profit Company",
+  "abbr": "NPC",
+  "entityType": "Company",
+  "companyType": "Non-profit organization"
+ },
+ {
+  "jurisdiction": "ZA",
+  "local": "Close Corporation",
+  "abbr": "CC",
+  "entityType": "Company",
+  "companyType": "Limited Liability Company"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Private Company (Chevra Ba'am)",
+  "abbr": "Ltd",
+  "entityType": "Company",
+  "companyType": "Private Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Public Company",
+  "abbr": "Public Ltd",
+  "entityType": "Company",
+  "companyType": "Public Company Limited by Shares"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Shutafut (Partnership)",
+  "abbr": "—",
+  "entityType": "Partnership",
+  "companyType": "General Partnership"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Limited Partnership",
+  "abbr": "LP",
+  "entityType": "Partnership",
+  "companyType": "Limited Partnership"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Amuta (Non-profit association)",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Non-profit organization"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Agudah Shitufit (Cooperative)",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Cooperative"
+ },
+ {
+  "jurisdiction": "IL",
+  "local": "Foreign Company",
+  "abbr": "—",
+  "entityType": "Company",
+  "companyType": "Foreign Company"
+ }
+]
