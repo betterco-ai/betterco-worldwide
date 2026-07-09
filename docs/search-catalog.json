@@ -379,13 +379,18 @@
   "code": "IM",
   "name": "Isle of Man",
   "note": "no results for common queries",
-  "error": "timed out",
-  "observed": false,
+  "observed": true,
   "realNameTest": {
-   "query": "Strix",
-   "result": 0
+   "query": "Playtech",
+   "secs": 4.2,
+   "result": 7
   },
-  "searchVerdict": "responded, no results for test name"
+  "searchVerdict": "ok (needs specific query)",
+  "externalCode": "014453V",
+  "rawAddress": "",
+  "companyStatus": "Active",
+  "query": "Playtech",
+  "resultCount": 7
  },
  "IN": {
   "code": "IN",
@@ -437,9 +442,10 @@
   "observed": false,
   "realNameTest": {
    "query": "Tencent",
-   "result": "timed out"
+   "secs": 62.0,
+   "result": "HTTP Error 500: Internal Server Error"
   },
-  "searchVerdict": "slow — times out even with real name (UI too)"
+  "searchVerdict": "BROKEN — HTTP 500 after ~62.0s even with real company (Tencent)"
  },
  "MT": {
   "code": "MT",
@@ -461,10 +467,11 @@
   "error": "timed out",
   "observed": false,
   "realNameTest": {
-   "query": "Genting",
-   "result": "timed out"
+   "query": "Malayan Banking",
+   "secs": 62.1,
+   "result": "HTTP Error 500: Internal Server Error"
   },
-  "searchVerdict": "slow — times out even with real name (UI too)"
+  "searchVerdict": "BROKEN — HTTP 500 after ~62.1s even with real company (Malayan Banking)"
  },
  "NL": {
   "code": "NL",

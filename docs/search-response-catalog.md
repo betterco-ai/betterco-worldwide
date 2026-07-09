@@ -4,9 +4,7 @@ A **persisted, extensible** record of what the free KYC.com search actually retu
 jurisdiction, so we know (a) the **standard** that always comes back and (b) what we can
 **enrich** per country (like India's CIN → city).
 
-- **Coverage (last sweep):** **35 / 44** automated jurisdictions observed. 6 return HTTP 500 on a
-  generic query (`AU CY FI FR GR NO` — need a real company name, see Reliability below); 3 timed out
-  on the slow upstream (`IM KY MY` — fill by re-running).
+- **Coverage (last sweep):** **39 / 44** automated jurisdictions observed. 5 return HTTP 500 even for flagship companies (`AU FI FR KY MY` — need a real company name, see Reliability below); 3 (`CY GR NO`) only fail on generic queries and work with a real name.
 - **Live data:** `docs/search-catalog.json` (one record per automated jurisdiction).
 - **Refresh/extend:** `python scripts/search_response_sweep.py [CODES…]` — free, re-runnable,
   merges into the JSON (fills in jurisdictions that timed out last run).
@@ -93,15 +91,17 @@ Bank of Cyprus, Alpha Bank, Equinor, Tencent, Genting) splits them into three cl
 problems:
 
 1. **🔴 GENUINELY BROKEN — escalate to KYC.com.** Return **HTTP 500 even for the country's flagship
-   company:** **AU** (BHP), **FI** (Nokia), **FR** (Renault). France and Finland are core markets, so
-   this is a real search outage in the gateway/upstream, not a query problem.
+   company:** **AU** (BHP), **FI** (Nokia), **FR** (Renault) — 500 immediately; **KY** (Tencent) and
+   **MY** (Malayan Banking) — 500 after a slow **~62 s**. France, Finland and Cayman are important
+   markets. Real upstream search outages, not query problems.
 2. **🟡 Generic-query sensitivity (search-robustness).** 500 on broad terms (`holding`/`bank`) but
-   **work fine with a real name:** **CY** (`ΗΕ 44168`), **GR** (returns a full street address),
-   **NO** (`993888621`). Fix: the search should degrade gracefully on broad queries instead of 500-ing;
+   **work fine with a real name:** **CY** (`ΗΕ 44168`), **GR** (full street address), **NO**
+   (`993888621`). Fix: search should degrade gracefully on broad queries instead of 500-ing;
    meanwhile always query with a specific name/number.
-3. **🟠 Slow / timeout (affects the UI too).** **KY** (Tencent) and **MY** (Genting) **time out even
-   with real names** — genuinely slow upstream. Since the UI hits the same `/api/search` path, it will
-   time out there as well → needs a longer client timeout / async fetch, or upstream escalation. **IM**
-   is NOT a timeout — it responded (just no match for the test name); retest with a real IoM company.
+3. **✅ Not actually broken.** **IM** works fine — "Playtech" → 7 hits in 4.2 s (`014453V`); the earlier
+   "timeout" was the sweep's short client timeout + a test name with no match.
+
+> ⚠️ Note the KY/MY "timeout" earlier was a **short client timeout masking a slow 500** — the upstream
+> takes ~62 s to error, so a longer timeout doesn't help; these are broken, not merely slow.
 
 Per-jurisdiction verdicts are in `search-catalog.json` (`searchVerdict` + `realNameTest`).
