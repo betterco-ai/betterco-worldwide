@@ -93,6 +93,65 @@ def decode_cin(cin):
     }
 
 
+def enrich_search_result(jur, r):
+    """ONE generic enrichment shape for a search hit — SAME schema for every
+    jurisdiction. Jurisdiction-specific decoders (e.g. India CIN) fill what they
+    can; unknown fields stay null. Consumers get an identical object everywhere.
+
+    Schema:
+        registryId, idScheme, entityType, listed, incorporationYear, status,
+        location:{city, region, countryCode, raw}, summary, source
+    """
+    reg_id = r.get("externalCode")
+    enr = {
+        "registryId": reg_id,
+        "idScheme": None,
+        "entityType": None,
+        "listed": None,
+        "incorporationYear": None,
+        "status": r.get("companyStatus"),
+        "location": {
+            "city": r.get("city") or None,
+            "region": None,
+            "countryCode": (jur or "").upper() or None,
+            "raw": r.get("rawAddress") or None,
+        },
+        "summary": None,
+        "source": "registry",
+    }
+
+    # ── jurisdiction-specific decoders write INTO the shape above ──
+    if (jur or "").upper() == "IN":
+        d = decode_cin(reg_id)
+        if d:
+            enr["idScheme"] = "CIN"
+            enr["entityType"] = d["class"]
+            enr["listed"] = d["listed"]
+            enr["incorporationYear"] = d["year"]
+            enr["location"]["city"] = d["rocCity"]
+            enr["location"]["region"] = d["state"]
+            enr["source"] = "cin-decode"
+    # (future jurisdictions — DE registry court, CN USCC, RU OGRN, ... — all just
+    #  fill the same `enr` fields; the returned JSON shape never changes.)
+
+    # human one-liner assembled from whatever is populated (segments joined by " · ")
+    head = " ".join(x for x in [
+        ("Listed" if enr["listed"] else "Unlisted") if enr["listed"] is not None else None,
+        enr["entityType"],
+    ] if x)
+    city, region = enr["location"]["city"], enr["location"]["region"]
+    loc = city or region
+    segs = []
+    if head:
+        segs.append(head)
+    if loc:
+        segs.append(loc + (" (%s)" % region if city and region and region != city else ""))
+    if enr["incorporationYear"]:
+        segs.append("est. %d" % enr["incorporationYear"])
+    enr["summary"] = " · ".join(segs) or None
+    return enr
+
+
 def _doc_type(label: str) -> str:
     """Canonical machine type derived from a document label:
     'Registered financial statements' -> 'REGISTERED_FINANCIAL_STATEMENTS'."""
@@ -278,14 +337,13 @@ class H(BaseHTTPRequestHandler):
                 if not jur or not query:
                     return _json(self, {"error": "jurisdiction and query required"}, 400)
                 results = gw.search(jurisdiction=jur, query=query, datasource=ds)
-                # India: decode each hit's CIN so the registering city is visible at the
-                # (free) search stage — the address is often truncated to the state.
-                if jur == "IN" and isinstance(results, list):
+                # Attach ONE generic `enrichment` object to every hit (same schema for
+                # all jurisdictions) so the free search surfaces location/type/etc. that
+                # the raw address may hide (e.g. India's address is truncated to state).
+                if isinstance(results, list):
                     for r in results:
                         if isinstance(r, dict):
-                            dec = decode_cin(r.get("externalCode"))
-                            if dec:
-                                r["cin"] = dec
+                            r["enrichment"] = enrich_search_result(jur, r)
                 _json(self, {"jurisdiction": jur, "query": query, "results": results})
             elif u.path == "/api/case":
                 cid = q.get("id", [None])[0]

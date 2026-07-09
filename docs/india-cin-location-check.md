@@ -45,21 +45,35 @@ No report bought to confirm location. The whole check is free.
 
 ## How to use the API
 
-**Endpoint:** `GET /api/search?jurisdiction=IN&query=<name>`
+**Endpoint:** `GET /api/search?jurisdiction=<ISO>&query=<name>`
 
-For India, every result gains a **`cin`** object:
+**Every** search result — for **every jurisdiction** — carries ONE generic `enrichment`
+object with the **same schema**. Jurisdiction-specific decoders fill what they can (India via
+the CIN); fields we can't derive yet are `null`. The shape never changes, so one client handles
+all countries.
 
-| Field | Meaning | Example |
-|---|---|---|
-| `label` | ready-to-show summary | `Listed Public Limited Company · RoC Hyderabad (Telangana) · est. 1955` |
-| `rocCity` | **the registering city** ← the answer | `Hyderabad` |
-| `state` | state | `Telangana` |
-| `listed` | listed on a stock exchange? | `true` |
-| `class` | company type | `Public Limited Company` |
-| `year` | year incorporated | `1955` |
-| `stateCode` / `classCode` / `regNo` | raw CIN segments | `TG` / `PLC` / `000656` |
+```jsonc
+"enrichment": {
+  "registryId":         "L74999TG1955PLC000656",   // the externalCode / registration number
+  "idScheme":           "CIN",                       // recognised ID scheme, else null
+  "entityType":         "Public Limited Company",    // else null
+  "listed":             true,                        // else null
+  "incorporationYear":  1955,                         // else null
+  "status":             "Active",
+  "location": {
+    "city":        "Hyderabad",                       // decoded/parsed city, else null
+    "region":      "Telangana",                       // state/province, else null
+    "countryCode": "IN",
+    "raw":         "Telangana"                         // the raw address string as returned
+  },
+  "summary": "Listed Public Limited Company · Hyderabad (Telangana) · est. 1955",  // human one-liner (null if nothing to add)
+  "source":  "cin-decode"                              // "cin-decode" | "registry"
+}
+```
 
-Confirm location by comparing **`cin.rocCity`** (or `cin.state`) with the city the customer gave.
+Confirm location by comparing **`enrichment.location.city`** (or `.region`) with the city the
+customer gave. Today only India (`idScheme: "CIN"`) is fully populated; other jurisdictions return
+the same object, sparsely filled, ready for their own decoders (DE registry court, CN USCC, …).
 
 ---
 
@@ -77,18 +91,21 @@ GET /api/search?jurisdiction=IN&query=Birlanu
     "externalCode": "L74999TG1955PLC000656",
     "rawAddress": "Telangana",
     "companyStatus": "Active",
-    "cin": {
-      "rocCity": "Hyderabad",
-      "state": "Telangana",
+    "enrichment": {
+      "registryId": "L74999TG1955PLC000656",
+      "idScheme": "CIN",
+      "entityType": "Public Limited Company",
       "listed": true,
-      "class": "Public Limited Company",
-      "year": 1955,
-      "label": "Listed Public Limited Company · RoC Hyderabad (Telangana) · est. 1955"
+      "incorporationYear": 1955,
+      "status": "Active",
+      "location": { "city": "Hyderabad", "region": "Telangana", "countryCode": "IN", "raw": "Telangana" },
+      "summary": "Listed Public Limited Company · Hyderabad (Telangana) · est. 1955",
+      "source": "cin-decode"
     }
   }]
 }
 ```
-Customer said **Hyderabad** → `cin.rocCity` = **Hyderabad** → ✅ match, safe to buy.
+Customer said **Hyderabad** → `enrichment.location.city` = **Hyderabad** → ✅ match, safe to buy.
 
 ### 2) Other companies (verified)
 | Search | Address shown | CIN decodes to |
@@ -115,6 +132,13 @@ rep to do a quick free CIN lookup (public MCA data) for the exact street address
 
 ## Where this lives
 
-- **API:** `decode_cin()` in `kyc_case_app.py`; `/api/search` enriches every `IN` result with `cin`.
-- **UI:** `kyc_case.html` search screen — the **City** field + the per-result CIN chip and ✅/⚠️ badge.
-- Pure client-side + a static lookup table — no gateway call, no billing.
+- **API:** `/api/search` attaches a **generic `enrichment` object to every result, every
+  jurisdiction** (`enrich_search_result()` in `kyc_case_app.py`). Jurisdiction decoders fill it —
+  India via `decode_cin()`; add DE/CN/RU/… the same way (they write into the same fields, the JSON
+  shape never changes).
+- **UI:** `kyc_case.html` search screen reads `enrichment.summary` for the chip, `enrichment.location`
+  for the ✅/⚠️ match against the **City** field.
+- Pure logic + static lookup tables — no gateway call, no billing.
+
+> The mechanism is generic; India (CIN) is just the first populated decoder because that's where the
+> problem surfaced. The response contract is **one enrichment schema across all jurisdictions.**

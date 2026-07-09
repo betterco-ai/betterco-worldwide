@@ -498,24 +498,25 @@ async function doSearch(){
  const city=(document.getElementById('city').value||'').trim().toLowerCase();
  box.innerHTML = rs.map((r,i)=>{
    const act=(r.companyStatus||'').toLowerCase()==='active';
-   let cinHtml='';
-   if(r.cin){
-     const c=r.cin, roc=(c.rocCity||'').toLowerCase(), st=(c.state||'').toLowerCase();
+   let enrHtml='';
+   const e=r.enrichment;
+   if(e && e.summary){
+     const loc=e.location||{}, cty=(loc.city||'').toLowerCase(), reg=(loc.region||'').toLowerCase();
      let badge='';
-     if(city){
-       const rocMain=roc.split(' /')[0];
-       const m = (roc && roc.indexOf(city)>=0) || (st && st.indexOf(city)>=0) || (rocMain && city.indexOf(rocMain)>=0);
+     if(city && (cty||reg)){
+       const main=(cty||reg).split(' /')[0];
+       const m = (cty && cty.indexOf(city)>=0) || (reg && reg.indexOf(city)>=0) || (main && city.indexOf(main)>=0);
        badge = m
          ? '<span class="badge opt" style="margin-left:6px">✓ '+t('cinMatch')+'</span>'
          : '<span class="badge" style="margin-left:6px;color:var(--warn-text);background:var(--warn-bg);border:1px solid var(--warn-border)">⚠ '+t('cinCheck')+'</span>';
      }
-     cinHtml='<div style="margin-top:5px"><span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(c.label)+'</span>'+badge+'</div>';
+     enrHtml='<div style="margin-top:5px"><span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(e.summary)+'</span>'+badge+'</div>';
    }
    return '<div class="res" data-i="'+i+'">'
     +'<div class="nm"><b>'+esc(r.rawname||r.name||'?')+'</b>'
     +'<small>'+esc(r.externalCode||'')+'</small>'
     +'<small>'+esc(r.rawAddress||[r.street,r.zip,r.city].filter(Boolean).join(', '))+'</small>'
-    +cinHtml+'</div>'
+    +enrHtml+'</div>'
     +'<span class="st '+(act?'active':'other')+'">'+esc(r.companyStatus||'—')+'</span></div>';
  }).join('');
  box.querySelectorAll('.res').forEach(el=>el.onclick=()=>{
