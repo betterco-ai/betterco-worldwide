@@ -45,8 +45,8 @@ the India case.
 | Code | Observed `externalCode` | Address | ID scheme | Enrichment potential | Status |
 |---|---|---|---|---|---|
 | **IN** | `L74999TG1955PLC000656` | state | **CIN** | city (RoC) + type + listed + year | ✅ **shipped** |
-| **CN** | `91450500MA5KDYN63R` | — | **USCC** (18-char) | **province/city** (chars 3–8) + org type | ⭐ observed — build next |
-| **AR** | `30500005862` | country | **CUIT** (tax ID) | entity type (first 2 digits) | to-verify |
+| **CN** | `91450500MA5KDYN63R` | — | **USCC** (18-char) | **province/city** (chars 3–8) + org type | ✅ shipped |
+| **AR** | `30500005862` | country | **CUIT** (tax ID) | entity type (first 2 digits) | ✅ shipped |
 | **CA** | `1001630592` | city+region | provincial corp no. | province already in `dataSource` | low need |
 | **CH** | `CHE-243.571.513` | city+country | **UID** | — (no location in ID) | low |
 | **AT** | `480817 i` | city | Firmenbuch no. | — (address has city) | low |
@@ -55,11 +55,11 @@ the India case.
 | **BM** | `202403382` | — | registration no. | — | low |
 | **BZ** | `168941` | country | registration no. | — | low |
 | **CW** | `148786` | — | registration no. | — | low |
-| **DE** | `Köln HRB 116890` | city+country | HRB/HRA + **court** | **court city (Köln) = city/Land** — in `externalCode` | ⭐ observed — high value |
-| **RU** | `1077746661013` | **country only** | **OGRN** (13-digit) | **region (digits 4–5) + year (2–3)** | ⭐ observed — high value |
+| **DE** | `Köln HRB 116890` | city+country | HRB/HRA + **court** | **court city (Köln) = city/Land** — in `externalCode` | ✅ shipped |
+| **RU** | `1077746661013` | **country only** | **OGRN** (13-digit) | **region (digits 4–5) + year (2–3)** | ✅ shipped |
 | **US** | `7219511` | country only | state corp no. | state already in `dataSource` (`Delaware`) | low need |
-| **SG** | `195300108N` | country | **UEN** | incorporation **year** (first 4 digits) | to-verify |
-| **GB** | `11791594` | care-of addr | company number + **prefix** | jurisdiction (SC/NI) + type (OC/FC) | observed — prefix present |
+| **SG** | `195300108N` | country | **UEN** | incorporation **year** (first 4 digits) | ✅ shipped |
+| **GB** | `11791594` | care-of addr | company number + **prefix** | jurisdiction (SC/NI) + type (OC/FC) | ✅ shipped |
 
 *(Full, current list — including every jurisdiction the sweep has reached — is in `search-catalog.json`.)*
 
@@ -70,14 +70,18 @@ the India case.
 1. **There is no universal decodable field** — every `externalCode` is a different national ID
    scheme. So the **generic `enrichment` object** (same schema, per-jurisdiction decoders) is the
    correct design; there's nothing to unify at the source.
-2. **Priority to build next** (biggest gain = coarse address + rich ID — all observed):
-   - **RU (OGRN)** — address is **country-only**; OGRN encodes **region + year**. ⭐
-   - **CN (USCC)** — coarse address; USCC encodes **province/city** (region code observed). ⭐
-   - **DE** — the registration **court city is in `externalCode`** (e.g. `Köln HRB…`) = city/Land; core market. ⭐
-   - **AR (CUIT)** — country-only address; CUIT gives at least entity type.
-   - **GB** — company-number **prefix** (SC/NI/OC/FC) → jurisdiction + type.
-3. **Low value** — CA/CH/AT already return a city; BE/BZ/BM/CW/BW IDs are plain sequential numbers
-   with nothing extra to decode.
+2. **✅ SHIPPED decoders** (built with the same pattern as India — each fills the same `enrichment`
+   fields in `enrich_search_result()`):
+   - **IN** CIN → city (RoC) + type + listed + year
+   - **RU** OGRN → **region + year** (address is country-only, so the ID is the only location)
+   - **CN** USCC → **province** (admin-division code)
+   - **DE** registry → **court city** (Köln/Wiesbaden) + entity-type hint (HRB/HRA/…)
+   - **AR** CUIT → entity type (company vs individual)
+   - **HU** Cégjegyzékszám → **county** (01=Budapest, …)
+   - **GB** company-no. **prefix** → jurisdiction (Scotland/N.Ireland/E&W) + LLP hint (OC/SO/NC)
+   - **SG** UEN → incorporation **year** (first 4 digits)
+3. **Low value — intentionally NOT decoded** (audit showed the address already has the city, or the
+   ID is a plain sequential number): CA/CH/AT (address has a city); BE/BZ/BM/CW/BW/IT/NL (sequential IDs).
 
 Each new decoder just fills the same `enrichment` fields in `enrich_search_result()` — the response
 shape never changes.

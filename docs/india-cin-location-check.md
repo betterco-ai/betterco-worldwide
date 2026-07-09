@@ -73,7 +73,7 @@ all countries.
 
 Confirm location by comparing **`enrichment.location.city`** (or `.region`) with the city the
 customer gave. Today only India (`idScheme: "CIN"`) is fully populated; other jurisdictions return
-the same object, sparsely filled, ready for their own decoders (DE registry court, CN USCC, …).
+the same object, sparsely filled, and 7 decoders now ship (IN, RU, CN, DE, AR, HU, GB, SG) — see docs/search-response-catalog.md.
 
 ---
 

@@ -93,6 +93,124 @@ def decode_cin(cin):
     }
 
 
+# ── More jurisdiction decoders (same pattern as India CIN) ───────────────────
+# Each takes the search hit's externalCode and returns a partial of the enrichment
+# fields it can derive {idScheme, entityType, listed, incorporationYear, city,
+# region, source}; None if it can't decode. Wired via _DECODERS below.
+
+_RU_REGION = {  # OGRN region code (digits 4-5) -> subject of the RF
+    "77": "Moscow", "78": "St Petersburg", "50": "Moscow Oblast", "47": "Leningrad Oblast",
+    "23": "Krasnodar Krai", "61": "Rostov Oblast", "66": "Sverdlovsk Oblast", "16": "Tatarstan",
+    "52": "Nizhny Novgorod", "63": "Samara Oblast", "02": "Bashkortostan", "74": "Chelyabinsk",
+    "24": "Krasnoyarsk Krai", "54": "Novosibirsk", "55": "Omsk", "59": "Perm Krai",
+    "34": "Volgograd", "36": "Voronezh", "72": "Tyumen", "86": "Khanty-Mansi", "38": "Irkutsk",
+    "40": "Kaluga", "33": "Vladimir", "76": "Yaroslavl", "64": "Saratov", "31": "Belgorod",
+}
+
+
+def _decode_ogrn(code):  # RU
+    c = (code or "").strip()
+    if not (c.isdigit() and len(c) == 13):
+        return None
+    yy = int(c[1:3])
+    year = (2000 + yy) if yy <= 50 else (1900 + yy)
+    reg = c[3:5]
+    return {"idScheme": "OGRN", "incorporationYear": year,
+            "region": _RU_REGION.get(reg, "region " + reg), "source": "ogrn-decode"}
+
+
+_CN_PROVINCE = {  # USCC admin-division code, first 2 digits -> province
+    "11": "Beijing", "12": "Tianjin", "13": "Hebei", "14": "Shanxi", "15": "Inner Mongolia",
+    "21": "Liaoning", "22": "Jilin", "23": "Heilongjiang", "31": "Shanghai", "32": "Jiangsu",
+    "33": "Zhejiang", "34": "Anhui", "35": "Fujian", "36": "Jiangxi", "37": "Shandong",
+    "41": "Henan", "42": "Hubei", "43": "Hunan", "44": "Guangdong", "45": "Guangxi",
+    "46": "Hainan", "50": "Chongqing", "51": "Sichuan", "52": "Guizhou", "53": "Yunnan",
+    "54": "Tibet", "61": "Shaanxi", "62": "Gansu", "63": "Qinghai", "64": "Ningxia",
+    "65": "Xinjiang", "71": "Taiwan", "81": "Hong Kong", "82": "Macau",
+}
+
+
+def _decode_uscc(code):  # CN
+    c = (code or "").strip().upper()
+    if len(c) != 18 or not c[2:4].isdigit():
+        return None
+    prov = _CN_PROVINCE.get(c[2:4])
+    return {"idScheme": "USCC", "region": prov or ("division " + c[2:8]), "source": "uscc-decode"}
+
+
+_DE_REG = {"HRB": "Company", "HRA": "Sole trader / Partnership", "GnR": "Cooperative",
+           "VR": "Association", "PR": "Partnership", "GsR": "Cooperative"}
+
+
+def _decode_de_register(code):  # DE — court city sits in the externalCode
+    m = re.search(r"\b(HRB|HRA|GnR|VR|PR|GsR)\b", code or "", re.I)
+    if not m:
+        return None
+    rtype = m.group(1).upper()
+    before = code[:m.start()]
+    for w in ("District court", "Amtsgericht", "Registergericht"):
+        before = before.replace(w, " ")
+    toks = before.split()
+    city = toks[-1] if toks else None
+    region = toks[0] if len(toks) > 1 else None
+    return {"idScheme": rtype, "entityType": _DE_REG.get(rtype),
+            "city": city, "region": region, "source": "de-register"}
+
+
+def _decode_cuit(code):  # AR
+    c = (code or "").replace("-", "").strip()
+    if not (c.isdigit() and len(c) == 11):
+        return None
+    pre = c[:2]
+    et = "Company" if pre in ("30", "33", "34") else ("Individual" if pre in ("20", "23", "24", "27") else None)
+    return {"idScheme": "CUIT", "entityType": et, "source": "cuit-decode"}
+
+
+_HU_COUNTY = {
+    "01": "Budapest", "02": "Baranya (Pécs)", "03": "Bács-Kiskun", "04": "Békés",
+    "05": "Borsod-Abaúj-Zemplén", "06": "Csongrád-Csanád", "07": "Fejér", "08": "Győr-Moson-Sopron",
+    "09": "Hajdú-Bihar", "10": "Heves", "11": "Komárom-Esztergom", "12": "Nógrád", "13": "Pest",
+    "14": "Somogy", "15": "Szabolcs-Szatmár-Bereg", "16": "Jász-Nagykun-Szolnok", "17": "Tolna",
+    "18": "Vas", "19": "Veszprém", "20": "Zala",
+}
+
+
+def _decode_hu(code):  # HU
+    c = (code or "").replace("-", "").strip()
+    if not (c.isdigit() and len(c) >= 8):
+        return None
+    return {"idScheme": "Cégjegyzékszám", "region": _HU_COUNTY.get(c[:2], "county " + c[:2]),
+            "source": "hu-decode"}
+
+
+_GB_PREFIX = {  # company-number prefix -> (jurisdiction, entity type hint)
+    "SC": ("Scotland", None), "SO": ("Scotland", "Limited Liability Partnership"),
+    "NI": ("Northern Ireland", None), "NC": ("Northern Ireland", "Limited Liability Partnership"),
+    "OC": ("England & Wales", "Limited Liability Partnership"), "FC": ("Foreign company", None),
+}
+
+
+def _decode_gb(code):  # GB
+    c = (code or "").strip().upper()
+    if c[:2] in _GB_PREFIX:
+        reg, et = _GB_PREFIX[c[:2]]
+        return {"idScheme": "CRN", "region": reg, "entityType": et, "source": "gb-crn"}
+    if c.isdigit() and len(c) == 8:
+        return {"idScheme": "CRN", "region": "England & Wales", "source": "gb-crn"}
+    return None
+
+
+def _decode_sg(code):  # SG — UEN yyyynnnnnX, first 4 digits = year
+    c = (code or "").strip()
+    if len(c) == 10 and c[:4].isdigit() and 1850 <= int(c[:4]) <= 2100:
+        return {"idScheme": "UEN", "incorporationYear": int(c[:4]), "source": "uen-decode"}
+    return None
+
+
+_DECODERS = {"RU": _decode_ogrn, "CN": _decode_uscc, "DE": _decode_de_register,
+             "AR": _decode_cuit, "HU": _decode_hu, "GB": _decode_gb, "SG": _decode_sg}
+
+
 def enrich_search_result(jur, r):
     """ONE generic enrichment shape for a search hit — SAME schema for every
     jurisdiction. Jurisdiction-specific decoders (e.g. India CIN) fill what they
@@ -121,7 +239,8 @@ def enrich_search_result(jur, r):
     }
 
     # ── jurisdiction-specific decoders write INTO the shape above ──
-    if (jur or "").upper() == "IN":
+    juu = (jur or "").upper()
+    if juu == "IN":
         d = decode_cin(reg_id)
         if d:
             enr["idScheme"] = "CIN"
@@ -131,8 +250,19 @@ def enrich_search_result(jur, r):
             enr["location"]["city"] = d["rocCity"]
             enr["location"]["region"] = d["state"]
             enr["source"] = "cin-decode"
-    # (future jurisdictions — DE registry court, CN USCC, RU OGRN, ... — all just
-    #  fill the same `enr` fields; the returned JSON shape never changes.)
+    elif juu in _DECODERS:
+        p = _DECODERS[juu](reg_id) or {}
+        for k in ("idScheme", "entityType", "listed", "incorporationYear"):
+            if p.get(k) is not None:
+                enr[k] = p[k]
+        if p.get("city"):
+            enr["location"]["city"] = p["city"]
+        if p.get("region"):
+            enr["location"]["region"] = p["region"]
+        if p.get("source"):
+            enr["source"] = p["source"]
+    # Every decoder just fills the same `enr` fields; the returned JSON shape
+    # never changes. Add a jurisdiction = add a decoder + one _DECODERS entry.
 
     # human one-liner assembled from whatever is populated (segments joined by " · ")
     head = " ".join(x for x in [
