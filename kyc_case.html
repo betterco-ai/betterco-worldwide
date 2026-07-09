@@ -493,8 +493,8 @@ async function doSearch(){
  msg.innerHTML='<div class="hint"><span class="spin"></span> '+t('searching')+'</div>'; box.innerHTML='';
  const {ok,d}=await api('/api/search?jurisdiction='+encodeURIComponent(jur)+'&query='+encodeURIComponent(query));
  if(!ok){
-   // "too many results — refine" is guidance, not an error: show it amber, not red.
-   const amber=d.refine;
+   // "too many results — refine" and "registry slow" are guidance, not errors: amber, not red.
+   const amber=d.refine||d.slow;
    msg.innerHTML='<div class="'+(amber?'ok':'err')+'"'+(amber?' style="background:#fffbeb;color:#92400e;border-color:#fde68a"':'')+'>'
      +(amber?'⚠ ':'')+esc(d.error||'Search error')+'</div>';
    return;

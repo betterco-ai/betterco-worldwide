@@ -98,9 +98,9 @@ class KycGatewayClient:
     def _ws(self, path: str) -> str:
         return f"{self.base_url}/restapi/v1/workspaces/{self.workspace_id}{path}"
 
-    def _get(self, path: str, params: dict | None = None):
+    def _get(self, path: str, params: dict | None = None, timeout: int = 60):
         self._ensure_auth()
-        r = self.session.get(self._ws(path), params=params, timeout=60)
+        r = self.session.get(self._ws(path), params=params, timeout=timeout)
         r.raise_for_status()
         return r.json()
 
@@ -123,7 +123,9 @@ class KycGatewayClient:
         params = {"jurisdiction": jurisdiction, "query": query}
         if datasource:
             params["datasource"] = datasource
-        return self._get("/document-search/cases/search", params)
+        # Some registries (e.g. Cayman) are slow (~60-90s) but DO return valid results;
+        # give search a longer cap so they succeed, while still bounding the wait.
+        return self._get("/document-search/cases/search", params, timeout=90)
 
     def list_cases(self, scope: str = "account", with_documents: bool = True,
                    q: str | None = None, refresh: bool = False) -> list[dict]:

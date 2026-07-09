@@ -495,6 +495,13 @@ class H(BaseHTTPRequestHandler):
                                  ("refine", "more than", "adjust your search", "too many", "200 record"))
                     return _json(self, {"error": msg, "refine": refine,
                                         "jurisdiction": jur, "query": query}, 400)
+                except (requests.Timeout, requests.ConnectionError):
+                    # Some registries (e.g. Cayman) are very slow and can hang for minutes.
+                    # Fail fast with clear guidance rather than a long wait + cryptic error.
+                    return _json(self, {"error": "This registry is taking too long to respond "
+                                        "(some jurisdictions, e.g. Cayman, are slow). Please refine "
+                                        "your search or try again in a moment.",
+                                        "slow": True, "jurisdiction": jur, "query": query}, 504)
                 # Attach ONE generic `enrichment` object to every hit (same schema for
                 # all jurisdictions) so the free search surfaces location/type/etc. that
                 # the raw address may hide (e.g. India's address is truncated to state).
