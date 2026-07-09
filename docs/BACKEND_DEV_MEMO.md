@@ -104,13 +104,20 @@ as needed).
 From sweeping every automated jurisdiction and re-testing failures with **flagship companies**
 (details + data: `docs/search-response-catalog.md`, `docs/search-catalog.json`):
 
-- **🔴 Search returns HTTP 500 even for the country's biggest company — genuinely broken:**
-  **AU** (BHP), **FI** (Nokia), **FR** (Renault) return 500 immediately; **KY** (Tencent) and
-  **MY** (Malayan Banking) return 500 after a slow ~62 s. France, Finland and Cayman are important
-  markets. Real upstream/gateway search outages, not query problems. **Escalate to KYC.com.**
-- **✅ IM works** ("Playtech" → 7 hits, 4.2 s); its earlier "timeout" was a short client timeout, not a real failure.
-- **🟡 Search 500s only on broad/generic queries** (works with a specific name): **CY, GR, NO**.
-  The search should degrade gracefully instead of 500-ing on broad terms.
+**⚠️ Correction:** most of what first looked "broken" was **our own error-masking**. The registry
+replies to broad queries with an HTTP 400 *"More than 200 records found in <country>, please refine
+your search criteria"*, and the app was re-wrapping it as a 500. **Fixed in the app** (`/api/search`
+now returns `{error, refine:true}` and the UI shows an amber "refine" hint). Corrected picture:
 
-**39/44 automated jurisdictions confirmed working** once broad queries are replaced with real names;
-the 5 broken ones (AU FI FR KY MY) are the genuine issues to raise with KYC.com.
+- **✅ NOT broken — "too many results":** **AU** (BHP), **FI** (Nokia), **FR** (Renault) — flagship
+  names match hundreds of subsidiaries → refine the query. Registry is fine.
+- **🐢 KY — works, just slow:** "Tencent" → 17 results in ~62 s (earlier "500s" were client timeouts).
+  Fix is client-side: **longer / async search timeout** (the gateway search should allow ≥90 s or go
+  async). Also KY results come back with an **empty `externalCode`** — a data-quality gap worth raising.
+- **🟡 CY, GR, NO** — 500 on broad terms only; work with a real name (helped by the catch above).
+- **🔴 MY — the one genuine issue to escalate to KYC.com:** Maybank/Petronas/Genting/AirAsia all →
+  **HTTP 500 after ~62 s**, consistently (not a "too many" 400).
+
+Net: **43/44 automated jurisdictions effectively work** (AU/FI/FR = refine, KY = slow-but-works, IM =
+works). Only **MY** is a genuine search outage to raise with KYC.com; the secondary asks are a longer
+search timeout (KY) and KY's empty `externalCode`.

@@ -22,6 +22,7 @@ Usage:
 Zero extra deps — built on http.server + kyc_gateway_client.
 """
 import os, sys, re, json, argparse, threading, webbrowser
+import requests
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
@@ -404,6 +405,23 @@ def reference():
         _ref["mappings"] = mappings
     return _ref
 
+def _upstream_error(exc):
+    """Pull a clean, user-facing message out of a gateway HTTPError. The gateway
+    wraps registry errors as {"message": 'KYC.com upstream error: "<real msg>"'};
+    unwrap that so the user sees e.g. 'More than 200 records found in France,
+    please refine your search criteria.' rather than '400 Client Error'."""
+    resp = getattr(exc, "response", None)
+    msg = None
+    if resp is not None:
+        try:
+            msg = (resp.json() or {}).get("message") or (resp.json() or {}).get("error")
+        except Exception:
+            msg = (getattr(resp, "text", "") or "")[:300]
+    msg = msg or str(exc)
+    m = re.search(r'upstream error:\s*"?(.+?)"?\s*$', msg)
+    return m.group(1) if m else msg
+
+
 def _json(handler, obj, code=200):
     body = json.dumps(obj, default=str).encode("utf-8")
     handler.send_response(code)
@@ -466,7 +484,17 @@ class H(BaseHTTPRequestHandler):
                 ds = (q.get("datasource", [""])[0] or "").strip() or None
                 if not jur or not query:
                     return _json(self, {"error": "jurisdiction and query required"}, 400)
-                results = gw.search(jurisdiction=jur, query=query, datasource=ds)
+                try:
+                    results = gw.search(jurisdiction=jur, query=query, datasource=ds)
+                except requests.HTTPError as e:
+                    # The registry often returns a helpful message (e.g. "More than 200
+                    # records found … please refine your search criteria") as a 4xx —
+                    # surface it instead of a generic 500.
+                    msg = _upstream_error(e)
+                    refine = any(k in msg.lower() for k in
+                                 ("refine", "more than", "adjust your search", "too many", "200 record"))
+                    return _json(self, {"error": msg, "refine": refine,
+                                        "jurisdiction": jur, "query": query}, 400)
                 # Attach ONE generic `enrichment` object to every hit (same schema for
                 # all jurisdictions) so the free search surfaces location/type/etc. that
                 # the raw address may hide (e.g. India's address is truncated to state).

@@ -492,7 +492,13 @@ async function doSearch(){
  if(!jinfo(jur).auto){ return manualEntry(jur, query); }
  msg.innerHTML='<div class="hint"><span class="spin"></span> '+t('searching')+'</div>'; box.innerHTML='';
  const {ok,d}=await api('/api/search?jurisdiction='+encodeURIComponent(jur)+'&query='+encodeURIComponent(query));
- if(!ok){msg.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
+ if(!ok){
+   // "too many results — refine" is guidance, not an error: show it amber, not red.
+   const amber=d.refine;
+   msg.innerHTML='<div class="'+(amber?'ok':'err')+'"'+(amber?' style="background:#fffbeb;color:#92400e;border-color:#fde68a"':'')+'>'
+     +(amber?'⚠ ':'')+esc(d.error||'Search error')+'</div>';
+   return;
+ }
  const rs=d.results||[];
  msg.innerHTML='<div class="hint">'+t('results',rs.length,query,jur)+'</div>';
  const city=(document.getElementById('city').value||'').trim().toLowerCase();

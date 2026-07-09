@@ -88,24 +88,29 @@ shape never changes.
 
 ---
 
-## Search reliability findings (re-tested with real flagship companies)
+## Search reliability findings (corrected — most "failures" were OUR error-masking)
 
-Retesting the failing jurisdictions with **real, well-known company names** (BHP, Nokia, Renault,
-Bank of Cyprus, Alpha Bank, Equinor, Tencent, Genting) splits them into three clearly different
-problems:
+The initial "6 jurisdictions return 500" was largely **our own bug**: the registry replies to broad
+queries with a helpful **HTTP 400 "More than 200 records found in <country>, please refine your search
+criteria"**, and the app was re-wrapping that 400 as a generic 500 — hiding the message. **Fixed:**
+`/api/search` now catches the upstream message and returns `{error, refine:true}` (400); the UI shows
+it as an amber "refine your search" hint, not a red error.
 
-1. **🔴 GENUINELY BROKEN — escalate to KYC.com.** Return **HTTP 500 even for the country's flagship
-   company:** **AU** (BHP), **FI** (Nokia), **FR** (Renault) — 500 immediately; **KY** (Tencent) and
-   **MY** (Malayan Banking) — 500 after a slow **~62 s**. France, Finland and Cayman are important
-   markets. Real upstream search outages, not query problems.
-2. **🟡 Generic-query sensitivity (search-robustness).** 500 on broad terms (`holding`/`bank`) but
-   **work fine with a real name:** **CY** (`ΗΕ 44168`), **GR** (full street address), **NO**
-   (`993888621`). Fix: search should degrade gracefully on broad queries instead of 500-ing;
-   meanwhile always query with a specific name/number.
-3. **✅ Not actually broken.** **IM** works fine — "Playtech" → 7 hits in 4.2 s (`014453V`); the earlier
-   "timeout" was the sweep's short client timeout + a test name with no match.
+Re-tested with flagship companies, corrected verdicts:
 
-> ⚠️ Note the KY/MY "timeout" earlier was a **short client timeout masking a slow 500** — the upstream
-> takes ~62 s to error, so a longer timeout doesn't help; these are broken, not merely slow.
+1. **✅ NOT broken — "too many results" (now handled).** **AU** (BHP), **FI** (Nokia), **FR** (Renault):
+   the flagship name matches hundreds of subsidiaries → "refine your search". Registry is fine; use a
+   more specific name/number.
+2. **🟡 Generic-query sensitivity.** **CY, GR, NO** — 500 on broad terms, work with a real name (same
+   root cause; also improved by the catch above).
+3. **🐢 KY — works, just slow.** "Tencent" → **17 results in ~62 s**. The earlier "500s" were client
+   timeouts cutting it off. Needs a longer/async client timeout, not a KYC.com escalation. (Note: KY
+   results come back with an **empty `externalCode`** — a data-quality gap.)
+4. **✅ IM works** — "Playtech" → 7 hits in 4.2 s (`014453V`).
+5. **🔴 MY — the only genuine issue.** Maybank/Petronas/Genting/AirAsia all → **HTTP 500 after ~62 s**.
+   Consistent, not a "too many" 400. **This is the one to escalate to KYC.com.**
+
+> Lesson: always surface the upstream message. What looked like "5 broken markets (AU/FI/FR/KY/MY)"
+> was really **3 refine-cases + 1 slow-but-works + 1 genuine (MY)**.
 
 Per-jurisdiction verdicts are in `search-catalog.json` (`searchVerdict` + `realNameTest`).
