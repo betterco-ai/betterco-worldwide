@@ -86,12 +86,22 @@ shape never changes.
 
 ---
 
-## Search reliability finding
+## Search reliability findings (re-tested with real flagship companies)
 
-A few automated jurisdictions **consistently return HTTP 500 on a generic name query**
-(`holding`/`bank`/…) across repeated sweeps — not timeouts, real upstream errors:
-**AU, CY, FI, FR, GR, NO**. They likely need a **specific company name or registration number**
-(as a real user search would provide) rather than a broad term. Worth flagging to KYC.com and
-worth a targeted re-test with real names before assuming coverage gaps. Others merely **timed out**
-on the slow shared upstream and succeed on retry. The `error` field in `search-catalog.json` records
-which is which per jurisdiction.
+Retesting the failing jurisdictions with **real, well-known company names** (BHP, Nokia, Renault,
+Bank of Cyprus, Alpha Bank, Equinor, Tencent, Genting) splits them into three clearly different
+problems:
+
+1. **🔴 GENUINELY BROKEN — escalate to KYC.com.** Return **HTTP 500 even for the country's flagship
+   company:** **AU** (BHP), **FI** (Nokia), **FR** (Renault). France and Finland are core markets, so
+   this is a real search outage in the gateway/upstream, not a query problem.
+2. **🟡 Generic-query sensitivity (search-robustness).** 500 on broad terms (`holding`/`bank`) but
+   **work fine with a real name:** **CY** (`ΗΕ 44168`), **GR** (returns a full street address),
+   **NO** (`993888621`). Fix: the search should degrade gracefully on broad queries instead of 500-ing;
+   meanwhile always query with a specific name/number.
+3. **🟠 Slow / timeout (affects the UI too).** **KY** (Tencent) and **MY** (Genting) **time out even
+   with real names** — genuinely slow upstream. Since the UI hits the same `/api/search` path, it will
+   time out there as well → needs a longer client timeout / async fetch, or upstream escalation. **IM**
+   is NOT a timeout — it responded (just no match for the test name); retest with a real IoM company.
+
+Per-jurisdiction verdicts are in `search-catalog.json` (`searchVerdict` + `realNameTest`).

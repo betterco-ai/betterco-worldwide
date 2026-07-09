@@ -31,7 +31,12 @@
   "code": "AU",
   "name": "Australia",
   "error": "HTTP Error 500: Internal Server Error",
-  "observed": false
+  "observed": false,
+  "realNameTest": {
+   "query": "BHP",
+   "result": "HTTP Error 500: Internal Server Error"
+  },
+  "searchVerdict": "BROKEN — 500 even with flagship company (BHP)"
  },
  "BE": {
   "code": "BE",
@@ -148,8 +153,19 @@
  "CY": {
   "code": "CY",
   "name": "Cyprus",
-  "error": "HTTP Error 500: Internal Server Error",
-  "observed": false
+  "observed": true,
+  "realNameTest": {
+   "query": "Bank of Cyprus",
+   "result": 28
+  },
+  "externalCode": "ΕΕ 44168",
+  "rawAddress": "Cyprus",
+  "companyStatus": "Active",
+  "dataSource": "",
+  "query": "Bank of Cyprus",
+  "resultCount": 28,
+  "addressGranularity": "country",
+  "searchVerdict": "ok (needs specific query; generic 500s)"
  },
  "CZ": {
   "code": "CZ",
@@ -197,7 +213,12 @@
   "code": "FI",
   "name": "Finland",
   "error": "HTTP Error 500: Internal Server Error",
-  "observed": false
+  "observed": false,
+  "realNameTest": {
+   "query": "Nokia",
+   "result": "HTTP Error 500: Internal Server Error"
+  },
+  "searchVerdict": "BROKEN — 500 even with flagship company (Nokia)"
  },
  "FO": {
   "code": "FO",
@@ -217,7 +238,12 @@
   "code": "FR",
   "name": "France",
   "error": "HTTP Error 500: Internal Server Error",
-  "observed": false
+  "observed": false,
+  "realNameTest": {
+   "query": "Renault",
+   "result": "HTTP Error 500: Internal Server Error"
+  },
+  "searchVerdict": "BROKEN — 500 even with flagship company (Renault)"
  },
  "GB": {
   "code": "GB",
@@ -265,8 +291,19 @@
  "GR": {
   "code": "GR",
   "name": "Greece",
-  "error": "HTTP Error 500: Internal Server Error",
-  "observed": false
+  "observed": true,
+  "realNameTest": {
+   "query": "Alpha Bank",
+   "result": 4
+  },
+  "externalCode": "136181601000",
+  "rawAddress": "LEOFOROS ATHINON 77, ATHINA",
+  "companyStatus": "Active",
+  "dataSource": "",
+  "query": "Alpha Bank",
+  "resultCount": 4,
+  "addressGranularity": "city+region",
+  "searchVerdict": "ok (needs specific query; generic 500s)"
  },
  "HK": {
   "code": "HK",
@@ -343,7 +380,12 @@
   "name": "Isle of Man",
   "note": "no results for common queries",
   "error": "timed out",
-  "observed": false
+  "observed": false,
+  "realNameTest": {
+   "query": "Strix",
+   "result": 0
+  },
+  "searchVerdict": "responded, no results for test name"
  },
  "IN": {
   "code": "IN",
@@ -392,7 +434,12 @@
   "code": "KY",
   "name": "Cayman Islands",
   "error": "timed out",
-  "observed": false
+  "observed": false,
+  "realNameTest": {
+   "query": "Tencent",
+   "result": "timed out"
+  },
+  "searchVerdict": "slow — times out even with real name (UI too)"
  },
  "MT": {
   "code": "MT",
@@ -412,7 +459,12 @@
   "code": "MY",
   "name": "Malaysia",
   "error": "timed out",
-  "observed": false
+  "observed": false,
+  "realNameTest": {
+   "query": "Genting",
+   "result": "timed out"
+  },
+  "searchVerdict": "slow — times out even with real name (UI too)"
  },
  "NL": {
   "code": "NL",
@@ -431,8 +483,19 @@
  "NO": {
   "code": "NO",
   "name": "Norway",
-  "error": "HTTP Error 500: Internal Server Error",
-  "observed": false
+  "observed": true,
+  "realNameTest": {
+   "query": "Equinor",
+   "result": 179
+  },
+  "externalCode": "993888621",
+  "rawAddress": "Norway",
+  "companyStatus": "Active",
+  "dataSource": "",
+  "query": "Equinor",
+  "resultCount": 179,
+  "addressGranularity": "country",
+  "searchVerdict": "ok (needs specific query; generic 500s)"
  },
  "PH": {
   "code": "PH",

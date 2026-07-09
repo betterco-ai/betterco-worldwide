@@ -96,3 +96,22 @@ as needed).
 `betterco_claude_api` repo (branch `stage-test`) — methods `bff_login`,
 `bff_list_case_documents`, `bff_case_document_status`, `bff_download_document`,
 `download_case_documents` (poll + download-all-as-available).
+
+---
+
+## 🚩 FLAG — automated search broken / slow in some jurisdictions (escalate to KYC.com)
+
+From sweeping every automated jurisdiction and re-testing failures with **flagship companies**
+(details + data: `docs/search-response-catalog.md`, `docs/search-catalog.json`):
+
+- **🔴 Search returns HTTP 500 even for the country's biggest company — genuinely broken:**
+  **AU** (BHP → 500), **FI** (Nokia → 500), **FR** (Renault → 500). France & Finland are core
+  markets. Not a query problem — a real upstream/gateway search outage. **Escalate to KYC.com.**
+- **🟠 Search times out even with a real name — genuinely slow:** **KY** (Tencent), **MY** (Genting).
+  Same `/api/search` path the UI uses, so the **UI times out too**; needs a longer timeout / async
+  fetch client-side and/or upstream perf escalation.
+- **🟡 Search 500s only on broad/generic queries** (works with a specific name): **CY, GR, NO**.
+  The search should degrade gracefully instead of 500-ing on broad terms.
+
+32/44 → **38/44 automated jurisdictions confirmed working** once broad queries are replaced with
+real names; the 6 above are the genuine issues to raise.
