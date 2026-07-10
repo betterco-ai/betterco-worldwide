@@ -11,6 +11,37 @@ same `legal-forms` store that holds the existing 14. See `curation/README.md`.
 
 ---
 
+## Update — 2026-07-10 (since first handover)
+
+Read this first — a few things changed after the initial memo:
+
+1. **The "broken search" flag was mostly OUR bug — corrected.** What looked like "5 broken markets"
+   is really **1 (MY)**. The registry replies to broad queries with a 400 *"More than 200 records
+   found, please refine your search criteria"*, and the app was masking it as a 500. Corrected:
+   - **AU / FI / FR** — NOT broken; "too many results" (refine the query). Registry works.
+   - **KY** — works, just **slow (~62 s)**; earlier 500s were client timeouts. Also returns an
+     **empty `externalCode`** (data gap worth raising with KYC.com).
+   - **MY** — the only genuine 500 to escalate (see the FLAG section below, already updated).
+
+2. **App-side fixes the gateway should mirror:**
+   - **Surface upstream messages** — the "refine" / error text arrives as a 4xx body; pass it
+     through, don't wrap it as a 500.
+   - **Longer / async search timeout** — we raised search 60 s → 90 s so slow-but-valid registries
+     (KY) succeed, and fail fast with a clean message beyond that.
+
+3. **New capability: generic search enrichment + 8 ID decoders** (IN CIN, RU OGRN, CN USCC, DE court
+   city, AR CUIT, HU, GB, SG). Every search result now carries a uniform `enrichment` object
+   (location / type / year). Relevant to **API 1** — the gateway could return the same shape or
+   adopt the decoder pattern. Explainer: `docs/india-cin-location-check.md`.
+
+4. **New reference:** `docs/search-catalog.json` + `docs/search-response-catalog.md` +
+   `scripts/search_response_sweep.py` — what the KYC.com search returns per automated jurisdiction
+   (standard fields, each jurisdiction's ID scheme, reliability verdicts).
+
+The 3 core asks are unchanged: **legal-forms ingest**, **API 1 (coverage)**, **API 2 (pre-Ready docs)**.
+
+---
+
 ## API 1 — Per-jurisdiction coverage
 
 **Why:** the app needs, per jurisdiction, KYC.com's coverage: the retrieval **SLA**, the
