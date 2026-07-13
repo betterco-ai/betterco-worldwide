@@ -119,13 +119,19 @@ class KycGatewayClient:
     def legal_forms(self, jurisdiction: str | None = None) -> list[dict]:
         return self._get("/document-search/legal-forms", {"jurisdiction": jurisdiction} if jurisdiction else None)
 
+    def coverage(self, code: str) -> dict:
+        return self._get(f"/document-search/jurisdictions/{code}/coverage")
+
+    def list_coverage(self) -> list[dict]:
+        return self._get("/document-search/jurisdictions/coverage")
+
     def search(self, jurisdiction: str, query: str, datasource: str | None = None) -> list[dict]:
         params = {"jurisdiction": jurisdiction, "query": query}
         if datasource:
             params["datasource"] = datasource
-        # Some registries (e.g. Cayman) are slow (~60-90s) but DO return valid results;
-        # give search a longer cap so they succeed, while still bounding the wait.
-        return self._get("/document-search/cases/search", params, timeout=90)
+        # Gateway bounds slow registries at ~90s and returns a clean 504; give the client a
+        # little more so that gateway 504 wins the race instead of a client-side timeout.
+        return self._get("/document-search/cases/search", params, timeout=120)
 
     def list_cases(self, scope: str = "account", with_documents: bool = True,
                    q: str | None = None, refresh: bool = False) -> list[dict]:
