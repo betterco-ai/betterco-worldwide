@@ -1,0 +1,4612 @@
+{
+ "generatedFrom": "curation/document_kinds_evidence.json",
+ "note": "Vendor-neutral routing. Consumer asks (jurisdiction, kind, legalForm) and gets an actionable decision; it never names a vendor. Registry truth lives in the evidence file; vendor selection and ordering model live here.",
+ "vendorRouting": {
+  "DE": "handelsregister.de",
+  "*": "kyc.com"
+ },
+ "vendorOrderModel": {
+  "kyc.com": {
+   "model": "case_level",
+   "catalog": "jurisdiction_matrix.json",
+   "note": "Order the case; base docs included, additional docs requestable within the case. No per-document SKU."
+  },
+  "handelsregister.de": {
+   "model": "document_level",
+   "catalog": "handelsregister.de skill",
+   "note": "Order the specific document directly."
+  }
+ },
+ "actionVocabulary": {
+  "use_delivered": "Document arrives with the case bundle; classify the delivered file.",
+  "use_delivered_with_warning": "As above, but flag the completeness limitation.",
+  "order": "Place an additional request via the resolved vendor.",
+  "order_with_warning": "As above, but surface the completeness badge.",
+  "manual": "No registry document; use the fallback (e.g. company's own register).",
+  "unavailable": "No route to this document in this jurisdiction."
+ },
+ "routes": [
+  {
+   "jurisdiction": "AT",
+   "legalForm": "AG",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "§ 5 FBG i.V.m. § 35 AktG (AT)",
+     "url": "https://www.jusline.at/gesetz/aktg/paragraf/35"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AT",
+   "legalForm": "GmbH",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Firmenbuchauszug",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "§ 5 Z 6 Firmenbuchgesetz (FBG)",
+     "url": "https://www.jusline.at/gesetz/fbg/paragraf/5"
+    },
+    {
+     "basis": "§ 26 GmbHG (AT)",
+     "url": "https://www.jusline.at/gesetz/gmbhg/paragraf/26"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BE",
+   "legalForm": "BV",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "art. 2:8 WVV",
+     "url": "https://vzw-wet.be/wvv/d1/b2/b2-t4/b2-t4-h3/b2-t4-h3-a1/b2-t4-h3-a1-o1/wvv-2-8"
+    },
+    {
+     "basis": "art. 5:24 WVV (BV) / 7:28 WVV (NV) — aandeelhoudersregister",
+     "url": "https://www.belgium.be/nl/online_dienst/app_kbo_public_search"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CH",
+   "legalForm": "AG",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Art. 686 OR (Aktienbuch)",
+     "url": "https://www.baerkarrer.ch/userdata/files/publications/2023/mtxuqefqoqpq0epggnhq.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CH",
+   "legalForm": "Genossenschaft",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Genossenschafterliste (Art. 877 OR)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Art. 877 OR",
+     "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/wirtschaft-arbeit/handelsregister/genossenschaft/gen_merkblatt_fuehrung_genossenschafterliste.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CH",
+   "legalForm": "GmbH",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Handelsregisterauszug",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Art. 791 Abs. 1 OR",
+     "url": "https://gesetzestexte.help.ch/or/artikel.cfm?key=1118&art=Die_Gesellschaft_mit_beschraenkter_Haftung"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CY",
+   "legalForm": "Private limited",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered_with_warning",
+   "orderable": true,
+   "completeness": "snapshot",
+   "flags": [
+    "nominee",
+    "snapshot"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Shareholders/members (certified) / Annual Return HE32",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    },
+    {
+     "basis": "Companies Law Cap. 113 — annual return provisions (Form HE32); DRCIP",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CY",
+   "legalForm": "Public limited",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered_with_warning",
+   "orderable": true,
+   "completeness": "snapshot",
+   "flags": [
+    "nominee",
+    "snapshot"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Shareholders/members (certified) / Annual Return HE32",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CY",
+   "legalForm": "Private limited",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association (certified copy)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CY",
+   "legalForm": "Public limited",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association (certified copy)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CY",
+   "legalForm": "Private limited",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certified certificates issued by the Registrar (Registered Office; Directors and secretary; Good Standing; Capital)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    },
+    {
+     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CY",
+   "legalForm": "Public limited",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certified certificates issued by the Registrar (Registered Office; Directors and secretary; Good Standing; Capital)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CZ",
+   "legalForm": "a.s.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "zákon č. 304/2013 Sb., § 48 — sole-shareholder a.s. entry (the only shareholder fact the register carries)",
+     "url": "https://www.podnikatel.cz/zakony/zakon-o-verejnych-rejstricich-pravnickych-a-fyzickych-osob/f5078374/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CZ",
+   "legalForm": "s.r.o.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "výpis z obchodního rejstříku",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "zákon č. 304/2013 Sb., § 48 (skutečnosti zapisované do obchodního rejstříku u s.r.o.)",
+     "url": "https://www.podnikatel.cz/zakony/zakon-o-verejnych-rejstricich-pravnickych-a-fyzickych-osob/f5078374/"
+    },
+    {
+     "basis": "zákon č. 90/2012 Sb. (ZOK), § 139 — seznam společníků",
+     "url": "https://www.kurzy.cz/zakony/90-2012-zakon-o-obchodnich-korporacich/paragraf-139/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CZ",
+   "legalForm": "a.s.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "stanovy",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "zákon č. 304/2013 Sb., § 66 písm. a) — sbírka listin",
+     "url": "https://www.podnikatel.cz/zakony/zakon-o-verejnych-rejstricich-pravnickych-a-fyzickych-osob/f5078374/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CZ",
+   "legalForm": "s.r.o.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "společenská smlouva (u jednočlenné s.r.o. zakladatelská listina)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "zákon č. 304/2013 Sb., § 66 písm. a) — sbírka listin",
+     "url": "https://www.podnikatel.cz/zakony/zakon-o-verejnych-rejstricich-pravnickych-a-fyzickych-osob/f5078374/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CZ",
+   "legalForm": "a.s.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "výpis z obchodního rejstříku",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "zákon č. 304/2013 Sb., o veřejných rejstřících — official register; extract = výpis",
+     "url": "https://www.zakonyprolidi.cz/cs/2013-304"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CZ",
+   "legalForm": "s.r.o.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "výpis z obchodního rejstříku",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "zákon č. 304/2013 Sb., o veřejných rejstřících — official register run under this Act; extract = výpis",
+     "url": "https://www.zakonyprolidi.cz/cs/2013-304"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "DK",
+   "legalForm": "A/S",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Selskabsloven §55 stk.1 (notification threshold)",
+     "url": "https://danskelove.dk/selskabsloven/55"
+    },
+    {
+     "basis": "Selskabsloven §58 stk.1 og stk.3 (public Ejerregister)",
+     "url": "https://danskelove.dk/selskabsloven/58"
+    },
+    {
+     "basis": "Selskabsloven §51 (access to ejerbog)",
+     "url": "https://danskelove.dk/selskabsloven/51"
+    },
+    {
+     "basis": "Selskabsloven §52 stk.3 (bearer/centrally-registered shares)",
+     "url": "https://danskelove.dk/selskabsloven/52"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "DK",
+   "legalForm": "ApS",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Selskabsloven §55 stk.1 (notification threshold for legale ejere)",
+     "url": "https://danskelove.dk/selskabsloven/55"
+    },
+    {
+     "basis": "Selskabsloven §58 stk.1 and stk.3 (public Ejerregister content and publication)",
+     "url": "https://danskelove.dk/selskabsloven/58"
+    },
+    {
+     "basis": "Selskabsloven §50 stk.1 (company must create owner book)",
+     "url": "https://danskelove.dk/selskabsloven/50"
+    },
+    {
+     "basis": "Selskabsloven §51 (access to the ejerbog)",
+     "url": "https://danskelove.dk/selskabsloven/51"
+    },
+    {
+     "basis": "Erhvervsstyrelsen — Legale ejere, ejerbog og ihændehaverregisteret",
+     "url": "https://erhvervsstyrelsen.dk/vejledning-legale-ejere-ejerbog-og-ihaendehaverregisteret"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "DK",
+   "legalForm": "A/S",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Vedtægter (og stiftelsesdokument)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Erhvervsstyrelsen — Stiftelse af ApS og A/S",
+     "url": "https://erhvervsstyrelsen.dk/vejledning-stiftelse-af-aps-og-as"
+    },
+    {
+     "basis": "Erhvervsstyrelsen — Hent oplysninger fra CVR",
+     "url": "https://erhvervsstyrelsen.dk/hent-oplysninger-fra-cvr"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "DK",
+   "legalForm": "ApS",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Vedtægter (og stiftelsesdokument)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Erhvervsstyrelsen — Stiftelse af ApS og A/S",
+     "url": "https://erhvervsstyrelsen.dk/vejledning-stiftelse-af-aps-og-as"
+    },
+    {
+     "basis": "Erhvervsstyrelsen — Hent oplysninger fra CVR / Bestil dokumenter",
+     "url": "https://erhvervsstyrelsen.dk/hent-oplysninger-fra-cvr"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "DK",
+   "legalForm": "A/S",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Sammenskrevet resumé / selskabsrapport (CVR-udskrift)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Erhvervsstyrelsen — Hent oplysninger fra CVR",
+     "url": "https://erhvervsstyrelsen.dk/hent-oplysninger-fra-cvr"
+    },
+    {
+     "basis": "CVR / Virk — Bestil dokumenter",
+     "url": "https://datacvr.virk.dk/data/cvr-hj%C3%A6lp/f%C3%A5-hj%C3%A6lp-til-cvr/bestil-dokumenter"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "DK",
+   "legalForm": "ApS",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Sammenskrevet resumé / selskabsrapport (CVR-udskrift)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Erhvervsstyrelsen — Hent oplysninger fra CVR",
+     "url": "https://erhvervsstyrelsen.dk/hent-oplysninger-fra-cvr"
+    },
+    {
+     "basis": "CVR / Virk — Bestil dokumenter",
+     "url": "https://datacvr.virk.dk/data/cvr-hj%C3%A6lp/f%C3%A5-hj%C3%A6lp-til-cvr/bestil-dokumenter"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ES",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley de Sociedades de Capital, art. 116 — Libro-registro de acciones nominativas",
+     "url": "https://www.iberley.es/legislacion/articulo-116-ley-sociedades-capital"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ES",
+   "legalForm": "SL",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley de Sociedades de Capital (RDL 1/2010), art. 104 — Libro registro de socios",
+     "url": "https://www.iberley.es/legislacion/articulo-104-ley-sociedades-capital"
+    },
+    {
+     "basis": "Ley de Sociedades de Capital, art. 105 — access restricted to socios",
+     "url": "https://www.iberley.es/legislacion/articulo-105-ley-sociedades-capital"
+    },
+    {
+     "basis": "Ley de Sociedades de Capital, art. 106 — transfers by notarial deed, not registered at RM",
+     "url": "https://www.conceptosjuridicos.com/articulos/ley-sociedades-capital-articulo-106/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ES",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificación de estatutos sociales vigentes (o copia de la escritura de constitución)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Registro Mercantil — official product 'Certificación de estatutos sociales'",
+     "url": "https://sede.registradores.org/sede/sede-corpme-web/registro-mercantil/publicidad/certificaciones/"
+    },
+    {
+     "basis": "Ley de Sociedades de Capital, art. 20 — constitution by public deed registered at RM",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10544"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ES",
+   "legalForm": "SL",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificación de estatutos sociales vigentes (o copia de la escritura de constitución)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Registro Mercantil — official product 'Certificación de estatutos sociales'",
+     "url": "https://sede.registradores.org/sede/sede-corpme-web/registro-mercantil/publicidad/certificaciones/"
+    },
+    {
+     "basis": "Ley de Sociedades de Capital, arts. 20 & 22-23 — constitution requires public deed with estatutos, registered at RM",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10544"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ES",
+   "legalForm": "SA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "nota simple informativa / certificación del Registro Mercantil",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Registro Mercantil (Colegio de Registradores) — Publicidad Formal / Certificaciones",
+     "url": "https://sede.registradores.org/sede/sede-corpme-web/registro-mercantil/publicidad/certificaciones/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ES",
+   "legalForm": "SL",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "nota simple informativa / certificación del Registro Mercantil",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Registro Mercantil (Colegio de Registradores) — official Sede electrónica, Publicidad Formal / Certificaciones",
+     "url": "https://sede.registradores.org/sede/sede-corpme-web/registro-mercantil/publicidad/certificaciones/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Ay",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "yhtiömiehet (kaupparekisteriotteella)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Information contained in the Finnish Trade Register",
+     "url": "https://www.prh.fi/en/companiesandorganisations/rekisterointipalvelut/rekisterin_tietosisalto.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Ky",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "yhtiömiehet (kaupparekisteriotteella)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Information contained in the Finnish Trade Register",
+     "url": "https://www.prh.fi/en/companiesandorganisations/rekisterointipalvelut/rekisterin_tietosisalto.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Oy",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Osakeyhtiölaki 624/2006, 3 luku 15 §",
+     "url": "https://www.finlex.fi/fi/laki/ajantasa/2006/20060624"
+    },
+    {
+     "basis": "Osakeyhtiölaki 624/2006, 3 luku 17 §",
+     "url": "https://www.finlex.fi/fi/laki/ajantasa/2006/20060624"
+    },
+    {
+     "basis": "PRH official site — Order documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Oyj",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Osakeyhtiölaki 624/2006, 3 luku (osakasluettelo / arvo-osuusjärjestelmä)",
+     "url": "https://www.finlex.fi/fi/laki/ajantasa/2006/20060624"
+    },
+    {
+     "basis": "PRH official site — Information contained in the Finnish Trade Register",
+     "url": "https://www.prh.fi/en/companiesandorganisations/rekisterointipalvelut/rekisterin_tietosisalto.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Ay",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "yhtiösopimus",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Order documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents.html"
+    },
+    {
+     "basis": "PRH official site — Contents of the documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents/contents_of_the_documents.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Ky",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "yhtiösopimus",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Order documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents.html"
+    },
+    {
+     "basis": "PRH official site — Contents of the documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents/contents_of_the_documents.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Oy",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "yhtiöjärjestys",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Order documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents.html"
+    },
+    {
+     "basis": "Osakeyhtiölaki 624/2006, 2 luku 3 §",
+     "url": "https://www.finlex.fi/fi/laki/ajantasa/2006/20060624"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Oyj",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "yhtiöjärjestys",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Order documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents.html"
+    },
+    {
+     "basis": "Osakeyhtiölaki 624/2006, 2 luku 3 §",
+     "url": "https://www.finlex.fi/fi/laki/ajantasa/2006/20060624"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Ay",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "kaupparekisteriote",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Contents of the documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents/contents_of_the_documents.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Ky",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "kaupparekisteriote",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Contents of the documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents/contents_of_the_documents.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Oy",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "kaupparekisteriote",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Contents of the documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents/contents_of_the_documents.html"
+    },
+    {
+     "basis": "PRH official site — Trade Register extract",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/trade_register_extract.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FI",
+   "legalForm": "Oyj",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "kaupparekisteriote",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "PRH official site — Contents of the documents",
+     "url": "https://www.prh.fi/en/companiesandorganisations/tietopalvelut/order_documents/contents_of_the_documents.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Code de commerce, art. R228-9 (registre des mouvements de titres — kept by the company)",
+     "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F37373"
+    },
+    {
+     "basis": "Registre des bénéficiaires effectifs (RBE) — Code monétaire et financier, art. L561-46",
+     "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F36703"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SARL",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "statuts (à jour)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Code de commerce, art. L223-7, al. 4 (SARL)",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222923"
+    },
+    {
+     "basis": "INPI – Data INPI / dépôt d'actes (statuts filed and publicly consultable)",
+     "url": "https://www.inpi.fr/realiser-demarches/formalites-dentreprises/deposer-actes"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SAS",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Code de commerce, art. R228-9 (registre des mouvements de titres — kept by the company)",
+     "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F37373"
+    },
+    {
+     "basis": "Registre des bénéficiaires effectifs (RBE) — Code monétaire et financier, art. L561-46",
+     "url": "https://support.infogreffe.fr/hc/fr/articles/18359463779612"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SNC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "extrait Kbis + statuts",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Code de commerce, art. L221-13 (parts sociales — cession requires unanimous consent)",
+     "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042"
+    },
+    {
+     "basis": "Code de commerce, art. L221-14 (opposabilité of a parts transfer)",
+     "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "statuts",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Code de commerce, art. L210-2",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222349"
+    },
+    {
+     "basis": "INPI – Data INPI",
+     "url": "https://data.inpi.fr/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SARL",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "statuts",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Code de commerce, art. L210-2",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222349"
+    },
+    {
+     "basis": "INPI – Data INPI (public consultation of acts and statuts since 1993)",
+     "url": "https://data.inpi.fr/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SAS",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "statuts",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Code de commerce, art. L210-2",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222349"
+    },
+    {
+     "basis": "INPI – Data INPI",
+     "url": "https://data.inpi.fr/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SNC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "statuts",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Code de commerce, art. L210-2",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222349"
+    },
+    {
+     "basis": "INPI – Data INPI",
+     "url": "https://data.inpi.fr/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "extrait Kbis",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Infogreffe – official document 'Extrait Kbis'",
+     "url": "https://www.infogreffe.fr/documents-officiels/extrait-kbis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SARL",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "extrait Kbis",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Infogreffe – official document 'Extrait Kbis'",
+     "url": "https://www.infogreffe.fr/documents-officiels/extrait-kbis"
+    },
+    {
+     "basis": "Service-Public – Comment obtenir un extrait K ou Kbis (F21000)",
+     "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F21000"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SAS",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "extrait Kbis",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Infogreffe – official document 'Extrait Kbis'",
+     "url": "https://www.infogreffe.fr/documents-officiels/extrait-kbis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "FR",
+   "legalForm": "SNC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "extrait Kbis",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Infogreffe – official document 'Extrait Kbis'",
+     "url": "https://www.infogreffe.fr/documents-officiels/extrait-kbis"
+    },
+    {
+     "basis": "Code de commerce, art. L221-1 (SNC — associés indéfiniment et solidairement responsables)",
+     "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "LLP",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies House CS01 form",
+     "url": "https://assets.publishing.service.gov.uk/media/696f5f197e827090d02d4207/CS01_v7.0-FINAL-AIP-part-4.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "Ltd",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2006, s.853F(4)",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/853F"
+    },
+    {
+     "basis": "Companies House Form CS01, Part 4, v7.0 (02/2026)",
+     "url": "https://assets.publishing.service.gov.uk/media/696f5f197e827090d02d4207/CS01_v7.0-FINAL-AIP-part-4.pdf"
+    },
+    {
+     "basis": "Companies Act 2006, old s.856A(4) (repealed)",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/856A/2015-06-30"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "PLC (non-traded)",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2006, s.853F",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/853F"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "PLC (traded)",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2006, s.853G",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/853G"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GG",
+   "legalForm": "Company limited by shares",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Appleby, Guide to Companies in Guernsey — register of members",
+     "url": "https://www.applebyglobal.com/publications/companies-in-guernsey-guide/"
+    },
+    {
+     "basis": "Mourant, A guide to Guernsey's Companies Law — annual validation",
+     "url": "https://www.mourant.com/guides/a-guide-to-guernseys-companies-law/"
+    },
+    {
+     "basis": "Appleby / Guernsey Registry — beneficial ownership register",
+     "url": "https://www.applebyglobal.com/publications/companies-in-guernsey-guide/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GG",
+   "legalForm": "Company limited by shares",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Guernsey Registry / Companies (Guernsey) Law 2008 — filing of memorandum and articles",
+     "url": "https://www.guernseyregistry.com/article/155116/Limited-Company-Legislation--Regulations"
+    },
+    {
+     "basis": "Appleby, Guide to Companies in Guernsey — public information at the Registry",
+     "url": "https://www.applebyglobal.com/publications/companies-in-guernsey-guide/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GG",
+   "legalForm": "Company limited by shares",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Statement of the Register",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Official Guernsey Registry — description of the Statement of the Register product",
+     "url": "https://www.guernseyregistry.com/CHttpHandler.ashx?id=1903&p=0"
+    },
+    {
+     "basis": "Appleby, Guide to Companies in Guernsey (Companies (Guernsey) Law 2008)",
+     "url": "https://www.applebyglobal.com/publications/companies-in-guernsey-guide/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IE",
+   "legalForm": "LTD/DAC/ULC (share capital)",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered_with_warning",
+   "orderable": true,
+   "completeness": "snapshot",
+   "flags": [
+    "snapshot"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Form B1 — List of past and present members",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2014, s.343(4) + Companies Act 2014 (Forms) Regulations, S.I. 627/2020 reg 4, Part 2 of Schedule (in force 16.12.2020)",
+     "url": "https://www.irishstatutebook.ie/eli/2020/si/627/made/en/print"
+    },
+    {
+     "basis": "Companies Act 1963, Fifth Schedule Part II Note (1) — REPEALED",
+     "url": "https://www.irishstatutebook.ie/eli/1963/act/33/enacted/en/print"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IM",
+   "legalForm": "1931 Act company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "annual return",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 1931 (IoM) s107(1)",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/1931/1931-0002/1931-0002_11.pdf"
+    },
+    {
+     "basis": "Companies Act 1931 (IoM) s109(1)",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/1931/1931-0002/1931-0002_11.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IM",
+   "legalForm": "2006 Act company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2006 (IoM) s62(1)",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf"
+    },
+    {
+     "basis": "Companies Act 2006 (IoM) s78(1)",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf"
+    },
+    {
+     "basis": "Companies Act 2006 (IoM) s85(1)",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf"
+    },
+    {
+     "basis": "Companies Act 2006 (IoM) s203(1)",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IM",
+   "legalForm": "1931 Act company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "memorandum and articles of association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IoM Companies Registry - 1931 Act Companies (official gov.im)",
+     "url": "https://www.gov.im/categories/business-and-industries/companies-registry/registries/1931-act-companies/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IM",
+   "legalForm": "2006 Act company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "memorandum (and articles if filed)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2006 (IoM) s2(1)",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IM",
+   "legalForm": "1931 Act company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "company search / register extract",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IoM Companies Registry (official gov.im portal)",
+     "url": "https://www.gov.im/categories/business-and-industries/companies-registry/registries/1931-act-companies/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IM",
+   "legalForm": "2006 Act company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "company search / register extract",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IoM Companies Registry (official gov.im portal)",
+     "url": "https://www.gov.im/categories/business-and-industries/companies-registry/registries/2006-act-companies/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Sas",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria (soci accomandatari e accomandanti)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2317 + art. 2295/2296 (richiamati) — soci indicati nell'atto costitutivo iscritto nel registro delle imprese",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Snc",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria (sezione soci)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2295 (contenuto dell'atto costitutivo, incl. i soci) e art. 2296 (deposito/iscrizione nel registro delle imprese)",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "SpA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order_with_warning",
+   "orderable": true,
+   "completeness": "snapshot",
+   "flags": [
+    "snapshot"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "elenco dei soci (deposito ex art. 2435, comma 2, c.c.)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2421, comma 1, n.1 — the libro dei soci is a mandatory SpA book kept internally (private, not filed)",
+     "url": "https://www.brocardi.it/codice-civile/libro-quinto/titolo-v/capo-v/sezione-viii/art2421.html"
+    },
+    {
+     "basis": "Codice civile art. 2435, comma 2 — annual deposit of the elenco dei soci for non-listed companies",
+     "url": "https://www.brocardi.it/codice-civile/libro-quinto/titolo-v/capo-v/sezione-ix/art2435.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Srl",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria (sezione soci / compagine sociale)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "L. 2/2009 art. 16, comma 12-septies — soppressione del libro soci per le Srl",
+     "url": "https://www.pi.camcom.it/camera/862/SRL-abolizione-libro-soci-e-nuovi-adempimenti.html"
+    },
+    {
+     "basis": "Codice civile art. 2470, comma 1",
+     "url": "https://www.brocardi.it/codice-civile/libro-quinto/titolo-v/capo-vii/sezione-ii/art2470.html"
+    },
+    {
+     "basis": "Codice civile art. 2478 — libri sociali obbligatori Srl; n.1 (libro soci) abrogato da D.L. 185/2008",
+     "url": "https://www.brocardi.it/codice-civile/libro-quinto/titolo-v/capo-vii/sezione-iii/art2478.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Srls",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria (sezione soci / compagine sociale)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2463-bis — Srls governed by the Srl rules save specific derogations; libro soci abolished for all Srl by L. 2/2009 art. 16 c. 12-septies",
+     "url": "https://www.pi.camcom.it/camera/862/SRL-abolizione-libro-soci-e-nuovi-adempimenti.html"
+    },
+    {
+     "basis": "Codice civile art. 2470, comma 1 (transfer effective on deposit in registro imprese)",
+     "url": "https://www.brocardi.it/codice-civile/libro-quinto/titolo-v/capo-vii/sezione-ii/art2470.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Sas",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "atto costitutivo / patti sociali",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2317 e art. 2296 — deposito dell'atto costitutivo per l'iscrizione nel registro delle imprese",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Snc",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "atto costitutivo / patti sociali",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2296 — deposito dell'atto costitutivo per l'iscrizione nel registro delle imprese",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "SpA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "atto costitutivo / statuto",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2330 — deposit of the atto costitutivo of an SpA at the ufficio del registro delle imprese; atto and statuto archived and retrievable",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Srl",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "atto costitutivo / statuto",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2463 (costituzione Srl) with deposit of the atto costitutivo at the registro delle imprese; the atto/statuto are archived and retrievable via the Registro Imprese document service",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Srls",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "atto costitutivo (modello standard tipizzato)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2463-bis — atto costitutivo redatto secondo modello standard tipizzato, depositato presso il registro delle imprese",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Sas",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2317 (rinvia alle norme sulla Snc, incl. iscrizione ex art. 2296)",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Snc",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2296 — iscrizione della società in nome collettivo nel registro delle imprese",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "SpA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2188 + InfoCamere/Registro Imprese public visura service",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Srl",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2188 (istituzione del registro delle imprese) and the InfoCamere/Registro Imprese public visura service",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IT",
+   "legalForm": "Srls",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "visura camerale ordinaria",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Codice civile art. 2463-bis (Srl semplificata), registered in the Registro delle Imprese like any Srl",
+     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "JE",
+   "legalForm": "Private company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order_with_warning",
+   "orderable": true,
+   "completeness": "threshold",
+   "flags": [
+    "nominee",
+    "threshold"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "annual return / annual confirmation statement (Art. 71); register of members (Art. 41/45)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies (Jersey) Law 1991, Art. 45(1) (register of members inspection)",
+     "url": "https://incorporations.io/companies-act/jersey"
+    },
+    {
+     "basis": "Companies (Jersey) Law 1991, Art. 71 (annual return) — content summarised from statute",
+     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
+    },
+    {
+     "basis": "SystemDay — Jersey company documents (data provider description of the public search report)",
+     "url": "https://www.systemday.com/jersey-company-documents/"
+    },
+    {
+     "basis": "Topograph — Business Registers in Jersey",
+     "url": "https://www.topograph.co/guides/business-registers-in-jersey"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "JE",
+   "legalForm": "Public company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order_with_warning",
+   "orderable": true,
+   "completeness": "threshold",
+   "flags": [
+    "nominee",
+    "threshold"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "annual return / annual confirmation statement (Art. 71); register of members (Art. 41/45)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies (Jersey) Law 1991, Art. 45(1) (register of members inspection)",
+     "url": "https://incorporations.io/companies-act/jersey"
+    },
+    {
+     "basis": "Topograph — Business Registers in Jersey (annual return content)",
+     "url": "https://www.topograph.co/guides/business-registers-in-jersey"
+    },
+    {
+     "basis": "SystemDay — Jersey company documents",
+     "url": "https://www.systemday.com/jersey-company-documents/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "JE",
+   "legalForm": "Private company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "memorandum and articles of association",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "JFSC Registry — About companies (filing requirement)",
+     "url": "https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/"
+    },
+    {
+     "basis": "Companies (Jersey) Law 1991, Art. 10(1) (effect of memorandum and articles)",
+     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
+    },
+    {
+     "basis": "Topograph — Business Registers in Jersey (retrievability/pricing)",
+     "url": "https://www.topograph.co/guides/business-registers-in-jersey"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "JE",
+   "legalForm": "Public company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "memorandum and articles of association",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "JFSC Registry — About companies (filing requirement)",
+     "url": "https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/"
+    },
+    {
+     "basis": "Companies (Jersey) Law 1991, Art. 10(1)",
+     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
+    },
+    {
+     "basis": "Topograph — Business Registers in Jersey (retrievability/pricing)",
+     "url": "https://www.topograph.co/guides/business-registers-in-jersey"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "JE",
+   "legalForm": "Private company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "JFSC registry search extract / entity search report",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "JFSC Registry — About companies (official registry)",
+     "url": "https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/"
+    },
+    {
+     "basis": "Topograph — Business Registers in Jersey (JFSC portal description)",
+     "url": "https://www.topograph.co/guides/business-registers-in-jersey"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "JE",
+   "legalForm": "Public company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "JFSC registry search extract / entity search report",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "JFSC Registry — About companies (official registry)",
+     "url": "https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/"
+    },
+    {
+     "basis": "Companies (Jersey) Law 1991, Art. 4(1)(b) (memorandum states company type)",
+     "url": "https://incorporations.io/companies-act/jersey"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "AG",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Aktiengesellschaft, Art. 328 Abs. 2 PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf"
+    },
+    {
+     "basis": "Merkblatt zur Aktiengesellschaft, Art. 326a/326c PGR (Inhaberaktien)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "Anstalt",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Anstalt (organisation)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
+    },
+    {
+     "basis": "Merkblatt zur Anstalt, Art. 536 Abs. 2 PGR (Begünstigte)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "GmbH",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Handelsregisterauszug",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur GmbH, Art. 394 Abs. 1 PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf"
+    },
+    {
+     "basis": "Merkblatt zur GmbH, Art. 402 Abs. 1 PGR (Anteilbuch)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "Stiftung",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Stiftung, Art. 552 §16 Abs. 1 Ziff. 4 PGR (Begünstigte)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "AG",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Statuten",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Aktiengesellschaft, Art. 279 PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf"
+    },
+    {
+     "basis": "Art. 953 PGR (Einsicht in den Handelsregisterakt) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'",
+     "url": "https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "Anstalt",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Statuten",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Anstalt, Art. 536 Abs. 2 PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
+    },
+    {
+     "basis": "Art. 953 PGR public-access regime — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'",
+     "url": "https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "GmbH",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Statuten (Gesellschaftsvertrag)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur GmbH, Art. 390 Abs. 2 PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf"
+    },
+    {
+     "basis": "Art. 953 PGR (Öffentlichkeit / Einsicht in den Handelsregisterakt) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'",
+     "url": "https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "Stiftung",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Stiftung, Art. 552 §16 Abs. 1 PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
+    },
+    {
+     "basis": "Restricted register publicity for Stiftungen/Treuhänderschaften (Art. 953 PGR carve-out) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'",
+     "url": "https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "AG",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Handelsregisterauszug",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Aktiengesellschaft (Amt für Justiz, AJU/h70.004.07, 07/2025), Art. 261 ff. PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "Anstalt",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Handelsregisterauszug",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Anstalt (Amt für Justiz, AJU/h70.005.09, 06/2025), Art. 534 ff. PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "GmbH",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Handelsregisterauszug",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur GmbH (Amt für Justiz, AJU/h70.007.09, 07/2025), Art. 389 f. PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LI",
+   "legalForm": "Stiftung",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Handelsregisterauszug",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Merkblatt zur Stiftung (Amt für Justiz, AJU/h70.008.10), Art. 552 §14 PGR",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
+    },
+    {
+     "basis": "Merkblatt zur Stiftung, Art. 552 §20 Abs. 1 PGR (Hinterlegung)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LU",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Guichet.lu — société anonyme",
+     "url": "https://guichet.public.lu/fr/entreprises/creation-developpement/forme-juridique/societe-capitaux/societe-anonyme.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LU",
+   "legalForm": "SARL",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "extrait RCS (field: Associé(s))",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Loi du 19 décembre 2002 (RCS)",
+     "url": "https://lbr.lu/mjrcs/jsp/webapp/static/mjrcs/fr/mjrcs/pdf/RCS_LOI_19_12_2002_2023.pdf"
+    },
+    {
+     "basis": "Cession de parts — RCS/RESA publication",
+     "url": "https://kolmio.lu/fr/actualites/entree-d-un-nouvel-associeactionnaire-quelles-sont-les-demarches"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MT",
+   "legalForm": "Ltd",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order_with_warning",
+   "orderable": true,
+   "completeness": "snapshot",
+   "flags": [
+    "snapshot"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "annual return (Seventh Schedule, Part 3 — List of Past and Present Members)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Cap. 386), art. 184(1)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), Seventh Schedule, Part 3 (Article 184)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 424 (public access)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "EU e-Justice Portal (official) — documents obtainable from MBR",
+     "url": "https://e-justice.europa.eu/topics/registers-business-insolvency-land/business-registers-eu-countries/mt_en"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MT",
+   "legalForm": "plc",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order_with_warning",
+   "orderable": true,
+   "completeness": "snapshot",
+   "flags": [
+    "nominee",
+    "snapshot"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "annual return (Seventh Schedule, Part 3 — List of Past and Present Members)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Cap. 386), art. 184(1)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 84(8) — scope of exemption (only SICAVs excused)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 424 (public access)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MT",
+   "legalForm": "Ltd",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "memorandum and articles of association",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Cap. 386), art. 69(1)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 75(1)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 76(1)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MT",
+   "legalForm": "plc",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "memorandum and articles of association",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Cap. 386), art. 69(1)(a) and 69(2)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 76(1)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 424 (public access)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MT",
+   "legalForm": "Ltd",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Company extract / Certificate of registration (MBR)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Cap. 386), art. 424",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 77(2)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "EU e-Justice Portal (official) — Malta business register",
+     "url": "https://e-justice.europa.eu/topics/registers-business-insolvency-land/business-registers-eu-countries/mt_en"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MT",
+   "legalForm": "plc",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Company extract / Certificate of registration (MBR)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Cap. 386), art. 424",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    },
+    {
+     "basis": "Companies Act (Cap. 386), art. 77(2)",
+     "url": "https://www.dataguidance.com/sites/default/files/document_4.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NL",
+   "legalForm": "BV",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "art. 22 lid 1 sub e Handelsregisterbesluit 2008",
+     "url": "https://wetten.overheid.nl/BWBR0024067/"
+    },
+    {
+     "basis": "KVK — uittreksel",
+     "url": "https://www.kvk.nl/over-het-handelsregister/check-via-uittreksel/"
+    },
+    {
+     "basis": "art. 2:85 BW — aandeelhoudersregister",
+     "url": "https://www.kvk.nl/wetten-en-regels/het-belang-van-het-aandeelhoudersregister/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "ANS",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "deltakere i firmaattest / registerutskrift",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Forskrift om registrering av foretak §13 (firmaattestens innhold), Lovdata",
+     "url": "https://lovdata.no/forskrift/1987-12-18-984/%C2%A713"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "AS",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – The shareholder register",
+     "url": "https://www.brreg.no/en/limited-company/the-shareholder-register/"
+    },
+    {
+     "basis": "Aksjeloven §4-5 / §4-6 (Lovdata)",
+     "url": "https://lovdata.no/lov/1997-06-13-44/%C2%A74-5"
+    },
+    {
+     "basis": "Skatteetaten – Aksjonærregisteret (deling)",
+     "url": "https://www.skatteetaten.no/en/deling/aksjonarregisteret/"
+    },
+    {
+     "basis": "Skatteetaten – Aksjonærregisteret (deling)",
+     "url": "https://www.skatteetaten.no/en/deling/aksjonarregisteret/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "ASA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Allmennaksjeloven §4-4 / §4-5 (Lovdata)",
+     "url": "https://lovdata.no/dokument/NL/lov/1997-06-13-45/KAPITTEL_4"
+    },
+    {
+     "basis": "Brønnøysundregistrene – The shareholder register",
+     "url": "https://www.brreg.no/en/limited-company/the-shareholder-register/"
+    },
+    {
+     "basis": "Skatteetaten – Aksjonærregisteret (deling)",
+     "url": "https://www.skatteetaten.no/en/deling/aksjonarregisteret/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "DA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "deltakere i firmaattest / registerutskrift",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Forskrift om registrering av foretak §13 (firmaattestens innhold), Lovdata",
+     "url": "https://lovdata.no/forskrift/1987-12-18-984/%C2%A713"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "ANS",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "selskapsavtale",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – Information about our products (copies of case documents)",
+     "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "AS",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "vedtekter / stiftelsesdokument",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – Information about our products (copies of case documents)",
+     "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    },
+    {
+     "basis": "Brønnøysundregistrene – Attachment requirements for limited companies",
+     "url": "https://www.brreg.no/en/limited-company/establish-a-limited-company/attachment-requirements-for-limited-companies/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "ASA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "vedtekter / stiftelsesdokument",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – Information about our products (copies of case documents)",
+     "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "DA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "selskapsavtale",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – Information about our products (copies of case documents)",
+     "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "ANS",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "firmaattest / registerutskrift (Foretaksregisteret)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – Information about our products",
+     "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "AS",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "firmaattest / registerutskrift (Foretaksregisteret)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – Information about our products",
+     "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "ASA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "firmaattest / registerutskrift (Foretaksregisteret)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – Information about our products",
+     "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "NO",
+   "legalForm": "DA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "firmaattest / registerutskrift (Foretaksregisteret)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Brønnøysundregistrene – Information about our products",
+     "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "P.S.A.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Kodeks spółek handlowych, art. 300(31) (podmioty prowadzące rejestr akcjonariuszy PSA)",
+     "url": "https://lexlege.pl/ksh/art-300-31/"
+    },
+    {
+     "basis": "Ustawa o KRS, art. 38 (PSA — sole shareholder note only)",
+     "url": "https://lexlege.pl/krs/art-38/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "S.A.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Kodeks spółek handlowych, art. 328(5) §1 (jawność rejestru akcjonariuszy)",
+     "url": "https://lexlege.pl/ksh/art-328-5/"
+    },
+    {
+     "basis": "Ustawa o KRS, art. 38 (sole shareholder note only)",
+     "url": "https://lexlege.pl/krs/art-38/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "partnerships (sp. j./sp. k./sp. p./S.K.A.)",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "odpis z KRS (wspólnicy / komplementariusze / komandytariusze wpisani w rejestrze)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o KRS, art. 38 (dane o wspólnikach spółek osobowych)",
+     "url": "https://lexlege.pl/krs/art-38/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "sp. z o.o.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "lista wspólników (w aktach rejestrowych) — odpis z KRS pokazuje wyłącznie wspólników >=10% oraz jedynego wspólnika",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o KRS, art. 38 pkt 8 lit. c (dane o wspólnikach sp. z o.o.)",
+     "url": "https://lexlege.pl/krs/art-38/"
+    },
+    {
+     "basis": "Ustawa o KRS, art. 38 (sole shareholder)",
+     "url": "https://lexlege.pl/krs/art-38/"
+    },
+    {
+     "basis": "Kodeks spółek handlowych, art. 188 §3 (lista wspólników składana sądowi rejestrowemu)",
+     "url": "https://lexlege.pl/ksh/art-188/"
+    },
+    {
+     "basis": "Ustawa o KRS, art. 10 (jawność / udostępnianie akt rejestrowych)",
+     "url": "https://arslege.pl/udostepnianie-akt-rejestrowych/k21/a11565/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "P.S.A.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "umowa spółki (w aktach rejestrowych KRS)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o KRS, art. 10 (udostępnianie akt rejestrowych)",
+     "url": "https://arslege.pl/udostepnianie-akt-rejestrowych/k21/a11565/"
+    },
+    {
+     "basis": "Repozytorium Akt Rejestrowych (RAR) / Portal Rejestrów Sądowych",
+     "url": "https://prs.ms.gov.pl/krs"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "S.A.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "statut spółki (w aktach rejestrowych KRS)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o KRS, art. 10 (udostępnianie akt rejestrowych)",
+     "url": "https://arslege.pl/udostepnianie-akt-rejestrowych/k21/a11565/"
+    },
+    {
+     "basis": "Repozytorium Akt Rejestrowych (RAR) / Portal Rejestrów Sądowych",
+     "url": "https://prs.ms.gov.pl/krs"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "partnerships (sp. j./sp. k./sp. p./S.K.A.)",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "umowa spółki / statut (w aktach rejestrowych KRS)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o KRS, art. 10 (udostępnianie akt rejestrowych)",
+     "url": "https://arslege.pl/udostepnianie-akt-rejestrowych/k21/a11565/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "sp. z o.o.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "umowa spółki (w aktach rejestrowych KRS)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o KRS, art. 10 (udostępnianie akt rejestrowych)",
+     "url": "https://arslege.pl/udostepnianie-akt-rejestrowych/k21/a11565/"
+    },
+    {
+     "basis": "Repozytorium Akt Rejestrowych (RAR) / Portal Rejestrów Sądowych",
+     "url": "https://prs.ms.gov.pl/krs"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "P.S.A.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "odpis z KRS (aktualny / pełny)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o Krajowym Rejestrze Sądowym, art. 38",
+     "url": "https://lexlege.pl/krs/art-38/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "S.A.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "odpis z KRS (aktualny / pełny)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o Krajowym Rejestrze Sądowym, art. 38",
+     "url": "https://lexlege.pl/krs/art-38/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "partnerships (sp. j./sp. k./sp. p./S.K.A.)",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "odpis z KRS (aktualny / pełny)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o KRS, art. 38",
+     "url": "https://lexlege.pl/krs/art-38/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PL",
+   "legalForm": "sp. z o.o.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "odpis z KRS (aktualny / pełny)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ustawa o Krajowym Rejestrze Sądowym, art. 38 (zakres danych w dziale 1 rejestru przedsiębiorców)",
+     "url": "https://lexlege.pl/krs/art-38/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "Lda",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "certidão permanente do registo comercial",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código das Sociedades Comerciais, art. 199.º al. a)",
+     "url": "https://informador.pt/legislacao/lexit/codigos/direito-comercial/codigo-das-sociedades-comerciais/titulo-iii-sociedades-por-quotas/capitulo-i-caracteristicas-e-contrato-2/artigo-199-o-conteudo-do-contrato/"
+    },
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. c)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    },
+    {
+     "basis": "Código das Sociedades Comerciais, art. 9.º n.º 1 al. g)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=524&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. c)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "Unipessoal Lda",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "certidão permanente do registo comercial",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código das Sociedades Comerciais, art. 199.º al. a)",
+     "url": "https://informador.pt/legislacao/lexit/codigos/direito-comercial/codigo-das-sociedades-comerciais/titulo-iii-sociedades-por-quotas/capitulo-i-caracteristicas-e-contrato-2/artigo-199-o-conteudo-do-contrato/"
+    },
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. c)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "Lda",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "pacto social / estatutos atualizados (certidão permanente, variante de estatutos)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IRN / gov.pt — Pedir a certidão permanente do registo comercial",
+     "url": "https://www2.gov.pt/pt/servicos/pedir-a-certidao-permanente-do-registo-comercial"
+    },
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. a)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "pacto social / estatutos atualizados (certidão permanente, variante de estatutos)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IRN / gov.pt — Pedir a certidão permanente do registo comercial",
+     "url": "https://www2.gov.pt/pt/servicos/pedir-a-certidao-permanente-do-registo-comercial"
+    },
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. a)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "Unipessoal Lda",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "pacto social / estatutos atualizados (certidão permanente, variante de estatutos)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IRN / gov.pt — Pedir a certidão permanente do registo comercial",
+     "url": "https://www2.gov.pt/pt/servicos/pedir-a-certidao-permanente-do-registo-comercial"
+    },
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. a)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "Lda",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "certidão permanente do registo comercial",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IRN / gov.pt — Pedir a certidão permanente do registo comercial",
+     "url": "https://www2.gov.pt/pt/servicos/pedir-a-certidao-permanente-do-registo-comercial"
+    },
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. a)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "SA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "certidão permanente do registo comercial",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IRN / gov.pt — Pedir a certidão permanente do registo comercial",
+     "url": "https://www2.gov.pt/pt/servicos/pedir-a-certidao-permanente-do-registo-comercial"
+    },
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. a)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PT",
+   "legalForm": "Unipessoal Lda",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "certidão permanente do registo comercial",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IRN / gov.pt — Pedir a certidão permanente do registo comercial",
+     "url": "https://www2.gov.pt/pt/servicos/pedir-a-certidao-permanente-do-registo-comercial"
+    },
+    {
+     "basis": "Código do Registo Comercial, art. 3.º n.º 1 al. a)",
+     "url": "https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "AB",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Aktiebolagslagen (2005:551) 5 kap. 10 § (bolag som inte är avstämningsbolag)",
+     "url": "https://aktiebolagslagen.nu/05-aktiebok"
+    },
+    {
+     "basis": "Bolagsverket / statute — no shareholder document filed with or issued by the registry",
+     "url": "https://lagen.nu/2005:551"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "AB_PUBL",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Aktiebolagslagen (2005:551) 5 kap. 19 § (avstämningsbolag)",
+     "url": "https://aktiebolagslagen.nu/05-aktiebok"
+    },
+    {
+     "basis": "Aktiebolagslagen (2005:551) 5 kap. 10 § (publikt AB that is not an avstämningsbolag)",
+     "url": "https://aktiebolagslagen.nu/05-aktiebok"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "HB",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "bolagsmän (registreringsbevis / handelsregistret)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Bolagsmän i handelsbolag' and 'Ändra bolagsmän i handelsbolag'",
+     "url": "https://bolagsverket.se/foretag/handelsbolag/drivahandelsbolag/andrabolagsmanihandelsbolag.879.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "KB",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "bolagsmän (komplementär/kommanditdelägare, registreringsbevis)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Bolagsmän i kommanditbolag'",
+     "url": "https://bolagsverket.se/en/foretag/kommanditbolag/startakommanditbolag/bolagsmanikommanditbolag.917.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "AB",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "bolagsordning",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Bolagsordning för aktiebolag' + 'Allmänna handlingar'",
+     "url": "https://bolagsverket.se/sokforetagsinformation/kopioravhandlingar.2003.html"
+    },
+    {
+     "basis": "Bolagsverket, 'Bolagsordning för aktiebolag'",
+     "url": "https://bolagsverket.se/en/foretag/aktiebolag/startaaktiebolag/bolagsordningforaktiebolag.483.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "AB_PUBL",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "bolagsordning",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Allmänna handlingar' + 'Bolagsordning för aktiebolag'",
+     "url": "https://bolagsverket.se/sokforetagsinformation/kopioravhandlingar.2003.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "HB",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Bolagsmän i handelsbolag' / partnership-formation guidance",
+     "url": "https://bolagsverket.se/en/foretag/handelsbolag/startahandelsbolag/bolagsmanihandelsbolag.865.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "KB",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Bolagsmän i kommanditbolag' / partnership-formation guidance",
+     "url": "https://bolagsverket.se/en/foretag/kommanditbolag/startakommanditbolag/bolagsmanikommanditbolag.917.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "AB",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "registreringsbevis",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, official page 'Registreringsbevis på svenska och engelska'",
+     "url": "https://bolagsverket.se/sokforetagsinformation/registreringsbevis.5660.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "AB_PUBL",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "registreringsbevis",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Registreringsbevis på svenska och engelska'",
+     "url": "https://bolagsverket.se/sokforetagsinformation/registreringsbevis.5660.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "HB",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "registreringsbevis",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Bolagsmän i handelsbolag' / 'Set up a trading partnership'",
+     "url": "https://bolagsverket.se/en/foretag/handelsbolag/startahandelsbolag/bolagsmanihandelsbolag.865.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SE",
+   "legalForm": "KB",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "registreringsbevis",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Bolagsverket, 'Bolagsmän i kommanditbolag' / 'Set up a limited partnership'",
+     "url": "https://bolagsverket.se/en/foretag/kommanditbolag/startakommanditbolag/bolagsmanikommanditbolag.917.html"
+    }
+   ]
+  }
+ ]
+}

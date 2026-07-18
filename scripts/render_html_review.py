@@ -31,7 +31,23 @@ KIND_LABEL = {
 
 def main():
     rows = json.load(open(SRC, encoding="utf-8"))
-    data = html.escape(json.dumps(rows, ensure_ascii=False))
+    # Merge the routing decision (the ACTIONABLE answer) onto each evidence row so the page
+    # is answer-first: the decision leads, the citations sit underneath as the "why".
+    routing = os.path.join(ROOT, "curation", "document_kinds_routing.json")
+    if os.path.exists(routing):
+        rt = {(x["jurisdiction"], x["legalForm"], x["kind"]): x
+              for x in json.load(open(routing, encoding="utf-8"))["routes"]}
+        for r in rows:
+            d = rt.get((r["jurisdiction"], r["legalForm"], r["kind"]))
+            if d:
+                r["_answer"] = {k: d[k] for k in ("availability", "action", "completeness",
+                                                  "vendor", "fallback", "flags", "order")}
+    # Embed as raw JSON in a <script type="application/json"> block. Do NOT HTML-escape:
+    # browsers don't decode entities inside <script>, so &quot; would break JSON.parse.
+    # Only neutralize < and > (present in values like ">=5%", "<dd/mm/yyyy>") as \u
+    # escapes — valid inside JSON strings and prevents any "</script>" breakout.
+    data = (json.dumps(rows, ensure_ascii=False)
+            .replace("<", "\\u003c").replace(">", "\\u003e"))
     jurisdictions = sorted({r["jurisdiction"] for r in rows})
     n_juris = len(jurisdictions)
     ev = [e for r in rows for e in r.get("evidence", [])]
@@ -80,6 +96,8 @@ TEMPLATE = r"""<!doctype html>
  .kind { font-weight:600; }
  .form { color:var(--muted); font-size:13px; }
  .badge { font-size:12px; font-weight:600; padding:2px 9px; border-radius:20px; }
+ .answer { margin:6px 0 2px; display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+ .abits { font-size:12px; color:var(--muted); }
  .doc { font-size:13px; margin-top:5px; }
  .doc b { font-weight:600; }
  .summary { margin:7px 0 0; font-size:14px; }
@@ -110,10 +128,10 @@ TEMPLATE = r"""<!doctype html>
 <header>
  <div class="wrap" style="padding-bottom:0">
   <h1>Document kinds — what each registry actually evidences</h1>
-  <div class="sub">Per jurisdiction &amp; legal form: which document proves the Registerauszug,
-   the Gesellschafterliste, the Gesellschaftsvertrag. <b>A document is the proof</b> — parsed
-   data is not credited. Germany out of scope. __NROWS__ rows · __NJURIS__ jurisdictions ·
-   __NEV__ cited sources (__PCTQUOTE__% verbatim-quoted).</div>
+  <div class="sub">Per jurisdiction &amp; legal form: the <b>actionable answer</b> (what to do to
+   get each document kind) with the cited evidence beneath it. <b>A document is the proof</b> —
+   parsed data is not credited. Vendor-neutral. Germany out of scope. __NROWS__ rows ·
+   __NJURIS__ jurisdictions · __NEV__ cited sources (__PCTQUOTE__% verbatim-quoted).</div>
  </div>
 </header>
 <div class="wrap">
@@ -126,16 +144,18 @@ TEMPLATE = r"""<!doctype html>
    <option value="GESELLSCHAFTSVERTRAG">Gesellschaftsvertrag</option>
   </select>
   <select id="fs">
-   <option value="">All statuses</option>
-   <option value="proved_by_base_document">Base document</option>
-   <option value="proved_by_additional_document">Additional document</option>
-   <option value="not_provable_from_registry">Not provable</option>
+   <option value="">All answers</option>
+   <option value="use_delivered">Use delivered (base)</option>
+   <option value="order">Order (additional)</option>
+   <option value="manual">Manual / fallback</option>
+   <option value="unavailable">Unavailable</option>
   </select>
   <input id="q" placeholder="Search text, statute, document…">
   <span class="count" id="count"></span>
  </div>
  <div id="list"></div>
 </div>
+<script type="application/json" id="data">__DATA__</script>
 <script>
 const ROWS = JSON.parse(document.getElementById('data').textContent);
 const STATUS = {
@@ -155,6 +175,24 @@ function evHTML(e){
  let u = e.url?`<span class="n"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url)}</a> · ${esc(e.retrieved||'')}</span>`:'';
  return `<blockquote><span class="basis">${esc(e.basis||'')}</span>${q}${n}${u}</blockquote>`;
 }
+const ACTION = {
+ use_delivered:['✔ Use delivered document','#137333','#e6f4ea'],
+ use_delivered_with_warning:['✔ Use delivered — check completeness','#b06000','#fef7e0'],
+ order:['＋ Order (additional)','#1a56c4','#e8f0fe'],
+ order_with_warning:['＋ Order — check completeness','#b06000','#fef7e0'],
+ manual:['✋ No registry doc — use fallback','#a50e0e','#fce8e6'],
+ unavailable:['✖ Not available here','#5f6368','#f1f3f4']};
+const answerHTML = a => {
+ if(!a) return '';
+ const [lab,fg,bg] = ACTION[a.action]||['?','#000','#eee'];
+ const bits = [];
+ if(a.completeness && a.completeness!=='full') bits.push(`completeness: <b>${esc(a.completeness)}</b>`);
+ (a.flags||[]).filter(f=>f==='nominee').forEach(()=>bits.push('<b class="flagword">registered ≠ beneficial (nominee)</b>'));
+ if(a.action==='manual'&&a.fallback) bits.push(`fallback: <b>${esc(a.fallback)}</b>`);
+ if(a.vendor) bits.push(`vendor: ${esc(a.vendor)}`);
+ if(a.order&&a.order.model) bits.push(`ordering: ${esc(a.order.model)}`);
+ return `<div class="answer"><span class="badge" style="color:${fg};background:${bg};font-size:13px">${lab}</span>${bits.length?' <span class="abits">'+bits.join(' · ')+'</span>':''}</div>`;
+};
 function rowHTML(r){
  const [lab,fg,bg] = STATUS[r.status]||['?','#000','#eee'];
  const doc = (r.documentLocal||r.documentLabel)
@@ -169,13 +207,13 @@ function rowHTML(r){
    <div class="rhead">
      <span class="kind">${KIND[r.kind]||r.kind}</span>
      <span class="form">${esc(r.legalForm)}</span>
-     <span class="badge" style="color:${fg};background:${bg}">${lab}</span>
      <span class="conf">${esc(r.confidence||'')}</span>
-   </div>${doc}${best}<div class="summary">${esc(r.summary||'')}</div>${ev}</div>`;
+   </div>${answerHTML(r._answer)}${doc}${best}<div class="summary">${esc(r.summary||'')}</div>${ev}</div>`;
 }
 function render(){
  const fj=fjEl.value, fk=fkEl.value, fs=fsEl.value, q=qEl.value.toLowerCase();
- const rows = ROWS.filter(r=>(!fj||r.jurisdiction===fj)&&(!fk||r.kind===fk)&&(!fs||r.status===fs)
+ const rows = ROWS.filter(r=>(!fj||r.jurisdiction===fj)&&(!fk||r.kind===fk)
+   &&(!fs||(r._answer&&r._answer.action&&r._answer.action.startsWith(fs)))
    &&(!q||JSON.stringify(r).toLowerCase().includes(q)));
  const byJ={};
  for(const r of rows)(byJ[r.jurisdiction]=byJ[r.jurisdiction]||[]).push(r);
@@ -195,7 +233,6 @@ const fjEl=document.getElementById('fj'),fkEl=document.getElementById('fk'),
 [fjEl,fkEl,fsEl].forEach(e=>e.onchange=render); qEl.oninput=render;
 render();
 </script>
-<script type="application/json" id="data">__DATA__</script>
 </body>
 </html>"""
 
