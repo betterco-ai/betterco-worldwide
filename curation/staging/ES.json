@@ -1,0 +1,140 @@
+[
+  {
+    "jurisdiction": "ES",
+    "legalForm": "SL",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Register extract (nota simple / certificación)",
+    "documentLocal": "nota simple informativa / certificación del Registro Mercantil",
+    "summary": "The Registro Mercantil issues, on request by anyone, a nota simple (informative extract) or a certificación evidencing the registered data of the SL. The certificación is the authoritative proof; the nota simple is informative only.",
+    "evidence": [
+      {"basis": "Registro Mercantil (Colegio de Registradores) — official Sede electrónica, Publicidad Formal / Certificaciones",
+       "quote": "Publicidad de la sociedad: nota simple informativa y certificación",
+       "note": "Publicidad formal is obtained via nota simple (informative, no fe pública) or certificación (accredits the literal registry content with fe pública).",
+       "url": "https://sede.registradores.org/sede/sede-corpme-web/registro-mercantil/publicidad/certificaciones/",
+       "retrieved": "2026-07-18"}
+    ],
+    "caveats": ["The nota simple is informative and does not accredit the content with public faith; the certificación does. Both draw only from what is registered — registered facts, not the private shareholder book."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ES",
+    "legalForm": "SL",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": "libro registro de socios",
+    "summary": "A CURRENT list of SL shareholders is NOT obtainable from the Registro Mercantil. Ownership of participaciones is recorded only in the company's private Libro registro de socios, kept and custodied by the administrators; share transfers are documented by notarial deed but are NOT filed at the commercial register. Founders named in the escritura de constitución are on the register historically, but subsequent transfers are not, so the register does not evidence the present cap table.",
+    "evidence": [
+      {"basis": "Ley de Sociedades de Capital (RDL 1/2010), art. 104 — Libro registro de socios",
+       "quote": "La sociedad de responsabilidad limitada llevará un Libro registro de socios, en el que se harán constar la titularidad originaria y las sucesivas transmisiones, voluntarias o forzosas, de las participaciones sociales... La sociedad sólo reputará socio a quien se halle inscrito en dicho libro.",
+       "url": "https://www.iberley.es/legislacion/articulo-104-ley-sociedades-capital",
+       "retrieved": "2026-07-18"},
+      {"basis": "Ley de Sociedades de Capital, art. 105 — access restricted to socios",
+       "quote": "Cualquier socio podrá examinar el Libro registro de socios, cuya llevanza y custodia corresponde al órgano de administración.",
+       "note": "The book is private to the company; only socios (not third parties/KYC requesters) may inspect it. It is not held by the Registro Mercantil.",
+       "url": "https://www.iberley.es/legislacion/articulo-105-ley-sociedades-capital",
+       "retrieved": "2026-07-18"},
+      {"basis": "Ley de Sociedades de Capital, art. 106 — transfers by notarial deed, not registered at RM",
+       "quote": "La transmisión de las participaciones sociales, así como la constitución del derecho real de prenda sobre las mismas, deberán constar en documento público.",
+       "note": "Transfers require a notarial public document but are NOT inscribed in the Registro Mercantil; they update only the private Libro registro de socios. Hence the register cannot show current ownership.",
+       "url": "https://www.conceptosjuridicos.com/articulos/ley-sociedades-capital-articulo-106/",
+       "retrieved": "2026-07-18"}
+    ],
+    "caveats": [
+      "EXCEPTION — single-member SL (sociedad unipersonal): the identity of the sole shareholder (socio único) MUST be recorded in the Registro Mercantil (art. 13 LSC), so for a unipersonal SL the sole owner IS provable from the register. This does not extend to multi-member companies.",
+      "PARTIAL ALTERNATIVE — the Registro Mercantil offers a 'Certificación de titularidad real' (beneficial-ownership certification). This lists UBOs above the 25% threshold, NOT the legal shareholder list, and is not a substitute for a Gesellschafterliste.",
+      "The escritura de constitución names the FOUNDING partners (art. 22 LSC), but founders != current shareholders once any transfer has occurred."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ES",
+    "legalForm": "SL",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certification of the current articles of association",
+    "documentLocal": "Certificación de estatutos sociales vigentes (o copia de la escritura de constitución)",
+    "summary": "The estatutos sociales are filed and registered at the Registro Mercantil and are obtainable as a document, but not from the base extract. A dedicated 'Certificación de estatutos sociales' certifies the literal content of the currently in-force articles; the escritura de constitución that contains them is registered per arts. 20-23 LSC.",
+    "evidence": [
+      {"basis": "Registro Mercantil — official product 'Certificación de estatutos sociales'",
+       "quote": "Certifica el contenido literal de los estatutos sociales vigentes",
+       "url": "https://sede.registradores.org/sede/sede-corpme-web/registro-mercantil/publicidad/certificaciones/",
+       "retrieved": "2026-07-18"},
+      {"basis": "Ley de Sociedades de Capital, arts. 20 & 22-23 — constitution requires public deed with estatutos, registered at RM",
+       "quote": "La constitución de las sociedades de capital exigirá escritura pública, que deberá inscribirse en el Registro Mercantil.",
+       "note": "Art. 22 requires the escritura to include 'los estatutos de la sociedad'; art. 23 lists mandatory statutory content (denominación, objeto, domicilio, capital, órgano de administración).",
+       "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10544",
+       "retrieved": "2026-07-18"}
+    ],
+    "caveats": ["Classified 'additional' because the base nota simple/extract does not reproduce the full statutory text; a separate Certificación de estatutos (or a copy of the escritura) is needed for the full document. INFERENCE: exact nota simple field coverage varies by register office."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ES",
+    "legalForm": "SA",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Register extract (nota simple / certificación)",
+    "documentLocal": "nota simple informativa / certificación del Registro Mercantil",
+    "summary": "As for the SL, the Registro Mercantil issues a nota simple or certificación evidencing the registered data of the SA to any requester; the certificación is the authoritative proof.",
+    "evidence": [
+      {"basis": "Registro Mercantil (Colegio de Registradores) — Publicidad Formal / Certificaciones",
+       "quote": "Certificación de vigencia y cargos",
+       "note": "Standard certification products (vigencia y cargos, estatutos, etc.) apply to all capital companies including the SA; publicidad formal is via nota simple or certificación.",
+       "url": "https://sede.registradores.org/sede/sede-corpme-web/registro-mercantil/publicidad/certificaciones/",
+       "retrieved": "2026-07-18"}
+    ],
+    "caveats": ["Nota simple is informative only; certificación carries public faith."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ES",
+    "legalForm": "SA",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": "libro registro de acciones nominativas",
+    "summary": "A CURRENT list of SA shareholders is NOT obtainable from the Registro Mercantil. Registered (nominative) shareholders are recorded only in the company's private Libro registro de acciones nominativas kept by the company; bearer shares (acciones al portador) are even less traceable. Neither is filed at the commercial register.",
+    "evidence": [
+      {"basis": "Ley de Sociedades de Capital, art. 116 — Libro-registro de acciones nominativas",
+       "quote": "Las acciones nominativas figurarán en un libro-registro que llevará la sociedad, en el que se inscribirán las sucesivas transferencias de las acciones, con expresión del nombre, apellidos, razón o denominación social... La sociedad solo reputará accionista a quien se halle inscrito en dicho libro. Cualquier accionista que lo solicite podrá examinar el libro registro de acciones nominativas.",
+       "note": "The book is held by the company, not the Registro Mercantil, and inspection is limited to accionistas. Bearer shares are not individually registered anywhere public.",
+       "url": "https://www.iberley.es/legislacion/articulo-116-ley-sociedades-capital",
+       "retrieved": "2026-07-18"}
+    ],
+    "caveats": [
+      "EXCEPTION — single-member SA (sociedad anónima unipersonal): the sole shareholder's identity MUST be recorded at the Registro Mercantil (art. 13 LSC), so for a unipersonal SA the sole owner IS provable from the register.",
+      "PARTIAL ALTERNATIVE — 'Certificación de titularidad real' gives UBOs >25%, not the legal shareholder list.",
+      "Listed SAs report significant holdings to the CNMV, but that is a separate securities-regulator channel, not the Registro Mercantil."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ES",
+    "legalForm": "SA",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certification of the current articles of association",
+    "documentLocal": "Certificación de estatutos sociales vigentes (o copia de la escritura de constitución)",
+    "summary": "The estatutos of an SA are registered at the Registro Mercantil and obtainable as a 'Certificación de estatutos sociales' certifying their literal current content; the escritura de constitución containing them is registered per arts. 20-23 LSC. Not carried in the base extract.",
+    "evidence": [
+      {"basis": "Registro Mercantil — official product 'Certificación de estatutos sociales'",
+       "quote": "Certifica el contenido literal de los estatutos sociales vigentes",
+       "url": "https://sede.registradores.org/sede/sede-corpme-web/registro-mercantil/publicidad/certificaciones/",
+       "retrieved": "2026-07-18"},
+      {"basis": "Ley de Sociedades de Capital, art. 20 — constitution by public deed registered at RM",
+       "quote": "La constitución de las sociedades de capital exigirá escritura pública, que deberá inscribirse en el Registro Mercantil.",
+       "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-10544",
+       "retrieved": "2026-07-18"}
+    ],
+    "caveats": ["'Additional' because the base extract does not reproduce full statutory text; a separate Certificación de estatutos (or copy of the escritura) is required. Applies equally to other capital-company forms (e.g. Sociedad Comanditaria por Acciones, SLNE), which follow the same LSC publicity regime — UNVERIFIED for niche forms beyond SL/SA."],
+    "confidence": "high"
+  }
+]

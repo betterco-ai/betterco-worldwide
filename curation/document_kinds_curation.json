@@ -1,0 +1,1528 @@
+[
+ {
+  "jurisdiction": "AE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AL",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AL",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AM",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AM",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AO",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AO",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AT",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AT",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AT",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Gesellschaftsvertrag (social contract)",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "AT",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Aktuelle Fassung (Current version)",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "AU",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AU",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AX",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "AZ",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BA",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BA",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BE",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BG",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BG",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BH",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BH",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BM",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BN",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BN",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BR",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BS",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BS",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BW",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BW",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BY",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "BZ",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CC",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CC",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CH",
+  "kind": "REGISTERAUSZUG",
+  "label": "Commercial register extrait - certified",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "CH",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CH",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Statutes - certified",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "CL",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CN",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Report",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CN",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CO",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CO",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CW",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CX",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CX",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CY",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CY",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CY",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Memorandum and Articles",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CZ",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "CZ",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "DK",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Report",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "DK",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "EC",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "EC",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "EE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "EE",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "EE",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Articles of Association",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "ES",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "FI",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "FO",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "FR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "FR",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "FR",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Memorandum & Articles of Association",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GB",
+  "kind": "REGISTERAUSZUG",
+  "label": "CS01",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GB",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": "CS01",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GB",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Memorandum and Articles of Association",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "GE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract_English",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GE",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GG",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GG",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Articles of Association",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "GI",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GI",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Articles Of Association",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "GL",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GL",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GR",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "GR",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Articles of Association",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "HK",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "HK",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Memorandum & Articles of Association",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "HR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "HR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Historical Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "HR",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "HU",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "HU",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "ID",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "ID",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IE",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IL",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IL",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IM",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IM",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Articles of Association",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "IN",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IN",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IQ",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IS",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IS",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IT",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "IT",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "JE",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "JO",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "JO",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "JP",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KE",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KG",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KG",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KH",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KR",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KW",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "KW",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LA",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LI",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LI",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LK",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LS",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LS",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LU",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registration Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LU",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LU",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Articles of association",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LV",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "LV",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MA",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MA",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MC",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MD",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MD",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "ME",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "ME",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MH",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MK",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MK",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MM",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MT",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MT",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Memorandum and Articles of Association",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MU",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MU",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MX",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MY",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "MY",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Memorandum And Articles Of Association",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "NL",
+  "kind": "REGISTERAUSZUG",
+  "label": "Company Registration Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "NL",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "NL",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Documenten zoals statuten, fusie- ofsplitsingsvoorstellen (Documents such as articles of association, merger or division proposals)",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "NO",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "NP",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "NZ",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "NZ",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "OM",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "OM",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PA",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PE",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PF",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PG",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PG",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PH",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PH",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PK",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PL",
+  "kind": "REGISTERAUSZUG",
+  "label": "Register Report",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PL",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PS",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PT",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PT",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "PT",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Certidão do Último Pacto Social/Estatutos Actualizados (Certificate of the Last Articles of Association/Updated Statutes)",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "PY",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "QA",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "RO",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "RO",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "RS",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "RS",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "RU",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "RU",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SA",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SB",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SB",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SC",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Register Report",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SE",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Memorandum & Articles of Association",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SG",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SI",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SI",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SK",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SK",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SM",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "SN",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TH",
+  "kind": "REGISTERAUSZUG",
+  "label": "Company Information Report",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TH",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": "List of Shareholders",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TN",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TO",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TO",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TR",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TR",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TT",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TW",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Report",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "TW",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "UA",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "UA",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "UZ",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "UZ",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "VG",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "VI",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "VN",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "VN",
+  "kind": "REGISTERAUSZUG",
+  "label": "Historical Registry Extract",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "VN",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "VU",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "VU",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "VU",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "label": "Articles Of Association",
+  "via": "document",
+  "tier": "additional"
+ },
+ {
+  "jurisdiction": "WS",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "WS",
+  "kind": "GESELLSCHAFTERLISTE",
+  "label": null,
+  "via": "data",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "YE",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ },
+ {
+  "jurisdiction": "ZA",
+  "kind": "REGISTERAUSZUG",
+  "label": "Registry Extract",
+  "via": "document",
+  "tier": "base"
+ }
+]
