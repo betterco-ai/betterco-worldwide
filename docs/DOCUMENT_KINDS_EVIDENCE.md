@@ -1463,6 +1463,186 @@ Only holders of 5% or more appear, with the same disapplication logic. Sub-5% ow
 - A company on the Main Market or AIM (DTR5 issuer) is EXEMPT entirely — ownership lives in FCA DTR 5 notifications, not Companies House. See https://handbook.fca.org.uk/handbook/dtr5
 
 
+### LLP — Gesellschaftsvertrag
+
+**❌ Not provable**
+
+An LLP has NO articles of association. Its constitutional/governance document is the LLP agreement (members' agreement), a private contract NOT delivered to the registrar. Under LLP Act 2000 s.2 only the incorporation document and a compliance statement are filed to form the LLP; the members' agreement never reaches the public register. So the Gesellschaftsvertrag equivalent cannot be proved from the registry for an LLP — the key form difference from Ltd/PLC.
+
+**Document:** LLP agreement / members' agreement (private, not filed)
+
+> **Limited Liability Partnerships Act 2000 s.2 — Incorporation document etc.**
+> 
+> „there shall be delivered to the registrar either the incorporation document or a copy authenticated in a manner approved by him, and there shall be delivered to the registrar a statement in a form approved by the registrar"
+> 
+> Only the incorporation document and a compliance statement are filed; the LLP members' agreement is not delivered to the registrar. LLPs have no articles of association.
+> 
+> Source: <https://www.legislation.gov.uk/ukpga/2000/12/section/2> (retrieved 2026-07-19)
+
+**Caveats:**
+
+- Best available filed document is the LLP incorporation document (form LL IN01), which records name, registered office and members but is NOT the LLP's constitution/agreement.
+- The governing LLP agreement is a private contract; where none exists the default LLP Regulations 2001 apply — but no document is obtainable from the registry either way.
+
+
+### Ltd — Gesellschaftsvertrag
+
+**✅ Provable**
+
+Every company must have articles of association (s.18(1)); unless the default model articles apply (s.20) it must register its articles (s.18(2)). Registered articles and the memorandum (s.8, delivered on formation) are held by Companies House and served as free downloadable document images via the filing history / Document API, inspectable/copyable under s.1085-1086. The articles are the UK constitution equivalent of the Gesellschaftsvertrag/Satzung, so this kind is provable by a base registry document.
+
+**Document:** Articles of Association / Memorandum of Association — delivered as `Articles of Association (and Memorandum of Association)`
+
+> **Companies Act 2006 s.18(1)-(2) — Articles of association**
+> 
+> „A company must have articles of association prescribing regulations for the company. Unless it is a company to which model articles apply by virtue of section 20 ... it must register articles of association."
+> 
+> Source: <https://www.legislation.gov.uk/ukpga/2006/46/section/18> (retrieved 2026-07-19)
+
+> **Companies House official page (gov.uk) — free document images**
+> 
+> „document images"
+> 
+> Listed among information available free; articles and memorandum are filed images.
+> 
+> Source: <https://www.gov.uk/get-information-about-a-company> (retrieved 2026-07-19)
+
+> **Companies House Developer / Document API**
+> 
+> Filed documents (incl. constitution) are downloadable programmatically for free.
+> 
+> Source: <https://developer-specs.company-information.service.gov.uk/> (retrieved 2026-07-19)
+
+**Caveats:**
+
+- INFERENCE / edge case: a company that adopts the unamended default model articles under s.20 may have NO bespoke articles document on the register — its constitution is the statutory model articles; only the memorandum is then distinctive. Amended/bespoke articles are always filed.
+
+
+### PLC — Gesellschaftsvertrag
+
+**✅ Provable**
+
+A PLC, like any company, must have articles of association (s.18(1)) and files them with the memorandum (s.8). They are served as free downloadable document images and inspectable/copyable under s.1085-1086. PLCs register bespoke articles rather than relying on unamended model articles, so a filed articles document is reliably present. Provable by a base registry document.
+
+**Document:** Articles of Association / Memorandum of Association — delivered as `Articles of Association (and Memorandum of Association)`
+
+> **Companies Act 2006 s.18(1) — Articles of association**
+> 
+> „A company must have articles of association prescribing regulations for the company."
+> 
+> Source: <https://www.legislation.gov.uk/ukpga/2006/46/section/18> (retrieved 2026-07-19)
+
+> **Companies Act 2006 s.8 — Memorandum of association**
+> 
+> „A memorandum of association is a memorandum stating that the subscribers wish to form a company under this Act, and agree to become members of the company ... to take at least one share each."
+> 
+> Memorandum filed on formation for all company types including PLCs.
+> 
+> Source: <https://www.legislation.gov.uk/ukpga/2006/46/section/8> (retrieved 2026-07-19)
+
+> **Companies House official page (gov.uk) — free document images**
+> 
+> „document images"
+> 
+> Source: <https://www.gov.uk/get-information-about-a-company> (retrieved 2026-07-19)
+
+**Caveats:**
+
+- INFERENCE that PLCs practically always file bespoke articles; the s.20 default-model-articles edge case is far less likely for a PLC than a small private Ltd but is not formally excluded.
+
+
+### LLP — Registerauszug
+
+**❌ Not provable**
+
+LLPs sit on the same Companies House register and, like companies, get no consolidated certified current register extract. Only the overview page, filing history, document images and certificates (incorporation / good standing) exist. No Registerauszug equivalent is obtainable.
+
+**Document:** filing history / company overview (no consolidated register extract)
+
+> **Companies House official page (gov.uk) — LLPs are searchable on the same register**
+> 
+> „company information, for example registered address and date of incorporation ... document images"
+> 
+> Source: <https://www.gov.uk/get-information-about-a-company> (retrieved 2026-07-19)
+
+> **Companies Act 2006 s.1086 — Right to copy of material on the register**
+> 
+> „Any person may require a copy of any material on the register that is available for public inspection."
+> 
+> Right is to copies of individual filed material, not a synthesized extract.
+> 
+> Source: <https://www.legislation.gov.uk/ukpga/2006/46/section/1086> (retrieved 2026-07-19)
+
+**Caveats:**
+
+- Best available partial alternative: certificate of good standing for the LLP; not a register extract (INFERENCE).
+
+
+### Ltd — Registerauszug
+
+**❌ Not provable**
+
+The UK has NO single certified current-status register extract equivalent to a Handelsregisterauszug. Companies House exposes a company overview page and a filing history list (both free) plus downloadable document images, but none is a consolidated certified extract of current register contents. It issues certificates (certificate of incorporation under s.15; certificate of good standing) but a certificate of incorporation is only a formation snapshot and good standing only confirms continued existence — neither reproduces the current register (officers, capital, registered office). Best available is a certificate of good standing or incorporation, but neither is a true register extract; the overview is parsed data, not a document.
+
+**Document:** filing history / company overview (no consolidated register extract)
+
+> **Companies House official page (gov.uk) — what you can get about a company**
+> 
+> „company information, for example registered address and date of incorporation ... document images ... previous company names"
+> 
+> Free information is a web overview plus document images; no 'register extract' product exists.
+> 
+> Source: <https://www.gov.uk/get-information-about-a-company> (retrieved 2026-07-19)
+
+> **Companies Act 2006 s.15(4) — Issue of certificate of incorporation**
+> 
+> „The certificate is conclusive evidence that the requirements of this Act as to registration have been complied with and that the company is duly registered under this Act."
+> 
+> The only 'certificate' that conclusively evidences status is a formation snapshot, not a current extract.
+> 
+> Source: <https://www.legislation.gov.uk/ukpga/2006/46/section/15> (retrieved 2026-07-19)
+
+> **Companies Act 2006 s.1085(1) — Inspection of the register**
+> 
+> „Any person may inspect the register."
+> 
+> The statutory right is inspection/copying of individual material, not issuance of a consolidated extract.
+> 
+> Source: <https://www.legislation.gov.uk/ukpga/2006/46/section/1085> (retrieved 2026-07-19)
+
+**Caveats:**
+
+- Best available partial alternatives: certificate of good standing (orderable) and certificate of incorporation (s.15 formation snapshot); INFERENCE that neither qualifies as a register extract because they do not reproduce current officers/capital/address.
+- The 'company overview' is parsed structured data / a web page, not a downloadable certified document.
+
+
+### PLC — Registerauszug
+
+**❌ Not provable**
+
+Same as a private limited company: Companies House holds one unified register for all company types and issues no consolidated certified current register extract. Only a company-overview page, filing history, individual document images, and certificates (incorporation / good standing) are available — none is a Registerauszug equivalent. No form-specific difference from Ltd.
+
+**Document:** filing history / company overview (no consolidated register extract)
+
+> **Companies House official page (gov.uk) — what you can get about a company**
+> 
+> „company information, for example registered address and date of incorporation ... document images"
+> 
+> Applies to all company types on the single register; no register-extract product.
+> 
+> Source: <https://www.gov.uk/get-information-about-a-company> (retrieved 2026-07-19)
+
+> **Companies Act 2006 s.1085(1) — Inspection of the register**
+> 
+> „Any person may inspect the register."
+> 
+> Source: <https://www.legislation.gov.uk/ukpga/2006/46/section/1085> (retrieved 2026-07-19)
+
+**Caveats:**
+
+- Best available partial alternatives identical to Ltd: certificate of good standing / certificate of incorporation; neither is a register extract (INFERENCE).
+
+
 ## GG
 
 ### Company limited by shares — Gesellschafterliste

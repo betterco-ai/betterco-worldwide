@@ -61,6 +61,8 @@ VENDOR_BY_JURISDICTION_KIND = {
     ("FR", "REGISTERAUSZUG"): "infogreffe",       # Kbis — paid, ~3.06 EUR (INPI does not issue it)
     ("FR", "GESELLSCHAFTSVERTRAG"): "inpi.rne",   # statuts — free
     # FR GESELLSCHAFTERLISTE is not_provable (SAS/SA private) — vendor is informational only.
+    ("GB", "GESELLSCHAFTSVERTRAG"): "companies-house.uk",  # Articles — free via Companies House API
+    # GB REGISTERAUSZUG + GESELLSCHAFTERLISTE are not_provable — vendor informational only.
 }
 # How each vendor is ordered from. case_level => document identified WITHIN a case, no SKU.
 VENDOR_ORDER_MODEL = {
@@ -74,6 +76,9 @@ VENDOR_ORDER_MODEL = {
                          "/{actes,bilans}/{id}/download. See inpi_client.py."},
     "infogreffe": {"model": "document_level", "catalog": "Infogreffe",
                    "note": "Paid ~3.06 EUR/electronic doc (professional account). Certified Kbis."},
+    "companies-house.uk": {"model": "document_level", "catalog": "Companies House API",
+                           "note": "Free REST API (Public Data + Document API), free API key. "
+                                   "Serves filed document images incl. articles."},
 }
 
 
@@ -145,10 +150,15 @@ def decide(r):
         completeness = ov.get("completeness", "full")
         fallback = None
     else:
-        availability = "off_registry" if (j, kind) not in FALLBACK_NONE \
-            and ov.get("fallback") != "none" else "none"
         completeness = None
-        fallback = ov.get("fallback", "company_register") if availability == "off_registry" else "none"
+        # A company-held fallback (register of members) only exists for the SHAREHOLDER LIST.
+        # For a register extract or the articles, not_provable means genuinely no route.
+        default_fb = "company_register" if kind == "GESELLSCHAFTERLISTE" else "none"
+        fb = ov.get("fallback", default_fb)
+        if (j, kind) in FALLBACK_NONE:
+            fb = "none"
+        availability = "none" if fb == "none" else "off_registry"
+        fallback = fb
 
     # Action depends on HOW the resolved vendor is ordered. For a case_level vendor (KYC.com) a
     # base document arrives with the case → "use_delivered"; for a document_level vendor (hr.de,

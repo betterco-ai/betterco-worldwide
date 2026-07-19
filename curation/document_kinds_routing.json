@@ -8,7 +8,8 @@
  },
  "vendorRoutingByKind": {
   "FR/REGISTERAUSZUG": "infogreffe",
-  "FR/GESELLSCHAFTSVERTRAG": "inpi.rne"
+  "FR/GESELLSCHAFTSVERTRAG": "inpi.rne",
+  "GB/GESELLSCHAFTSVERTRAG": "companies-house.uk"
  },
  "vendorOrderModel": {
   "kyc.com": {
@@ -30,6 +31,11 @@
    "model": "document_level",
    "catalog": "Infogreffe",
    "note": "Paid ~3.06 EUR/electronic doc (professional account). Certified Kbis."
+  },
+  "companies-house.uk": {
+   "model": "document_level",
+   "catalog": "Companies House API",
+   "note": "Free REST API (Public Data + Document API), free API key. Serves filed document images incl. articles."
   }
  },
  "actionVocabulary": {
@@ -2046,6 +2052,184 @@
    ]
   },
   {
+   "jurisdiction": "GB",
+   "legalForm": "LLP",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "companies-house.uk",
+   "fallback": "none",
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Limited Liability Partnerships Act 2000 s.2 — Incorporation document etc.",
+     "url": "https://www.legislation.gov.uk/ukpga/2000/12/section/2"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "Ltd",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "companies-house.uk",
+    "model": "document_level",
+    "registryName": "Articles of Association / Memorandum of Association",
+    "howToObtain": "order_document",
+    "vendorCatalog": "Companies House API",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "companies-house.uk",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2006 s.18(1)-(2) — Articles of association",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/18"
+    },
+    {
+     "basis": "Companies House official page (gov.uk) — free document images",
+     "url": "https://www.gov.uk/get-information-about-a-company"
+    },
+    {
+     "basis": "Companies House Developer / Document API",
+     "url": "https://developer-specs.company-information.service.gov.uk/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "PLC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "companies-house.uk",
+    "model": "document_level",
+    "registryName": "Articles of Association / Memorandum of Association",
+    "howToObtain": "order_document",
+    "vendorCatalog": "Companies House API",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "companies-house.uk",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2006 s.18(1) — Articles of association",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/18"
+    },
+    {
+     "basis": "Companies Act 2006 s.8 — Memorandum of association",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/8"
+    },
+    {
+     "basis": "Companies House official page (gov.uk) — free document images",
+     "url": "https://www.gov.uk/get-information-about-a-company"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "LLP",
+   "kind": "REGISTERAUSZUG",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies House official page (gov.uk) — LLPs are searchable on the same register",
+     "url": "https://www.gov.uk/get-information-about-a-company"
+    },
+    {
+     "basis": "Companies Act 2006 s.1086 — Right to copy of material on the register",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/1086"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "Ltd",
+   "kind": "REGISTERAUSZUG",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies House official page (gov.uk) — what you can get about a company",
+     "url": "https://www.gov.uk/get-information-about-a-company"
+    },
+    {
+     "basis": "Companies Act 2006 s.15(4) — Issue of certificate of incorporation",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/15"
+    },
+    {
+     "basis": "Companies Act 2006 s.1085(1) — Inspection of the register",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/1085"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GB",
+   "legalForm": "PLC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies House official page (gov.uk) — what you can get about a company",
+     "url": "https://www.gov.uk/get-information-about-a-company"
+    },
+    {
+     "basis": "Companies Act 2006 s.1085(1) — Inspection of the register",
+     "url": "https://www.legislation.gov.uk/ukpga/2006/46/section/1085"
+    }
+   ]
+  },
+  {
    "jurisdiction": "GG",
    "legalForm": "Company limited by shares",
    "kind": "GESELLSCHAFTERLISTE",
@@ -3410,14 +3594,14 @@
    "jurisdiction": "LI",
    "legalForm": "Stiftung",
    "kind": "GESELLSCHAFTSVERTRAG",
-   "availability": "off_registry",
-   "action": "manual",
+   "availability": "none",
+   "action": "unavailable",
    "orderable": false,
    "completeness": null,
    "flags": [],
    "order": null,
    "vendor": "kyc.com",
-   "fallback": "company_register",
+   "fallback": "none",
    "dataBackup": null,
    "confidence": "medium",
    "needsReview": false,
@@ -5243,14 +5427,14 @@
    "jurisdiction": "SE",
    "legalForm": "HB",
    "kind": "GESELLSCHAFTSVERTRAG",
-   "availability": "off_registry",
-   "action": "manual",
+   "availability": "none",
+   "action": "unavailable",
    "orderable": false,
    "completeness": null,
    "flags": [],
    "order": null,
    "vendor": "kyc.com",
-   "fallback": "company_register",
+   "fallback": "none",
    "dataBackup": null,
    "confidence": "high",
    "needsReview": false,
@@ -5265,14 +5449,14 @@
    "jurisdiction": "SE",
    "legalForm": "KB",
    "kind": "GESELLSCHAFTSVERTRAG",
-   "availability": "off_registry",
-   "action": "manual",
+   "availability": "none",
+   "action": "unavailable",
    "orderable": false,
    "completeness": null,
    "flags": [],
    "order": null,
    "vendor": "kyc.com",
-   "fallback": "company_register",
+   "fallback": "none",
    "dataBackup": null,
    "confidence": "high",
    "needsReview": false,
