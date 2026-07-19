@@ -110,11 +110,15 @@ as a thin REST client rather than a browser automation.
 | paid gap | — (register extract is free) | Kbis extract → paid Infogreffe |
 | client | `handelsregister_client.py` (Playwright) | new thin REST client |
 
-**Phase 1 — INPI provider client** (mirrors the hr.de client's `search`/`download` surface, but as
-a REST client not a scraper). Methods:
-`login() → JWT` · `search(siren)` · `list_documents(siren)` (→ actes[], bilans[]) ·
-`download_document(kind, id)` returning PDF bytes. Single-threaded + backoff + re-login on 401.
-Effort: small — it's a thin REST client (3 endpoints).
+**Phase 1 — INPI provider client — ✅ DRAFTED: `inpi_client.py`** (mirrors the hr.de client's
+`search`/`download` surface, as a REST client not a scraper). Surface:
+`search(siren|name)` · `list_documents(siren)` (→ actes[], bilans[]) ·
+`download(siren, doc_type, dest)` + id-level `download_acte/bilan`. Lazy JWT login, re-login on
+401, throttle + backoff, `KbisViaInfogreffe` guard, confidential-comptes → `DocumentUnavailable`.
+Offline self-test passes (`python inpi_client.py selftest`). **Still needs live validation** (no
+INPI creds yet): the `/attachments` and `/{actes,bilans}/{id}/download` JSON field names are
+SECONDARY-confirmed — the parsing is defensive and marked `# SECONDARY`; confirm against a live
+account + the official Actes/Comptes technical PDFs, and validate the best-effort name search.
 
 **Phase 2 — vendor routing.** Add to `document_kinds_routing.json` vendor map:
 `FR` → split vendor — `inpi.rne` for statuts/actes/comptes (free), `infogreffe` for the Kbis
