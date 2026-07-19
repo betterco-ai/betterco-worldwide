@@ -85,13 +85,33 @@ So if a customer needs a genuine Kbis, that's a separate paid Infogreffe integra
 
 ## Implementation roadmap — mirror the Germany (hr.de) pattern
 
-Germany is the precedent (our first direct vendor). Per the BetterCo client, German documents are
-served by **NorthData (free) → handelsregister.de fallback**, via a provider client exposing
-`download_document('HR'|'GS')`, and the file is filed into BetterCo through the doc-kind router
-(`upload_document(cid, path, kind='gesellschafterliste'|'satzung'|...)`). France should be a second
-provider client with the **same shape**, plugged into the same routing.
+Germany is the precedent (our first free direct vendor). The free German document route is
+**handelsregister.de (hr.de)** — `handelsregister_client.py` in the betterco-skills plugin.
+**NorthData is a PAID enrichment source, not the free document route** — do not conflate them.
 
-**Phase 1 — INPI provider client** (mirrors the NorthData client). Methods:
+**What hr.de is:** free since Aug 2022, but **no public API** — the client is a **Playwright
+browser scraper** over the portal's JSF/PrimeFaces UI (`HandelsregisterClient.search()` +
+`.download(result, doc_type, dest)`), ToS-limited (~60/hr filed ceiling), with occasional
+reCAPTCHA and session-scoped stalls it recovers via `rebuild()`. It serves the real documents free:
+`shareholders` (Gesellschafterliste), `articles` (Gesellschaftsvertrag/Satzung), `extract` (AD),
+`history` (CD), `financial` (Jahresabschluss).
+
+**France mirrors the provider SHAPE but is a cleaner integration.** INPI RNE is a proper REST API
+(JWT auth, clean endpoints, ~10k/day, no captcha, no scraping) — strictly better than the hr.de
+scraper. The France provider client should expose the same conceptual surface —
+`search(siren)` + `download(doc_type)` — so it drops into the same doc-kind router, but implemented
+as a thin REST client rather than a browser automation.
+
+| | Germany — hr.de (free, precedent) | France — INPI RNE (free, this spec) |
+|---|---|---|
+| access | browser scraper (no API) | REST API (JWT) |
+| rate | ~60/hr ToS, captcha risk | ~10k/day, no captcha |
+| free docs | Gesellschafterliste, Satzung, extract | statuts, actes, comptes |
+| paid gap | — (register extract is free) | Kbis extract → paid Infogreffe |
+| client | `handelsregister_client.py` (Playwright) | new thin REST client |
+
+**Phase 1 — INPI provider client** (mirrors the hr.de client's `search`/`download` surface, but as
+a REST client not a scraper). Methods:
 `login() → JWT` · `search(siren)` · `list_documents(siren)` (→ actes[], bilans[]) ·
 `download_document(kind, id)` returning PDF bytes. Single-threaded + backoff + re-login on 401.
 Effort: small — it's a thin REST client (3 endpoints).
@@ -115,7 +135,8 @@ requires a genuine Kbis. See payment below.
 ## How to pay
 
 - **INPI RNE (statuts / actes / comptes): FREE.** No payment rail at all — a free data.inpi.fr
-  account, activate the packages, done. This is the France equivalent of NorthData's free HR/GS tier.
+  account, activate the packages, done. Same "free direct vendor" tier as hr.de for Germany — but
+  via a real API instead of a scraper.
 - **Infogreffe (the certified Kbis, only if needed): PAID, ~3,06 € / electronic doc.** Requires an
   **Infogreffe professional account**; billing is per-document (prepaid balance or monthly invoice —
   confirm the account terms at signup). **MonIdenum** is free but only for the company's *own* legal
