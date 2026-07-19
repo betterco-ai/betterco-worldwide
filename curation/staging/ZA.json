@@ -1,0 +1,115 @@
+[
+  {
+    "jurisdiction": "ZA",
+    "legalForm": "Pty Ltd",
+    "legalFormLocal": "private company ((Pty) Ltd)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "CIPC disclosure certificate (company extract)",
+    "documentLocal": "Electronic Disclosure Certificate",
+    "summary": "CIPC (Companies and Intellectual Property Commission) maintains the register of companies and issues an electronic disclosure certificate / company extract showing the company's registered particulars (registration number, name, status, registered address, financial year end) and its directors. Directors' details are a registered/filed record (s24(5)), so the extract is the base register document for a (Pty) Ltd. Shareholders do not appear on it.",
+    "evidence": [
+      {"basis": "Companies Act 71 of 2008, s24(5)", "quote": "A company's record of directors must include, in respect of each director, that person's-- (a) full name, and any former names; (b) identity number", "note": "Directors are a statutorily recorded particular; CIPC holds current director data and reflects it on the disclosure certificate.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"},
+      {"basis": "CIPC fees schedule (electronic disclosure certificate)", "quote": "Issuing an electronic disclosure certificate", "note": "Confirms CIPC issues an electronic disclosure certificate for a company (R30). CIPC page did not expose the certificate's exact field list to the fetch.", "url": "https://www.cipc.co.za/?page_id=3062", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "The exact field list of the CIPC disclosure certificate (that it shows directors + registered particulars but not shareholders) could not be captured verbatim from a CIPC page — the fetched page only exposed the fee table. This is treated as established domain knowledge, corroborated by the Act's structure (directors filed under s24(5); shareholders not filed).",
+      "INFERENCE: mapping the German 'Registerauszug' to the CIPC disclosure certificate/company extract."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ZA",
+    "legalForm": "Pty Ltd",
+    "legalFormLocal": "private company ((Pty) Ltd)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Shareholders of a profit company are not filed with CIPC. The company itself must establish and maintain a securities register in the prescribed form (s50(1)), which is company-held and 'sufficient proof of the facts recorded in it' (s50(4)). The annual return (s33) carries financial statements and prescribed information, not a shareholder list. Therefore no shareholder/member list is obtainable from the registry for a (Pty) Ltd.",
+    "evidence": [
+      {"basis": "Companies Act 71 of 2008, s50(1)", "quote": "Every company must-- (a) establish or cause to be established a register of its issued securities in the prescribed form; and (b) maintain its securities register in accordance with the prescribed standards.", "note": "Register is kept by the company, not lodged with CIPC.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"},
+      {"basis": "Companies Act 71 of 2008, s33(1)", "quote": "Every company must file an annual return in the prescribed form with the prescribed fee ... including in that return-- (a) a copy of its annual financial statements, if it is required to have such statements audited in terms of section 30(2)(a); and (b) any other prescribed information.", "note": "Annual return content is FS + prescribed info; no shareholder list required.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"},
+      {"basis": "Companies Act 71 of 2008, s24(4)(a)", "quote": "In addition to the requirements of subsection (3), every profit company must maintain-- (a) a securities register or its equivalent, as required by section 50", "note": "Confirms the securities register is a company record obligation.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "A current shareholder list can only be obtained directly from the company's own securities register (s50) / via a s26 access request, or reconstructed from share-transfer documents — none of which is a registry document."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ZA",
+    "legalForm": "Pty Ltd",
+    "legalFormLocal": "private company ((Pty) Ltd)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum of Incorporation (MOI)",
+    "documentLocal": "Memorandum of Incorporation (CoR15.1)",
+    "summary": "The MOI is the founding constitutional document and a copy is filed with CIPC accompanying the Notice of Incorporation at registration (s13(2)(b)); CIPC endorses and holds it (s14). It therefore exists in the registry, but as a separately-lodged document that must be ordered on request rather than a field on the standard disclosure certificate — hence an additional document.",
+    "evidence": [
+      {"basis": "Companies Act 71 of 2008, s13(2)", "quote": "The Notice of Incorporation of a company must be-- (a) filed together with the prescribed fee; and (b) accompanied by a copy of the Memorandum of Incorporation, subject to any declaration contemplated in section 6(14)(b).", "note": "MOI copy is filed with CIPC at incorporation.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"},
+      {"basis": "Companies Act 71 of 2008, s14(1)", "quote": "As soon as practicable after accepting a filed Notice of Incorporation ... endorse the Notice of Incorporation, and, if applicable, the copy of the Memorandum of Incorporation filed with it, in the prescribed manner", "note": "CIPC retains/endorses the filed MOI copy, making it registry-retrievable.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Classed 'additional' because the MOI is ordered separately (not part of the standard extract). A company adopting the standard-form MOI (Table CoR15.1A/B) may have limited unique content on file.",
+      "INFERENCE: mapping German 'Gesellschaftsvertrag' to the MOI (the company's constitution)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ZA",
+    "legalForm": "Ltd",
+    "legalFormLocal": "public company (Ltd)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "CIPC disclosure certificate (company extract)",
+    "documentLocal": "Electronic Disclosure Certificate",
+    "summary": "As for a private company, CIPC maintains the register and issues an electronic disclosure certificate showing registered particulars and directors for a public (Ltd) company. Directors are a registered record (s24(5)). The extract is the base register document; shareholders are not shown.",
+    "evidence": [
+      {"basis": "Companies Act 71 of 2008, s24(5)", "quote": "A company's record of directors must include, in respect of each director, that person's-- (a) full name, and any former names; (b) identity number", "note": "Applies to every company including a public company.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"},
+      {"basis": "CIPC fees schedule (electronic disclosure certificate)", "quote": "Issuing an electronic disclosure certificate", "note": "CIPC issues the certificate for companies generally.", "url": "https://www.cipc.co.za/?page_id=3062", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Exact certificate field list not captured verbatim from CIPC (fetch exposed only the fee table); treated as established domain knowledge corroborated by the Act.",
+      "INFERENCE: mapping 'Registerauszug' to the CIPC disclosure certificate/company extract."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ZA",
+    "legalForm": "Ltd",
+    "legalFormLocal": "public company (Ltd)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a public company, shares are typically held (often in uncertificated form) and recorded in the company's securities register / uncertificated securities register administered by the company or a CSD participant (s50) — not filed with CIPC. The annual return (s33) does not include a shareholder list. No shareholder/member list is obtainable from the registry for a public (Ltd) company; a public company's uncertificated register is even inspectable via the CSD, not CIPC.",
+    "evidence": [
+      {"basis": "Companies Act 71 of 2008, s50(1)", "quote": "Every company must-- (a) establish or cause to be established a register of its issued securities in the prescribed form; and (b) maintain its securities register in accordance with the prescribed standards.", "note": "Company-held register; for uncertificated securities a record is kept by a participant/CSD (s50(3)), still not CIPC.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"},
+      {"basis": "Companies Act 71 of 2008, s33(1)", "quote": "Every company must file an annual return in the prescribed form ... including in that return-- (a) a copy of its annual financial statements ...; and (b) any other prescribed information.", "note": "No shareholder list in the annual return.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "For listed public companies the shareholder register is administered via CSD participants (s50(3)); still outside CIPC. Beneficial-interest disclosure rules (s56) may reveal some holders but do not produce a registry shareholder list."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "ZA",
+    "legalForm": "Ltd",
+    "legalFormLocal": "public company (Ltd)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum of Incorporation (MOI)",
+    "documentLocal": "Memorandum of Incorporation (CoR15.1)",
+    "summary": "A public company's MOI is likewise filed with CIPC as a copy accompanying the Notice of Incorporation (s13(2)(b)) and endorsed/held by CIPC (s14). It is registry-retrievable but as a separately-ordered document, not a field on the standard extract — an additional document.",
+    "evidence": [
+      {"basis": "Companies Act 71 of 2008, s13(2)", "quote": "The Notice of Incorporation of a company must be-- (a) filed together with the prescribed fee; and (b) accompanied by a copy of the Memorandum of Incorporation, subject to any declaration contemplated in section 6(14)(b).", "note": "Applies to all company categories including public companies.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"},
+      {"basis": "Companies Act 71 of 2008, s14(1)", "quote": "As soon as practicable after accepting a filed Notice of Incorporation ... endorse the Notice of Incorporation, and, if applicable, the copy of the Memorandum of Incorporation filed with it, in the prescribed manner", "note": "CIPC retains the filed MOI copy.", "url": "https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Classed 'additional' because the MOI is ordered separately from the standard extract.",
+      "INFERENCE: mapping 'Gesellschaftsvertrag' to the MOI."
+    ],
+    "confidence": "high"
+  }
+]

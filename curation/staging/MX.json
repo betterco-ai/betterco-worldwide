@@ -1,0 +1,117 @@
+[
+  {
+    "jurisdiction": "MX",
+    "legalForm": "S.A. de C.V.",
+    "legalFormLocal": "Sociedad Anónima de Capital Variable",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial register extract — certification of the electronic mercantile folio",
+    "documentLocal": "Certificación / boleta de inscripción del folio mercantil electrónico (Registro Público de Comercio, vía SIGER)",
+    "summary": "A mercantile company acquires legal personality by inscription of its escritura constitutiva in the Registro Público de Comercio (LGSM art. 2), kept as an electronic mercantile folio (folio mercantil electrónico) in SIGER. The registry evidences the registered particulars through a certification/boleta of that folio, which is the closest analogue to a German Registerauszug. Note that Mexico issues no consolidated German-style 'current particulars' printout — the folio certifies the inscribed instruments rather than a synthesised current state.",
+    "evidence": [
+      { "basis": "LGSM art. 2", "quote": "Las sociedades mercantiles inscritas en el Registro Público de Comercio, tienen personalidad jurídica distinta de la de los socios.", "note": "Inscription in the RPC is the constitutive registry act.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" },
+      { "basis": "Código de Comercio arts. 20-32 (folio mercantil electrónico / SIGER)", "quote": "", "note": "UNVERIFIED verbatim — could not fetch the Código de Comercio text; the folio mercantil electrónico, SIGER and boleta/certificación model is asserted from domain knowledge, not a fetched quote.", "url": "https://www.gob.mx/tramites/ficha/inscripcion-de-actos-mercantiles-en-el-registro-publico-de-comercio/SE1911", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "The RPC does not issue a single consolidated 'current registered particulars' extract like the German Handelsregister; it certifies the inscriptions recorded on the folio mercantil.",
+      "Under capital variable, changes to the variable capital are frequently not re-registered, so the folio may lag the company's actual capital.",
+      "INFERENCE: the exact deliverable name (certificación de folio / boleta) is based on the Código de Comercio RPC/SIGER regime and could not be confirmed with a fetched verbatim quote."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "MX",
+    "legalForm": "S.A. de C.V.",
+    "legalFormLocal": "Sociedad Anónima de Capital Variable",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a sociedad anónima the shareholders are recorded only in the company-held libro de registro de acciones (LGSM art. 128), not in the public registry; the company treats as owner whoever appears in that book and records transfers on request (art. 129). Only the founding shareholders named in the acta constitutiva reach the RPC. Therefore a current shareholder list cannot be proved from the registry.",
+    "evidence": [
+      { "basis": "LGSM art. 128", "quote": "Las sociedades anónimas tendrán un registro de acciones que contendrá: I.- El nombre, la nacionalidad y el domicilio del accionista, y la indicación de las acciones que le pertenezcan", "note": "The share register is a company book, not a registry filing.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" },
+      { "basis": "LGSM art. 129", "quote": "La sociedad considerará como dueño de las acciones a quien aparezca inscrito como tal en el registro...A este efecto, la sociedad deberá inscribir en dicho registro, a petición de cualquier titular, las transmisiones que se efectúen.", "note": "Ownership and transfers are tracked in the company-held book, off-registry.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "The founding shareholders do appear in the acta constitutiva (registered), but that is a snapshot at incorporation, not a maintained current shareholder list.",
+      "The authoritative current list (libro de registro de acciones) is held by the company and is not a public-registry document."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "MX",
+    "legalForm": "S.A. de C.V.",
+    "legalFormLocal": "Sociedad Anónima de Capital Variable",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Constitutive deed / bylaws (certified copy)",
+    "documentLocal": "Acta constitutiva / escritura pública con estatutos sociales (copia certificada), inscrita en el Registro Público de Comercio",
+    "summary": "The constitution is the escritura constitutiva (acta constitutiva) containing the estatutos sociales, granted before a notary and inscribed in the RPC (LGSM arts. 5-7). It is the base registered instrument and its certified copy evidences the company's charter. This is the registry's core deliverable.",
+    "evidence": [
+      { "basis": "LGSM art. 6", "quote": "Los nombres, nacionalidad y domicilio de las personas físicas o morales que constituyan la sociedad", "note": "Escritura constitutiva must state founders and capital; it embeds the estatutos.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" },
+      { "basis": "LGSM art. 7", "quote": "Si el contrato social no se hubiere otorgado en escritura ante Notario...cualquier socio podrá demandar en la vía sumaria el otorgamiento de la escritura correspondiente.", "note": "The constitution is granted in escritura pública before a notary.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Later amendments to the estatutos are separate notarised deeds that must also be inscribed; a single certified copy of the original acta may not reflect amended bylaws."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "MX",
+    "legalForm": "S. de R.L. de C.V.",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada de Capital Variable",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial register extract — certification of the electronic mercantile folio",
+    "documentLocal": "Certificación / boleta de inscripción del folio mercantil electrónico (Registro Público de Comercio, vía SIGER)",
+    "summary": "As with any mercantile company, the S. de R.L. de C.V. acquires legal personality by inscription of its escritura constitutiva in the Registro Público de Comercio (LGSM art. 2) on an electronic mercantile folio in SIGER. The registry evidences registered particulars via the certification/boleta of that folio. Mexico issues no consolidated German-style current-particulars extract; the folio certifies inscribed instruments.",
+    "evidence": [
+      { "basis": "LGSM art. 2", "quote": "Las sociedades mercantiles inscritas en el Registro Público de Comercio, tienen personalidad jurídica distinta de la de los socios.", "note": "Inscription in the RPC is the constitutive registry act for all mercantile forms.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" },
+      { "basis": "Código de Comercio arts. 20-32 (folio mercantil electrónico / SIGER)", "quote": "", "note": "UNVERIFIED verbatim — Código de Comercio text could not be fetched; folio/SIGER/boleta model asserted from domain knowledge.", "url": "https://www.gob.mx/tramites/ficha/inscripcion-de-actos-mercantiles-en-el-registro-publico-de-comercio/SE1911", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "The RPC certifies inscriptions on the folio mercantil; it does not synthesise a German-style consolidated current extract.",
+      "Capital-variable changes are often not re-registered, so the folio may lag actual capital.",
+      "INFERENCE: exact deliverable name (certificación de folio / boleta) not confirmed by a fetched verbatim quote."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "MX",
+    "legalForm": "S. de R.L. de C.V.",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada de Capital Variable",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Partners and their parts sociales as stated in the constitutive deed (and registered amendments)",
+    "documentLocal": "Acta constitutiva / escritura pública (socios y partes sociales), más escrituras de cesión/modificación inscritas en el RPC; el libro especial de socios (art. 73 LGSM) lo lleva la sociedad, no el registro",
+    "summary": "Unlike the S.A., the partners (socios) and their parts sociales are a mandatory content of the escritura constitutiva (LGSM art. 6), which is a base registered instrument, so the founding membership is provable from the registry. Admission or transfer of partners requires partner consent and is typically effected by a notarised amendment that is inscribed in the RPC, so changes can be evidenced by registered additional deeds. However, the authoritative current membership is the company-held libro especial de socios (art. 73), which is kept 'al cuidado de los administradores' and is not a registry document, so the registry cannot guarantee a fully current list on its own.",
+    "evidence": [
+      { "basis": "LGSM art. 6", "quote": "Los nombres, nacionalidad y domicilio de las personas físicas o morales que constituyan la sociedad", "note": "Founding socios are stated in the registered escritura constitutiva.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" },
+      { "basis": "LGSM art. 73", "quote": "La sociedad llevará un libro especial de los socios, en el cual se inscribirá el nombre y el domicilio de cada uno, con indicación de sus aportaciones, y la transmisión de las partes sociales.", "note": "The definitive member list is a company-held book, kept 'al cuidado de los administradores', not a registry filing.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "The base acta proves only founding membership; a current list depends on whether each transfer/admission was notarised and inscribed (registered additional documents).",
+      "The authoritative current membership register (libro especial de socios, art. 73) is company-held and off-registry, so the registry alone may not yield a fully current, canonical Gesellschafterliste.",
+      "INFERENCE: routine inscription of every partner transfer in practice is asserted, not confirmed by a fetched quote; some transfers may go unregistered."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "MX",
+    "legalForm": "S. de R.L. de C.V.",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada de Capital Variable",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Constitutive deed / bylaws (certified copy)",
+    "documentLocal": "Acta constitutiva / escritura pública con estatutos sociales (copia certificada), inscrita en el Registro Público de Comercio",
+    "summary": "The constitution is the escritura constitutiva (acta constitutiva) with the estatutos sociales, granted before a notary and inscribed in the RPC (LGSM arts. 2, 6, 7). It is the base registered instrument and its certified copy is the registry's core proof of the company's charter.",
+    "evidence": [
+      { "basis": "LGSM art. 6", "quote": "El importe del capital social.", "note": "The escritura constitutiva embeds the estatutos and required capital clauses.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" },
+      { "basis": "LGSM art. 7", "quote": "Si el contrato social no se hubiere otorgado en escritura ante Notario...cualquier socio podrá demandar en la vía sumaria el otorgamiento de la escritura correspondiente.", "note": "Constitution granted in escritura pública before a notary and then inscribed.", "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Later amendments to the estatutos are separate notarised, inscribed deeds; the original acta's certified copy may not reflect the current bylaws."
+    ],
+    "confidence": "high"
+  }
+]

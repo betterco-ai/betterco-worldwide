@@ -1,0 +1,125 @@
+[
+  {
+    "jurisdiction": "AU",
+    "legalForm": "Pty Ltd",
+    "legalFormLocal": "Australian proprietary company limited by shares (Pty Ltd)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Current Company Extract (ASIC)",
+    "documentLocal": "Current Company Extract / Current & Historical Company Extract",
+    "summary": "ASIC maintains the national companies register and issues a paid 'Current Company Extract' (and 'Current & Historical Company Extract') derived from its database under s 1274A of the Corporations Act 2001. This extract is the register extract of current registered particulars: organisation details, status, company type/class, registered office, officeholders and share structure. It is the direct Australian equivalent of a Registerauszug and is a single base document.",
+    "evidence": [
+      {"basis": "ASIC 'Guide to reading ASIC company extracts', cover/Organisation Details pages", "quote": "This extract contains information derived from the Australian Securities and Investment Commission's (ASIC) database under section 1274A of the Corporations Act 2001.", "note": "Sample extract header for 'ASIC Company Pty Ltd'; shows Company type 'Australian proprietary company', Class 'Limited by shares'.", "url": "https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf", "retrieved": "2026-07-20"},
+      {"basis": "ASIC register search page / product listing", "quote": "", "note": "Lists 'current company extract - fee $10' and links the sample PDF (current-company-extract-paid-feb-2026.pdf).", "url": "https://asic.gov.au/online-services/search-asic-registers/company-and-organisation-registers/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Product name is 'Current Company Extract' / 'Current & Historical Company Extract'; ASIC issues no document literally titled 'Registerauszug'.",
+      "The extract is a database-derived report under s 1274A, not a certified register 'page'; ASIC also issues a separate 'Certificate of Registration', which is not the particulars extract."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "AU",
+    "legalForm": "Pty Ltd",
+    "legalFormLocal": "Australian proprietary company limited by shares (Pty Ltd)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Current Company Extract (ASIC) - 'Members' / 'Share Information' section",
+    "documentLocal": "Current Company Extract, Members section",
+    "summary": "For a proprietary company the same ASIC company extract carries a 'Members' section listing each member's name and address with class, number held, beneficial-holding flag and paid status. This exists because only proprietary companies must notify ASIC of member-register changes (Part 2C.2, s 178A). So the shareholder list is proved by the same base document as the Registerauszug. However, ASIC records only the top 20 members per class (s 178B), so for a proprietary company with more than 20 members in a class the extract is not the complete list.",
+    "evidence": [
+      {"basis": "ASIC 'Guide to reading ASIC company extracts', 'Members' note (Share Information section)", "quote": "For each class of shares issued by a proprietary company, ASIC records the details of the top twenty members of the class (based on shareholdings). The details of any other members holding the same number of shares as the twentieth ranked member will also be recorded by ASIC on the database.", "url": "https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf", "retrieved": "2026-07-20"},
+      {"basis": "Corporations Act 2001 s 178A(1) (Compilation No. 145, vol. 1 p.349)", "quote": "A proprietary company must notify ASIC within the time determined under section 178D and in the prescribed form, if: (a) it is required to add or alter a particular in the register it maintains under section 169; and (b) the particular is one required to be kept under any of the following: ... (iii) paragraph 169(3)(c) (the number of shares held by the member) ...", "url": "https://www.legislation.gov.au/C2004A00818/latest/text", "retrieved": "2026-07-20"},
+      {"basis": "Corporations Act 2001 s 178B 'Top 20 only' (Compilation No. 145, vol. 1 p.350)", "quote": "If a proprietary company has more than 20 members, the company is only required to notify additions or alterations of particulars under section 178A that relate to a person who is, or as a result of the addition or alteration will become, a top 20 member of a class of the company.", "url": "https://www.legislation.gov.au/C2004A00818/latest/text", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "TOP-20 LIMIT: ASIC only holds the top 20 members per class (s 178B). For a Pty Ltd with more than 20 members in a class the extract is incomplete; most Pty Ltds (capped at 50 non-employee members) commonly have <=20, so in practice the extract usually lists all members - but this is not guaranteed.",
+      "The complete statutory shareholder list is the company-held register of members (ss 168-169), inspectable at the company (s 173), not lodged with ASIC.",
+      "The member data on the extract may lag reality (notified within statutory time, s 178D) and is 'derived from ASIC's database', not a certified register of members.",
+      "INFERENCE: classifying the Members section as the 'base document' (same extract) rather than a separately ordered document is our reading; ASIC sells it as part of the one extract, not as an add-on."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "AU",
+    "legalForm": "Pty Ltd",
+    "legalFormLocal": "Australian proprietary company limited by shares (Pty Ltd)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "A proprietary company is not required to have or lodge a constitution: its internal management may be governed by the replaceable rules in the Corporations Act (s 135), by a constitution, or a combination (s 134); the sole-director/sole-shareholder Pty Ltd is governed by tailored rules with replaceable rules disapplied. The duty to lodge a constitution with ASIC under s 136(5) falls only on public companies (and Pty companies applying to convert to public). Therefore ASIC generally does not hold a proprietary company's constitution and it cannot be obtained as a registry document.",
+    "evidence": [
+      {"basis": "Corporations Act 2001 s 136(5) (Compilation No. 145, vol. 1 p.298)", "quote": "A public company must lodge with ASIC a copy of a special resolution adopting, modifying or repealing its constitution within 14 days after it is passed. The company must also lodge with ASIC within that period: (a) if the company adopts a constitution--a copy of that constitution; or (b) if the company modifies its constitution--a copy of that modification.", "note": "Lodgement duty is expressed for 'a public company' only (plus Pty companies mid-conversion to public); no equivalent duty on ordinary proprietary companies.", "url": "https://www.legislation.gov.au/C2004A00818/latest/text", "retrieved": "2026-07-20"},
+      {"basis": "Corporations Act 2001 s 135(1) (Compilation No. 145, vol. 1 p.296-297)", "quote": "The section or subsection does not apply to a proprietary company while the same person is both its sole director and sole shareholder.", "url": "https://www.legislation.gov.au/C2004A00818/latest/text", "retrieved": "2026-07-20"},
+      {"basis": "ASIC 'Constitution and replaceable rules' page", "quote": "The replaceable rules do not apply to a proprietary company with a sole director who is also the sole shareholder.", "note": "Also states a company 'must be governed by either a constitution or a set of rules called the replaceable rules'.", "url": "https://asic.gov.au/for-business/registering-a-company/steps-to-register-a-company/constitution-and-replaceable-rules/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "If a Pty Ltd adopts a constitution it holds it privately and must supply a copy to a member on request within 7 days (s 139) - company-held, not a registry document.",
+      "Edge cases where ASIC may hold a Pty Ltd constitution: ASIC can direct lodgement of a consolidated constitution (s 138), and a Pty company applying to convert to public must lodge under the s 136(5) tail - these are exceptions, not the norm.",
+      "Where the company relies wholly on replaceable rules there is no 'constitution' document at all; the governing terms are the Act's provisions themselves."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "AU",
+    "legalForm": "Ltd",
+    "legalFormLocal": "Australian public company limited by shares (Ltd)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Current Company Extract (ASIC)",
+    "documentLocal": "Current Company Extract / Current & Historical Company Extract",
+    "summary": "The same ASIC 'Current Company Extract' (s 1274A) is issued for public companies and is the register extract of current registered particulars: organisation details, status, company type/class (public, limited by shares), registered office, officeholders and share structure. It is the direct equivalent of a Registerauszug for a public company and is a single base document.",
+    "evidence": [
+      {"basis": "ASIC 'Guide to reading ASIC company extracts' (extract issued under s 1274A)", "quote": "This extract contains information derived from the Australian Securities and Investment Commission's (ASIC) database under section 1274A of the Corporations Act 2001.", "note": "Same extract product applies to all companies; company type field distinguishes 'Australian public company'.", "url": "https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf", "retrieved": "2026-07-20"},
+      {"basis": "ASIC register search page / product listing", "quote": "", "note": "Company and organisation register; current company extract fee $10.", "url": "https://asic.gov.au/online-services/search-asic-registers/company-and-organisation-registers/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Same product-naming caveat as the Pty Ltd row: labelled 'Current Company Extract', not 'Registerauszug'.",
+      "UNVERIFIED against a public-company sample extract specifically: our public-vs-proprietary distinction is confirmed for the Members section (below) but the sample PDF ASIC publishes is a Pty Ltd; the organisation-details/officeholder/share-structure sections are identical products."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "AU",
+    "legalForm": "Ltd",
+    "legalFormLocal": "Australian public company limited by shares (Ltd)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a public company the member (shareholder) list is not held by ASIC. The obligation to notify ASIC of member-register particulars falls only on proprietary companies (Part 2C.2, ss 178A-178C); public companies are outside that regime and notify ASIC of no member changes. The complete statutory list is the company-held register of members (ss 168-169), open to inspection at the company (s 173), and - for listed companies - maintained by the share registry. It is not obtainable as an ASIC registry document, so a member list cannot be proved from the register.",
+    "evidence": [
+      {"basis": "Corporations Act 2001 Part 2C.2 heading + s 178A(1) (Compilation No. 145, vol. 1 p.349)", "quote": "A proprietary company must notify ASIC within the time determined under section 178D and in the prescribed form, if: (a) it is required to add or alter a particular in the register it maintains under section 169 ...", "note": "Part 2C.2 is titled 'Notice by proprietary companies of changes to member register'; there is no equivalent duty on public companies, so ASIC carries no current member data for them.", "url": "https://www.legislation.gov.au/C2004A00818/latest/text", "retrieved": "2026-07-20"},
+      {"basis": "Corporations Act 2001 s 168(1) and s 169(1),(3) (Compilation No. 145, vol. 1 p.337-338)", "quote": "A company or registered scheme must set up and maintain: (a) a register of members (see section 169); ... The register of members must contain the following information about each member: (a) the member's name and address ... If the company has a share capital, the register must also show: ... (c) the shares held by each member; and (d) the class of shares ...", "note": "The complete member list is the company-held register, not an ASIC-held document.", "url": "https://www.legislation.gov.au/C2004A00818/latest/text", "retrieved": "2026-07-20"},
+      {"basis": "ASIC 'Guide to reading ASIC company extracts', Members note", "quote": "For each class of shares issued by a proprietary company, ASIC records the details of the top twenty members of the class (based on shareholdings).", "note": "Note is expressly limited to proprietary companies, confirming ASIC does not record members for public companies via this mechanism.", "url": "https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "The register of members is inspectable/obtainable at the company itself (s 173) and, for listed companies, via the share registry / substantial-holder (Ch 6C) filings - but that is not the ASIC registry and not a certified full member list.",
+      "Historical member data may appear in old annual returns lodged before the 2003 annual-review reforms; this is not current and not a reliable member list.",
+      "INFERENCE: we treat the absence of a public-company member-notification duty (Part 2C.2 being proprietary-only) as meaning the ASIC extract's Members section is empty/limited for public companies; not tested against a live public-company extract."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "AU",
+    "legalForm": "Ltd",
+    "legalFormLocal": "Australian public company limited by shares (Ltd)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Company constitution (lodged copy), obtained via ASIC 'copies of documents'",
+    "documentLocal": "Constitution (lodged with ASIC under s 136(5))",
+    "summary": "A public company that has a constitution must lodge a copy with ASIC within 14 days of the special resolution adopting it (and lodge any later modification), under s 136(5). The lodged constitution is therefore held by ASIC and can be ordered as a separate document (it does not appear on the company extract itself, which only lists it among lodged documents). This makes the constitution provable via an additional registry document for public companies.",
+    "evidence": [
+      {"basis": "Corporations Act 2001 s 136(5) (Compilation No. 145, vol. 1 p.298)", "quote": "A public company must lodge with ASIC a copy of a special resolution adopting, modifying or repealing its constitution within 14 days after it is passed. The company must also lodge with ASIC within that period: (a) if the company adopts a constitution--a copy of that constitution; or (b) if the company modifies its constitution--a copy of that modification.", "url": "https://www.legislation.gov.au/C2004A00818/latest/text", "retrieved": "2026-07-20"},
+      {"basis": "Corporations Act 2001 s 136(1) (Compilation No. 145, vol. 1 p.297)", "quote": "A company adopts a constitution: (a) on registration--if each person specified in the application for the company's registration as a person who consents to become a member agrees in writing to the terms of a constitution before the application is lodged; or (b) after registration--if the company passes a special resolution adopting a constitution or a court order is made under section 233 that requires the company to adopt the constitution.", "url": "https://www.legislation.gov.au/C2004A00818/latest/text", "retrieved": "2026-07-20"},
+      {"basis": "ASIC company extract 'Documents' section (Guide, p.10)", "quote": "A list of all documents lodged for this organisation or business name.", "note": "The extract lists lodged documents (with document numbers); the constitution copy itself is obtained through ASIC's separate 'copies of documents' service, not printed on the extract.", "url": "https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Provable only where the public company has actually adopted a constitution. A public company may be governed solely by replaceable rules (s 135), in which case no constitution exists or is lodged.",
+      "The constitution is an 'additional' ordered document, not part of the base extract; retrieval depends on ASIC having a copy on file and the copy being available (the extract flags where a lodged document copy 'is not yet available').",
+      "UNVERIFIED: exact current ASIC product name/fee for ordering a lodged constitution copy was not fetched; the lodgement duty (s 136(5)) is the load-bearing, verified fact."
+    ],
+    "confidence": "high"
+  }
+]

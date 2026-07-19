@@ -1,0 +1,113 @@
+[
+  {
+    "jurisdiction": "BR",
+    "legalForm": "Ltda",
+    "legalFormLocal": "Sociedade Limitada",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Simplified certificate / register extract from the Junta Comercial",
+    "documentLocal": "Certidão Simplificada (ficha cadastral)",
+    "summary": "A sociedade empresária Ltda is bound to the Registro Público de Empresas Mercantis kept by the state Junta Comercial (CC art. 1.150). The Junta issues a Certidão Simplificada — the certified register extract of the currently archived particulars (firm name, NIRE, CNPJ, seat, capital, sócios and administradores). This is the base register-extract document, equivalent to the German Registerauszug.",
+    "evidence": [
+      { "basis": "Código Civil (Lei 10.406/2002), Art. 1.150", "quote": "O empresário e a sociedade empresária vinculam-se ao Registro Público de Empresas Mercantis a cargo das Juntas Comerciais, e a sociedade simples ao Registro Civil das Pessoas Jurídicas", "note": "Establishes the Junta Comercial as the mercantile register for the sociedade empresária; the certidão is its extract.", "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm", "retrieved": "2026-07-20" },
+      { "basis": "DREI (Departamento Nacional de Registro Empresarial e Integração) — coordinator of the Juntas Comerciais", "quote": "", "note": "The Certidão Simplificada / ficha cadastral is the standard certified extract issued by the Juntas Comerciais under DREI normalization (IN DREI 81/2020). Verbatim content of the certidão model was not fetched.", "url": "https://www.gov.br/empresas-e-negocios/pt-br/drei", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "INFERENCE: The specific field list of the Certidão Simplificada (that it enumerates sócios and capital) was not fetched verbatim from a DREI/Junta source; grounded on established Junta Comercial practice under IN DREI 81/2020, not on a fetched quote."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BR",
+    "legalForm": "Ltda",
+    "legalFormLocal": "Sociedade Limitada",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Simplified certificate listing the sócios and their capital participation (member list embedded in the register extract)",
+    "documentLocal": "Certidão Simplificada — relação de sócios e participação no capital",
+    "summary": "For a Ltda the members (sócios) and the quota of each in the share capital are mandatory contents of the registered contrato social (CC art. 997, IV, applied to the Ltda by art. 1.054) and are carried into the Junta's certified extract, which lists the current sócios and their participation. The member list is therefore provable from the Junta register. If the extract's breakdown is insufficient, the full authoritative list of quotas is in the registered contrato social / última alteração (an additional archived document), which is independently provable.",
+    "evidence": [
+      { "basis": "Código Civil, Art. 997, IV", "quote": "a quota de cada sócio no capital social, e o modo de realizá-la;", "note": "Art. 997 caput: the contract must mention, inter alia (inciso I) 'nome, nacionalidade, estado civil, profissão e residência dos sócios'.", "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm", "retrieved": "2026-07-20" },
+      { "basis": "Código Civil, Art. 1.054", "quote": "O contrato mencionará, no que couber, as indicações do art. 997, e, se for o caso, a firma social.", "note": "Extends the art. 997 mandatory contents (sócios + quotas) to the sociedade limitada.", "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "INFERENCE: That the Certidão Simplificada itself lists each sócio's capital participation was not fetched verbatim; it rests on established Junta practice. If a caller requires certified per-partner quota amounts, treat the registered contrato social / última alteração (additional document) as the definitive source — its status would be proved_by_additional_document.",
+      "Ownership updates via cessão de quotas take effect against the company and third parties only upon averbação of the instrument at the Junta (CC art. 1.057, parágrafo único), so the register reflects a member list only as current as the last archived alteração."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "BR",
+    "legalForm": "Ltda",
+    "legalFormLocal": "Sociedade Limitada",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Full copy of the registered articles of association (and consolidated amendment)",
+    "documentLocal": "Contrato Social (e última alteração contratual / consolidação) — inteiro teor arquivado na Junta Comercial",
+    "summary": "The constitutive act of a Ltda is the contrato social, which must be filed at the Junta Comercial (CC art. 1.150; art. 998/999 on inscrição and averbação of every modification). It is a distinct archived document — obtained as a certified full copy (inteiro teor), not printed on the simplified extract — so it is provable from the registry as an additional document.",
+    "evidence": [
+      { "basis": "Código Civil, Art. 997 (caput)", "quote": "A sociedade constitui-se mediante contrato escrito, particular ou público, que, além de cláusulas estipuladas pelas partes, mencionará:", "note": "The contrato social is the constitutive instrument.", "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm", "retrieved": "2026-07-20" },
+      { "basis": "Código Civil, Art. 999, parágrafo único", "quote": "Qualquer modificação do contrato social será averbada, cumprindo-se as formalidades previstas no artigo antecedente.", "note": "Confirms amendments (alterações) are also registered — so the registered contrato + alterações are the full constitution.", "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Classed as additional because the full contrato social is retrieved as a separate certified copy (inteiro teor) rather than appearing on the base Certidão Simplificada."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BR",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedade Anônima",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Simplified certificate / register extract from the Junta Comercial",
+    "documentLocal": "Certidão Simplificada (ficha cadastral)",
+    "summary": "A companhia (S.A.) cannot operate without its constitutive acts being archived (Lei 6.404/76 art. 94) at the registro do comércio / Junta Comercial. The Junta issues the Certidão Simplificada as the certified extract of the currently registered particulars (firm name, NIRE, CNPJ, seat, capital, directors). This is the base register-extract document.",
+    "evidence": [
+      { "basis": "Lei 6.404/1976, Art. 94", "quote": "Nenhuma companhia poderá funcionar sem que sejam arquivados e publicados seus atos constitutivos.", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm", "retrieved": "2026-07-20" },
+      { "basis": "Lei 6.404/1976, Art. 98, §2º", "quote": "A certidão dos atos constitutivos da companhia, passada pelo registro do comércio em que foram arquivados, será o documento hábil", "note": "The registro do comércio (Junta Comercial) issues the certidão of the archived constitutive acts.", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "INFERENCE: Exact field list of the S.A. Certidão Simplificada not fetched verbatim; grounded on standard Junta/DREI practice. Unlike a Ltda, the S.A. extract does NOT list current shareholders (see GESELLSCHAFTERLISTE row)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BR",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedade Anônima",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Current shareholders of an S.A. are not held by the Junta Comercial. They are recorded in company-held corporate books — the Livro de Registro de Ações Nominativas (Lei 6.404/76 art. 100, I), which records the shareholder's name and number of shares. The registry evidences only the founding subscribers at incorporation (the relação completa dos subscritores archived under art. 95, II), not the ongoing shareholder base. Therefore the current shareholder list is not provable from the registry.",
+    "evidence": [
+      { "basis": "Lei 6.404/1976, Art. 100, I (a)", "quote": "do nome do acionista e do número das suas ações;", "note": "The 'Registro de Ações Nominativas' book — held by the company, not the Junta — records shareholder names and shareholdings.", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm", "retrieved": "2026-07-20" },
+      { "basis": "Lei 6.404/1976, Art. 95, II", "quote": "a relação completa, autenticada pelos fundadores ou pelo presidente da assembléia, dos subscritores do capital social, com a qualificação, número das ações e o total da entrada de cada subscritor", "note": "Only the incorporation-time subscribers list is archived at the registro do comércio — this is a snapshot of founders, not the current shareholder register.", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Partial exception: the FOUNDING subscribers (art. 95, II) are provable from the archived constitutive acts (ata de constituição / assembleia), but these are not the current shareholders and go stale on any share transfer.",
+      "Companhias abertas (listed/CVM-registered) disclose relevant shareholders via CVM filings, but that is a separate securities-regulator source, not the Junta Comercial registry."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BR",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedade Anônima",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Full copy of the registered by-laws (and constitutive minutes)",
+    "documentLocal": "Estatuto Social (e ata de constituição / atas de assembleia) — inteiro teor arquivado na Junta Comercial",
+    "summary": "The constitution of an S.A. is the estatuto social, which must be archived at the registro do comércio / Junta Comercial (Lei 6.404/76 art. 95, I when constituted by assembleia; art. 96 when by escritura pública). It is a distinct archived document obtained as a certified full copy (inteiro teor), not on the simplified extract, so it is provable from the registry as an additional document.",
+    "evidence": [
+      { "basis": "Lei 6.404/1976, Art. 95, I", "quote": "um exemplar do estatuto social, assinado por todos os subscritores (artigo 88, § 1º) ou, se a subscrição houver sido pública, os originais do estatuto e do prospecto, assinados pelos fundadores", "note": "The estatuto social is filed at the registro do comércio (Junta Comercial).", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm", "retrieved": "2026-07-20" },
+      { "basis": "Lei 6.404/1976, Art. 96", "quote": "Se a companhia tiver sido constituída por escritura pública, bastará o arquivamento de certidão do instrumento.", "note": "Alternative constitution route — still archived at the registro do comércio.", "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Classed as additional because the full estatuto is retrieved as a separate certified copy (inteiro teor), not printed on the base Certidão Simplificada.",
+      "Statutory amendments (reforma estatutária) are approved by assembleia and filed at the Junta, so the current estatuto = last archived consolidated version."
+    ],
+    "confidence": "high"
+  }
+]

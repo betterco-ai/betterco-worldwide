@@ -1,0 +1,114 @@
+[
+  {
+    "jurisdiction": "CN",
+    "legalForm": "Youxian Zeren Gongsi",
+    "legalFormLocal": "有限责任公司",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certified enterprise register extract / registration archive particulars",
+    "documentLocal": "企业登记档案（登记信息 / 国家企业信用信息公示系统登记资料）",
+    "summary": "The enterprise register is maintained by the market-regulation authority (SAMR / local AMR) and current registered particulars are published via GSXT. A certified register extract / machine-read archive copy of the registration record is the base document evidencing name, domicile, registered capital, legal representative and business scope. This directly corresponds to the German Registerauszug.",
+    "evidence": [
+      { "basis": "市场主体登记管理条例 (Market Entities Registration Regulation) 第八条", "quote": "市场主体的一般登记事项包括：（一）名称；（二）主体类型；（三）经营范围；（四）住所或者主要经营场所；（五）注册资本或者出资额；（六）法定代表人、执行事务合伙人或者负责人姓名。", "note": "Defines the general registration items that constitute the register extract.", "url": "https://zh.wikisource.org/wiki/中华人民共和国市场主体登记管理条例", "retrieved": "2026-07-20" },
+      { "basis": "中华人民共和国公司法 (2023) 第三十二条", "quote": "通过国家企业信用信息公示系统向社会公示", "note": "Registration items are publicized via GSXT (quote is a verbatim fragment of the article; surrounding text confirms 公司登记事项 are publicized).", "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Wikisource is a mirror of the official statute; article wording verified against it but not re-fetched from gov.cn (SSL/404 blocked direct government-site fetches).",
+      "The publicly downloadable GSXT record is a data display; the DOCUMENT proof is the certified register extract / 企业机读档案登记资料 obtained from the AMR."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CN",
+    "legalForm": "Youxian Zeren Gongsi",
+    "legalFormLocal": "有限责任公司",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Registered shareholder particulars within the enterprise register extract",
+    "documentLocal": "股东（投资人）登记信息（企业登记档案）",
+    "summary": "For a 有限责任公司 the shareholders (股东) are a registered/filed particular under Art. 8 of the Registration Regulation and their names are publicized via GSXT under Company Law Art. 32. The certified register extract / registration archive therefore itself evidences the shareholders, so no separate document is needed. Note this is the registered investor list, not the company-kept 股东名册.",
+    "evidence": [
+      { "basis": "市场主体登记管理条例 第八条", "quote": "有限责任公司股东、股份有限公司发起人、非公司企业法人出资人的姓名或者名称", "note": "LLC shareholders' names are an express registration item.", "url": "https://zh.wikisource.org/wiki/中华人民共和国市场主体登记管理条例", "retrieved": "2026-07-20" },
+      { "basis": "中华人民共和国公司法 (2023) 第五十六条", "quote": "有限责任公司应当置备股东名册，记载下列事项：股东的姓名或者名称及住所；股东认缴和实缴的出资额、出资方式和出资日期……", "note": "The full 股东名册 is company-kept; however the registered shareholder identities overlap and are captured in the register extract itself.", "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "The statutory 股东名册 (register of members) is maintained BY THE COMPANY (Art. 56), not by the registry; what the registry proves is the registered/publicized shareholder list, which for an LLC is the functional equivalent for KYC purposes.",
+      "Subscribed/paid-in contribution amounts and equity-change history are publicized by the company itself via GSXT (Company Law Art. 40), so completeness depends on the company's own filings."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CN",
+    "legalForm": "Youxian Zeren Gongsi",
+    "legalFormLocal": "有限责任公司",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Filed articles of association (enterprise archive copy)",
+    "documentLocal": "公司章程（企业档案 / 登记提交材料）",
+    "summary": "Every company must adopt articles of association (公司章程) under Company Law Art. 5, and the 章程 is submitted at registration and held in the enterprise archive (企业档案) of the AMR. It is not part of the standard register extract nor published on GSXT, so it must be obtained as a separate archive document (企业档案查询). Hence it is provable from the registry, but only as an additional document.",
+    "evidence": [
+      { "basis": "中华人民共和国公司法 (2023) 第五条", "quote": "设立公司应当依法制定公司章程。公司章程对公司、股东、董事、监事、高级管理人员具有约束力。", "note": "Mandatory articles of association.", "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED: that the filed 章程 is retrievable via an 企业档案 request rests on standard AMR archive practice, not on a fetched article specifying archive access; direct government-site fetches were blocked.",
+      "Access to the 章程 in the enterprise archive is restricted in practice (typically the company, courts, lawyers with a case, or authorized parties); routine third-party KYC retrieval may require justification or an agent."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "CN",
+    "legalForm": "Gufen Youxian Gongsi",
+    "legalFormLocal": "股份有限公司",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certified enterprise register extract / registration archive particulars",
+    "documentLocal": "企业登记档案（登记信息 / 国家企业信用信息公示系统登记资料）",
+    "summary": "Identical registration regime to the LLC: the SAMR / local AMR maintains the enterprise register and publishes current particulars via GSXT. A certified register extract / machine-read archive copy is the base document evidencing the joint-stock company's registered particulars (name, capital, legal representative, business scope, promoters). This is the German Registerauszug equivalent.",
+    "evidence": [
+      { "basis": "市场主体登记管理条例 第八条", "quote": "市场主体的一般登记事项包括：（一）名称；（二）主体类型；（三）经营范围；（四）住所或者主要经营场所；（五）注册资本或者出资额；（六）法定代表人、执行事务合伙人或者负责人姓名。", "note": "Same general registration items apply to the joint-stock company.", "url": "https://zh.wikisource.org/wiki/中华人民共和国市场主体登记管理条例", "retrieved": "2026-07-20" },
+      { "basis": "中华人民共和国公司法 (2023) 第三十二条", "quote": "通过国家企业信用信息公示系统向社会公示", "note": "Registration items publicized via GSXT.", "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Wikisource mirror used for verbatim wording; government-site direct fetch blocked (SSL/404).",
+      "GSXT online display is structured data; the DOCUMENT proof is the certified extract / 企业机读档案登记资料 from the AMR."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CN",
+    "legalForm": "Gufen Youxian Gongsi",
+    "legalFormLocal": "股份有限公司",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a 股份有限公司 only the promoters/founders (发起人) are a registered/publicized particular (Registration Regulation Art. 8; Company Law Art. 32). The full body of general and public shareholders is held in the company's own register of shareholders (股东名册), which Company Law Art. 102 requires the company to prepare and keep at the company — it is not filed with or published by the registry. Therefore a complete member/shareholder list cannot be obtained from the registry.",
+    "evidence": [
+      { "basis": "中华人民共和国公司法 (2023) 第一百零二条", "quote": "股份有限公司应当制作股东名册并置备于公司。", "note": "Register of shareholders is prepared and kept by the company, not the registry.", "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)", "retrieved": "2026-07-20" },
+      { "basis": "市场主体登记管理条例 第八条", "quote": "有限责任公司股东、股份有限公司发起人、非公司企业法人出资人的姓名或者名称", "note": "Only 发起人 (promoters), not general shareholders, are a registration item for a JSC.", "url": "https://zh.wikisource.org/wiki/中华人民共和国市场主体登记管理条例", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "The promoters (发起人) ARE registry-provable via the base register extract, but they are not the full shareholder list; for a listed JSC the shareholder base changes continuously and sits with the company / securities depository (CSDC), never the enterprise register.",
+      "A 股东名册 can only be obtained from the company itself (or, for listed companies, via CSDC), so it is out of scope of registry sourcing."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CN",
+    "legalForm": "Gufen Youxian Gongsi",
+    "legalFormLocal": "股份有限公司",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Filed articles of association (enterprise archive copy)",
+    "documentLocal": "公司章程（企业档案 / 登记提交材料）",
+    "summary": "As for any company, a 股份有限公司 must adopt articles of association under Company Law Art. 5, and the 章程 is submitted at registration and retained in the enterprise archive (企业档案) of the AMR. It is neither in the standard register extract nor on GSXT, so it is obtainable only as a separate archive document via an 企业档案 request. Provable from the registry, but as an additional document.",
+    "evidence": [
+      { "basis": "中华人民共和国公司法 (2023) 第五条", "quote": "设立公司应当依法制定公司章程。公司章程对公司、股东、董事、监事、高级管理人员具有约束力。", "note": "Mandatory articles of association for all companies including JSCs.", "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED: retrievability via 企业档案 rests on standard AMR archive practice, not a fetched article on archive access; direct government-site fetches were blocked.",
+      "Archive access to the 章程 is restricted in practice; for a LISTED JSC the current articles are also publicly available via the stock-exchange disclosure system (e.g., cninfo/巨潮资讯), which may be an easier alternative source but is not the enterprise register."
+    ],
+    "confidence": "medium"
+  }
+]

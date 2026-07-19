@@ -289,6 +289,205 @@ No separate shareholder list exists. The shareholders are statutory content of t
 - WKO/USP checklists mention a founding 'Gesellschafterliste' attachment. It is court practice, not statutory (§ 9 Abs 2 GmbHG names only the Gesellschaftsvertrag and appointment documents), is never updated, and is NOT a §40 equivalent. The Hauptbuch entry is authoritative.
 
 
+## AU
+
+### Ltd — Gesellschafterliste
+
+**❌ Not provable**
+
+For a public company the member (shareholder) list is not held by ASIC. The obligation to notify ASIC of member-register particulars falls only on proprietary companies (Part 2C.2, ss 178A-178C); public companies are outside that regime and notify ASIC of no member changes. The complete statutory list is the company-held register of members (ss 168-169), open to inspection at the company (s 173), and - for listed companies - maintained by the share registry. It is not obtainable as an ASIC registry document, so a member list cannot be proved from the register.
+
+> **Corporations Act 2001 Part 2C.2 heading + s 178A(1) (Compilation No. 145, vol. 1 p.349)**
+> 
+> „A proprietary company must notify ASIC within the time determined under section 178D and in the prescribed form, if: (a) it is required to add or alter a particular in the register it maintains under section 169 ..."
+> 
+> Part 2C.2 is titled 'Notice by proprietary companies of changes to member register'; there is no equivalent duty on public companies, so ASIC carries no current member data for them.
+> 
+> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+
+> **Corporations Act 2001 s 168(1) and s 169(1),(3) (Compilation No. 145, vol. 1 p.337-338)**
+> 
+> „A company or registered scheme must set up and maintain: (a) a register of members (see section 169); ... The register of members must contain the following information about each member: (a) the member's name and address ... If the company has a share capital, the register must also show: ... (c) the shares held by each member; and (d) the class of shares ..."
+> 
+> The complete member list is the company-held register, not an ASIC-held document.
+> 
+> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+
+> **ASIC 'Guide to reading ASIC company extracts', Members note**
+> 
+> „For each class of shares issued by a proprietary company, ASIC records the details of the top twenty members of the class (based on shareholdings)."
+> 
+> Note is expressly limited to proprietary companies, confirming ASIC does not record members for public companies via this mechanism.
+> 
+> Source: <https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The register of members is inspectable/obtainable at the company itself (s 173) and, for listed companies, via the share registry / substantial-holder (Ch 6C) filings - but that is not the ASIC registry and not a certified full member list.
+- Historical member data may appear in old annual returns lodged before the 2003 annual-review reforms; this is not current and not a reliable member list.
+- INFERENCE: we treat the absence of a public-company member-notification duty (Part 2C.2 being proprietary-only) as meaning the ASIC extract's Members section is empty/limited for public companies; not tested against a live public-company extract.
+
+
+### Pty Ltd — Gesellschafterliste
+
+**✅ Provable**
+
+For a proprietary company the same ASIC company extract carries a 'Members' section listing each member's name and address with class, number held, beneficial-holding flag and paid status. This exists because only proprietary companies must notify ASIC of member-register changes (Part 2C.2, s 178A). So the shareholder list is proved by the same base document as the Registerauszug. However, ASIC records only the top 20 members per class (s 178B), so for a proprietary company with more than 20 members in a class the extract is not the complete list.
+
+**Document:** Current Company Extract, Members section — delivered as `Current Company Extract (ASIC) - 'Members' / 'Share Information' section`
+
+> **ASIC 'Guide to reading ASIC company extracts', 'Members' note (Share Information section)**
+> 
+> „For each class of shares issued by a proprietary company, ASIC records the details of the top twenty members of the class (based on shareholdings). The details of any other members holding the same number of shares as the twentieth ranked member will also be recorded by ASIC on the database."
+> 
+> Source: <https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf> (retrieved 2026-07-20)
+
+> **Corporations Act 2001 s 178A(1) (Compilation No. 145, vol. 1 p.349)**
+> 
+> „A proprietary company must notify ASIC within the time determined under section 178D and in the prescribed form, if: (a) it is required to add or alter a particular in the register it maintains under section 169; and (b) the particular is one required to be kept under any of the following: ... (iii) paragraph 169(3)(c) (the number of shares held by the member) ..."
+> 
+> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+
+> **Corporations Act 2001 s 178B 'Top 20 only' (Compilation No. 145, vol. 1 p.350)**
+> 
+> „If a proprietary company has more than 20 members, the company is only required to notify additions or alterations of particulars under section 178A that relate to a person who is, or as a result of the addition or alteration will become, a top 20 member of a class of the company."
+> 
+> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- TOP-20 LIMIT: ASIC only holds the top 20 members per class (s 178B). For a Pty Ltd with more than 20 members in a class the extract is incomplete; most Pty Ltds (capped at 50 non-employee members) commonly have <=20, so in practice the extract usually lists all members - but this is not guaranteed.
+- The complete statutory shareholder list is the company-held register of members (ss 168-169), inspectable at the company (s 173), not lodged with ASIC.
+- The member data on the extract may lag reality (notified within statutory time, s 178D) and is 'derived from ASIC's database', not a certified register of members.
+- INFERENCE: classifying the Members section as the 'base document' (same extract) rather than a separately ordered document is our reading; ASIC sells it as part of the one extract, not as an add-on.
+
+
+### Ltd — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A public company that has a constitution must lodge a copy with ASIC within 14 days of the special resolution adopting it (and lodge any later modification), under s 136(5). The lodged constitution is therefore held by ASIC and can be ordered as a separate document (it does not appear on the company extract itself, which only lists it among lodged documents). This makes the constitution provable via an additional registry document for public companies.
+
+**Document:** Constitution (lodged with ASIC under s 136(5)) — delivered as `Company constitution (lodged copy), obtained via ASIC 'copies of documents'`
+
+> **Corporations Act 2001 s 136(5) (Compilation No. 145, vol. 1 p.298)**
+> 
+> „A public company must lodge with ASIC a copy of a special resolution adopting, modifying or repealing its constitution within 14 days after it is passed. The company must also lodge with ASIC within that period: (a) if the company adopts a constitution--a copy of that constitution; or (b) if the company modifies its constitution--a copy of that modification."
+> 
+> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+
+> **Corporations Act 2001 s 136(1) (Compilation No. 145, vol. 1 p.297)**
+> 
+> „A company adopts a constitution: (a) on registration--if each person specified in the application for the company's registration as a person who consents to become a member agrees in writing to the terms of a constitution before the application is lodged; or (b) after registration--if the company passes a special resolution adopting a constitution or a court order is made under section 233 that requires the company to adopt the constitution."
+> 
+> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+
+> **ASIC company extract 'Documents' section (Guide, p.10)**
+> 
+> „A list of all documents lodged for this organisation or business name."
+> 
+> The extract lists lodged documents (with document numbers); the constitution copy itself is obtained through ASIC's separate 'copies of documents' service, not printed on the extract.
+> 
+> Source: <https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Provable only where the public company has actually adopted a constitution. A public company may be governed solely by replaceable rules (s 135), in which case no constitution exists or is lodged.
+- The constitution is an 'additional' ordered document, not part of the base extract; retrieval depends on ASIC having a copy on file and the copy being available (the extract flags where a lodged document copy 'is not yet available').
+- UNVERIFIED: exact current ASIC product name/fee for ordering a lodged constitution copy was not fetched; the lodgement duty (s 136(5)) is the load-bearing, verified fact.
+
+
+### Pty Ltd — Gesellschaftsvertrag
+
+**❌ Not provable**
+
+A proprietary company is not required to have or lodge a constitution: its internal management may be governed by the replaceable rules in the Corporations Act (s 135), by a constitution, or a combination (s 134); the sole-director/sole-shareholder Pty Ltd is governed by tailored rules with replaceable rules disapplied. The duty to lodge a constitution with ASIC under s 136(5) falls only on public companies (and Pty companies applying to convert to public). Therefore ASIC generally does not hold a proprietary company's constitution and it cannot be obtained as a registry document.
+
+> **Corporations Act 2001 s 136(5) (Compilation No. 145, vol. 1 p.298)**
+> 
+> „A public company must lodge with ASIC a copy of a special resolution adopting, modifying or repealing its constitution within 14 days after it is passed. The company must also lodge with ASIC within that period: (a) if the company adopts a constitution--a copy of that constitution; or (b) if the company modifies its constitution--a copy of that modification."
+> 
+> Lodgement duty is expressed for 'a public company' only (plus Pty companies mid-conversion to public); no equivalent duty on ordinary proprietary companies.
+> 
+> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+
+> **Corporations Act 2001 s 135(1) (Compilation No. 145, vol. 1 p.296-297)**
+> 
+> „The section or subsection does not apply to a proprietary company while the same person is both its sole director and sole shareholder."
+> 
+> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+
+> **ASIC 'Constitution and replaceable rules' page**
+> 
+> „The replaceable rules do not apply to a proprietary company with a sole director who is also the sole shareholder."
+> 
+> Also states a company 'must be governed by either a constitution or a set of rules called the replaceable rules'.
+> 
+> Source: <https://asic.gov.au/for-business/registering-a-company/steps-to-register-a-company/constitution-and-replaceable-rules/> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- If a Pty Ltd adopts a constitution it holds it privately and must supply a copy to a member on request within 7 days (s 139) - company-held, not a registry document.
+- Edge cases where ASIC may hold a Pty Ltd constitution: ASIC can direct lodgement of a consolidated constitution (s 138), and a Pty company applying to convert to public must lodge under the s 136(5) tail - these are exceptions, not the norm.
+- Where the company relies wholly on replaceable rules there is no 'constitution' document at all; the governing terms are the Act's provisions themselves.
+
+
+### Ltd — Registerauszug
+
+**✅ Provable**
+
+The same ASIC 'Current Company Extract' (s 1274A) is issued for public companies and is the register extract of current registered particulars: organisation details, status, company type/class (public, limited by shares), registered office, officeholders and share structure. It is the direct equivalent of a Registerauszug for a public company and is a single base document.
+
+**Document:** Current Company Extract / Current & Historical Company Extract — delivered as `Current Company Extract (ASIC)`
+
+> **ASIC 'Guide to reading ASIC company extracts' (extract issued under s 1274A)**
+> 
+> „This extract contains information derived from the Australian Securities and Investment Commission's (ASIC) database under section 1274A of the Corporations Act 2001."
+> 
+> Same extract product applies to all companies; company type field distinguishes 'Australian public company'.
+> 
+> Source: <https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf> (retrieved 2026-07-20)
+
+> **ASIC register search page / product listing**
+> 
+> Company and organisation register; current company extract fee $10.
+> 
+> Source: <https://asic.gov.au/online-services/search-asic-registers/company-and-organisation-registers/> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Same product-naming caveat as the Pty Ltd row: labelled 'Current Company Extract', not 'Registerauszug'.
+- UNVERIFIED against a public-company sample extract specifically: our public-vs-proprietary distinction is confirmed for the Members section (below) but the sample PDF ASIC publishes is a Pty Ltd; the organisation-details/officeholder/share-structure sections are identical products.
+
+
+### Pty Ltd — Registerauszug
+
+**✅ Provable**
+
+ASIC maintains the national companies register and issues a paid 'Current Company Extract' (and 'Current & Historical Company Extract') derived from its database under s 1274A of the Corporations Act 2001. This extract is the register extract of current registered particulars: organisation details, status, company type/class, registered office, officeholders and share structure. It is the direct Australian equivalent of a Registerauszug and is a single base document.
+
+**Document:** Current Company Extract / Current & Historical Company Extract — delivered as `Current Company Extract (ASIC)`
+
+> **ASIC 'Guide to reading ASIC company extracts', cover/Organisation Details pages**
+> 
+> „This extract contains information derived from the Australian Securities and Investment Commission's (ASIC) database under section 1274A of the Corporations Act 2001."
+> 
+> Sample extract header for 'ASIC Company Pty Ltd'; shows Company type 'Australian proprietary company', Class 'Limited by shares'.
+> 
+> Source: <https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf> (retrieved 2026-07-20)
+
+> **ASIC register search page / product listing**
+> 
+> Lists 'current company extract - fee $10' and links the sample PDF (current-company-extract-paid-feb-2026.pdf).
+> 
+> Source: <https://asic.gov.au/online-services/search-asic-registers/company-and-organisation-registers/> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Product name is 'Current Company Extract' / 'Current & Historical Company Extract'; ASIC issues no document literally titled 'Registerauszug'.
+- The extract is a database-derived report under s 1274A, not a certified register 'page'; ASIC also issues a separate 'Certificate of Registration', which is not the particulars extract.
+
+
 ## BE
 
 ### BV — Gesellschafterliste
@@ -398,6 +597,179 @@ Bermuda's Registrar of Companies does not issue a line-item 'register extract' l
 - INFERENCE: Bermuda has NO true 'register extract' — the Registrar issues certificates (Incorporation, Compliance/good standing), not a listing of current directors/members/capital.
 - The Certificate of Compliance confirms EXISTENCE and GOOD STANDING; it does not itself list shareholders or (fully) directors.
 - UNVERIFIED this session: verbatim Registrar wording could not be retrieved (gov.bm SPA; search budget exhausted).
+
+
+## BR
+
+### Ltda — Gesellschafterliste
+
+**✅ Provable**
+
+For a Ltda the members (sócios) and the quota of each in the share capital are mandatory contents of the registered contrato social (CC art. 997, IV, applied to the Ltda by art. 1.054) and are carried into the Junta's certified extract, which lists the current sócios and their participation. The member list is therefore provable from the Junta register. If the extract's breakdown is insufficient, the full authoritative list of quotas is in the registered contrato social / última alteração (an additional archived document), which is independently provable.
+
+**Document:** Certidão Simplificada — relação de sócios e participação no capital — delivered as `Simplified certificate listing the sócios and their capital participation (member list embedded in the register extract)`
+
+> **Código Civil, Art. 997, IV**
+> 
+> „a quota de cada sócio no capital social, e o modo de realizá-la;"
+> 
+> Art. 997 caput: the contract must mention, inter alia (inciso I) 'nome, nacionalidade, estado civil, profissão e residência dos sócios'.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm> (retrieved 2026-07-20)
+
+> **Código Civil, Art. 1.054**
+> 
+> „O contrato mencionará, no que couber, as indicações do art. 997, e, se for o caso, a firma social."
+> 
+> Extends the art. 997 mandatory contents (sócios + quotas) to the sociedade limitada.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- INFERENCE: That the Certidão Simplificada itself lists each sócio's capital participation was not fetched verbatim; it rests on established Junta practice. If a caller requires certified per-partner quota amounts, treat the registered contrato social / última alteração (additional document) as the definitive source — its status would be proved_by_additional_document.
+- Ownership updates via cessão de quotas take effect against the company and third parties only upon averbação of the instrument at the Junta (CC art. 1.057, parágrafo único), so the register reflects a member list only as current as the last archived alteração.
+
+
+### S.A. — Gesellschafterliste
+
+**❌ Not provable**
+
+Current shareholders of an S.A. are not held by the Junta Comercial. They are recorded in company-held corporate books — the Livro de Registro de Ações Nominativas (Lei 6.404/76 art. 100, I), which records the shareholder's name and number of shares. The registry evidences only the founding subscribers at incorporation (the relação completa dos subscritores archived under art. 95, II), not the ongoing shareholder base. Therefore the current shareholder list is not provable from the registry.
+
+> **Lei 6.404/1976, Art. 100, I (a)**
+> 
+> „do nome do acionista e do número das suas ações;"
+> 
+> The 'Registro de Ações Nominativas' book — held by the company, not the Junta — records shareholder names and shareholdings.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm> (retrieved 2026-07-20)
+
+> **Lei 6.404/1976, Art. 95, II**
+> 
+> „a relação completa, autenticada pelos fundadores ou pelo presidente da assembléia, dos subscritores do capital social, com a qualificação, número das ações e o total da entrada de cada subscritor"
+> 
+> Only the incorporation-time subscribers list is archived at the registro do comércio — this is a snapshot of founders, not the current shareholder register.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Partial exception: the FOUNDING subscribers (art. 95, II) are provable from the archived constitutive acts (ata de constituição / assembleia), but these are not the current shareholders and go stale on any share transfer.
+- Companhias abertas (listed/CVM-registered) disclose relevant shareholders via CVM filings, but that is a separate securities-regulator source, not the Junta Comercial registry.
+
+
+### Ltda — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The constitutive act of a Ltda is the contrato social, which must be filed at the Junta Comercial (CC art. 1.150; art. 998/999 on inscrição and averbação of every modification). It is a distinct archived document — obtained as a certified full copy (inteiro teor), not printed on the simplified extract — so it is provable from the registry as an additional document.
+
+**Document:** Contrato Social (e última alteração contratual / consolidação) — inteiro teor arquivado na Junta Comercial — delivered as `Full copy of the registered articles of association (and consolidated amendment)`
+
+> **Código Civil, Art. 997 (caput)**
+> 
+> „A sociedade constitui-se mediante contrato escrito, particular ou público, que, além de cláusulas estipuladas pelas partes, mencionará:"
+> 
+> The contrato social is the constitutive instrument.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm> (retrieved 2026-07-20)
+
+> **Código Civil, Art. 999, parágrafo único**
+> 
+> „Qualquer modificação do contrato social será averbada, cumprindo-se as formalidades previstas no artigo antecedente."
+> 
+> Confirms amendments (alterações) are also registered — so the registered contrato + alterações are the full constitution.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Classed as additional because the full contrato social is retrieved as a separate certified copy (inteiro teor) rather than appearing on the base Certidão Simplificada.
+
+
+### S.A. — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The constitution of an S.A. is the estatuto social, which must be archived at the registro do comércio / Junta Comercial (Lei 6.404/76 art. 95, I when constituted by assembleia; art. 96 when by escritura pública). It is a distinct archived document obtained as a certified full copy (inteiro teor), not on the simplified extract, so it is provable from the registry as an additional document.
+
+**Document:** Estatuto Social (e ata de constituição / atas de assembleia) — inteiro teor arquivado na Junta Comercial — delivered as `Full copy of the registered by-laws (and constitutive minutes)`
+
+> **Lei 6.404/1976, Art. 95, I**
+> 
+> „um exemplar do estatuto social, assinado por todos os subscritores (artigo 88, § 1º) ou, se a subscrição houver sido pública, os originais do estatuto e do prospecto, assinados pelos fundadores"
+> 
+> The estatuto social is filed at the registro do comércio (Junta Comercial).
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm> (retrieved 2026-07-20)
+
+> **Lei 6.404/1976, Art. 96**
+> 
+> „Se a companhia tiver sido constituída por escritura pública, bastará o arquivamento de certidão do instrumento."
+> 
+> Alternative constitution route — still archived at the registro do comércio.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Classed as additional because the full estatuto is retrieved as a separate certified copy (inteiro teor), not printed on the base Certidão Simplificada.
+- Statutory amendments (reforma estatutária) are approved by assembleia and filed at the Junta, so the current estatuto = last archived consolidated version.
+
+
+### Ltda — Registerauszug
+
+**✅ Provable**
+
+A sociedade empresária Ltda is bound to the Registro Público de Empresas Mercantis kept by the state Junta Comercial (CC art. 1.150). The Junta issues a Certidão Simplificada — the certified register extract of the currently archived particulars (firm name, NIRE, CNPJ, seat, capital, sócios and administradores). This is the base register-extract document, equivalent to the German Registerauszug.
+
+**Document:** Certidão Simplificada (ficha cadastral) — delivered as `Simplified certificate / register extract from the Junta Comercial`
+
+> **Código Civil (Lei 10.406/2002), Art. 1.150**
+> 
+> „O empresário e a sociedade empresária vinculam-se ao Registro Público de Empresas Mercantis a cargo das Juntas Comerciais, e a sociedade simples ao Registro Civil das Pessoas Jurídicas"
+> 
+> Establishes the Junta Comercial as the mercantile register for the sociedade empresária; the certidão is its extract.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm> (retrieved 2026-07-20)
+
+> **DREI (Departamento Nacional de Registro Empresarial e Integração) — coordinator of the Juntas Comerciais**
+> 
+> The Certidão Simplificada / ficha cadastral is the standard certified extract issued by the Juntas Comerciais under DREI normalization (IN DREI 81/2020). Verbatim content of the certidão model was not fetched.
+> 
+> Source: <https://www.gov.br/empresas-e-negocios/pt-br/drei> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- INFERENCE: The specific field list of the Certidão Simplificada (that it enumerates sócios and capital) was not fetched verbatim from a DREI/Junta source; grounded on established Junta Comercial practice under IN DREI 81/2020, not on a fetched quote.
+
+
+### S.A. — Registerauszug
+
+**✅ Provable**
+
+A companhia (S.A.) cannot operate without its constitutive acts being archived (Lei 6.404/76 art. 94) at the registro do comércio / Junta Comercial. The Junta issues the Certidão Simplificada as the certified extract of the currently registered particulars (firm name, NIRE, CNPJ, seat, capital, directors). This is the base register-extract document.
+
+**Document:** Certidão Simplificada (ficha cadastral) — delivered as `Simplified certificate / register extract from the Junta Comercial`
+
+> **Lei 6.404/1976, Art. 94**
+> 
+> „Nenhuma companhia poderá funcionar sem que sejam arquivados e publicados seus atos constitutivos."
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm> (retrieved 2026-07-20)
+
+> **Lei 6.404/1976, Art. 98, §2º**
+> 
+> „A certidão dos atos constitutivos da companhia, passada pelo registro do comércio em que foram arquivados, será o documento hábil"
+> 
+> The registro do comércio (Junta Comercial) issues the certidão of the archived constitutive acts.
+> 
+> Source: <https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- INFERENCE: Exact field list of the S.A. Certidão Simplificada not fetched verbatim; grounded on standard Junta/DREI practice. Unlike a Ltda, the S.A. extract does NOT list current shareholders (see GESELLSCHAFTERLISTE row).
 
 
 ## BS
@@ -590,6 +962,166 @@ The Registrar maintains the Register of International Business Companies (IBC Ac
 - Quotes from the official Bahamas On-line Legislation portal (consolidated LRO edition); live registry-search UX not tested.
 
 
+## CA
+
+### CBCA corporation — Gesellschafterliste
+
+**❌ Not provable**
+
+In Canada shareholders are not filed with or held by the public registry. Under CBCA s.50 the corporation itself maintains a securities register listing its security holders, kept at its registered office (or by an agent) and open only to shareholders/creditors — it is never sent to Corporations Canada. The separate register of individuals with significant control (ISC) is also corporation-kept (s.21.1); although some ISC data became publicly searchable in 2024 (s.21.303), that is a beneficial-ownership data query about 25%+ individuals, not a document and not a shareholder list. No registry document evidences the shareholders.
+
+> **CBCA s.50(1) — securities register**
+> 
+> „A corporation shall maintain a securities register in which it records the securities issued by it in registered form, showing with respect to each class or series of securities (a) the names, alphabetically arranged, and the latest known address of each person who is or has been a security holder; (b) the number of securities held by each security holder; and (c) the date and particulars of the issue and transfer of each security."
+> 
+> Register is company-held, not filed with the Director.
+> 
+> Source: <https://laws-lois.justice.gc.ca/eng/acts/C-44/page-8.html> (retrieved 2026-07-20)
+
+> **CBCA s.21.1 — register of individuals with significant control**
+> 
+> „The corporation shall prepare and maintain, at its registered office or at any other place in Canada designated by the directors, a register"
+> 
+> ISC register is corporation-maintained, not a shareholder list.
+> 
+> Source: <https://laws-lois.justice.gc.ca/eng/acts/C-44/page-3.html> (retrieved 2026-07-20)
+
+> **CBCA s.21.303(1) — public disclosure of ISC information**
+> 
+> „The Director shall make available to the public the following information sent to the Director under section 21.21 for each individual with significant control"
+> 
+> Confirms federal ISC data is now partly public — but it is structured data on beneficial owners, not a document and not a Gesellschafterliste.
+> 
+> Source: <https://laws-lois.justice.gc.ca/eng/acts/C-44/page-4.html> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The federal ISC register is now partly public — CBCA s.21.303 (in force since 22 Jan 2024) makes certain ISC particulars publicly searchable. This does NOT change the status: ISC data is a beneficial-ownership query on 25%+ individuals, not a document, and not equivalent to a full shareholder list.
+- The securities/shareholder register (s.50) is company-held and is not obtainable from any registry.
+
+
+### OBCA corporation — Gesellschafterliste
+
+**❌ Not provable**
+
+As with federal corporations, Ontario shareholders are not filed with the registry. Under OBCA s.140 the corporation maintains its own securities/ownership register listing security holders at its registered office; it is never delivered to the Ontario Business Registry. The OBCA transparency register of individuals with significant control (s.140.2, in force since 1 Jan 2023) is likewise corporation-kept and — unlike the federal ISC register — is NOT public: it is accessible only to specified investigative, tax and regulatory authorities. No registry document evidences the shareholders.
+
+> **OBCA s.140 — records (securities/ownership register maintained by the corporation)**
+> 
+> Statute text not fetchable (Ontario e-Laws JS-rendered, CanLII 403). OBCA s.140 requires the corporation to keep a register of ownership interests/security holders at its registered office; not filed with the registry. Parallel to CBCA s.50.
+> 
+> Source: <https://www.ontario.ca/laws/statute/90b16> (retrieved 2026-07-20)
+
+> **OBCA s.140.2/140.3 — register of individuals with significant control and access**
+> 
+> Ontario's transparency register is kept by the corporation and disclosable only to police, the CRA/Ontario tax authorities and specified regulators; it is not open to the public. Statutory text not fetchable.
+> 
+> Source: <https://www.ontario.ca/laws/statute/90b16> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- INFERENCE / UNVERIFIED verbatim: OBCA s.140 and s.140.2 text could not be retrieved (Ontario e-Laws is JS-rendered and returned only a header; CanLII returned HTTP 403). Grounded on the OBCA scheme, which is closely modelled on the CBCA, and on Ontario's implementation of a non-public transparency register.
+- Unlike the federal ISC register, Ontario did NOT make its transparency register public — this reinforces the not_provable status.
+- Securities/shareholder register is company-held and not obtainable from the registry.
+
+
+### CBCA corporation — Gesellschaftsvertrag
+
+**✅ Provable**
+
+A federal corporation's constituting document is its Articles of Incorporation, which the incorporator must send to the Director; the Director then issues a Certificate of Incorporation (CBCA ss.7-8). The articles are on the public record at Corporations Canada and a copy/certified copy can be obtained. They are the Gesellschaftsvertrag equivalent. By-laws, by contrast, are internal and are NOT filed with Corporations Canada.
+
+**Document:** Articles of Incorporation (with Certificate of Incorporation) — delivered as `Articles of Incorporation`
+
+> **CBCA s.7 — delivery of articles**
+> 
+> „An incorporator shall send to the Director articles of incorporation and the documents required by sections 19 and 106."
+> 
+> Articles are filed with the Director.
+> 
+> Source: <https://laws-lois.justice.gc.ca/eng/acts/C-44/page-2.html> (retrieved 2026-07-20)
+
+> **CBCA s.8(1) — certificate of incorporation**
+> 
+> „on receipt of articles of incorporation, the Director shall issue a certificate of incorporation in accordance with section 262."
+> 
+> Source: <https://laws-lois.justice.gc.ca/eng/acts/C-44/page-2.html> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Scope note: 'constitution' here = the filed Articles of Incorporation (public). Corporate by-laws are internal and NOT part of the public registry record for CBCA corporations.
+- Articles of amendment (s.27) would be the 'additional document' route for later changes; the base articles alone establish the constitution.
+
+
+### OBCA corporation — Gesellschaftsvertrag
+
+**✅ Provable**
+
+An OBCA corporation's constituting document is its Articles of Incorporation, sent to the Director under OBCA s.5, upon which a Certificate of Incorporation is endorsed/issued (s.6). The articles are on the public record and copies/certified copies can be obtained through the Ontario Business Registry. They are the Gesellschaftsvertrag equivalent; by-laws are internal and not filed.
+
+**Document:** Articles of Incorporation (with Certificate of Incorporation), Ontario Business Registry — delivered as `Articles of Incorporation`
+
+> **OBCA s.5 — articles of incorporation sent to the Director; s.6 — certificate of incorporation**
+> 
+> Statute text not fetchable (Ontario e-Laws JS-rendered; CanLII 403). OBCA s.5 requires articles to be sent to the Director; s.6 provides for the certificate. Parallel to CBCA ss.7-8. Copies obtainable via Ontario Business Registry.
+> 
+> Source: <https://www.ontario.ca/laws/statute/90b16> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- UNVERIFIED verbatim: OBCA s.5/s.6 text could not be retrieved (Ontario e-Laws JS-rendered; CanLII HTTP 403). Grounded on the OBCA scheme and its parallel to CBCA ss.7-8.
+- Scope note: 'constitution' = filed Articles of Incorporation (public); corporate by-laws are internal and not on the public registry record.
+- Later changes would be evidenced by Articles of Amendment (additional document); the base articles establish the constitution.
+
+
+### CBCA corporation — Registerauszug
+
+**✅ Provable**
+
+Corporations Canada (the Director under the CBCA) maintains the federal register and publishes each corporation's current registered particulars — legal name, corporation number, registered office, directors, status and annual-return history — which anyone can view and download. A formal register extract can be ordered as a Certificate of Compliance (or Certificate of Existence). This public corporate record is the register-extract equivalent; it does not, however, show shareholders.
+
+**Document:** Corporation Information (Corporations Canada online record) / Certificate of Compliance — delivered as `Federal corporate record / Certificate of Compliance`
+
+> **CBCA s.263 (Director to maintain records) and s.266 (public examination of documents sent to the Director)**
+> 
+> Section text not fetched verbatim; grounded on statutory scheme. The Director keeps the public register and documents sent to the Director are open to public examination on payment of a fee.
+> 
+> Source: <https://laws-lois.justice.gc.ca/eng/acts/C-44/> (retrieved 2026-07-20)
+
+> **Corporations Canada — Search for a federal corporation (public database)**
+> 
+> Official search tool exposing the federal corporate record; page returned 404 to the automated fetcher but is the canonical public source.
+> 
+> Source: <https://ised-isde.canada.ca/cc/lgcy/fdrlCrpSrch.html> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- INFERENCE: There is no single statutory document literally titled 'register extract' for federal corporations; the public 'Corporation Information' record plus an orderable Certificate of Compliance together serve as the Registerauszug equivalent.
+- The federal corporate record shows directors/officers and registered office, NOT shareholders.
+- Section 263/266 text was not fetched verbatim (empty quote); grounded on the CBCA scheme.
+
+
+### OBCA corporation — Registerauszug
+
+**✅ Provable**
+
+The Ontario Business Registry (administered by ServiceOntario) issues a Corporation Profile Report giving the current registered particulars of an OBCA corporation — legal name, Ontario Corporation Number, registered/head office, status, incorporation date and current directors/officers. A certified version is available. This is the register-extract equivalent; it does not list shareholders.
+
+**Document:** Corporation Profile Report / Certified Corporation Profile Report (Ontario Business Registry) — delivered as `Corporation Profile Report`
+
+> **OBCA / Ontario Business Registry — Corporation Profile Report (ServiceOntario)**
+> 
+> Standard Ontario register-extract product. Official ontario.ca page could not be fetched (JS-rendered / returned 404 to fetcher); grounded on the established Ontario Business Registry product and OBCA public-record scheme.
+> 
+> Source: <https://www.ontario.ca/page/ontario-business-registry> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Could not fetch official ontario.ca / ServiceOntario page verbatim (JS-rendered site, fetcher blocked); grounded on knowledge of the Corporation Profile Report product — hence medium confidence.
+- The Corporation Profile Report lists directors/officers and registered office, NOT shareholders.
+- Empty evidence quote: no verbatim official text could be retrieved.
+
+
 ## CH
 
 ### AG — Gesellschafterliste
@@ -646,6 +1178,170 @@ No separate list. Members are statutory content of the register extract itself.
 **Caveats:**
 
 - Not cantonal: register content is set federally (OR + HRegV); cantonal offices only administer. Zefix is the central index.
+
+
+## CN
+
+### Gufen Youxian Gongsi — Gesellschafterliste
+
+**❌ Not provable**
+
+For a 股份有限公司 only the promoters/founders (发起人) are a registered/publicized particular (Registration Regulation Art. 8; Company Law Art. 32). The full body of general and public shareholders is held in the company's own register of shareholders (股东名册), which Company Law Art. 102 requires the company to prepare and keep at the company — it is not filed with or published by the registry. Therefore a complete member/shareholder list cannot be obtained from the registry.
+
+> **中华人民共和国公司法 (2023) 第一百零二条**
+> 
+> „股份有限公司应当制作股东名册并置备于公司。"
+> 
+> Register of shareholders is prepared and kept by the company, not the registry.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-20)
+
+> **市场主体登记管理条例 第八条**
+> 
+> „有限责任公司股东、股份有限公司发起人、非公司企业法人出资人的姓名或者名称"
+> 
+> Only 发起人 (promoters), not general shareholders, are a registration item for a JSC.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国市场主体登记管理条例> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The promoters (发起人) ARE registry-provable via the base register extract, but they are not the full shareholder list; for a listed JSC the shareholder base changes continuously and sits with the company / securities depository (CSDC), never the enterprise register.
+- A 股东名册 can only be obtained from the company itself (or, for listed companies, via CSDC), so it is out of scope of registry sourcing.
+
+
+### Youxian Zeren Gongsi — Gesellschafterliste
+
+**✅ Provable**
+
+For a 有限责任公司 the shareholders (股东) are a registered/filed particular under Art. 8 of the Registration Regulation and their names are publicized via GSXT under Company Law Art. 32. The certified register extract / registration archive therefore itself evidences the shareholders, so no separate document is needed. Note this is the registered investor list, not the company-kept 股东名册.
+
+**Document:** 股东（投资人）登记信息（企业登记档案） — delivered as `Registered shareholder particulars within the enterprise register extract`
+
+> **市场主体登记管理条例 第八条**
+> 
+> „有限责任公司股东、股份有限公司发起人、非公司企业法人出资人的姓名或者名称"
+> 
+> LLC shareholders' names are an express registration item.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国市场主体登记管理条例> (retrieved 2026-07-20)
+
+> **中华人民共和国公司法 (2023) 第五十六条**
+> 
+> „有限责任公司应当置备股东名册，记载下列事项：股东的姓名或者名称及住所；股东认缴和实缴的出资额、出资方式和出资日期……"
+> 
+> The full 股东名册 is company-kept; however the registered shareholder identities overlap and are captured in the register extract itself.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The statutory 股东名册 (register of members) is maintained BY THE COMPANY (Art. 56), not by the registry; what the registry proves is the registered/publicized shareholder list, which for an LLC is the functional equivalent for KYC purposes.
+- Subscribed/paid-in contribution amounts and equity-change history are publicized by the company itself via GSXT (Company Law Art. 40), so completeness depends on the company's own filings.
+
+
+### Gufen Youxian Gongsi — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+As for any company, a 股份有限公司 must adopt articles of association under Company Law Art. 5, and the 章程 is submitted at registration and retained in the enterprise archive (企业档案) of the AMR. It is neither in the standard register extract nor on GSXT, so it is obtainable only as a separate archive document via an 企业档案 request. Provable from the registry, but as an additional document.
+
+**Document:** 公司章程（企业档案 / 登记提交材料） — delivered as `Filed articles of association (enterprise archive copy)`
+
+> **中华人民共和国公司法 (2023) 第五条**
+> 
+> „设立公司应当依法制定公司章程。公司章程对公司、股东、董事、监事、高级管理人员具有约束力。"
+> 
+> Mandatory articles of association for all companies including JSCs.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: retrievability via 企业档案 rests on standard AMR archive practice, not a fetched article on archive access; direct government-site fetches were blocked.
+- Archive access to the 章程 is restricted in practice; for a LISTED JSC the current articles are also publicly available via the stock-exchange disclosure system (e.g., cninfo/巨潮资讯), which may be an easier alternative source but is not the enterprise register.
+
+
+### Youxian Zeren Gongsi — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+Every company must adopt articles of association (公司章程) under Company Law Art. 5, and the 章程 is submitted at registration and held in the enterprise archive (企业档案) of the AMR. It is not part of the standard register extract nor published on GSXT, so it must be obtained as a separate archive document (企业档案查询). Hence it is provable from the registry, but only as an additional document.
+
+**Document:** 公司章程（企业档案 / 登记提交材料） — delivered as `Filed articles of association (enterprise archive copy)`
+
+> **中华人民共和国公司法 (2023) 第五条**
+> 
+> „设立公司应当依法制定公司章程。公司章程对公司、股东、董事、监事、高级管理人员具有约束力。"
+> 
+> Mandatory articles of association.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: that the filed 章程 is retrievable via an 企业档案 request rests on standard AMR archive practice, not on a fetched article specifying archive access; direct government-site fetches were blocked.
+- Access to the 章程 in the enterprise archive is restricted in practice (typically the company, courts, lawyers with a case, or authorized parties); routine third-party KYC retrieval may require justification or an agent.
+
+
+### Gufen Youxian Gongsi — Registerauszug
+
+**✅ Provable**
+
+Identical registration regime to the LLC: the SAMR / local AMR maintains the enterprise register and publishes current particulars via GSXT. A certified register extract / machine-read archive copy is the base document evidencing the joint-stock company's registered particulars (name, capital, legal representative, business scope, promoters). This is the German Registerauszug equivalent.
+
+**Document:** 企业登记档案（登记信息 / 国家企业信用信息公示系统登记资料） — delivered as `Certified enterprise register extract / registration archive particulars`
+
+> **市场主体登记管理条例 第八条**
+> 
+> „市场主体的一般登记事项包括：（一）名称；（二）主体类型；（三）经营范围；（四）住所或者主要经营场所；（五）注册资本或者出资额；（六）法定代表人、执行事务合伙人或者负责人姓名。"
+> 
+> Same general registration items apply to the joint-stock company.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国市场主体登记管理条例> (retrieved 2026-07-20)
+
+> **中华人民共和国公司法 (2023) 第三十二条**
+> 
+> „通过国家企业信用信息公示系统向社会公示"
+> 
+> Registration items publicized via GSXT.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Wikisource mirror used for verbatim wording; government-site direct fetch blocked (SSL/404).
+- GSXT online display is structured data; the DOCUMENT proof is the certified extract / 企业机读档案登记资料 from the AMR.
+
+
+### Youxian Zeren Gongsi — Registerauszug
+
+**✅ Provable**
+
+The enterprise register is maintained by the market-regulation authority (SAMR / local AMR) and current registered particulars are published via GSXT. A certified register extract / machine-read archive copy of the registration record is the base document evidencing name, domicile, registered capital, legal representative and business scope. This directly corresponds to the German Registerauszug.
+
+**Document:** 企业登记档案（登记信息 / 国家企业信用信息公示系统登记资料） — delivered as `Certified enterprise register extract / registration archive particulars`
+
+> **市场主体登记管理条例 (Market Entities Registration Regulation) 第八条**
+> 
+> „市场主体的一般登记事项包括：（一）名称；（二）主体类型；（三）经营范围；（四）住所或者主要经营场所；（五）注册资本或者出资额；（六）法定代表人、执行事务合伙人或者负责人姓名。"
+> 
+> Defines the general registration items that constitute the register extract.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国市场主体登记管理条例> (retrieved 2026-07-20)
+
+> **中华人民共和国公司法 (2023) 第三十二条**
+> 
+> „通过国家企业信用信息公示系统向社会公示"
+> 
+> Registration items are publicized via GSXT (quote is a verbatim fragment of the article; surrounding text confirms 公司登记事项 are publicized).
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Wikisource is a mirror of the official statute; article wording verified against it but not re-fetched from gov.cn (SSL/404 blocked direct government-site fetches).
+- The publicly downloadable GSXT record is a data display; the DOCUMENT proof is the certified register extract / 企业机读档案登记资料 obtained from the AMR.
 
 
 ## CY
@@ -4727,6 +5423,183 @@ A GBC is incorporated/registered under the Companies Act 2001 and is on the CBRD
 - Assumes the GBC is a private company (near-universal case).
 
 
+## MX
+
+### S. de R.L. de C.V. — Gesellschafterliste
+
+**✅ Provable**
+
+Unlike the S.A., the partners (socios) and their parts sociales are a mandatory content of the escritura constitutiva (LGSM art. 6), which is a base registered instrument, so the founding membership is provable from the registry. Admission or transfer of partners requires partner consent and is typically effected by a notarised amendment that is inscribed in the RPC, so changes can be evidenced by registered additional deeds. However, the authoritative current membership is the company-held libro especial de socios (art. 73), which is kept 'al cuidado de los administradores' and is not a registry document, so the registry cannot guarantee a fully current list on its own.
+
+**Document:** Acta constitutiva / escritura pública (socios y partes sociales), más escrituras de cesión/modificación inscritas en el RPC; el libro especial de socios (art. 73 LGSM) lo lleva la sociedad, no el registro — delivered as `Partners and their parts sociales as stated in the constitutive deed (and registered amendments)`
+
+> **LGSM art. 6**
+> 
+> „Los nombres, nacionalidad y domicilio de las personas físicas o morales que constituyan la sociedad"
+> 
+> Founding socios are stated in the registered escritura constitutiva.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+> **LGSM art. 73**
+> 
+> „La sociedad llevará un libro especial de los socios, en el cual se inscribirá el nombre y el domicilio de cada uno, con indicación de sus aportaciones, y la transmisión de las partes sociales."
+> 
+> The definitive member list is a company-held book, kept 'al cuidado de los administradores', not a registry filing.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The base acta proves only founding membership; a current list depends on whether each transfer/admission was notarised and inscribed (registered additional documents).
+- The authoritative current membership register (libro especial de socios, art. 73) is company-held and off-registry, so the registry alone may not yield a fully current, canonical Gesellschafterliste.
+- INFERENCE: routine inscription of every partner transfer in practice is asserted, not confirmed by a fetched quote; some transfers may go unregistered.
+
+
+### S.A. de C.V. — Gesellschafterliste
+
+**❌ Not provable**
+
+For a sociedad anónima the shareholders are recorded only in the company-held libro de registro de acciones (LGSM art. 128), not in the public registry; the company treats as owner whoever appears in that book and records transfers on request (art. 129). Only the founding shareholders named in the acta constitutiva reach the RPC. Therefore a current shareholder list cannot be proved from the registry.
+
+> **LGSM art. 128**
+> 
+> „Las sociedades anónimas tendrán un registro de acciones que contendrá: I.- El nombre, la nacionalidad y el domicilio del accionista, y la indicación de las acciones que le pertenezcan"
+> 
+> The share register is a company book, not a registry filing.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+> **LGSM art. 129**
+> 
+> „La sociedad considerará como dueño de las acciones a quien aparezca inscrito como tal en el registro...A este efecto, la sociedad deberá inscribir en dicho registro, a petición de cualquier titular, las transmisiones que se efectúen."
+> 
+> Ownership and transfers are tracked in the company-held book, off-registry.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The founding shareholders do appear in the acta constitutiva (registered), but that is a snapshot at incorporation, not a maintained current shareholder list.
+- The authoritative current list (libro de registro de acciones) is held by the company and is not a public-registry document.
+
+
+### S. de R.L. de C.V. — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The constitution is the escritura constitutiva (acta constitutiva) with the estatutos sociales, granted before a notary and inscribed in the RPC (LGSM arts. 2, 6, 7). It is the base registered instrument and its certified copy is the registry's core proof of the company's charter.
+
+**Document:** Acta constitutiva / escritura pública con estatutos sociales (copia certificada), inscrita en el Registro Público de Comercio — delivered as `Constitutive deed / bylaws (certified copy)`
+
+> **LGSM art. 6**
+> 
+> „El importe del capital social."
+> 
+> The escritura constitutiva embeds the estatutos and required capital clauses.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+> **LGSM art. 7**
+> 
+> „Si el contrato social no se hubiere otorgado en escritura ante Notario...cualquier socio podrá demandar en la vía sumaria el otorgamiento de la escritura correspondiente."
+> 
+> Constitution granted in escritura pública before a notary and then inscribed.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Later amendments to the estatutos are separate notarised, inscribed deeds; the original acta's certified copy may not reflect the current bylaws.
+
+
+### S.A. de C.V. — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The constitution is the escritura constitutiva (acta constitutiva) containing the estatutos sociales, granted before a notary and inscribed in the RPC (LGSM arts. 5-7). It is the base registered instrument and its certified copy evidences the company's charter. This is the registry's core deliverable.
+
+**Document:** Acta constitutiva / escritura pública con estatutos sociales (copia certificada), inscrita en el Registro Público de Comercio — delivered as `Constitutive deed / bylaws (certified copy)`
+
+> **LGSM art. 6**
+> 
+> „Los nombres, nacionalidad y domicilio de las personas físicas o morales que constituyan la sociedad"
+> 
+> Escritura constitutiva must state founders and capital; it embeds the estatutos.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+> **LGSM art. 7**
+> 
+> „Si el contrato social no se hubiere otorgado en escritura ante Notario...cualquier socio podrá demandar en la vía sumaria el otorgamiento de la escritura correspondiente."
+> 
+> The constitution is granted in escritura pública before a notary.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Later amendments to the estatutos are separate notarised deeds that must also be inscribed; a single certified copy of the original acta may not reflect amended bylaws.
+
+
+### S. de R.L. de C.V. — Registerauszug
+
+**✅ Provable**
+
+As with any mercantile company, the S. de R.L. de C.V. acquires legal personality by inscription of its escritura constitutiva in the Registro Público de Comercio (LGSM art. 2) on an electronic mercantile folio in SIGER. The registry evidences registered particulars via the certification/boleta of that folio. Mexico issues no consolidated German-style current-particulars extract; the folio certifies inscribed instruments.
+
+**Document:** Certificación / boleta de inscripción del folio mercantil electrónico (Registro Público de Comercio, vía SIGER) — delivered as `Commercial register extract — certification of the electronic mercantile folio`
+
+> **LGSM art. 2**
+> 
+> „Las sociedades mercantiles inscritas en el Registro Público de Comercio, tienen personalidad jurídica distinta de la de los socios."
+> 
+> Inscription in the RPC is the constitutive registry act for all mercantile forms.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+> **Código de Comercio arts. 20-32 (folio mercantil electrónico / SIGER)**
+> 
+> UNVERIFIED verbatim — Código de Comercio text could not be fetched; folio/SIGER/boleta model asserted from domain knowledge.
+> 
+> Source: <https://www.gob.mx/tramites/ficha/inscripcion-de-actos-mercantiles-en-el-registro-publico-de-comercio/SE1911> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The RPC certifies inscriptions on the folio mercantil; it does not synthesise a German-style consolidated current extract.
+- Capital-variable changes are often not re-registered, so the folio may lag actual capital.
+- INFERENCE: exact deliverable name (certificación de folio / boleta) not confirmed by a fetched verbatim quote.
+
+
+### S.A. de C.V. — Registerauszug
+
+**✅ Provable**
+
+A mercantile company acquires legal personality by inscription of its escritura constitutiva in the Registro Público de Comercio (LGSM art. 2), kept as an electronic mercantile folio (folio mercantil electrónico) in SIGER. The registry evidences the registered particulars through a certification/boleta of that folio, which is the closest analogue to a German Registerauszug. Note that Mexico issues no consolidated German-style 'current particulars' printout — the folio certifies the inscribed instruments rather than a synthesised current state.
+
+**Document:** Certificación / boleta de inscripción del folio mercantil electrónico (Registro Público de Comercio, vía SIGER) — delivered as `Commercial register extract — certification of the electronic mercantile folio`
+
+> **LGSM art. 2**
+> 
+> „Las sociedades mercantiles inscritas en el Registro Público de Comercio, tienen personalidad jurídica distinta de la de los socios."
+> 
+> Inscription in the RPC is the constitutive registry act.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+
+> **Código de Comercio arts. 20-32 (folio mercantil electrónico / SIGER)**
+> 
+> UNVERIFIED verbatim — could not fetch the Código de Comercio text; the folio mercantil electrónico, SIGER and boleta/certificación model is asserted from domain knowledge, not a fetched quote.
+> 
+> Source: <https://www.gob.mx/tramites/ficha/inscripcion-de-actos-mercantiles-en-el-registro-publico-de-comercio/SE1911> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The RPC does not issue a single consolidated 'current registered particulars' extract like the German Handelsregister; it certifies the inscriptions recorded on the folio mercantil.
+- Under capital variable, changes to the variable capital are frequently not re-registered, so the folio may lag the company's actual capital.
+- INFERENCE: the exact deliverable name (certificación de folio / boleta) is based on the Código de Comercio RPC/SIGER regime and could not be confirmed with a fetched verbatim quote.
+
+
 ## NL
 
 ### BV — Gesellschafterliste
@@ -6899,4 +7772,188 @@ The BVI Registry of Corporate Affairs maintains only a Register of Companies, a 
 - INFERENCE: BVI has NO full public register extract; mapping the Certificate of Good Standing to 'Registerauszug' is a best-fit, not an exact equivalent. It does NOT list directors or shareholders.
 - The register of directors is filed with the Registrar but NOT open to public inspection (competent-authority access via BOSS). A limited names-only public director search was introduced by the BC (Amendment) Act 2022 from 1 Jan 2023 — UNVERIFIED here (post-dates the consolidated Act text used).
 - The consolidated PDF treats register-of-directors filing as optional (s.231); current law makes filing a copy of the register of directors mandatory — does not change the public/non-public conclusion.
+
+
+## ZA
+
+### Ltd — Gesellschafterliste
+
+**❌ Not provable**
+
+For a public company, shares are typically held (often in uncertificated form) and recorded in the company's securities register / uncertificated securities register administered by the company or a CSD participant (s50) — not filed with CIPC. The annual return (s33) does not include a shareholder list. No shareholder/member list is obtainable from the registry for a public (Ltd) company; a public company's uncertificated register is even inspectable via the CSD, not CIPC.
+
+> **Companies Act 71 of 2008, s50(1)**
+> 
+> „Every company must-- (a) establish or cause to be established a register of its issued securities in the prescribed form; and (b) maintain its securities register in accordance with the prescribed standards."
+> 
+> Company-held register; for uncertificated securities a record is kept by a participant/CSD (s50(3)), still not CIPC.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+> **Companies Act 71 of 2008, s33(1)**
+> 
+> „Every company must file an annual return in the prescribed form ... including in that return-- (a) a copy of its annual financial statements ...; and (b) any other prescribed information."
+> 
+> No shareholder list in the annual return.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- For listed public companies the shareholder register is administered via CSD participants (s50(3)); still outside CIPC. Beneficial-interest disclosure rules (s56) may reveal some holders but do not produce a registry shareholder list.
+
+
+### Pty Ltd — Gesellschafterliste
+
+**❌ Not provable**
+
+Shareholders of a profit company are not filed with CIPC. The company itself must establish and maintain a securities register in the prescribed form (s50(1)), which is company-held and 'sufficient proof of the facts recorded in it' (s50(4)). The annual return (s33) carries financial statements and prescribed information, not a shareholder list. Therefore no shareholder/member list is obtainable from the registry for a (Pty) Ltd.
+
+> **Companies Act 71 of 2008, s50(1)**
+> 
+> „Every company must-- (a) establish or cause to be established a register of its issued securities in the prescribed form; and (b) maintain its securities register in accordance with the prescribed standards."
+> 
+> Register is kept by the company, not lodged with CIPC.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+> **Companies Act 71 of 2008, s33(1)**
+> 
+> „Every company must file an annual return in the prescribed form with the prescribed fee ... including in that return-- (a) a copy of its annual financial statements, if it is required to have such statements audited in terms of section 30(2)(a); and (b) any other prescribed information."
+> 
+> Annual return content is FS + prescribed info; no shareholder list required.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+> **Companies Act 71 of 2008, s24(4)(a)**
+> 
+> „In addition to the requirements of subsection (3), every profit company must maintain-- (a) a securities register or its equivalent, as required by section 50"
+> 
+> Confirms the securities register is a company record obligation.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- A current shareholder list can only be obtained directly from the company's own securities register (s50) / via a s26 access request, or reconstructed from share-transfer documents — none of which is a registry document.
+
+
+### Ltd — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A public company's MOI is likewise filed with CIPC as a copy accompanying the Notice of Incorporation (s13(2)(b)) and endorsed/held by CIPC (s14). It is registry-retrievable but as a separately-ordered document, not a field on the standard extract — an additional document.
+
+**Document:** Memorandum of Incorporation (CoR15.1) — delivered as `Memorandum of Incorporation (MOI)`
+
+> **Companies Act 71 of 2008, s13(2)**
+> 
+> „The Notice of Incorporation of a company must be-- (a) filed together with the prescribed fee; and (b) accompanied by a copy of the Memorandum of Incorporation, subject to any declaration contemplated in section 6(14)(b)."
+> 
+> Applies to all company categories including public companies.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+> **Companies Act 71 of 2008, s14(1)**
+> 
+> „As soon as practicable after accepting a filed Notice of Incorporation ... endorse the Notice of Incorporation, and, if applicable, the copy of the Memorandum of Incorporation filed with it, in the prescribed manner"
+> 
+> CIPC retains the filed MOI copy.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Classed 'additional' because the MOI is ordered separately from the standard extract.
+- INFERENCE: mapping 'Gesellschaftsvertrag' to the MOI.
+
+
+### Pty Ltd — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The MOI is the founding constitutional document and a copy is filed with CIPC accompanying the Notice of Incorporation at registration (s13(2)(b)); CIPC endorses and holds it (s14). It therefore exists in the registry, but as a separately-lodged document that must be ordered on request rather than a field on the standard disclosure certificate — hence an additional document.
+
+**Document:** Memorandum of Incorporation (CoR15.1) — delivered as `Memorandum of Incorporation (MOI)`
+
+> **Companies Act 71 of 2008, s13(2)**
+> 
+> „The Notice of Incorporation of a company must be-- (a) filed together with the prescribed fee; and (b) accompanied by a copy of the Memorandum of Incorporation, subject to any declaration contemplated in section 6(14)(b)."
+> 
+> MOI copy is filed with CIPC at incorporation.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+> **Companies Act 71 of 2008, s14(1)**
+> 
+> „As soon as practicable after accepting a filed Notice of Incorporation ... endorse the Notice of Incorporation, and, if applicable, the copy of the Memorandum of Incorporation filed with it, in the prescribed manner"
+> 
+> CIPC retains/endorses the filed MOI copy, making it registry-retrievable.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Classed 'additional' because the MOI is ordered separately (not part of the standard extract). A company adopting the standard-form MOI (Table CoR15.1A/B) may have limited unique content on file.
+- INFERENCE: mapping German 'Gesellschaftsvertrag' to the MOI (the company's constitution).
+
+
+### Ltd — Registerauszug
+
+**✅ Provable**
+
+As for a private company, CIPC maintains the register and issues an electronic disclosure certificate showing registered particulars and directors for a public (Ltd) company. Directors are a registered record (s24(5)). The extract is the base register document; shareholders are not shown.
+
+**Document:** Electronic Disclosure Certificate — delivered as `CIPC disclosure certificate (company extract)`
+
+> **Companies Act 71 of 2008, s24(5)**
+> 
+> „A company's record of directors must include, in respect of each director, that person's-- (a) full name, and any former names; (b) identity number"
+> 
+> Applies to every company including a public company.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+> **CIPC fees schedule (electronic disclosure certificate)**
+> 
+> „Issuing an electronic disclosure certificate"
+> 
+> CIPC issues the certificate for companies generally.
+> 
+> Source: <https://www.cipc.co.za/?page_id=3062> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- Exact certificate field list not captured verbatim from CIPC (fetch exposed only the fee table); treated as established domain knowledge corroborated by the Act.
+- INFERENCE: mapping 'Registerauszug' to the CIPC disclosure certificate/company extract.
+
+
+### Pty Ltd — Registerauszug
+
+**✅ Provable**
+
+CIPC (Companies and Intellectual Property Commission) maintains the register of companies and issues an electronic disclosure certificate / company extract showing the company's registered particulars (registration number, name, status, registered address, financial year end) and its directors. Directors' details are a registered/filed record (s24(5)), so the extract is the base register document for a (Pty) Ltd. Shareholders do not appear on it.
+
+**Document:** Electronic Disclosure Certificate — delivered as `CIPC disclosure certificate (company extract)`
+
+> **Companies Act 71 of 2008, s24(5)**
+> 
+> „A company's record of directors must include, in respect of each director, that person's-- (a) full name, and any former names; (b) identity number"
+> 
+> Directors are a statutorily recorded particular; CIPC holds current director data and reflects it on the disclosure certificate.
+> 
+> Source: <https://www.gov.za/sites/default/files/gcis_document/201409/321214210.pdf> (retrieved 2026-07-20)
+
+> **CIPC fees schedule (electronic disclosure certificate)**
+> 
+> „Issuing an electronic disclosure certificate"
+> 
+> Confirms CIPC issues an electronic disclosure certificate for a company (R30). CIPC page did not expose the certificate's exact field list to the fetch.
+> 
+> Source: <https://www.cipc.co.za/?page_id=3062> (retrieved 2026-07-20)
+
+**Caveats:**
+
+- The exact field list of the CIPC disclosure certificate (that it shows directors + registered particulars but not shareholders) could not be captured verbatim from a CIPC page — the fetched page only exposed the fee table. This is treated as established domain knowledge, corroborated by the Act's structure (directors filed under s24(5); shareholders not filed).
+- INFERENCE: mapping the German 'Registerauszug' to the CIPC disclosure certificate/company extract.
 

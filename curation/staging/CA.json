@@ -1,0 +1,119 @@
+[
+  {
+    "jurisdiction": "CA",
+    "legalForm": "CBCA corporation",
+    "legalFormLocal": "Corporation incorporated under the Canada Business Corporations Act (federal corporation)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Federal corporate record / Certificate of Compliance",
+    "documentLocal": "Corporation Information (Corporations Canada online record) / Certificate of Compliance",
+    "summary": "Corporations Canada (the Director under the CBCA) maintains the federal register and publishes each corporation's current registered particulars — legal name, corporation number, registered office, directors, status and annual-return history — which anyone can view and download. A formal register extract can be ordered as a Certificate of Compliance (or Certificate of Existence). This public corporate record is the register-extract equivalent; it does not, however, show shareholders.",
+    "evidence": [
+      { "basis": "CBCA s.263 (Director to maintain records) and s.266 (public examination of documents sent to the Director)", "quote": "", "note": "Section text not fetched verbatim; grounded on statutory scheme. The Director keeps the public register and documents sent to the Director are open to public examination on payment of a fee.", "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/", "retrieved": "2026-07-20" },
+      { "basis": "Corporations Canada — Search for a federal corporation (public database)", "quote": "", "note": "Official search tool exposing the federal corporate record; page returned 404 to the automated fetcher but is the canonical public source.", "url": "https://ised-isde.canada.ca/cc/lgcy/fdrlCrpSrch.html", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "INFERENCE: There is no single statutory document literally titled 'register extract' for federal corporations; the public 'Corporation Information' record plus an orderable Certificate of Compliance together serve as the Registerauszug equivalent.",
+      "The federal corporate record shows directors/officers and registered office, NOT shareholders.",
+      "Section 263/266 text was not fetched verbatim (empty quote); grounded on the CBCA scheme."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "CA",
+    "legalForm": "CBCA corporation",
+    "legalFormLocal": "Corporation incorporated under the Canada Business Corporations Act (federal corporation)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "In Canada shareholders are not filed with or held by the public registry. Under CBCA s.50 the corporation itself maintains a securities register listing its security holders, kept at its registered office (or by an agent) and open only to shareholders/creditors — it is never sent to Corporations Canada. The separate register of individuals with significant control (ISC) is also corporation-kept (s.21.1); although some ISC data became publicly searchable in 2024 (s.21.303), that is a beneficial-ownership data query about 25%+ individuals, not a document and not a shareholder list. No registry document evidences the shareholders.",
+    "evidence": [
+      { "basis": "CBCA s.50(1) — securities register", "quote": "A corporation shall maintain a securities register in which it records the securities issued by it in registered form, showing with respect to each class or series of securities (a) the names, alphabetically arranged, and the latest known address of each person who is or has been a security holder; (b) the number of securities held by each security holder; and (c) the date and particulars of the issue and transfer of each security.", "note": "Register is company-held, not filed with the Director.", "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/page-8.html", "retrieved": "2026-07-20" },
+      { "basis": "CBCA s.21.1 — register of individuals with significant control", "quote": "The corporation shall prepare and maintain, at its registered office or at any other place in Canada designated by the directors, a register", "note": "ISC register is corporation-maintained, not a shareholder list.", "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/page-3.html", "retrieved": "2026-07-20" },
+      { "basis": "CBCA s.21.303(1) — public disclosure of ISC information", "quote": "The Director shall make available to the public the following information sent to the Director under section 21.21 for each individual with significant control", "note": "Confirms federal ISC data is now partly public — but it is structured data on beneficial owners, not a document and not a Gesellschafterliste.", "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/page-4.html", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "The federal ISC register is now partly public — CBCA s.21.303 (in force since 22 Jan 2024) makes certain ISC particulars publicly searchable. This does NOT change the status: ISC data is a beneficial-ownership query on 25%+ individuals, not a document, and not equivalent to a full shareholder list.",
+      "The securities/shareholder register (s.50) is company-held and is not obtainable from any registry."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CA",
+    "legalForm": "CBCA corporation",
+    "legalFormLocal": "Corporation incorporated under the Canada Business Corporations Act (federal corporation)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Articles of Incorporation",
+    "documentLocal": "Articles of Incorporation (with Certificate of Incorporation)",
+    "summary": "A federal corporation's constituting document is its Articles of Incorporation, which the incorporator must send to the Director; the Director then issues a Certificate of Incorporation (CBCA ss.7-8). The articles are on the public record at Corporations Canada and a copy/certified copy can be obtained. They are the Gesellschaftsvertrag equivalent. By-laws, by contrast, are internal and are NOT filed with Corporations Canada.",
+    "evidence": [
+      { "basis": "CBCA s.7 — delivery of articles", "quote": "An incorporator shall send to the Director articles of incorporation and the documents required by sections 19 and 106.", "note": "Articles are filed with the Director.", "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/page-2.html", "retrieved": "2026-07-20" },
+      { "basis": "CBCA s.8(1) — certificate of incorporation", "quote": "on receipt of articles of incorporation, the Director shall issue a certificate of incorporation in accordance with section 262.", "note": "", "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/page-2.html", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Scope note: 'constitution' here = the filed Articles of Incorporation (public). Corporate by-laws are internal and NOT part of the public registry record for CBCA corporations.",
+      "Articles of amendment (s.27) would be the 'additional document' route for later changes; the base articles alone establish the constitution."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CA",
+    "legalForm": "OBCA corporation",
+    "legalFormLocal": "Corporation incorporated under the Business Corporations Act (Ontario), R.S.O. 1990, c. B.16",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Corporation Profile Report",
+    "documentLocal": "Corporation Profile Report / Certified Corporation Profile Report (Ontario Business Registry)",
+    "summary": "The Ontario Business Registry (administered by ServiceOntario) issues a Corporation Profile Report giving the current registered particulars of an OBCA corporation — legal name, Ontario Corporation Number, registered/head office, status, incorporation date and current directors/officers. A certified version is available. This is the register-extract equivalent; it does not list shareholders.",
+    "evidence": [
+      { "basis": "OBCA / Ontario Business Registry — Corporation Profile Report (ServiceOntario)", "quote": "", "note": "Standard Ontario register-extract product. Official ontario.ca page could not be fetched (JS-rendered / returned 404 to fetcher); grounded on the established Ontario Business Registry product and OBCA public-record scheme.", "url": "https://www.ontario.ca/page/ontario-business-registry", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "Could not fetch official ontario.ca / ServiceOntario page verbatim (JS-rendered site, fetcher blocked); grounded on knowledge of the Corporation Profile Report product — hence medium confidence.",
+      "The Corporation Profile Report lists directors/officers and registered office, NOT shareholders.",
+      "Empty evidence quote: no verbatim official text could be retrieved."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "CA",
+    "legalForm": "OBCA corporation",
+    "legalFormLocal": "Corporation incorporated under the Business Corporations Act (Ontario), R.S.O. 1990, c. B.16",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "As with federal corporations, Ontario shareholders are not filed with the registry. Under OBCA s.140 the corporation maintains its own securities/ownership register listing security holders at its registered office; it is never delivered to the Ontario Business Registry. The OBCA transparency register of individuals with significant control (s.140.2, in force since 1 Jan 2023) is likewise corporation-kept and — unlike the federal ISC register — is NOT public: it is accessible only to specified investigative, tax and regulatory authorities. No registry document evidences the shareholders.",
+    "evidence": [
+      { "basis": "OBCA s.140 — records (securities/ownership register maintained by the corporation)", "quote": "", "note": "Statute text not fetchable (Ontario e-Laws JS-rendered, CanLII 403). OBCA s.140 requires the corporation to keep a register of ownership interests/security holders at its registered office; not filed with the registry. Parallel to CBCA s.50.", "url": "https://www.ontario.ca/laws/statute/90b16", "retrieved": "2026-07-20" },
+      { "basis": "OBCA s.140.2/140.3 — register of individuals with significant control and access", "quote": "", "note": "Ontario's transparency register is kept by the corporation and disclosable only to police, the CRA/Ontario tax authorities and specified regulators; it is not open to the public. Statutory text not fetchable.", "url": "https://www.ontario.ca/laws/statute/90b16", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "INFERENCE / UNVERIFIED verbatim: OBCA s.140 and s.140.2 text could not be retrieved (Ontario e-Laws is JS-rendered and returned only a header; CanLII returned HTTP 403). Grounded on the OBCA scheme, which is closely modelled on the CBCA, and on Ontario's implementation of a non-public transparency register.",
+      "Unlike the federal ISC register, Ontario did NOT make its transparency register public — this reinforces the not_provable status.",
+      "Securities/shareholder register is company-held and not obtainable from the registry."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "CA",
+    "legalForm": "OBCA corporation",
+    "legalFormLocal": "Corporation incorporated under the Business Corporations Act (Ontario), R.S.O. 1990, c. B.16",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Articles of Incorporation",
+    "documentLocal": "Articles of Incorporation (with Certificate of Incorporation), Ontario Business Registry",
+    "summary": "An OBCA corporation's constituting document is its Articles of Incorporation, sent to the Director under OBCA s.5, upon which a Certificate of Incorporation is endorsed/issued (s.6). The articles are on the public record and copies/certified copies can be obtained through the Ontario Business Registry. They are the Gesellschaftsvertrag equivalent; by-laws are internal and not filed.",
+    "evidence": [
+      { "basis": "OBCA s.5 — articles of incorporation sent to the Director; s.6 — certificate of incorporation", "quote": "", "note": "Statute text not fetchable (Ontario e-Laws JS-rendered; CanLII 403). OBCA s.5 requires articles to be sent to the Director; s.6 provides for the certificate. Parallel to CBCA ss.7-8. Copies obtainable via Ontario Business Registry.", "url": "https://www.ontario.ca/laws/statute/90b16", "retrieved": "2026-07-20" }
+    ],
+    "caveats": [
+      "UNVERIFIED verbatim: OBCA s.5/s.6 text could not be retrieved (Ontario e-Laws JS-rendered; CanLII HTTP 403). Grounded on the OBCA scheme and its parallel to CBCA ss.7-8.",
+      "Scope note: 'constitution' = filed Articles of Incorporation (public); corporate by-laws are internal and not on the public registry record.",
+      "Later changes would be evidenced by Articles of Amendment (additional document); the base articles establish the constitution."
+    ],
+    "confidence": "medium"
+  }
+]
