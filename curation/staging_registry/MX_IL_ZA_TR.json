@@ -1,0 +1,92 @@
+[
+  {
+    "jurisdiction": "MX",
+    "registryName": "Registro Público de Comercio (RPC) — SIGER 2.0",
+    "registryBody": "Secretaría de Economía, operated jointly with state governments; publications via PSM (Sistema Electrónico de Publicaciones de Sociedades Mercantiles)",
+    "registryUrl": "https://rpc.economia.gob.mx",
+    "openApi": "no",
+    "apiName": "None (public web consulta + SIGER 2.0 login portal + PSM publications portal)",
+    "apiDocsUrl": "",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": false,
+    "apiAuth": "Public consulta: none. SIGER 2.0 transactional portal: login-gated (credentials/e.firma, for notaries/fedatarios/authorized users). PSM: e.firma/registration to publish, public to consult.",
+    "cost": {
+      "model": "per_document",
+      "detail": "Online consulta of registration data is free; PSM publications are free to consult. Certified extracts/certifications (certificaciones, boletas registrales) are charged per document under the state/federal fee schedule (Ley Federal/Estatal de Derechos), typically obtained at the local RPC office, not via any API. No API pricing because there is no API."
+    },
+    "notes": "RPC is the mercantile registry; SIGER 2.0 is the electronic operating platform (rpc.economia.gob.mx/siger2/ redirects to a login) and is NOT open — it serves notaries/authorized filers. A public 'consulta' returns structured data only. PSM (psm.economia.gob.mx) hosts mandatory company publications (share registrations, dissolutions/liquidations) as documents you can query, but again no programmatic API. Direct integration is NOT viable without a private arrangement; an aggregator or screen-level integration would be required.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "rpc.economia.gob.mx homepage (portal reachable but resource error at fetch time; identifies Secretaría de Economía internal services)", "url": "https://rpc.economia.gob.mx", "retrieved": "2026-07-19"},
+      {"basis": "SIGER 2.0 portal 302-redirects to login.xhtml — login-gated, not open", "url": "https://rpc.economia.gob.mx/siger2/", "retrieved": "2026-07-19"},
+      {"basis": "PSM portal — publishes mercantile company notices (share registrations, dissolutions/liquidations); has 'Consulta publicaciones'; no API mentioned; registration by e-credential to publish", "url": "https://psm.economia.gob.mx", "retrieved": "2026-07-19"}
+    ]
+  },
+  {
+    "jurisdiction": "IL",
+    "registryName": "Registrar of Companies (Rasham HaHavarot)",
+    "registryBody": "Israel Corporations Authority (Rashut HaTagidim), Ministry of Justice",
+    "registryUrl": "https://ica.justice.gov.il",
+    "openApi": "partial",
+    "apiName": "data.gov.il CKAN datastore_search (open government dataset of registered companies); no official API on the Registrar's own paid-extract service",
+    "apiDocsUrl": "https://data.gov.il/dataset/ica_companies",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "data.gov.il CKAN datastore_search: public/unauthenticated (optional API key for write; read is open). Registrar extract purchase: gov.il user + online payment, no API.",
+    "cost": {
+      "model": "free",
+      "detail": "Open dataset via data.gov.il is FREE and unauthenticated (~728,150 company records, ~28 structured fields: company number, name, type, status, incorporation date, address, last annual-report year, etc.). The official company extract (nesach mahshevi) — a formal certificate/document — is sold per-document through the Registrar/gov.il for a small statutory fee (order of ~NIS 10, exact amount not confirmed here), and is NOT available via an API."
+    },
+    "notes": "Best case of the four for DATA: a genuine open CKAN API (datastore_search) returns live structured registry data with no auth — usable directly, no aggregator needed for basic company data. BUT it delivers DATA ONLY; the official signed extract/document must be bought per-document on the Registrar site and there is no document API. If you only need structured company data, integrate data.gov.il directly; if you need the certified extract PDF, that stays manual/paid.",
+    "confidence": "high",
+    "sources": [
+      {"basis": "data.gov.il CKAN datastore_search returned JSON: ~728,150 company records, 28 fields, unauthenticated, with pagination", "url": "https://data.gov.il/dataset/ica_companies", "retrieved": "2026-07-19"},
+      {"basis": "Registrar of Companies portal (Israel Corporations Authority) — search/extract service; host repeatedly reset connection during fetch; gov.il service pages return 403 to automated fetch, so extract fee not verified from primary page", "url": "https://ica.justice.gov.il", "retrieved": "2026-07-19"}
+    ]
+  },
+  {
+    "jurisdiction": "ZA",
+    "registryName": "CIPC company register",
+    "registryBody": "Companies and Intellectual Property Commission (CIPC)",
+    "registryUrl": "https://www.cipc.co.za",
+    "openApi": "partial",
+    "apiName": "CIPC e-Services / electronic transacting (enrolled customer code); BizPortal for registrations",
+    "apiDocsUrl": "https://www.cipc.co.za",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": true,
+    "apiAuth": "Enrolled CIPC customer: customer code + password, backed by a prepaid deposit/balance (minimum R250 deposit into the CIPC account). Not a public/open API — access is gated to registered/enrolled customers.",
+    "cost": {
+      "model": "per_document",
+      "detail": "Prepaid per-transaction against customer-code balance. Electronic disclosure certificate: R30.00 (a document). Data/records extract: R10.00 plus R0.04 per record. Certificate re. company information: R20-R50. Certified document copies: R5-R20. Company registration: R125-R475; name reservation R30-R50. Requires ~R250 minimum prepaid deposit."
+    },
+    "notes": "CIPC runs electronic transacting for enrolled customers (customer code + prepaid balance) and BizPortal; the disclosure certificate and record extracts are obtainable electronically, so DOCUMENTS (disclosure certificate) and DATA (record extracts) both flow through the electronic channel on a prepaid per-transaction basis. However, the fetched public pages document the products/fees and the customer-code/prepaid model but do NOT publish clean API/developer specs — real-time system-to-system integration exists in practice for enrolled parties (e.g. banks/bureaus) but is not openly documented. Direct integration is feasible via enrolment; expect a private onboarding rather than self-serve keys.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "CIPC e-services page: register as customer, obtain customer code, deposit R250; transaction fee ranges", "url": "https://www.cipc.co.za/?page_id=4844", "retrieved": "2026-07-19"},
+      {"basis": "CIPC disclosure/fees: electronic disclosure certificate R30.00; data extract R10 + R0.04/record; certificate R20-R50; certified copies R5-R20", "url": "https://www.cipc.co.za/?page_id=3167", "retrieved": "2026-07-19"},
+      {"basis": "CIPC services overview listing e-Services, BizPortal, Mobile App, disclosure certificates and B-BBEE certificates", "url": "https://www.cipc.co.za/?page_id=3272", "retrieved": "2026-07-19"}
+    ]
+  },
+  {
+    "jurisdiction": "TR",
+    "registryName": "Ticaret Sicili (Trade Registry) + MERSIS + Türkiye Ticaret Sicili Gazetesi (Trade Registry Gazette)",
+    "registryBody": "Trade Registry Directorates under local chambers of commerce; MERSIS (Merkezi Sicil Kayıt Sistemi) central system run by Ministry of Trade (Ticaret Bakanlığı); Gazette published by TOBB (Union of Chambers)",
+    "registryUrl": "https://mersis.ticaret.gov.tr",
+    "openApi": "no",
+    "apiName": "None public (MERSIS login-gated end-user portal; Gazette web search portal)",
+    "apiDocsUrl": "",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": false,
+    "apiAuth": "MERSIS: login-gated (e-Devlet / e-Government login), end-user operations only, no developer API. Trade Registry Gazette (ticaretsicil.gov.tr): free membership/login to search; certified copies purchased online. No API keys anywhere.",
+    "cost": {
+      "model": "free",
+      "detail": "MERSIS access is free but restricted to authenticated end users (no bulk/API). Trade Registry Gazette search is free (requires free membership); announcements can be viewed/printed for free. CERTIFIED gazette copies (digital or wet-signature) are paid per copy per the 'İlan Ücretleri/announcement fee tariff'; exact per-copy amount not confirmed from primary page. No API pricing because there is no API."
+    },
+    "notes": "Two distinct sources: MERSIS holds structured company DATA (registration/modification/deletion records) but is login-gated for end users with no programmatic access; the Trade Registry Gazette is the DOCUMENT source — announcements (incorporation, changes, etc.) are free-searchable and viewable/printable, with certified copies sold per copy. Neither exposes a clean open API. Direct integration is NOT viable via an official API; you would need screen-level/portal automation or a vendor. Documents (Gazette announcements) are the reliably free, publicly reachable asset.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "MERSIS portal — central registry system for companies; only end-user guides (login/establishment/modification); no API/developer docs; e-Devlet integration noted", "url": "https://mersis.ticaret.gov.tr", "retrieved": "2026-07-19"},
+      {"basis": "Türkiye Ticaret Sicili Gazetesi portal — free membership to search announcements; announcements saveable/printable; certified copies (digital/wet signature) purchasable; 'announcement fee tariff' referenced; no API", "url": "https://www.ticaretsicil.gov.tr", "retrieved": "2026-07-19"}
+    ]
+  }
+]

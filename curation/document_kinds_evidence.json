@@ -2621,6 +2621,207 @@
   "confidence": "medium"
  },
  {
+  "jurisdiction": "IL",
+  "legalForm": "Private company",
+  "legalFormLocal": "Private company limited by shares (חברה פרטית)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": null,
+  "documentLocal": "company extract (נסח חברה)",
+  "summary": "Current shareholders of a private company are provable from the Registrar. The company itself keeps the statutory Shareholders Register (s.127/s.130), but a private company must file with the Registrar every share allocation within 14 days (s.140(5), s.292), every share transfer within 14 days (s.140(6), s.299), and an annual report (s.140, s.141) whose prescribed form lists the shareholders and their holdings. The company extract (נסח חברה) therefore reflects the current shareholders and is the base document evidencing them.",
+  "evidence": [
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.140 (Reports of a private company)",
+    "quote": "A private company shall send the Registrar an annual report, as said in section 141, and it shall also report to the Registrar as specified in this Law and on the following matters: ... (5) share allocations, as said in section 292; (6) share transfers, as said in section 299, within 14 days after the transfer;",
+    "note": "Establishes that allotments and transfers of a private company are Registrar-filed, so the current shareholder position is provable from registry filings.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.292 (Report of allocation) and s.141 (Annual report)",
+    "quote": "292. A private company must deliver the following documents to the Registrar within 14 days after the allocation of shares: (1) a report on a form to be prescribed by the Minister, specifying the particulars of the allocation;",
+    "note": "s.141: 'Once a year a private company shall draw up and submit to the Registrar an annual report ... within 14 days after the General Meeting.' The prescribed annual-report form (Companies Regulations (Annual Report and Registration) 5760-2000) itemises shareholders and holdings.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.127 & s.130 (Shareholders Register)",
+    "quote": "127. A company shall keep a Shareholders Register.",
+    "note": "s.130 lists register contents (name, ID, address, number/category of shares, dates of allocation/transfer). This statutory register is kept by the COMPANY, not the Registrar; the Registrar's extract is derived from the s.292/s.299/s.141 filings.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Currency depends on the company having filed its 14-day allotment/transfer notices and annual report; the definitive statutory Shareholders Register is company-held (s.127), the extract is the Registrar-derived copy.",
+   "A shareholder may be a trustee (s.131) — registered holder is not necessarily beneficial owner."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IL",
+  "legalForm": "Public company",
+  "legalFormLocal": "Public company (חברה ציבורית)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "company extract (נסח חברה)",
+  "summary": "Current shareholders of a public/listed company are NOT provable from the Registrar of Companies. A public company does not report allotments, transfers or shareholders to the Registrar (s.145 exhaustively lists its Registrar reports, excluding these). Listed shares are held on the TASE through a registration company (nominee) which is expressly not deemed a shareholder (s.132, s.177(1)). Only substantial (5%+) holdings are disclosed — to the Securities Authority under the Securities Law, recorded in the company-held Register of Substantial Shareholders (s.128, s.137) — not a complete current shareholder list at the Registrar.",
+  "evidence": [
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.145 (Public company's report to the Registrar)",
+    "quote": "a public company shall report to the Registrar under this Law only on the matters specified below: (1) a decision to change the name ...; (2) a change in the address of the registered office ...; (3) a merger ...; (4) its conversion into a public company ...",
+    "note": "Share allocations (s.292) and transfers (s.299) — mandatory for private companies under s.140 — are absent, so shareholder data does not reach the Registrar for public companies.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.132 (Registration company) & s.177(1)",
+    "quote": "a registration company shall not be deemed a shareholder in the company and the shares in its name are owned by the persons entitled to them, as said in section 177(1).",
+    "note": "Listed shares sit in the name of a nominee/registration company; the registered holder is not the beneficial owner, so the register does not reveal current beneficial shareholders.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.128 & s.137 (Register of Substantial Shareholders)",
+    "quote": "137. In the Register of Substantial Shareholders shall be kept all the reports received by the company under the Securities Law on the holdings of company shares by substantial shareholders.",
+    "note": "Only 5%+ ('substantial') holders are disclosed, via Securities Law reporting to the Israel Securities Authority (MAGNA), and this register is company-held — not the Registrar of Companies. Not a full shareholder list.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Substantial (5%+) shareholders ARE discoverable via the Israel Securities Authority / MAGNA and the company's Register of Substantial Shareholders — but that is not the Registrar of Companies and not a complete current shareholder list.",
+   "Listed-company ordinary shares are held through TASE nominee / registration company (s.132), masking beneficial owners.",
+   "documentLocal set to the extract for schema consistency, but the extract does not evidence current public-company shareholders."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IL",
+  "legalForm": "Private company",
+  "legalFormLocal": "Private company limited by shares (חברה פרטית)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association",
+  "documentLocal": "articles of association / by-laws (תקנון)",
+  "summary": "Every company must have articles (תקנון; termed 'by-laws' in the official English translation), and a copy is filed with the Registrar as an attachment to the incorporation application (s.8(1), s.15). Any change of the articles must be delivered to the Registrar (s.21(b), reported under s.140(1)). The current articles are therefore obtainable from the company's file at the Registrar as a separate document (not part of the summary extract), under the public-inspection right in s.43.",
+  "evidence": [
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.8 (Application for registration) & s.15",
+    "quote": "8. If a person wishes to register a company, then he shall submit to the Registrar an application on a form prescribed by the Minister, and he shall attach to it: (1) a copy of the by-laws;",
+    "note": "s.15: 'Every company shall have by-laws, as specified in this Article.' 'By-laws' is the translation of תקנון (articles of association / constitution).",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.21 & s.140(1) (change of by-laws reported to Registrar)",
+    "quote": "If a company adopted a resolution on a change of its by-laws, then it shall deliver the text of the decision to the Registrar within ...",
+    "note": "s.140(1) lists 'changes in the by-laws, as said in section 21' among the private company's mandatory Registrar reports, so the amended articles reach the Registrar's file.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The full articles text is retrieved from the company's document file at the Registrar, not from the short company extract; ordering the underlying filed document may be a separate request.",
+   "Currency depends on the company having filed its s.21/s.140(1) amendment; a company incorporated before the 1999 Law may rely on transitional memorandum/articles (s.24)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IL",
+  "legalForm": "Public company",
+  "legalFormLocal": "Public company (חברה ציבורית)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association",
+  "documentLocal": "articles of association / by-laws (תקנון)",
+  "summary": "A public company must have articles (תקנון) and a copy was filed with the Registrar on incorporation (s.8(1), s.15), obtainable from its Registrar file under the s.43 inspection right. However, s.145 does NOT include a change of by-laws among a public company's mandatory Registrar reports, so amendments to the articles of a public/listed company are filed with the Israel Securities Authority (MAGNA / prospectus regime) rather than the Registrar. The Registrar's file therefore proves the constitution as a filed document but may hold only the founding (or pre-listing) version.",
+  "evidence": [
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.8(1) & s.15 (articles filed at incorporation)",
+    "quote": "8. ... he shall attach to it: (1) a copy of the by-laws;",
+    "note": "s.15: 'Every company shall have by-laws.' The founding articles of every company, public included, are on the Registrar's incorporation file.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.145 vs s.140(1) (amendment reporting)",
+    "quote": "a public company shall report to the Registrar under this Law only on the matters specified below: (1) a decision to change the name ...; (2) ... registered office ...; (3) a merger ...; (4) its conversion into a public company ...",
+    "note": "Change of by-laws (s.21) — a mandatory private-company Registrar report under s.140(1) — is absent from the public-company list in s.145, so amended articles of a public company reach the Securities Authority (MAGNA), not the Registrar.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The Registrar's copy may be out of date for a public company: amendments are filed with the Israel Securities Authority (MAGNA), not the Registrar. The current articles of a listed company are best obtained from ISA/MAGNA or the company's public filings.",
+   "UNVERIFIED whether the Registrar practically supplies the founding articles document on request for older/converted public companies; grounded in s.8(1)+s.43 rather than a tested retrieval."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "IL",
+  "legalForm": "Private company",
+  "legalFormLocal": "Private company limited by shares (חברה פרטית)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": null,
+  "documentLocal": "company extract (נסח חברה)",
+  "summary": "The Registrar of Companies keeps a register for every company and the registers are open to public inspection with certified copies obtainable (s.38, s.43). Any person can obtain a full company extract (נסח חברה) for a fee; for a private company it shows current registered particulars including status, registered office, directors/officers and shareholders with their holdings. This extract is the current register extract and the base evidentiary document.",
+  "evidence": [
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.43 (Inspection)",
+    "quote": "The registers kept by the Registrar in the registers office shall be open to inspection by the public, and every person may inspect them and receive certified copies of their contents, whether through the Registrar or through others whom the Registrar authorized for this purpose, all as the Minister prescribed.",
+    "note": "s.38 requires the Registrar to keep registers for each company and a Register of Companies; s.41 makes a Registrar-certified copy conclusive proof.",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Israeli Corporations Authority / Registrar of Companies — company extract service (gov.il / ica.justice.gov.il)",
+    "quote": "This service allows any person to obtain basic information free of charge on companies and partnerships, or a full extract for a fee.",
+    "note": "Wording per the gov.il 'company extract' service page as surfaced in search; gov.il blocks automated fetch so exact wording not independently re-fetched. Companion 'reverse search' service states it 'provides details on office holders and shareholders, including tenure dates and shareholding periods.'",
+    "url": "https://www.gov.il/en/service/company_extract",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The full (paid) extract, not the free basic lookup, carries the detailed particulars.",
+   "INFERENCE that the extract heading = REGISTERAUSZUG equivalent; grounded in s.38/s.43 register-inspection rights plus the gov.il service description."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IL",
+  "legalForm": "Public company",
+  "legalFormLocal": "Public company (חברה ציבורית)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": null,
+  "documentLocal": "company extract (נסח חברה)",
+  "summary": "A public company is registered in the Register of Companies and a company extract (נסח חברה) is obtainable for it, evidencing legal existence, registration number, name, registered office and status. However, under s.145 a public company reports to the Registrar only on name change, registered-office change, merger and conversion — director changes (s.223 applies only to private companies) and shareholdings are NOT filed with the Registrar — so the public-company extract is materially thinner than a private one.",
+  "evidence": [
+   {
+    "basis": "Companies Law 5759-1999 (Israel) s.145 (Public company's report to the Registrar)",
+    "quote": "Without derogating from the provisions of any statute, a public company shall report to the Registrar under this Law only on the matters specified below: (1) a decision to change the name, as said in section 31; (2) a change in the address of the registered office, as said in section 123; (3) a merger, as said in section 317; (4) its conversion into a public company, as said in section 343.",
+    "note": "Confirms the extract's registry-sourced content for a public company is limited to identity/status matters; directors and shareholders are reported elsewhere (Securities Authority / TASE).",
+    "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Israeli Corporations Authority / Registrar of Companies — company extract service (gov.il / ica.justice.gov.il)",
+    "quote": "This service allows any person to obtain basic information free of charge on companies and partnerships, or a full extract for a fee.",
+    "note": "Same extract service applies to public companies; wording per gov.il service page as surfaced in search (gov.il blocks automated fetch).",
+    "url": "https://www.gov.il/en/service/company_extract",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Public-company extract carries limited data: per s.145 (and s.223 being private-company-only) directors and shareholders are not filed with the Registrar.",
+   "INFERENCE that the same נסח חברה product exists for public companies; grounded in the single Register of Companies (s.38) and universal extract service."
+  ],
+  "confidence": "high"
+ },
+ {
   "jurisdiction": "IM",
   "legalForm": "1931 Act company",
   "legalFormLocal": "Company limited by shares (Companies Act 1931)",
@@ -2786,6 +2987,208 @@
   "caveats": [
    "INFERENCE: functional equivalent only; IoM has no single certified consolidated extract.",
    "A 2006 Act register record shows the registered agent and directors only if directors are voluntarily filed (s204); it does NOT show shareholders."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "IN",
+  "legalForm": "Ltd",
+  "legalFormLocal": "Public Limited Company",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_additional_document",
+  "documentLabel": null,
+  "documentLocal": "Annual Return (Form MGT-7) — Companies Act 2013 s.92",
+  "summary": "Members/shareholders are provable via the annual return. Under s.92(1) every company files an annual return containing 'its members ... along with changes therein', filed with the ROC; per Rule 11 the form is MGT-7 (a public company is never a 'small company', so always MGT-7). Publicly obtainable (paid) via MCA21 'View Public Documents' under s.399. Additional because it is a discrete filed document, not a base register extract (India issues none).",
+  "evidence": [
+   {
+    "basis": "Companies Act 2013 s.92(1) — reproduced text",
+    "quote": "Every company shall prepare a return (hereinafter referred to as the annual return) in the prescribed form containing the particulars as they stood on the close of the financial year regarding— ... its members and changes therein since the close of the previous financial year",
+    "note": "s.92(1)(b) covers shares and shareholding pattern.",
+    "url": "https://corporatelawreporter.com/companies_act/section-92-of-companies-act-2013-annual-return/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies (Management and Administration) Rules 2014, Rule 11 — reproduced text",
+    "quote": "Every company shall prepare its annual return in Form No. MGT.7.",
+    "note": "A public company cannot be a 'small company' (s.2(85)), so MGT-7 (not MGT-7A) applies.",
+    "url": "https://corporatelawreporter.com/companies_act/section-92-of-companies-act-2013-annual-return/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Act 2013 s.399(1) — public inspection/copies on payment of fees",
+    "quote": "inspect by electronic means any documents kept by the Registrar ... being documents filed or registered by him in pursuance of this Act",
+    "note": "Statutory basis for obtaining the filed MGT-7 via MCA21 'View Public Documents' (paid).",
+    "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "STALENESS: reflects members as at last financial-year close, filed up to 60 days post-AGM — 12-18+ months old; the statutory register of members (s.88) is company-held, not at the ROC.",
+   "For listed public companies a more current shareholding pattern is filed with SEBI/stock exchanges (Reg. 31 LODR) — outside the MCA registry.",
+   "Base-vs-additional labelling is a judgement call."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IN",
+  "legalForm": "Pvt Ltd",
+  "legalFormLocal": "Private Limited Company",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_additional_document",
+  "documentLabel": null,
+  "documentLocal": "Annual Return (Form MGT-7; MGT-7A for OPC/small companies) — Companies Act 2013 s.92",
+  "summary": "Shareholders/members ARE provable from the registry, but via a separate filed document, not any base extract. Under s.92(1) every company files an annual return containing 'its members ... along with changes therein', filed with the ROC. Per Rule 11 the form is MGT-7 (a small company/OPC files the abridged MGT-7A). The annual return is a publicly filed document obtainable (paid) via MCA21 'View Public Documents' under s.399. Additional (not base) because India has no register extract; members are evidenced only by ordering this specific annual filing.",
+  "evidence": [
+   {
+    "basis": "Companies Act 2013 s.92(1) — reproduced text",
+    "quote": "Every company shall prepare a return (hereinafter referred to as the annual return) in the prescribed form containing the particulars as they stood on the close of the financial year regarding— ... its members and changes therein since the close of the previous financial year",
+    "note": "s.92(1)(b) also covers shares/securities and shareholding pattern.",
+    "url": "https://corporatelawreporter.com/companies_act/section-92-of-companies-act-2013-annual-return/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies (Management and Administration) Rules 2014, Rule 11 — reproduced text",
+    "quote": "Every company shall prepare its annual return in Form No. MGT.7.",
+    "note": "MGT-7A applies to OPCs and small companies (from FY 2020-21); a small Pvt Ltd files MGT-7A.",
+    "url": "https://corporatelawreporter.com/companies_act/section-92-of-companies-act-2013-annual-return/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Act 2013 s.399(1) — public inspection/copies on payment of fees",
+    "quote": "inspect by electronic means any documents kept by the Registrar ... being documents filed or registered by him in pursuance of this Act",
+    "note": "Statutory basis for obtaining the filed annual return via MCA21 'View Public Documents' (paid).",
+    "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "STALENESS: the annual return reflects members as at the close of the last financial year and is filed up to 60 days after the AGM — data can be 12-18+ months old; the statutory register of members (s.88) is company-held, not at the ROC.",
+   "Form is MGT-7A (abridged) for small companies/OPC — confirm which form was filed.",
+   "Base-vs-additional labelling is a judgement call: members are provable, but only via a discrete filed document."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IN",
+  "legalForm": "Ltd",
+  "legalFormLocal": "Public Limited Company",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_base_document",
+  "documentLabel": null,
+  "documentLocal": "Memorandum of Association (MOA) & Articles of Association (AOA) — Companies Act 2013 s.7(1)(a)",
+  "summary": "The constitution is the MOA and AOA, filed with the Registrar at incorporation under s.7(1)(a), signed by all subscribers, and obtainable (paid) via MCA21 'View Public Documents' under s.399. Direct documentary proof; identical treatment to a private company.",
+  "evidence": [
+   {
+    "basis": "Companies Act 2013 s.7(1)(a) — reproduced text",
+    "quote": "the memorandum and articles of the company duly signed by all the subscribers to the memorandum in such manner as may be prescribed",
+    "note": "Filed at incorporation with the Registrar.",
+    "url": "https://corporatelawreporter.com/companies_act/section-7-of-companies-act-2013-incorporation-of-company/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Act 2013 s.399(1) — public inspection/copies on payment of fees",
+    "quote": "require ... a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed.",
+    "note": "Basis for obtaining certified MOA/AOA via MCA21 'View Public Documents' (paid).",
+    "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "AOA/MOA amendments (special resolution + Form MGT-14) are filed later; order the latest filed version.",
+   "UNVERIFIED via official portal: mca.gov.in returned 403; obtainability is INFERENCE from s.399 + established MCA21 practice."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IN",
+  "legalForm": "Pvt Ltd",
+  "legalFormLocal": "Private Limited Company",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_base_document",
+  "documentLabel": null,
+  "documentLocal": "Memorandum of Association (MOA) & Articles of Association (AOA) — Companies Act 2013 s.7(1)(a)",
+  "summary": "The constitution is the MOA and AOA, filed with the Registrar at incorporation under s.7(1)(a), signed by all subscribers. Foundational registered documents obtainable (paid) via MCA21 'View Public Documents' under s.399. Direct documentary proof of the company's constitution.",
+  "evidence": [
+   {
+    "basis": "Companies Act 2013 s.7(1)(a) — reproduced text",
+    "quote": "the memorandum and articles of the company duly signed by all the subscribers to the memorandum in such manner as may be prescribed",
+    "note": "Filed at incorporation with the Registrar.",
+    "url": "https://corporatelawreporter.com/companies_act/section-7-of-companies-act-2013-incorporation-of-company/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Act 2013 s.399(1) — public inspection/copies on payment of fees",
+    "quote": "require ... a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed.",
+    "note": "Basis for obtaining certified MOA/AOA via MCA21 'View Public Documents' (paid).",
+    "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "AOA amendments (special resolution + Form MGT-14) are filed subsequently; the incorporation MOA/AOA may not reflect the current constitution — order the latest filed version.",
+   "UNVERIFIED via official portal: mca.gov.in returned 403; obtainability via 'View Public Documents' is INFERENCE from s.399 + established MCA21 practice."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IN",
+  "legalForm": "Ltd",
+  "legalFormLocal": "Public Limited Company",
+  "kind": "REGISTERAUSZUG",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "Master Data (free data view; no consolidated register extract issued)",
+  "summary": "Same as for a private company: the MCA registry issues no consolidated current register extract document. Current particulars are exposed only as free 'Master Data' (structured data, not a document). The Certificate of Incorporation is static. Certified copies of specific filed forms are obtainable under s.399, but there is no single current-state extract document.",
+  "evidence": [
+   {
+    "basis": "Companies Act 2013 s.399(1) — reproduced text",
+    "quote": "inspect by electronic means any documents kept by the Registrar ... being documents filed or registered by him in pursuance of this Act",
+    "note": "Certified copies are of individual filed documents, not a synthesized current register extract.",
+    "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "MCA21 portal (mca.gov.in) — Master Data (free) vs View Public Documents (paid)",
+    "note": "mca.gov.in returned HTTP 403 — INFERENCE from statutory scheme + established practice.",
+    "url": "https://www.mca.gov.in/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "UNVERIFIED: MCA portal pages not directly fetchable (403); Master-Data-is-data-not-a-document is INFERENCE.",
+   "No consolidated current register extract exists.",
+   "Certificate of Incorporation exists as a document but does not evidence current state."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "IN",
+  "legalForm": "Pvt Ltd",
+  "legalFormLocal": "Private Limited Company",
+  "kind": "REGISTERAUSZUG",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "Master Data (free data view; no consolidated register extract issued)",
+  "summary": "India's MCA registry does not issue a consolidated current register extract document. Current particulars (status, directors, registered office, paid-up capital) are exposed only via free 'Master Data', a structured data view, not an issued/certified document — parsed data is not a substitute. The Certificate of Incorporation is a document but static. Certified copies of specific filed forms can be obtained under s.399, but there is no single current-state extract document.",
+  "evidence": [
+   {
+    "basis": "Companies Act 2013 s.399(1) (inspection/copies of documents kept by Registrar) — reproduced text",
+    "quote": "inspect by electronic means any documents kept by the Registrar in accordance with the rules made, being documents filed or registered by him in pursuance of this Act ... require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed.",
+    "note": "Authorises certified copies of individual filed documents, not a synthesized current register extract.",
+    "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "MCA21 portal (mca.gov.in) — 'View Company/LLP Master Data' (free) vs 'View Public Documents' (paid)",
+    "note": "Master Data is a free data view (not a document). mca.gov.in returned HTTP 403 and could not be fetched directly — treat the Master-Data-vs-document distinction as INFERENCE from the statutory scheme.",
+    "url": "https://www.mca.gov.in/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "UNVERIFIED: MCA portal pages not directly fetchable (403); Master-Data-is-free-data-not-a-document is INFERENCE from statute + established MCA21 practice.",
+   "No consolidated current register extract exists; current directors/status must be assembled from Master Data (data) plus separate filed forms.",
+   "Certificate of Incorporation exists as a document but does not evidence current state."
   ],
   "confidence": "medium"
  },
@@ -3335,6 +3738,355 @@
    "Free search returns core data; fuller extract with document list may be a purchasable report."
   ],
   "confidence": "high"
+ },
+ {
+  "jurisdiction": "JP",
+  "legalForm": "GK",
+  "legalFormLocal": "Godo Kaisha (LLC-equivalent, a mochibun-kaisha)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": "Certificate of Registered Matters — showing business-executing members (業務執行社員) and representative members (代表社員)",
+  "documentLocal": "登記事項証明書 (業務執行社員・代表社員の氏名・住所); complete membership/equity held in company 定款/records",
+  "summary": "Unlike a KK (where no owners appear on the register), a GK's members (社員) partly appear on the register itself: Art. 914 registers the names of members who execute the business (業務を執行する社員) and the names and addresses of representative members (代表社員). By default all members execute business (Art. 590(1)), so in the common configuration the register shows every member. Hence current members can, in that case, be evidenced by the base register extract. However this is NOT a guaranteed-complete ownership list: if the articles designate only some members as business-executing (Art. 591), non-executing members are not registered, and the register never shows members' equity/investment interests. Whether such carve-outs exist is not visible from the register alone, so completeness must be corroborated by the 定款/company records.",
+  "evidence": [
+   {
+    "basis": "Companies Act Art. 914 — GK registered matters (members)",
+    "quote": "六 業務を執行する社員の氏名又は名称 七 代表社員の氏名又は名称及び住所",
+    "note": "Only business-executing and representative members are registered — not all members, and no equity interests.",
+    "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Act Art. 590(1) — default that all members execute business",
+    "quote": "社員は、定款に別段の定めがある場合を除き、持分会社の業務を執行する。",
+    "note": "Default = all members are business-executing (hence registered); a contrary provision in the articles removes non-executing members from the register.",
+    "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "COMPLETENESS RISK: the register reliably lists ALL members only when the articles do not restrict business execution (Art. 591). Non-executing members and members' equity shares are not on the register; corroborate against the 定款/company records for a full current-member picture.",
+   "Statutory quotes are keyed to the e-Gov URL but could not be freshly rendered (SPA) — INFERENCE from statute, partially UNVERIFIED via live fetch."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "JP",
+  "legalForm": "KK",
+  "legalFormLocal": "Kabushiki Kaisha (stock company)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "株主名簿 (shareholder registry, company-held; not on the commercial register)",
+  "summary": "Shareholders of a KK are NOT a registered matter on the commercial register — Art. 911(3) does not list shareholders. Current shareholders are recorded only in the shareholder registry (株主名簿), which the company itself prepares and keeps at its head office (Companies Act Art. 121). Inspection of the 株主名簿 is restricted to the company's own shareholders and creditors and must state a reason (Art. 125); it is not a public document and cannot be obtained from the Legal Affairs Bureau. Therefore current shareholders cannot be proved from the registry.",
+  "evidence": [
+   {
+    "basis": "Companies Act Art. 121 — Shareholder Registers (contents)",
+    "quote": "株式会社は、株主名簿を作成し、これに次に掲げる事項（以下「株主名簿記載事項」という。）を記載し、又は記録しなければならない。 一 株主の氏名又は名称及び住所",
+    "note": "Establishes the 株主名簿 as a company-created record, distinct from the commercial register.",
+    "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Act Art. 125 — Keeping and inspection of the shareholder register",
+    "quote": "株式会社は、株主名簿をその本店（株主名簿管理人がある場合にあっては、その営業所）に備え置かなければならない。 … 株主及び債権者は、株式会社の営業時間内は、いつでも、次に掲げる請求をすることができる。",
+    "note": "Shareholder register is kept at the company's head office and inspectable only by shareholders and creditors — not public, not registry-issued. Art. 125 wording was returned by a live fetch of the e-Gov Companies Act XML; Art. 121 wording is statutory text keyed to the same source.",
+    "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The register extract (登記事項証明書) never lists individual shareholders for a KK; parsed register data cannot substitute for a shareholder document.",
+   "Live-fetch verbatim confirmed for Art. 125 (shareholders/creditors inspection); Art. 121 text is INFERENCE from the statute keyed to the e-Gov URL (SPA prevented full re-render)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "JP",
+  "legalForm": "GK",
+  "legalFormLocal": "Godo Kaisha (LLC-equivalent, a mochibun-kaisha)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "定款 (teikan / articles of incorporation) — company-held; not notarially authenticated for a GK; not on the commercial register",
+  "summary": "A GK's articles of incorporation (定款) are not filed on or issued from the public commercial register. Unlike a KK, a GK's articles do not require notarial authentication, but they are prepared and kept by the company; inspection is limited to the company's members and creditors under Art. 618 (keeping and inspection of articles for a mochibun-kaisha). The Legal Affairs Bureau does not issue the 定款. Therefore the constitution cannot be proved from the registry.",
+  "evidence": [
+   {
+    "basis": "Companies Act Art. 618 — inspection of the articles of a mochibun-kaisha (incl. GK)",
+    "quote": "持分会社の社員及び債権者は、当該持分会社の営業時間内は、いつでも、次に掲げる請求をすることができる。",
+    "note": "Articles held by the company; inspection limited to members and creditors — not public, not registry-issued.",
+    "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Art. 618/575 wording is Companies Act statutory text keyed to the e-Gov URL; e-Gov SPA prevented live re-render (INFERENCE from statute, UNVERIFIED via live fetch)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "JP",
+  "legalForm": "KK",
+  "legalFormLocal": "Kabushiki Kaisha (stock company)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "定款 (teikan / articles of incorporation) — company-held; original notarially authenticated and held by the notary; not on the commercial register",
+  "summary": "The articles of incorporation (定款) are NOT filed on or issued from the public commercial register. For a KK the original articles must be notarially authenticated at incorporation (Art. 30) and the notarized original is retained by the notary public; the company keeps the articles at its head and branch offices (Art. 31(1)). Inspection under Art. 31(2) is limited to incorporators and, after incorporation, the company's shareholders and creditors. The Legal Affairs Bureau does not issue the 定款. Therefore the constitution cannot be proved from the registry.",
+  "evidence": [
+   {
+    "basis": "Companies Act Art. 31 — Keeping and Inspection of Articles of Incorporation",
+    "quote": "発起人（株式会社の成立後にあっては、当該株式会社）は、定款を発起人が定めた場所（株式会社の成立後にあっては、その本店及び支店）に備え置かなければならない。 … 発起人（株式会社の成立後にあっては、その株主及び債権者）は、… いつでも、次に掲げる請求をすることができる。",
+    "note": "Articles are held by the company and inspectable only by shareholders/creditors — not public, not on the register.",
+    "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The notarized original (認証を受けた定款原本, Art. 30) is held by the notary public, not the Legal Affairs Bureau; obtaining it is not a registry function.",
+   "Art. 31 wording is Companies Act statutory text keyed to the e-Gov URL; live re-render blocked by the e-Gov SPA (INFERENCE from statute, UNVERIFIED via live fetch)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "JP",
+  "legalForm": "GK",
+  "legalFormLocal": "Godo Kaisha (LLC-equivalent, a mochibun-kaisha)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Certificate of Registered Matters (commercial register extract)",
+  "documentLocal": "登記事項証明書 (登記簿謄本) — 商業登記, issued by the Legal Affairs Bureau (法務局)",
+  "summary": "A Godo Kaisha (合同会社) is registered on the same commercial register maintained by the Legal Affairs Bureau, and its register extract is likewise the Certificate of Registered Matters (登記事項証明書). Registered matters under Companies Act Art. 914 include trade name (商号), purpose (目的), head/branch office locations (本店及び支店の所在場所), amount of capital (資本金の額), the names of members who execute the business (業務を執行する社員の氏名又は名称) and the names and addresses of representative members (代表社員の氏名又は名称及び住所). This is the base registry document, publicly obtainable.",
+  "evidence": [
+   {
+    "basis": "Companies Act Art. 914 — matters registered on establishment of a Godo Kaisha",
+    "quote": "六 業務を執行する社員の氏名又は名称 七 代表社員の氏名又は名称及び住所",
+    "note": "GK registered matters differ from KK: they include business-executing and representative members. Statutory text keyed to the e-Gov law page; e-Gov SPA prevented live re-render of the article body.",
+    "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Ministry of Justice / Legal Affairs Bureau — commercial and corporate registration (covers 合同会社)",
+    "quote": "登記事項証明書，印鑑証明書等の各種証明書の請求手続についてご案内します。",
+    "note": "GK is among the company types registered and for which the 登記事項証明書 is issued.",
+    "url": "https://houmukyoku.moj.go.jp/homu/touki2.html",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Verbatim article text could not be freshly rendered (e-Gov SPA; JLT page too long to reach Art. 914); quote is Companies Act statutory text keyed to the e-Gov URL (INFERENCE, partially UNVERIFIED via live fetch)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "JP",
+  "legalForm": "KK",
+  "legalFormLocal": "Kabushiki Kaisha (stock company)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Certificate of Registered Matters (commercial register extract)",
+  "documentLocal": "登記事項証明書 (登記簿謄本) — 商業登記, issued by the Legal Affairs Bureau (法務局)",
+  "summary": "The commercial register (商業登記) is maintained by the Legal Affairs Bureau under the Ministry of Justice. The register extract is the Certificate of Registered Matters (登記事項証明書, formerly 登記簿謄本). For a KK the registered matters under Companies Act Art. 911(3) include trade name (商号), purpose (目的), head/branch office locations (本店及び支店の所在場所), amount of capital (資本金の額), total authorized/issued shares (発行可能株式総数・発行済株式の総数), directors' names (取締役の氏名) and representative directors' names and addresses (代表取締役の氏名及び住所). This is the base registry document and is publicly obtainable by anyone.",
+  "evidence": [
+   {
+    "basis": "Companies Act (Act No. 86 of 2005) Art. 911(3) — matters registered on establishment of a stock company",
+    "quote": "三 本店及び支店の所在場所 … 五 資本金の額 … 十三 取締役の氏名 … 十四 代表取締役の氏名及び住所",
+    "note": "Statutory list of KK registered matters; automated fetch of the e-Gov SPA could not render the article body, so this is the Companies Act statutory text keyed to the e-Gov law page, not a fresh render — should be spot-checked.",
+    "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Ministry of Justice / Legal Affairs Bureau — commercial and corporate registration and certificate request",
+    "quote": "登記事項証明書，印鑑証明書等の各種証明書の請求手続についてご案内します。",
+    "note": "Confirms the Legal Affairs Bureau issues the 登記事項証明書 for registered companies (KK/GK).",
+    "url": "https://houmukyoku.moj.go.jp/homu/touki2.html",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Verbatim article text could not be freshly rendered: e-Gov (laws.e-gov.go.jp) is a JS SPA and the Japanese Law Translation Companies Act page is too long for the fetch to reach Art. 911; quotes reflect the Companies Act statutory text keyed to the e-Gov URL (INFERENCE from model knowledge of the statute, partially UNVERIFIED via live fetch)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "KR",
+  "legalForm": "Jusik Hoesa",
+  "legalFormLocal": "Jusik Hoesa (주식회사, stock corporation)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "주주명부 (register of shareholders, company-held under 상법 제352조 · 제396조)",
+  "summary": "Shareholders of a Jusik Hoesa are NOT a registered matter. The Art. 317(2) registration list contains no shareholder entry. Shareholders are recorded only in the company's own register of shareholders (주주명부), whose contents are set by Commercial Act Art. 352 and which the directors must keep at the head office under Art. 396. It is not part of the public court register and cannot be obtained as a registry document; there is no registry-issued proof of current shareholders.",
+  "evidence": [
+   {
+    "basis": "상법 제317조 제2항 — enumerated registered matters (proof of absence)",
+    "quote": "8. 사내이사, 사외이사 … 감사 및 집행임원의 성명과 주민등록번호  9. 회사를 대표할 이사 또는 집행임원의 성명·주민등록번호 및 주소",
+    "note": "Verbatim. The complete list registers directors/representative director but has no shareholder item — confirming shareholders are outside the register.",
+    "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%83%81%EB%B2%95",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "상법 제352조 (주주명부의 기재사항) and 제396조 (정관·주주명부의 비치의무) — shareholder register is a company-held book kept at the head office",
+    "note": "Quote omitted — could not extract verbatim this session (law.go.kr/casenote JS-rendered/refused). Art. 352 defines the contents of the 주주명부; Art. 396 requires directors to keep the 정관 and 주주명부 at the head office for inspection by shareholders/creditors — it is a private company book, not a court-registry filing. Canonical source: law.go.kr 상법 제352조·제396조.",
+    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Art. 352 and 396 could not be quoted verbatim from a primary server-rendered source this session; the company-held nature of the 주주명부 is established Korean corporate law but the exact wording here is INFERENCE from statute structure, not a fetched quote.",
+   "No registry document evidences current shareholders; any shareholder proof must come from the company (주주명부) or ancillary sources, not iros.go.kr."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "KR",
+  "legalForm": "Yuhan Hoesa",
+  "legalFormLocal": "Yuhan Hoesa (유한회사, limited company / LLC-equivalent)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "사원명부 (register of members, company-held; 상법 제566조) — member identities also appear in the 정관 (제543조), which is likewise not on the public register",
+  "summary": "Members (사원) of a Yuhan Hoesa are NOT a registered matter. Member identities are an absolute requirement of the articles (정관, Art. 543) and are recorded in the company's register of members (사원명부), which the directors must keep at the head office under Art. 566. Neither the 정관 nor the 사원명부 forms part of the public court register, so there is no registry-issued document proving current members.",
+  "evidence": [
+   {
+    "basis": "Korean-law reference — members not in the register; 사원명부 is a company-held book",
+    "quote": "사원의 성명은 등기부에 기재되지 않습니다. … 「이사는 사원명부를 본점에 비치하지 않으면 아니 된다」 … 사원명부는 회사가 비치하는 서류이며",
+    "note": "Secondary confirmation (Korean Wikipedia, 유한회사) of Commercial Act Art. 566 (directors must keep the 사원명부 at the head office) and that members are not on the register. Members' names are an absolute matter of the 정관 under Art. 543.",
+    "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "상법 제566조 (사원명부의 비치) and 제543조 (정관의 작성 — 유한회사) — canonical primary source",
+    "note": "Quote omitted — not fetched verbatim this session (law.go.kr JS-rendered; statute text page truncates before the 유한회사 chapter). Art. 543 makes member names/contribution units an absolute matter of the 정관; Art. 566 requires the 사원명부 be kept at the head office. Both are company-held, not registry documents. Canonical source: law.go.kr 상법 제543조·제566조.",
+    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Because member names sit in the 정관 (Art. 543) and 사원명부 (Art. 566) — both company-held and not filed on the public register — current members are not provable from the registry.",
+   "Arts. 543/566 not quoted verbatim this session; wording is INFERENCE from established statute + secondary source."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "KR",
+  "legalForm": "Jusik Hoesa",
+  "legalFormLocal": "Jusik Hoesa (주식회사, stock corporation)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "정관 (jeonggwan, articles of incorporation, company-held; 상법 제289조 · 제396조)",
+  "summary": "The articles of incorporation (정관) are drawn up and signed by the promoters (발기인) under Commercial Act Art. 289 and kept at the head office under Art. 396; they are NOT filed as part of the public court register. Although some articles-derived facts (purpose, trade name, capital, share classes, public-notice method) are separately registered under Art. 317, the constitution document itself cannot be obtained from the commercial registry. A notarized 정관 is submitted to the registry office only as a supporting incorporation filing, not as a publicly retrievable register document.",
+  "evidence": [
+   {
+    "basis": "상법 제289조 제1항 (정관의 작성, 절대적 기재사항) — the articles are made by the promoters",
+    "quote": "1. 목적  2. 상호  3. 회사가 발행할 주식의 총수  4. 액면주식을 발행하는 경우 1주의 금액  5. 회사의 설립 시에 발행하는 주식의 총수  6. 본점의 소재지  7. 회사가 공고를 하는 방법  8. 발기인의 성명·주민등록번호 및 주소",
+    "note": "Verbatim. 발기인은 정관을 작성하여 위 사항을 적고 기명날인/서명한다 — the 정관 is a promoter-made constitutional document, not a registry output.",
+    "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%83%81%EB%B2%95",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "상법 제396조 (정관 등의 비치·공시의무) — the 정관 is kept at the head office, not on the public register",
+    "note": "Quote omitted — not fetched verbatim this session. Art. 396 obliges directors to keep the 정관 (and 주주명부) at the head office for inspection; the public register (Art. 317) reproduces only selected articles-derived items, never the full constitution. Canonical source: law.go.kr 상법 제396조.",
+    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The registry does show certain 정관-derived data via Art. 317, but the constitution document itself is not registry-obtainable — status is not_provable_from_registry for the DOCUMENT.",
+   "Art. 396 not quoted verbatim (law.go.kr JS-rendered); its effect is established statute but the wording here is INFERENCE."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "KR",
+  "legalForm": "Yuhan Hoesa",
+  "legalFormLocal": "Yuhan Hoesa (유한회사, limited company / LLC-equivalent)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "정관 (jeonggwan, articles of incorporation, company-held; 상법 제543조)",
+  "summary": "The articles of incorporation (정관) of a Yuhan Hoesa are drawn up by the members under Commercial Act Art. 543 and are NOT filed as part of the public court register. Some articles-derived facts (purpose, trade name, total capital, contribution-unit amount) are separately registered under Art. 549, but the constitution document itself cannot be obtained from the commercial registry. A notarized 정관 is submitted only as a supporting incorporation filing, not as a publicly retrievable register document.",
+  "evidence": [
+   {
+    "basis": "Korean-law reference — 정관 is not registered; only certain 정관 matters are disclosed via registration",
+    "quote": "정관 자체는 등기되지 않지만, 정관의 절대적 기재사항(자본총액, 사원의 성명, 각 사원의 출자좌수 등)이 변경되면 등기를 통해 공시됩니다.",
+    "note": "Secondary confirmation (Korean Wikipedia, 유한회사): the 정관 document itself is not registered; only selected registered matters (Art. 549) are publicly disclosed. The constitution document is therefore not registry-obtainable.",
+    "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "상법 제543조 (정관의 작성 — 유한회사) — canonical primary source",
+    "note": "Quote omitted — not fetched verbatim this session (law.go.kr JS-rendered; statute page truncates before the 유한회사 chapter). Art. 543 requires members to draw up the 정관 stating absolute matters incl. capital total, member names and contribution units; kept by the company, not filed on the public register. Canonical source: law.go.kr 상법 제543조.",
+    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Registry discloses some 정관-derived data via Art. 549, but the constitution DOCUMENT is not registry-obtainable — hence not_provable_from_registry.",
+   "Art. 543 not quoted verbatim this session; wording is INFERENCE from established statute + secondary source."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "KR",
+  "legalForm": "Jusik Hoesa",
+  "legalFormLocal": "Jusik Hoesa (주식회사, stock corporation)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Certified copy of the corporate register / Certificate of All Registered Matters",
+  "documentLocal": "법인등기사항전부증명서 (구칭 법인등기부등본) — corporate registration certificate issued by the court commercial registry (대법원 등기소 / IROS, iros.go.kr)",
+  "summary": "The corporate register certificate is the base register extract. Under Commercial Act Art. 317(2) it evidences trade name, purpose, head-office/branch address, total capital (자본금의 액), total number and classes of shares, and the names/resident-registration numbers of directors and the representative director. It is publicly obtainable from the court commercial registry (IROS). It proves the company's existence, capital and management — but NOT its shareholders.",
+  "evidence": [
+   {
+    "basis": "상법(Commercial Act) 제317조(설립의 등기) 제2항 — registered matters for a stock corporation",
+    "quote": "2. 자본금의 액  3. 발행주식의 총수, 그 종류와 각종주식의 내용과 수 … 8. 사내이사, 사외이사, 그 밖에 상무에 종사하지 아니하는 이사, 감사 및 집행임원의 성명과 주민등록번호  9. 회사를 대표할 이사 또는 집행임원의 성명·주민등록번호 및 주소",
+    "note": "Verbatim from statute text (Korean Wikisource transcription of 대한민국 상법). The full enumerated list (items 1–12) contains capital, shares, directors and representative director, but NO item for shareholders/members. Canonical source: law.go.kr 상법 제317조.",
+    "url": "https://ko.wikisource.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%83%81%EB%B2%95",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Supreme Court Internet Registry Office (IROS) — the public commercial/corporate register maintained by the courts, from which the 등기사항전부증명서 is issued",
+    "note": "The register certificate is the third-party-obtainable extract; its content is fixed by Art. 317, so shareholders never appear on it.",
+    "url": "https://www.iros.go.kr",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Modern official name is 등기사항전부증명서 (Certificate of All Registered Matters); 등기부등본 is the legacy term still in common use.",
+   "IROS site is session/JS-based and could not be fetched verbatim; the registered-matter list is grounded in the verbatim Art. 317 statute text."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "KR",
+  "legalForm": "Yuhan Hoesa",
+  "legalFormLocal": "Yuhan Hoesa (유한회사, limited company / LLC-equivalent)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Certified copy of the corporate register / Certificate of All Registered Matters",
+  "documentLocal": "법인등기사항전부증명서 (구칭 법인등기부등본) — corporate registration certificate from the court commercial registry (IROS, iros.go.kr)",
+  "summary": "For a Yuhan Hoesa the corporate register certificate is the base register extract. Under Commercial Act Art. 549 the registered matters include trade name, purpose, head-office address, total capital (자본금의 총액), amount per contribution unit (출자1좌의 금액), and the names/resident-registration numbers of directors and the representative director (and auditor if any). It is publicly obtainable from IROS and proves existence, capital and management — but NOT the members (사원).",
+  "evidence": [
+   {
+    "basis": "상법 제549조 (유한회사 설립의 등기) — registered matters for a limited company",
+    "note": "Quote omitted — Art. 549 could not be fetched verbatim this session (statute text page truncates before the 유한회사 chapter; law.go.kr JS-rendered). Established content of Art. 549(2): 목적, 상호, 본점 소재지, 자본금의 총액, 출자1좌의 금액, 이사의 성명·주민등록번호, 회사를 대표할 이사의 성명·주소 등 — directors and capital are registered; members are not. Canonical source: law.go.kr 상법 제549조.",
+    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Korean-law reference confirming register content for 유한회사",
+    "quote": "사원의 성명은 등기부에 기재되지 않습니다. … 유한회사는 본점 소재지에서 설립등기를 해야 법인격을 취득합니다.",
+    "note": "Secondary confirmation (Korean Wikipedia, 유한회사) that members' names are NOT entered in the register; registration (per Art. 549) establishes legal personality and shows capital/directors.",
+    "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Art. 549 not quoted verbatim this session; the enumerated registered matters are from established statute + secondary confirmation, flagged as INFERENCE on exact wording.",
+   "Modern name 등기사항전부증명서; 등기부등본 is legacy terminology."
+  ],
+  "confidence": "medium"
  },
  {
   "jurisdiction": "KY",
@@ -4664,6 +5416,113 @@
    }
   ],
   "caveats": [],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "NZ",
+  "legalForm": "Ltd",
+  "legalFormLocal": "Limited company (Companies Act 1993)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": null,
+  "documentLocal": "company register (Companies Office) / shareholders",
+  "summary": "Current shareholders and their exact shareholdings are shown FREE on the public Companies Register as part of the company details page (base extract). Each shareholder's name, address and number/percentage of shares held is displayed, and a shareholder view gives a record of all the shareholdings and how they are allocated. Shareholdings must be kept current — updated on share allocations/transfers and confirmed each year via the mandatory annual return. No separate shareholder-list document is needed; the register page itself evidences current shareholders.",
+  "evidence": [
+   {
+    "basis": "Companies Office official help-centre — Searching the companies register",
+    "quote": "the number of shares, the names of shareholders and how many shares they hold",
+    "note": "Shareholder link shows 'a record of all the shareholdings for that company and how they are allocated'; shareholder record shows 'the number or percentage of shares they hold'.",
+    "url": "https://companies-register.companiesoffice.govt.nz/help-centre/getting-support-to-use-the-companies-register/searching-the-companies-register/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Office official help-centre — Completing an annual return",
+    "quote": "the total number of your company's shares, each shareholder's full legal name and address, and the number of shares they hold.",
+    "note": "The annual return confirms/updates shareholders so the register is correct. NZ requires an annual return each year.",
+    "url": "https://companies-register.companiesoffice.govt.nz/help-centre/company-annual-returns/completing-an-annual-return/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Office official help-centre — Updating a shareholder's details",
+    "quote": "These changes must be recorded on your own share register, and included in your next company annual return.",
+    "note": "The company maintains its own share register (Companies Act 1993 s.87); changes flow to the public register via the annual return.",
+    "url": "https://companies-register.companiesoffice.govt.nz/help-centre/shares-and-shareholders/updating-a-shareholders-details/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Public register shareholdings are kept current but between filings may lag actual changes until the next allocation filing or annual return; the definitive record remains the company's own share register (s.87).",
+   "Companies Act 1993 section numbers (s.87 share register; s.214 annual return) cited from knowledge only — legislation.govt.nz returned HTTP 403 this session (INFERENCE)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "NZ",
+  "legalForm": "Ltd",
+  "legalFormLocal": "Limited company (Companies Act 1993)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": null,
+  "documentLocal": "constitution (registered document on Companies Register)",
+  "summary": "A NZ limited company MAY be incorporated with or without a constitution. If it has one, a copy is filed with the Registrar and appears among the company's registered documents on the free public register, downloadable as a document. If the company has no constitution, none exists to evidence and it is governed by the default provisions of the Companies Act 1993. So the constitution is provable as a separate registered document only when the company actually has one.",
+  "evidence": [
+   {
+    "basis": "Companies Office official help-centre — Adding, amending or removing a company constitution",
+    "quote": "You can incorporate a New Zealand company with or without a company constitution.",
+    "note": "A constitution is optional, not mandatory.",
+    "url": "https://companies-register.companiesoffice.govt.nz/help-centre/keeping-company-details-up-to-date/adding-amending-or-removing-a-company-constitution/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Office official help-centre — Adding, amending or removing a company constitution",
+    "quote": "NZ companies that don't have a constitution are governed by the Companies Act 1993.",
+    "note": "Where no constitution is filed, the Act's default provisions apply and there is no constitution document to obtain.",
+    "url": "https://companies-register.companiesoffice.govt.nz/help-centre/keeping-company-details-up-to-date/adding-amending-or-removing-a-company-constitution/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Office official help-centre — Searching the companies register",
+    "quote": "All registered company documents",
+    "note": "The company details page lists all registered documents; a filed constitution is among them and downloadable free.",
+    "url": "https://companies-register.companiesoffice.govt.nz/help-centre/getting-support-to-use-the-companies-register/searching-the-companies-register/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "Conditional existence: a constitution exists on the register ONLY if the company adopted one; a company on the Act's default provisions has no constitution document — for such companies this kind is not_provable_from_registry.",
+   "Exact statutory wording (Companies Act 1993 s.26-27) cited from knowledge only — legislation.govt.nz returned HTTP 403 this session (INFERENCE)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "NZ",
+  "legalForm": "Ltd",
+  "legalFormLocal": "Limited company (Companies Act 1993)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": null,
+  "documentLocal": "company register (Companies Office) / company details page",
+  "summary": "The NZ Companies Register is free and public. Searching a company returns its full details page (name, company number, NZBN, status, registered office and other addresses, incorporation date, directors, and shareholders/shareholdings) plus all registered documents. The page can be printed or saved as a PDF at no cost, serving as the current register extract. No paywalled certificate is needed for the current extract; the free public page is the document.",
+  "evidence": [
+   {
+    "basis": "Companies Office official help-centre — Searching the companies register",
+    "quote": "the number of shares, the names of shareholders and how many shares they hold",
+    "note": "The company details page also shows current/previous addresses, directors, and 'All registered company documents'. Results can be saved 'as a PDF'.",
+    "url": "https://companies-register.companiesoffice.govt.nz/help-centre/getting-support-to-use-the-companies-register/searching-the-companies-register/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Companies Office homepage (register scale / transparency mission)",
+    "quote": "Building trust and confidence in our economy, and making New Zealand a transparent, fair and easy place to do business.",
+    "note": "Register held 756,821 companies as at 30 June 2026; search is free and public.",
+    "url": "https://www.companiesoffice.govt.nz/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The free public page is a self-generated print/PDF of the live register record, not a Registrar-certified/sealed extract; a formally certified extract may require a separate request. UNVERIFIED whether a certified version carries a fee.",
+   "Statutory basis (Companies Act 1993 s.360 Registrar's registers) cited from knowledge only — legislation.govt.nz returned HTTP 403 this session (INFERENCE)."
+  ],
   "confidence": "high"
  },
  {
@@ -6104,6 +6963,167 @@
   ],
   "caveats": [
    "Currency depends on the company's filing compliance."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "TR",
+  "legalForm": "AS",
+  "legalFormLocal": "Anonim Şirket",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLocal": "Pay defteri (şirket içi hisse defteri — ticaret siciline tescil edilmez)",
+  "documentLabel": null,
+  "summary": "For an Anonim Şirket the shareholders (pay sahipleri) are NOT registered in the Trade Registry nor published in the Gazette. Under TTK art. 499 the company records its shareholders (name, title, address) in its own private share ledger (pay defteri), and for company purposes only the person entered in that ledger counts as shareholder. The pay defteri is an internal company book, not a registry document, so current shareholders are not provable from the registry. EXCEPTIONS registered/gazetted: the sole shareholder where the shareholder count drops to one (art. 338(2)), and the founders (kurucular) named in the esas sözleşme at incorporation.",
+  "evidence": [
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 499(1) and (4)",
+    "quote": "Şirket, senede bağlanmamış pay ve nama yazılı pay senedi sahipleriyle, intifa hakkı sahiplerini, ad, soyad, unvan ve adresleriyle, pay defterine kaydeder. ... Şirketle ilişkilerde, sadece pay defterinde kayıtlı bulunan kimse pay sahibi ve intifa hakkı sahibi olarak kabul edilir.",
+    "note": "Shareholders live in the internal pay defteri, not the trade registry.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 354(1)(a)-(h)",
+    "quote": "Şirket esas sözleşmesinin tamamı, ... ticaret siciline tescil ve Türkiye Ticaret Sicili Gazetesinde ilan olunur. ... g) Yönetim kurulu üyeleriyle şirketi temsile yetkili kimselerin ad ve soyadları, unvanları, yerleşme yerleri ve vatandaşlıkları.",
+    "note": "The registered/gazetted particulars list board members and representatives — NOT the shareholders.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 338(2)",
+    "quote": "... şirketin tek pay sahipli bir anonim şirket olduğunu tescil ve ilan ettirir. ... tek pay sahibinin adı, yerleşim yeri ve vatandaşlığı da tescil ve ilan edilir.",
+    "note": "EXCEPTION: a sole shareholder is registered and gazetted; likewise founders at incorporation.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "EXCEPTION: sole shareholder (art. 338(2)) and incorporation founders are registry-provable; the general body of shareholders is not. Multi-shareholder AŞ shareholder proof requires the internal pay defteri / hazirun (attendance) list, which are not registry documents."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "TR",
+  "legalForm": "Ltd Sti",
+  "legalFormLocal": "Limited Şirket",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLocal": "Türkiye Ticaret Sicili Gazetesi tescil ilanı / ticaret sicili kayıt örneği (ortaklar)",
+  "documentLabel": null,
+  "summary": "For a Limited Şirket the partners (ortaklar) and each partner's capital share ARE registered particulars and are published in the Trade Registry Gazette. TTK art. 587(1)(e) lists each real-person partner's name and residence, each legal-person partner's title/seat, and every partner's undertaken capital share among the matters registered and gazetted. Share transfers (pay geçişi) must be registered under art. 598, so the registry/Gazette reflects the CURRENT partners. Proof therefore exists as a public registry document (Gazette announcement / registry record), not merely as parsed data.",
+  "evidence": [
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 587(1) and (1)(e)",
+    "quote": "Şirket sözleşmesinin tamamı, ... şirketin merkezinin bulunduğu yer ticaret siciline tescil ve Türkiye Ticaret Sicili Gazetesinde ilan olunur. ... e) Gerçek kişi ortağın adı ve soyadı, yerleşim yeri, tüzel kişi ortakların unvanı, merkezleri ve her ortağın üstlendiği esas sermaye payları.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 598(1)",
+    "quote": "Esas sermaye paylarının geçişlerinin tescil edilmesi için, şirket müdürleri tarafından ticaret siciline başvurulur.",
+    "note": "Share transfers are registered, keeping the registered partner list current.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The registered/gazetted particulars capture partners as of incorporation and each registered transfer; the current partner set is derived from the founding sözleşme plus subsequent art. 598 transfer registrations. There is no single standalone statutory 'shareholder list' document — proof is the Gazette announcement(s) / certified registry record."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "TR",
+  "legalForm": "AS",
+  "legalFormLocal": "Anonim Şirket",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_base_document",
+  "documentLocal": "Esas sözleşme (Türkiye Ticaret Sicili Gazetesinde ilan / ticaret sicilinde saklanan)",
+  "documentLabel": null,
+  "summary": "The entire articles of association (esas sözleşme — the constitution of an Anonim Şirket) are registered with the Trade Registry and published in full in the Türkiye Ticaret Sicili Gazetesi under TTK art. 354(1); underlying documents are archived and available as certified copies under art. 35. The constitution is directly provable as a registry-published base document.",
+  "evidence": [
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 354(1)",
+    "quote": "Şirket esas sözleşmesinin tamamı, ... şirketin kuruluşunu izleyen otuz gün içinde şirketin merkezinin bulunduğu yer ticaret siciline tescil ve Türkiye Ticaret Sicili Gazetesinde ilan olunur.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The Gazette publishes the founding esas sözleşme plus later amendment announcements; a consolidated current text may require combining announcements or requesting the certified copy from the registry (art. 35)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "TR",
+  "legalForm": "Ltd Sti",
+  "legalFormLocal": "Limited Şirket",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_base_document",
+  "documentLocal": "Şirket sözleşmesi (Türkiye Ticaret Sicili Gazetesinde ilan / ticaret sicilinde saklanan)",
+  "documentLabel": null,
+  "summary": "The entire company contract (şirket sözleşmesi — the constitution / articles of a Limited Şirket) is registered with the Trade Registry and published in full in the Türkiye Ticaret Sicili Gazetesi under TTK art. 587(1), and the underlying documents are archived and available as certified copies under art. 35. The constitution is directly provable as a registry-published base document.",
+  "evidence": [
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 587(1)",
+    "quote": "Şirket sözleşmesinin tamamı, kurucuların imzalarının ticaret sicili müdürlüğünde yetkilendirilmiş personelin huzurunda imzalandığı tarihi izleyen otuz gün içinde, şirketin merkezinin bulunduğu yer ticaret siciline tescil ve Türkiye Ticaret Sicili Gazetesinde ilan olunur.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Türkiye Ticaret Sicili Gazetesi (official gazette portal)",
+    "note": "Gazette (art. 37 TTK) archives certified copies of published announcements (incl. company contracts) from 1957 to date.",
+    "url": "https://www.ticaretsicil.gov.tr/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "The Gazette publishes the full sözleşme at incorporation and amendments as gazetted; a fully consolidated current text may require combining the founding text with later amendment announcements or requesting the certified copy held at the registry (art. 35)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "TR",
+  "legalForm": "AS",
+  "legalFormLocal": "Anonim Şirket",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLocal": "Ticaret Sicili Tasdiknamesi / Faaliyet Belgesi (ticaret sicili kayıt örneği)",
+  "documentLabel": null,
+  "summary": "Same registry regime as for the Ltd Şti: the Trade Registry issues a certified extract/record of the AŞ's registered particulars. TTK art. 35 guarantees public inspection of registry content and certified copies of filed documents; the current-extract documents in practice are the Ticaret Sicili Tasdiknamesi and the Chamber's Faaliyet Belgesi. Registry-issued base document.",
+  "evidence": [
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 35(2) and (4)",
+    "quote": "Herkes ticaret sicilinin içeriğini ve müdürlükte saklanan tüm senet ve belgeleri inceleyebileceği gibi giderini ödeyerek bunların onaylı suretlerini de alabilir.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "As with the Ltd Şti, TTK defines no single named 'extract'; provability of a current registry extract is high, exact document label (Tasdikname / Faaliyet Belgesi) is by administrative practice."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "TR",
+  "legalForm": "Ltd Sti",
+  "legalFormLocal": "Limited Şirket",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": null,
+  "documentLocal": "Ticaret Sicili Tasdiknamesi / Faaliyet Belgesi (ticaret sicili kayıt örneği)",
+  "summary": "The Trade Registry (Ticaret Sicili Müdürlüğü, coordinated via MERSIS) issues a certified extract/record of the registered particulars. TTK art. 35 guarantees public access to registry content and to certified copies (onaylı suret) of the filed documents; the practical current-extract documents are the Ticaret Sicili Tasdiknamesi and the Chamber's Faaliyet Belgesi. This is a registry-issued base document.",
+  "evidence": [
+   {
+    "basis": "Türk Ticaret Kanunu (Law 6102) art. 35(2) and (4)",
+    "quote": "Herkes ticaret sicilinin içeriğini ve müdürlükte saklanan tüm senet ve belgeleri inceleyebileceği gibi giderini ödeyerek bunların onaylı suretlerini de alabilir. Bir hususun sicilde kayıtlı olup olmadığına dair onaylı belge de istenebilir.",
+    "note": "art. 35(4): 'İlan, Türkiye genelinde sicil kayıtlarının ilanına özgü Türkiye Ticaret Sicili Gazetesi ile yapılır.' Public register + certified copies are the legal basis for a register extract.",
+    "url": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6102.pdf",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "caveats": [
+   "TTK does not define a single named 'register extract'; in practice the current extract is the Ticaret Sicili Tasdiknamesi (registry) or Faaliyet Belgesi (Chamber of Commerce). Provability is high; the exact document label is by administrative practice."
   ],
   "confidence": "high"
  },
