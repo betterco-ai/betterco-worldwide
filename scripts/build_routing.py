@@ -50,20 +50,36 @@ _SHDATA = shareholder_data_by_code()
 
 # ---- LAYER 2a: vendor routing + ordering model (per vendor) ---------------------------
 VENDOR_BY_JURISDICTION = {
-    "DE": "handelsregister.de",   # served directly, NOT via KYC.com
+    "DE": "handelsregister.de",   # served directly (free), NOT via KYC.com
+    "FR": "inpi.rne",             # free direct REST API for statuts/actes/comptes
     "*": "kyc.com",
+}
+# Per-(jurisdiction, kind) vendor override — takes precedence over the jurisdiction default.
+# This is where SPLIT-vendor jurisdictions live: FR serves statuts free via INPI, but the Kbis
+# register extract only via paid Infogreffe. First real per-document vendor split.
+VENDOR_BY_JURISDICTION_KIND = {
+    ("FR", "REGISTERAUSZUG"): "infogreffe",       # Kbis — paid, ~3.06 EUR (INPI does not issue it)
+    ("FR", "GESELLSCHAFTSVERTRAG"): "inpi.rne",   # statuts — free
+    # FR GESELLSCHAFTERLISTE is not_provable (SAS/SA private) — vendor is informational only.
 }
 # How each vendor is ordered from. case_level => document identified WITHIN a case, no SKU.
 VENDOR_ORDER_MODEL = {
     "kyc.com": {"model": "case_level", "catalog": "jurisdiction_matrix.json",
                 "note": "Order the case; base docs included, additional docs requestable "
                         "within the case. No per-document SKU."},
-    "handelsregister.de": {"model": "document_level", "catalog": "handelsregister.de skill",
-                           "note": "Order the specific document directly."},
+    "handelsregister.de": {"model": "document_level", "catalog": "handelsregister.de (scraper)",
+                           "note": "Free. Browser-scraper provider client; order the document directly."},
+    "inpi.rne": {"model": "document_level", "catalog": "INPI RNE API",
+                 "note": "Free REST API (JWT): login -> /companies/{siren}/attachments -> "
+                         "/{actes,bilans}/{id}/download. See inpi_client.py."},
+    "infogreffe": {"model": "document_level", "catalog": "Infogreffe",
+                   "note": "Paid ~3.06 EUR/electronic doc (professional account). Certified Kbis."},
 }
 
 
-def vendor_for(j):
+def vendor_for(j, kind=None):
+    if kind is not None and (j, kind) in VENDOR_BY_JURISDICTION_KIND:
+        return VENDOR_BY_JURISDICTION_KIND[(j, kind)]
     return VENDOR_BY_JURISDICTION.get(j, VENDOR_BY_JURISDICTION["*"])
 
 
@@ -123,19 +139,31 @@ def decide(r):
     if status == "proved_by_base_document":
         availability = "base"
         completeness = ov.get("completeness", "full")
-        action = "use_delivered" if completeness == "full" else "use_delivered_with_warning"
         fallback = None
     elif status == "proved_by_additional_document":
         availability = "additional"
         completeness = ov.get("completeness", "full")
-        action = "order" if completeness == "full" else "order_with_warning"
         fallback = None
     else:
         availability = "off_registry" if (j, kind) not in FALLBACK_NONE \
             and ov.get("fallback") != "none" else "none"
         completeness = None
-        action = "manual" if availability == "off_registry" else "unavailable"
         fallback = ov.get("fallback", "company_register") if availability == "off_registry" else "none"
+
+    # Action depends on HOW the resolved vendor is ordered. For a case_level vendor (KYC.com) a
+    # base document arrives with the case → "use_delivered"; for a document_level vendor (hr.de,
+    # inpi.rne, infogreffe) you always fetch the specific document → "order".
+    vendor = vendor_for(j, kind)
+    order_model = VENDOR_ORDER_MODEL.get(vendor, {}).get("model")
+    warn = "_with_warning" if (completeness and completeness != "full") else ""
+    if availability == "off_registry":
+        action = "manual"
+    elif availability == "none":
+        action = "unavailable"
+    elif order_model == "case_level" and availability == "base":
+        action = "use_delivered" + warn
+    else:
+        action = "order" + warn
 
     needs_review = bool(availability in ("base", "additional") and completeness == "full"
                         and any(m in caveat_text for m in INCOMPLETE_MARKERS)
@@ -152,8 +180,10 @@ def decide(r):
     # Data backup: KYC.com's parsed shareholder data, relevant to the shareholder-list kind.
     # Especially valuable where the proof document is off_registry/none — we can still deliver
     # the data (clearly as data, not proof). Only meaningful for the KYC.com-routed path.
+    # KYC.com data backup is a property of KYC.com's coverage (the matrix), independent of which
+    # vendor we primarily route to — so it stays available even where we go direct for documents.
     data_backup = None
-    if kind == "GESELLSCHAFTERLISTE" and vendor_for(j) == "kyc.com":
+    if kind == "GESELLSCHAFTERLISTE":
         fields = _SHDATA.get(j, [])
         data_backup = {
             "available": bool(fields),
@@ -164,7 +194,6 @@ def decide(r):
                     "document where the proof document is unavailable.",
         }
 
-    vendor = vendor_for(j)
     order = None
     if availability in ("base", "additional"):
         model = VENDOR_ORDER_MODEL.get(vendor, {})
@@ -204,6 +233,7 @@ def main():
                 "gets an actionable decision; it never names a vendor. Registry truth lives "
                 "in the evidence file; vendor selection and ordering model live here.",
         "vendorRouting": VENDOR_BY_JURISDICTION,
+        "vendorRoutingByKind": {"%s/%s" % k: v for k, v in VENDOR_BY_JURISDICTION_KIND.items()},
         "vendorOrderModel": VENDOR_ORDER_MODEL,
         "actionVocabulary": {
             "use_delivered": "Document arrives with the case bundle; classify the delivered file.",
