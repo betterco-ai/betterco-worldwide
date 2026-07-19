@@ -24,6 +24,29 @@ import os, json
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "curation", "document_kinds_evidence.json")
 OUT = os.path.join(ROOT, "curation", "document_kinds_routing.json")
+MATRIX = os.path.join(ROOT, "jurisdiction_matrix.json")
+
+
+def shareholder_data_by_code():
+    """Per jurisdiction, the shareholder DATA fields KYC.com parses (from the coverage
+    matrix). This is DATA, not a proof document — but where the proof document cannot be
+    sourced, delivering this data (as a data sheet / generated document) is a real backup.
+    Merged across a jurisdiction's registry rows (HK CR/IRD etc.)."""
+    out = {}
+    if not os.path.exists(MATRIX):
+        return out
+    for j in json.load(open(MATRIX, encoding="utf-8")).get("jurisdictions", []):
+        c = j.get("code")
+        if not c:
+            continue
+        out.setdefault(c, [])
+        for s in (j.get("shareholders") or []):
+            if s not in out[c]:
+                out[c].append(s)
+    return out
+
+
+_SHDATA = shareholder_data_by_code()
 
 # ---- LAYER 2a: vendor routing + ordering model (per vendor) ---------------------------
 VENDOR_BY_JURISDICTION = {
@@ -126,6 +149,21 @@ def decide(r):
     if completeness and completeness != "full":
         flags.append(completeness)
 
+    # Data backup: KYC.com's parsed shareholder data, relevant to the shareholder-list kind.
+    # Especially valuable where the proof document is off_registry/none — we can still deliver
+    # the data (clearly as data, not proof). Only meaningful for the KYC.com-routed path.
+    data_backup = None
+    if kind == "GESELLSCHAFTERLISTE" and vendor_for(j) == "kyc.com":
+        fields = _SHDATA.get(j, [])
+        data_backup = {
+            "available": bool(fields),
+            "fields": fields,
+            "source": "kyc.com structured data (parsed)",
+            "isProof": False,
+            "note": "Data, not a proof document. Deliverable as a data sheet / generated "
+                    "document where the proof document is unavailable.",
+        }
+
     vendor = vendor_for(j)
     order = None
     if availability in ("base", "additional"):
@@ -150,6 +188,7 @@ def decide(r):
         "orderable": availability in ("base", "additional"),
         "completeness": completeness, "flags": flags,
         "order": order, "vendor": vendor, "fallback": fallback,
+        "dataBackup": data_backup,
         "confidence": r.get("confidence"), "needsReview": needs_review,
         "sources": [{"basis": e.get("basis"), "url": e.get("url")}
                     for e in r.get("evidence", []) if e.get("url")],
@@ -184,6 +223,11 @@ def main():
     print("By availability:", dict(Counter(r["availability"] for r in routes)))
     print("Completeness (orderable):", dict(Counter(r["completeness"] for r in routes if r["orderable"])))
     print("Flagged 'nominee':", len([r for r in routes if "nominee" in r["flags"]]))
+    gl = [r for r in routes if r["kind"] == "GESELLSCHAFTERLISTE" and r.get("dataBackup")]
+    db = [r for r in gl if r["dataBackup"]["available"]]
+    rescue = [r for r in db if not r["orderable"]]
+    print("Gesellschafterliste rows with KYC.com data backup: %d/%d (of which %d have NO "
+          "proof document — data is the only route)" % (len(db), len(gl), len(rescue)))
     nr = [r for r in routes if r["needsReview"]]
     print("needsReview after adjudication: %d%s" % (len(nr), (" -> " + ", ".join(
         "%s/%s/%s" % (r["jurisdiction"], r["legalForm"], r["kind"]) for r in nr)) if nr else ""))

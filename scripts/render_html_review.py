@@ -41,7 +41,8 @@ def main():
             d = rt.get((r["jurisdiction"], r["legalForm"], r["kind"]))
             if d:
                 r["_answer"] = {k: d[k] for k in ("availability", "action", "completeness",
-                                                  "vendor", "fallback", "flags", "order")}
+                                                  "vendor", "fallback", "flags", "order",
+                                                  "dataBackup")}
     # Embed as raw JSON in a <script type="application/json"> block. Do NOT HTML-escape:
     # browsers don't decode entities inside <script>, so &quot; would break JSON.parse.
     # Only neutralize < and > (present in values like ">=5%", "<dd/mm/yyyy>") as \u
@@ -191,7 +192,13 @@ const answerHTML = a => {
  if(a.action==='manual'&&a.fallback) bits.push(`fallback: <b>${esc(a.fallback)}</b>`);
  if(a.vendor) bits.push(`vendor: ${esc(a.vendor)}`);
  if(a.order&&a.order.model) bits.push(`ordering: ${esc(a.order.model)}`);
- return `<div class="answer"><span class="badge" style="color:${fg};background:${bg};font-size:13px">${lab}</span>${bits.length?' <span class="abits">'+bits.join(' · ')+'</span>':''}</div>`;
+ let backup='';
+ if(a.dataBackup&&a.dataBackup.available){
+   const noProof = a.action==='manual'||a.action==='unavailable';
+   const bg2 = noProof?'#e8f0fe':'#f1f3f4';
+   backup = `<div class="answer"><span class="badge" style="color:#1a56c4;background:${bg2};font-size:12px">⛃ ${noProof?'data backup (only route)':'data also available'}</span> <span class="abits">KYC.com shareholder data: ${esc((a.dataBackup.fields||[]).join(', '))} — <b>data, not a proof document</b></span></div>`;
+ }
+ return `<div class="answer"><span class="badge" style="color:${fg};background:${bg};font-size:13px">${lab}</span>${bits.length?' <span class="abits">'+bits.join(' · ')+'</span>':''}</div>${backup}`;
 };
 function rowHTML(r){
  const [lab,fg,bg] = STATUS[r.status]||['?','#000','#eee'];

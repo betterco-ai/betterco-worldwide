@@ -85,6 +85,7 @@ For an orderable kind (e.g. `MT / Ltd / GESELLSCHAFTERLISTE`):
 | `flags` | cross-cutting concerns that don't affect completeness — currently `nominee` (registered ≠ beneficial holder). See below. |
 | `order` | how to obtain it via the resolved vendor (`model`, `howToObtain`, `registryName`, `vendorCatalog`). See Vendor ordering model. |
 | `vendor` | resolved aggregation vendor. Consumer displays nothing vendor-specific; it's here for the order call and audit |
+| `dataBackup` | (shareholder-list kind) KYC.com's parsed shareholder **data** for the jurisdiction — a backup when the proof document is unavailable. `{available, fields[], isProof:false}`. See below. |
 | `fallback` | `company_register` · `ubo_register` · `none` — where to send the user when `action = manual` |
 | `needsReview` | true = our completeness mapping and the evidence caveats disagree; do not treat as authoritative until curated |
 | `sources` | citations carried from the evidence layer for audit / display |
@@ -141,6 +142,33 @@ So the consumer always issues a **document-level** request; our aggregation laye
 whatever the vendor supports — a case order (KYC.com) or a document order (handelsregister.de). The
 integration work is that mapping in our layer, not a missing vendor SKU. `howToObtain` tells the
 order code which path to take.
+
+## Data backup — deliver the data when the document can't be sourced
+
+The proof rule ("a document is the proof, data is not a substitute") governs *completeness* and
+*evidential weight*. But where the proof document **cannot** be sourced at all, delivering the
+available data — clearly labelled as data, not proof — is a real fallback the operator should be
+offered. For the shareholder-list kind, KYC.com's parsed `shareholders` fields (from
+`jurisdiction_matrix.json`) are exactly that.
+
+```json
+"dataBackup": {
+  "available": true,
+  "fields": ["Name", "Share count", "Role", "Address (if available)"],
+  "source": "kyc.com structured data (parsed)",
+  "isProof": false,
+  "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+}
+```
+
+- **46 of 61** shareholder-list rows have this data; for **21 of them there is no proof document
+  at all** — the data is the *only* route (England is one: `action:"manual"` but data available).
+- The UI should present it as a **secondary** option, never as the shareholder list itself:
+  "No proof document available — deliver KYC.com shareholder data as backup (data, not proof)."
+- `isProof:false` is deliberate and must survive to the customer-facing label. A generated
+  BetterCo data sheet is a convenience, not a registry document.
+- Where `dataBackup.available` is false **and** the document is not provable (ES, SE, FI, NO, GG
+  for the shareholder list), there is genuinely nothing — say so plainly.
 
 ## Cross-cutting flags (separate from completeness)
 
