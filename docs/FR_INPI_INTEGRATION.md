@@ -83,6 +83,46 @@ So if a customer needs a genuine Kbis, that's a separate paid Infogreffe integra
   watch for updates. The v3.0 Actes PDF is image-based — download and read it to lock the exact
   confidential-flag JSON field and pagination before coding.
 
+## Implementation roadmap — mirror the Germany (hr.de) pattern
+
+Germany is the precedent (our first direct vendor). Per the BetterCo client, German documents are
+served by **NorthData (free) → handelsregister.de fallback**, via a provider client exposing
+`download_document('HR'|'GS')`, and the file is filed into BetterCo through the doc-kind router
+(`upload_document(cid, path, kind='gesellschafterliste'|'satzung'|...)`). France should be a second
+provider client with the **same shape**, plugged into the same routing.
+
+**Phase 1 — INPI provider client** (mirrors the NorthData client). Methods:
+`login() → JWT` · `search(siren)` · `list_documents(siren)` (→ actes[], bilans[]) ·
+`download_document(kind, id)` returning PDF bytes. Single-threaded + backoff + re-login on 401.
+Effort: small — it's a thin REST client (3 endpoints).
+
+**Phase 2 — vendor routing.** Add to `document_kinds_routing.json` vendor map:
+`FR` → split vendor — `inpi.rne` for statuts/actes/comptes (free), `infogreffe` for the Kbis
+(paid). This is the first split-vendor jurisdiction; the routing layer already models per-document
+vendor selection.
+
+**Phase 3 — doc-kind mapping into BetterCo.** Reuse the existing router:
+INPI **statuts** → `kind='satzung'` → `ARTICLES_OF_ASSOCIATION`;
+INPI **comptes** → a process 'Sonstige' doc (`OTHERKYCDOCS_*`);
+the **Kbis** (Infogreffe) → `kind='hr_auszug'`-equivalent register extract slot.
+(FR has no Gesellschafterliste for SAS/SA — see the evidence table; nothing to file there.)
+
+**Phase 4 — Infogreffe (the paid Kbis path).** Separate small client; only needed if a customer
+requires a genuine Kbis. See payment below.
+
+**Phase 5 — licence check (OFFLINE, user-owned).** Confirm PDF redistribution rights before shipping.
+
+## How to pay
+
+- **INPI RNE (statuts / actes / comptes): FREE.** No payment rail at all — a free data.inpi.fr
+  account, activate the packages, done. This is the France equivalent of NorthData's free HR/GS tier.
+- **Infogreffe (the certified Kbis, only if needed): PAID, ~3,06 € / electronic doc.** Requires an
+  **Infogreffe professional account**; billing is per-document (prepaid balance or monthly invoice —
+  confirm the account terms at signup). **MonIdenum** is free but only for the company's *own* legal
+  representative, so it doesn't help a third-party KYC provider.
+- **Net:** for the three document kinds we actually serve, France costs **€0 marginal**. The only
+  paid line is the optional Kbis, at registry cost with no vendor markup — cheaper than KYC.com.
+
 ## Confidence
 Auth host/path, base URLs, `/companies` endpoints, 1993/2017 coverage, free access, SFTP, and the
 Infogreffe/MonIdenum tariffs are **primary-sourced**. The `/attachments`, `/actes/{id}/download`,
