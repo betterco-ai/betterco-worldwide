@@ -1,5 +1,41 @@
 [
  {
+  "jurisdiction": "AE",
+  "registryName": "DIFC Public Register + ADGM Registration Authority Online Registry (plus fragmented mainland DED/DET registries)",
+  "registryBody": "DIFC Registrar of Companies (DIFC Authority); ADGM Registration Authority; mainland: each emirate's Department of Economic Development (Dubai DET, Abu Dhabi ADDED, etc.) — no single national registrar",
+  "registryUrl": "https://www.difc.com/business/public-register",
+  "openApi": "no",
+  "apiName": "DIFC Public Register (web search); ADGM Online Registry Solution / public register (web search) — no open developer API on either",
+  "apiDocsUrl": "https://www.adgm.com/registration-authority/registration-and-incorporation",
+  "apiDelivers": [
+   "data"
+  ],
+  "documentsViaApi": false,
+  "apiAuth": "Public register web search is unauthenticated (no login) but has no programmatic API; filing/document ordering requires a portal account.",
+  "cost": {
+   "model": "free",
+   "detail": "Basic entity lookup (name, registration number, status, registered address, licence/activity) is free via the DIFC and ADGM public registers. Certificates and filed documents are ordered for per-document fees through the respective portals; mainland trade-licence verification is per-emirate and largely free/manual."
+  },
+  "notes": "UAE is fragmented — three worlds. DIFC and ADGM are separate common-law free zones, each with its own online public register (free structured search, no API, documents orderable for a fee). Mainland is split across each emirate's DED/DET plus dozens of free zones (JAFZA, DMCC, RAKEZ...), each with its own system and mostly no public bulk search or API. NO unified UAE registry and NO open API anywhere; direct integration would mean building multiple bespoke scrapers. An aggregation vendor is hard to avoid for broad UAE coverage.",
+  "confidence": "medium",
+  "sources": [
+   {
+    "basis": "DIFC public register page (official difc.com)",
+    "url": "https://www.difc.com/business/public-register",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "ADGM Registration Authority / Online Registry Solution (official adgm.com)",
+    "url": "https://www.adgm.com/registration-authority/registration-and-incorporation",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
+  }
+ },
+ {
   "jurisdiction": "AT",
   "registryName": "Firmenbuch (Austrian Company/Business Register)",
   "registryBody": "Kept by the Austrian courts under the Federal Ministry of Justice; commercial online access resold only through contracted Verrechnungsstellen (e.g. firmenbuchgrundbuch.at / Compass)",
@@ -75,6 +111,74 @@
   "goDirect": {
    "verdict": "direct_data_only",
    "reason": "API delivers data but NOT documents — vendor still needed for filings"
+  }
+ },
+ {
+  "jurisdiction": "BM",
+  "registryName": "Companies and Partnerships Register (Catalyst online registry system)",
+  "registryBody": "Registrar of Companies (Government of Bermuda)",
+  "registryUrl": "https://www.registrarofcompanies.gov.bm/",
+  "openApi": "no",
+  "apiName": "Catalyst (online registry portal; no open developer API)",
+  "apiDocsUrl": "https://www.registrarofcompanies.gov.bm/",
+  "apiDelivers": [
+   "data",
+   "documents"
+  ],
+  "documentsViaApi": false,
+  "apiAuth": "Registered portal account with identity verification (government-issued ID upload at registration); login-gated. No API keys/OAuth for third-party integration.",
+  "cost": {
+   "model": "per_document",
+   "detail": "Public name/entity search available to registered users; certificates (compliance/good standing) and document requests carry per-item statutory fees. 'Update Profile' is free; most transactional services fee-based. No bulk/API pricing published."
+  },
+  "notes": "Bermuda runs the 'Catalyst' online portal. Login-and-per-document model, not a data feed: registered users search the register and order certificates/documents individually. No open API found. Direct programmatic integration not offered; depend on manual portal use or an aggregation vendor.",
+  "confidence": "high",
+  "sources": [
+   {
+    "basis": "Bermuda Registrar of Companies official portal (Catalyst) — registration/ID and search flow",
+    "url": "https://www.registrarofcompanies.gov.bm/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
+  }
+ },
+ {
+  "jurisdiction": "BS",
+  "registryName": "Bahamas Companies Registry (Registrar General's Department)",
+  "registryBody": "Registrar General's Department (RGD), Office of the Attorney General / Ministry of Legal Affairs",
+  "registryUrl": "https://www.bahamas.gov.bs/",
+  "openApi": "no",
+  "apiName": null,
+  "apiDocsUrl": null,
+  "apiDelivers": [
+   "data"
+  ],
+  "documentsViaApi": false,
+  "apiAuth": "Portal accounts for filers/registered users; no public open API. Public company verification is limited and largely request/fee based.",
+  "cost": {
+   "model": "per_document",
+   "detail": "Company searches, certified extracts and certificates (certificate of good standing) charged per document/per request via the registry; amounts not verified this run. No free open bulk/public search comparable to Panama's consulta."
+  },
+  "notes": "Registrar General's Department handles companies (Companies Act) and IBCs (IBC Act). There is an online registry system for filing but NO documented open API and no robust free public search — verification/documents are per-document by request/fee, historically in person or via the portal. OpenCorporates openness 20/100. Primary gov.bs pages returned 403 / DNS not found from this environment, so details are from prior knowledge. No direct-integration API; documents per-document and gated — aggregation vendor likely still required.",
+  "confidence": "low",
+  "sources": [
+   {
+    "basis": "OpenCorporates register listing: Bahamas Registrar General's Department, ~253k companies, no documented API, openness 20/100",
+    "url": "https://opencorporates.com/registers",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Official government portal (attempted primary source; returned 403 / DNS blocked)",
+    "url": "https://www.bahamas.gov.bs/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
   }
  },
  {
@@ -427,6 +531,40 @@
   }
  },
  {
+  "jurisdiction": "HK",
+  "registryName": "ICRIS e-Search Services (Cyber Search Centre) / e-Services Portal",
+  "registryBody": "Companies Registry, Government of the Hong Kong SAR",
+  "registryUrl": "https://www.cr.gov.hk",
+  "openApi": "no",
+  "apiName": "none — web e-Services Portal (ICRIS) + Company Search Mobile Service app only; no third-party developer API",
+  "apiDocsUrl": null,
+  "apiDelivers": [],
+  "documentsViaApi": false,
+  "apiAuth": "n/a for API. Portal: registered account or ad-hoc access; payment by prepaid Cyber Search Centre account, PPS or credit card.",
+  "cost": {
+   "model": "per_document",
+   "detail": "Chargeable per record/per document. e-Search charges a per-company particulars search fee and a separate per-document fee to view/download imaged copies of filed documents; certified copies cost more. Exact HKD amounts per the CR fee schedule (roughly single-digit-to-low-tens HKD per search/image; certified higher) — NOT confirmed from a fetched fee page."
+  },
+  "notes": "Portal (not an API) DOES deliver both data and imaged copies of filed documents (PDFs) for a per-item fee — good coverage, but only via manual/portal access. No open/developer API, so 'direct integration' means screen-scraping a paid portal (against ToS) — not a clean build. No viable direct API; aggregator or portal automation only.",
+  "confidence": "medium",
+  "sources": [
+   {
+    "basis": "CR site nav confirms e-Services Portal + e-Search Services; no API surfaced",
+    "url": "https://www.cr.gov.hk/en/home/index.htm",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "e-Services Portal (ICRIS) — JS SPA, confirmed a login/portal not an API",
+    "url": "https://www.e-services.cr.gov.hk/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
+  }
+ },
+ {
   "jurisdiction": "IE",
   "registryName": "Companies Registration Office (CRO) / CORE",
   "registryBody": "Companies Registration Office, statutory office under the Department of Enterprise, Trade & Employment (DETE)",
@@ -583,6 +721,40 @@
   }
  },
  {
+  "jurisdiction": "KY",
+  "registryName": "CORIS (Cayman Online Registry Information System) / General Registry",
+  "registryBody": "General Registry, Cayman Islands Government (Registrar of Companies)",
+  "registryUrl": "https://www.ciregistry.ky",
+  "openApi": "no",
+  "apiName": "none — CORIS portal (registered-user search) + CAP / Cayman Business Portal; no public API",
+  "apiDocsUrl": null,
+  "apiDelivers": [],
+  "documentsViaApi": false,
+  "apiAuth": "n/a — CORIS requires a registered government-portal user account even to search; corporate filings done via registered agents through CAP/CBP.",
+  "cost": {
+   "model": "per_search",
+   "detail": "Company search is registration-gated (registered CORIS user account) and returns only limited public fields (name, type, status, registration date, registered office). Certificate of Good Standing / certified extracts orderable for a fee (~KYD/US low tens-hundreds; e.g. good standing ~KYD 50) — amounts NOT confirmed; the fetched fees page exposed only new-registration capital-based fees (CI$700-3,268)."
+  },
+  "notes": "Weakest for direct integration: portal-only, account-gated, minimal public data, and Cayman filings (directors, M&A) and beneficial ownership are NOT public (explicit Beneficial Ownership Access Restriction). No API, no downloadable public documents. Direct registry integration effectively impossible; substantive data via the registered agent or a specialist vendor.",
+  "confidence": "low",
+  "sources": [
+   {
+    "basis": "ciregistry.ky homepage — search requires registered login via CORIS; Beneficial Ownership Access Restriction; no API",
+    "url": "https://www.ciregistry.ky/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Fees page — Companies Act 2025 registration (capital-based) fees only, not search/document fees",
+    "url": "https://www.ciregistry.ky/fees/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
+  }
+ },
+ {
   "jurisdiction": "LI",
   "registryName": "Handelsregister des Fürstentums Liechtenstein (Commercial Register), public front-end 'Firmenindex'",
   "registryBody": "Amt für Justiz (Office of Justice), Handelsregister division, Vaduz",
@@ -710,6 +882,43 @@
   }
  },
  {
+  "jurisdiction": "MU",
+  "registryName": "CBRIS (Companies and Businesses Registration Integrated System) / online company search",
+  "registryBody": "Corporate and Business Registration Department (CBRD), Ministry of Finance — system operated via Mauritius Network Services (MNS)",
+  "registryUrl": "https://companies.govmu.org/",
+  "openApi": "no",
+  "apiName": "CBRIS (MNS-operated e-services + free public search at onlinesearch.mns.global); no documented open developer API",
+  "apiDocsUrl": "https://cbris.mns.global/",
+  "apiDelivers": [
+   "data",
+   "documents"
+  ],
+  "documentsViaApi": false,
+  "apiAuth": "Free public search is unauthenticated; e-filing and document ordering require an MNS/CBRIS login. No public API keys documented.",
+  "cost": {
+   "model": "free",
+   "detail": "Company/partnership/business and name-availability search is free at onlinesearch.mns.global (structured data: name, number, status, type). Filed documents and certificates are ordered for per-document fees via CBRIS (CBRD 'Fees Payable to the Registrar')."
+  },
+  "notes": "Mauritius is the most open of the four for DATA: a genuinely free public online search returning structured company data, plus the CBRIS e-services platform run by Mauritius Network Services. Documents/certificates are login-gated and per-document. No open/documented REST API for third-party integration found — web-portal only. MNS is a commercial operator, so a data-sharing arrangement might be negotiable, but no self-serve public API today.",
+  "confidence": "medium",
+  "sources": [
+   {
+    "basis": "CBRD official site (companies.govmu.org) — links to free search and CBRIS login",
+    "url": "https://companies.govmu.org/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "CBRIS / MNS online system and free public search",
+    "url": "https://cbris.mns.global/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
+  }
+ },
+ {
   "jurisdiction": "NL",
   "registryName": "Handelsregister (Netherlands Commercial / Business Register)",
   "registryBody": "KVK — Kamer van Koophandel (Netherlands Chamber of Commerce)",
@@ -785,6 +994,42 @@
   "goDirect": {
    "verdict": "direct_good",
    "reason": "open API delivers documents; per-document/subscription cost"
+  }
+ },
+ {
+  "jurisdiction": "PA",
+  "registryName": "Registro Público de Panamá — Consulta de Persona Jurídica (servicios en línea)",
+  "registryBody": "Registro Público de Panamá (RPP), autonomous state entity",
+  "registryUrl": "https://www.rp.gob.pa/",
+  "openApi": "no",
+  "apiName": null,
+  "apiDocsUrl": null,
+  "apiDelivers": [
+   "data"
+  ],
+  "documentsViaApi": false,
+  "apiAuth": "None — free public web-form 'consulta' (no login); paid certified certificates require an account/payment, still no API.",
+  "cost": {
+   "model": "free",
+   "detail": "Basic public entity search (name/ficha/folio) is free and returns structured data (agent, directors, capital, status). Certified certificates (Certificado de Persona Jurídica / existencia) are purchasable online for a per-document fee, exact amount unconfirmed (historically ~USD 25-35; NOT verified this run)."
+  },
+  "notes": "Free online consulta exists and is scrapeable for DATA only — no documented open API, no developer portal. Filing 'documents' in Panama are notarial escrituras; the registry sells certified certificates via the web portal, not via any API. Primary site rp.gob.pa was geo-blocked/connection-refused from this environment, so specifics (esp. cost, document flow) are from prior knowledge, not freshly verified. Direct data integration only feasible by scraping the public consulta.",
+  "confidence": "low",
+  "sources": [
+   {
+    "basis": "OpenCorporates register listing corroborates a public online register for Panama (~945k companies) with no documented API",
+    "url": "https://opencorporates.com/registers",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Official registry site (attempted primary source; unreachable/geo-blocked — connection refused)",
+    "url": "https://www.rp.gob.pa/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
   }
  },
  {
@@ -866,6 +1111,47 @@
   }
  },
  {
+  "jurisdiction": "SC",
+  "registryName": "Seychelles FSA — Registrar of International Business Companies / Registry of Companies",
+  "registryBody": "Financial Services Authority (FSA) of Seychelles, acting as Registrar (IBC Act 2016 and related)",
+  "registryUrl": "https://fsaseychelles.sc/",
+  "openApi": "no",
+  "apiName": "Struck-Off IBC Search (public web tool, not an API)",
+  "apiDocsUrl": "https://ibcsearch.fsaseychelles.sc/",
+  "apiDelivers": [
+   "data"
+  ],
+  "documentsViaApi": false,
+  "apiAuth": "Public struck-off IBC search is open/free (no login) but limited to struck-off entities; full IBC register access is agent-gated — company info and documents obtained through the licensed registered agent, not by public API.",
+  "cost": {
+   "model": "free",
+   "detail": "The only public tool (struck-off IBC search) is free and returns limited DATA. Active-company data, certificates of good standing and extracts are obtained via a registered agent for a fee (agent/FSA fees; amounts not verified). No open API, no public documents."
+  },
+  "notes": "Confirmed from FSA site: the only public search is the 'Struck-Off IBC Search' — struck-off entities only, data not documents, web form (no API). No public register of active IBC directors/officers/documents; the IBC registry is agent-gated by design (registered agents hold and file records). FSA maintains registers of LICENSED entities but not a public searchable company register. OpenCorporates openness 10/100. Direct integration effectively impossible without registered-agent access; no official API and no documents via API.",
+  "confidence": "medium",
+  "sources": [
+   {
+    "basis": "FSA Seychelles website: only public search is the Struck-Off IBC Search; no public IBC register search or API",
+    "url": "https://fsaseychelles.sc/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "FSA public Struck-Off IBC Search tool",
+    "url": "https://ibcsearch.fsaseychelles.sc/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "OpenCorporates register listing: Seychelles Business Register, no documented API, openness 10/100",
+    "url": "https://opencorporates.com/registers",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
+  }
+ },
+ {
   "jurisdiction": "SE",
   "registryName": "Bolagsregistret / Näringslivsregistret (companies register)",
   "registryBody": "Bolagsverket (Swedish Companies Registration Office)",
@@ -900,6 +1186,108 @@
   "goDirect": {
    "verdict": "direct_contract",
    "reason": "documents via API but access is contract/gated (negotiation needed)"
+  }
+ },
+ {
+  "jurisdiction": "SG",
+  "registryName": "BizFile+ (ACRA register) / ACRA API Marketplace",
+  "registryBody": "Accounting and Corporate Regulatory Authority (ACRA)",
+  "registryUrl": "https://www.acra.gov.sg",
+  "openApi": "yes",
+  "apiName": "ACRA API Marketplace (delivered via the Singapore Government API Exchange / APEX)",
+  "apiDocsUrl": "https://www.acra.gov.sg/how-to-guides/buying-information/acra-api-marketplace",
+  "apiDelivers": [
+   "data"
+  ],
+  "documentsViaApi": false,
+  "apiAuth": "Portal: Singpass/Corppass login. API: onboard a registered application via APEX with API key/OAuth (commercial agreement).",
+  "cost": {
+   "model": "per_document",
+   "detail": "Free basic entity search on BizFile+. Paid products via BizFile or authorized providers: Business Profile ~S$5.50; certificates/extracts ~S$16.50 (ACRA standard pricing but NOT confirmed from a fetched price page). API access is commercial/per-transaction via APEX."
+  },
+  "notes": "Best of the four hubs for direct integration: ACRA explicitly runs an API Marketplace and info products are downloadable. BUT the APIs chiefly return STRUCTURED DATA; the actual documents (Business Profile PDF, extracts) are bought through the BizFile portal purchase flow — document-via-API is unconfirmed and likely not first-class. Treat data-via-API as real, documents-via-API as uncertain; confirm a document-retrieval API with ACRA before dropping a vendor for filings.",
+  "confidence": "medium",
+  "sources": [
+   {
+    "basis": "ACRA 'buying information' page confirms an ACRA API Marketplace and downloadable information products",
+    "url": "https://www.acra.gov.sg/how-to-guides/buying-information",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "ACRA info-products overview (buy/download/verify flow)",
+    "url": "https://www.acra.gov.sg/how-to-guides/buying-information/information-products",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "direct_data_only",
+   "reason": "API delivers data but NOT documents — vendor still needed for filings"
+  }
+ },
+ {
+  "jurisdiction": "US",
+  "registryName": "Delaware General Information Name Search / Document Filing & Certificate Request Service",
+  "registryBody": "Delaware Division of Corporations (Delaware Department of State)",
+  "registryUrl": "https://corp.delaware.gov",
+  "openApi": "no",
+  "apiName": "none — web portal (name/status search) + online certificate/document request; also phone/mail/fax orders",
+  "apiDocsUrl": null,
+  "apiDelivers": [],
+  "documentsViaApi": false,
+  "apiAuth": "n/a — public web search (no login) for name/status; ordering via Document Filing & Certificate Request Service, phone, or mail.",
+  "cost": {
+   "model": "per_document",
+   "detail": "Free but very thin online entity/name/status search (name, file number, incorporation date, registered agent only). Paid, per-document: short-form Certificate of Good Standing ~US$50; long-form ~US$175; certified copy ~US$50; plain photocopy ~US$10; expedited ~US$50-1000. Amounts from Delaware's published fee schedule PDF, NOT fetched this session."
+  },
+  "notes": "Two decision-killers for direct integration: (1) NO API of any kind; ordering is portal/phone/mail and per-document paid. (2) Delaware's public record is extremely thin for KYC — no officers, directors, shareholders or UBOs; even a certified certificate of incorporation reveals little beyond incorporator/registered agent. Direct integration not possible, and manual retrieval yields limited KYC value — a vendor or the registered agent is usually needed.",
+  "confidence": "medium",
+  "sources": [
+   {
+    "basis": "Delaware Division of Corporations homepage — free entity search, online request service, no API",
+    "url": "https://corp.delaware.gov/",
+    "retrieved": "2026-07-19"
+   },
+   {
+    "basis": "Fee page — fees live in a downloadable Corporate Fee Schedule PDF; phone ordering; no API",
+    "url": "https://corp.delaware.gov/fee/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
+  }
+ },
+ {
+  "jurisdiction": "VG",
+  "registryName": "VIRRGIN (Virtual Integrated Registry and Regulatory General Information Network)",
+  "registryBody": "Registry of Corporate Affairs, BVI Financial Services Commission (BVI FSC)",
+  "registryUrl": "https://www.bvifsc.vg/",
+  "openApi": "no",
+  "apiName": "VIRRGIN (agent-gated electronic filing/search system; no open developer API)",
+  "apiDocsUrl": "https://www.bvifsc.vg/",
+  "apiDelivers": [
+   "data",
+   "documents"
+  ],
+  "documentsViaApi": false,
+  "apiAuth": "Restricted accounts issued by the FSC to licensed BVI registered agents/law firms only; no public/self-service credentials, no OAuth/API keys for third parties.",
+  "cost": {
+   "model": "per_document",
+   "detail": "No public API. Searches, certificates of good standing and filed documents are ordered through a registered agent for per-item statutory fees (~US$25-50+ per certificate/search) plus the agent's markup. Beneficial ownership (BOSS/RA-BO) is not publicly accessible."
+  },
+  "notes": "VIRRGIN is agent-gated: only FSC-licensed registered agents can incorporate, file and pull records. NO open public API and only limited public-facing data. Direct integration is effectively impossible without being (or contracting) a BVI registered agent; in practice route through an agent or an aggregation vendor. bvifsc.vg returns 403 to automated fetches, so specifics rest on established registry facts.",
+  "confidence": "medium",
+  "sources": [
+   {
+    "basis": "BVI FSC Registry of Corporate Affairs / VIRRGIN official domain (blocked automated fetch, 403)",
+    "url": "https://www.bvifsc.vg/",
+    "retrieved": "2026-07-19"
+   }
+  ],
+  "goDirect": {
+   "verdict": "vendor_only",
+   "reason": "no registry API — portal/per-document only"
   }
  }
 ]

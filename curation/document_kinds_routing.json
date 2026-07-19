@@ -48,6 +48,305 @@
  },
  "routes": [
   {
+   "jurisdiction": "AE",
+   "legalForm": "ADGM company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Register of Members / Confirmation Statement filed with the ADGM Registration Authority",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ADGM Registration Authority online registry — 'searching for entities and their associated details'",
+     "url": "https://www.adgm.com/public-registers/registration-authority"
+    },
+    {
+     "basis": "ADGM Companies Regulations 2020 — register of members / confirmation statement (UK CA2006 model)",
+     "url": "https://en.adgm.thomsonreuters.com/rulebook/companies-regulations-2020"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AE",
+   "legalForm": "DIFC company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Register of Members; certified shareholder extract from the DIFC Registrar of Companies",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "low",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DIFC Companies Law No. 5 of 2018 — company must keep a register of members; filings to the Registrar",
+     "url": "https://www.difc.com/business/public-register"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AE",
+   "legalForm": "Mainland LLC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum of Association (MOA) — notarised, lists partners and shareholdings; partner names also appear on the Trade Licence",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UAE Commercial Companies Law (Federal Decree-Law No. 32 of 2021) — LLC MOA must state partners and their shares",
+     "url": "https://uaelegislation.gov.ae/en/legislations/1547"
+    },
+    {
+     "basis": "Emirate DED practice — trade licence lists owners/partners",
+     "url": "https://u.ae/en/information-and-services/business"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AE",
+   "legalForm": "ADGM company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Association filed with the ADGM Registration Authority",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ADGM Companies Regulations 2020 — Articles of Association filed with the Registration Authority",
+     "url": "https://en.adgm.thomsonreuters.com/rulebook/companies-regulations-2020"
+    },
+    {
+     "basis": "ADGM Registration Authority online registry",
+     "url": "https://www.adgm.com/public-registers/registration-authority"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AE",
+   "legalForm": "DIFC company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Association (DIFC), filed with the DIFC Registrar of Companies",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DIFC Companies Law No. 5 of 2018 — Articles of Association filed with the Registrar",
+     "url": "https://www.difc.com/business/public-register"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AE",
+   "legalForm": "Mainland LLC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum of Association (MOA) — the LLC constitution",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UAE Commercial Companies Law (Federal Decree-Law No. 32 of 2021) — MOA mandatory and notarised for LLCs",
+     "url": "https://uaelegislation.gov.ae/en/legislations/1547"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AE",
+   "legalForm": "ADGM company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "ADGM public register entry / Certificate of Incorporation and Good Standing (ADGM Registration Authority)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ADGM Registration Authority public register (official page)",
+     "url": "https://www.adgm.com/public-registers/registration-authority"
+    },
+    {
+     "basis": "ADGM Companies Regulations 2020 (UK Companies Act 2006 model)",
+     "url": "https://en.adgm.thomsonreuters.com/rulebook/companies-regulations-2020"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AE",
+   "legalForm": "DIFC company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "DIFC public register entry / Certificate of Incorporation and Good Standing (DIFC Registrar of Companies)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "DIFC Companies Law No. 5 of 2018 + DIFC Registrar of Companies public register",
+     "url": "https://www.difc.com/business/public-register"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AE",
+   "legalForm": "Mainland LLC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Trade Licence (Rukhsa Tijariya) issued by the Emirate's Department of Economic Development",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UAE Commercial Companies Law (Federal Decree-Law No. 32 of 2021) + Emirate DED trade-licence regime",
+     "url": "https://uaelegislation.gov.ae/en/legislations/1547"
+    },
+    {
+     "basis": "UAE federal National Economic Register (unified licence lookup, Ministry of Economy)",
+     "url": "https://ner.economy.gov.ae/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "AT",
    "legalForm": "AG",
    "kind": "GESELLSCHAFTERLISTE",
@@ -161,6 +460,329 @@
     {
      "basis": "art. 5:24 WVV (BV) / 7:28 WVV (NV) — aandeelhoudersregister",
      "url": "https://www.belgium.be/nl/online_dienst/app_kbo_public_search"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BM",
+   "legalForm": "Exempted company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 1981 (Bermuda) s.65 (register of members; kept at the registered office) — company-held, not filed with the Registrar",
+     "url": "http://www.bermudalaws.bm/"
+    },
+    {
+     "basis": "Companies Act 1981 (Bermuda) — inspection of the register of members at the registered office (members free; public on payment)",
+     "url": "https://www.gov.bm/articles/limited-companies"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BM",
+   "legalForm": "Exempted company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum of Association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 1981 (Bermuda) — Memorandum of Association filed with the Registrar on incorporation; part of the public register",
+     "url": "http://www.bermudalaws.bm/"
+    },
+    {
+     "basis": "Companies Act 1981 (Bermuda) s.13 area — Bye-laws adopted by the company, NOT filed with the Registrar (private)",
+     "url": "https://www.gov.bm/articles/limited-companies"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BM",
+   "legalForm": "Exempted company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Compliance",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Registrar of Companies (Bermuda), Government of Bermuda — company registration / certificates",
+     "url": "https://www.gov.bm/articles/limited-companies"
+    },
+    {
+     "basis": "Companies Act 1981 (Bermuda) — Registrar keeps the register of companies; Certificate of Incorporation (one-time) vs current-status certification",
+     "url": "http://www.bermudalaws.bm/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BS",
+   "legalForm": "Company Limited by Shares",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Annual list of members and summary",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Share count",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Bahamas) CH.308 s.58(1) — Annual list of members",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf"
+    },
+    {
+     "basis": "Companies Act (Bahamas) CH.308 s.58(2) — filing with Registrar",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf"
+    },
+    {
+     "basis": "Companies Act (Bahamas) CH.308 s.56(2) — register of members open to public at registered office",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BS",
+   "legalForm": "IBC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Share count",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IBC Act (Bahamas) CH.309 s.29(1) — Share Register",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/2000/2000-0045/2000-0045_1.pdf"
+    },
+    {
+     "basis": "IBC Act (Bahamas) CH.309 s.38(1) — Registered agent (holds registered-office records)",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/2000/2000-0045/2000-0045_1.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BS",
+   "legalForm": "Company Limited by Shares",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Bahamas) CH.308 s.16(3) — certified copy of memorandum/articles",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf"
+    },
+    {
+     "basis": "Companies Act (Bahamas) CH.308 s.19(f) — memorandum filing recorded by Registrar",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BS",
+   "legalForm": "IBC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IBC Act (Bahamas) CH.309 s.15(1) — Registration",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/2000/2000-0045/2000-0045_1.pdf"
+    },
+    {
+     "basis": "IBC Act (Bahamas) CH.309 s.191(1) — Inspection / certified copies",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/2000/2000-0045/2000-0045_1.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BS",
+   "legalForm": "Company Limited by Shares",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (Bahamas), CH.308 (Act 18 of 1992) s.19 — Register of companies",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf"
+    },
+    {
+     "basis": "Companies Act (Bahamas) CH.308 s.277(1) — Certificate of good standing",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf"
+    },
+    {
+     "basis": "Companies Act (Bahamas) CH.308 s.16(3) — certified copies/extracts",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BS",
+   "legalForm": "IBC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "International Business Companies Act (Bahamas), CH.309 s.190(1)",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/2000/2000-0045/2000-0045_1.pdf"
+    },
+    {
+     "basis": "IBC Act (Bahamas) CH.309 s.191(1)(a) — Inspection of documents",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/2000/2000-0045/2000-0045_1.pdf"
+    },
+    {
+     "basis": "IBC Act (Bahamas) CH.309 s.44(4) — Register of directors and officers",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/2000/2000-0045/2000-0045_1.pdf"
     }
    ]
   },
@@ -2332,6 +2954,228 @@
    ]
   },
   {
+   "jurisdiction": "HK",
+   "legalForm": "Ltd",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [
+    "nominee"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Annual Return (Form NAR1), Schedule 1 'Particulars of Member(s) of a Non-listed Company'",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Address",
+     "Share count",
+     "Appointed On",
+     "ID Card Number",
+     "Other Names"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Registry FAQ 'Annual Returns' (Local Limited Companies), citing Companies Ordinance (Cap. 622) s.662",
+     "url": "https://www.cr.gov.hk/en/faq/local-company/annual-return.htm"
+    },
+    {
+     "basis": "Companies Registry FAQ 'Documents relating to Share Capital / Shares'",
+     "url": "https://www.cr.gov.hk/en/faq/local-company/doc-sharecapital.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HK",
+   "legalForm": "PLC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [
+    "nominee"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Annual Return (Form NAR1)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Address",
+     "Share count",
+     "Appointed On",
+     "ID Card Number",
+     "Other Names"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Registry FAQ 'Annual Returns' (public company), citing Cap. 622 s.662",
+     "url": "https://www.cr.gov.hk/en/compliance/annual-return/public-company.htm"
+    },
+    {
+     "basis": "Companies Registry FAQ 'Documents relating to Share Capital / Shares'",
+     "url": "https://www.cr.gov.hk/en/faq/local-company/doc-sharecapital.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HK",
+   "legalForm": "Ltd",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Association (registered constitution)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Registry FAQ 'Incorporation', citing Companies Ordinance (Cap. 622) ss.81, 83(1), 85(1)",
+     "url": "https://www.cr.gov.hk/en/faq/local-company/incorporation.htm"
+    },
+    {
+     "basis": "Companies Registry 'How to obtain company information' (certified copies of image records)",
+     "url": "https://www.cr.gov.hk/en/services/obtain-company-info.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HK",
+   "legalForm": "PLC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Association (registered constitution)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Registry FAQ 'Incorporation', citing Cap. 622 and the Companies (Model Articles) Notice",
+     "url": "https://www.cr.gov.hk/en/faq/local-company/incorporation.htm"
+    },
+    {
+     "basis": "Companies Registry 'How to obtain company information' (certified copies)",
+     "url": "https://www.cr.gov.hk/en/services/obtain-company-info.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HK",
+   "legalForm": "Ltd",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Company Particulars Search report (e-Search / current data of registered companies)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Registry official page 'How to obtain company information'",
+     "url": "https://www.cr.gov.hk/en/services/obtain-company-info.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HK",
+   "legalForm": "PLC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Company Particulars Search report (e-Search / current data of registered companies)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Registry official page 'How to obtain company information'",
+     "url": "https://www.cr.gov.hk/en/services/obtain-company-info.htm"
+    }
+   ]
+  },
+  {
    "jurisdiction": "IE",
    "legalForm": "LTD/DAC/ULC (share capital)",
    "kind": "GESELLSCHAFTERLISTE",
@@ -3337,6 +4181,206 @@
    ]
   },
   {
+   "jurisdiction": "KY",
+   "legalForm": "Exempted company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.40(1)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.44(1)-(2)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.168 (annual return of exempted company)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "KY",
+   "legalForm": "Ordinary company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.40(1)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.44(1)-(2)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "KY",
+   "legalForm": "Exempted company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.26(1)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.26(3A)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "KY",
+   "legalForm": "Ordinary company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.26(1)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.29",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "KY",
+   "legalForm": "Exempted company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.200A(1)-(2)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.26(3A) / Schedule 1A",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "KY",
+   "legalForm": "Ordinary company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.200A(1)-(2)",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.26(1),(3),(3A) / Schedule 1A",
+     "url": "https://www.ciregistry.ky/acts-regulations/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "LI",
    "legalForm": "AG",
    "kind": "GESELLSCHAFTERLISTE",
@@ -4067,6 +5111,213 @@
    ]
   },
   {
+   "jurisdiction": "MU",
+   "legalForm": "Domestic company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "company search / register extract; annual return (Tenth Schedule)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Jurisdiction (if entity)",
+     "Sharecount"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2001 (Mauritius) Tenth Schedule (Sections 223(5) and 269(2)), para 11",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.91(1),(3)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.23(2)(d) (application for incorporation)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MU",
+   "legalForm": "GBC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [
+    "nominee"
+   ],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Jurisdiction (if entity)",
+     "Sharecount"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.14(7)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "Companies Act 2001 (Mauritius) Tenth Schedule para 11 (via s.223(5))",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MU",
+   "legalForm": "Domestic company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "constitution",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.23(1)(c)(vii)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.42(1)(b)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MU",
+   "legalForm": "GBC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.14(7)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.23(1)(c)(vii) and s.42(1)(a)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MU",
+   "legalForm": "Domestic company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "company search / register extract (CBRIS)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.14(2)(b) and s.14(3)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "CBRD official site (companies.govmu.org) — online services",
+     "url": "https://companies.govmu.org/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MU",
+   "legalForm": "GBC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "none",
+   "action": "unavailable",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "none",
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.14(7)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "Companies Act 2001 (Mauritius) s.14(8)",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    }
+   ]
+  },
+  {
    "jurisdiction": "NL",
    "legalForm": "BV",
    "kind": "GESELLSCHAFTERLISTE",
@@ -4488,6 +5739,217 @@
     {
      "basis": "Brønnøysundregistrene – Information about our products",
      "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PA",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 32 de 1927, Art. 36 (Registro de Acciones)",
+     "url": "https://supervalores.gob.pa/files/Ley/Ley%2032%20de%201927.pdf"
+    },
+    {
+     "basis": "Ley 32 de 1927, Art. 29 (transfer of nominative shares)",
+     "url": "https://supervalores.gob.pa/files/Ley/Ley%2032%20de%201927.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PA",
+   "legalForm": "SRL",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Pacto social (identificación de los socios) + cesiones de cuotas inscritas en el Registro Público",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 4 de 2009, Art. 5 num. 1 and 5 (contents of pacto social)",
+     "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
+    },
+    {
+     "basis": "Ley 4 de 2009, Art. 11 (acts that must be inscribed)",
+     "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
+    },
+    {
+     "basis": "Ley 4 de 2009, Art. 26 (cesión de cuotas)",
+     "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PA",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Pacto social / escritura pública de constitución (inscrita en el Registro Mercantil)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 32 de 1927, Art. 2 (contents of pacto social)",
+     "url": "https://supervalores.gob.pa/files/Ley/Ley%2032%20de%201927.pdf"
+    },
+    {
+     "basis": "Ley 32 de 1927, Arts. 4 and 5 (form of the pacto social)",
+     "url": "https://supervalores.gob.pa/files/Ley/Ley%2032%20de%201927.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PA",
+   "legalForm": "SRL",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Pacto social / escritura pública (o documento privado protocolizado) de constitución, inscrita en el Registro Público",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 4 de 2009, Art. 5 (form and contents of the pacto social)",
+     "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
+    },
+    {
+     "basis": "Ley 4 de 2009, Art. 11 num. 1 (amendments must be inscribed)",
+     "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PA",
+   "legalForm": "SA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificación del Registro Público / Certificado de persona jurídica",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 32 de 1927 (Sobre Sociedades Anónimas), Art. 6 — Superintendencia del Mercado de Valores (official text)",
+     "url": "https://supervalores.gob.pa/files/Ley/Ley%2032%20de%201927.pdf"
+    },
+    {
+     "basis": "Ley 32 de 1927, Art. 2 num. 9 (contents of the pacto social)",
+     "url": "https://supervalores.gob.pa/files/Ley/Ley%2032%20de%201927.pdf"
+    },
+    {
+     "basis": "Registro Público de Panamá — official trámite page (Panamá Digital), 'Certificación para Sociedad Anónima'",
+     "url": "https://www.panamadigital.gob.pa/InformacionTramite/certificacion-para-sociedad-anonima"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PA",
+   "legalForm": "SRL",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificación del Registro Público / Certificado de persona jurídica",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 4 de 2009 (Sociedad de Responsabilidad Limitada), Art. 5 — G.O. 26.202-A (SIJUSA)",
+     "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
+    },
+    {
+     "basis": "Ley 4 de 2009, Art. 6 (legal personality upon inscription)",
+     "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
     }
    ]
   },
@@ -5228,6 +6690,218 @@
    ]
   },
   {
+   "jurisdiction": "SC",
+   "legalForm": "CSL",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.18D — notify change to Authority",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
+    },
+    {
+     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.22(1) — Non-disclosure obligations",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
+    },
+    {
+     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.15(6) — narrow public inspection",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SC",
+   "legalForm": "IBC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.104(1) — Register of members",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    },
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.107(1) — Inspection of register of members",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    },
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.349(1) — Optional registration of specified registers",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SC",
+   "legalForm": "CSL",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "low",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.5 — application contents",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
+    },
+    {
+     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.7(1) — registration of M&A",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SC",
+   "legalForm": "IBC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.9(1)(a) — Application to incorporate",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    },
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.10(1) — Incorporation of a company",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    },
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.348(1) — Copies of documents filed",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SC",
+   "legalForm": "CSL",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.18B — Certificate of good standing",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
+    },
+    {
+     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.7 — registration of M&A on the Companies Act register",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SC",
+   "legalForm": "IBC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Official Search / Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.351(1) — Certificate of good standing",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    },
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.352(1) — Certificate of official search particulars",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    },
+    {
+     "basis": "IBC Act 2016 (Seychelles) s.347(1) — Inspection of documents filed",
+     "url": "https://fsaseychelles.sc/component/edocman/consolidated-international-business-companies-act-2016-to-11th-july-2025/download?Itemid=0"
+    }
+   ]
+  },
+  {
    "jurisdiction": "SE",
    "legalForm": "AB",
    "kind": "GESELLSCHAFTERLISTE",
@@ -5580,6 +7254,533 @@
     {
      "basis": "Bolagsverket, 'Bolagsmän i kommanditbolag' / 'Set up a limited partnership'",
      "url": "https://bolagsverket.se/en/foretag/kommanditbolag/startakommanditbolag/bolagsmanikommanditbolag.917.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SG",
+   "legalForm": "Pte Ltd",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [
+    "nominee"
+   ],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "ACRA Business Profile / ACRA Registers (official list of members)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Nationality (if individual)",
+     "Jurisdiction (if entity)",
+     "Registration Number (if entity)",
+     "Role",
+     "Share count",
+     "National Country ID"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ACRA official page — Types of ACRA information products (Registers product)",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+    },
+    {
+     "basis": "Companies Act 1967 — electronic register of members kept by the Registrar for private companies (in force since 3 Jan 2016)",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SG",
+   "legalForm": "Public Ltd",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [
+    "nominee"
+   ],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Nationality (if individual)",
+     "Jurisdiction (if entity)",
+     "Registration Number (if entity)",
+     "Role",
+     "Share count",
+     "National Country ID"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ACRA official page — Registers product (lists 'members' but for public/listed companies ACRA does not hold the full membership)",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+    },
+    {
+     "basis": "Companies Act 1967 — company keeps its own register of members (approx. s.190); electronic register kept by Registrar limited to private companies",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SG",
+   "legalForm": "Pte Ltd",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Constitution (formerly Memorandum & Articles of Association)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ACRA official page — Types of ACRA information products (Extracts product)",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+    },
+    {
+     "basis": "Companies Act 1967 — requirement to have and lodge a constitution at incorporation (approx. s.19 / s.22)",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SG",
+   "legalForm": "Public Ltd",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Constitution (formerly Memorandum & Articles of Association)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ACRA official page — Extracts product",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+    },
+    {
+     "basis": "Companies Act 1967 — requirement to have and lodge a constitution at incorporation (approx. s.19 / s.22)",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SG",
+   "legalForm": "Pte Ltd",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "ACRA Business Profile",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ACRA official page — Types of ACRA information products",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+    },
+    {
+     "basis": "ACRA official page — Business Profile",
+     "url": "https://www.acra.gov.sg/how-to-guides/buying-information/business-profile"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SG",
+   "legalForm": "Public Ltd",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "ACRA Business Profile",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ACRA official page — Types of ACRA information products",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Corporation",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Delaware General Corporation Law, Title 8, § 219(c) (stock ledger definition)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc07/index.html"
+    },
+    {
+     "basis": "Delaware General Corporation Law, Title 8, § 220(b) (inspection of books and records)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc07/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "LLC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Delaware Limited Liability Company Act, Title 6, § 18-201(a) (contents of certificate of formation)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    },
+    {
+     "basis": "Delaware Limited Liability Company Act, Title 6, § 18-101(9) (definition of LLC agreement)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Corporation",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Delaware General Corporation Law, Title 8, § 106",
+     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
+    },
+    {
+     "basis": "Delaware General Corporation Law, Title 8, § 109(a) (bylaws)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "LLC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Formation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Delaware Limited Liability Company Act, Title 6, § 18-201(a)-(b)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    },
+    {
+     "basis": "Delaware Limited Liability Company Act, Title 6, § 18-101(9)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Corporation",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Delaware Division of Corporations, official 'About Agency' page",
+     "url": "https://corp.delaware.gov/aboutagency/"
+    },
+    {
+     "basis": "Delaware General Corporation Law, Title 8, § 106 (commencement of corporate existence)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "LLC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Delaware Division of Corporations, official 'About Agency' page",
+     "url": "https://corp.delaware.gov/aboutagency/"
+    },
+    {
+     "basis": "Delaware Limited Liability Company Act, Title 6, § 18-201(b) (formation on filing)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VG",
+   "legalForm": "BC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.41(1)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    },
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.96(1)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    },
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.231(1)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VG",
+   "legalForm": "BC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Memorandum and Articles of Association",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.7(1)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    },
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.32(1)(a)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    },
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.233(1)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VG",
+   "legalForm": "BC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.230(1)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    },
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.235(1)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    },
+    {
+     "basis": "BVI Business Companies Act 2004 (as amended), s.233(1)",
+     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
     }
    ]
   }
