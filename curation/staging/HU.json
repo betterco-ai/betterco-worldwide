@@ -1,0 +1,97 @@
+[
+  {
+    "jurisdiction": "HU",
+    "legalForm": "Kft",
+    "legalFormLocal": "Korlátolt felelősségű társaság",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Company extract",
+    "documentLocal": "cégkivonat",
+    "summary": "The cégjegyzék (company register) is kept by the company courts (cégbíróság) under Ctv. (2006. évi V. törvény). The cégkivonat is the official extract of the currently effective registered data and is the base register-extract document. It is issued per company and is fully public.",
+    "evidence": [
+      {"basis": "Ctv. 2006. évi V. törvény 10. § (1) — publicity of register data and documents", "quote": "A cégjegyzék fennálló, illetve törölt adatai, valamint a cégiratok...teljeskörűen nyilvánosak.", "note": "Establishes that register data (from which the cégkivonat is drawn) are public.", "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv", "retrieved": "2026-07-20"}
+    ],
+    "caveats": ["Subsection lettering was extracted by an automated read of net.jogtar.hu and should be re-verified against the consolidated text."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HU",
+    "legalForm": "Kft",
+    "legalFormLocal": "Korlátolt felelősségű társaság",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Company extract",
+    "documentLocal": "cégkivonat",
+    "summary": "For a Kft the members (tagok) are a registered, public datum of the cégjegyzék under Ctv. 27. § (3), so the cégkivonat itself evidences the member identities (name, residence/seat, birth data). A separate members' list, the tagjegyzék, is maintained internally by the managing director (ügyvezető) under Ptk. 3:182 § and is company-held, but it is not needed to prove membership because the register extract already records the members. Member identity is therefore provable from the base register extract.",
+    "evidence": [
+      {"basis": "Ctv. 2006. évi V. törvény 27. § (3) a) — Kft member data recorded in the register", "quote": "a tagok nevét, természetes személy esetén lakóhelyét, születési idejét, anyja születési nevét, jogi személy esetén székhelyét", "note": "Members are registered cégjegyzék data, hence they appear on the cégkivonat.", "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv", "retrieved": "2026-07-20"},
+      {"basis": "Ptk. 2013. évi V. törvény 3:182 § — tagjegyzék (members' list) kept by the ügyvezető", "quote": "", "note": "Company-held members' list; verbatim text could not be fetched and is left empty. It is a separate internal document, not the proof relied on here.", "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv", "retrieved": "2026-07-20"}
+    ],
+    "caveats": ["The cégkivonat records member identity; the internal tagjegyzék additionally records each member's capital contribution (törzsbetét) and business quota (üzletrész). If per-member contribution amounts (not just identities) are required, the base extract may be insufficient and the tagjegyzék (proved_by_additional_document) would be needed — this nuance is INFERENCE and UNVERIFIED as to current extract layout.", "Subsection lettering extracted by automated read; re-verify."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HU",
+    "legalForm": "Kft",
+    "legalFormLocal": "Korlátolt felelősségű társaság",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association (memorandum)",
+    "documentLocal": "társasági szerződés",
+    "summary": "A Kft is founded by a társasági szerződés (Ptk. 3:159 §), which is filed with the company court as part of the company's document collection (cégiratok). Under Ctv. 10. § (1) the cégiratok are fully public, so the constitution is obtainable as a separate filed document (not carried on the cégkivonat itself). Hence proved by an additional filed document.",
+    "evidence": [
+      {"basis": "Ctv. 2006. évi V. törvény 10. § (1) — cégiratok are fully public", "quote": "A cégjegyzék fennálló, illetve törölt adatai, valamint a cégiratok...teljeskörűen nyilvánosak.", "note": "The társasági szerződés is part of the public cégiratok.", "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv", "retrieved": "2026-07-20"},
+      {"basis": "Ptk. 2013. évi V. törvény 3:159 § — Kft founded by társasági szerződés", "quote": "", "note": "Verbatim text could not be fetched; left empty.", "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv", "retrieved": "2026-07-20"}
+    ],
+    "caveats": ["Single-member Kft uses an alapító okirat (deed of foundation) instead of a társasági szerződés; both are the constitution and both are filed public cégiratok.", "Subsection lettering extracted by automated read; re-verify."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HU",
+    "legalForm": "Zrt",
+    "legalFormLocal": "Zártkörűen működő részvénytársaság",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Company extract",
+    "documentLocal": "cégkivonat",
+    "summary": "Like all Hungarian companies, a Zrt is entered in the cégjegyzék kept by the company courts under Ctv. The cégkivonat is the official public extract of its currently registered data and is the base register-extract document.",
+    "evidence": [
+      {"basis": "Ctv. 2006. évi V. törvény 10. § (1) — publicity of register data and documents", "quote": "A cégjegyzék fennálló, illetve törölt adatai, valamint a cégiratok...teljeskörűen nyilvánosak.", "note": "", "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv", "retrieved": "2026-07-20"}
+    ],
+    "caveats": ["Subsection lettering extracted by automated read; re-verify."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HU",
+    "legalForm": "Zrt",
+    "legalFormLocal": "Zártkörűen működő részvénytársaság",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a Zrt the shareholders (részvényesek) are recorded in the company's own share register, the részvénykönyv (Ptk. 3:245 ff.), which is maintained by the board/company and is NOT part of the public cégjegyzék. The cégjegyzék records a shareholder only in narrow cases — the sole shareholder of an egyszemélyes rt, and a shareholder whose voting rights exceed 50% (majority/qualified influence) — so an ordinary multi-shareholder Zrt's full ownership cannot be proved from the register. There is no publicly filed shareholder-list document for a private Rt.",
+    "evidence": [
+      {"basis": "Ctv. 2006. évi V. törvény 27. § (4) b) bd) — sole shareholder of egyszemélyes rt recorded", "quote": "a részvényes nevét, adóazonosító számát, természetes személy esetén születési idejét, lakóhelyét", "note": "Only the SOLE shareholder is registered for a one-person Rt.", "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv", "retrieved": "2026-07-20"},
+      {"basis": "Ctv. 2006. évi V. törvény 27. § (4) b) bc) — shareholder recorded only above 50% voting rights", "quote": "amennyiben a részvényes szavazati jogának mértéke az 50 százalékot meghaladja", "note": "Ordinary shareholders below 50% are not in the register.", "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv", "retrieved": "2026-07-20"},
+      {"basis": "Ptk. 2013. évi V. törvény 3:245–3:247 § — részvénykönyv (share register) kept by the company", "quote": "", "note": "Company-held share register, not public; verbatim text could not be fetched and is left empty.", "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv", "retrieved": "2026-07-20"}
+    ],
+    "caveats": ["A sole shareholder (egyszemélyes Zrt) and any shareholder above 50% DO appear on the cégkivonat, so for those specific cases ownership is partially provable from the base extract — but the general/complete shareholder list is not.", "The részvénykönyv is company-held and generally not disclosed publicly; access is limited under Ptk.", "Subsection lettering extracted by automated read; re-verify."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HU",
+    "legalForm": "Zrt",
+    "legalFormLocal": "Zártkörűen működő részvénytársaság",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Statutes (articles of association)",
+    "documentLocal": "alapszabály",
+    "summary": "A részvénytársaság is founded by an alapszabály (Ptk. 3:250 §), filed with the company court as part of the public cégiratok. Under Ctv. 10. § (1) the cégiratok are fully public, so the Zrt's constitution is obtainable as a separate filed document, distinct from the cégkivonat. Hence proved by an additional filed document.",
+    "evidence": [
+      {"basis": "Ctv. 2006. évi V. törvény 10. § (1) — cégiratok are fully public", "quote": "A cégjegyzék fennálló, illetve törölt adatai, valamint a cégiratok...teljeskörűen nyilvánosak.", "note": "The alapszabály is part of the public cégiratok.", "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv", "retrieved": "2026-07-20"},
+      {"basis": "Ptk. 2013. évi V. törvény 3:250 § — Rt founded by alapszabály", "quote": "", "note": "Verbatim text could not be fetched; left empty.", "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv", "retrieved": "2026-07-20"}
+    ],
+    "caveats": ["Subsection lettering extracted by automated read; re-verify."],
+    "confidence": "high"
+  }
+]

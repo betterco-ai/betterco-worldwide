@@ -1,0 +1,116 @@
+[
+  {
+    "jurisdiction": "LT",
+    "legalForm": "UAB",
+    "legalFormLocal": "Uždaroji akcinė bendrovė",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register of Legal Entities extract",
+    "documentLocal": "Juridinių asmenų registro išrašas",
+    "summary": "The Register of Legal Entities (Juridinių asmenų registras, JAR), operated by Registrų centras, is the authoritative register for every UAB. It issues an official extract (išrašas) as a downloadable document containing the company's core registered data (name, code, address, legal form, managers, authorised capital, status). This extract is the base registry document and directly evidences the register-extract kind.",
+    "evidence": [
+      {"basis": "Civil Code of the Republic of Lithuania (Civilinis kodeksas), Art. 2.66 (data registered in the Register of Legal Entities) and Regulations of the Register of Legal Entities", "quote": "", "note": "Enumerates the data held in JAR and the register's duty to issue extracts; verbatim text not fetchable via the JS-rendered e-seimas portal.", "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.107687/asr", "retrieved": "2026-07-20"},
+      {"basis": "Registrų centras — Register of Legal Entities, extracts (išrašai)", "quote": "", "note": "Official registrar page confirming extracts are the primary orderable document.", "url": "https://www.registrucentras.lt/jar/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statutory/registrar quotes could not be retrieved (JS-rendered sources; WebSearch budget exhausted) — treated as UNVERIFIED at the quote level, though the existence of a JAR extract for any UAB is effectively certain."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "LT",
+    "legalForm": "UAB",
+    "legalFormLocal": "Uždaroji akcinė bendrovė",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "List of shareholders / participant data from JADIS (or sole-shareholder registration in JAR)",
+    "documentLocal": "Akcininkų (dalyvių) sąrašas — JADIS duomenys / vienintelio akcininko registravimas JAR",
+    "summary": "A UAB's shareholders (akcininkai) are not on the ordinary JAR extract, but shareholder/participant data is filed with Registrų centras: a sole shareholder must be registered in the Register of Legal Entities itself, and since the 2018–2019 reforms every private legal entity including a UAB must submit and keep current its participant (shareholder) data in JADIS (Juridinių asmenų dalyvių informacinė sistema — Information System of Participants of Legal Entities), operated by Registrų centras. Registrų centras can issue this participant data as a separate deliverable. It is therefore provable via an additional document, subject to the access and format caveats below.",
+    "evidence": [
+      {"basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on the register of shareholders kept by the company and on the single-shareholder notification; Civil Code Art. 2.66 (sole participant registered in JAR)", "quote": "", "note": "UAB keeps its own shareholder register; sole shareholder is recorded in JAR. Verbatim text not fetchable.", "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr", "retrieved": "2026-07-20"},
+      {"basis": "Registrų centras — JADIS, Information System of Participants of Legal Entities (Juridinių asmenų dalyvių informacinė sistema)", "quote": "", "note": "Statutory obligation for private legal entities (incl. UAB) to submit participant/shareholder data to JADIS; registrar can issue that data.", "url": "https://www.registrucentras.lt/jadis/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED: no verbatim source retrieved; JADIS obligation and issuance form asserted from domain knowledge of the 2018–2019 reform.",
+      "'DOCUMENT vs data' risk: JADIS delivers structured participant data; whether Registrų centras issues it as a single formal 'shareholder list' document (rather than a data export) for a multi-shareholder UAB should be confirmed operationally.",
+      "Access to full multi-shareholder JADIS data is partly restricted (entity itself, competent authorities, and — under AML rules — obliged entities); the always-public case is the sole-shareholder entry in JAR.",
+      "Whether a proof exists at all for a given UAB depends on the case: sole-shareholder = clearly provable; multi-shareholder = provable only to the extent JADIS data is accessible/issuable."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "LT",
+    "legalForm": "UAB",
+    "legalFormLocal": "Uždaroji akcinė bendrovė",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association (constituent document)",
+    "documentLocal": "Įstatai (steigimo dokumentas)",
+    "summary": "A UAB's constitution is its articles of association (įstatai). Under the Law on Companies (Art. 4) and the Civil Code, the articles are the mandatory constituent document, are filed with the Register of Legal Entities, and the register stores them and issues copies to the public. They are a distinct filed document (not part of the ordinary extract), so the constitution kind is provable via an additional registry document.",
+    "evidence": [
+      {"basis": "Law on Companies (Akcinių bendrovių įstatymas), Art. 4 (articles of association / įstatai as the constituent document filed with the register); Civil Code Art. 2.46", "quote": "", "note": "Articles are the constituent document filed with and stored by JAR; copies publicly obtainable. Verbatim text not fetchable.", "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr", "retrieved": "2026-07-20"},
+      {"basis": "Registrų centras — founding documents / articles of association (steigimo dokumentai, įstatai) available from JAR", "quote": "", "note": "Registrar English page confirms founding documents including įstatai are obtainable.", "url": "https://www.registrucentras.lt/jar/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "UNVERIFIED at quote level (no verbatim text retrieved), but filing and public availability of įstatai is a settled feature of Lithuanian company registration.",
+      "Classified as additional (not base) document because the articles are a separately ordered filed document, distinct from the JAR extract."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "LT",
+    "legalForm": "AB",
+    "legalFormLocal": "Akcinė bendrovė",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register of Legal Entities extract",
+    "documentLocal": "Juridinių asmenų registro išrašas",
+    "summary": "An AB (public limited company) is registered in the same Register of Legal Entities as a UAB. Registrų centras issues an official extract (išrašas) with the AB's core registered data. This extract is the base registry document and directly evidences the register-extract kind.",
+    "evidence": [
+      {"basis": "Civil Code Art. 2.66 and Regulations of the Register of Legal Entities (data and extracts for all registered legal entities incl. AB)", "quote": "", "note": "Same registration/extract regime applies to AB; verbatim not fetchable.", "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.107687/asr", "retrieved": "2026-07-20"},
+      {"basis": "Registrų centras — Register of Legal Entities, extracts (išrašai)", "quote": "", "note": "Extracts are the primary orderable document for any registered entity.", "url": "https://www.registrucentras.lt/jar/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "UNVERIFIED at quote level, but existence of a JAR extract for any AB is effectively certain."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "LT",
+    "legalForm": "AB",
+    "legalFormLocal": "Akcinė bendrovė",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For an AB (public company), shares are dematerialised registered securities recorded in personal securities accounts kept by account managers (banks/brokerage firms) and the central securities depository (Nasdaq CSD), not in the Register of Legal Entities. The register does not hold the AB's shareholder list, so no registry document evidences it; the shareholder register is maintained in the securities-accounts system outside Registrų centras. The one narrow exception is a sole-shareholder AB, whose single shareholder is registered in JAR.",
+    "evidence": [
+      {"basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on registration of shares/shareholders in personal securities accounts; Law on Markets in Financial Instruments; Nasdaq CSD (central securities depository) rules", "quote": "", "note": "AB shareholder records live in securities accounts, not JAR. Verbatim not fetchable.", "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED: securities-account regime asserted from domain knowledge; no verbatim source retrieved.",
+      "Exception: a single-shareholder AB has its sole shareholder registered in JAR, which would then be registry-provable for that case.",
+      "AB participant data is generally outside JADIS because it is held in the securities-accounts system; confirm operationally."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "LT",
+    "legalForm": "AB",
+    "legalFormLocal": "Akcinė bendrovė",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association (constituent document)",
+    "documentLocal": "Įstatai (steigimo dokumentas)",
+    "summary": "An AB's constitution is its articles of association (įstatai), the mandatory constituent document under the Law on Companies (Art. 4). As for a UAB, the articles are filed with the Register of Legal Entities, stored by the register, and copies are publicly obtainable — a distinct filed document separate from the extract. The constitution kind is therefore provable via an additional registry document.",
+    "evidence": [
+      {"basis": "Law on Companies (Akcinių bendrovių įstatymas), Art. 4 (articles of association / įstatai filed with the register); Civil Code Art. 2.46", "quote": "", "note": "Same articles-filing regime as UAB; verbatim not fetchable.", "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr", "retrieved": "2026-07-20"},
+      {"basis": "Registrų centras — founding documents / articles of association available from JAR", "quote": "", "note": "Registrar confirms įstatai are obtainable from the register.", "url": "https://www.registrucentras.lt/jar/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "UNVERIFIED at quote level, but filing and public availability of AB įstatai is settled.",
+      "Classified as additional (not base) document — a separately ordered filed document distinct from the JAR extract."
+    ],
+    "confidence": "high"
+  }
+]

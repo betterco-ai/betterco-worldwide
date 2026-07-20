@@ -1,0 +1,111 @@
+[
+  {
+    "jurisdiction": "LV",
+    "legalForm": "SIA",
+    "legalFormLocal": "Sabiedrība ar ierobežotu atbildību",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Enterprise Register extract",
+    "documentLocal": "Izziņa no Uzņēmumu reģistra",
+    "summary": "The SIA is entered in the Enterprise Register (Uzņēmumu reģistrs), which issues an official extract of its registered data (name, registration number, legal form, registered office, share capital, board members and, since the 2021 reform, its members). Documents and open data from the public part of the register are available online free of charge and immediately. This extract is the base register document.",
+    "evidence": [
+      {"basis": "EU e-Justice portal — Business registers in Latvia", "quote": "Documents from the public section of the registration file ... may be obtained online from the Enterprise Register's information website free of charge and immediately.", "note": "Confirms the public register issues data and documents for registered entities.", "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1", "retrieved": "2026-07-20"},
+      {"basis": "Enterprise Register (ur.gov.lv) — official site", "quote": "", "note": "Register maintains and publishes company data (legal form, seat, capital, representatives); current and historical data plus documents can be requested from the public part.", "url": "https://www.ur.gov.lv/en/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Local label 'Izziņa no Uzņēmumu reģistra' is the standard extract term; verbatim statutory wording for the extract was not fetched (likumi.lv English page truncates before the capital-company sections)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "LV",
+    "legalForm": "SIA",
+    "legalFormLocal": "Sabiedrība ar ierobežotu atbildību",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Register of members (shareholders register)",
+    "documentLocal": "Dalībnieku reģistrs",
+    "summary": "Latvia is notable for making the SIA member list public: since amendments to the Commercial Law in force from 1 July 2021, an SIA's register of members (dalībnieku reģistrs) is filed with and held by the Enterprise Register and is publicly available, listing each member, their number of shares and nominal value. It is a distinct filed document in the registration file (and the same member data is also exposed as free open data). It therefore evidences the German 'Gesellschafterliste' equivalent.",
+    "evidence": [
+      {"basis": "EU e-Justice portal — Business registers in Latvia (open data list)", "quote": "data on members of private limited liability companies (first name, surname, part of the personal identity number, number of shares owned by them and the nominal value of those shares)", "note": "Member/shareholder data of the SIA is public in the Enterprise Register — the distinguishing Latvian feature.", "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1", "retrieved": "2026-07-20"},
+      {"basis": "Commercial Law (Komerclikums), Section 10(2) — signatures required for Commercial Register filings", "quote": "", "note": "The fetched English text references notarised signatures 'on the division of the register of shareholders (stockholders) of a capital company', confirming the register of shareholders is a Commercial Register document. Section 187 (register of members) itself could not be fetched verbatim.", "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED verbatim: the exact statutory mechanics (Commercial Law Sec. 186–187, and the 1 July 2021 amendment moving the dalībnieku reģistrs to the Enterprise Register) are asserted from domain knowledge plus the open-data evidence; the section text itself was not fetchable.",
+      "Base-vs-additional is arguable: because current member data now also appears on the register extract/open data, this could alternatively be scored 'proved_by_base_document'. Scored 'additional' because the dedicated dalībnieku reģistrs is a separate document in the file."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "LV",
+    "legalForm": "SIA",
+    "legalFormLocal": "Sabiedrība ar ierobežotu atbildību",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association",
+    "documentLocal": "Statūti",
+    "summary": "The SIA's articles of association (statūti) are filed with the Enterprise Register on incorporation and any amendment (with the full amended text) must be submitted to the Commercial Register. Copies of documents from the public section of the registration file are obtainable online free of charge. The statūti is a separate document from the register extract, so it proves the constitution via an additional document.",
+    "evidence": [
+      {"basis": "Commercial Law (Komerclikums), Section 9(2)", "quote": "After making amendments to the documents of incorporation of a capital company (memorandum of association, articles of association), the text of the amendments and also the full text of the document as amended must be submitted to the Commercial Register.", "note": "Establishes that articles of association are filed with the Commercial Register (applies to both SIA and AS as capital companies).", "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law", "retrieved": "2026-07-20"},
+      {"basis": "EU e-Justice portal — Business registers in Latvia", "quote": "The Register also issues copies of documents from the registration file of a legal entity", "note": "Articles are part of the registration file; public-part documents are free and immediate.", "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Section 144 (articles of an SIA) was not fetchable verbatim; the filing/public status is grounded in the general Section 9(2) capital-company rule plus the register's document-issuance practice."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "LV",
+    "legalForm": "AS",
+    "legalFormLocal": "Akciju sabiedrība",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Enterprise Register extract",
+    "documentLocal": "Izziņa no Uzņēmumu reģistra",
+    "summary": "The AS is entered in the Enterprise Register, which issues an official extract of its registered data (name, registration number, legal form, registered office, share capital, board and council members). This extract is the base register document. Note it does not contain the shareholder list.",
+    "evidence": [
+      {"basis": "Enterprise Register (ur.gov.lv) / EU e-Justice portal", "quote": "Documents from the public section of the registration file ... may be obtained online from the Enterprise Register's information website free of charge and immediately.", "note": "Same public register and extract mechanism applies to all capital companies including the AS.", "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statutory wording for the AS extract was not fetched; grounded in the register's general practice."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "LV",
+    "legalForm": "AS",
+    "legalFormLocal": "Akciju sabiedrība",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "A joint-stock company's shareholders are NOT recorded in the Enterprise Register. Registered-share holders are kept in the company's own shareholders register maintained by its management board, and dematerialised/publicly-traded shares are recorded with Nasdaq CSD (the Latvian central securities depository). The Enterprise Register's public open data lists SIA members but contains no AS shareholder list, so no shareholder-list document is obtainable from the registry.",
+    "evidence": [
+      {"basis": "EU e-Justice portal — Business registers in Latvia (open data list)", "quote": "data on members of private limited liability companies (first name, surname, part of the personal identity number, number of shares owned by them and the nominal value of those shares)", "note": "Open data is limited to SIA members; joint-stock company shareholders are conspicuously absent — negative evidence that the registry does not hold the AS shareholder list.", "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1", "retrieved": "2026-07-20"},
+      {"basis": "Commercial Law (Komerclikums) — joint-stock company share/shareholder provisions (Sec. ~234–235) and Financial Instruments Market Law", "quote": "", "note": "AS shareholders register held by the company (registered shares) or Nasdaq CSD (dematerialised/listed shares); statute text not fetchable verbatim.", "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED verbatim: the specific Commercial Law sections placing the AS shareholder register with the company/Nasdaq CSD were not fetchable; conclusion rests on domain knowledge plus the negative open-data evidence.",
+      "A private per-issuer shareholder list may exist at the company or Nasdaq CSD, but it is not a public registry document."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "LV",
+    "legalForm": "AS",
+    "legalFormLocal": "Akciju sabiedrība",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association",
+    "documentLocal": "Statūti",
+    "summary": "The AS's articles of association (statūti) are filed with the Enterprise Register on incorporation and any amendment (with the full amended text) must be submitted to the Commercial Register. Copies from the public section of the registration file are obtainable online free of charge. The statūti is a separate document from the register extract, proving the constitution via an additional document.",
+    "evidence": [
+      {"basis": "Commercial Law (Komerclikums), Section 9(2)", "quote": "After making amendments to the documents of incorporation of a capital company (memorandum of association, articles of association), the text of the amendments and also the full text of the document as amended must be submitted to the Commercial Register.", "note": "'Capital company' covers the AS (akciju sabiedrība); articles are a filed Commercial Register document.", "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law", "retrieved": "2026-07-20"},
+      {"basis": "EU e-Justice portal — Business registers in Latvia", "quote": "The Register also issues copies of documents from the registration file of a legal entity", "note": "Articles are part of the public registration file.", "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "AS-specific articles section (Sec. ~144 applied via Sec. 226 et seq.) not fetched verbatim; grounded in the general Section 9(2) capital-company rule."
+    ],
+    "confidence": "high"
+  }
+]

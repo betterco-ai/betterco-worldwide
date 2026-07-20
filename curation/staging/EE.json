@@ -1,0 +1,116 @@
+[
+  {
+    "jurisdiction": "EE",
+    "legalForm": "OÜ",
+    "legalFormLocal": "Osaühing",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial register extract / register card (B-card)",
+    "documentLocal": "Äriregistri väljavõte (B-kaart)",
+    "summary": "Every OÜ is entered in the Estonian commercial register (Äriregister) held by the Tartu County Court registration department, and its register card is the base extract. It is openly available through the e-Business Register (ariregister.rik.ee). It states name, registry code, address, capital, board members and — since the 1 Feb 2023 reform — the shareholders. This is the canonical register extract.",
+    "evidence": [
+      {"basis": "Äriseadustik (Commercial Code) §22 et seq. (register entries) and the e-Business Register", "quote": "", "note": "Verbatim not extracted: Riigi Teataja English consolidated text is JavaScript-rendered and returned only a loading shell; verify §§22-33 for register content.", "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide", "retrieved": "2026-07-20"},
+      {"basis": "e-Business Register (Äriregister), Centre of Registers and Information Systems (RIK)", "quote": "", "note": "Register card / extract retrievable per company at ariregister.rik.ee.", "url": "https://ariregister.rik.ee/eng", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED verbatim: no statute text could be fetched (JS-rendered Riigi Teataja; web-search budget exhausted). Section mapping is from established knowledge of the Äriseadustik, not a fetched quote.",
+      "Extract is available in multiple detail levels (current data vs. detailed/historical printout); the 'B-card' terminology is the traditional register card."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "EE",
+    "legalForm": "OÜ",
+    "legalFormLocal": "Osaühing",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "List of shareholders (register-maintained) / shown on register card",
+    "documentLocal": "Osanike nimekiri",
+    "summary": "For an OÜ the shareholders (osanikud) are part of the commercial register itself: since the reform in force from 1 February 2023 the registrar — not the management board — maintains the OÜ list of shareholders, and the shareholders appear on the register card. A dedicated list of shareholders (osanike nimekiri) is therefore obtainable directly from the register. The one exception is where the OÜ's shares are registered with the Estonian register of securities (Nasdaq CSD/EVK) or another depository, in which case that securities register — not the commercial register — is authoritative for shareholders.",
+    "evidence": [
+      {"basis": "Äriseadustik (Commercial Code) §182 — list of shareholders of a private limited company (amended, in force 01.02.2023)", "quote": "", "note": "Verbatim not extracted (JS-rendered source). §182 was amended so the registrar keeps the OÜ shareholder list unless the shares are entered in the register of securities.", "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide", "retrieved": "2026-07-20"},
+      {"basis": "e-Business Register (Äriregister)", "quote": "", "note": "Shareholders visible on the register card / list of shareholders retrievable for an OÜ.", "url": "https://ariregister.rik.ee/eng", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "EXCEPTION: if the OÜ's shares are registered with the Estonian register of securities (Nasdaq CSD/EVK) or another securities depository, shareholders are NOT in the commercial register; for such an OÜ this becomes not_provable_from_registry (commercial register) and shifts to the securities register.",
+      "The 2023 reform moved list-keeping from the management board to the registrar; pre-2023 the register card did not itself list OÜ shareholders. Classified here as base because it is now a register-held record.",
+      "INFERENCE/UNVERIFIED verbatim: §182 wording not fetched."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "EE",
+    "legalForm": "OÜ",
+    "legalFormLocal": "Osaühing",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association",
+    "documentLocal": "Põhikiri",
+    "summary": "An OÜ's articles of association (põhikiri) are submitted to the commercial register on formation and on amendment and form part of the public register file. They are a distinct filed document, obtainable from the register in addition to the standard extract, not part of the base register card. This makes the constitution provable by an additional register document.",
+    "evidence": [
+      {"basis": "Äriseadustik (Commercial Code) §139 — articles of association of a private limited company", "quote": "", "note": "Verbatim not extracted (JS-rendered source). §139 governs the required content of the OÜ põhikiri filed with the register.", "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide", "retrieved": "2026-07-20"},
+      {"basis": "e-Business Register (Äriregister) — company documents / register file", "quote": "", "note": "Põhikiri retrievable from the company's register file.", "url": "https://ariregister.rik.ee/eng", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "An OÜ formed via the expedited online procedure may adopt a standard (template) põhikiri; a filed articles document still exists in the register file.",
+      "INFERENCE/UNVERIFIED verbatim: §139 wording not fetched."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "EE",
+    "legalForm": "AS",
+    "legalFormLocal": "Aktsiaselts",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial register extract / register card (B-card)",
+    "documentLocal": "Äriregistri väljavõte (B-kaart)",
+    "summary": "Every AS is entered in the commercial register and its register card is the base extract, openly available through the e-Business Register. It shows name, registry code, address, share capital, management and supervisory board members. It does not list the individual shareholders (those are in the securities register). The extract itself is the canonical register document.",
+    "evidence": [
+      {"basis": "Äriseadustik (Commercial Code) register-entry provisions; e-Business Register", "quote": "", "note": "Verbatim not extracted (JS-rendered source).", "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide", "retrieved": "2026-07-20"},
+      {"basis": "e-Business Register (Äriregister)", "quote": "", "note": "Register card / extract retrievable per company.", "url": "https://ariregister.rik.ee/eng", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "The AS register card lists directors/organs but not shareholders.",
+      "INFERENCE/UNVERIFIED verbatim: statute text not fetched."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "EE",
+    "legalForm": "AS",
+    "legalFormLocal": "Aktsiaselts",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "The shareholders of an Estonian AS are not held in the commercial register. The share register (aktsiaraamat) of a public limited company is maintained in the Estonian register of securities operated by Nasdaq CSD (the former EVK); registration of AS shares in that securities register is mandatory. The commercial register / e-Business Register therefore cannot evidence the AS shareholders — that data sits in a separate securities register, access to which is restricted and not obtained as an ordinary open register extract.",
+    "evidence": [
+      {"basis": "Äriseadustik (Commercial Code) §233 — share register of a public limited company maintained by the Estonian register of securities", "quote": "", "note": "Verbatim not extracted (JS-rendered source). §§233-234 place the AS aktsiaraamat with the register of securities.", "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide", "retrieved": "2026-07-20"},
+      {"basis": "Nasdaq CSD (Estonian register of securities / former Eesti Väärtpaberikeskus)", "quote": "", "note": "Nasdaq CSD maintains the Estonian securities register in which AS shares are registered; issuer-services pages returned 404 on fetch, cited at domain level.", "url": "https://nasdaqcsd.com/en", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Not provable from the COMMERCIAL register; the authoritative source is the securities register (Nasdaq CSD), which is not the Äriregister and not an open extract.",
+      "INFERENCE/UNVERIFIED verbatim: §233 wording not fetched; Nasdaq CSD issuer page not fetched (404)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "EE",
+    "legalForm": "AS",
+    "legalFormLocal": "Aktsiaselts",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association",
+    "documentLocal": "Põhikiri",
+    "summary": "An AS's articles of association (põhikiri) are submitted to the commercial register on formation and amendment and are part of the public register file. They are a distinct filed document obtainable from the register in addition to the standard register extract, so the constitution is provable by an additional register document.",
+    "evidence": [
+      {"basis": "Äriseadustik (Commercial Code) §244 — articles of association of a public limited company", "quote": "", "note": "Verbatim not extracted (JS-rendered source). §244 governs required content of the AS põhikiri filed with the register.", "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide", "retrieved": "2026-07-20"},
+      {"basis": "e-Business Register (Äriregister) — company documents / register file", "quote": "", "note": "Põhikiri retrievable from the company's register file.", "url": "https://ariregister.rik.ee/eng", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED verbatim: §244 wording not fetched."
+    ],
+    "confidence": "high"
+  }
+]

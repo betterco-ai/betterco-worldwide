@@ -1,0 +1,117 @@
+[
+  {
+    "jurisdiction": "SK",
+    "legalForm": "s.r.o.",
+    "legalFormLocal": "Spoločnosť s ručením obmedzeným",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial register extract",
+    "documentLocal": "Výpis z obchodného registra",
+    "summary": "The base register document for an s.r.o. is the výpis z obchodného registra issued by the Obchodný register SR (orsr.sk / ru.justice.sk). It is the standard, publicly retrievable extract carrying company name, seat, IČO, business activities, statutory body and registered capital. It is the direct equivalent of a German Registerauszug.",
+    "evidence": [
+      {"basis": "Act 530/2003 Coll. on the Commercial Register (Zákon o obchodnom registri), § 2 (recorded data) and § 11 (extract)", "quote": "", "note": "Verbatim not captured (Slov-Lex is JS-rendered; not fetchable). Extract is the public base document produced by ORSR.", "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/", "retrieved": "2026-07-20"},
+      {"basis": "Obchodný register SR public portal", "quote": "", "note": "Výpis available online per company", "url": "https://www.orsr.sk", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statute text UNVERIFIED — Slov-Lex could not be fetched and web search budget was exhausted; wording of § 2/§ 11 of Act 530/2003 is asserted from domain knowledge, not quoted."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SK",
+    "legalForm": "s.r.o.",
+    "legalFormLocal": "Spoločnosť s ručením obmedzeným",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial register extract (lists members / spoločníci)",
+    "documentLocal": "Výpis z obchodného registra",
+    "summary": "For an s.r.o. the members (spoločníci) are a mandatory register entry: each member is recorded with the amount of their contribution (výška vkladu) and the extent of its payment (rozsah splatenia). They appear on the public výpis, so the register extract itself is the authoritative member list — no separate Gesellschafterliste document is needed or exists. This is the key difference from an a.s.",
+    "evidence": [
+      {"basis": "Act 530/2003 Coll., § 2 — for a s.r.o. the register records each spoločník together with výška vkladu and rozsah jeho splatenia; Obchodný zákonník 513/1991, § 105–106", "quote": "", "note": "Members are recorded in the register and shown on the extract; verbatim not captured.", "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statute text UNVERIFIED — asserted from domain knowledge, not quoted from a fetched source.",
+      "The extract reflects the currently registered members; changes take effect only on registration, so a very recent transfer may not yet appear."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SK",
+    "legalForm": "s.r.o.",
+    "legalFormLocal": "Spoločnosť s ručením obmedzeným",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum / articles of association",
+    "documentLocal": "Spoločenská zmluva (alebo zakladateľská listina, ak je jediný spoločník)",
+    "summary": "The constitution of an s.r.o. is the spoločenská zmluva, or a zakladateľská listina where there is a single founder. It is filed in the collection of deeds (zbierka listín) of the commercial register, which is public, and is retrievable as a separate (additional) document beyond the standard extract. Amendments are deposited as a consolidated wording (úplné znenie).",
+    "evidence": [
+      {"basis": "Act 530/2003 Coll., § 3 — zbierka listín contents (spoločenská zmluva / zakladateľská listina and their úplné znenie); Obchodný zákonník 513/1991, § 110", "quote": "", "note": "Founding document deposited in and publicly accessible from the zbierka listín; verbatim not captured.", "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/", "retrieved": "2026-07-20"},
+      {"basis": "Obchodný register SR — zbierka listín access", "quote": "", "note": "Collection of deeds browsable per company", "url": "https://www.orsr.sk", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statute text UNVERIFIED — asserted from domain knowledge.",
+      "Single-founder s.r.o. uses a zakladateľská listina rather than a spoločenská zmluva.",
+      "Availability of the latest consolidated wording depends on the company having filed it; older filings may be scanned images."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SK",
+    "legalForm": "a.s.",
+    "legalFormLocal": "Akciová spoločnosť",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial register extract",
+    "documentLocal": "Výpis z obchodného registra",
+    "summary": "The base register document for an a.s. is likewise the výpis z obchodného registra from Obchodný register SR. It publicly shows company name, seat, IČO, activities, statutory body (predstavenstvo), supervisory board (dozorná rada) and registered capital / share structure. It is the direct equivalent of a German Registerauszug.",
+    "evidence": [
+      {"basis": "Act 530/2003 Coll., § 2 and § 11; Obchodný zákonník 513/1991, § 154 et seq.", "quote": "", "note": "Extract is the public base document produced by ORSR; verbatim not captured.", "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/", "retrieved": "2026-07-20"},
+      {"basis": "Obchodný register SR public portal", "quote": "", "note": "", "url": "https://www.ru.justice.sk", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statute text UNVERIFIED — asserted from domain knowledge, not quoted from a fetched source."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SK",
+    "legalForm": "a.s.",
+    "legalFormLocal": "Akciová spoločnosť",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "An a.s. shareholder list is not obtainable from the commercial register. The register records the founders (zakladatelia) as at incorporation and the statutory/supervisory bodies, but not the ongoing body of shareholders. Current shareholders of book-entry shares (zaknihované akcie) are held in the register of holders maintained by the Central Securities Depository (Centrálny depozitár cenných papierov, CDCP); for physical registered shares (listinné akcie na meno) the list of shareholders (zoznam akcionárov) is kept privately by the company itself. Neither is a public register document.",
+    "evidence": [
+      {"basis": "Obchodný zákonník 513/1991, § 156 — evidence of registered shares (register of holders kept by the securities depository / list of shareholders kept by the company); Act 566/2001 on Securities, on CDCP registers", "quote": "", "note": "Shareholders evidenced outside the commercial register; verbatim not captured.", "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/", "retrieved": "2026-07-20"},
+      {"basis": "Centrálny depozitár cenných papierov SR (CDCP)", "quote": "", "note": "Holder register for book-entry shares; not public per-issuer document", "url": "https://www.cdcp.sk", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statute text UNVERIFIED — asserted from domain knowledge.",
+      "Exception: a single-member a.s. (jediný akcionár) — the sole shareholder IS recorded in the commercial register, so for that narrow case the extract does evidence the (sole) shareholder.",
+      "The register's founder (zakladatelia) entry reflects incorporation only and is not updated for later share transfers, so it is not a current shareholder list.",
+      "CDCP / company shareholder lists are access-restricted, not open public documents."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SK",
+    "legalForm": "a.s.",
+    "legalFormLocal": "Akciová spoločnosť",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Founding deed and articles of association",
+    "documentLocal": "Zakladateľská zmluva / zakladateľská listina a stanovy",
+    "summary": "The constitution of an a.s. comprises the founding instrument — zakladateľská zmluva (multiple founders) or zakladateľská listina (single founder) — together with the stanovy (articles of association). Both are filed in the collection of deeds (zbierka listín) of the commercial register, which is public, and are retrievable as separate documents beyond the standard extract. Amended stanovy are deposited as a consolidated wording.",
+    "evidence": [
+      {"basis": "Act 530/2003 Coll., § 3 — zbierka listín (founding instrument and stanovy and their úplné znenie); Obchodný zákonník 513/1991, § 162–163 (zakladateľská zmluva/listina, stanovy)", "quote": "", "note": "Founding documents deposited in and publicly accessible from the zbierka listín; verbatim not captured.", "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/", "retrieved": "2026-07-20"},
+      {"basis": "Obchodný register SR — zbierka listín access", "quote": "", "note": "", "url": "https://www.orsr.sk", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statute text UNVERIFIED — asserted from domain knowledge.",
+      "Single-founder a.s. uses a zakladateľská listina instead of a zakladateľská zmluva; the stanovy are the substantive constitution in either case.",
+      "Latest consolidated stanovy depend on the company having filed them; older filings may be scanned images."
+    ],
+    "confidence": "high"
+  }
+]

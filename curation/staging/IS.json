@@ -1,0 +1,118 @@
+[
+  {
+    "jurisdiction": "IS",
+    "legalForm": "ehf",
+    "legalFormLocal": "Einkahlutafélag",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract (company certificate)",
+    "documentLocal": "Vottorð úr fyrirtækjaskrá (firmavottorð)",
+    "summary": "Fyrirtækjaskrá (the register of enterprises, run by RSK/Skatturinn) registers every ehf and issues an official extract/certificate of the registered particulars. Basic registered information is available via free online lookup, with more detailed extracts obtainable through the register's web store. This certificate is the base register document.",
+    "evidence": [
+      {"basis": "Fyrirtækjaskrá / Skatturinn (register of enterprises) official page", "quote": "", "note": "Register page states registered-company information can be looked up on the web and more detailed information obtained free through the web store (vefverslun); certificates (vottorð) are offered.", "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/", "retrieved": "2026-07-20"},
+      {"basis": "Act on Private Limited Companies No. 138/1994, art. 9 (registration)", "quote": "", "note": "Board must notify the company for registration within two months of the date of the memorandum of association; company cannot be registered unless the share capital is paid.", "url": "https://www.althingi.is/lagas/nuna/1994138.html", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Exact contents of the ehf extract (board, managing director, share capital, etc.) inferred from standard Nordic registry practice; the RSK page did not enumerate fields verbatim (UNVERIFIED at field level).",
+      "Quotes left empty because official text was retrieved via a summarizing fetch, not confirmed verbatim."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "IS",
+    "legalForm": "ehf",
+    "legalFormLocal": "Einkahlutafélag",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": "Hlutaskrá (share/shareholder register)",
+    "summary": "For an ehf the board must immediately draw up the share register (hlutaskrá), which is kept at the company's office and is accessible to shareholders and public authorities, not filed with Fyrirtækjaskrá. The register of enterprises therefore does not issue the shareholder list as a document. Iceland is comparatively transparent about ownership: a public beneficial-owner register lets anyone see a company's registered beneficial owner, but that is structured data (only owners above threshold), and the signed hlutaskrá is only lodged as supporting evidence, not released as a registry document.",
+    "evidence": [
+      {"basis": "Act on Private Limited Companies No. 138/1994, art. 19 (hlutaskrá)", "quote": "", "note": "On formation the board must at once make a share register (hlutaskrá); it is kept at the company's office and shareholders and public authorities have access to it. Not sent to the register.", "url": "https://www.althingi.is/lagas/nuna/1994138.html", "retrieved": "2026-07-20"},
+      {"basis": "Register of beneficial owners (raunverulegir eigendur), Skatturinn/Fyrirtækjaskrá", "quote": "með því að fletta félaginu upp í fyrirtækjaskrá á www.skatturinn.is er hægt að sjá hver er skráður raunverulegur eigandi félagsins á hverjum tíma", "note": "Beneficial owner is publicly viewable as data; a dated and signed hlutaskrá is listed among supporting documents submitted to prove ownership, not issued back publicly.", "url": "https://www.skatturinn.is/fyrirtaekjaskra/raunverulegir-eigendur/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "The public beneficial-owner register is DATA, not a document, and covers only owners above the 25% threshold — it is not a substitute for a full shareholder list.",
+      "Icelandic ownership transparency also derives from publicly accessible tax records, but those are not a registry-issued shareholder-list document.",
+      "art. 19 quote left empty (not confirmed verbatim); wording paraphrased from a summarizing fetch of the Althingi statute."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "IS",
+    "legalForm": "ehf",
+    "legalFormLocal": "Einkahlutafélag",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association",
+    "documentLocal": "Samþykktir",
+    "summary": "An ehf's articles of association (samþykktir) form part of the registration file lodged with Fyrirtækjaskrá, and amendments to the articles must be notified to the register. The current articles are held by the register and can be obtained as a separate document, distinct from the register extract. This is an additional registry document rather than the base extract.",
+    "evidence": [
+      {"basis": "Act on Private Limited Companies No. 138/1994, art. 68 (amendment of articles)", "quote": "", "note": "A resolution to amend the articles of association of a private limited company must be notified to the register — implying the register holds the articles.", "url": "https://www.althingi.is/lagas/nuna/1994138.html", "retrieved": "2026-07-20"},
+      {"basis": "Fyrirtækjaskrá / Skatturinn certificates and documents page", "quote": "", "note": "Register page references articles of association (samþykktir) among the register's materials; articles are part of the registration file and obtainable.", "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "That the register releases a specific company's samþykktir on request is inferred from standard Nordic practice and the statutory filing requirement; the RSK page confirmed articles are part of register materials but did not spell out the ordering process (partly UNVERIFIED).",
+      "Quotes left empty (not confirmed verbatim)."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "IS",
+    "legalForm": "hf",
+    "legalFormLocal": "Hlutafélag",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract (company certificate)",
+    "documentLocal": "Vottorð úr fyrirtækjaskrá (hlutafélagaskrárvottorð)",
+    "summary": "Fyrirtækjaskrá registers every hf and issues an official extract/certificate of its registered particulars, obtainable via online lookup and the register's web store. The company must be notified for registration within six months of the memorandum. This certificate is the base register document.",
+    "evidence": [
+      {"basis": "Fyrirtækjaskrá / Skatturinn certificates page", "quote": "", "note": "Registered-company information available via web lookup and detailed information via the web store; certificates (vottorð) offered.", "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/", "retrieved": "2026-07-20"},
+      {"basis": "Act on Public Limited Companies No. 2/1995, art. 14 (registration)", "quote": "", "note": "Board must notify the company for registration within six months of the date of the memorandum of association.", "url": "https://www.althingi.is/lagas/nuna/1995002.html", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Exact fields of the hf extract inferred from standard registry practice; not enumerated verbatim on the RSK page (UNVERIFIED at field level).",
+      "Quotes left empty (not confirmed verbatim)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "IS",
+    "legalForm": "hf",
+    "legalFormLocal": "Hlutafélag",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": "Hlutaskrá (share/shareholder register)",
+    "summary": "For an hf the board must immediately make the share register (hlutaskrá), which is always kept at the company's office and is accessible to shareholders and public authorities; it is not filed with Fyrirtækjaskrá. The register of enterprises therefore does not issue the shareholder list as a document, and for listed hf ownership sits in the securities depository. As with ehf, Iceland's public beneficial-owner register shows a company's registered beneficial owner as data (owners above threshold only), not the full shareholder-list document.",
+    "evidence": [
+      {"basis": "Act on Public Limited Companies No. 2/1995, art. 30 (hlutaskrá)", "quote": "", "note": "On formation the board must at once make a share register; the share register shall always be kept at the company's office, and all shareholders and public authorities have access to it. Not sent to the register.", "url": "https://www.althingi.is/lagas/nuna/1995002.html", "retrieved": "2026-07-20"},
+      {"basis": "Register of beneficial owners (raunverulegir eigendur), Skatturinn/Fyrirtækjaskrá", "quote": "með því að fletta félaginu upp í fyrirtækjaskrá á www.skatturinn.is er hægt að sjá hver er skráður raunverulegur eigandi félagsins á hverjum tíma", "note": "Beneficial owner viewable publicly as data; signed hlutaskrá is only supporting evidence, not a publicly issued document.", "url": "https://www.skatturinn.is/fyrirtaekjaskra/raunverulegir-eigendur/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Beneficial-owner register is DATA and threshold-limited — not a substitute for a full shareholder list.",
+      "For listed hf, the share register is maintained via the central securities depository, still not via Fyrirtækjaskrá.",
+      "art. 30 quote left empty (not confirmed verbatim); paraphrased from a summarizing fetch of the Althingi statute."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "IS",
+    "legalForm": "hf",
+    "legalFormLocal": "Hlutafélag",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association",
+    "documentLocal": "Samþykktir",
+    "summary": "An hf's articles of association (samþykktir) form part of the registration file lodged with Fyrirtækjaskrá, and amendments must be notified to the register. The current articles are held by the register and obtainable as a separate document, distinct from the register extract. This is an additional registry document rather than the base extract.",
+    "evidence": [
+      {"basis": "Act on Public Limited Companies No. 2/1995, arts. 9 and 42 (articles / amendment on registration)", "quote": "", "note": "art. 9 prescribes the required contents of the articles; changes tied to registration must be notified, implying the register holds the articles.", "url": "https://www.althingi.is/lagas/nuna/1995002.html", "retrieved": "2026-07-20"},
+      {"basis": "Fyrirtækjaskrá / Skatturinn certificates and documents page", "quote": "", "note": "Articles of association (samþykktir) are among register materials and part of the registration file; obtainable from the register.", "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Release of a specific hf's samþykktir on request inferred from standard practice and the statutory filing requirement; ordering process not spelled out verbatim on the RSK page (partly UNVERIFIED).",
+      "Quotes left empty (not confirmed verbatim)."
+    ],
+    "confidence": "medium"
+  }
+]

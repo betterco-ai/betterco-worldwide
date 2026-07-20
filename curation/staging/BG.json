@@ -1,0 +1,143 @@
+[
+  {
+    "jurisdiction": "BG",
+    "legalForm": "OOD",
+    "legalFormLocal": "Дружество с ограничена отговорност (ООД/ЕООД)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Register extract / current status certificate",
+    "documentLocal": "Удостоверение за актуално състояние (извлечение от Търговския регистър)",
+    "summary": "The Bulgarian Commercial Register (Търговски регистър, Registry Agency) is a free, public, online register from which anyone can obtain a company extract / current status certificate. For an OOD this extract is the base register document evidencing the registered particulars: name, legal form, seat, object, capital, managers and partners. It is generated directly from the register account and requires no additional filing.",
+    "evidence": [
+      {
+        "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+        "quote": "The business register is accessible 24 hours a day at https://portal.registryagency.bg/en/. Anyone may search the business register and the non-profit legal entities register. Access to the registers' database is open to everyone free of charge.",
+        "note": "Confirms free, public online access and that the register issues extracts.",
+        "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+        "retrieved": "2026-07-20"
+      }
+    ],
+    "caveats": [
+      "Article numbers of the Търговски закон (Commercial Act) not independently verified verbatim; lex.bg and registryagency.bg PDFs returned HTTP 403/302 and could not be fetched — INFERENCE from established Bulgarian company law."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BG",
+    "legalForm": "OOD",
+    "legalFormLocal": "Дружество с ограничена отговорност (ООД/ЕООД)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Register extract (partners / съдружници field)",
+    "documentLocal": "Удостоверение за актуално състояние — раздел „Съдружници\"",
+    "summary": "For an OOD the partners (съдружници) are a registered particular published in the Commercial Register, and every transfer of a company share is itself entered in the register. The current register extract therefore lists the current members and their participations, so the base register document evidences the equivalent of a shareholder/member list. This is a genuine registered particular, not merely a snapshot of founders — unlike an AD.",
+    "evidence": [
+      {
+        "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+        "quote": "basic information, stored in the form of structured data, about the name, legal form, head office and address of the company, its managing bodies, objects (if applicable), partners (if applicable), and shareholding capital (if applicable).",
+        "note": "The register expressly holds 'partners (if applicable)' — applicable to OOD partners (съдружници). For AD it lists only shareholding capital, not shareholders.",
+        "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+        "retrieved": "2026-07-20"
+      }
+    ],
+    "caveats": [
+      "The 'list' is proved via the register extract's partners field plus the дружествен договор, not a standalone 'Gesellschafterliste' document as in Germany.",
+      "Underlying statutory basis (Art. 119(2) and Art. 129/140 Търговски закон requiring entry of partners and registration of share transfers) not verified verbatim — INFERENCE; source pages were blocked."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BG",
+    "legalForm": "OOD",
+    "legalFormLocal": "Дружество с ограничена отговорност (ООД/ЕООД)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Articles of association (partnership agreement)",
+    "documentLocal": "Дружествен договор (за ЕООД: учредителен акт)",
+    "summary": "The constitution of an OOD is the дружествен договор (for a single-member ЕООД, the учредителен акт). It is filed with the Commercial Register and kept in the company's public electronic file, downloadable by anyone free of charge. It states the partners, capital and each partner's share, so it is the base constitutive document evidencing the constitution.",
+    "evidence": [
+      {
+        "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+        "quote": "particulars that are required by law to be registered and the documents that are required by law to be kept available for public inspection",
+        "note": "The дружествен договор is among the documents kept available for public inspection in the company file.",
+        "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+        "retrieved": "2026-07-20"
+      }
+    ],
+    "caveats": [
+      "Statutory basis (Art. 114/115 Търговски закон on the content and filing of the дружествен договор) not verified verbatim — INFERENCE; lex.bg blocked."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BG",
+    "legalForm": "AD",
+    "legalFormLocal": "Акционерно дружество (АД/ЕАД)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Register extract / current status certificate",
+    "documentLocal": "Удостоверение за актуално състояние (извлечение от Търговския регистър)",
+    "summary": "As for all Bulgarian traders, an AD has a public account in the free online Commercial Register from which a current status extract can be obtained. The extract evidences name, legal form, seat, object, capital, and the management/representation bodies (board of directors or management/supervisory boards). It is the base register document.",
+    "evidence": [
+      {
+        "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+        "quote": "The business register is accessible 24 hours a day at https://portal.registryagency.bg/en/. Anyone may search the business register and the non-profit legal entities register. Access to the registers' database is open to everyone free of charge.",
+        "note": "Same free public register applies to AD.",
+        "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+        "retrieved": "2026-07-20"
+      }
+    ],
+    "caveats": [
+      "Article numbers of the Търговски закон not verified verbatim — INFERENCE; source pages blocked."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BG",
+    "legalForm": "AD",
+    "legalFormLocal": "Акционерно дружество (АД/ЕАД)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Shareholders of an AD are NOT a registered particular. Ownership is recorded in the company's own book of shareholders (книга на акционерите) for registered shares, kept internally by the company and not public. The Commercial Register shows only the founders named in the constitutive act at incorporation and the share capital — not the current shareholder body. Consequently no register document evidences the current list of shareholders. (Exception: for a single-member ЕАД the sole owner of the capital is a registered particular.)",
+    "evidence": [
+      {
+        "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+        "quote": "basic information, stored in the form of structured data, about the name, legal form, head office and address of the company, its managing bodies, objects (if applicable), partners (if applicable), and shareholding capital (if applicable).",
+        "note": "For an AD the register lists 'shareholding capital' but not the shareholders — 'partners (if applicable)' applies to OOD, not AD shareholders.",
+        "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+        "retrieved": "2026-07-20"
+      }
+    ],
+    "caveats": [
+      "For a single-member ЕАД the sole shareholder IS registered, so for that sub-form the extract does evidence sole ownership — treat ЕАД separately.",
+      "Founders appear in the constitutive act/минути on file, but that evidences ownership only at incorporation, not the current shareholder list.",
+      "Book of shareholders (книга на акционерите, ~Art. 179 Търговски закон) is a private company record — statutory reference not verified verbatim; INFERENCE."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BG",
+    "legalForm": "AD",
+    "legalFormLocal": "Акционерно дружество (АД/ЕАД)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Statute / articles of association",
+    "documentLocal": "Устав",
+    "summary": "The constitution of an AD is the устав (statute). It is filed with the Commercial Register and kept in the company's public electronic file, downloadable free by anyone. It is the base constitutive document evidencing the constitution; it names the founders and the capital but does not establish the current shareholder body.",
+    "evidence": [
+      {
+        "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+        "quote": "particulars that are required by law to be registered and the documents that are required by law to be kept available for public inspection",
+        "note": "The устав is among the documents kept for public inspection in the AD's company file.",
+        "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+        "retrieved": "2026-07-20"
+      }
+    ],
+    "caveats": [
+      "Statutory basis (Art. 165/174 Търговски закон on the content and filing of the устав) not verified verbatim — INFERENCE; lex.bg blocked."
+    ],
+    "confidence": "high"
+  }
+]

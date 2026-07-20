@@ -1,0 +1,114 @@
+[
+  {
+    "jurisdiction": "HR",
+    "legalForm": "d.o.o.",
+    "legalFormLocal": "Društvo s ograničenom odgovornošću",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Court register extract (Sudski registar)",
+    "documentLocal": "Izvadak iz sudskog registra",
+    "summary": "The Sudski registar (court register, sudreg.pravosudje.hr) is free and public online. The certified extract (izvadak) is the base register document for any subjekt upisa, including a d.o.o., and shows firm, seat, OIB/MBS, share capital, management and members. Anyone may obtain it without proving legal interest.",
+    "evidence": [
+      {"basis": "Zakon o sudskom registru, čl. 2. t. 14 (definicija izvatka)", "quote": "ovjerena isprava koja se izdaje iz registra na propisan način, a sadrži upisane podatke o jednom subjektu upisa koji važe ili koji su važili...", "note": "Verbatim fragment as returned by the consolidated text; ellipsis is truncation.", "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru", "retrieved": "2026-07-20"},
+      {"basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost registra)", "quote": "Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava...", "note": "Confirms free public access to register data.", "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru", "retrieved": "2026-07-20"},
+      {"basis": "Sudski registar online", "quote": "", "note": "Free public search portal for all subjekti upisa.", "url": "https://sudreg.pravosudje.hr/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Register is free/public online; extract is issued certified (ovjereni izvadak) or as an uncertified printout."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HR",
+    "legalForm": "d.o.o.",
+    "legalFormLocal": "Društvo s ograničenom odgovornošću",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Court register extract – members section (Članovi društva)",
+    "documentLocal": "Izvadak iz sudskog registra – Članovi društva",
+    "summary": "Croatian company law (Austrian-derived) records the members of a d.o.o. as register data, so the izvadak shows a 'Članovi društva' section with each member and the nominal amount of their business share (temeljni ulog / poslovni udjel). The dedicated membership record is the knjiga poslovnih udjela, but under ZTD (čl. 410-411) that book is an INTERNAL company register kept by the uprava — inspected on the company's premises, not filed with the court register — so it is not itself obtainable from the registry. Because membership is legally determined by entry in that internal book, the register's member data can lag actual ownership.",
+    "evidence": [
+      {"basis": "ZTD, čl. 410-411 (knjiga poslovnih udjela; imatelj poslovnog udjela)", "quote": "Član društva je samo ona osoba koja je upisana u knjizi poslovnih udjela društva kao imatelj poslovnog udjela", "note": "Quote as reproduced by a secondary Croatian legal source (codex-sortium.hr); the knjiga poslovnih udjela is described as an internal register inspected during working hours, not filed with the public court register.", "url": "https://codex-sortium.hr/usluge/knjiga-poslovnih-udjela", "retrieved": "2026-07-20"},
+      {"basis": "ZTD (Zakon o trgovačkim društvima) – d.o.o. provisions", "quote": "", "note": "Full ZTD čl. 410 text could not be fetched verbatim (zakon.hr serves the whole act as one truncating page).", "url": "https://www.zakon.hr/z/546/Zakon-o-trgovackim-drustvima", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED: that the current izvadak still displays 'Članovi društva' with share amounts could not be confirmed verbatim (WebSearch budget exhausted; no live extract fetched). Grounded on the Austrian-model heritage of Croatian d.o.o. law where members are register data.",
+      "The authoritative membership record is the internal knjiga poslovnih udjela (ZTD čl. 410), which is NOT filed with the court register and is not publicly downloadable — so registry member data may be secondary/lagging.",
+      "If, contrary to the assessment, members are NOT shown on the izvadak, the correct status would be not_provable_from_registry (the internal book being the only membership record)."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "HR",
+    "legalForm": "d.o.o.",
+    "legalFormLocal": "Društvo s ograničenom odgovornošću",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum of association (or single-member declaration)",
+    "documentLocal": "Društveni ugovor (odnosno izjava o osnivanju za jednočlano društvo)",
+    "summary": "A d.o.o.'s constitution — the društveni ugovor (or, for a single-member company, the izjava o osnivanju) — is submitted to the registry court on incorporation and on each amendment. It is stored in the zbirka isprava (collection of documents) and is publicly accessible: anyone may inspect and obtain copies of documents in the collection without proving legal interest.",
+    "evidence": [
+      {"basis": "Zakon o sudskom registru, čl. 2. t. 3 (zbirka isprava)", "quote": "zbirka isprava je dio registra u koji se pohranjuju isprave dostavljene za upis podataka o subjektima upisa u glavnu knjigu, isprave dostavljene ili sastavljene u postupku upisa, odluke registarskog suda...", "note": "Founding acts submitted for registration are stored here.", "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru", "retrieved": "2026-07-20"},
+      {"basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost zbirke isprava)", "quote": "Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava...", "note": "Public right to inspect documents on which registration was based (i.e., the društveni ugovor).", "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Availability/format online (PDF via esudreg zbirka isprava) is the norm; not every legacy filing is digitised, so some older documents may require a court request."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HR",
+    "legalForm": "d.d.",
+    "legalFormLocal": "Dioničko društvo",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Court register extract (Sudski registar)",
+    "documentLocal": "Izvadak iz sudskog registra",
+    "summary": "As for any subjekt upisa, a d.d. has a certified extract (izvadak) from the free public Sudski registar showing firm, seat, OIB/MBS, share capital, share classes, and the management/supervisory board. Anyone may obtain it without proving legal interest.",
+    "evidence": [
+      {"basis": "Zakon o sudskom registru, čl. 2. t. 14 (definicija izvatka)", "quote": "ovjerena isprava koja se izdaje iz registra na propisan način, a sadrži upisane podatke o jednom subjektu upisa koji važe ili koji su važili...", "note": "Verbatim fragment; ellipsis is truncation.", "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru", "retrieved": "2026-07-20"},
+      {"basis": "Sudski registar online", "quote": "", "note": "Free public search portal.", "url": "https://sudreg.pravosudje.hr/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "The extract does not list shareholders for a d.d. (see GESELLSCHAFTERLISTE)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HR",
+    "legalForm": "d.d.",
+    "legalFormLocal": "Dioničko društvo",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Shares of a Croatian d.d. are dematerialised securities recorded in the central depository SKDD (Središnje klirinško depozitarno društvo); the register of shareholders (dionička knjiga) is derived from SKDD records, not from the court register. The Sudski registar records share capital and share classes but NOT the identity of shareholders, and the izvadak has no members section for a d.d. Therefore no document proving the current shareholders is obtainable from the court register.",
+    "evidence": [
+      {"basis": "ZTD – dionice as nematerijalizirani vrijednosni papiri; SKDD depository", "quote": "", "note": "Verbatim ZTD text not fetched (page truncation); the dematerialised-shares/SKDD regime and the absence of a shareholder field on the d.d. extract are the basis.", "url": "https://www.zakon.hr/z/546/Zakon-o-trgovackim-drustvima", "retrieved": "2026-07-20"},
+      {"basis": "Zakon o sudskom registru, čl. 4. st. 2 (what the register/zbirka contains)", "quote": "Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava...", "note": "Public access covers register data and the document collection — neither of which holds a d.d. shareholder list.", "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Shareholder identity for a d.d. sits with SKDD (and, for beneficial owners, the Registar stvarnih vlasnika / UBO register) — separate systems, not the court register.",
+      "A single-shareholder d.d. must notify the sole-shareholder fact for the register/zbirka, but that is a one-shareholder disclosure, not a general shareholder list."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "HR",
+    "legalForm": "d.d.",
+    "legalFormLocal": "Dioničko društvo",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Statute (articles of association)",
+    "documentLocal": "Statut",
+    "summary": "A d.d.'s constitution is the statut, adopted on formation and amended by the general assembly. It is submitted to the registry court on incorporation and on each amendment and stored in the zbirka isprava, which is publicly accessible without proof of legal interest.",
+    "evidence": [
+      {"basis": "Zakon o sudskom registru, čl. 2. t. 3 (zbirka isprava)", "quote": "zbirka isprava je dio registra u koji se pohranjuju isprave dostavljene za upis podataka o subjektima upisa u glavnu knjigu, isprave dostavljene ili sastavljene u postupku upisa, odluke registarskog suda...", "note": "The statut is among the isprave submitted for registration and stored here.", "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru", "retrieved": "2026-07-20"},
+      {"basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost zbirke isprava)", "quote": "Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava...", "note": "Public right to inspect the statut.", "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Older filings may not be fully digitised in the online zbirka isprava and may require a court request."
+    ],
+    "confidence": "high"
+  }
+]

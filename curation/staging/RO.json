@@ -1,0 +1,110 @@
+[
+  {
+    "jurisdiction": "RO",
+    "legalForm": "SRL",
+    "legalFormLocal": "Societate cu răspundere limitată",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract (Certificat constatator)",
+    "documentLocal": "certificat constatator",
+    "summary": "ONRC (Oficiul Național al Registrului Comerțului) issues the certificat constatator, the official register extract for any registered company. It is the direct equivalent of the Registerauszug and is available on request (online via portal.onrc.ro or in person). For an SRL it reflects the registered data including associates and their shareholding.",
+    "evidence": [
+      {"basis": "ONRC — public services list (certificate constatatoare; informații RC și copii certificate)", "quote": "", "note": "ONRC homepage lists 'Certificate constatatoare' and 'Informatii RC si copii certificate' as obtainable documents/services.", "url": "https://www.onrc.ro/index.php/ro/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "The exact enumerated content of the certificat constatator was not captured verbatim from an official ONRC schedule; its role as the register extract is well established but the field-by-field content is asserted from general ONRC practice (INFERENCE)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "RO",
+    "legalForm": "SRL",
+    "legalFormLocal": "Societate cu răspundere limitată",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract (Certificat constatator) listing associates and social shares",
+    "documentLocal": "certificat constatator (asociați și părți sociale)",
+    "summary": "For an SRL the associates (asociați) and the number/nominal value of the social shares (părți sociale) allotted to each are stated in the act constitutiv and are registered data at ONRC; transfers are recorded by mențiuni. The certificat constatator (the base register extract) therefore lists the current associates and their holdings, so a separate shareholder-list document is not needed. This mirrors the AT/CH GmbH pattern where the extract itself evidences the membership.",
+    "evidence": [
+      {"basis": "Legea 31/1990 (republicată), Art. 7 lit. d)", "quote": "capitalul social subscris, cu menționarea aportului fiecărui asociat, în numerar sau în natură, valoarea aportului în natură, modul evaluării acestuia; la societățile cu răspundere limitată se vor preciza numărul și valoarea nominală a părților sociale, precum și numărul părților sociale atribuite fiecărui asociat pentru aportul său", "note": "Associates and the number of social shares attributed to each are mandatory content of the act constitutiv, hence registered.", "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732", "retrieved": "2026-07-20"},
+      {"basis": "ONRC — certificat constatator / copii certificate", "quote": "", "note": "ONRC issues the certificat constatator which reflects the registered associates of an SRL; the act constitutiv is also available as a certified copy.", "url": "https://www.onrc.ro/index.php/ro/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "That the certificat constatator lists the current associates with their părți sociale is asserted from ONRC practice and Art. 7 lit. d); no verbatim ONRC field list was fetched (INFERENCE).",
+      "If a fully current holding breakdown is required, the certified copy of the latest act constitutiv / mențiuni may be needed as a supporting additional document."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "RO",
+    "legalForm": "SRL",
+    "legalFormLocal": "Societate cu răspundere limitată",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certified copy of the constitutive act (Act constitutiv)",
+    "documentLocal": "act constitutiv (copie certificată)",
+    "summary": "The constitution of an SRL is the act constitutiv, which is filed with ONRC on incorporation and forms part of the public trade-register file. It is obtainable as a certified copy ('copii certificate ale actelor') separately from the register extract, so it is proved by an additional document rather than by the extract itself.",
+    "evidence": [
+      {"basis": "Legea 31/1990 (republicată), Art. 7 (content of the act constitutiv for SRL)", "quote": "asociații care reprezintă și administrează societatea sau administratorii neasociați, datele lor de identificare, durata mandatului, puterile ce li s-au conferit și dacă ei urmează să le exercite împreună sau separat", "note": "Art. 7 lit. e) — illustrates the act constitutiv is the constitutional document of the SRL.", "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732", "retrieved": "2026-07-20"},
+      {"basis": "ONRC — 'Informatii RC si copii certificate'", "quote": "", "note": "ONRC provides certified copies of company acts, including the act constitutiv, from the register file.", "url": "https://www.onrc.ro/index.php/ro/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Whether the current consolidated act constitutiv (post-amendments) is delivered, versus only the original, depends on the ONRC request type (INFERENCE)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "RO",
+    "legalForm": "SA",
+    "legalFormLocal": "Societate pe acțiuni",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract (Certificat constatator)",
+    "documentLocal": "certificat constatator",
+    "summary": "As for any company, ONRC issues the certificat constatator for an SA — the register extract equivalent to the Registerauszug. It evidences the company's identification, capital, and administrators, but it does not contain the current shareholders (only the founders appear via the initial act constitutiv).",
+    "evidence": [
+      {"basis": "ONRC — public services list (certificate constatatoare)", "quote": "", "note": "Certificat constatator is issued for all registered companies, including SA.", "url": "https://www.onrc.ro/index.php/ro/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "The extract does not reflect current shareholders of an SA — see the GESELLSCHAFTERLISTE row."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "RO",
+    "legalForm": "SA",
+    "legalFormLocal": "Societate pe acțiuni",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For an SA the shareholders are not held at ONRC. The act constitutiv registered at ONRC records only the founders (fondatori) and the initial subscribed capital, not the evolving shareholder base. Current shareholders are held in the company's own share register (registrul acționarilor) kept by the company or, for nominative dematerialised shares, by an authorised registrar / central depository (depozitar central). No ONRC document evidences the current shareholders of an SA.",
+    "evidence": [
+      {"basis": "Legea 31/1990 (republicată), Art. 8 lit. d)", "quote": "capitalul social subscris și cel vărsat și, în cazul în care societatea are un capital autorizat, cuantumul acestuia", "note": "Art. 8 governs the act constitutiv of the SA — it captures founders and subscribed/paid capital, not an ongoing shareholder list.", "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732", "retrieved": "2026-07-20"},
+      {"basis": "Legea 31/1990 (republicată), Art. 177 — registrul acționarilor (register kept by the company / central depository)", "quote": "", "note": "The full text of Art. 177 could not be fetched verbatim from the truncated official page; it establishes the company-kept shareholders' register (registrul acționarilor) for nominative shares, held outside ONRC.", "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Art. 177 / registrul acționarilor could not be quoted verbatim (source page truncated) — the register's location outside ONRC is asserted from Legea 31/1990's scheme (UNVERIFIED verbatim, but well established).",
+      "The founders can be recovered from the certified copy of the SA's act constitutiv, but founders are not the current shareholders, so this does not satisfy a current shareholder list."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "RO",
+    "legalForm": "SA",
+    "legalFormLocal": "Societate pe acțiuni",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certified copy of the constitutive act (Act constitutiv / Statut)",
+    "documentLocal": "act constitutiv (statut) — copie certificată",
+    "summary": "The constitution of an SA is the act constitutiv (which may take the form of contract de societate and/or statut). It is filed with ONRC on incorporation and is part of the public register file, obtainable as a certified copy separately from the register extract — hence proved by an additional document.",
+    "evidence": [
+      {"basis": "Legea 31/1990 (republicată), Art. 8 (content of the act constitutiv for SA)", "quote": "capitalul social subscris și cel vărsat și, în cazul în care societatea are un capital autorizat, cuantumul acestuia", "note": "Art. 8 lit. d) — the act constitutiv is the constitutional document of the SA.", "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732", "retrieved": "2026-07-20"},
+      {"basis": "ONRC — 'Informatii RC si copii certificate'", "quote": "", "note": "ONRC provides certified copies of company acts, including the act constitutiv / statut of an SA.", "url": "https://www.onrc.ro/index.php/ro/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "For an SA the constitutive act may be split into contract de societate and statut; the certified copy request should cover both (INFERENCE)."
+    ],
+    "confidence": "high"
+  }
+]

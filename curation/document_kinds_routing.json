@@ -686,6 +686,197 @@
    ]
   },
   {
+   "jurisdiction": "BG",
+   "legalForm": "AD",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Registration number (if entity)",
+     "Role",
+     "Share count"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BG",
+   "legalForm": "OOD",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Удостоверение за актуално състояние — раздел „Съдружници\"",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Registration number (if entity)",
+     "Role",
+     "Share count"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BG",
+   "legalForm": "AD",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Устав",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BG",
+   "legalForm": "OOD",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Дружествен договор (за ЕООД: учредителен акт)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BG",
+   "legalForm": "AD",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Удостоверение за актуално състояние (извлечение от Търговския регистър)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BG",
+   "legalForm": "OOD",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Удостоверение за актуално състояние (извлечение от Търговския регистър)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1"
+    }
+   ]
+  },
+  {
    "jurisdiction": "BM",
    "legalForm": "Exempted company",
    "kind": "GESELLSCHAFTERLISTE",
@@ -2372,6 +2563,223 @@
    ]
   },
   {
+   "jurisdiction": "EE",
+   "legalForm": "AS",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Registration number (if entity)",
+     "Role",
+     "Share count",
+     "National Country ID"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Äriseadustik (Commercial Code) §233 — share register of a public limited company maintained by the Estonian register of securities",
+     "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide"
+    },
+    {
+     "basis": "Nasdaq CSD (Estonian register of securities / former Eesti Väärtpaberikeskus)",
+     "url": "https://nasdaqcsd.com/en"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "EE",
+   "legalForm": "OÜ",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Osanike nimekiri",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Registration number (if entity)",
+     "Role",
+     "Share count",
+     "National Country ID"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Äriseadustik (Commercial Code) §182 — list of shareholders of a private limited company (amended, in force 01.02.2023)",
+     "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide"
+    },
+    {
+     "basis": "e-Business Register (Äriregister)",
+     "url": "https://ariregister.rik.ee/eng"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "EE",
+   "legalForm": "AS",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Põhikiri",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Äriseadustik (Commercial Code) §244 — articles of association of a public limited company",
+     "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide"
+    },
+    {
+     "basis": "e-Business Register (Äriregister) — company documents / register file",
+     "url": "https://ariregister.rik.ee/eng"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "EE",
+   "legalForm": "OÜ",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Põhikiri",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Äriseadustik (Commercial Code) §139 — articles of association of a private limited company",
+     "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide"
+    },
+    {
+     "basis": "e-Business Register (Äriregister) — company documents / register file",
+     "url": "https://ariregister.rik.ee/eng"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "EE",
+   "legalForm": "AS",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Äriregistri väljavõte (B-kaart)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Äriseadustik (Commercial Code) register-entry provisions; e-Business Register",
+     "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide"
+    },
+    {
+     "basis": "e-Business Register (Äriregister)",
+     "url": "https://ariregister.rik.ee/eng"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "EE",
+   "legalForm": "OÜ",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Äriregistri väljavõte (B-kaart)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Äriseadustik (Commercial Code) §22 et seq. (register entries) and the e-Business Register",
+     "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide"
+    },
+    {
+     "basis": "e-Business Register (Äriregister), Centre of Registers and Information Systems (RIK)",
+     "url": "https://ariregister.rik.ee/eng"
+    }
+   ]
+  },
+  {
    "jurisdiction": "ES",
    "legalForm": "SA",
    "kind": "GESELLSCHAFTERLISTE",
@@ -3788,6 +4196,213 @@
    ]
   },
   {
+   "jurisdiction": "GR",
+   "legalForm": "AE",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Share count"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.4548/2018 (AE), art. 40",
+     "url": "https://www.taxheaven.gr/law/4548/2018"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GR",
+   "legalForm": "IKE",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Καταστατικό (κωδικοποιημένο) + ανακοινώσεις μεταβίβασης εταιρικών μεριδίων στο ΓΕΜΗ",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Share count"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.4072/2012 (IKE), art. 50",
+     "url": "https://www.taxheaven.gr/law/4072/2012"
+    },
+    {
+     "basis": "N.4072/2012 (IKE), art. 84",
+     "url": "https://www.taxheaven.gr/law/4072/2012"
+    },
+    {
+     "basis": "N.4072/2012 (IKE), art. 66",
+     "url": "https://www.taxheaven.gr/law/4072/2012"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GR",
+   "legalForm": "AE",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Καταστατικό / Κωδικοποιημένο Καταστατικό",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.4548/2018 (AE), art. 12",
+     "url": "https://www.taxheaven.gr/law/4548/2018"
+    },
+    {
+     "basis": "N.4919/2022 (GEMI), art. 17",
+     "url": "https://www.taxheaven.gr/law/4919/2022"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GR",
+   "legalForm": "IKE",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Καταστατικό / Κωδικοποιημένο Καταστατικό",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.4072/2012 (IKE), art. 50",
+     "url": "https://www.taxheaven.gr/law/4072/2012"
+    },
+    {
+     "basis": "N.4919/2022 (GEMI), art. 17",
+     "url": "https://www.taxheaven.gr/law/4919/2022"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GR",
+   "legalForm": "AE",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Γενικό Πιστοποιητικό ΓΕΜΗ (also Πιστοποιητικό Ισχύουσας Εκπροσώπησης)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.4548/2018 (AE), art. 12",
+     "url": "https://www.taxheaven.gr/law/4548/2018"
+    },
+    {
+     "basis": "N.4919/2022 (GEMI), art. 17",
+     "url": "https://www.taxheaven.gr/law/4919/2022"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "GR",
+   "legalForm": "IKE",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Γενικό Πιστοποιητικό ΓΕΜΗ (also Πιστοποιητικό Ισχύουσας Εκπροσώπησης for representation)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.4919/2022 (GEMI law)",
+     "url": "https://www.taxheaven.gr/law/4919/2022"
+    }
+   ]
+  },
+  {
    "jurisdiction": "HK",
    "legalForm": "Ltd",
    "kind": "GESELLSCHAFTERLISTE",
@@ -4006,6 +4621,444 @@
     {
      "basis": "Companies Registry official page 'How to obtain company information'",
      "url": "https://www.cr.gov.hk/en/services/obtain-company-info.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HR",
+   "legalForm": "d.d.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Registration number (if entity)",
+     "Role",
+     "Share count",
+     "Other Identifiers"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ZTD – dionice as nematerijalizirani vrijednosni papiri; SKDD depository",
+     "url": "https://www.zakon.hr/z/546/Zakon-o-trgovackim-drustvima"
+    },
+    {
+     "basis": "Zakon o sudskom registru, čl. 4. st. 2 (what the register/zbirka contains)",
+     "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HR",
+   "legalForm": "d.o.o.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Izvadak iz sudskog registra – Članovi društva",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Registration number (if entity)",
+     "Role",
+     "Share count",
+     "Other Identifiers"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ZTD, čl. 410-411 (knjiga poslovnih udjela; imatelj poslovnog udjela)",
+     "url": "https://codex-sortium.hr/usluge/knjiga-poslovnih-udjela"
+    },
+    {
+     "basis": "ZTD (Zakon o trgovačkim društvima) – d.o.o. provisions",
+     "url": "https://www.zakon.hr/z/546/Zakon-o-trgovackim-drustvima"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HR",
+   "legalForm": "d.d.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Statut",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Zakon o sudskom registru, čl. 2. t. 3 (zbirka isprava)",
+     "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru"
+    },
+    {
+     "basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost zbirke isprava)",
+     "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HR",
+   "legalForm": "d.o.o.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Društveni ugovor (odnosno izjava o osnivanju za jednočlano društvo)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Zakon o sudskom registru, čl. 2. t. 3 (zbirka isprava)",
+     "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru"
+    },
+    {
+     "basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost zbirke isprava)",
+     "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HR",
+   "legalForm": "d.d.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Izvadak iz sudskog registra",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Zakon o sudskom registru, čl. 2. t. 14 (definicija izvatka)",
+     "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru"
+    },
+    {
+     "basis": "Sudski registar online",
+     "url": "https://sudreg.pravosudje.hr/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HR",
+   "legalForm": "d.o.o.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Izvadak iz sudskog registra",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Zakon o sudskom registru, čl. 2. t. 14 (definicija izvatka)",
+     "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru"
+    },
+    {
+     "basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost registra)",
+     "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru"
+    },
+    {
+     "basis": "Sudski registar online",
+     "url": "https://sudreg.pravosudje.hr/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HU",
+   "legalForm": "Kft",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "cégkivonat",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Jurisdiction (if entity)",
+     "Birth Date (if individual)",
+     "Registration Number (if entity)",
+     "Share count",
+     "Other Identifiers"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ctv. 2006. évi V. törvény 27. § (3) a) — Kft member data recorded in the register",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv"
+    },
+    {
+     "basis": "Ptk. 2013. évi V. törvény 3:182 § — tagjegyzék (members' list) kept by the ügyvezető",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HU",
+   "legalForm": "Zrt",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Jurisdiction (if entity)",
+     "Birth Date (if individual)",
+     "Registration Number (if entity)",
+     "Share count",
+     "Other Identifiers"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ctv. 2006. évi V. törvény 27. § (4) b) bd) — sole shareholder of egyszemélyes rt recorded",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv"
+    },
+    {
+     "basis": "Ctv. 2006. évi V. törvény 27. § (4) b) bc) — shareholder recorded only above 50% voting rights",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv"
+    },
+    {
+     "basis": "Ptk. 2013. évi V. törvény 3:245–3:247 § — részvénykönyv (share register) kept by the company",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HU",
+   "legalForm": "Kft",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "társasági szerződés",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ctv. 2006. évi V. törvény 10. § (1) — cégiratok are fully public",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv"
+    },
+    {
+     "basis": "Ptk. 2013. évi V. törvény 3:159 § — Kft founded by társasági szerződés",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HU",
+   "legalForm": "Zrt",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "alapszabály",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ctv. 2006. évi V. törvény 10. § (1) — cégiratok are fully public",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv"
+    },
+    {
+     "basis": "Ptk. 2013. évi V. törvény 3:250 § — Rt founded by alapszabály",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HU",
+   "legalForm": "Kft",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "cégkivonat",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ctv. 2006. évi V. törvény 10. § (1) — publicity of register data and documents",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "HU",
+   "legalForm": "Zrt",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "cégkivonat",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ctv. 2006. évi V. törvény 10. § (1) — publicity of register data and documents",
+     "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv"
     }
    ]
   },
@@ -4700,6 +5753,212 @@
     {
      "basis": "MCA21 portal (mca.gov.in) — 'View Company/LLP Master Data' (free) vs 'View Public Documents' (paid)",
      "url": "https://www.mca.gov.in/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IS",
+   "legalForm": "ehf",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Share count",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act on Private Limited Companies No. 138/1994, art. 19 (hlutaskrá)",
+     "url": "https://www.althingi.is/lagas/nuna/1994138.html"
+    },
+    {
+     "basis": "Register of beneficial owners (raunverulegir eigendur), Skatturinn/Fyrirtækjaskrá",
+     "url": "https://www.skatturinn.is/fyrirtaekjaskra/raunverulegir-eigendur/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IS",
+   "legalForm": "hf",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Share count",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act on Public Limited Companies No. 2/1995, art. 30 (hlutaskrá)",
+     "url": "https://www.althingi.is/lagas/nuna/1995002.html"
+    },
+    {
+     "basis": "Register of beneficial owners (raunverulegir eigendur), Skatturinn/Fyrirtækjaskrá",
+     "url": "https://www.skatturinn.is/fyrirtaekjaskra/raunverulegir-eigendur/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IS",
+   "legalForm": "ehf",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Samþykktir",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act on Private Limited Companies No. 138/1994, art. 68 (amendment of articles)",
+     "url": "https://www.althingi.is/lagas/nuna/1994138.html"
+    },
+    {
+     "basis": "Fyrirtækjaskrá / Skatturinn certificates and documents page",
+     "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IS",
+   "legalForm": "hf",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Samþykktir",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act on Public Limited Companies No. 2/1995, arts. 9 and 42 (articles / amendment on registration)",
+     "url": "https://www.althingi.is/lagas/nuna/1995002.html"
+    },
+    {
+     "basis": "Fyrirtækjaskrá / Skatturinn certificates and documents page",
+     "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IS",
+   "legalForm": "ehf",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Vottorð úr fyrirtækjaskrá (firmavottorð)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Fyrirtækjaskrá / Skatturinn (register of enterprises) official page",
+     "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/"
+    },
+    {
+     "basis": "Act on Private Limited Companies No. 138/1994, art. 9 (registration)",
+     "url": "https://www.althingi.is/lagas/nuna/1994138.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "IS",
+   "legalForm": "hf",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Vottorð úr fyrirtækjaskrá (hlutafélagaskrárvottorð)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Fyrirtækjaskrá / Skatturinn certificates page",
+     "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/"
+    },
+    {
+     "basis": "Act on Public Limited Companies No. 2/1995, art. 14 (registration)",
+     "url": "https://www.althingi.is/lagas/nuna/1995002.html"
     }
    ]
   },
@@ -6429,6 +7688,205 @@
    ]
   },
   {
+   "jurisdiction": "LT",
+   "legalForm": "AB",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on registration of shares/shareholders in personal securities accounts; Law on Markets in Financial Instruments; Nasdaq CSD (central securities depository) rules",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LT",
+   "legalForm": "UAB",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Akcininkų (dalyvių) sąrašas — JADIS duomenys / vienintelio akcininko registravimas JAR",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": true,
+   "sources": [
+    {
+     "basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on the register of shareholders kept by the company and on the single-shareholder notification; Civil Code Art. 2.66 (sole participant registered in JAR)",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr"
+    },
+    {
+     "basis": "Registrų centras — JADIS, Information System of Participants of Legal Entities (Juridinių asmenų dalyvių informacinė sistema)",
+     "url": "https://www.registrucentras.lt/jadis/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LT",
+   "legalForm": "AB",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Įstatai (steigimo dokumentas)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Companies (Akcinių bendrovių įstatymas), Art. 4 (articles of association / įstatai filed with the register); Civil Code Art. 2.46",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr"
+    },
+    {
+     "basis": "Registrų centras — founding documents / articles of association available from JAR",
+     "url": "https://www.registrucentras.lt/jar/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LT",
+   "legalForm": "UAB",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Įstatai (steigimo dokumentas)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Companies (Akcinių bendrovių įstatymas), Art. 4 (articles of association / įstatai as the constituent document filed with the register); Civil Code Art. 2.46",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr"
+    },
+    {
+     "basis": "Registrų centras — founding documents / articles of association (steigimo dokumentai, įstatai) available from JAR",
+     "url": "https://www.registrucentras.lt/jar/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LT",
+   "legalForm": "AB",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Juridinių asmenų registro išrašas",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Civil Code Art. 2.66 and Regulations of the Register of Legal Entities (data and extracts for all registered legal entities incl. AB)",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.107687/asr"
+    },
+    {
+     "basis": "Registrų centras — Register of Legal Entities, extracts (išrašai)",
+     "url": "https://www.registrucentras.lt/jar/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LT",
+   "legalForm": "UAB",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Juridinių asmenų registro išrašas",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Civil Code of the Republic of Lithuania (Civilinis kodeksas), Art. 2.66 (data registered in the Register of Legal Entities) and Regulations of the Register of Legal Entities",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.107687/asr"
+    },
+    {
+     "basis": "Registrų centras — Register of Legal Entities, extracts (išrašai)",
+     "url": "https://www.registrucentras.lt/jar/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "LU",
    "legalForm": "SA",
    "kind": "GESELLSCHAFTERLISTE",
@@ -6504,6 +7962,221 @@
     {
      "basis": "Cession de parts — RCS/RESA publication",
      "url": "https://kolmio.lu/fr/actualites/entree-d-un-nouvel-associeactionnaire-quelles-sont-les-demarches"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LV",
+   "legalForm": "AS",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Birth Date",
+     "Registration number (if entity)",
+     "Sharecount",
+     "National Country ID",
+     "Identification Number"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice portal — Business registers in Latvia (open data list)",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1"
+    },
+    {
+     "basis": "Commercial Law (Komerclikums) — joint-stock company share/shareholder provisions (Sec. ~234–235) and Financial Instruments Market Law",
+     "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LV",
+   "legalForm": "SIA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Dalībnieku reģistrs",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Birth Date",
+     "Registration number (if entity)",
+     "Sharecount",
+     "National Country ID",
+     "Identification Number"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice portal — Business registers in Latvia (open data list)",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1"
+    },
+    {
+     "basis": "Commercial Law (Komerclikums), Section 10(2) — signatures required for Commercial Register filings",
+     "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LV",
+   "legalForm": "AS",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Statūti",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Law (Komerclikums), Section 9(2)",
+     "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law"
+    },
+    {
+     "basis": "EU e-Justice portal — Business registers in Latvia",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LV",
+   "legalForm": "SIA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Statūti",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Law (Komerclikums), Section 9(2)",
+     "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law"
+    },
+    {
+     "basis": "EU e-Justice portal — Business registers in Latvia",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LV",
+   "legalForm": "AS",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Izziņa no Uzņēmumu reģistra",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Enterprise Register (ur.gov.lv) / EU e-Justice portal",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "LV",
+   "legalForm": "SIA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Izziņa no Uzņēmumu reģistra",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "EU e-Justice portal — Business registers in Latvia",
+     "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1"
+    },
+    {
+     "basis": "Enterprise Register (ur.gov.lv) — official site",
+     "url": "https://www.ur.gov.lv/en/"
     }
    ]
   },
@@ -8669,6 +10342,213 @@
    ]
   },
   {
+   "jurisdiction": "RO",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Nationality",
+     "Birth Date",
+     "Sharecount"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Legea 31/1990 (republicată), Art. 8 lit. d)",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732"
+    },
+    {
+     "basis": "Legea 31/1990 (republicată), Art. 177 — registrul acționarilor (register kept by the company / central depository)",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "RO",
+   "legalForm": "SRL",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "certificat constatator (asociați și părți sociale)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Nationality",
+     "Birth Date",
+     "Sharecount"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Legea 31/1990 (republicată), Art. 7 lit. d)",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732"
+    },
+    {
+     "basis": "ONRC — certificat constatator / copii certificate",
+     "url": "https://www.onrc.ro/index.php/ro/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "RO",
+   "legalForm": "SA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "act constitutiv (statut) — copie certificată",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Legea 31/1990 (republicată), Art. 8 (content of the act constitutiv for SA)",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732"
+    },
+    {
+     "basis": "ONRC — 'Informatii RC si copii certificate'",
+     "url": "https://www.onrc.ro/index.php/ro/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "RO",
+   "legalForm": "SRL",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "act constitutiv (copie certificată)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Legea 31/1990 (republicată), Art. 7 (content of the act constitutiv for SRL)",
+     "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732"
+    },
+    {
+     "basis": "ONRC — 'Informatii RC si copii certificate'",
+     "url": "https://www.onrc.ro/index.php/ro/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "RO",
+   "legalForm": "SA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "certificat constatator",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ONRC — public services list (certificate constatatoare)",
+     "url": "https://www.onrc.ro/index.php/ro/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "RO",
+   "legalForm": "SRL",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "certificat constatator",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ONRC — public services list (certificate constatatoare; informații RC și copii certificate)",
+     "url": "https://www.onrc.ro/index.php/ro/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "SC",
    "legalForm": "CSL",
    "kind": "GESELLSCHAFTERLISTE",
@@ -9454,6 +11334,416 @@
     {
      "basis": "ACRA official page — Types of ACRA information products",
      "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SI",
+   "legalForm": "d.d.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Share count",
+     "Registration Number (if entity)",
+     "Tax Identification Number",
+     "Passport Number",
+     "Appointed On"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ZGD-1 — d.d. shares; dematerialised securities held in the central register maintained by KDD; court register records founders only",
+     "url": "https://www.kdd.si/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SI",
+   "legalForm": "d.o.o.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Družbeniki (navedeni v izpisku iz sodnega registra)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Share count",
+     "Registration Number (if entity)",
+     "Tax Identification Number",
+     "Passport Number",
+     "Appointed On"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ZGD-1 (Companies Act) — d.o.o. members and their business shares are registered facts; changes require entry in the court register",
+     "url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO4291"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SI",
+   "legalForm": "d.d.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Statut",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ZGD-1 — d.d. is governed by its statut; ZSReg — collection of documents (zbirka listin) is public",
+     "url": "https://www.ajpes.si/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SI",
+   "legalForm": "d.o.o.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Družbena pogodba (oz. akt o ustanovitvi za enoosebno d.o.o.)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ZGD-1 — d.o.o. is founded by družbena pogodba / akt o ustanovitvi; ZSReg — collection of documents (zbirka listin) is public",
+     "url": "https://www.ajpes.si/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SI",
+   "legalForm": "d.d.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Izpisek iz sodnega registra (redni izpis)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ZSReg — public court register and free extract; AJPES e-Sodni register",
+     "url": "https://www.ajpes.si/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SI",
+   "legalForm": "d.o.o.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Izpisek iz sodnega registra (redni izpis)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "ZSReg (Zakon o sodnem registru) — public court register and free extract; AJPES e-Sodni register",
+     "url": "https://www.ajpes.si/"
+    },
+    {
+     "basis": "AJPES homepage description of PRS",
+     "url": "https://www.ajpes.si/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SK",
+   "legalForm": "a.s.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Share count"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Obchodný zákonník 513/1991, § 156 — evidence of registered shares (register of holders kept by the securities depository / list of shareholders kept by the company); Act 566/2001 on Securities, on CDCP registers",
+     "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/"
+    },
+    {
+     "basis": "Centrálny depozitár cenných papierov SR (CDCP)",
+     "url": "https://www.cdcp.sk"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SK",
+   "legalForm": "s.r.o.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Výpis z obchodného registra",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Share count"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act 530/2003 Coll., § 2 — for a s.r.o. the register records each spoločník together with výška vkladu and rozsah jeho splatenia; Obchodný zákonník 513/1991, § 105–106",
+     "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SK",
+   "legalForm": "a.s.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Zakladateľská zmluva / zakladateľská listina a stanovy",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act 530/2003 Coll., § 3 — zbierka listín (founding instrument and stanovy and their úplné znenie); Obchodný zákonník 513/1991, § 162–163 (zakladateľská zmluva/listina, stanovy)",
+     "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/"
+    },
+    {
+     "basis": "Obchodný register SR — zbierka listín access",
+     "url": "https://www.orsr.sk"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SK",
+   "legalForm": "s.r.o.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Spoločenská zmluva (alebo zakladateľská listina, ak je jediný spoločník)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act 530/2003 Coll., § 3 — zbierka listín contents (spoločenská zmluva / zakladateľská listina and their úplné znenie); Obchodný zákonník 513/1991, § 110",
+     "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/"
+    },
+    {
+     "basis": "Obchodný register SR — zbierka listín access",
+     "url": "https://www.orsr.sk"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SK",
+   "legalForm": "a.s.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Výpis z obchodného registra",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act 530/2003 Coll., § 2 and § 11; Obchodný zákonník 513/1991, § 154 et seq.",
+     "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/"
+    },
+    {
+     "basis": "Obchodný register SR public portal",
+     "url": "https://www.ru.justice.sk"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SK",
+   "legalForm": "s.r.o.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Výpis z obchodného registra",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Act 530/2003 Coll. on the Commercial Register (Zákon o obchodnom registri), § 2 (recorded data) and § 11 (extract)",
+     "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/"
+    },
+    {
+     "basis": "Obchodný register SR public portal",
+     "url": "https://www.orsr.sk"
     }
    ]
   },

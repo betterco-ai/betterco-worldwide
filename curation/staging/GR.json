@@ -1,0 +1,116 @@
+[
+  {
+    "jurisdiction": "GR",
+    "legalForm": "IKE",
+    "legalFormLocal": "Ιδιωτική Κεφαλαιουχική Εταιρεία (IKE)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "GEMI General Certificate",
+    "documentLocal": "Γενικό Πιστοποιητικό ΓΕΜΗ (also Πιστοποιητικό Ισχύουσας Εκπροσώπησης for representation)",
+    "summary": "The General Commercial Registry (ΓΕΜΗ/GEMI) is the constitutive public register for the IKE under L.4919/2022. It issues a general certificate that functions as the register extract, evidencing the company's identity, seat, capital, managers/representation and registered acts. This is the base register document for an IKE.",
+    "evidence": [
+      {"basis": "N.4919/2022 (GEMI law)", "quote": "Εμπορική δημοσιότητα στο ΓΕ.ΜΗ.", "note": "Article 17 title (verbatim, retrieved from TOC); full text paywalled. Art. 46 'Πρόσβαση στα στοιχεία του Γ.Ε.ΜΗ.' governs access to the register data.", "url": "https://www.taxheaven.gr/law/4919/2022", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Exact certificate label varies: 'Γενικό Πιστοποιητικό' (history of acts) vs 'Πιστοποιητικό Ισχύουσας Εκπροσώπησης' (current representation) vs 'Αναλυτικό Πιστοποιητικό'. INFERENCE from GEMI practice; the precise catalogue article of L.4919/2022 (certificates/copies) was not fetched verbatim.",
+      "Verbatim statutory text was behind paywalls; only article titles were retrieved."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "GR",
+    "legalForm": "IKE",
+    "legalFormLocal": "Ιδιωτική Κεφαλαιουχική Εταιρεία (IKE)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association plus registered share-transfer announcements",
+    "documentLocal": "Καταστατικό (κωδικοποιημένο) + ανακοινώσεις μεταβίβασης εταιρικών μεριδίων στο ΓΕΜΗ",
+    "summary": "For an IKE the partners (εταίροι) and their shares (εταιρικά μερίδια) are provable from GEMI: the founding partners and their contributions are stated in the καταστατικό (N.4072/2012 art. 50), and every inter-vivos transfer of a share must be registered/published in GEMI (art. 84). Current holdings are therefore reconstructed from the codified articles plus the registered transfer announcements — an additional document set beyond the plain register extract. The company additionally keeps an internal βιβλίο εταίρων (art. 66), but that book is not the GEMI-sourced proof.",
+    "evidence": [
+      {"basis": "N.4072/2012 (IKE), art. 50", "quote": "Περιεχόμενο του καταστατικού", "note": "Article 50 title (verbatim); the καταστατικό states founding partners and their μερίδια. Full text not fetched.", "url": "https://www.taxheaven.gr/law/4072/2012", "retrieved": "2026-07-20"},
+      {"basis": "N.4072/2012 (IKE), art. 84", "quote": "Μεταβίβαση εν ζωή", "note": "Article 84 title (verbatim); inter-vivos transfer of an IKE share is subject to GEMI publicity, so partner changes are on the public register. Full sentence not fetched verbatim.", "url": "https://www.taxheaven.gr/law/4072/2012", "retrieved": "2026-07-20"},
+      {"basis": "N.4072/2012 (IKE), art. 66", "quote": "Τήρηση βιβλίων", "note": "Article 66 title (verbatim); the company keeps a register of partners (βιβλίο εταίρων) internally — not the registry proof.", "url": "https://www.taxheaven.gr/law/4072/2012", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "There is no single German-style standalone 'Gesellschafterliste' document at GEMI for an IKE; the current member list is assembled from the codified καταστατικό and registered transfer announcements. Classified as additional (not base) document.",
+      "That GEMI transfer publicity is constitutive/effective vis-à-vis third parties for IKE shares is INFERENCE from art. 84 title; the operative sentence was not fetched verbatim (paywalled). UNVERIFIED at quote level.",
+      "The internal βιβλίο εταίρων (art. 66) is not obtainable from the registry."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "GR",
+    "legalForm": "IKE",
+    "legalFormLocal": "Ιδιωτική Κεφαλαιουχική Εταιρεία (IKE)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of Association (codified)",
+    "documentLocal": "Καταστατικό / Κωδικοποιημένο Καταστατικό",
+    "summary": "The IKE's constitution (καταστατικό) is filed with and published by GEMI and is retrievable as a distinct document (the codified/current articles), separate from the register-extract certificate. Its required content is set by N.4072/2012 art. 50. Provable from the registry via this additional document.",
+    "evidence": [
+      {"basis": "N.4072/2012 (IKE), art. 50", "quote": "Περιεχόμενο του καταστατικού", "note": "Article 50 title (verbatim). Full text not fetched.", "url": "https://www.taxheaven.gr/law/4072/2012", "retrieved": "2026-07-20"},
+      {"basis": "N.4919/2022 (GEMI), art. 17", "quote": "Εμπορική δημοσιότητα στο ΓΕ.ΜΗ.", "note": "GEMI commercial publicity covers the καταστατικό and its amendments; downloadable copy.", "url": "https://www.taxheaven.gr/law/4919/2022", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Treated as an 'additional document' because it is a distinct downloadable filing, not the register-extract certificate itself.",
+      "Availability of a fully codified καταστατικό vs. only the successive amendment filings varies by how the company has maintained its GEMI file. Verbatim article text not fetched (paywalled)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "GR",
+    "legalForm": "AE",
+    "legalFormLocal": "Ανώνυμη Εταιρεία (AE)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "GEMI General Certificate",
+    "documentLocal": "Γενικό Πιστοποιητικό ΓΕΜΗ (also Πιστοποιητικό Ισχύουσας Εκπροσώπησης)",
+    "summary": "GEMI is the constitutive public register for the AE (L.4919/2022; L.4548/2018 art. 12 lists the acts/data subject to GEMI publicity). Its general certificate is the register extract evidencing identity, seat, capital, board/representation and registered acts — the base register document for an AE.",
+    "evidence": [
+      {"basis": "N.4548/2018 (AE), art. 12", "quote": "Πράξεις και στοιχεία που υποβάλλονται σε δημοσιότητα στο Γ.Ε.ΜΗ.", "note": "Article 12 title (verbatim); enumerates what an AE files with GEMI. Full text not fetched.", "url": "https://www.taxheaven.gr/law/4548/2018", "retrieved": "2026-07-20"},
+      {"basis": "N.4919/2022 (GEMI), art. 17", "quote": "Εμπορική δημοσιότητα στο ΓΕ.ΜΗ.", "note": "GEMI publicity/certificate regime.", "url": "https://www.taxheaven.gr/law/4919/2022", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Certificate label precision (Γενικό vs Ισχύουσας Εκπροσώπησης vs Αναλυτικό) is INFERENCE from GEMI practice; the certificate-catalogue article of L.4919/2022 was not fetched verbatim.",
+      "Verbatim statutory text was paywalled; only article titles retrieved."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "GR",
+    "legalForm": "AE",
+    "legalFormLocal": "Ανώνυμη Εταιρεία (AE)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "An AE's shareholders are NOT held at GEMI. For registered shares the company itself keeps the book of shareholders (βιβλίο μετόχων) under N.4548/2018 art. 40; for listed companies holdings are dematerialised in the central securities depository (ΣΑΤ/ΕΛΚΑΤ), not GEMI. GEMI's public file shows only the founders (ιδρυτές) named in the original καταστατικό at incorporation, not the current shareholder body. Therefore a current shareholder list is not provable from the registry.",
+    "evidence": [
+      {"basis": "N.4548/2018 (AE), art. 40", "quote": "Ονομαστικές μετοχές – Μετοχικοί τίτλοι", "note": "Article 40 title (verbatim); registered shares are recorded in the company-kept βιβλίο μετόχων, not in GEMI. Full text not fetched.", "url": "https://www.taxheaven.gr/law/4548/2018", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Only the founders and their initial subscription in the original καταστατικό are public (historical, incorporation-only) — this is not a current shareholder list.",
+      "Bearer shares were abolished; all AE shares are now registered (ονομαστικές), but the register of them is private (company book) or in the CSD for listed AEs. That the βιβλίο μετόχων is company-kept and not GEMI-filed is well established but the operative sentence of art. 40 was not fetched verbatim (paywalled) — UNVERIFIED at quote level."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "GR",
+    "legalForm": "AE",
+    "legalFormLocal": "Ανώνυμη Εταιρεία (AE)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of Association (codified)",
+    "documentLocal": "Καταστατικό / Κωδικοποιημένο Καταστατικό",
+    "summary": "The AE's constitution (καταστατικό) is filed with and published by GEMI (N.4548/2018 art. 12 lists it among acts subject to publicity) and is retrievable as a distinct codified document separate from the register-extract certificate. Provable from the registry via this additional document.",
+    "evidence": [
+      {"basis": "N.4548/2018 (AE), art. 12", "quote": "Πράξεις και στοιχεία που υποβάλλονται σε δημοσιότητα στο Γ.Ε.ΜΗ.", "note": "Article 12 title (verbatim); the καταστατικό and its amendments are subject to GEMI publicity. Full text not fetched.", "url": "https://www.taxheaven.gr/law/4548/2018", "retrieved": "2026-07-20"},
+      {"basis": "N.4919/2022 (GEMI), art. 17", "quote": "Εμπορική δημοσιότητα στο ΓΕ.ΜΗ.", "note": "GEMI commercial publicity; downloadable copy of the articles.", "url": "https://www.taxheaven.gr/law/4919/2022", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Treated as an 'additional document' (a distinct downloadable filing), not the register-extract certificate itself.",
+      "Whether a single fully-codified καταστατικό is on file vs. only the original plus amendment announcements depends on the company's GEMI maintenance. Verbatim article text not fetched (paywalled)."
+    ],
+    "confidence": "high"
+  }
+]

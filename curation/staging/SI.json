@@ -1,0 +1,111 @@
+[
+  {
+    "jurisdiction": "SI",
+    "legalForm": "d.o.o.",
+    "legalFormLocal": "Družba z omejeno odgovornostjo",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Court register extract",
+    "documentLocal": "Izpisek iz sodnega registra (redni izpis)",
+    "summary": "The Slovenian court register (sodni register), operated by AJPES via the e-Sodni register, issues a public register extract (izpisek) for every registered company. For a d.o.o. this extract is the base register document evidencing legal existence, seat, business activity, share capital, representatives and members. It is freely retrievable online.",
+    "evidence": [
+      {"basis": "ZSReg (Zakon o sodnem registru) — public court register and free extract; AJPES e-Sodni register", "quote": "", "note": "Extract (izpisek) is the standard public base document; article text not fetched verbatim (sources are JS SPAs).", "url": "https://www.ajpes.si/", "retrieved": "2026-07-20"},
+      {"basis": "AJPES homepage description of PRS", "quote": "", "note": "Confirmed live: PRS is a 'public database of all business entities with headquarters in the Republic of Slovenia.'", "url": "https://www.ajpes.si/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statutory text (ZSReg) could not be fetched; primary sites are SPAs and web-search budget was exhausted.",
+      "INFERENCE: the register extract being the free public base document is standard EU/AJPES practice and consistent with prior jurisdiction findings."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SI",
+    "legalForm": "d.o.o.",
+    "legalFormLocal": "Družba z omejeno odgovornostjo",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Members shown within the court register extract",
+    "documentLocal": "Družbeniki (navedeni v izpisku iz sodnega registra)",
+    "summary": "Slovenia is distinctive: the members (družbeniki) of a d.o.o. are entered directly into the public court register together with their business shares (poslovni delež), and changes of membership must be registered. The register extract therefore itself evidences the current members, so no separate shareholder-list document is required. The identity of members is public.",
+    "evidence": [
+      {"basis": "ZGD-1 (Companies Act) — d.o.o. members and their business shares are registered facts; changes require entry in the court register", "quote": "", "note": "Article numbers (registration of d.o.o. and of transfers of business shares) not verified verbatim; membership is a registered, public datum shown on the extract.", "url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO4291", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "The proof is the register extract itself (same base document as REGISTERAUSZUG); there is no distinct filed 'seznam družbenikov' needed for d.o.o.",
+      "INFERENCE/UNVERIFIED verbatim: members-in-register is a well-established feature of Slovenian d.o.o. law but exact ZGD-1 article text was not fetched.",
+      "The registered members reflect the register; beneficial/indirect ownership is not shown."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SI",
+    "legalForm": "d.o.o.",
+    "legalFormLocal": "Družba z omejeno odgovornostjo",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of association / act of establishment",
+    "documentLocal": "Družbena pogodba (oz. akt o ustanovitvi za enoosebno d.o.o.)",
+    "summary": "The constitutive document of a d.o.o. — the družbena pogodba (multi-member) or akt o ustanovitvi (single-member) — is filed with the court register and kept in the public collection of documents (zbirka listin). It is a separate document from the register extract but is publicly accessible, generally downloadable free of charge through the e-Sodni register. It is therefore proved by an additional registry document.",
+    "evidence": [
+      {"basis": "ZGD-1 — d.o.o. is founded by družbena pogodba / akt o ustanovitvi; ZSReg — collection of documents (zbirka listin) is public", "quote": "", "note": "Constitution is filed at incorporation and on amendment; public via zbirka listin. Verbatim text not fetched.", "url": "https://www.ajpes.si/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED verbatim: public availability of the constitution via the court register's collection of documents is standard but statutory text not fetched.",
+      "The filed constitution may be an older amended version; it need not reflect the very latest consolidated text."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "SI",
+    "legalForm": "d.d.",
+    "legalFormLocal": "Delniška družba",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Court register extract",
+    "documentLocal": "Izpisek iz sodnega registra (redni izpis)",
+    "summary": "As for a d.o.o., a d.d. has a public court register extract (izpisek) issued by AJPES via the e-Sodni register. It is the base document evidencing existence, seat, activity, share capital, management/supervisory bodies and representatives, and is freely retrievable online.",
+    "evidence": [
+      {"basis": "ZSReg — public court register and free extract; AJPES e-Sodni register", "quote": "", "note": "Standard public base document; verbatim text not fetched.", "url": "https://www.ajpes.si/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "Verbatim statutory text not fetched (SPA sources, search budget exhausted)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SI",
+    "legalForm": "d.d.",
+    "legalFormLocal": "Delniška družba",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a d.d., current shareholders are not held in the court register. Shares are dematerialised and the share register (delniška knjiga) is maintained centrally by KDD (Centralna klirinško depotna družba), which is not publicly open. The court register and the founding documents show only the founders (ustanovitelji) at incorporation, which do not evidence current ownership. No registry document proves the current shareholder list.",
+    "evidence": [
+      {"basis": "ZGD-1 — d.d. shares; dematerialised securities held in the central register maintained by KDD; court register records founders only", "quote": "", "note": "KDD central register is not a public source of a shareholder list; only founders appear at incorporation.", "url": "https://www.kdd.si/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED verbatim: KDD-held share register and founders-only court register are established features of Slovenian d.d. law; article text not fetched.",
+      "Founders listed at incorporation are typically stale and do not prove current shareholders."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SI",
+    "legalForm": "d.d.",
+    "legalFormLocal": "Delniška družba",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Statute (articles of association)",
+    "documentLocal": "Statut",
+    "summary": "The constitution of a d.d. is the statut (statute). It is filed with the court register on incorporation and on amendment and is kept in the public collection of documents (zbirka listin), generally downloadable free through the e-Sodni register. It is a separate registry document from the extract and therefore proved by an additional document.",
+    "evidence": [
+      {"basis": "ZGD-1 — d.d. is governed by its statut; ZSReg — collection of documents (zbirka listin) is public", "quote": "", "note": "Statute filed and public via zbirka listin; verbatim text not fetched.", "url": "https://www.ajpes.si/", "retrieved": "2026-07-20"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED verbatim: public availability of the statut via the court register's collection of documents is standard but statutory text not fetched.",
+      "The filed statute may lag the latest consolidated amendments."
+    ],
+    "confidence": "medium"
+  }
+]

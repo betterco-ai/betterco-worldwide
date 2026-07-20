@@ -542,6 +542,147 @@
   "confidence": "high"
  },
  {
+  "jurisdiction": "BG",
+  "legalForm": "AD",
+  "legalFormLocal": "Акционерно дружество (АД/ЕАД)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "Shareholders of an AD are NOT a registered particular. Ownership is recorded in the company's own book of shareholders (книга на акционерите) for registered shares, kept internally by the company and not public. The Commercial Register shows only the founders named in the constitutive act at incorporation and the share capital — not the current shareholder body. Consequently no register document evidences the current list of shareholders. (Exception: for a single-member ЕАД the sole owner of the capital is a registered particular.)",
+  "evidence": [
+   {
+    "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+    "quote": "basic information, stored in the form of structured data, about the name, legal form, head office and address of the company, its managing bodies, objects (if applicable), partners (if applicable), and shareholding capital (if applicable).",
+    "note": "For an AD the register lists 'shareholding capital' but not the shareholders — 'partners (if applicable)' applies to OOD, not AD shareholders.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "For a single-member ЕАД the sole shareholder IS registered, so for that sub-form the extract does evidence sole ownership — treat ЕАД separately.",
+   "Founders appear in the constitutive act/минути on file, but that evidences ownership only at incorporation, not the current shareholder list.",
+   "Book of shareholders (книга на акционерите, ~Art. 179 Търговски закон) is a private company record — statutory reference not verified verbatim; INFERENCE."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "BG",
+  "legalForm": "OOD",
+  "legalFormLocal": "Дружество с ограничена отговорност (ООД/ЕООД)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": "Commercial Register extract (partners / съдружници field)",
+  "documentLocal": "Удостоверение за актуално състояние — раздел „Съдружници\"",
+  "summary": "For an OOD the partners (съдружници) are a registered particular published in the Commercial Register, and every transfer of a company share is itself entered in the register. The current register extract therefore lists the current members and their participations, so the base register document evidences the equivalent of a shareholder/member list. This is a genuine registered particular, not merely a snapshot of founders — unlike an AD.",
+  "evidence": [
+   {
+    "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+    "quote": "basic information, stored in the form of structured data, about the name, legal form, head office and address of the company, its managing bodies, objects (if applicable), partners (if applicable), and shareholding capital (if applicable).",
+    "note": "The register expressly holds 'partners (if applicable)' — applicable to OOD partners (съдружници). For AD it lists only shareholding capital, not shareholders.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "The 'list' is proved via the register extract's partners field plus the дружествен договор, not a standalone 'Gesellschafterliste' document as in Germany.",
+   "Underlying statutory basis (Art. 119(2) and Art. 129/140 Търговски закон requiring entry of partners and registration of share transfers) not verified verbatim — INFERENCE; source pages were blocked."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "BG",
+  "legalForm": "AD",
+  "legalFormLocal": "Акционерно дружество (АД/ЕАД)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Statute / articles of association",
+  "documentLocal": "Устав",
+  "summary": "The constitution of an AD is the устав (statute). It is filed with the Commercial Register and kept in the company's public electronic file, downloadable free by anyone. It is the base constitutive document evidencing the constitution; it names the founders and the capital but does not establish the current shareholder body.",
+  "evidence": [
+   {
+    "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+    "quote": "particulars that are required by law to be registered and the documents that are required by law to be kept available for public inspection",
+    "note": "The устав is among the documents kept for public inspection in the AD's company file.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Statutory basis (Art. 165/174 Търговски закон on the content and filing of the устав) not verified verbatim — INFERENCE; lex.bg blocked."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "BG",
+  "legalForm": "OOD",
+  "legalFormLocal": "Дружество с ограничена отговорност (ООД/ЕООД)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Articles of association (partnership agreement)",
+  "documentLocal": "Дружествен договор (за ЕООД: учредителен акт)",
+  "summary": "The constitution of an OOD is the дружествен договор (for a single-member ЕООД, the учредителен акт). It is filed with the Commercial Register and kept in the company's public electronic file, downloadable by anyone free of charge. It states the partners, capital and each partner's share, so it is the base constitutive document evidencing the constitution.",
+  "evidence": [
+   {
+    "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+    "quote": "particulars that are required by law to be registered and the documents that are required by law to be kept available for public inspection",
+    "note": "The дружествен договор is among the documents kept available for public inspection in the company file.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Statutory basis (Art. 114/115 Търговски закон on the content and filing of the дружествен договор) not verified verbatim — INFERENCE; lex.bg blocked."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "BG",
+  "legalForm": "AD",
+  "legalFormLocal": "Акционерно дружество (АД/ЕАД)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Commercial Register extract / current status certificate",
+  "documentLocal": "Удостоверение за актуално състояние (извлечение от Търговския регистър)",
+  "summary": "As for all Bulgarian traders, an AD has a public account in the free online Commercial Register from which a current status extract can be obtained. The extract evidences name, legal form, seat, object, capital, and the management/representation bodies (board of directors or management/supervisory boards). It is the base register document.",
+  "evidence": [
+   {
+    "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+    "quote": "The business register is accessible 24 hours a day at https://portal.registryagency.bg/en/. Anyone may search the business register and the non-profit legal entities register. Access to the registers' database is open to everyone free of charge.",
+    "note": "Same free public register applies to AD.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Article numbers of the Търговски закон not verified verbatim — INFERENCE; source pages blocked."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "BG",
+  "legalForm": "OOD",
+  "legalFormLocal": "Дружество с ограничена отговорност (ООД/ЕООД)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Commercial Register extract / current status certificate",
+  "documentLocal": "Удостоверение за актуално състояние (извлечение от Търговския регистър)",
+  "summary": "The Bulgarian Commercial Register (Търговски регистър, Registry Agency) is a free, public, online register from which anyone can obtain a company extract / current status certificate. For an OOD this extract is the base register document evidencing the registered particulars: name, legal form, seat, object, capital, managers and partners. It is generated directly from the register account and requires no additional filing.",
+  "evidence": [
+   {
+    "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
+    "quote": "The business register is accessible 24 hours a day at https://portal.registryagency.bg/en/. Anyone may search the business register and the non-profit legal entities register. Access to the registers' database is open to everyone free of charge.",
+    "note": "Confirms free, public online access and that the register issues extracts.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Article numbers of the Търговски закон (Commercial Act) not independently verified verbatim; lex.bg and registryagency.bg PDFs returned HTTP 403/302 and could not be fetched — INFERENCE from established Bulgarian company law."
+  ],
+  "confidence": "high"
+ },
+ {
   "jurisdiction": "BM",
   "legalForm": "Exempted company",
   "legalFormLocal": "Exempted company limited by shares",
@@ -1938,6 +2079,180 @@
   "confidence": "high"
  },
  {
+  "jurisdiction": "EE",
+  "legalForm": "AS",
+  "legalFormLocal": "Aktsiaselts",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "The shareholders of an Estonian AS are not held in the commercial register. The share register (aktsiaraamat) of a public limited company is maintained in the Estonian register of securities operated by Nasdaq CSD (the former EVK); registration of AS shares in that securities register is mandatory. The commercial register / e-Business Register therefore cannot evidence the AS shareholders — that data sits in a separate securities register, access to which is restricted and not obtained as an ordinary open register extract.",
+  "evidence": [
+   {
+    "basis": "Äriseadustik (Commercial Code) §233 — share register of a public limited company maintained by the Estonian register of securities",
+    "note": "Verbatim not extracted (JS-rendered source). §§233-234 place the AS aktsiaraamat with the register of securities.",
+    "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Nasdaq CSD (Estonian register of securities / former Eesti Väärtpaberikeskus)",
+    "note": "Nasdaq CSD maintains the Estonian securities register in which AS shares are registered; issuer-services pages returned 404 on fetch, cited at domain level.",
+    "url": "https://nasdaqcsd.com/en",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Not provable from the COMMERCIAL register; the authoritative source is the securities register (Nasdaq CSD), which is not the Äriregister and not an open extract.",
+   "INFERENCE/UNVERIFIED verbatim: §233 wording not fetched; Nasdaq CSD issuer page not fetched (404)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "EE",
+  "legalForm": "OÜ",
+  "legalFormLocal": "Osaühing",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": "List of shareholders (register-maintained) / shown on register card",
+  "documentLocal": "Osanike nimekiri",
+  "summary": "For an OÜ the shareholders (osanikud) are part of the commercial register itself: since the reform in force from 1 February 2023 the registrar — not the management board — maintains the OÜ list of shareholders, and the shareholders appear on the register card. A dedicated list of shareholders (osanike nimekiri) is therefore obtainable directly from the register. The one exception is where the OÜ's shares are registered with the Estonian register of securities (Nasdaq CSD/EVK) or another depository, in which case that securities register — not the commercial register — is authoritative for shareholders.",
+  "evidence": [
+   {
+    "basis": "Äriseadustik (Commercial Code) §182 — list of shareholders of a private limited company (amended, in force 01.02.2023)",
+    "note": "Verbatim not extracted (JS-rendered source). §182 was amended so the registrar keeps the OÜ shareholder list unless the shares are entered in the register of securities.",
+    "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "e-Business Register (Äriregister)",
+    "note": "Shareholders visible on the register card / list of shareholders retrievable for an OÜ.",
+    "url": "https://ariregister.rik.ee/eng",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "EXCEPTION: if the OÜ's shares are registered with the Estonian register of securities (Nasdaq CSD/EVK) or another securities depository, shareholders are NOT in the commercial register; for such an OÜ this becomes not_provable_from_registry (commercial register) and shifts to the securities register.",
+   "The 2023 reform moved list-keeping from the management board to the registrar; pre-2023 the register card did not itself list OÜ shareholders. Classified here as base because it is now a register-held record.",
+   "INFERENCE/UNVERIFIED verbatim: §182 wording not fetched."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "EE",
+  "legalForm": "AS",
+  "legalFormLocal": "Aktsiaselts",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association",
+  "documentLocal": "Põhikiri",
+  "summary": "An AS's articles of association (põhikiri) are submitted to the commercial register on formation and amendment and are part of the public register file. They are a distinct filed document obtainable from the register in addition to the standard register extract, so the constitution is provable by an additional register document.",
+  "evidence": [
+   {
+    "basis": "Äriseadustik (Commercial Code) §244 — articles of association of a public limited company",
+    "note": "Verbatim not extracted (JS-rendered source). §244 governs required content of the AS põhikiri filed with the register.",
+    "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "e-Business Register (Äriregister) — company documents / register file",
+    "note": "Põhikiri retrievable from the company's register file.",
+    "url": "https://ariregister.rik.ee/eng",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED verbatim: §244 wording not fetched."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "EE",
+  "legalForm": "OÜ",
+  "legalFormLocal": "Osaühing",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association",
+  "documentLocal": "Põhikiri",
+  "summary": "An OÜ's articles of association (põhikiri) are submitted to the commercial register on formation and on amendment and form part of the public register file. They are a distinct filed document, obtainable from the register in addition to the standard extract, not part of the base register card. This makes the constitution provable by an additional register document.",
+  "evidence": [
+   {
+    "basis": "Äriseadustik (Commercial Code) §139 — articles of association of a private limited company",
+    "note": "Verbatim not extracted (JS-rendered source). §139 governs the required content of the OÜ põhikiri filed with the register.",
+    "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "e-Business Register (Äriregister) — company documents / register file",
+    "note": "Põhikiri retrievable from the company's register file.",
+    "url": "https://ariregister.rik.ee/eng",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "An OÜ formed via the expedited online procedure may adopt a standard (template) põhikiri; a filed articles document still exists in the register file.",
+   "INFERENCE/UNVERIFIED verbatim: §139 wording not fetched."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "EE",
+  "legalForm": "AS",
+  "legalFormLocal": "Aktsiaselts",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Commercial register extract / register card (B-card)",
+  "documentLocal": "Äriregistri väljavõte (B-kaart)",
+  "summary": "Every AS is entered in the commercial register and its register card is the base extract, openly available through the e-Business Register. It shows name, registry code, address, share capital, management and supervisory board members. It does not list the individual shareholders (those are in the securities register). The extract itself is the canonical register document.",
+  "evidence": [
+   {
+    "basis": "Äriseadustik (Commercial Code) register-entry provisions; e-Business Register",
+    "note": "Verbatim not extracted (JS-rendered source).",
+    "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "e-Business Register (Äriregister)",
+    "note": "Register card / extract retrievable per company.",
+    "url": "https://ariregister.rik.ee/eng",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "The AS register card lists directors/organs but not shareholders.",
+   "INFERENCE/UNVERIFIED verbatim: statute text not fetched."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "EE",
+  "legalForm": "OÜ",
+  "legalFormLocal": "Osaühing",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Commercial register extract / register card (B-card)",
+  "documentLocal": "Äriregistri väljavõte (B-kaart)",
+  "summary": "Every OÜ is entered in the Estonian commercial register (Äriregister) held by the Tartu County Court registration department, and its register card is the base extract. It is openly available through the e-Business Register (ariregister.rik.ee). It states name, registry code, address, capital, board members and — since the 1 Feb 2023 reform — the shareholders. This is the canonical register extract.",
+  "evidence": [
+   {
+    "basis": "Äriseadustik (Commercial Code) §22 et seq. (register entries) and the e-Business Register",
+    "note": "Verbatim not extracted: Riigi Teataja English consolidated text is JavaScript-rendered and returned only a loading shell; verify §§22-33 for register content.",
+    "url": "https://www.riigiteataja.ee/en/eli/509012024002/consolide",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "e-Business Register (Äriregister), Centre of Registers and Information Systems (RIK)",
+    "note": "Register card / extract retrievable per company at ariregister.rik.ee.",
+    "url": "https://ariregister.rik.ee/eng",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED verbatim: no statute text could be fetched (JS-rendered Riigi Teataja; web-search budget exhausted). Section mapping is from established knowledge of the Äriseadustik, not a fetched quote.",
+   "Extract is available in multiple detail levels (current data vs. detailed/historical printout); the 'B-card' terminology is the traditional register card."
+  ],
+  "confidence": "high"
+ },
+ {
   "jurisdiction": "ES",
   "legalForm": "SA",
   "legalFormLocal": "Sociedad Anónima",
@@ -3158,6 +3473,186 @@
   "confidence": "high"
  },
  {
+  "jurisdiction": "GR",
+  "legalForm": "AE",
+  "legalFormLocal": "Ανώνυμη Εταιρεία (AE)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "An AE's shareholders are NOT held at GEMI. For registered shares the company itself keeps the book of shareholders (βιβλίο μετόχων) under N.4548/2018 art. 40; for listed companies holdings are dematerialised in the central securities depository (ΣΑΤ/ΕΛΚΑΤ), not GEMI. GEMI's public file shows only the founders (ιδρυτές) named in the original καταστατικό at incorporation, not the current shareholder body. Therefore a current shareholder list is not provable from the registry.",
+  "evidence": [
+   {
+    "basis": "N.4548/2018 (AE), art. 40",
+    "quote": "Ονομαστικές μετοχές – Μετοχικοί τίτλοι",
+    "note": "Article 40 title (verbatim); registered shares are recorded in the company-kept βιβλίο μετόχων, not in GEMI. Full text not fetched.",
+    "url": "https://www.taxheaven.gr/law/4548/2018",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Only the founders and their initial subscription in the original καταστατικό are public (historical, incorporation-only) — this is not a current shareholder list.",
+   "Bearer shares were abolished; all AE shares are now registered (ονομαστικές), but the register of them is private (company book) or in the CSD for listed AEs. That the βιβλίο μετόχων is company-kept and not GEMI-filed is well established but the operative sentence of art. 40 was not fetched verbatim (paywalled) — UNVERIFIED at quote level."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "GR",
+  "legalForm": "IKE",
+  "legalFormLocal": "Ιδιωτική Κεφαλαιουχική Εταιρεία (IKE)",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association plus registered share-transfer announcements",
+  "documentLocal": "Καταστατικό (κωδικοποιημένο) + ανακοινώσεις μεταβίβασης εταιρικών μεριδίων στο ΓΕΜΗ",
+  "summary": "For an IKE the partners (εταίροι) and their shares (εταιρικά μερίδια) are provable from GEMI: the founding partners and their contributions are stated in the καταστατικό (N.4072/2012 art. 50), and every inter-vivos transfer of a share must be registered/published in GEMI (art. 84). Current holdings are therefore reconstructed from the codified articles plus the registered transfer announcements — an additional document set beyond the plain register extract. The company additionally keeps an internal βιβλίο εταίρων (art. 66), but that book is not the GEMI-sourced proof.",
+  "evidence": [
+   {
+    "basis": "N.4072/2012 (IKE), art. 50",
+    "quote": "Περιεχόμενο του καταστατικού",
+    "note": "Article 50 title (verbatim); the καταστατικό states founding partners and their μερίδια. Full text not fetched.",
+    "url": "https://www.taxheaven.gr/law/4072/2012",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "N.4072/2012 (IKE), art. 84",
+    "quote": "Μεταβίβαση εν ζωή",
+    "note": "Article 84 title (verbatim); inter-vivos transfer of an IKE share is subject to GEMI publicity, so partner changes are on the public register. Full sentence not fetched verbatim.",
+    "url": "https://www.taxheaven.gr/law/4072/2012",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "N.4072/2012 (IKE), art. 66",
+    "quote": "Τήρηση βιβλίων",
+    "note": "Article 66 title (verbatim); the company keeps a register of partners (βιβλίο εταίρων) internally — not the registry proof.",
+    "url": "https://www.taxheaven.gr/law/4072/2012",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "There is no single German-style standalone 'Gesellschafterliste' document at GEMI for an IKE; the current member list is assembled from the codified καταστατικό and registered transfer announcements. Classified as additional (not base) document.",
+   "That GEMI transfer publicity is constitutive/effective vis-à-vis third parties for IKE shares is INFERENCE from art. 84 title; the operative sentence was not fetched verbatim (paywalled). UNVERIFIED at quote level.",
+   "The internal βιβλίο εταίρων (art. 66) is not obtainable from the registry."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "GR",
+  "legalForm": "AE",
+  "legalFormLocal": "Ανώνυμη Εταιρεία (AE)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of Association (codified)",
+  "documentLocal": "Καταστατικό / Κωδικοποιημένο Καταστατικό",
+  "summary": "The AE's constitution (καταστατικό) is filed with and published by GEMI (N.4548/2018 art. 12 lists it among acts subject to publicity) and is retrievable as a distinct codified document separate from the register-extract certificate. Provable from the registry via this additional document.",
+  "evidence": [
+   {
+    "basis": "N.4548/2018 (AE), art. 12",
+    "quote": "Πράξεις και στοιχεία που υποβάλλονται σε δημοσιότητα στο Γ.Ε.ΜΗ.",
+    "note": "Article 12 title (verbatim); the καταστατικό and its amendments are subject to GEMI publicity. Full text not fetched.",
+    "url": "https://www.taxheaven.gr/law/4548/2018",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "N.4919/2022 (GEMI), art. 17",
+    "quote": "Εμπορική δημοσιότητα στο ΓΕ.ΜΗ.",
+    "note": "GEMI commercial publicity; downloadable copy of the articles.",
+    "url": "https://www.taxheaven.gr/law/4919/2022",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Treated as an 'additional document' (a distinct downloadable filing), not the register-extract certificate itself.",
+   "Whether a single fully-codified καταστατικό is on file vs. only the original plus amendment announcements depends on the company's GEMI maintenance. Verbatim article text not fetched (paywalled)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "GR",
+  "legalForm": "IKE",
+  "legalFormLocal": "Ιδιωτική Κεφαλαιουχική Εταιρεία (IKE)",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of Association (codified)",
+  "documentLocal": "Καταστατικό / Κωδικοποιημένο Καταστατικό",
+  "summary": "The IKE's constitution (καταστατικό) is filed with and published by GEMI and is retrievable as a distinct document (the codified/current articles), separate from the register-extract certificate. Its required content is set by N.4072/2012 art. 50. Provable from the registry via this additional document.",
+  "evidence": [
+   {
+    "basis": "N.4072/2012 (IKE), art. 50",
+    "quote": "Περιεχόμενο του καταστατικού",
+    "note": "Article 50 title (verbatim). Full text not fetched.",
+    "url": "https://www.taxheaven.gr/law/4072/2012",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "N.4919/2022 (GEMI), art. 17",
+    "quote": "Εμπορική δημοσιότητα στο ΓΕ.ΜΗ.",
+    "note": "GEMI commercial publicity covers the καταστατικό and its amendments; downloadable copy.",
+    "url": "https://www.taxheaven.gr/law/4919/2022",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Treated as an 'additional document' because it is a distinct downloadable filing, not the register-extract certificate itself.",
+   "Availability of a fully codified καταστατικό vs. only the successive amendment filings varies by how the company has maintained its GEMI file. Verbatim article text not fetched (paywalled)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "GR",
+  "legalForm": "AE",
+  "legalFormLocal": "Ανώνυμη Εταιρεία (AE)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "GEMI General Certificate",
+  "documentLocal": "Γενικό Πιστοποιητικό ΓΕΜΗ (also Πιστοποιητικό Ισχύουσας Εκπροσώπησης)",
+  "summary": "GEMI is the constitutive public register for the AE (L.4919/2022; L.4548/2018 art. 12 lists the acts/data subject to GEMI publicity). Its general certificate is the register extract evidencing identity, seat, capital, board/representation and registered acts — the base register document for an AE.",
+  "evidence": [
+   {
+    "basis": "N.4548/2018 (AE), art. 12",
+    "quote": "Πράξεις και στοιχεία που υποβάλλονται σε δημοσιότητα στο Γ.Ε.ΜΗ.",
+    "note": "Article 12 title (verbatim); enumerates what an AE files with GEMI. Full text not fetched.",
+    "url": "https://www.taxheaven.gr/law/4548/2018",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "N.4919/2022 (GEMI), art. 17",
+    "quote": "Εμπορική δημοσιότητα στο ΓΕ.ΜΗ.",
+    "note": "GEMI publicity/certificate regime.",
+    "url": "https://www.taxheaven.gr/law/4919/2022",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Certificate label precision (Γενικό vs Ισχύουσας Εκπροσώπησης vs Αναλυτικό) is INFERENCE from GEMI practice; the certificate-catalogue article of L.4919/2022 was not fetched verbatim.",
+   "Verbatim statutory text was paywalled; only article titles retrieved."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "GR",
+  "legalForm": "IKE",
+  "legalFormLocal": "Ιδιωτική Κεφαλαιουχική Εταιρεία (IKE)",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "GEMI General Certificate",
+  "documentLocal": "Γενικό Πιστοποιητικό ΓΕΜΗ (also Πιστοποιητικό Ισχύουσας Εκπροσώπησης for representation)",
+  "summary": "The General Commercial Registry (ΓΕΜΗ/GEMI) is the constitutive public register for the IKE under L.4919/2022. It issues a general certificate that functions as the register extract, evidencing the company's identity, seat, capital, managers/representation and registered acts. This is the base register document for an IKE.",
+  "evidence": [
+   {
+    "basis": "N.4919/2022 (GEMI law)",
+    "quote": "Εμπορική δημοσιότητα στο ΓΕ.ΜΗ.",
+    "note": "Article 17 title (verbatim, retrieved from TOC); full text paywalled. Art. 46 'Πρόσβαση στα στοιχεία του Γ.Ε.ΜΗ.' governs access to the register data.",
+    "url": "https://www.taxheaven.gr/law/4919/2022",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Exact certificate label varies: 'Γενικό Πιστοποιητικό' (history of acts) vs 'Πιστοποιητικό Ισχύουσας Εκπροσώπησης' (current representation) vs 'Αναλυτικό Πιστοποιητικό'. INFERENCE from GEMI practice; the precise catalogue article of L.4919/2022 (certificates/copies) was not fetched verbatim.",
+   "Verbatim statutory text was behind paywalls; only article titles were retrieved."
+  ],
+  "confidence": "high"
+ },
+ {
   "jurisdiction": "HK",
   "legalForm": "Ltd",
   "legalFormLocal": "Private company limited by shares",
@@ -3325,6 +3820,365 @@
   "caveats": [
    "INFERENCE: mapped to the e-Search current-particulars report; HK issues no single statutory register extract. Naming UNVERIFIED verbatim.",
    "The particulars report does NOT list shareholders/members."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HR",
+  "legalForm": "d.d.",
+  "legalFormLocal": "Dioničko društvo",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "Shares of a Croatian d.d. are dematerialised securities recorded in the central depository SKDD (Središnje klirinško depozitarno društvo); the register of shareholders (dionička knjiga) is derived from SKDD records, not from the court register. The Sudski registar records share capital and share classes but NOT the identity of shareholders, and the izvadak has no members section for a d.d. Therefore no document proving the current shareholders is obtainable from the court register.",
+  "evidence": [
+   {
+    "basis": "ZTD – dionice as nematerijalizirani vrijednosni papiri; SKDD depository",
+    "note": "Verbatim ZTD text not fetched (page truncation); the dematerialised-shares/SKDD regime and the absence of a shareholder field on the d.d. extract are the basis.",
+    "url": "https://www.zakon.hr/z/546/Zakon-o-trgovackim-drustvima",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Zakon o sudskom registru, čl. 4. st. 2 (what the register/zbirka contains)",
+    "quote": "Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava...",
+    "note": "Public access covers register data and the document collection — neither of which holds a d.d. shareholder list.",
+    "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Shareholder identity for a d.d. sits with SKDD (and, for beneficial owners, the Registar stvarnih vlasnika / UBO register) — separate systems, not the court register.",
+   "A single-shareholder d.d. must notify the sole-shareholder fact for the register/zbirka, but that is a one-shareholder disclosure, not a general shareholder list."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HR",
+  "legalForm": "d.o.o.",
+  "legalFormLocal": "Društvo s ograničenom odgovornošću",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": "Court register extract – members section (Članovi društva)",
+  "documentLocal": "Izvadak iz sudskog registra – Članovi društva",
+  "summary": "Croatian company law (Austrian-derived) records the members of a d.o.o. as register data, so the izvadak shows a 'Članovi društva' section with each member and the nominal amount of their business share (temeljni ulog / poslovni udjel). The dedicated membership record is the knjiga poslovnih udjela, but under ZTD (čl. 410-411) that book is an INTERNAL company register kept by the uprava — inspected on the company's premises, not filed with the court register — so it is not itself obtainable from the registry. Because membership is legally determined by entry in that internal book, the register's member data can lag actual ownership.",
+  "evidence": [
+   {
+    "basis": "ZTD, čl. 410-411 (knjiga poslovnih udjela; imatelj poslovnog udjela)",
+    "quote": "Član društva je samo ona osoba koja je upisana u knjizi poslovnih udjela društva kao imatelj poslovnog udjela",
+    "note": "Quote as reproduced by a secondary Croatian legal source (codex-sortium.hr); the knjiga poslovnih udjela is described as an internal register inspected during working hours, not filed with the public court register.",
+    "url": "https://codex-sortium.hr/usluge/knjiga-poslovnih-udjela",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "ZTD (Zakon o trgovačkim društvima) – d.o.o. provisions",
+    "note": "Full ZTD čl. 410 text could not be fetched verbatim (zakon.hr serves the whole act as one truncating page).",
+    "url": "https://www.zakon.hr/z/546/Zakon-o-trgovackim-drustvima",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED: that the current izvadak still displays 'Članovi društva' with share amounts could not be confirmed verbatim (WebSearch budget exhausted; no live extract fetched). Grounded on the Austrian-model heritage of Croatian d.o.o. law where members are register data.",
+   "The authoritative membership record is the internal knjiga poslovnih udjela (ZTD čl. 410), which is NOT filed with the court register and is not publicly downloadable — so registry member data may be secondary/lagging.",
+   "If, contrary to the assessment, members are NOT shown on the izvadak, the correct status would be not_provable_from_registry (the internal book being the only membership record)."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "HR",
+  "legalForm": "d.d.",
+  "legalFormLocal": "Dioničko društvo",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Statute (articles of association)",
+  "documentLocal": "Statut",
+  "summary": "A d.d.'s constitution is the statut, adopted on formation and amended by the general assembly. It is submitted to the registry court on incorporation and on each amendment and stored in the zbirka isprava, which is publicly accessible without proof of legal interest.",
+  "evidence": [
+   {
+    "basis": "Zakon o sudskom registru, čl. 2. t. 3 (zbirka isprava)",
+    "quote": "zbirka isprava je dio registra u koji se pohranjuju isprave dostavljene za upis podataka o subjektima upisa u glavnu knjigu, isprave dostavljene ili sastavljene u postupku upisa, odluke registarskog suda...",
+    "note": "The statut is among the isprave submitted for registration and stored here.",
+    "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost zbirke isprava)",
+    "quote": "Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava...",
+    "note": "Public right to inspect the statut.",
+    "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Older filings may not be fully digitised in the online zbirka isprava and may require a court request."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HR",
+  "legalForm": "d.o.o.",
+  "legalFormLocal": "Društvo s ograničenom odgovornošću",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Memorandum of association (or single-member declaration)",
+  "documentLocal": "Društveni ugovor (odnosno izjava o osnivanju za jednočlano društvo)",
+  "summary": "A d.o.o.'s constitution — the društveni ugovor (or, for a single-member company, the izjava o osnivanju) — is submitted to the registry court on incorporation and on each amendment. It is stored in the zbirka isprava (collection of documents) and is publicly accessible: anyone may inspect and obtain copies of documents in the collection without proving legal interest.",
+  "evidence": [
+   {
+    "basis": "Zakon o sudskom registru, čl. 2. t. 3 (zbirka isprava)",
+    "quote": "zbirka isprava je dio registra u koji se pohranjuju isprave dostavljene za upis podataka o subjektima upisa u glavnu knjigu, isprave dostavljene ili sastavljene u postupku upisa, odluke registarskog suda...",
+    "note": "Founding acts submitted for registration are stored here.",
+    "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost zbirke isprava)",
+    "quote": "Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava...",
+    "note": "Public right to inspect documents on which registration was based (i.e., the društveni ugovor).",
+    "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Availability/format online (PDF via esudreg zbirka isprava) is the norm; not every legacy filing is digitised, so some older documents may require a court request."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HR",
+  "legalForm": "d.d.",
+  "legalFormLocal": "Dioničko društvo",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Court register extract (Sudski registar)",
+  "documentLocal": "Izvadak iz sudskog registra",
+  "summary": "As for any subjekt upisa, a d.d. has a certified extract (izvadak) from the free public Sudski registar showing firm, seat, OIB/MBS, share capital, share classes, and the management/supervisory board. Anyone may obtain it without proving legal interest.",
+  "evidence": [
+   {
+    "basis": "Zakon o sudskom registru, čl. 2. t. 14 (definicija izvatka)",
+    "quote": "ovjerena isprava koja se izdaje iz registra na propisan način, a sadrži upisane podatke o jednom subjektu upisa koji važe ili koji su važili...",
+    "note": "Verbatim fragment; ellipsis is truncation.",
+    "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Sudski registar online",
+    "note": "Free public search portal.",
+    "url": "https://sudreg.pravosudje.hr/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "The extract does not list shareholders for a d.d. (see GESELLSCHAFTERLISTE)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HR",
+  "legalForm": "d.o.o.",
+  "legalFormLocal": "Društvo s ograničenom odgovornošću",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Court register extract (Sudski registar)",
+  "documentLocal": "Izvadak iz sudskog registra",
+  "summary": "The Sudski registar (court register, sudreg.pravosudje.hr) is free and public online. The certified extract (izvadak) is the base register document for any subjekt upisa, including a d.o.o., and shows firm, seat, OIB/MBS, share capital, management and members. Anyone may obtain it without proving legal interest.",
+  "evidence": [
+   {
+    "basis": "Zakon o sudskom registru, čl. 2. t. 14 (definicija izvatka)",
+    "quote": "ovjerena isprava koja se izdaje iz registra na propisan način, a sadrži upisane podatke o jednom subjektu upisa koji važe ili koji su važili...",
+    "note": "Verbatim fragment as returned by the consolidated text; ellipsis is truncation.",
+    "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Zakon o sudskom registru, čl. 4. st. 2 (javnost registra)",
+    "quote": "Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava...",
+    "note": "Confirms free public access to register data.",
+    "url": "https://www.zakon.hr/z/271/Zakon-o-sudskom-registru",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Sudski registar online",
+    "note": "Free public search portal for all subjekti upisa.",
+    "url": "https://sudreg.pravosudje.hr/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Register is free/public online; extract is issued certified (ovjereni izvadak) or as an uncertified printout."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HU",
+  "legalForm": "Kft",
+  "legalFormLocal": "Korlátolt felelősségű társaság",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": "Company extract",
+  "documentLocal": "cégkivonat",
+  "summary": "For a Kft the members (tagok) are a registered, public datum of the cégjegyzék under Ctv. 27. § (3), so the cégkivonat itself evidences the member identities (name, residence/seat, birth data). A separate members' list, the tagjegyzék, is maintained internally by the managing director (ügyvezető) under Ptk. 3:182 § and is company-held, but it is not needed to prove membership because the register extract already records the members. Member identity is therefore provable from the base register extract.",
+  "evidence": [
+   {
+    "basis": "Ctv. 2006. évi V. törvény 27. § (3) a) — Kft member data recorded in the register",
+    "quote": "a tagok nevét, természetes személy esetén lakóhelyét, születési idejét, anyja születési nevét, jogi személy esetén székhelyét",
+    "note": "Members are registered cégjegyzék data, hence they appear on the cégkivonat.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Ptk. 2013. évi V. törvény 3:182 § — tagjegyzék (members' list) kept by the ügyvezető",
+    "note": "Company-held members' list; verbatim text could not be fetched and is left empty. It is a separate internal document, not the proof relied on here.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "The cégkivonat records member identity; the internal tagjegyzék additionally records each member's capital contribution (törzsbetét) and business quota (üzletrész). If per-member contribution amounts (not just identities) are required, the base extract may be insufficient and the tagjegyzék (proved_by_additional_document) would be needed — this nuance is INFERENCE and UNVERIFIED as to current extract layout.",
+   "Subsection lettering extracted by automated read; re-verify."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HU",
+  "legalForm": "Zrt",
+  "legalFormLocal": "Zártkörűen működő részvénytársaság",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "For a Zrt the shareholders (részvényesek) are recorded in the company's own share register, the részvénykönyv (Ptk. 3:245 ff.), which is maintained by the board/company and is NOT part of the public cégjegyzék. The cégjegyzék records a shareholder only in narrow cases — the sole shareholder of an egyszemélyes rt, and a shareholder whose voting rights exceed 50% (majority/qualified influence) — so an ordinary multi-shareholder Zrt's full ownership cannot be proved from the register. There is no publicly filed shareholder-list document for a private Rt.",
+  "evidence": [
+   {
+    "basis": "Ctv. 2006. évi V. törvény 27. § (4) b) bd) — sole shareholder of egyszemélyes rt recorded",
+    "quote": "a részvényes nevét, adóazonosító számát, természetes személy esetén születési idejét, lakóhelyét",
+    "note": "Only the SOLE shareholder is registered for a one-person Rt.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Ctv. 2006. évi V. törvény 27. § (4) b) bc) — shareholder recorded only above 50% voting rights",
+    "quote": "amennyiben a részvényes szavazati jogának mértéke az 50 százalékot meghaladja",
+    "note": "Ordinary shareholders below 50% are not in the register.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Ptk. 2013. évi V. törvény 3:245–3:247 § — részvénykönyv (share register) kept by the company",
+    "note": "Company-held share register, not public; verbatim text could not be fetched and is left empty.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "A sole shareholder (egyszemélyes Zrt) and any shareholder above 50% DO appear on the cégkivonat, so for those specific cases ownership is partially provable from the base extract — but the general/complete shareholder list is not.",
+   "The részvénykönyv is company-held and generally not disclosed publicly; access is limited under Ptk.",
+   "Subsection lettering extracted by automated read; re-verify."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HU",
+  "legalForm": "Kft",
+  "legalFormLocal": "Korlátolt felelősségű társaság",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association (memorandum)",
+  "documentLocal": "társasági szerződés",
+  "summary": "A Kft is founded by a társasági szerződés (Ptk. 3:159 §), which is filed with the company court as part of the company's document collection (cégiratok). Under Ctv. 10. § (1) the cégiratok are fully public, so the constitution is obtainable as a separate filed document (not carried on the cégkivonat itself). Hence proved by an additional filed document.",
+  "evidence": [
+   {
+    "basis": "Ctv. 2006. évi V. törvény 10. § (1) — cégiratok are fully public",
+    "quote": "A cégjegyzék fennálló, illetve törölt adatai, valamint a cégiratok...teljeskörűen nyilvánosak.",
+    "note": "The társasági szerződés is part of the public cégiratok.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Ptk. 2013. évi V. törvény 3:159 § — Kft founded by társasági szerződés",
+    "note": "Verbatim text could not be fetched; left empty.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Single-member Kft uses an alapító okirat (deed of foundation) instead of a társasági szerződés; both are the constitution and both are filed public cégiratok.",
+   "Subsection lettering extracted by automated read; re-verify."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HU",
+  "legalForm": "Zrt",
+  "legalFormLocal": "Zártkörűen működő részvénytársaság",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Statutes (articles of association)",
+  "documentLocal": "alapszabály",
+  "summary": "A részvénytársaság is founded by an alapszabály (Ptk. 3:250 §), filed with the company court as part of the public cégiratok. Under Ctv. 10. § (1) the cégiratok are fully public, so the Zrt's constitution is obtainable as a separate filed document, distinct from the cégkivonat. Hence proved by an additional filed document.",
+  "evidence": [
+   {
+    "basis": "Ctv. 2006. évi V. törvény 10. § (1) — cégiratok are fully public",
+    "quote": "A cégjegyzék fennálló, illetve törölt adatai, valamint a cégiratok...teljeskörűen nyilvánosak.",
+    "note": "The alapszabály is part of the public cégiratok.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Ptk. 2013. évi V. törvény 3:250 § — Rt founded by alapszabály",
+    "note": "Verbatim text could not be fetched; left empty.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a1300005.tv",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Subsection lettering extracted by automated read; re-verify."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HU",
+  "legalForm": "Kft",
+  "legalFormLocal": "Korlátolt felelősségű társaság",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Company extract",
+  "documentLocal": "cégkivonat",
+  "summary": "The cégjegyzék (company register) is kept by the company courts (cégbíróság) under Ctv. (2006. évi V. törvény). The cégkivonat is the official extract of the currently effective registered data and is the base register-extract document. It is issued per company and is fully public.",
+  "evidence": [
+   {
+    "basis": "Ctv. 2006. évi V. törvény 10. § (1) — publicity of register data and documents",
+    "quote": "A cégjegyzék fennálló, illetve törölt adatai, valamint a cégiratok...teljeskörűen nyilvánosak.",
+    "note": "Establishes that register data (from which the cégkivonat is drawn) are public.",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Subsection lettering was extracted by an automated read of net.jogtar.hu and should be re-verified against the consolidated text."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "HU",
+  "legalForm": "Zrt",
+  "legalFormLocal": "Zártkörűen működő részvénytársaság",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Company extract",
+  "documentLocal": "cégkivonat",
+  "summary": "Like all Hungarian companies, a Zrt is entered in the cégjegyzék kept by the company courts under Ctv. The cégkivonat is the official public extract of its currently registered data and is the base register-extract document.",
+  "evidence": [
+   {
+    "basis": "Ctv. 2006. évi V. törvény 10. § (1) — publicity of register data and documents",
+    "quote": "A cégjegyzék fennálló, illetve törölt adatai, valamint a cégiratok...teljeskörűen nyilvánosak.",
+    "note": "",
+    "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Subsection lettering extracted by automated read; re-verify."
   ],
   "confidence": "high"
  },
@@ -3932,6 +4786,184 @@
    "Certificate of Incorporation exists as a document but does not evidence current state."
   ],
   "confidence": "medium"
+ },
+ {
+  "jurisdiction": "IS",
+  "legalForm": "ehf",
+  "legalFormLocal": "Einkahlutafélag",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "Hlutaskrá (share/shareholder register)",
+  "summary": "For an ehf the board must immediately draw up the share register (hlutaskrá), which is kept at the company's office and is accessible to shareholders and public authorities, not filed with Fyrirtækjaskrá. The register of enterprises therefore does not issue the shareholder list as a document. Iceland is comparatively transparent about ownership: a public beneficial-owner register lets anyone see a company's registered beneficial owner, but that is structured data (only owners above threshold), and the signed hlutaskrá is only lodged as supporting evidence, not released as a registry document.",
+  "evidence": [
+   {
+    "basis": "Act on Private Limited Companies No. 138/1994, art. 19 (hlutaskrá)",
+    "note": "On formation the board must at once make a share register (hlutaskrá); it is kept at the company's office and shareholders and public authorities have access to it. Not sent to the register.",
+    "url": "https://www.althingi.is/lagas/nuna/1994138.html",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Register of beneficial owners (raunverulegir eigendur), Skatturinn/Fyrirtækjaskrá",
+    "quote": "með því að fletta félaginu upp í fyrirtækjaskrá á www.skatturinn.is er hægt að sjá hver er skráður raunverulegur eigandi félagsins á hverjum tíma",
+    "note": "Beneficial owner is publicly viewable as data; a dated and signed hlutaskrá is listed among supporting documents submitted to prove ownership, not issued back publicly.",
+    "url": "https://www.skatturinn.is/fyrirtaekjaskra/raunverulegir-eigendur/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "The public beneficial-owner register is DATA, not a document, and covers only owners above the 25% threshold — it is not a substitute for a full shareholder list.",
+   "Icelandic ownership transparency also derives from publicly accessible tax records, but those are not a registry-issued shareholder-list document.",
+   "art. 19 quote left empty (not confirmed verbatim); wording paraphrased from a summarizing fetch of the Althingi statute."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IS",
+  "legalForm": "hf",
+  "legalFormLocal": "Hlutafélag",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": "Hlutaskrá (share/shareholder register)",
+  "summary": "For an hf the board must immediately make the share register (hlutaskrá), which is always kept at the company's office and is accessible to shareholders and public authorities; it is not filed with Fyrirtækjaskrá. The register of enterprises therefore does not issue the shareholder list as a document, and for listed hf ownership sits in the securities depository. As with ehf, Iceland's public beneficial-owner register shows a company's registered beneficial owner as data (owners above threshold only), not the full shareholder-list document.",
+  "evidence": [
+   {
+    "basis": "Act on Public Limited Companies No. 2/1995, art. 30 (hlutaskrá)",
+    "note": "On formation the board must at once make a share register; the share register shall always be kept at the company's office, and all shareholders and public authorities have access to it. Not sent to the register.",
+    "url": "https://www.althingi.is/lagas/nuna/1995002.html",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Register of beneficial owners (raunverulegir eigendur), Skatturinn/Fyrirtækjaskrá",
+    "quote": "með því að fletta félaginu upp í fyrirtækjaskrá á www.skatturinn.is er hægt að sjá hver er skráður raunverulegur eigandi félagsins á hverjum tíma",
+    "note": "Beneficial owner viewable publicly as data; signed hlutaskrá is only supporting evidence, not a publicly issued document.",
+    "url": "https://www.skatturinn.is/fyrirtaekjaskra/raunverulegir-eigendur/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Beneficial-owner register is DATA and threshold-limited — not a substitute for a full shareholder list.",
+   "For listed hf, the share register is maintained via the central securities depository, still not via Fyrirtækjaskrá.",
+   "art. 30 quote left empty (not confirmed verbatim); paraphrased from a summarizing fetch of the Althingi statute."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IS",
+  "legalForm": "ehf",
+  "legalFormLocal": "Einkahlutafélag",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association",
+  "documentLocal": "Samþykktir",
+  "summary": "An ehf's articles of association (samþykktir) form part of the registration file lodged with Fyrirtækjaskrá, and amendments to the articles must be notified to the register. The current articles are held by the register and can be obtained as a separate document, distinct from the register extract. This is an additional registry document rather than the base extract.",
+  "evidence": [
+   {
+    "basis": "Act on Private Limited Companies No. 138/1994, art. 68 (amendment of articles)",
+    "note": "A resolution to amend the articles of association of a private limited company must be notified to the register — implying the register holds the articles.",
+    "url": "https://www.althingi.is/lagas/nuna/1994138.html",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Fyrirtækjaskrá / Skatturinn certificates and documents page",
+    "note": "Register page references articles of association (samþykktir) among the register's materials; articles are part of the registration file and obtainable.",
+    "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "That the register releases a specific company's samþykktir on request is inferred from standard Nordic practice and the statutory filing requirement; the RSK page confirmed articles are part of register materials but did not spell out the ordering process (partly UNVERIFIED).",
+   "Quotes left empty (not confirmed verbatim)."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "IS",
+  "legalForm": "hf",
+  "legalFormLocal": "Hlutafélag",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association",
+  "documentLocal": "Samþykktir",
+  "summary": "An hf's articles of association (samþykktir) form part of the registration file lodged with Fyrirtækjaskrá, and amendments must be notified to the register. The current articles are held by the register and obtainable as a separate document, distinct from the register extract. This is an additional registry document rather than the base extract.",
+  "evidence": [
+   {
+    "basis": "Act on Public Limited Companies No. 2/1995, arts. 9 and 42 (articles / amendment on registration)",
+    "note": "art. 9 prescribes the required contents of the articles; changes tied to registration must be notified, implying the register holds the articles.",
+    "url": "https://www.althingi.is/lagas/nuna/1995002.html",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Fyrirtækjaskrá / Skatturinn certificates and documents page",
+    "note": "Articles of association (samþykktir) are among register materials and part of the registration file; obtainable from the register.",
+    "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Release of a specific hf's samþykktir on request inferred from standard practice and the statutory filing requirement; ordering process not spelled out verbatim on the RSK page (partly UNVERIFIED).",
+   "Quotes left empty (not confirmed verbatim)."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "IS",
+  "legalForm": "ehf",
+  "legalFormLocal": "Einkahlutafélag",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Register extract (company certificate)",
+  "documentLocal": "Vottorð úr fyrirtækjaskrá (firmavottorð)",
+  "summary": "Fyrirtækjaskrá (the register of enterprises, run by RSK/Skatturinn) registers every ehf and issues an official extract/certificate of the registered particulars. Basic registered information is available via free online lookup, with more detailed extracts obtainable through the register's web store. This certificate is the base register document.",
+  "evidence": [
+   {
+    "basis": "Fyrirtækjaskrá / Skatturinn (register of enterprises) official page",
+    "note": "Register page states registered-company information can be looked up on the web and more detailed information obtained free through the web store (vefverslun); certificates (vottorð) are offered.",
+    "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Act on Private Limited Companies No. 138/1994, art. 9 (registration)",
+    "note": "Board must notify the company for registration within two months of the date of the memorandum of association; company cannot be registered unless the share capital is paid.",
+    "url": "https://www.althingi.is/lagas/nuna/1994138.html",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Exact contents of the ehf extract (board, managing director, share capital, etc.) inferred from standard Nordic registry practice; the RSK page did not enumerate fields verbatim (UNVERIFIED at field level).",
+   "Quotes left empty because official text was retrieved via a summarizing fetch, not confirmed verbatim."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "IS",
+  "legalForm": "hf",
+  "legalFormLocal": "Hlutafélag",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Register extract (company certificate)",
+  "documentLocal": "Vottorð úr fyrirtækjaskrá (hlutafélagaskrárvottorð)",
+  "summary": "Fyrirtækjaskrá registers every hf and issues an official extract/certificate of its registered particulars, obtainable via online lookup and the register's web store. The company must be notified for registration within six months of the memorandum. This certificate is the base register document.",
+  "evidence": [
+   {
+    "basis": "Fyrirtækjaskrá / Skatturinn certificates page",
+    "note": "Registered-company information available via web lookup and detailed information via the web store; certificates (vottorð) offered.",
+    "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Act on Public Limited Companies No. 2/1995, art. 14 (registration)",
+    "note": "Board must notify the company for registration within six months of the date of the memorandum of association.",
+    "url": "https://www.althingi.is/lagas/nuna/1995002.html",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Exact fields of the hf extract inferred from standard registry practice; not enumerated verbatim on the RSK page (UNVERIFIED at field level).",
+   "Quotes left empty (not confirmed verbatim)."
+  ],
+  "confidence": "high"
  },
  {
   "jurisdiction": "IT",
@@ -5353,6 +6385,175 @@
   "confidence": "medium"
  },
  {
+  "jurisdiction": "LT",
+  "legalForm": "AB",
+  "legalFormLocal": "Akcinė bendrovė",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "For an AB (public company), shares are dematerialised registered securities recorded in personal securities accounts kept by account managers (banks/brokerage firms) and the central securities depository (Nasdaq CSD), not in the Register of Legal Entities. The register does not hold the AB's shareholder list, so no registry document evidences it; the shareholder register is maintained in the securities-accounts system outside Registrų centras. The one narrow exception is a sole-shareholder AB, whose single shareholder is registered in JAR.",
+  "evidence": [
+   {
+    "basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on registration of shares/shareholders in personal securities accounts; Law on Markets in Financial Instruments; Nasdaq CSD (central securities depository) rules",
+    "note": "AB shareholder records live in securities accounts, not JAR. Verbatim not fetchable.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED: securities-account regime asserted from domain knowledge; no verbatim source retrieved.",
+   "Exception: a single-shareholder AB has its sole shareholder registered in JAR, which would then be registry-provable for that case.",
+   "AB participant data is generally outside JADIS because it is held in the securities-accounts system; confirm operationally."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "LT",
+  "legalForm": "UAB",
+  "legalFormLocal": "Uždaroji akcinė bendrovė",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_additional_document",
+  "documentLabel": "List of shareholders / participant data from JADIS (or sole-shareholder registration in JAR)",
+  "documentLocal": "Akcininkų (dalyvių) sąrašas — JADIS duomenys / vienintelio akcininko registravimas JAR",
+  "summary": "A UAB's shareholders (akcininkai) are not on the ordinary JAR extract, but shareholder/participant data is filed with Registrų centras: a sole shareholder must be registered in the Register of Legal Entities itself, and since the 2018–2019 reforms every private legal entity including a UAB must submit and keep current its participant (shareholder) data in JADIS (Juridinių asmenų dalyvių informacinė sistema — Information System of Participants of Legal Entities), operated by Registrų centras. Registrų centras can issue this participant data as a separate deliverable. It is therefore provable via an additional document, subject to the access and format caveats below.",
+  "evidence": [
+   {
+    "basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on the register of shareholders kept by the company and on the single-shareholder notification; Civil Code Art. 2.66 (sole participant registered in JAR)",
+    "note": "UAB keeps its own shareholder register; sole shareholder is recorded in JAR. Verbatim text not fetchable.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Registrų centras — JADIS, Information System of Participants of Legal Entities (Juridinių asmenų dalyvių informacinė sistema)",
+    "note": "Statutory obligation for private legal entities (incl. UAB) to submit participant/shareholder data to JADIS; registrar can issue that data.",
+    "url": "https://www.registrucentras.lt/jadis/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED: no verbatim source retrieved; JADIS obligation and issuance form asserted from domain knowledge of the 2018–2019 reform.",
+   "'DOCUMENT vs data' risk: JADIS delivers structured participant data; whether Registrų centras issues it as a single formal 'shareholder list' document (rather than a data export) for a multi-shareholder UAB should be confirmed operationally.",
+   "Access to full multi-shareholder JADIS data is partly restricted (entity itself, competent authorities, and — under AML rules — obliged entities); the always-public case is the sole-shareholder entry in JAR.",
+   "Whether a proof exists at all for a given UAB depends on the case: sole-shareholder = clearly provable; multi-shareholder = provable only to the extent JADIS data is accessible/issuable."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "LT",
+  "legalForm": "AB",
+  "legalFormLocal": "Akcinė bendrovė",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association (constituent document)",
+  "documentLocal": "Įstatai (steigimo dokumentas)",
+  "summary": "An AB's constitution is its articles of association (įstatai), the mandatory constituent document under the Law on Companies (Art. 4). As for a UAB, the articles are filed with the Register of Legal Entities, stored by the register, and copies are publicly obtainable — a distinct filed document separate from the extract. The constitution kind is therefore provable via an additional registry document.",
+  "evidence": [
+   {
+    "basis": "Law on Companies (Akcinių bendrovių įstatymas), Art. 4 (articles of association / įstatai filed with the register); Civil Code Art. 2.46",
+    "note": "Same articles-filing regime as UAB; verbatim not fetchable.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Registrų centras — founding documents / articles of association available from JAR",
+    "note": "Registrar confirms įstatai are obtainable from the register.",
+    "url": "https://www.registrucentras.lt/jar/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "UNVERIFIED at quote level, but filing and public availability of AB įstatai is settled.",
+   "Classified as additional (not base) document — a separately ordered filed document distinct from the JAR extract."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LT",
+  "legalForm": "UAB",
+  "legalFormLocal": "Uždaroji akcinė bendrovė",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association (constituent document)",
+  "documentLocal": "Įstatai (steigimo dokumentas)",
+  "summary": "A UAB's constitution is its articles of association (įstatai). Under the Law on Companies (Art. 4) and the Civil Code, the articles are the mandatory constituent document, are filed with the Register of Legal Entities, and the register stores them and issues copies to the public. They are a distinct filed document (not part of the ordinary extract), so the constitution kind is provable via an additional registry document.",
+  "evidence": [
+   {
+    "basis": "Law on Companies (Akcinių bendrovių įstatymas), Art. 4 (articles of association / įstatai as the constituent document filed with the register); Civil Code Art. 2.46",
+    "note": "Articles are the constituent document filed with and stored by JAR; copies publicly obtainable. Verbatim text not fetchable.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Registrų centras — founding documents / articles of association (steigimo dokumentai, įstatai) available from JAR",
+    "note": "Registrar English page confirms founding documents including įstatai are obtainable.",
+    "url": "https://www.registrucentras.lt/jar/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "UNVERIFIED at quote level (no verbatim text retrieved), but filing and public availability of įstatai is a settled feature of Lithuanian company registration.",
+   "Classified as additional (not base) document because the articles are a separately ordered filed document, distinct from the JAR extract."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LT",
+  "legalForm": "AB",
+  "legalFormLocal": "Akcinė bendrovė",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Register of Legal Entities extract",
+  "documentLocal": "Juridinių asmenų registro išrašas",
+  "summary": "An AB (public limited company) is registered in the same Register of Legal Entities as a UAB. Registrų centras issues an official extract (išrašas) with the AB's core registered data. This extract is the base registry document and directly evidences the register-extract kind.",
+  "evidence": [
+   {
+    "basis": "Civil Code Art. 2.66 and Regulations of the Register of Legal Entities (data and extracts for all registered legal entities incl. AB)",
+    "note": "Same registration/extract regime applies to AB; verbatim not fetchable.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.107687/asr",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Registrų centras — Register of Legal Entities, extracts (išrašai)",
+    "note": "Extracts are the primary orderable document for any registered entity.",
+    "url": "https://www.registrucentras.lt/jar/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "UNVERIFIED at quote level, but existence of a JAR extract for any AB is effectively certain."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LT",
+  "legalForm": "UAB",
+  "legalFormLocal": "Uždaroji akcinė bendrovė",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Register of Legal Entities extract",
+  "documentLocal": "Juridinių asmenų registro išrašas",
+  "summary": "The Register of Legal Entities (Juridinių asmenų registras, JAR), operated by Registrų centras, is the authoritative register for every UAB. It issues an official extract (išrašas) as a downloadable document containing the company's core registered data (name, code, address, legal form, managers, authorised capital, status). This extract is the base registry document and directly evidences the register-extract kind.",
+  "evidence": [
+   {
+    "basis": "Civil Code of the Republic of Lithuania (Civilinis kodeksas), Art. 2.66 (data registered in the Register of Legal Entities) and Regulations of the Register of Legal Entities",
+    "note": "Enumerates the data held in JAR and the register's duty to issue extracts; verbatim text not fetchable via the JS-rendered e-seimas portal.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.107687/asr",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Registrų centras — Register of Legal Entities, extracts (išrašai)",
+    "note": "Official registrar page confirming extracts are the primary orderable document.",
+    "url": "https://www.registrucentras.lt/jar/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statutory/registrar quotes could not be retrieved (JS-rendered sources; WebSearch budget exhausted) — treated as UNVERIFIED at the quote level, though the existence of a JAR extract for any UAB is effectively certain."
+  ],
+  "confidence": "high"
+ },
+ {
   "jurisdiction": "LU",
   "legalForm": "SA",
   "legalFormLocal": "Société anonyme",
@@ -5399,6 +6600,178 @@
   ],
   "caveats": [
    "Delivered as extract content, not as a discrete list document."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LV",
+  "legalForm": "AS",
+  "legalFormLocal": "Akciju sabiedrība",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "A joint-stock company's shareholders are NOT recorded in the Enterprise Register. Registered-share holders are kept in the company's own shareholders register maintained by its management board, and dematerialised/publicly-traded shares are recorded with Nasdaq CSD (the Latvian central securities depository). The Enterprise Register's public open data lists SIA members but contains no AS shareholder list, so no shareholder-list document is obtainable from the registry.",
+  "evidence": [
+   {
+    "basis": "EU e-Justice portal — Business registers in Latvia (open data list)",
+    "quote": "data on members of private limited liability companies (first name, surname, part of the personal identity number, number of shares owned by them and the nominal value of those shares)",
+    "note": "Open data is limited to SIA members; joint-stock company shareholders are conspicuously absent — negative evidence that the registry does not hold the AS shareholder list.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Commercial Law (Komerclikums) — joint-stock company share/shareholder provisions (Sec. ~234–235) and Financial Instruments Market Law",
+    "note": "AS shareholders register held by the company (registered shares) or Nasdaq CSD (dematerialised/listed shares); statute text not fetchable verbatim.",
+    "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED verbatim: the specific Commercial Law sections placing the AS shareholder register with the company/Nasdaq CSD were not fetchable; conclusion rests on domain knowledge plus the negative open-data evidence.",
+   "A private per-issuer shareholder list may exist at the company or Nasdaq CSD, but it is not a public registry document."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LV",
+  "legalForm": "SIA",
+  "legalFormLocal": "Sabiedrība ar ierobežotu atbildību",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Register of members (shareholders register)",
+  "documentLocal": "Dalībnieku reģistrs",
+  "summary": "Latvia is notable for making the SIA member list public: since amendments to the Commercial Law in force from 1 July 2021, an SIA's register of members (dalībnieku reģistrs) is filed with and held by the Enterprise Register and is publicly available, listing each member, their number of shares and nominal value. It is a distinct filed document in the registration file (and the same member data is also exposed as free open data). It therefore evidences the German 'Gesellschafterliste' equivalent.",
+  "evidence": [
+   {
+    "basis": "EU e-Justice portal — Business registers in Latvia (open data list)",
+    "quote": "data on members of private limited liability companies (first name, surname, part of the personal identity number, number of shares owned by them and the nominal value of those shares)",
+    "note": "Member/shareholder data of the SIA is public in the Enterprise Register — the distinguishing Latvian feature.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Commercial Law (Komerclikums), Section 10(2) — signatures required for Commercial Register filings",
+    "note": "The fetched English text references notarised signatures 'on the division of the register of shareholders (stockholders) of a capital company', confirming the register of shareholders is a Commercial Register document. Section 187 (register of members) itself could not be fetched verbatim.",
+    "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED verbatim: the exact statutory mechanics (Commercial Law Sec. 186–187, and the 1 July 2021 amendment moving the dalībnieku reģistrs to the Enterprise Register) are asserted from domain knowledge plus the open-data evidence; the section text itself was not fetchable.",
+   "Base-vs-additional is arguable: because current member data now also appears on the register extract/open data, this could alternatively be scored 'proved_by_base_document'. Scored 'additional' because the dedicated dalībnieku reģistrs is a separate document in the file."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LV",
+  "legalForm": "AS",
+  "legalFormLocal": "Akciju sabiedrība",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association",
+  "documentLocal": "Statūti",
+  "summary": "The AS's articles of association (statūti) are filed with the Enterprise Register on incorporation and any amendment (with the full amended text) must be submitted to the Commercial Register. Copies from the public section of the registration file are obtainable online free of charge. The statūti is a separate document from the register extract, proving the constitution via an additional document.",
+  "evidence": [
+   {
+    "basis": "Commercial Law (Komerclikums), Section 9(2)",
+    "quote": "After making amendments to the documents of incorporation of a capital company (memorandum of association, articles of association), the text of the amendments and also the full text of the document as amended must be submitted to the Commercial Register.",
+    "note": "'Capital company' covers the AS (akciju sabiedrība); articles are a filed Commercial Register document.",
+    "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "EU e-Justice portal — Business registers in Latvia",
+    "quote": "The Register also issues copies of documents from the registration file of a legal entity",
+    "note": "Articles are part of the public registration file.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "AS-specific articles section (Sec. ~144 applied via Sec. 226 et seq.) not fetched verbatim; grounded in the general Section 9(2) capital-company rule."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LV",
+  "legalForm": "SIA",
+  "legalFormLocal": "Sabiedrība ar ierobežotu atbildību",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association",
+  "documentLocal": "Statūti",
+  "summary": "The SIA's articles of association (statūti) are filed with the Enterprise Register on incorporation and any amendment (with the full amended text) must be submitted to the Commercial Register. Copies of documents from the public section of the registration file are obtainable online free of charge. The statūti is a separate document from the register extract, so it proves the constitution via an additional document.",
+  "evidence": [
+   {
+    "basis": "Commercial Law (Komerclikums), Section 9(2)",
+    "quote": "After making amendments to the documents of incorporation of a capital company (memorandum of association, articles of association), the text of the amendments and also the full text of the document as amended must be submitted to the Commercial Register.",
+    "note": "Establishes that articles of association are filed with the Commercial Register (applies to both SIA and AS as capital companies).",
+    "url": "https://likumi.lv/ta/en/en/id/5490-the-commercial-law",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "EU e-Justice portal — Business registers in Latvia",
+    "quote": "The Register also issues copies of documents from the registration file of a legal entity",
+    "note": "Articles are part of the registration file; public-part documents are free and immediate.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Section 144 (articles of an SIA) was not fetchable verbatim; the filing/public status is grounded in the general Section 9(2) capital-company rule plus the register's document-issuance practice."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LV",
+  "legalForm": "AS",
+  "legalFormLocal": "Akciju sabiedrība",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Enterprise Register extract",
+  "documentLocal": "Izziņa no Uzņēmumu reģistra",
+  "summary": "The AS is entered in the Enterprise Register, which issues an official extract of its registered data (name, registration number, legal form, registered office, share capital, board and council members). This extract is the base register document. Note it does not contain the shareholder list.",
+  "evidence": [
+   {
+    "basis": "Enterprise Register (ur.gov.lv) / EU e-Justice portal",
+    "quote": "Documents from the public section of the registration file ... may be obtained online from the Enterprise Register's information website free of charge and immediately.",
+    "note": "Same public register and extract mechanism applies to all capital companies including the AS.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statutory wording for the AS extract was not fetched; grounded in the register's general practice."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "LV",
+  "legalForm": "SIA",
+  "legalFormLocal": "Sabiedrība ar ierobežotu atbildību",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Enterprise Register extract",
+  "documentLocal": "Izziņa no Uzņēmumu reģistra",
+  "summary": "The SIA is entered in the Enterprise Register (Uzņēmumu reģistrs), which issues an official extract of its registered data (name, registration number, legal form, registered office, share capital, board members and, since the 2021 reform, its members). Documents and open data from the public part of the register are available online free of charge and immediately. This extract is the base register document.",
+  "evidence": [
+   {
+    "basis": "EU e-Justice portal — Business registers in Latvia",
+    "quote": "Documents from the public section of the registration file ... may be obtained online from the Enterprise Register's information website free of charge and immediately.",
+    "note": "Confirms the public register issues data and documents for registered entities.",
+    "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?LATVIA&member=1",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Enterprise Register (ur.gov.lv) — official site",
+    "note": "Register maintains and publishes company data (legal form, seat, capital, representatives); current and historical data plus documents can be requested from the public part.",
+    "url": "https://www.ur.gov.lv/en/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Local label 'Izziņa no Uzņēmumu reģistra' is the standard extract term; verbatim statutory wording for the extract was not fetched (likumi.lv English page truncates before the capital-company sections)."
   ],
   "confidence": "high"
  },
@@ -7229,6 +8602,168 @@
   "confidence": "high"
  },
  {
+  "jurisdiction": "RO",
+  "legalForm": "SA",
+  "legalFormLocal": "Societate pe acțiuni",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "For an SA the shareholders are not held at ONRC. The act constitutiv registered at ONRC records only the founders (fondatori) and the initial subscribed capital, not the evolving shareholder base. Current shareholders are held in the company's own share register (registrul acționarilor) kept by the company or, for nominative dematerialised shares, by an authorised registrar / central depository (depozitar central). No ONRC document evidences the current shareholders of an SA.",
+  "evidence": [
+   {
+    "basis": "Legea 31/1990 (republicată), Art. 8 lit. d)",
+    "quote": "capitalul social subscris și cel vărsat și, în cazul în care societatea are un capital autorizat, cuantumul acestuia",
+    "note": "Art. 8 governs the act constitutiv of the SA — it captures founders and subscribed/paid capital, not an ongoing shareholder list.",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Legea 31/1990 (republicată), Art. 177 — registrul acționarilor (register kept by the company / central depository)",
+    "note": "The full text of Art. 177 could not be fetched verbatim from the truncated official page; it establishes the company-kept shareholders' register (registrul acționarilor) for nominative shares, held outside ONRC.",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Art. 177 / registrul acționarilor could not be quoted verbatim (source page truncated) — the register's location outside ONRC is asserted from Legea 31/1990's scheme (UNVERIFIED verbatim, but well established).",
+   "The founders can be recovered from the certified copy of the SA's act constitutiv, but founders are not the current shareholders, so this does not satisfy a current shareholder list."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "RO",
+  "legalForm": "SRL",
+  "legalFormLocal": "Societate cu răspundere limitată",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": "Register extract (Certificat constatator) listing associates and social shares",
+  "documentLocal": "certificat constatator (asociați și părți sociale)",
+  "summary": "For an SRL the associates (asociați) and the number/nominal value of the social shares (părți sociale) allotted to each are stated in the act constitutiv and are registered data at ONRC; transfers are recorded by mențiuni. The certificat constatator (the base register extract) therefore lists the current associates and their holdings, so a separate shareholder-list document is not needed. This mirrors the AT/CH GmbH pattern where the extract itself evidences the membership.",
+  "evidence": [
+   {
+    "basis": "Legea 31/1990 (republicată), Art. 7 lit. d)",
+    "quote": "capitalul social subscris, cu menționarea aportului fiecărui asociat, în numerar sau în natură, valoarea aportului în natură, modul evaluării acestuia; la societățile cu răspundere limitată se vor preciza numărul și valoarea nominală a părților sociale, precum și numărul părților sociale atribuite fiecărui asociat pentru aportul său",
+    "note": "Associates and the number of social shares attributed to each are mandatory content of the act constitutiv, hence registered.",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "ONRC — certificat constatator / copii certificate",
+    "note": "ONRC issues the certificat constatator which reflects the registered associates of an SRL; the act constitutiv is also available as a certified copy.",
+    "url": "https://www.onrc.ro/index.php/ro/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "That the certificat constatator lists the current associates with their părți sociale is asserted from ONRC practice and Art. 7 lit. d); no verbatim ONRC field list was fetched (INFERENCE).",
+   "If a fully current holding breakdown is required, the certified copy of the latest act constitutiv / mențiuni may be needed as a supporting additional document."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "RO",
+  "legalForm": "SA",
+  "legalFormLocal": "Societate pe acțiuni",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Certified copy of the constitutive act (Act constitutiv / Statut)",
+  "documentLocal": "act constitutiv (statut) — copie certificată",
+  "summary": "The constitution of an SA is the act constitutiv (which may take the form of contract de societate and/or statut). It is filed with ONRC on incorporation and is part of the public register file, obtainable as a certified copy separately from the register extract — hence proved by an additional document.",
+  "evidence": [
+   {
+    "basis": "Legea 31/1990 (republicată), Art. 8 (content of the act constitutiv for SA)",
+    "quote": "capitalul social subscris și cel vărsat și, în cazul în care societatea are un capital autorizat, cuantumul acestuia",
+    "note": "Art. 8 lit. d) — the act constitutiv is the constitutional document of the SA.",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "ONRC — 'Informatii RC si copii certificate'",
+    "note": "ONRC provides certified copies of company acts, including the act constitutiv / statut of an SA.",
+    "url": "https://www.onrc.ro/index.php/ro/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "For an SA the constitutive act may be split into contract de societate and statut; the certified copy request should cover both (INFERENCE)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "RO",
+  "legalForm": "SRL",
+  "legalFormLocal": "Societate cu răspundere limitată",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Certified copy of the constitutive act (Act constitutiv)",
+  "documentLocal": "act constitutiv (copie certificată)",
+  "summary": "The constitution of an SRL is the act constitutiv, which is filed with ONRC on incorporation and forms part of the public trade-register file. It is obtainable as a certified copy ('copii certificate ale actelor') separately from the register extract, so it is proved by an additional document rather than by the extract itself.",
+  "evidence": [
+   {
+    "basis": "Legea 31/1990 (republicată), Art. 7 (content of the act constitutiv for SRL)",
+    "quote": "asociații care reprezintă și administrează societatea sau administratorii neasociați, datele lor de identificare, durata mandatului, puterile ce li s-au conferit și dacă ei urmează să le exercite împreună sau separat",
+    "note": "Art. 7 lit. e) — illustrates the act constitutiv is the constitutional document of the SRL.",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/56732",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "ONRC — 'Informatii RC si copii certificate'",
+    "note": "ONRC provides certified copies of company acts, including the act constitutiv, from the register file.",
+    "url": "https://www.onrc.ro/index.php/ro/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Whether the current consolidated act constitutiv (post-amendments) is delivered, versus only the original, depends on the ONRC request type (INFERENCE)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "RO",
+  "legalForm": "SA",
+  "legalFormLocal": "Societate pe acțiuni",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Register extract (Certificat constatator)",
+  "documentLocal": "certificat constatator",
+  "summary": "As for any company, ONRC issues the certificat constatator for an SA — the register extract equivalent to the Registerauszug. It evidences the company's identification, capital, and administrators, but it does not contain the current shareholders (only the founders appear via the initial act constitutiv).",
+  "evidence": [
+   {
+    "basis": "ONRC — public services list (certificate constatatoare)",
+    "note": "Certificat constatator is issued for all registered companies, including SA.",
+    "url": "https://www.onrc.ro/index.php/ro/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "The extract does not reflect current shareholders of an SA — see the GESELLSCHAFTERLISTE row."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "RO",
+  "legalForm": "SRL",
+  "legalFormLocal": "Societate cu răspundere limitată",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Register extract (Certificat constatator)",
+  "documentLocal": "certificat constatator",
+  "summary": "ONRC (Oficiul Național al Registrului Comerțului) issues the certificat constatator, the official register extract for any registered company. It is the direct equivalent of the Registerauszug and is available on request (online via portal.onrc.ro or in person). For an SRL it reflects the registered data including associates and their shareholding.",
+  "evidence": [
+   {
+    "basis": "ONRC — public services list (certificate constatatoare; informații RC și copii certificate)",
+    "note": "ONRC homepage lists 'Certificate constatatoare' and 'Informatii RC si copii certificate' as obtainable documents/services.",
+    "url": "https://www.onrc.ro/index.php/ro/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "The exact enumerated content of the certificat constatator was not captured verbatim from an official ONRC schedule; its role as the register extract is well established but the field-by-field content is asserted from general ONRC practice (INFERENCE)."
+  ],
+  "confidence": "high"
+ },
+ {
   "jurisdiction": "SC",
   "legalForm": "CSL",
   "legalFormLocal": "Company holding a Special Licence (Companies (Special Licences) Act 2003)",
@@ -7889,6 +9424,320 @@
   ],
   "caveats": [
    "Currency depends on the company's filing compliance."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SI",
+  "legalForm": "d.d.",
+  "legalFormLocal": "Delniška družba",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "For a d.d., current shareholders are not held in the court register. Shares are dematerialised and the share register (delniška knjiga) is maintained centrally by KDD (Centralna klirinško depotna družba), which is not publicly open. The court register and the founding documents show only the founders (ustanovitelji) at incorporation, which do not evidence current ownership. No registry document proves the current shareholder list.",
+  "evidence": [
+   {
+    "basis": "ZGD-1 — d.d. shares; dematerialised securities held in the central register maintained by KDD; court register records founders only",
+    "note": "KDD central register is not a public source of a shareholder list; only founders appear at incorporation.",
+    "url": "https://www.kdd.si/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED verbatim: KDD-held share register and founders-only court register are established features of Slovenian d.d. law; article text not fetched.",
+   "Founders listed at incorporation are typically stale and do not prove current shareholders."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SI",
+  "legalForm": "d.o.o.",
+  "legalFormLocal": "Družba z omejeno odgovornostjo",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": "Members shown within the court register extract",
+  "documentLocal": "Družbeniki (navedeni v izpisku iz sodnega registra)",
+  "summary": "Slovenia is distinctive: the members (družbeniki) of a d.o.o. are entered directly into the public court register together with their business shares (poslovni delež), and changes of membership must be registered. The register extract therefore itself evidences the current members, so no separate shareholder-list document is required. The identity of members is public.",
+  "evidence": [
+   {
+    "basis": "ZGD-1 (Companies Act) — d.o.o. members and their business shares are registered facts; changes require entry in the court register",
+    "note": "Article numbers (registration of d.o.o. and of transfers of business shares) not verified verbatim; membership is a registered, public datum shown on the extract.",
+    "url": "http://www.pisrs.si/Pis.web/pregledPredpisa?id=ZAKO4291",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "The proof is the register extract itself (same base document as REGISTERAUSZUG); there is no distinct filed 'seznam družbenikov' needed for d.o.o.",
+   "INFERENCE/UNVERIFIED verbatim: members-in-register is a well-established feature of Slovenian d.o.o. law but exact ZGD-1 article text was not fetched.",
+   "The registered members reflect the register; beneficial/indirect ownership is not shown."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SI",
+  "legalForm": "d.d.",
+  "legalFormLocal": "Delniška družba",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Statute (articles of association)",
+  "documentLocal": "Statut",
+  "summary": "The constitution of a d.d. is the statut (statute). It is filed with the court register on incorporation and on amendment and is kept in the public collection of documents (zbirka listin), generally downloadable free through the e-Sodni register. It is a separate registry document from the extract and therefore proved by an additional document.",
+  "evidence": [
+   {
+    "basis": "ZGD-1 — d.d. is governed by its statut; ZSReg — collection of documents (zbirka listin) is public",
+    "note": "Statute filed and public via zbirka listin; verbatim text not fetched.",
+    "url": "https://www.ajpes.si/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED verbatim: public availability of the statut via the court register's collection of documents is standard but statutory text not fetched.",
+   "The filed statute may lag the latest consolidated amendments."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "SI",
+  "legalForm": "d.o.o.",
+  "legalFormLocal": "Družba z omejeno odgovornostjo",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Articles of association / act of establishment",
+  "documentLocal": "Družbena pogodba (oz. akt o ustanovitvi za enoosebno d.o.o.)",
+  "summary": "The constitutive document of a d.o.o. — the družbena pogodba (multi-member) or akt o ustanovitvi (single-member) — is filed with the court register and kept in the public collection of documents (zbirka listin). It is a separate document from the register extract but is publicly accessible, generally downloadable free of charge through the e-Sodni register. It is therefore proved by an additional registry document.",
+  "evidence": [
+   {
+    "basis": "ZGD-1 — d.o.o. is founded by družbena pogodba / akt o ustanovitvi; ZSReg — collection of documents (zbirka listin) is public",
+    "note": "Constitution is filed at incorporation and on amendment; public via zbirka listin. Verbatim text not fetched.",
+    "url": "https://www.ajpes.si/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "INFERENCE/UNVERIFIED verbatim: public availability of the constitution via the court register's collection of documents is standard but statutory text not fetched.",
+   "The filed constitution may be an older amended version; it need not reflect the very latest consolidated text."
+  ],
+  "confidence": "medium"
+ },
+ {
+  "jurisdiction": "SI",
+  "legalForm": "d.d.",
+  "legalFormLocal": "Delniška družba",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Court register extract",
+  "documentLocal": "Izpisek iz sodnega registra (redni izpis)",
+  "summary": "As for a d.o.o., a d.d. has a public court register extract (izpisek) issued by AJPES via the e-Sodni register. It is the base document evidencing existence, seat, activity, share capital, management/supervisory bodies and representatives, and is freely retrievable online.",
+  "evidence": [
+   {
+    "basis": "ZSReg — public court register and free extract; AJPES e-Sodni register",
+    "note": "Standard public base document; verbatim text not fetched.",
+    "url": "https://www.ajpes.si/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statutory text not fetched (SPA sources, search budget exhausted)."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SI",
+  "legalForm": "d.o.o.",
+  "legalFormLocal": "Družba z omejeno odgovornostjo",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Court register extract",
+  "documentLocal": "Izpisek iz sodnega registra (redni izpis)",
+  "summary": "The Slovenian court register (sodni register), operated by AJPES via the e-Sodni register, issues a public register extract (izpisek) for every registered company. For a d.o.o. this extract is the base register document evidencing legal existence, seat, business activity, share capital, representatives and members. It is freely retrievable online.",
+  "evidence": [
+   {
+    "basis": "ZSReg (Zakon o sodnem registru) — public court register and free extract; AJPES e-Sodni register",
+    "note": "Extract (izpisek) is the standard public base document; article text not fetched verbatim (sources are JS SPAs).",
+    "url": "https://www.ajpes.si/",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "AJPES homepage description of PRS",
+    "note": "Confirmed live: PRS is a 'public database of all business entities with headquarters in the Republic of Slovenia.'",
+    "url": "https://www.ajpes.si/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statutory text (ZSReg) could not be fetched; primary sites are SPAs and web-search budget was exhausted.",
+   "INFERENCE: the register extract being the free public base document is standard EU/AJPES practice and consistent with prior jurisdiction findings."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SK",
+  "legalForm": "a.s.",
+  "legalFormLocal": "Akciová spoločnosť",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "not_provable_from_registry",
+  "documentLabel": null,
+  "documentLocal": null,
+  "summary": "An a.s. shareholder list is not obtainable from the commercial register. The register records the founders (zakladatelia) as at incorporation and the statutory/supervisory bodies, but not the ongoing body of shareholders. Current shareholders of book-entry shares (zaknihované akcie) are held in the register of holders maintained by the Central Securities Depository (Centrálny depozitár cenných papierov, CDCP); for physical registered shares (listinné akcie na meno) the list of shareholders (zoznam akcionárov) is kept privately by the company itself. Neither is a public register document.",
+  "evidence": [
+   {
+    "basis": "Obchodný zákonník 513/1991, § 156 — evidence of registered shares (register of holders kept by the securities depository / list of shareholders kept by the company); Act 566/2001 on Securities, on CDCP registers",
+    "note": "Shareholders evidenced outside the commercial register; verbatim not captured.",
+    "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Centrálny depozitár cenných papierov SR (CDCP)",
+    "note": "Holder register for book-entry shares; not public per-issuer document",
+    "url": "https://www.cdcp.sk",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statute text UNVERIFIED — asserted from domain knowledge.",
+   "Exception: a single-member a.s. (jediný akcionár) — the sole shareholder IS recorded in the commercial register, so for that narrow case the extract does evidence the (sole) shareholder.",
+   "The register's founder (zakladatelia) entry reflects incorporation only and is not updated for later share transfers, so it is not a current shareholder list.",
+   "CDCP / company shareholder lists are access-restricted, not open public documents."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SK",
+  "legalForm": "s.r.o.",
+  "legalFormLocal": "Spoločnosť s ručením obmedzeným",
+  "kind": "GESELLSCHAFTERLISTE",
+  "status": "proved_by_base_document",
+  "documentLabel": "Commercial register extract (lists members / spoločníci)",
+  "documentLocal": "Výpis z obchodného registra",
+  "summary": "For an s.r.o. the members (spoločníci) are a mandatory register entry: each member is recorded with the amount of their contribution (výška vkladu) and the extent of its payment (rozsah splatenia). They appear on the public výpis, so the register extract itself is the authoritative member list — no separate Gesellschafterliste document is needed or exists. This is the key difference from an a.s.",
+  "evidence": [
+   {
+    "basis": "Act 530/2003 Coll., § 2 — for a s.r.o. the register records each spoločník together with výška vkladu and rozsah jeho splatenia; Obchodný zákonník 513/1991, § 105–106",
+    "note": "Members are recorded in the register and shown on the extract; verbatim not captured.",
+    "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statute text UNVERIFIED — asserted from domain knowledge, not quoted from a fetched source.",
+   "The extract reflects the currently registered members; changes take effect only on registration, so a very recent transfer may not yet appear."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SK",
+  "legalForm": "a.s.",
+  "legalFormLocal": "Akciová spoločnosť",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Founding deed and articles of association",
+  "documentLocal": "Zakladateľská zmluva / zakladateľská listina a stanovy",
+  "summary": "The constitution of an a.s. comprises the founding instrument — zakladateľská zmluva (multiple founders) or zakladateľská listina (single founder) — together with the stanovy (articles of association). Both are filed in the collection of deeds (zbierka listín) of the commercial register, which is public, and are retrievable as separate documents beyond the standard extract. Amended stanovy are deposited as a consolidated wording.",
+  "evidence": [
+   {
+    "basis": "Act 530/2003 Coll., § 3 — zbierka listín (founding instrument and stanovy and their úplné znenie); Obchodný zákonník 513/1991, § 162–163 (zakladateľská zmluva/listina, stanovy)",
+    "note": "Founding documents deposited in and publicly accessible from the zbierka listín; verbatim not captured.",
+    "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Obchodný register SR — zbierka listín access",
+    "note": "",
+    "url": "https://www.orsr.sk",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statute text UNVERIFIED — asserted from domain knowledge.",
+   "Single-founder a.s. uses a zakladateľská listina instead of a zakladateľská zmluva; the stanovy are the substantive constitution in either case.",
+   "Latest consolidated stanovy depend on the company having filed them; older filings may be scanned images."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SK",
+  "legalForm": "s.r.o.",
+  "legalFormLocal": "Spoločnosť s ručením obmedzeným",
+  "kind": "GESELLSCHAFTSVERTRAG",
+  "status": "proved_by_additional_document",
+  "documentLabel": "Memorandum / articles of association",
+  "documentLocal": "Spoločenská zmluva (alebo zakladateľská listina, ak je jediný spoločník)",
+  "summary": "The constitution of an s.r.o. is the spoločenská zmluva, or a zakladateľská listina where there is a single founder. It is filed in the collection of deeds (zbierka listín) of the commercial register, which is public, and is retrievable as a separate (additional) document beyond the standard extract. Amendments are deposited as a consolidated wording (úplné znenie).",
+  "evidence": [
+   {
+    "basis": "Act 530/2003 Coll., § 3 — zbierka listín contents (spoločenská zmluva / zakladateľská listina and their úplné znenie); Obchodný zákonník 513/1991, § 110",
+    "note": "Founding document deposited in and publicly accessible from the zbierka listín; verbatim not captured.",
+    "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Obchodný register SR — zbierka listín access",
+    "note": "Collection of deeds browsable per company",
+    "url": "https://www.orsr.sk",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statute text UNVERIFIED — asserted from domain knowledge.",
+   "Single-founder s.r.o. uses a zakladateľská listina rather than a spoločenská zmluva.",
+   "Availability of the latest consolidated wording depends on the company having filed it; older filings may be scanned images."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SK",
+  "legalForm": "a.s.",
+  "legalFormLocal": "Akciová spoločnosť",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Commercial register extract",
+  "documentLocal": "Výpis z obchodného registra",
+  "summary": "The base register document for an a.s. is likewise the výpis z obchodného registra from Obchodný register SR. It publicly shows company name, seat, IČO, activities, statutory body (predstavenstvo), supervisory board (dozorná rada) and registered capital / share structure. It is the direct equivalent of a German Registerauszug.",
+  "evidence": [
+   {
+    "basis": "Act 530/2003 Coll., § 2 and § 11; Obchodný zákonník 513/1991, § 154 et seq.",
+    "note": "Extract is the public base document produced by ORSR; verbatim not captured.",
+    "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Obchodný register SR public portal",
+    "note": "",
+    "url": "https://www.ru.justice.sk",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statute text UNVERIFIED — asserted from domain knowledge, not quoted from a fetched source."
+  ],
+  "confidence": "high"
+ },
+ {
+  "jurisdiction": "SK",
+  "legalForm": "s.r.o.",
+  "legalFormLocal": "Spoločnosť s ručením obmedzeným",
+  "kind": "REGISTERAUSZUG",
+  "status": "proved_by_base_document",
+  "documentLabel": "Commercial register extract",
+  "documentLocal": "Výpis z obchodného registra",
+  "summary": "The base register document for an s.r.o. is the výpis z obchodného registra issued by the Obchodný register SR (orsr.sk / ru.justice.sk). It is the standard, publicly retrievable extract carrying company name, seat, IČO, business activities, statutory body and registered capital. It is the direct equivalent of a German Registerauszug.",
+  "evidence": [
+   {
+    "basis": "Act 530/2003 Coll. on the Commercial Register (Zákon o obchodnom registri), § 2 (recorded data) and § 11 (extract)",
+    "note": "Verbatim not captured (Slov-Lex is JS-rendered; not fetchable). Extract is the public base document produced by ORSR.",
+    "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/530/",
+    "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Obchodný register SR public portal",
+    "note": "Výpis available online per company",
+    "url": "https://www.orsr.sk",
+    "retrieved": "2026-07-20"
+   }
+  ],
+  "caveats": [
+   "Verbatim statute text UNVERIFIED — Slov-Lex could not be fetched and web search budget was exhausted; wording of § 2/§ 11 of Act 530/2003 is asserted from domain knowledge, not quoted."
   ],
   "confidence": "high"
  },
