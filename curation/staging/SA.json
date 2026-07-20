@@ -1,0 +1,112 @@
+[
+  {
+    "jurisdiction": "SA",
+    "legalForm": "LLC",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Registration certificate",
+    "documentLocal": "شهادة السجل التجاري",
+    "summary": "The Ministry of Commerce maintains the Commercial Register (السجل التجاري) and issues a Commercial Registration certificate for every registered company. For an LLC this certificate is the direct register-extract equivalent: it states the company's particulars — name, CR number, legal form, capital, registered address, activities and manager(s). It is the base document obtainable from the registry.",
+    "evidence": [
+      {"basis": "Companies Law 2022 (Royal Decree M/132) and Commercial Register Law; Ministry of Commerce, mc.gov.sa", "quote": "", "note": "Primary source not fetchable in-session (TLS-cert / 403 errors on mc.gov.sa and boe.gov.sa). CR certificate as the register extract is established Saudi practice; UNVERIFIED by fetched text.", "url": "https://mc.gov.sa/en/Regulations", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Quote empty: could not fetch verbatim statute/registry text (see note).",
+      "INFERENCE from domain knowledge of M/132 and MC registry practice; not confirmed against a fetched official document."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SA",
+    "legalForm": "LLC",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of Association / Memorandum of Association (lists partners and their shares)",
+    "documentLocal": "عقد التأسيس",
+    "summary": "An LLC's partners (الشركاء) and their share allocation (الحصص) are stated in the company's memorandum / articles of association (عقد التأسيس), which is filed with and registered by the Ministry of Commerce. The membership is therefore provable, but the carrying document is the registered AoA rather than the CR certificate itself — hence an additional document, not the base extract. There is no separate standalone 'shareholder list' filing equivalent to a German Gesellschafterliste.",
+    "evidence": [
+      {"basis": "Companies Law 2022 (Royal Decree M/132), LLC memorandum/AoA provisions; Ministry of Commerce", "quote": "", "note": "Primary source not fetchable in-session. The CR certificate may also display partner names, but the authoritative partner-and-share allocation lives in the عقد التأسيس. UNVERIFIED by fetched text.", "url": "https://mc.gov.sa/en/Regulations", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Quote empty: could not fetch verbatim statute text.",
+      "Base-vs-additional is a judgement call: the CR extract can show partner names, but full share breakdown is in the AoA, so classified as additional document.",
+      "INFERENCE/UNVERIFIED — grounded in M/132 knowledge, not a fetched official filing."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "SA",
+    "legalForm": "LLC",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of Association / Memorandum of Association",
+    "documentLocal": "عقد التأسيس",
+    "summary": "The constitution of an LLC is its memorandum / articles of association (عقد التأسيس), executed by the partners and filed with and registered by the Ministry of Commerce. It is obtainable from the registry as a document distinct from the CR certificate, so the constitution is provable via this additional registered document.",
+    "evidence": [
+      {"basis": "Companies Law 2022 (Royal Decree M/132), LLC constitution/registration provisions; Ministry of Commerce", "quote": "", "note": "Primary source not fetchable in-session. Registration/filing of the AoA is standard under M/132. UNVERIFIED by fetched text.", "url": "https://mc.gov.sa/en/Regulations", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Quote empty: could not fetch verbatim statute text.",
+      "INFERENCE/UNVERIFIED — based on M/132 domain knowledge."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SA",
+    "legalForm": "JSC",
+    "legalFormLocal": "شركة مساهمة",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Registration certificate",
+    "documentLocal": "شهادة السجل التجاري",
+    "summary": "As for all registered companies, the Ministry of Commerce issues a Commercial Registration certificate for a joint stock company. It states the company's particulars — name, CR number, legal form, capital, address, activities and board/management — and is the base register-extract document obtainable from the registry.",
+    "evidence": [
+      {"basis": "Companies Law 2022 (Royal Decree M/132) and Commercial Register Law; Ministry of Commerce, mc.gov.sa", "quote": "", "note": "Primary source not fetchable in-session (TLS/403). UNVERIFIED by fetched text.", "url": "https://mc.gov.sa/en/Regulations", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Quote empty: could not fetch verbatim registry text.",
+      "INFERENCE/UNVERIFIED — based on MC registry practice and M/132."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "SA",
+    "legalForm": "JSC",
+    "legalFormLocal": "شركة مساهمة",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "A JSC's current shareholders are held in a shareholders' register (سجل المساهمين), not in the commercial register. For listed/public JSCs the register is maintained by the Securities Depository Center (Edaa), a Tadawul subsidiary; for closed JSCs the company keeps its own register and shares are commonly deposited with Edaa. The Ministry of Commerce commercial register and the bylaws only evidence the founders (المؤسسون) at incorporation, not the live shareholder body, so the current shareholder list is not provable from the registry.",
+    "evidence": [
+      {"basis": "Companies Law 2022 (Royal Decree M/132), JSC shareholder-register provisions; Edaa (Securities Depository Center), Tadawul", "quote": "", "note": "Primary source not fetchable in-session. Founders appear in incorporation documents; the maintained shareholder register sits with the company/Edaa, outside the MC commercial register. UNVERIFIED by fetched text.", "url": "https://mc.gov.sa/en/Regulations", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Quote empty: could not fetch verbatim statute text.",
+      "Founders (not current shareholders) are evidenced by the incorporation memorandum/bylaws; that is not a live shareholder list.",
+      "INFERENCE/UNVERIFIED — based on M/132 and Edaa/Tadawul structure."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "SA",
+    "legalForm": "JSC",
+    "legalFormLocal": "شركة مساهمة",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Bylaws (Articles of Association), with founders' memorandum of association",
+    "documentLocal": "النظام الأساسي (وعقد التأسيس)",
+    "summary": "The constitution of a JSC is its bylaws / articles of association (النظام الأساسي), accompanied by the founders' memorandum of association (عقد التأسيس). These are filed with and registered/published by the Ministry of Commerce and are obtainable as documents distinct from the CR certificate, so the constitution is provable via this additional registered document.",
+    "evidence": [
+      {"basis": "Companies Law 2022 (Royal Decree M/132), JSC bylaws/incorporation and publication provisions; Ministry of Commerce", "quote": "", "note": "Primary source not fetchable in-session. Registration/publication of JSC bylaws is standard under M/132. UNVERIFIED by fetched text.", "url": "https://mc.gov.sa/en/Regulations", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Quote empty: could not fetch verbatim statute text.",
+      "INFERENCE/UNVERIFIED — based on M/132 domain knowledge."
+    ],
+    "confidence": "high"
+  }
+]

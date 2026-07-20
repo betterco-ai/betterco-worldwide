@@ -1,0 +1,115 @@
+[
+  {
+    "jurisdiction": "TW",
+    "legalForm": "Youxian Gongsi",
+    "legalFormLocal": "有限公司",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "MOEA company registration transcript / GCIS public registration record",
+    "documentLocal": "公司登記事項 (抄錄本) / 商工登記公示資料",
+    "summary": "The MOEA/GCIS company registration system issues a registration transcript that constitutes the register extract for a 有限公司, showing company name, business scope, address, capital, and the director(s). Under Company Act Art 393(2)-(3) these registered particulars are publicly disclosed and any person may inspect, transcribe or copy them (items 1-9 freely on the MOEA website). This is the equivalent of the German Registerauszug and is the base document.",
+    "evidence": [
+      {"basis": "Company Act (公司法) Art 393, para 3", "quote": "前項第一款至第九款，任何人得至主管機關之資訊網站查閱；第十款，經公司同意者，亦同。", "note": "Registered items 1-9 (name, business, address, directors/supervisors, capital, etc.) are freely inspectable by anyone on the MOEA information website.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393", "retrieved": "2026-07-21"},
+      {"basis": "MOEA GCIS company registration public query (商工登記公示資料查詢服務)", "quote": "", "note": "Public registration search portal that issues the register extract for all company types including 有限公司.", "url": "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The base free public extract shows the director(s) and capital, not the full non-director shareholder roster (that is treated separately under GESELLSCHAFTERLISTE)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "TW",
+    "legalForm": "Youxian Gongsi",
+    "legalFormLocal": "有限公司",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Company articles of incorporation (which by statute list every shareholder and each shareholder's capital contribution)",
+    "documentLocal": "公司章程",
+    "summary": "For a 有限公司 the shareholders and their capital contributions are not a separate freely-public register item, but Company Act Art 101 requires the articles of incorporation (章程) to state each shareholder's name and each shareholder's capital contribution, and Art 111(3) confirms any change of shareholder/contribution is effected by amending those provisions of the 章程. The 章程 is a filed document that MOEA discloses under Art 393(2) item 10, obtainable by any person on application (online only with company consent). Thus the shareholder list is provable, but via the additional 章程 document rather than the base extract.",
+    "evidence": [
+      {"basis": "Company Act (公司法) Art 111, para 3", "quote": "前二項轉讓，不同意之股東有優先受讓權；如不承受，視為同意轉讓，並同意修改章程有關股東及其出資額事項。", "note": "Confirms the 有限公司 articles (章程) contain the 'shareholders and their capital contributions' matters, updated on any transfer.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=111", "retrieved": "2026-07-21"},
+      {"basis": "Company Act (公司法) Art 101 (contents of a limited company's articles of incorporation)", "quote": "", "note": "Art 101(1) requires the articles to state each shareholder's name (股東姓名或名稱) and each shareholder's capital contribution (各股東出資額). Verbatim Chinese not captured; content confirmed via official English translation.", "url": "https://law.moj.gov.tw/ENG/LawClass/LawSingle.aspx?pcode=J0080001&flno=101", "retrieved": "2026-07-21"},
+      {"basis": "Company Act (公司法) Art 393, para 2 item 10 + para 3", "quote": "前項第一款至第九款，任何人得至主管機關之資訊網站查閱；第十款，經公司同意者，亦同。", "note": "Item 10 = 公司章程. Disclosable to any person; online display of the 章程 requires company consent, but application-based 查閱/抄錄/複製 is available regardless.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The separate at-company shareholder roster under Art 103 (股東名簿) is NOT a registry document — it is held by the company; the registry-provable proof is the 章程.",
+      "INFERENCE: classified as additional (not base) because the full shareholder roster is not on the free public extract; if the MOEA full registration file / 登記事項卡 is treated as showing all shareholders and 出資額, it could instead be read as proved_by_base_document.",
+      "UNVERIFIED: online availability of the 章程 depends on company consent per Art 393(3); offline any-person application under Art 393(2) is the reliable route."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "TW",
+    "legalForm": "Youxian Gongsi",
+    "legalFormLocal": "有限公司",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Company articles of incorporation",
+    "documentLocal": "公司章程",
+    "summary": "A 有限公司's articles of incorporation (章程) are a document filed in the registration process. Company Act Art 393(2) item 10 lists 公司章程 among the items the MOEA must disclose, and any person may inspect, transcribe or copy it on application (online display requires company consent per Art 393(3)). This is a distinct document from the base register extract, so it is an additional registry document.",
+    "evidence": [
+      {"basis": "Company Act (公司法) Art 393, para 2 item 10", "quote": "公司章程。", "note": "The articles of incorporation are an enumerated publicly-disclosable registration item.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393", "retrieved": "2026-07-21"},
+      {"basis": "Company Act (公司法) Art 393, para 3", "quote": "前項第一款至第九款，任何人得至主管機關之資訊網站查閱；第十款，經公司同意者，亦同。", "note": "Item 10 (章程) is viewable online only with company consent; application-based any-person access remains available under para 2.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Free online access to the 章程 requires the company's consent (Art 393(3)); guaranteed any-person access is via 查閱/抄錄/複製 application to MOEA under Art 393(2)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "TW",
+    "legalForm": "Gufen Youxian Gongsi",
+    "legalFormLocal": "股份有限公司",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "MOEA company registration transcript / GCIS public registration record",
+    "documentLocal": "公司登記事項 (抄錄本) / 商工登記公示資料",
+    "summary": "The MOEA/GCIS registration system issues a registration transcript that is the register extract for a 股份有限公司, showing name, business scope, address, capital, and directors/supervisors (with their shareholding). Under Company Act Art 393(2)-(3) these items are publicly disclosed and any person may view items 1-9 on the MOEA website. This is the base document equivalent to the German Registerauszug.",
+    "evidence": [
+      {"basis": "Company Act (公司法) Art 393, para 2 item 5", "quote": "董事、監察人姓名及持股。", "note": "Directors' and supervisors' names and shareholding are publicly-disclosed registered items for a company limited by shares.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393", "retrieved": "2026-07-21"},
+      {"basis": "MOEA GCIS company registration public query (商工登記公示資料查詢服務)", "quote": "", "note": "Public registration search portal issuing the register extract for a 股份有限公司.", "url": "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The extract reflects directors/supervisors and promoters, not the general body of shareholders."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "TW",
+    "legalForm": "Gufen Youxian Gongsi",
+    "legalFormLocal": "股份有限公司",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a 股份有限公司 the shareholders are recorded in the shareholder register (股東名簿) which Company Act Art 169 requires the company to keep itself; it is not filed with or issued by the MOEA. The articles (Art 129) do not list individual shareholders, and the registry only shows promoters, directors and supervisors (Art 393(2) items 4-5). Ordinary shareholders therefore cannot be evidenced by any MOEA/GCIS document; only the company's internal 股東名簿 (or, for listed firms, TDCC records) evidences them.",
+    "evidence": [
+      {"basis": "Company Act (公司法) Art 169", "quote": "股東名簿應編號記載下列事項：一、各股東之姓名或名稱、住所或居所。二、各股東之股數；發行股票者，其股票號數。三、發給股票之年、月、日。四、發行特別股者，並應註明特別種類字樣。", "note": "The shareholder register is maintained by the company, not the registry.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=169", "retrieved": "2026-07-21"},
+      {"basis": "Company Act (公司法) Art 393, para 2 items 4-5", "quote": "執行業務或代表公司之股東。", "note": "Only representative shareholders (unlimited-type) and directors/supervisors (item 5) are disclosed; no general shareholder list for a company limited by shares.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Only promoters (發起人, in incorporation documents) and directors/supervisors reach the registry; the ongoing shareholder body does not.",
+      "The company-held 股東名簿 (Art 169) is the actual shareholder list but is not a registry document; obtaining it requires the company's cooperation (or, for TWSE/TPEx-listed companies, TDCC 集保 records)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "TW",
+    "legalForm": "Gufen Youxian Gongsi",
+    "legalFormLocal": "股份有限公司",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Company articles of incorporation",
+    "documentLocal": "公司章程",
+    "summary": "A 股份有限公司's articles of incorporation (章程) are filed in registration and enumerated as a publicly-disclosable item under Company Act Art 393(2) item 10; any person may inspect, transcribe or copy them on application to MOEA (online display requires company consent per Art 393(3)). This is a distinct document from the base register extract, so it is an additional registry document.",
+    "evidence": [
+      {"basis": "Company Act (公司法) Art 393, para 2 item 10", "quote": "公司章程。", "note": "Articles of incorporation are an enumerated publicly-disclosable registration item for all company types.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393", "retrieved": "2026-07-21"},
+      {"basis": "Company Act (公司法) Art 393, para 3", "quote": "前項第一款至第九款，任何人得至主管機關之資訊網站查閱；第十款，經公司同意者，亦同。", "note": "Online display of the 章程 requires company consent; application-based any-person access remains under para 2.", "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Free online access to the 章程 requires the company's consent (Art 393(3)); guaranteed any-person access is via application to MOEA under Art 393(2).",
+      "For a 股份有限公司 the articles state authorized/issued capital and share structure but do NOT list individual shareholders (contrast Art 101 for 有限公司)."
+    ],
+    "confidence": "high"
+  }
+]

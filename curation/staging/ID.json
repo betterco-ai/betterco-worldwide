@@ -1,0 +1,120 @@
+[
+  {
+    "jurisdiction": "ID",
+    "legalForm": "PT",
+    "legalFormLocal": "Perseroan Terbatas",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Ministerial Decree ratifying legal-entity status (and decrees approving amendments)",
+    "documentLocal": "Surat Keputusan Menteri Hukum dan HAM tentang Pengesahan Badan Hukum Perseroan (SK Kemenkumham); data snapshot: Profil Perseroan (AHU/SABH)",
+    "summary": "The registry (Ministry of Law and Human Rights via AHU Online) maintains the Daftar Perseroan and issues the SK Pengesahan Badan Hukum that confers legal-entity status on the PT, plus further SKs approving/receiving each anggaran-dasar or data change (Pasal 7(4), 29, 30 UUPT). Those decrees are the registry-issued documents evidencing the company's existence and current legal data. Indonesia has no single certified 'current extract' document in the German Handelsregisterauszug sense; the current-state snapshot is the AHU 'Profil Perseroan', which is a data printout (parsed data) with restricted access.",
+    "evidence": [
+      {"basis": "UU No. 40 Tahun 2007 (UUPT), Pasal 7(4), 9, 29, 30", "quote": "", "note": "Could not retrieve verbatim text (source hosts returned 403/404). Framework confirmed via id.wikipedia paraphrase: akta pendirian is ratified by the Minister and the PT becomes a badan hukum upon the ministerial decree/announcement.", "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "UNVERIFIED: verbatim Pasal 29/30 text not fetched; article mapping is from knowledge of UUPT, not a live quote.",
+      "INFERENCE: SK Kemenkumham is treated as the register-extract equivalent because no standalone certified 'current extract' document exists in ID.",
+      "The AHU 'Profil Perseroan' shows current consolidated data but is parsed data, not a document, and public self-service access is limited (notary/paid access).",
+      "UUPT was amended by the Job Creation Law (UU 11/2020, re-enacted as UU 6/2023); core incorporation/registration articles remain substantively intact."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "ID",
+    "legalForm": "PT",
+    "legalFormLocal": "Perseroan Terbatas",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Deed of Establishment (names founding shareholders) + subsequent notarial share-transfer deeds notified to Kemenkumham",
+    "documentLocal": "Akta Pendirian (menyebut pendiri/pemegang saham); Akta Jual Beli Saham / Akta RUPS + penerimaan pemberitahuan; current statutory list: Daftar Pemegang Saham (Pasal 50, dipelihara Direksi)",
+    "summary": "The founding shareholders are named as a document fact in the Akta Pendirian (Pasal 8 UUPT), and share transfers must be effected by notarial deed and notified to the Minister for recording in the Daftar Perseroan (Pasal 56). Thus a shareholder list is provable through documents, but as a point-in-time / founders proof rather than a guaranteed current cap table. The statutory CURRENT shareholder register is the company's Daftar Pemegang Saham kept by the Board of Directors (Pasal 50), which is company-held and open only to shareholders, not the general public; the AHU Profil Perseroan may display current shareholders but is parsed data with restricted access.",
+    "evidence": [
+      {"basis": "UU No. 40 Tahun 2007, Pasal 8 (contents of deed / founders), Pasal 50 (daftar pemegang saham & daftar khusus kept by Direksi), Pasal 56 (share transfer by deed, notified to Minister)", "quote": "", "note": "Verbatim text not retrievable this session; article numbers from knowledge of UUPT.", "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "UNVERIFIED: no verbatim Pasal 8/50/56 quote obtained.",
+      "The akta proves FOUNDERS / a historical snapshot; it does not by itself prove the CURRENT shareholder body.",
+      "The current statutory register (Daftar Pemegang Saham, Pasal 50) is maintained by the company, not the registry, and is not routinely public.",
+      "INFERENCE: reconstructing a current list from the registry generally requires the latest akta perubahan + notification receipts, or the company's own DPS; the AHU Profil Perseroan snapshot is parsed data, not a document."
+    ],
+    "confidence": "low"
+  },
+  {
+    "jurisdiction": "ID",
+    "legalForm": "PT",
+    "legalFormLocal": "Perseroan Terbatas",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Deed of Establishment containing the Articles of Association (and later deeds of amendment approved by the Ministry)",
+    "documentLocal": "Akta Pendirian yang memuat Anggaran Dasar (dan Akta Perubahan Anggaran Dasar + SK Persetujuan Menteri)",
+    "summary": "The constitution of a PT is the Anggaran Dasar contained in the notarial Akta Pendirian (Pasal 8 and 15 UUPT), which is ratified by the Minister (SK Pengesahan) and announced in the Berita Negara / Tambahan Berita Negara (Pasal 30). It exists as a concrete document; the current constitution is the original akta as amended by any Akta Perubahan Anggaran Dasar approved by the Minister. Copies are held by the officiating notary and evidenced by the ministerial decree and the BNRI announcement, rather than by a self-service registry download.",
+    "evidence": [
+      {"basis": "UU No. 40 Tahun 2007, Pasal 8 & 15 (deed contains articles of association), Pasal 21 (amendment of anggaran dasar), Pasal 30 (announcement in Berita Negara)", "quote": "", "note": "id.wikipedia paraphrase confirms: notarial akta in Indonesian contains the anggaran dasar, ratified by the Minister and announced in BNRI. Verbatim article text not fetched.", "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "UNVERIFIED: no verbatim Pasal 8/15/21/30 quote obtained this session.",
+      "The akta/anggaran dasar is primarily obtained from the officiating notary; the registry evidences it via the SK and the BNRI announcement rather than issuing the deed itself.",
+      "Only the anggaran dasar (articles) and its amendments are public; the full deed may contain details accessed via the notary."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "ID",
+    "legalForm": "PT Tbk",
+    "legalFormLocal": "Perseroan Terbuka (Tbk)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Ministerial Decree ratifying legal-entity status (and decrees approving amendments)",
+    "documentLocal": "Surat Keputusan Menteri Hukum dan HAM tentang Pengesahan Badan Hukum Perseroan (SK Kemenkumham); data snapshot: Profil Perseroan (AHU/SABH)",
+    "summary": "A PT Tbk is still a Perseroan Terbatas registered at AHU and holds the same registry footprint as a private PT: the SK Pengesahan Badan Hukum and subsequent SKs recorded in the Daftar Perseroan are the registry-issued documents evidencing existence and legal data (Pasal 7(4), 29, 30 UUPT). As with a private PT, there is no single certified 'current extract' document; the AHU Profil Perseroan is the current-state data snapshot (parsed data). For a listed company, additional current status is also visible via OJK/IDX disclosures, but the core company-law register is the same as for a PT.",
+    "evidence": [
+      {"basis": "UU No. 40 Tahun 2007, Pasal 1(7) (definition of Perseroan Terbuka), Pasal 7(4), 29, 30", "quote": "", "note": "Verbatim text not fetched; a Tbk remains an AHU-registered PT with an SK Pengesahan.", "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "UNVERIFIED: no verbatim article quote obtained.",
+      "INFERENCE: SK Kemenkumham treated as register-extract equivalent; no standalone certified current extract exists.",
+      "Listed-company current data is additionally disclosed via OJK and IDX, but that is a securities-disclosure channel, not the company register.",
+      "AHU Profil Perseroan is parsed data with restricted public access."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "ID",
+    "legalForm": "PT Tbk",
+    "legalFormLocal": "Perseroan Terbuka (Tbk)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a listed PT Tbk, shares are dematerialised (scripless) and held collectively through the central securities depository KSEI, with the shareholder register maintained by a securities administration bureau (Biro Administrasi Efek), not by the company-law registry. No AHU/Kemenkumham document lists the current full body of public shareholders. The founding shareholders remain named in the Akta Pendirian, and holders of significant stakes (e.g. >=5%) are disclosed to OJK/IDX and in the annual report/prospectus, but a complete current shareholder list is not obtainable as a registry document.",
+    "evidence": [
+      {"basis": "UU No. 40 Tahun 2007, Pasal 50 & 56 (shareholder register / transfers); Capital Markets Law No. 8/1995 and OJK rules (scripless holding via KSEI, share registrar/BAE, substantial-shareholding disclosure)", "quote": "", "note": "Verbatim text not fetched. KSEI = Kustodian Sentral Efek Indonesia (central depository); could not retrieve the KSEI/OJK source pages this session.", "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "UNVERIFIED: KSEI/OJK primary sources not fetched this session; based on knowledge of Indonesian capital-markets practice.",
+      "Founding shareholders are still documented in the Akta Pendirian, and major (>=5%) holders are disclosed via OJK/IDX filings and the annual report/prospectus.",
+      "The current full shareholder list sits in the KSEI depository / share registrar (BAE), which are not the company-law registry and do not issue a public list.",
+      "INFERENCE on the exact substantial-shareholding threshold and disclosure vehicle."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "ID",
+    "legalForm": "PT Tbk",
+    "legalFormLocal": "Perseroan Terbuka (Tbk)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Deed of Establishment containing the Articles of Association (and later ministerially-approved deeds of amendment)",
+    "documentLocal": "Akta Pendirian yang memuat Anggaran Dasar (dan Akta Perubahan Anggaran Dasar + SK Persetujuan Menteri)",
+    "summary": "As for any PT, the constitution of a PT Tbk is the Anggaran Dasar contained in the notarial Akta Pendirian (Pasal 8/15 UUPT), ratified by the Minister and announced in the Berita Negara (Pasal 30); amendments are made by ministerially-approved deeds. It exists as a document, obtained from the notary and evidenced via the SK and BNRI announcement. For a listed company the current consolidated anggaran dasar is additionally reproduced in public OJK/IDX filings (prospectus, annual report), reinforcing document-based provability.",
+    "evidence": [
+      {"basis": "UU No. 40 Tahun 2007, Pasal 8 & 15 (articles of association in the deed), Pasal 21 (amendments), Pasal 30 (BNRI announcement)", "quote": "", "note": "Verbatim article text not fetched; framework per UUPT.", "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "UNVERIFIED: no verbatim article quote obtained this session.",
+      "The deed/anggaran dasar is primarily obtained from the notary; the registry evidences it via the SK and BNRI announcement.",
+      "For a Tbk, the current anggaran dasar is also publicly available through OJK/IDX disclosure documents."
+    ],
+    "confidence": "medium"
+  }
+]

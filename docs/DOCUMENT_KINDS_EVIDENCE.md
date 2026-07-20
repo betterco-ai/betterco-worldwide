@@ -240,6 +240,146 @@ For a UAE mainland LLC the register-extract equivalent is the Trade Licence issu
 - UNVERIFIED: primary-source verbatim quotes could not be machine-retrieved (portals JS/403/404); WebSearch budget exhausted.
 
 
+## AR
+
+### S.A. — Gesellschafterliste
+
+**❌ Not provable**
+
+For an S.A. the shareholders (accionistas) are recorded in the company-held Libro de Registro de Acciones, which is kept with the formalities of commercial books and is open only to the shareholders — it is not a registry document (art. 213); nominative-share transfers are notified to and inscribed by the issuing company, not the public registry (art. 215). The registered estatuto names only the founders. Therefore the full/current shareholder body is not provable from the public registry.
+
+> **Ley 19.550, art. 213**
+> 
+> „Se llevará un libro de registro de acciones con las formalidades de los libros de comercio, de libre consulta por los accionistas, en el que se asentará:"
+> 
+> The shareholder record is a company-held book, not a registry filing.
+> 
+> Source: <https://leyes-ar.com/ley_general_de_sociedades/213.htm> (retrieved 2026-07-21)
+
+> **Ley 19.550, art. 215**
+> 
+> „La transmisión de las acciones nominativas o escriturales y de los derechos reales que las graven debe notificarse por escrito a la sociedad emisora o entidad que lleve el registro e inscribirse en el libro o cuenta pertinente. Surte efecto contra la sociedad y los terceros desde su inscripción."
+> 
+> Share transfers are inscribed in the company's book/account, not in the public registry.
+> 
+> Source: <https://leyes-ar.com/ley_general_de_sociedades/215.htm> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE / UNVERIFIED: The IGJ imposes an annual/periodic filing of shareholder composition on certain S.A. (commonly referred to as a nómina/declaración de accionistas, and separately a declaración jurada de beneficiario final). Could not fetch the IGJ regulation text (web-search budget exhausted). Assessment: even where such a filing exists it is a self-declaration (parsed data) filed only by some companies and is not the legally authoritative source of share ownership (the art. 213 book is), so it does not make S.A. shareholders reliably provable by an authoritative registry DOCUMENT.
+- Where the specific IGJ filing is legally mandated and obtainable, it might at best support 'proved_by_additional_document' for that subset of S.A.; this should be confirmed against the current IGJ Normas (RG IGJ) before relying on it.
+
+
+### S.R.L. — Gesellschafterliste
+
+**💶 Provable on request**
+
+For an S.R.L. the members (socios) and their cuotas are named in the contrato social, because the constitutive instrument must state the capital and each socio's contribution (art. 11 inc. 4). Cuota transfers become enforceable against third parties only upon registration in the Registro Público (art. 152), so current membership is reconstructable from registry-held documents. There is no single standalone 'shareholder list' document; the proof is the registered contrato social together with any registered cesiones de cuotas.
+
+**Document:** Contrato social inscripto y cesiones de cuotas inscriptas — delivered as `Registered articles of association plus registered cuota (quota) transfers`
+
+> **Ley 19.550, art. 11 inc. 4**
+> 
+> „4) El capital social, que deberá ser expresado en moneda argentina, y la mención del aporte de cada socio."
+> 
+> The constitution names each socio and their contribution/cuotas.
+> 
+> Source: <https://leyes-ar.com/ley_general_de_sociedades/11.htm> (retrieved 2026-07-21)
+
+> **Ley 19.550, art. 152**
+> 
+> „La transmisión de las cuotas es oponible a los terceros desde su inscripción en el Registro Público de Comercio, la que puede ser requerida por la sociedad; tambien podrán peticionarla el cedente o el adquirente exhibiendo el título de la transferencia y constancia fehaciente de su comunicación a la gerencia."
+> 
+> Cuota transfers are registered, so successive membership changes are provable from the registry.
+> 
+> Source: <https://leyes-ar.com/ley_general_de_sociedades/152.htm> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- No standalone consolidated shareholder-list document is issued; current membership must be assembled from the registered contrato social plus each registered cesión de cuotas.
+- Whether a routine IGJ/Registro Público extract itself already lists current socios varies by registry; the conservative basis is the registered constitution + registered transfers, hence 'additional_document' rather than 'base_document'.
+
+
+### S.A. — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The S.A.'s constitution is the estatuto (acto constitutivo), which must be registered in the Registro Público (art. 5). A certified copy of the registered estatuto and its registered amendments is obtainable from the registry and is a distinct document from the register extract, so the constitution is proved by that additional registered document.
+
+**Document:** Estatuto / acto constitutivo inscripto — delivered as `Registered constitutive instrument (by-laws / statute)`
+
+> **Ley 19.550, art. 5**
+> 
+> „El acto constitutivo, su modificación y el reglamento, si lo hubiese, se inscribirán en el Registro Público del domicilio social..."
+> 
+> Source: <http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Distinct registry document from the register extract; the registered estatuto evidences the founders and by-laws but not the current shareholder body (see GESELLSCHAFTERLISTE / S.A.).
+
+
+### S.R.L. — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The S.R.L.'s constitution is the contrato social, which must be registered in the Registro Público (art. 5). A certified copy of the registered contrato social (and its registered amendments) is obtainable from the registry and is a separate document from the register extract, so the constitution is proved by that additional registered document.
+
+**Document:** Contrato social inscripto — delivered as `Registered constitutive instrument (articles of association)`
+
+> **Ley 19.550, art. 5**
+> 
+> „El acto constitutivo, su modificación y el reglamento, si lo hubiese, se inscribirán en el Registro Público del domicilio social..."
+> 
+> The constitutive instrument and its modifications are filed in the registry.
+> 
+> Source: <http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- It is a distinct registry document from the register extract; availability of a certified copy and turnaround varies by IGJ vs provincial registry.
+
+
+### S.A. — Registerauszug
+
+**✅ Provable**
+
+An S.A.'s acto constitutivo (estatuto) is registered in the Registro Público (art. 5), and the registry issues an extract/certificate evidencing the registered company. The register extract is itself the base document for the register-extract kind.
+
+**Document:** Certificado / constancia de inscripción del Registro Público (IGJ para CABA, o Registro Público de Comercio provincial) — delivered as `Register extract / certificate of registration`
+
+> **Ley 19.550, art. 5**
+> 
+> „El acto constitutivo, su modificación y el reglamento, si lo hubiese, se inscribirán en el Registro Público del domicilio social..."
+> 
+> Source: <http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- As with the S.R.L., there is no single nationwide standardized extract; document type and content differ between the IGJ (CABA) and provincial registries.
+
+
+### S.R.L. — Registerauszug
+
+**✅ Provable**
+
+The acto constitutivo of an S.R.L. is registered in the Registro Público del domicilio social (Ley 19.550 art. 5), and the registry (IGJ in CABA, or the provincial Registro Público) issues an extract/certificate evidencing the registered company. The register extract is itself the base document that proves the register-extract kind.
+
+**Document:** Certificado / constancia de inscripción del Registro Público (IGJ para CABA, o Registro Público de Comercio provincial) — delivered as `Register extract / certificate of registration`
+
+> **Ley General de Sociedades 19.550, art. 5**
+> 
+> „El acto constitutivo, su modificación y el reglamento, si lo hubiese, se inscribirán en el Registro Público del domicilio social..."
+> 
+> Registration in the Registro Público is the basis for a register extract.
+> 
+> Source: <http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Argentina has no single standardized nationwide register extract like the German Handelsregisterauszug; the exact document (constancia de inscripción, certificado de vigencia, informe) and its content vary between the IGJ (CABA) and each provincial Registro Público.
+
+
 ## AT
 
 ### AG — Gesellschafterliste
@@ -644,6 +784,130 @@ The Bulgarian Commercial Register (Търговски регистър, Registry
 **Caveats:**
 
 - Article numbers of the Търговски закон (Commercial Act) not independently verified verbatim; lex.bg and registryagency.bg PDFs returned HTTP 403/302 and could not be fetched — INFERENCE from established Bulgarian company law.
+
+
+## BH
+
+### BSC — Gesellschafterliste
+
+**❌ Not provable**
+
+For a BSC the capital is divided into negotiable shares, and shareholding is established by entry in the company's own register of shareholders held at its head office; for listed public companies the shares are dematerialised and held through the central depository (Bahrain Clear). The Commercial Register / Sijilat shows only the founders and the board/authorized signatories, not the current shareholder body. The current shareholder list is therefore not provable from the MOIC registry — it must come from the company's share register or Bahrain Clear.
+
+> **Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions on joint-stock companies keeping a register of nominal shares/shareholders and transfer by entry therein; Bahrain Clear (CSD) for listed issuers**
+> 
+> Share-register provisions sit in the CCL joint-stock chapter (approx. Arts. 116-118) — UNVERIFIED. Verbatim text not fetched.
+> 
+> Source: <https://legalaffairs.gov.bh> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: no primary-source text fetched.
+- The registered memorandum lists only founders/initial subscribers, not current shareholders.
+- Current shareholders are evidenced by the company's own share register or, for listed companies, Bahrain Clear — neither is a MOIC/Sijilat registry document.
+
+
+### WLL — Gesellschafterliste
+
+**✅ Provable**
+
+A WLL is not a public-issue company; its partners and their shareholdings are fixed in the registered memorandum of association and reflected on the Commercial Register. The Sijilat CR record shows the company's owners/partners, so the members are provable directly from the registry base document. The authoritative statement of each partner's quota/share is the registered memorandum of association, which corroborates the split.
+
+**Document:** السجل التجاري (بيان الشركاء/الملاك) — delivered as `Commercial Registration (CR) extract — owners/partners section`
+
+> **Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions on the With Limited Liability Company (memorandum must state partners and their shares; shares not offered to the public); MOIC/Sijilat CR record of partners**
+> 
+> Relevant provisions sit in the CCL chapter on WLLs (approx. Arts. 262 et seq.) — article numbers UNVERIFIED. Verbatim text not fetched.
+> 
+> Source: <https://sijilat.bh> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: no primary-source text fetched.
+- Bahrain has no separate statutory 'shareholder list' filing like Germany's Gesellschafterliste; proof is the CR partners section, backed by the registered memorandum of association.
+- Whether the public CR search exposes each partner's percentage (vs. only names) is UNVERIFIED; the definitive split is in the memorandum.
+
+
+### BSC — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A BSC is constituted by its founders through a memorandum of association and articles of association (statute), which are filed with MOIC as part of incorporation. Together these form the constitution equivalent to a German Gesellschaftsvertrag and are documents distinct from the CR extract. They are obtained as additional filed documents rather than being contained in the base register extract.
+
+**Document:** عقد التأسيس والنظام الأساسي — delivered as `Memorandum and Articles of Association`
+
+> **Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions requiring a memorandum and articles of association for a joint-stock company and their filing with MOIC**
+> 
+> CCL joint-stock chapter (approx. Arts. 63 et seq.) — UNVERIFIED. Verbatim text not fetched.
+> 
+> Source: <https://legalaffairs.gov.bh> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: no primary-source text fetched.
+- Third-party obtainability of the filed memorandum and articles from MOIC/Sijilat is uncertain; listed BSCs additionally publish their articles via Bahrain Bourse disclosures.
+- Amendments require registration; the current consolidated version is the relevant document.
+
+
+### WLL — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A WLL is constituted by a written, authenticated memorandum of association (contract of establishment) that is filed with MOIC as part of registration. This is the constitution equivalent to a German Gesellschaftsvertrag and is a document distinct from the CR extract. It is obtained as an additional filed document rather than being contained in the base register extract.
+
+**Document:** عقد التأسيس / عقد الشركة — delivered as `Memorandum of Association (contract of establishment)`
+
+> **Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions requiring a written/authenticated memorandum of association for a WLL and its filing with MOIC**
+> 
+> CCL WLL chapter (approx. Arts. 262 et seq.) — UNVERIFIED. Verbatim text not fetched.
+> 
+> Source: <https://legalaffairs.gov.bh> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: no primary-source text fetched.
+- Third-party obtainability of the filed memorandum from MOIC/Sijilat is uncertain — it may require being a stakeholder or a formal request rather than open public download.
+- Amendments to the memorandum must also be registered; the current consolidated version is the relevant document.
+
+
+### BSC — Registerauszug
+
+**✅ Provable**
+
+A Bahraini Shareholding Company (public B.S.C. or closed B.S.C.(c)) is entered on the Commercial Register maintained by MOIC via Sijilat. The CR extract is the base register document showing company particulars — CR number, legal form, trade name, issued/paid-up capital, registered address, objects and authorized signatories/board. It is the direct analogue of a German Registerauszug.
+
+**Document:** السجل التجاري (سجلات) — delivered as `Commercial Registration (CR) extract`
+
+> **Commercial Companies Law, Legislative Decree No. 21 of 2001 (joint-stock company registration in the Commercial Register); MOIC/Sijilat commercial registration system**
+> 
+> Verbatim text not fetched (source fetches blocked). UNVERIFIED against primary text.
+> 
+> Source: <https://sijilat.bh> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: no primary-source text fetched.
+- Public Sijilat search shows summary particulars; a certified CR extract is issued by MOIC/Sijilat.
+
+
+### WLL — Registerauszug
+
+**✅ Provable**
+
+The Ministry of Industry and Commerce (MOIC) maintains the Commercial Register via the Sijilat platform, and a WLL is entered on it. The CR extract is the base register document evidencing company particulars — CR number, legal form, trade name, capital, registered address, activities and the registered owners/partners. This is the direct analogue of a German Registerauszug.
+
+**Document:** السجل التجاري (سجلات) — delivered as `Commercial Registration (CR) extract`
+
+> **Commercial Companies Law, Legislative Decree No. 21 of 2001 (registration in the Commercial Register); MOIC/Sijilat commercial registration system**
+> 
+> Verbatim text not fetched (all source fetches blocked). WLL registration and CR-extract contents asserted from knowledge of the CCL and Sijilat; UNVERIFIED against primary text.
+> 
+> Source: <https://sijilat.bh> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: no primary-source text fetched; based on knowledge of the CCL 21/2001 and Sijilat.
+- Public Sijilat CR search shows summary particulars; a full certified CR extract is issued by MOIC/Sijilat.
 
 
 ## BM
@@ -1309,6 +1573,171 @@ No separate list. Members are statutory content of the register extract itself.
 - Not cantonal: register content is set federally (OR + HRegV); cantonal offices only administer. Zefix is the central index.
 
 
+## CL
+
+### S.A. — Gesellschafterliste
+
+**❌ Not provable**
+
+Shareholders of a Sociedad Anónima are recorded in the company's Registro de Accionistas, kept by the company (Reglamento de Sociedades Anónimas); Ley 18.046 art. 7 requires the company to keep an up-to-date list of shareholders available to its shareholders, not to the public and not filed with any registry. The public registry records only the founders named in the constitution/extract (art. 5), not later transfers. A current shareholder list is therefore not obtainable from the registry.
+
+> **Ley 18.046 sobre Sociedades Anónimas, art. 7**
+> 
+> „Art. 7º La sociedad deberá mantener en la sede principal y en la de sus agencias o sucursales, así como en su sitio en Internet, en el caso de las sociedades anónimas abiertas que dispongan de tales medios, a disposición de los accionistas, ejemplares actualizados de sus estatutos... Deberá, asimismo, mantener una lista actualizada de los accionistas, con indicación del domicilio y número de acciones de cada cual."
+> 
+> The shareholder list is company-held and made available to shareholders — not a public registry filing.
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=29473> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The Registro de Accionistas / shareholder list is company-held under Ley 18.046 and the Reglamento de Sociedades Anónimas (D.S. 702/2011); it is not a public registry document.
+- Only founding shareholders are registry-visible via the extract; ongoing ownership is not.
+- For a sociedad anónima abierta, shareholding information may reach the CMF via disclosure obligations, but that is a supervisory filing, not a Registro de Comercio/RES document, and does not yield a general public shareholder list.
+
+
+### SpA — Gesellschafterliste
+
+**❌ Not provable**
+
+Current shareholders of an SpA are recorded only in the company's own share register (Registro de Accionistas), which the company keeps and which is available for inspection by shareholders and administrators, not by the public and not filed with any registry (Código de Comercio art. 431). The public registry captures only the founding shareholders named in the constitution/extract (art. 426 No. 2), not subsequent transfers. A current shareholder list is therefore not obtainable from the registry.
+
+> **Código de Comercio, art. 431 (SpA)**
+> 
+> „La sociedad llevará un registro en el que se anotará, a lo menos, el nombre, domicilio y cédula de identidad o rol único tributario de cada accionista, el número de acciones de que sea titular, la fecha en que éstas se hayan inscrito a su nombre... estará, en todo tiempo, disponible para su examen por cualquier accionista o administrador de la sociedad."
+> 
+> The share register is company-held and open only to shareholders/administrators — not a public registry filing.
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=1974> (retrieved 2026-07-21)
+
+> **Código de Comercio, art. 426 No. 2 (SpA)**
+> 
+> „El nombre de los accionistas concurrentes al instrumento de constitución;"
+> 
+> Only founding shareholders appear in the publicly inscribed extract; later ownership changes are not registered publicly.
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=1974> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The company-held Registro de Accionistas is not a public registry document; only founders are registry-visible.
+- INFERENCE/UNVERIFIED: RES-incorporated SpAs may maintain the share book electronically on the RES platform (the RES portal describes a 'Registro electrónico que permite mantener el libro de accionistas de la sociedad'), but this is company-controlled and not a public, third-party-obtainable proof of current shareholders.
+
+
+### S.A. — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A Sociedad Anónima's estatutos are contained in its escritura pública of constitution, but the public Registro de Comercio inscribes only the extracto — a summary — not the full bylaws (Ley 18.046 art. 5). The full constitution is obtained as a separate/additional document: a certified copy of the escritura from the notary/archivero, or the Certificado de Estatuto Actualizado from the RES for a cerrada incorporated under Ley 20.659. It is obtainable but is not the plain register extract.
+
+**Document:** Copia autorizada de la escritura pública de constitución y sus estatutos (notaría/archivero); o Certificado de Estatuto Actualizado del Registro de Empresas y Sociedades (RES) para la sociedad anónima cerrada acogida a la Ley 20.659 — delivered as `Constitution / bylaws (escritura pública of constitution with its estatutos; or RES Certificado de Estatuto Actualizado for a cerrada under Ley 20.659)`
+
+> **Ley 18.046 sobre Sociedades Anónimas, art. 5**
+> 
+> „Un extracto de la escritura social, autorizado por el notario respectivo, deberá inscribirse en el Registro de Comercio... El extracto de la escritura de constitución deberá expresar: 1) El nombre y domicilio de los accionistas que concurran a su otorgamiento..."
+> 
+> Only the extract (summary) is inscribed; the full estatutos live in the escritura, so the full constitution is a separate document.
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=29473> (retrieved 2026-07-21)
+
+> **Ley 18.046 sobre Sociedades Anónimas, art. 7**
+> 
+> „...a disposición de los accionistas, ejemplares actualizados de sus estatutos firmados por el gerente, con indicación de la fecha y notaría en que se otorgó la escritura de constitución y la de sus modificaciones..."
+> 
+> Confirms the estatutos originate in the notarial escritura; the company (not the registry) holds the consolidated estatutos.
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=29473> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- For the traditional track, the public Registro de Comercio holds only the extracto; the full estatutos are obtained from the notarial escritura (copia autorizada), not the commercial registry itself.
+- For a sociedad anónima cerrada under Ley 20.659 the full estatutos are held in the RES and obtainable as a Certificado de Estatuto Actualizado — a distinct certificate from the vigencia extract; hence 'additional document'.
+- INFERENCE/UNVERIFIED: exact RES certificate name 'Certificado de Estatuto Actualizado' not confirmed by a fetched verbatim source.
+
+
+### SpA — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The SpA's constitution carries its estatutos (Código de Comercio art. 425), but the public Registro de Comercio inscribes only the extracto — a summary — not the full bylaws (art. 426). The full constitution is therefore obtained as a separate/additional document: a certified copy of the escritura or protocolized private instrument from the notary/archivero for traditionally incorporated companies, or the Certificado de Estatuto Actualizado from the RES for simplified-regime companies. It is registry-adjacent and obtainable, but not the plain register extract.
+
+**Document:** Copia autorizada de la escritura pública o del instrumento privado protocolizado de constitución y sus estatutos (notaría/archivero); o Certificado de Estatuto Actualizado del Registro de Empresas y Sociedades (RES) para sociedades acogidas a la Ley 20.659 — delivered as `Constitution / bylaws (escritura or instrumento privado of constitution with its estatutos; or RES Certificado de Estatuto Actualizado)`
+
+> **Código de Comercio, art. 425 (SpA)**
+> 
+> „La sociedad se forma, existe y prueba por un acto de constitución social escrito, inscrito y publicado en los términos del artículo siguiente, que se perfeccionará mediante escritura pública o por instrumento privado suscrito por sus otorgantes, y cuyas firmas sean autorizadas por notario público... El acto de constitución de la sociedad irá acompañado de su estatuto..."
+> 
+> The estatutos accompany the act of constitution (notarial escritura or protocolized private instrument).
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=1974> (retrieved 2026-07-21)
+
+> **Código de Comercio, art. 426 (SpA)**
+> 
+> „Dentro del plazo de sesenta días contados desde la fecha del acto de constitución social, un extracto del mismo, autorizado por el notario respectivo, deberá inscribirse en el Registro de Comercio... El extracto deberá expresar: 1.- El nombre de la sociedad;..."
+> 
+> Only the extract (summary) is publicly inscribed; the full estatutos are not, so the full constitution is a separate document.
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=1974> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- For the traditional track, the public Registro de Comercio holds only the extracto; the full estatutos are obtained from the notarial escritura (copia autorizada), not the commercial registry itself.
+- For the simplified track (Ley 20.659) the full estatutos are held in the RES and obtainable as a Certificado de Estatuto Actualizado — a distinct certificate from the vigencia extract; hence 'additional document'.
+- INFERENCE/UNVERIFIED: exact RES certificate name 'Certificado de Estatuto Actualizado' not confirmed by a fetched verbatim source.
+
+
+### S.A. — Registerauszug
+
+**✅ Provable**
+
+A Sociedad Anónima is constituted by escritura pública whose extract, authorized by the notary, must be inscribed in the Registro de Comercio of the company's domicile and published once in the Diario Oficial within 60 days (Ley 18.046 art. 5). A register extract is thus obtainable as a base registry document: a certified copy of the inscription plus a certificate of good standing from the Conservador de Bienes Raíces. A sociedad anónima cerrada may alternatively be incorporated under the simplified regime (Ley 20.659) and obtain the equivalent Certificado de Vigencia from the RES.
+
+**Document:** Certificado de vigencia / copia de la inscripción del extracto en el Registro de Comercio (Conservador de Bienes Raíces); o Certificado de Vigencia del Registro de Empresas y Sociedades (RES) para la sociedad anónima cerrada acogida a la Ley 20.659 — delivered as `Register extract / certificate of good standing (inscription of the extracto in the Registro de Comercio; or RES Certificado de Vigencia for a cerrada under Ley 20.659)`
+
+> **Ley 18.046 sobre Sociedades Anónimas, art. 5**
+> 
+> „Art. 5º Un extracto de la escritura social, autorizado por el notario respectivo, deberá inscribirse en el Registro de Comercio correspondiente al domicilio de la sociedad y publicarse por una sola vez en el Diario Oficial. La inscripción y publicación deberán efectuarse dentro del plazo de 60 días contado desde la fecha de la escritura social."
+> 
+> Public register inscription of the extract; a register extract / certificate of vigencia derives from this inscription.
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=29473> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The register holds/derives an extract, not the full estatutos — see the GESELLSCHAFTSVERTRAG row.
+- Only a sociedad anónima cerrada is eligible for the simplified regime (Ley 20.659, RES). A sociedad anónima abierta must use the traditional Registro de Comercio + Diario Oficial track (and is also entered in the CMF registry).
+- INFERENCE/UNVERIFIED: exact RES certificate names not confirmed by a fetched verbatim source.
+
+
+### SpA — Registerauszug
+
+**✅ Provable**
+
+An SpA is formed by a written act of constitution whose extract must be inscribed in the Registro de Comercio of the company's domicile and published once in the Diario Oficial (Código de Comercio art. 426). A register extract is therefore obtainable as a base registry document: a certified copy of the inscription plus a certificate of good standing (certificado de vigencia) from the Conservador de Bienes Raíces. SpAs incorporated under the simplified electronic regime (Ley 20.659) instead obtain the equivalent Certificado de Vigencia directly from the Registro de Empresas y Sociedades (RES).
+
+**Document:** Certificado de vigencia / copia de la inscripción del extracto en el Registro de Comercio (Conservador de Bienes Raíces); o Certificado de Vigencia del Registro de Empresas y Sociedades (RES) para sociedades acogidas a la Ley 20.659 — delivered as `Register extract / certificate of good standing (inscription of the extracto in the Registro de Comercio; or RES Certificado de Vigencia)`
+
+> **Código de Comercio, art. 426 (SpA)**
+> 
+> „Dentro del plazo de sesenta días contados desde la fecha del acto de constitución social, un extracto del mismo, autorizado por el notario respectivo, deberá inscribirse en el Registro de Comercio correspondiente al domicilio de la sociedad y publicarse por una sola vez en el Diario Oficial."
+> 
+> Establishes the public register inscription of the extract; a register extract / certificate of vigencia is derived from this inscription.
+> 
+> Source: <https://www.bcn.cl/leychile/navegar?idNorma=1974> (retrieved 2026-07-21)
+
+> **Registro de Empresas y Sociedades (RES) portal, Ley 20.659**
+> 
+> INFERENCE/UNVERIFIED: RES issues a Certificado de Vigencia for simplified-regime companies; exact certificate catalogue could not be fetched verbatim.
+> 
+> Source: <https://www.registrodeempresasysociedades.cl/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The register holds/derives an extract, not the full estatutos — see the GESELLSCHAFTSVERTRAG row.
+- Two incorporation tracks exist: traditional (escritura pública -> extracto in the Registro de Comercio of the Conservador de Bienes Raíces + Diario Oficial) and simplified electronic (Ley 20.659, RES / tuempresaenundia.cl). The obtainable extract differs by track.
+- INFERENCE/UNVERIFIED: exact RES certificate names (Certificado de Vigencia) not confirmed by a fetched verbatim source; leychile/Ley 20.659 text was not retrievable during research.
+
+
 ## CN
 
 ### Gufen Youxian Gongsi — Gesellschafterliste
@@ -1471,6 +1900,133 @@ The enterprise register is maintained by the market-regulation authority (SAMR /
 
 - Wikisource is a mirror of the official statute; article wording verified against it but not re-fetched from gov.cn (SSL/404 blocked direct government-site fetches).
 - The publicly downloadable GSXT record is a data display; the DOCUMENT proof is the certified register extract / 企业机读档案登记资料 obtained from the AMR.
+
+
+## CO
+
+### S.A. — Gesellschafterliste
+
+**❌ Not provable**
+
+For a Sociedad Anónima the accionistas are recorded in the company-held libro de registro de acciones (libro de accionistas); share transfers are entered in that company book, not in the Registro Mercantil. The Cámara de Comercio's Certificado de Existencia y Representación Legal does not certify the current shareholder composition. No registry-issued document evidences the S.A.'s shareholder list.
+
+> **Código de Comercio (libro de registro de acciones; registro de la transferencia de acciones en el libro de la sociedad)**
+> 
+> Share ownership and transfers of a S.A. are entered in the company's share-register book, held by the company, not at the Cámara de Comercio. Verbatim article text not fetched (gov.co sources unreachable).
+> 
+> Source: <http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: verbatim Código de Comercio text (share-register and transfer articles) not fetched; conclusion rests on the settled rule that the libro de registro de acciones is company-held and not part of the Registro Mercantil.
+
+
+### S.A.S. — Gesellschafterliste
+
+**❌ Not provable**
+
+For an S.A.S. the shareholders are recorded in the company-held libro de registro de accionistas, not in the Registro Mercantil. The Certificado de Existencia y Representación Legal does not certify the current shareholder composition; only the constituting shareholders are named in the documento de constitución, which does not reflect later share transfers. There is therefore no registry-issued document that evidences the current shareholder list.
+
+> **Ley 1258 de 2008 (S.A.S.), with remisión to the Sociedad Anónima share-register rules of the Código de Comercio**
+> 
+> Share ownership and transfers of an S.A.S. are entered in the company's libro de registro de accionistas, held by the company; the Cámara de Comercio does not register current shareholders. Verbatim article text could not be fetched (gov.co sources unreachable).
+> 
+> Source: <http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html> (retrieved 2026-07-21)
+
+> **Wikipedia (ES), 'Sociedad por acciones simplificada' — corroborating framework**
+> 
+> Confirms the S.A.S. is constituted by documento privado registered at 'el registro de la cámara de comercio del lugar del domicilio principal de la sociedad' per Ley 1258 art. 5; does not indicate ongoing shareholder registration at the Cámara.
+> 
+> Source: <https://es.wikipedia.org/wiki/Sociedad_por_acciones_simplificada> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: verbatim statutory text not fetched; conclusion rests on the settled Colombian rule that the libro de registro de accionistas is company-held.
+- For a single-shareholder (unipersonal) S.A.S., the sole constituting shareholder may appear in the documento de constitución (and sometimes on the certificate), but this is a snapshot of founders, not a current, transfer-updated shareholder list.
+
+
+### S.A. — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A Sociedad Anónima is constituted by escritura pública (Código de Comercio, art. 110), which is inscribed in the Registro Mercantil of the Cámara de Comercio. The registered escritura de constitución / estatutos is a distinct document, obtainable as a certified copy from the Cámara de Comercio (and from the notaría), in addition to the base register extract. That registered document proves the constitution.
+
+**Document:** Escritura pública de constitución / Estatutos (inscrita en el Registro Mercantil) — delivered as `Public deed of incorporation / bylaws (registered)`
+
+> **Código de Comercio, art. 110 (contenido de la escritura de constitución) and Registro Mercantil inscription rules**
+> 
+> The escritura pública de constitución is registered in the Cámara de Comercio and retrievable as a certified copy. Verbatim text not fetched (gov.co sources unreachable).
+> 
+> Source: <http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: verbatim art. 110 text not fetched.
+- Classified as proved_by_additional_document because the constitution is a document distinct from the base register extract; certified copies are issued by the Cámara de Comercio and/or the originating notaría.
+
+
+### S.A.S. — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+An S.A.S. is constituted by documento privado (or escritura pública where an in-kind contribution or other legal requirement demands it), which must be inscribed in the Registro Mercantil of the Cámara de Comercio under Ley 1258 de 2008 art. 5. The registered constitution/estatutos are a distinct document, obtainable as a certified copy from the Cámara de Comercio in addition to the base register extract. That registered document proves the constitution.
+
+**Document:** Documento de constitución / Estatutos (inscrito en el Registro Mercantil) — delivered as `Articles of incorporation / bylaws (registered)`
+
+> **Ley 1258 de 2008, art. 5 (contenido del documento de constitución; inscripción en el Registro Mercantil)**
+> 
+> The constitution document is inscribed in the Cámara de Comercio and can be retrieved as a certified copy. Verbatim text not fetched (gov.co sources unreachable).
+> 
+> Source: <http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html> (retrieved 2026-07-21)
+
+> **Wikipedia (ES), 'Sociedad por acciones simplificada'**
+> 
+> Corroborates: S.A.S. 'se constituye por documento privado' and is registered at the cámara de comercio del domicilio principal (Ley 1258 art. 5).
+> 
+> Source: <https://es.wikipedia.org/wiki/Sociedad_por_acciones_simplificada> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: verbatim art. 5 text not fetched.
+- Because the constitution is a document distinct from the base register extract (Certificado de Existencia), it is classified as proved_by_additional_document; the Cámara de Comercio issues certified copies of registered documents.
+
+
+### S.A. — Registerauszug
+
+**✅ Provable**
+
+As for all commercial companies, the Sociedad Anónima's register extract is the Certificado de Existencia y Representación Legal issued by the Cámara de Comercio from the Registro Mercantil. It is an issued document certifying existence, domicile, capital, objeto and legal representation, and is the direct equivalent of the German Registerauszug. It is obtained directly from the registry as the company's base document.
+
+**Document:** Certificado de Existencia y Representación Legal — delivered as `Certificate of Existence and Legal Representation`
+
+> **Código de Comercio (Registro Mercantil) / Cámara de Comercio**
+> 
+> Certificado de Existencia y Representación Legal is the standard register extract for a Sociedad Anónima; verbatim text not fetched (gov.co sources unreachable).
+> 
+> Source: <http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Verbatim registry/statutory text could not be fetched from primary sources; base-document status rests on the established role of the Certificado de Existencia y Representación Legal.
+
+
+### S.A.S. — Registerauszug
+
+**✅ Provable**
+
+The Certificado de Existencia y Representación Legal, issued by the Cámara de Comercio from the Registro Mercantil, is Colombia's register extract and is the direct functional equivalent of the German Registerauszug. It is an issued document (not merely parsed data) that certifies the S.A.S.'s existence, domicile, capital, objeto and legal representatives. It is obtained directly from the registry as the base document for the company.
+
+**Document:** Certificado de Existencia y Representación Legal — delivered as `Certificate of Existence and Legal Representation`
+
+> **Cámara de Comercio / Registro Mercantil (Código de Comercio, Ley 1258 de 2008 art. 5)**
+> 
+> Certificado de Existencia y Representación Legal is the standard register extract issued by every Cámara de Comercio; verbatim text of the statute could not be fetched (gov.co sources unreachable).
+> 
+> Source: <http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Verbatim statutory/registry text could not be fetched from primary sources in this environment; the base-document status rests on the well-established role of the Certificado de Existencia y Representación Legal.
 
 
 ## CY
@@ -3890,6 +4446,136 @@ Like all Hungarian companies, a Zrt is entered in the cégjegyzék kept by the c
 **Caveats:**
 
 - Subsection lettering extracted by automated read; re-verify.
+
+
+## ID
+
+### PT — Gesellschafterliste
+
+**💶 Provable on request**
+
+The founding shareholders are named as a document fact in the Akta Pendirian (Pasal 8 UUPT), and share transfers must be effected by notarial deed and notified to the Minister for recording in the Daftar Perseroan (Pasal 56). Thus a shareholder list is provable through documents, but as a point-in-time / founders proof rather than a guaranteed current cap table. The statutory CURRENT shareholder register is the company's Daftar Pemegang Saham kept by the Board of Directors (Pasal 50), which is company-held and open only to shareholders, not the general public; the AHU Profil Perseroan may display current shareholders but is parsed data with restricted access.
+
+**Document:** Akta Pendirian (menyebut pendiri/pemegang saham); Akta Jual Beli Saham / Akta RUPS + penerimaan pemberitahuan; current statutory list: Daftar Pemegang Saham (Pasal 50, dipelihara Direksi) — delivered as `Deed of Establishment (names founding shareholders) + subsequent notarial share-transfer deeds notified to Kemenkumham`
+
+> **UU No. 40 Tahun 2007, Pasal 8 (contents of deed / founders), Pasal 50 (daftar pemegang saham & daftar khusus kept by Direksi), Pasal 56 (share transfer by deed, notified to Minister)**
+> 
+> Verbatim text not retrievable this session; article numbers from knowledge of UUPT.
+> 
+> Source: <https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- UNVERIFIED: no verbatim Pasal 8/50/56 quote obtained.
+- The akta proves FOUNDERS / a historical snapshot; it does not by itself prove the CURRENT shareholder body.
+- The current statutory register (Daftar Pemegang Saham, Pasal 50) is maintained by the company, not the registry, and is not routinely public.
+- INFERENCE: reconstructing a current list from the registry generally requires the latest akta perubahan + notification receipts, or the company's own DPS; the AHU Profil Perseroan snapshot is parsed data, not a document.
+
+
+### PT Tbk — Gesellschafterliste
+
+**❌ Not provable**
+
+For a listed PT Tbk, shares are dematerialised (scripless) and held collectively through the central securities depository KSEI, with the shareholder register maintained by a securities administration bureau (Biro Administrasi Efek), not by the company-law registry. No AHU/Kemenkumham document lists the current full body of public shareholders. The founding shareholders remain named in the Akta Pendirian, and holders of significant stakes (e.g. >=5%) are disclosed to OJK/IDX and in the annual report/prospectus, but a complete current shareholder list is not obtainable as a registry document.
+
+> **UU No. 40 Tahun 2007, Pasal 50 & 56 (shareholder register / transfers); Capital Markets Law No. 8/1995 and OJK rules (scripless holding via KSEI, share registrar/BAE, substantial-shareholding disclosure)**
+> 
+> Verbatim text not fetched. KSEI = Kustodian Sentral Efek Indonesia (central depository); could not retrieve the KSEI/OJK source pages this session.
+> 
+> Source: <https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- UNVERIFIED: KSEI/OJK primary sources not fetched this session; based on knowledge of Indonesian capital-markets practice.
+- Founding shareholders are still documented in the Akta Pendirian, and major (>=5%) holders are disclosed via OJK/IDX filings and the annual report/prospectus.
+- The current full shareholder list sits in the KSEI depository / share registrar (BAE), which are not the company-law registry and do not issue a public list.
+- INFERENCE on the exact substantial-shareholding threshold and disclosure vehicle.
+
+
+### PT — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The constitution of a PT is the Anggaran Dasar contained in the notarial Akta Pendirian (Pasal 8 and 15 UUPT), which is ratified by the Minister (SK Pengesahan) and announced in the Berita Negara / Tambahan Berita Negara (Pasal 30). It exists as a concrete document; the current constitution is the original akta as amended by any Akta Perubahan Anggaran Dasar approved by the Minister. Copies are held by the officiating notary and evidenced by the ministerial decree and the BNRI announcement, rather than by a self-service registry download.
+
+**Document:** Akta Pendirian yang memuat Anggaran Dasar (dan Akta Perubahan Anggaran Dasar + SK Persetujuan Menteri) — delivered as `Deed of Establishment containing the Articles of Association (and later deeds of amendment approved by the Ministry)`
+
+> **UU No. 40 Tahun 2007, Pasal 8 & 15 (deed contains articles of association), Pasal 21 (amendment of anggaran dasar), Pasal 30 (announcement in Berita Negara)**
+> 
+> id.wikipedia paraphrase confirms: notarial akta in Indonesian contains the anggaran dasar, ratified by the Minister and announced in BNRI. Verbatim article text not fetched.
+> 
+> Source: <https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- UNVERIFIED: no verbatim Pasal 8/15/21/30 quote obtained this session.
+- The akta/anggaran dasar is primarily obtained from the officiating notary; the registry evidences it via the SK and the BNRI announcement rather than issuing the deed itself.
+- Only the anggaran dasar (articles) and its amendments are public; the full deed may contain details accessed via the notary.
+
+
+### PT Tbk — Gesellschaftsvertrag
+
+**✅ Provable**
+
+As for any PT, the constitution of a PT Tbk is the Anggaran Dasar contained in the notarial Akta Pendirian (Pasal 8/15 UUPT), ratified by the Minister and announced in the Berita Negara (Pasal 30); amendments are made by ministerially-approved deeds. It exists as a document, obtained from the notary and evidenced via the SK and BNRI announcement. For a listed company the current consolidated anggaran dasar is additionally reproduced in public OJK/IDX filings (prospectus, annual report), reinforcing document-based provability.
+
+**Document:** Akta Pendirian yang memuat Anggaran Dasar (dan Akta Perubahan Anggaran Dasar + SK Persetujuan Menteri) — delivered as `Deed of Establishment containing the Articles of Association (and later ministerially-approved deeds of amendment)`
+
+> **UU No. 40 Tahun 2007, Pasal 8 & 15 (articles of association in the deed), Pasal 21 (amendments), Pasal 30 (BNRI announcement)**
+> 
+> Verbatim article text not fetched; framework per UUPT.
+> 
+> Source: <https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- UNVERIFIED: no verbatim article quote obtained this session.
+- The deed/anggaran dasar is primarily obtained from the notary; the registry evidences it via the SK and BNRI announcement.
+- For a Tbk, the current anggaran dasar is also publicly available through OJK/IDX disclosure documents.
+
+
+### PT — Registerauszug
+
+**✅ Provable**
+
+The registry (Ministry of Law and Human Rights via AHU Online) maintains the Daftar Perseroan and issues the SK Pengesahan Badan Hukum that confers legal-entity status on the PT, plus further SKs approving/receiving each anggaran-dasar or data change (Pasal 7(4), 29, 30 UUPT). Those decrees are the registry-issued documents evidencing the company's existence and current legal data. Indonesia has no single certified 'current extract' document in the German Handelsregisterauszug sense; the current-state snapshot is the AHU 'Profil Perseroan', which is a data printout (parsed data) with restricted access.
+
+**Document:** Surat Keputusan Menteri Hukum dan HAM tentang Pengesahan Badan Hukum Perseroan (SK Kemenkumham); data snapshot: Profil Perseroan (AHU/SABH) — delivered as `Ministerial Decree ratifying legal-entity status (and decrees approving amendments)`
+
+> **UU No. 40 Tahun 2007 (UUPT), Pasal 7(4), 9, 29, 30**
+> 
+> Could not retrieve verbatim text (source hosts returned 403/404). Framework confirmed via id.wikipedia paraphrase: akta pendirian is ratified by the Minister and the PT becomes a badan hukum upon the ministerial decree/announcement.
+> 
+> Source: <https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- UNVERIFIED: verbatim Pasal 29/30 text not fetched; article mapping is from knowledge of UUPT, not a live quote.
+- INFERENCE: SK Kemenkumham is treated as the register-extract equivalent because no standalone certified 'current extract' document exists in ID.
+- The AHU 'Profil Perseroan' shows current consolidated data but is parsed data, not a document, and public self-service access is limited (notary/paid access).
+- UUPT was amended by the Job Creation Law (UU 11/2020, re-enacted as UU 6/2023); core incorporation/registration articles remain substantively intact.
+
+
+### PT Tbk — Registerauszug
+
+**✅ Provable**
+
+A PT Tbk is still a Perseroan Terbatas registered at AHU and holds the same registry footprint as a private PT: the SK Pengesahan Badan Hukum and subsequent SKs recorded in the Daftar Perseroan are the registry-issued documents evidencing existence and legal data (Pasal 7(4), 29, 30 UUPT). As with a private PT, there is no single certified 'current extract' document; the AHU Profil Perseroan is the current-state data snapshot (parsed data). For a listed company, additional current status is also visible via OJK/IDX disclosures, but the core company-law register is the same as for a PT.
+
+**Document:** Surat Keputusan Menteri Hukum dan HAM tentang Pengesahan Badan Hukum Perseroan (SK Kemenkumham); data snapshot: Profil Perseroan (AHU/SABH) — delivered as `Ministerial Decree ratifying legal-entity status (and decrees approving amendments)`
+
+> **UU No. 40 Tahun 2007, Pasal 1(7) (definition of Perseroan Terbuka), Pasal 7(4), 29, 30**
+> 
+> Verbatim text not fetched; a Tbk remains an AHU-registered PT with an SK Pengesahan.
+> 
+> Source: <https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- UNVERIFIED: no verbatim article quote obtained.
+- INFERENCE: SK Kemenkumham treated as register-extract equivalent; no standalone certified current extract exists.
+- Listed-company current data is additionally disclosed via OJK and IDX, but that is a securities-disclosure channel, not the company register.
+- AHU Profil Perseroan is parsed data with restricted public access.
 
 
 ## IE
@@ -6872,6 +7558,148 @@ A mercantile company acquires legal personality by inscription of its escritura 
 - INFERENCE: the exact deliverable name (certificación de folio / boleta) is based on the Código de Comercio RPC/SIGER regime and could not be confirmed with a fetched verbatim quote.
 
 
+## MY
+
+### Berhad — Gesellschafterliste
+
+**💶 Provable on request**
+
+A Berhad keeps a register of members (s.50) and lodges an annual return (s.68), from which member particulars can be obtained as documents from SSM — so a shareholder list is provable, but generally via a document additional to the base profile rather than from the profile itself. For a LISTED Berhad, legal/beneficial shareholdings are held in the central depository system operated by Bursa Malaysia Depository, and the authoritative member list is the Record of Depositors sourced from the depository (not an SSM extract); SSM outputs for listed companies may show only substantial shareholders.
+
+**Document:** Daftar Ahli / Penyata Tahunan; Rekod Pendeposit (Bursa Malaysia) — delivered as `Register of Members / Annual Return (s.68); for a listed Berhad: Record of Depositors (Bursa Malaysia Depository / CDS)`
+
+> **Companies Act 2016 s.50/s.51 (register of members and notification of changes) and s.68 (annual return of a company having share capital)**
+> 
+> SSM legal-framework page lists the s.51 register-of-members change form and the s.68 annual return form.
+> 
+> Source: <https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx> (retrieved 2026-07-21)
+
+> **Securities Industry (Central Depositories) Act 1991 — central depository / Record of Depositors (for listed public companies)**
+> 
+> For listed Berhad, shares are in scripless CDS form; the Record of Depositors (Bursa Malaysia Depository) is the operative member list, sourced outside SSM. UNVERIFIED verbatim.
+> 
+> Source: <https://www.bursamalaysia.com/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Listed vs. unlisted Berhad matters: unlisted -> register of members / annual return at SSM; listed -> Record of Depositors via Bursa Malaysia Depository, not SSM.
+- SSM base profile for a public/listed company may disclose only substantial shareholders rather than the full member list (INFERENCE).
+- Verbatim statutory/depository text not fetchable; quotes empty.
+
+
+### Sdn Bhd — Gesellschafterliste
+
+**✅ Provable**
+
+A Sdn Bhd is a private company that keeps a register of members (s.50) and must lodge changes to that register with the Registrar within 14 days (s.51), so SSM holds current shareholder data. The SSM company profile therefore already lists shareholders and their holdings, so the base extract itself proves the member list. A standalone register of members and the s.68 annual return (of a company having share capital) are additionally obtainable as documents.
+
+**Document:** Profil Syarikat (bahagian pemegang saham) / Daftar Ahli — delivered as `SSM Company Profile (shareholders section) / Register of Members`
+
+> **Companies Act 2016 s.50 (register of members) and s.51 (notification of change in the register of members lodged with the Registrar)**
+> 
+> SSM legal-framework page lists the statutory form for notifying changes to the register of members (s.51), confirming SSM captures member changes for private companies.
+> 
+> Source: <https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx> (retrieved 2026-07-21)
+
+> **Companies Act 2016 s.68 (annual return of a company having share capital)**
+> 
+> SSM legal-framework page lists the 'Annual Return of company having share capital' form (s.68).
+> 
+> Source: <https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- That the standard SSM profile prints the full shareholder list (vs. a summary) is well-established for private companies but was not verbatim-verified via fetch (INFERENCE).
+- If the base profile is treated as showing only a summary, the register of members / annual return serves as the additional document — the member list remains registry-provable either way.
+
+
+### Berhad — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+Under s.14/s.31 of the Companies Act 2016, a public company limited by shares (Berhad) may but need not have a constitution; the former mandatory M&A was abolished for companies limited by shares. If a Berhad adopts a constitution it must be lodged with the Registrar (s.32/s.36) and can then be purchased from SSM as a separate document. If none is adopted, the document does not exist. (Public companies adopt a constitution more often than private ones, but it remains optional; only a company limited by guarantee must have one under s.38.)
+
+**Document:** Perlembagaan Syarikat — delivered as `Constitution (formerly Memorandum & Articles of Association) — only if adopted`
+
+> **Companies Act 2016 s.14/s.31 (constitution optional for a company limited by shares) and s.32 (lodgement of adopted constitution)**
+> 
+> SSM legal-framework page lists the 'Lodgement of constitution' form (s.32).
+> 
+> Source: <https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Constitution is OPTIONAL for a Berhad limited by shares — may not exist for a given company (then not_provable for that company).
+- Only a company limited by guarantee is statutorily required to have a constitution (s.38) — not in scope here.
+- That MyData-SSM sells the lodged constitution as a document is standard practice but not directly verified (INFERENCE).
+
+
+### Sdn Bhd — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+Under s.14/s.31 of the Companies Act 2016, a company limited by shares may but need not have a constitution; the former mandatory Memorandum & Articles of Association was abolished. If a Sdn Bhd adopts a constitution it must lodge it with the Registrar (s.32/s.36), after which it can be purchased from SSM as a separate document. Where no constitution has been adopted (common for Sdn Bhd relying on the Act's default provisions), no such document exists.
+
+**Document:** Perlembagaan Syarikat — delivered as `Constitution (formerly Memorandum & Articles of Association) — only if adopted`
+
+> **Companies Act 2016 s.14/s.31 (constitution optional) and s.32 (registration/lodgement of adopted constitution)**
+> 
+> SSM legal-framework page lists the statutory form 'Lodgement of constitution' (s.32), confirming an adopted constitution is filed with SSM and thereby obtainable as a document.
+> 
+> Source: <https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Constitution is OPTIONAL under CA 2016 — a Sdn Bhd may have none, in which case the document does not exist (would be not_provable for that specific company).
+- That MyData-SSM sells the lodged constitution as a document image is standard practice but not directly verified via fetch (INFERENCE).
+
+
+### Berhad — Registerauszug
+
+**✅ Provable**
+
+As for a Sdn Bhd, SSM issues an official company profile/extract for a Berhad (public company limited by shares) via e-Search / MyData-SSM, containing registration number, name, status, registered office, nature of business, directors, secretary and share capital. This issued document is the Registerauszug equivalent and is the base search product.
+
+**Document:** Profil Syarikat — delivered as `SSM Company Profile / e-Info extract (MyData-SSM)`
+
+> **Companies Act 2016 (Act 777) — Registrar-held company register; SSM e-Info / MyData-SSM company profile product**
+> 
+> Same SSM base product applies to public companies. Verbatim statute not fetchable.
+> 
+> Source: <https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Verbatim statutory text could not be fetched; quotes empty.
+- Exact profile fields not verifiable via fetch (INFERENCE from established practice).
+
+
+### Sdn Bhd — Registerauszug
+
+**✅ Provable**
+
+SSM (Suruhanjaya Syarikat Malaysia) issues an official company profile/extract via its e-Search / MyData-SSM portal for every registered company. For a Sdn Bhd it contains registration number, name, status, registered office, nature of business, directors, secretary, share capital and shareholder particulars. This issued document is the direct equivalent of a Registerauszug and is the base search product.
+
+**Document:** Profil Syarikat — delivered as `SSM Company Profile / e-Info extract (MyData-SSM)`
+
+> **Companies Act 2016 (Act 777) — incorporation and Registrar-held company register; SSM e-Info / MyData-SSM company profile product**
+> 
+> SSM's legal-framework page confirms SSM issues company information products; MyData-SSM is the e-Search portal for buying the company profile. Verbatim statute text not fetchable (AGC/CommonLII returned 403).
+> 
+> Source: <https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx> (retrieved 2026-07-21)
+
+> **MyData-SSM / SSM e-Search portal (product listing)**
+> 
+> Company profile is the base purchasable product. Portal is a JS app; exact on-screen menu not directly readable via fetch (UNVERIFIED layout).
+> 
+> Source: <https://www.mydata-ssm.com.my/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Verbatim statutory text could not be fetched; quotes left empty per instruction.
+- Exact fields printed on the SSM profile were not verifiable via fetch (MyData is a SPA) — treated as well-established practice (INFERENCE).
+
+
 ## NL
 
 ### BV — Gesellschafterliste
@@ -7486,6 +8314,202 @@ An SRL is constituted by protocolized private document or escritura pública and
 - INFERENCE that the Registro Público issues an SRL certification in the same manner as for an SA — the SRL certification trámite was not separately fetched.
 
 
+## PH
+
+### One Person Corporation — Gesellschafterliste
+
+**✅ Provable**
+
+An OPC is by definition a corporation with a single stockholder (Sec. 116), and that sole stockholder is named in the OPC's Articles of Incorporation filed with the SEC (Sec. 118). The complete 'shareholder list' is therefore established by the base document itself. Certified copies of the AOA are obtainable from the SEC.
+
+**Document:** Articles of Incorporation — delivered as `Articles of Incorporation (One Person Corporation)`
+
+> **R.A. 11232, Sec. 116**
+> 
+> „A One Person Corporation is a corporation with a single stockholder: Provided, That only a natural person, trust, or an estate may form a One Person Corporation."
+> 
+> membership is inherently a single, identified holder
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+> **R.A. 11232, Sec. 118**
+> 
+> „A One Person Corporation shall file articles of incorporation in accordance with the requirements under Section 14 of this Code."
+> 
+> AOA (naming the single stockholder) is filed with SEC
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- OPC statutory reportorial requirements (Sec. 129) do NOT list a General Information Sheet, unlike ordinary corporations (Sec. 177); the sole-stockholder identity is instead carried by the AOA. SEC administrative practice may still require an OPC GIS, but this is not confirmed in the statute — flagged UNVERIFIED.
+- The AOA reflects the stockholder at incorporation; a subsequent transfer of the single stockholder's shares is reflected through later SEC filings/amendments rather than the original AOA, so the base document proves the sole-holder structure but not necessarily the current holder without the latest filing.
+
+
+### Stock Corporation — Gesellschafterliste
+
+**💶 Provable on request**
+
+The stock and transfer book (the true share register) is company-held at the principal office or the stock transfer agent, not at the SEC (Sec. 73), so it is not a registry document. However, every corporation must file a General Information Sheet with the SEC (Sec. 177(b)); the SEC-prescribed GIS form lists the stockholders and their shareholdings, and certified copies are obtainable from the SEC. Shareholders are therefore provable from the registry, but via an additional filed document (the GIS), not from a base extract.
+
+**Document:** General Information Sheet — delivered as `General Information Sheet (GIS)`
+
+> **R.A. 11232, Sec. 177**
+> 
+> „every corporation, domestic or foreign, doing business in the Philippines shall submit to the Commission: (a) Annual financial statements ... and (b) A general information sheet."
+> 
+> GIS is a mandatory SEC filing
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+> **R.A. 11232, Sec. 73**
+> 
+> „The stock and transfer book shall be kept in the principal office of the corporation or in the office of its stock transfer agent"
+> 
+> STB is company-held, not filed with SEC
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+> **SEC online document request service (SEC Express) — document catalogue**
+> 
+> „General Information Sheet"
+> 
+> GIS is orderable as an authenticated copy from the SEC
+> 
+> Source: <https://secexpress.ph/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The statute (Sec. 177) only names 'a general information sheet'; that the GIS enumerates stockholders and their shareholdings comes from the SEC-prescribed GIS form and settled practice (Philippine jurisprudence treats the GIS as evidence of stock ownership), not from the verbatim text of R.A. 11232 — flagged as UNVERIFIED at the statutory-text level.
+- The GIS is a periodic snapshot (filed annually, updated on changes); it may lag the current stock and transfer book.
+
+
+### One Person Corporation — Gesellschaftsvertrag
+
+**✅ Provable**
+
+For an OPC the constitution is the Articles of Incorporation alone (Sec. 118), filed with the SEC. Unlike a stock corporation, an OPC is expressly not required to submit or file by-laws (Sec. 119), so the constitution is a single base document. Certified copies of the AOA are obtainable from the SEC.
+
+**Document:** Articles of Incorporation — delivered as `Articles of Incorporation (One Person Corporation)`
+
+> **R.A. 11232, Sec. 118**
+> 
+> „A One Person Corporation shall file articles of incorporation in accordance with the requirements under Section 14 of this Code. It shall likewise substantially contain the following:"
+> 
+> AOA filed with SEC
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+> **R.A. 11232, Sec. 119**
+> 
+> „The One Person Corporation is not required to submit and file corporate bylaws."
+> 
+> no by-laws component for the OPC constitution
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The German Gesellschaftsvertrag equivalent for an OPC is the AOA only; there is deliberately no By-laws document to obtain (Sec. 119 exemption).
+
+
+### Stock Corporation — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The constitution is the Articles of Incorporation (Sec. 14) plus the By-laws, both of which are filed with the SEC — the by-laws are 'filed with the Commission and attached to the original articles of incorporation' (Sec. 45). Both are base registry documents and certified/authenticated copies are obtainable from the SEC.
+
+**Document:** Articles of Incorporation and By-laws — delivered as `Articles of Incorporation and By-laws`
+
+> **R.A. 11232, Sec. 45**
+> 
+> „A copy thereof, duly certified by a majority of the directors or trustees and countersigned by the secretary of the corporation, shall be filed with the Commission and attached to the original articles of incorporation."
+> 
+> by-laws filed with SEC
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+> **R.A. 11232, Sec. 73(a)**
+> 
+> „The articles of incorporation and bylaws of the corporation and all their amendments;"
+> 
+> both are corporate records
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+> **SEC online document request service (SEC Express) — document catalogue**
+> 
+> „By-laws (Original and Amended)"
+> 
+> AOA and By-laws orderable as authenticated copies
+> 
+> Source: <https://secexpress.ph/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- German 'Gesellschaftsvertrag' maps to the two-part Philippine constitution (AOA + By-laws); both must be pulled to fully mirror it.
+
+
+### One Person Corporation — Registerauszug
+
+**✅ Provable**
+
+An OPC is registered with the SEC like any corporation and receives a Certificate of Incorporation on approval (Sec. 18); it carries the 'OPC' suffix in its name (Sec. 120). Certified/authenticated copies of the certificate are obtainable from the SEC as a document. As with stock corporations there is no consolidated register-extract; current particulars sit in subsequent SEC filings.
+
+**Document:** Certificate of Incorporation — delivered as `SEC Certificate of Incorporation (certified copy)`
+
+> **R.A. 11232, Sec. 18**
+> 
+> „the Commission shall issue the certificate of incorporation."
+> 
+> applies suppletorily to OPCs per Sec. 115
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+> **R.A. 11232, Sec. 115**
+> 
+> „The provisions of this Title shall primarily apply to One Person Corporations. Other provisions of this Code apply suppletory"
+> 
+> general incorporation/certificate rules apply suppletorily
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Same mapping caveat as the stock-corporation Registerauszug: SEC Certificate of Incorporation is the base analog, not a German-style consolidated extract.
+- INFERENCE: equivalence judgement, not a statutory label.
+
+
+### Stock Corporation — Registerauszug
+
+**✅ Provable**
+
+The SEC is the corporate registry; on registration it issues the Certificate of Incorporation, the registry's own act of record evidencing legal existence and registration particulars. Certified/authenticated copies are obtainable from the SEC as a document (not merely parsed data). The Philippines has no single consolidated 'register extract' equivalent to a German Handelsregisterauszug; current particulars beyond the certificate are carried in the annually filed General Information Sheet.
+
+**Document:** Certificate of Incorporation — delivered as `SEC Certificate of Incorporation (certified copy)`
+
+> **R.A. 11232 (Revised Corporation Code), Sec. 18**
+> 
+> „the Commission shall issue the certificate of incorporation."
+> 
+> SEC = the registry; certificate is the registration act of record
+> 
+> Source: <https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html> (retrieved 2026-07-21)
+
+> **SEC online document request service (SEC Express)**
+> 
+> „SEC documents can now be requested online.  There is no need to go to the SEC to get plain or authenticated copies anymore."
+> 
+> authenticated copies of registry documents obtainable as documents
+> 
+> Source: <https://secexpress.ph/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- No single consolidated register-extract document exists (unlike a German Handelsregisterauszug); the closest base document is the SEC Certificate of Incorporation, with current particulars in the GIS.
+- INFERENCE: mapping the German 'Registerauszug' onto the SEC Certificate of Incorporation is an equivalence judgement, not a statutory label.
+
+
 ## PL
 
 ### P.S.A. — Gesellschafterliste
@@ -8005,6 +9029,127 @@ Same instrument as for a Lda: the certidão permanente reproduces the registos i
 > Source: <https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=506&tabela=leis> (retrieved 2026-07-18)
 
 
+## QA
+
+### LLC — Gesellschafterliste
+
+**✅ Provable**
+
+For a Qatari LLC the partners (شركاء) and their quotas (حصص) are fixed in the registered memorandum of association, and any transfer of an LLC quota must be notarised and registered with MoCI. The Commercial Registration extract for an LLC therefore lists the partners and their ownership percentages, so membership is provable directly from the registry. If a standalone list is required, the registered memorandum of association serves as the equivalent additional document.
+
+**Document:** السجل التجاري (بيان الشركاء والحصص) / عقد التأسيس — delivered as `Commercial Registration extract (partners/ownership section) — alternatively the registered Memorandum of Association`
+
+> **Commercial Companies Law No. 11 of 2015 — LLC provisions: memorandum must state partners and their shares; transfers of quotas must be registered in the Commercial Register**
+> 
+> Verbatim text not retrievable (see caveats). LLC quotas are non-negotiable; the register reflects current membership because transfers require amendment/registration.
+> 
+> Source: <https://www.moci.gov.qa/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/UNVERIFIED: that the CR extract enumerates every partner and exact percentage is based on known Qatar practice, not on a verbatim statutory/MoCI fetch; if a given CR printout omits shareholdings, fall back to the registered Memorandum of Association (proved_by_additional_document).
+- Statute article numbers not verbatim-confirmed due to source-access failures.
+
+
+### QPSC — Gesellschafterliste
+
+**❌ Not provable**
+
+For a QPSC, shares are negotiable securities and the body of shareholders is not recorded in the Commercial Register. The current register of shareholders is maintained by the company and, for listed companies, held in dematerialised form at the Qatar Central Securities Depository (Edaa / QCSD). The Commercial Register only records the founders at incorporation (in the memorandum), not the fluctuating shareholder base, so a current shareholder list cannot be evidenced from the registry.
+
+> **Commercial Companies Law No. 11 of 2015 — shares of a public shareholding company are negotiable; shareholder register maintained by the company / (listed) via central depository; Qatar Central Securities Depository (Edaa/QCSD) framework**
+> 
+> Verbatim text not retrievable (see caveats). Registry holds founders/memorandum only, not the ongoing shareholder register.
+> 
+> Source: <https://www.moci.gov.qa/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The company's own share register or a QCSD/Edaa statement can evidence shareholders, but these are private/depository records, not registry documents.
+- Founders named in the registered memorandum are provable, but this is not a current shareholder list.
+- Statute article numbers not verbatim-confirmed due to source-access failures — INFERENCE.
+
+
+### LLC — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+Under Law No. 11 of 2015 an LLC is constituted by a written memorandum of association that must be notarised and registered with MoCI; without registration it is not effective against third parties. This document is the LLC's constitution (German Gesellschaftsvertrag) and is held on the company file at the registry as a distinct document separate from the CR extract, hence an additional document rather than the base extract.
+
+**Document:** عقد التأسيس / النظام الأساسي — delivered as `Memorandum / Articles of Association of the LLC (filed and notarised with MoCI)`
+
+> **Commercial Companies Law No. 11 of 2015 — requirement that the company contract/memorandum be in writing, notarised and registered**
+> 
+> Verbatim text not retrievable (see caveats). The memorandum is a filed document distinct from the CR extract.
+> 
+> Source: <https://www.moci.gov.qa/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Third-party retrievability of the filed memorandum from MoCI may require authorisation or be obtained via the company; access is not guaranteed to be open/public.
+- Statute article numbers not verbatim-confirmed due to source-access failures — INFERENCE from established CCL structure.
+
+
+### QPSC — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A QPSC is constituted by a memorandum of association and articles of association under Law No. 11 of 2015; these must be filed with MoCI and are published. Together they form the company's constitution (German Gesellschaftsvertrag) and exist as distinct filed documents on the registry file, separate from the CR extract, hence an additional document.
+
+**Document:** النظام الأساسي / عقد التأسيس — delivered as `Articles of Association and Memorandum of Association of the QPSC (filed with MoCI; published)`
+
+> **Commercial Companies Law No. 11 of 2015 — public shareholding company memorandum and articles of association; filing/publication requirements**
+> 
+> Verbatim text not retrievable (see caveats). The articles/memorandum are filed documents distinct from the CR extract.
+> 
+> Source: <https://www.moci.gov.qa/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- For a listed QPSC the articles of association are typically publicly available (via QFMA/Qatar Stock Exchange disclosures); for unlisted QPSCs retrieval may require authorisation or the company.
+- Statute article numbers not verbatim-confirmed due to source-access failures — INFERENCE from established CCL structure.
+
+
+### LLC — Registerauszug
+
+**✅ Provable**
+
+Every LLC must be entered in the Commercial Register held by the Ministry of Commerce and Industry (MoCI) under the Commercial Companies Law No. 11 of 2015. The Commercial Registration (CR) extract is the base registry document and states the company's core particulars: trade name, CR number, legal form, capital, objects/activities, registered address and authorised manager(s)/signatories. This is the direct analogue of the German Registerauszug.
+
+**Document:** مستخرج السجل التجاري / شهادة القيد في السجل التجاري — delivered as `Commercial Registration extract / certificate (Commercial Register printout, MoCI)`
+
+> **Commercial Companies Law No. 11 of 2015 (general provisions requiring companies to be entered in the Commercial Register); MoCI Commercial Registration service**
+> 
+> Verbatim article text could not be retrieved (Al Meezan legal portal failed TLS verification; web-search budget exhausted). MoCI operates the Commercial Register and issues the CR extract/certificate.
+> 
+> Source: <https://www.moci.gov.qa/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Article numbers not verbatim-verified — Al Meezan (almeezan.qa) and other primary-text hosts returned certificate errors; INFERENCE from established Qatar CCL structure.
+- Exact CR extract layout/fields is administrative practice by MoCI, not fixed by statute in the fetched sources.
+
+
+### QPSC — Registerauszug
+
+**✅ Provable**
+
+A QPSC must be entered in the Commercial Register held by MoCI under Law No. 11 of 2015. The CR extract is the base registry document showing trade name, CR number, legal form, issued/paid capital, objects, registered address and board/authorised signatories. This is the direct analogue of the German Registerauszug.
+
+**Document:** مستخرج السجل التجاري / شهادة القيد في السجل التجاري — delivered as `Commercial Registration extract / certificate (Commercial Register printout, MoCI)`
+
+> **Commercial Companies Law No. 11 of 2015 (public shareholding company provisions; registration in the Commercial Register); MoCI Commercial Registration service**
+> 
+> Verbatim article text not retrievable (see caveats).
+> 
+> Source: <https://www.moci.gov.qa/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Article numbers not verbatim-verified — primary-text hosts returned certificate errors; INFERENCE from established Qatar CCL structure.
+- Exact CR extract fields reflect MoCI administrative practice.
+
+
 ## RO
 
 ### SA — Gesellschafterliste
@@ -8151,6 +9296,128 @@ ONRC (Oficiul Național al Registrului Comerțului) issues the certificat consta
 **Caveats:**
 
 - The exact enumerated content of the certificat constatator was not captured verbatim from an official ONRC schedule; its role as the register extract is well established but the field-by-field content is asserted from general ONRC practice (INFERENCE).
+
+
+## SA
+
+### JSC — Gesellschafterliste
+
+**❌ Not provable**
+
+A JSC's current shareholders are held in a shareholders' register (سجل المساهمين), not in the commercial register. For listed/public JSCs the register is maintained by the Securities Depository Center (Edaa), a Tadawul subsidiary; for closed JSCs the company keeps its own register and shares are commonly deposited with Edaa. The Ministry of Commerce commercial register and the bylaws only evidence the founders (المؤسسون) at incorporation, not the live shareholder body, so the current shareholder list is not provable from the registry.
+
+> **Companies Law 2022 (Royal Decree M/132), JSC shareholder-register provisions; Edaa (Securities Depository Center), Tadawul**
+> 
+> Primary source not fetchable in-session. Founders appear in incorporation documents; the maintained shareholder register sits with the company/Edaa, outside the MC commercial register. UNVERIFIED by fetched text.
+> 
+> Source: <https://mc.gov.sa/en/Regulations> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Quote empty: could not fetch verbatim statute text.
+- Founders (not current shareholders) are evidenced by the incorporation memorandum/bylaws; that is not a live shareholder list.
+- INFERENCE/UNVERIFIED — based on M/132 and Edaa/Tadawul structure.
+
+
+### LLC — Gesellschafterliste
+
+**💶 Provable on request**
+
+An LLC's partners (الشركاء) and their share allocation (الحصص) are stated in the company's memorandum / articles of association (عقد التأسيس), which is filed with and registered by the Ministry of Commerce. The membership is therefore provable, but the carrying document is the registered AoA rather than the CR certificate itself — hence an additional document, not the base extract. There is no separate standalone 'shareholder list' filing equivalent to a German Gesellschafterliste.
+
+**Document:** عقد التأسيس — delivered as `Articles of Association / Memorandum of Association (lists partners and their shares)`
+
+> **Companies Law 2022 (Royal Decree M/132), LLC memorandum/AoA provisions; Ministry of Commerce**
+> 
+> Primary source not fetchable in-session. The CR certificate may also display partner names, but the authoritative partner-and-share allocation lives in the عقد التأسيس. UNVERIFIED by fetched text.
+> 
+> Source: <https://mc.gov.sa/en/Regulations> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Quote empty: could not fetch verbatim statute text.
+- Base-vs-additional is a judgement call: the CR extract can show partner names, but full share breakdown is in the AoA, so classified as additional document.
+- INFERENCE/UNVERIFIED — grounded in M/132 knowledge, not a fetched official filing.
+
+
+### JSC — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The constitution of a JSC is its bylaws / articles of association (النظام الأساسي), accompanied by the founders' memorandum of association (عقد التأسيس). These are filed with and registered/published by the Ministry of Commerce and are obtainable as documents distinct from the CR certificate, so the constitution is provable via this additional registered document.
+
+**Document:** النظام الأساسي (وعقد التأسيس) — delivered as `Bylaws (Articles of Association), with founders' memorandum of association`
+
+> **Companies Law 2022 (Royal Decree M/132), JSC bylaws/incorporation and publication provisions; Ministry of Commerce**
+> 
+> Primary source not fetchable in-session. Registration/publication of JSC bylaws is standard under M/132. UNVERIFIED by fetched text.
+> 
+> Source: <https://mc.gov.sa/en/Regulations> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Quote empty: could not fetch verbatim statute text.
+- INFERENCE/UNVERIFIED — based on M/132 domain knowledge.
+
+
+### LLC — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The constitution of an LLC is its memorandum / articles of association (عقد التأسيس), executed by the partners and filed with and registered by the Ministry of Commerce. It is obtainable from the registry as a document distinct from the CR certificate, so the constitution is provable via this additional registered document.
+
+**Document:** عقد التأسيس — delivered as `Articles of Association / Memorandum of Association`
+
+> **Companies Law 2022 (Royal Decree M/132), LLC constitution/registration provisions; Ministry of Commerce**
+> 
+> Primary source not fetchable in-session. Registration/filing of the AoA is standard under M/132. UNVERIFIED by fetched text.
+> 
+> Source: <https://mc.gov.sa/en/Regulations> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Quote empty: could not fetch verbatim statute text.
+- INFERENCE/UNVERIFIED — based on M/132 domain knowledge.
+
+
+### JSC — Registerauszug
+
+**✅ Provable**
+
+As for all registered companies, the Ministry of Commerce issues a Commercial Registration certificate for a joint stock company. It states the company's particulars — name, CR number, legal form, capital, address, activities and board/management — and is the base register-extract document obtainable from the registry.
+
+**Document:** شهادة السجل التجاري — delivered as `Commercial Registration certificate`
+
+> **Companies Law 2022 (Royal Decree M/132) and Commercial Register Law; Ministry of Commerce, mc.gov.sa**
+> 
+> Primary source not fetchable in-session (TLS/403). UNVERIFIED by fetched text.
+> 
+> Source: <https://mc.gov.sa/en/Regulations> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Quote empty: could not fetch verbatim registry text.
+- INFERENCE/UNVERIFIED — based on MC registry practice and M/132.
+
+
+### LLC — Registerauszug
+
+**✅ Provable**
+
+The Ministry of Commerce maintains the Commercial Register (السجل التجاري) and issues a Commercial Registration certificate for every registered company. For an LLC this certificate is the direct register-extract equivalent: it states the company's particulars — name, CR number, legal form, capital, registered address, activities and manager(s). It is the base document obtainable from the registry.
+
+**Document:** شهادة السجل التجاري — delivered as `Commercial Registration certificate`
+
+> **Companies Law 2022 (Royal Decree M/132) and Commercial Register Law; Ministry of Commerce, mc.gov.sa**
+> 
+> Primary source not fetchable in-session (TLS-cert / 403 errors on mc.gov.sa and boe.gov.sa). CR certificate as the register extract is established Saudi practice; UNVERIFIED by fetched text.
+> 
+> Source: <https://mc.gov.sa/en/Regulations> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Quote empty: could not fetch verbatim statute/registry text (see note).
+- INFERENCE from domain knowledge of M/132 and MC registry practice; not confirmed against a fetched official document.
 
 
 ## SC
@@ -9029,6 +10296,154 @@ The base register document for an s.r.o. is the výpis z obchodného registra is
 - Verbatim statute text UNVERIFIED — Slov-Lex could not be fetched and web search budget was exhausted; wording of § 2/§ 11 of Act 530/2003 is asserted from domain knowledge, not quoted.
 
 
+## TH
+
+### Private Limited Company — Gesellschafterliste
+
+**💶 Provable on request**
+
+Thailand is a notable case: shareholders ARE obtainable from the registry. The CCC obliges the directors to send the DBD Registrar, at least once a year within 14 days after the ordinary (annual) general meeting, a copy of the full list of shareholders (form BOJ.5), and the list is also filed at incorporation. A DBD-certified copy of the BOJ.5 is therefore an additional registry document that evidences the shareholders. It is separate from the base affidavit, which does not carry shareholders.
+
+**Document:** บัญชีรายชื่อผู้ถือหุ้น (บอจ.5) — delivered as `List of Shareholders (form BOJ.5)`
+
+> **Civil and Commercial Code, Section 1139 (second paragraph)**
+> 
+> „It shall be the duty of the directors to send once at least in every year to the Registrar, and not later than on the fourteenth day after the ordinary meeting, a copy of the list of all shareholders at the time such meeting and those who have ceased to be shareholders since the date of the last ordinary meeting. Such list shall include all particulars specified in the foregoing section."
+> 
+> 'The foregoing section' is Section 1138 (names, addresses, occupations, shares held, amounts paid). The filed form is BOJ.5 (บอจ.5).
+> 
+> Source: <https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company> (retrieved 2026-07-21)
+
+> **Civil and Commercial Code, Section 1138 (particulars the list must contain)**
+> 
+> „The names and addresses, and occupations, if any, of the shareholders ... the amount paid or agreed to be considered as paid on the shares of each shareholder."
+> 
+> Source: <https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The BOJ.5 on file reflects the position as at the last AGM (updated at least annually); intra-year transfers may not yet be reflected.
+- Product/form label 'BOJ.5' is established DBD practice; not fetched verbatim from dbd.go.th.
+
+
+### Public Limited Company — Gesellschafterliste
+
+**💶 Provable on request**
+
+A public company keeps a register of shareholders and must submit to the DBD Registrar a copy of the list of shareholders as at the date of the annual general meeting (form BorMorJor.006 / บมจ.006). A DBD-certified copy is therefore obtainable as an additional registry document. For SET-listed companies the live register is maintained by the Thailand Securities Depository (TSD), but the AGM-date snapshot is still filed with the DBD.
+
+**Document:** บัญชีรายชื่อผู้ถือหุ้น (บมจ.006) — delivered as `List of Shareholders as at the AGM date (form BorMorJor.006)`
+
+> **Public Limited Companies Act B.E. 2535 (register of shareholders; annual submission of shareholder list to the Registrar)**
+> 
+> INFERENCE/UNVERIFIED verbatim: PLCA English text could not be fetched (403/self-signed cert). The BorMorJor.006 AGM-date shareholder-list filing with DBD is established practice; exact PLCA section number not verified in this session.
+> 
+> Source: <https://www.dbd.go.th/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Exact PLCA section and the verbatim wording were not verified; treat the filing obligation as established-practice, not quoted statute.
+- For listed public companies the current beneficial/registered holdings sit with the TSD; the DBD BorMorJor.006 is an annual snapshot, not a live register.
+
+
+### Private Limited Company — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The constitution is filed with the DBD. The memorandum of association (หนังสือบริคณห์สนธิ, form BOJ.2) is registered before incorporation, and the company's regulations (articles of association), 'if any', are filed together with the registration application. DBD-certified copies of both are obtainable as additional registry documents.
+
+**Document:** หนังสือบริคณห์สนธิ (บอจ.2) และข้อบังคับของบริษัท — delivered as `Memorandum of Association (BOJ.2) + Articles of Association / company regulations`
+
+> **Civil and Commercial Code, Section 1111 (paragraph on accompanying documents)**
+> 
+> „The application must be accompanied by the copy of the regulations, if any, and of the proceedings of the statutory meeting, both certified by the signature of at least one director."
+> 
+> 'Regulations' = articles of association. Filed with the Registrar and retrievable as a certified copy.
+> 
+> Source: <https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company> (retrieved 2026-07-21)
+
+> **Civil and Commercial Code, Section 1098 (memorandum contents)**
+> 
+> „The name of the proposed company, which must always end with the word 'limited'. ... The objects of the company. ... A declaration that the liability of the shareholders shall be limited. ... The amount of share capital with which the company proposes to be registered, and the divisions thereof into shares of a fixed amount."
+> 
+> Source: <https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Articles ('regulations') are filed only 'if any' — a company that adopts the CCC's default statutory regulations may have no separately filed AOA; the memorandum (BOJ.2) is always filed.
+- MOA and AOA are two distinct documents; together they form the German-sense Gesellschaftsvertrag.
+
+
+### Public Limited Company — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+Under the Public Limited Companies Act B.E. 2535 the promoters register the memorandum of association with the DBD Registrar, and the articles of association are adopted and filed as part of incorporation. DBD-certified copies of both are obtainable as additional registry documents.
+
+**Document:** หนังสือบริคณห์สนธิและข้อบังคับของบริษัทมหาชนจำกัด — delivered as `Memorandum of Association + Articles of Association`
+
+> **Public Limited Companies Act B.E. 2535 (registration of memorandum of association; articles of association)**
+> 
+> INFERENCE/UNVERIFIED verbatim: PLCA English text not fetchable this session; filing of MOA and AOA with the DBD for public companies is established practice and consistent with the PLCA incorporation regime.
+> 
+> Source: <https://www.dbd.go.th/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Verbatim PLCA sections not fetched; status rests on established practice.
+- MOA and AOA are separate documents; both are DBD-held for public companies.
+
+
+### Private Limited Company — Registerauszug
+
+**✅ Provable**
+
+A private limited company is registered with the DBD Registrar, who delivers a certificate of registration and, on request, issues the standard company affidavit (หนังสือรับรอง). This affidavit is the DBD's official register extract: it states the registration number, company name, registered capital, registered office, objects, directors and their signing authority. It is the base registry document and is obtainable as a DBD-certified document.
+
+**Document:** หนังสือรับรองบริษัท (หนังสือรับรอง) — delivered as `Company Affidavit / Certificate of the Registrar (DBD)`
+
+> **Civil and Commercial Code, Title XXII, Ch. IV, Section 1111 (final paragraph)**
+> 
+> „A certificate of registration shall be delivered to the company."
+> 
+> The DBD affidavit (หนังสือรับรอง) is the certified extract of these registered particulars; the DBD website was not fetchable for a verbatim product label.
+> 
+> Source: <https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company> (retrieved 2026-07-21)
+
+> **Civil and Commercial Code, Section 1111(1)-(8) (contents of the register entry)**
+> 
+> „The application and entry in the register must contain, in conformity with the decisions of the statutory meeting, the following particulars: ... 5. The names, occupations and addresses of the directors. 6. If the directors have power to act separately, their respective powers and the number or names of the directors whose signature is binding on the company. ... 8. The address of the principal of business office and of all branch offices."
+> 
+> These registered particulars are what the affidavit certifies.
+> 
+> Source: <https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The DBD affidavit lists directors, capital, objects and signing authority, but NOT shareholders (shareholders sit on the separate BOJ.5 list).
+- The exact English product label used by DBD ('Company Affidavit' / 'Certificate') could not be fetched verbatim from dbd.go.th (site returned 404 to WebFetch); label given is established practice.
+
+
+### Public Limited Company — Registerauszug
+
+**✅ Provable**
+
+A public limited company is incorporated by registration with the DBD Registrar under the Public Limited Companies Act B.E. 2535. The DBD issues the company affidavit (หนังสือรับรอง) as the official register extract, stating registration number, name, registered capital, registered office, objects, directors and signing authority. It is the base registry document.
+
+**Document:** หนังสือรับรองบริษัทมหาชนจำกัด (หนังสือรับรอง) — delivered as `Company Affidavit / Certificate of the Registrar (DBD)`
+
+> **Public Limited Companies Act B.E. 2535 (registration of the company with the DBD Registrar)**
+> 
+> INFERENCE/UNVERIFIED verbatim: PLCA English text (krisdika/SEC PDFs) returned 403/self-signed-cert and could not be fetched; DBD affidavit for public companies is well-established DBD practice, structurally identical to the private-company affidavit.
+> 
+> Source: <https://www.dbd.go.th/en/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Verbatim PLCA provision not fetched (source PDFs blocked); status rests on established DBD practice and the PLCA registration regime.
+- As with the private company, the public-company affidavit does not list shareholders.
+
+
 ## TR
 
 ### AS — Gesellschafterliste
@@ -9179,6 +10594,186 @@ The Trade Registry (Ticaret Sicili Müdürlüğü, coordinated via MERSIS) issue
 - TTK does not define a single named 'register extract'; in practice the current extract is the Ticaret Sicili Tasdiknamesi (registry) or Faaliyet Belgesi (Chamber of Commerce). Provability is high; the exact document label is by administrative practice.
 
 
+## TW
+
+### Gufen Youxian Gongsi — Gesellschafterliste
+
+**❌ Not provable**
+
+For a 股份有限公司 the shareholders are recorded in the shareholder register (股東名簿) which Company Act Art 169 requires the company to keep itself; it is not filed with or issued by the MOEA. The articles (Art 129) do not list individual shareholders, and the registry only shows promoters, directors and supervisors (Art 393(2) items 4-5). Ordinary shareholders therefore cannot be evidenced by any MOEA/GCIS document; only the company's internal 股東名簿 (or, for listed firms, TDCC records) evidences them.
+
+> **Company Act (公司法) Art 169**
+> 
+> „股東名簿應編號記載下列事項：一、各股東之姓名或名稱、住所或居所。二、各股東之股數；發行股票者，其股票號數。三、發給股票之年、月、日。四、發行特別股者，並應註明特別種類字樣。"
+> 
+> The shareholder register is maintained by the company, not the registry.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=169> (retrieved 2026-07-21)
+
+> **Company Act (公司法) Art 393, para 2 items 4-5**
+> 
+> „執行業務或代表公司之股東。"
+> 
+> Only representative shareholders (unlimited-type) and directors/supervisors (item 5) are disclosed; no general shareholder list for a company limited by shares.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Only promoters (發起人, in incorporation documents) and directors/supervisors reach the registry; the ongoing shareholder body does not.
+- The company-held 股東名簿 (Art 169) is the actual shareholder list but is not a registry document; obtaining it requires the company's cooperation (or, for TWSE/TPEx-listed companies, TDCC 集保 records).
+
+
+### Youxian Gongsi — Gesellschafterliste
+
+**💶 Provable on request**
+
+For a 有限公司 the shareholders and their capital contributions are not a separate freely-public register item, but Company Act Art 101 requires the articles of incorporation (章程) to state each shareholder's name and each shareholder's capital contribution, and Art 111(3) confirms any change of shareholder/contribution is effected by amending those provisions of the 章程. The 章程 is a filed document that MOEA discloses under Art 393(2) item 10, obtainable by any person on application (online only with company consent). Thus the shareholder list is provable, but via the additional 章程 document rather than the base extract.
+
+**Document:** 公司章程 — delivered as `Company articles of incorporation (which by statute list every shareholder and each shareholder's capital contribution)`
+
+> **Company Act (公司法) Art 111, para 3**
+> 
+> „前二項轉讓，不同意之股東有優先受讓權；如不承受，視為同意轉讓，並同意修改章程有關股東及其出資額事項。"
+> 
+> Confirms the 有限公司 articles (章程) contain the 'shareholders and their capital contributions' matters, updated on any transfer.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=111> (retrieved 2026-07-21)
+
+> **Company Act (公司法) Art 101 (contents of a limited company's articles of incorporation)**
+> 
+> Art 101(1) requires the articles to state each shareholder's name (股東姓名或名稱) and each shareholder's capital contribution (各股東出資額). Verbatim Chinese not captured; content confirmed via official English translation.
+> 
+> Source: <https://law.moj.gov.tw/ENG/LawClass/LawSingle.aspx?pcode=J0080001&flno=101> (retrieved 2026-07-21)
+
+> **Company Act (公司法) Art 393, para 2 item 10 + para 3**
+> 
+> „前項第一款至第九款，任何人得至主管機關之資訊網站查閱；第十款，經公司同意者，亦同。"
+> 
+> Item 10 = 公司章程. Disclosable to any person; online display of the 章程 requires company consent, but application-based 查閱/抄錄/複製 is available regardless.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The separate at-company shareholder roster under Art 103 (股東名簿) is NOT a registry document — it is held by the company; the registry-provable proof is the 章程.
+- INFERENCE: classified as additional (not base) because the full shareholder roster is not on the free public extract; if the MOEA full registration file / 登記事項卡 is treated as showing all shareholders and 出資額, it could instead be read as proved_by_base_document.
+- UNVERIFIED: online availability of the 章程 depends on company consent per Art 393(3); offline any-person application under Art 393(2) is the reliable route.
+
+
+### Gufen Youxian Gongsi — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A 股份有限公司's articles of incorporation (章程) are filed in registration and enumerated as a publicly-disclosable item under Company Act Art 393(2) item 10; any person may inspect, transcribe or copy them on application to MOEA (online display requires company consent per Art 393(3)). This is a distinct document from the base register extract, so it is an additional registry document.
+
+**Document:** 公司章程 — delivered as `Company articles of incorporation`
+
+> **Company Act (公司法) Art 393, para 2 item 10**
+> 
+> „公司章程。"
+> 
+> Articles of incorporation are an enumerated publicly-disclosable registration item for all company types.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393> (retrieved 2026-07-21)
+
+> **Company Act (公司法) Art 393, para 3**
+> 
+> „前項第一款至第九款，任何人得至主管機關之資訊網站查閱；第十款，經公司同意者，亦同。"
+> 
+> Online display of the 章程 requires company consent; application-based any-person access remains under para 2.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Free online access to the 章程 requires the company's consent (Art 393(3)); guaranteed any-person access is via application to MOEA under Art 393(2).
+- For a 股份有限公司 the articles state authorized/issued capital and share structure but do NOT list individual shareholders (contrast Art 101 for 有限公司).
+
+
+### Youxian Gongsi — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+A 有限公司's articles of incorporation (章程) are a document filed in the registration process. Company Act Art 393(2) item 10 lists 公司章程 among the items the MOEA must disclose, and any person may inspect, transcribe or copy it on application (online display requires company consent per Art 393(3)). This is a distinct document from the base register extract, so it is an additional registry document.
+
+**Document:** 公司章程 — delivered as `Company articles of incorporation`
+
+> **Company Act (公司法) Art 393, para 2 item 10**
+> 
+> „公司章程。"
+> 
+> The articles of incorporation are an enumerated publicly-disclosable registration item.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393> (retrieved 2026-07-21)
+
+> **Company Act (公司法) Art 393, para 3**
+> 
+> „前項第一款至第九款，任何人得至主管機關之資訊網站查閱；第十款，經公司同意者，亦同。"
+> 
+> Item 10 (章程) is viewable online only with company consent; application-based any-person access remains available under para 2.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Free online access to the 章程 requires the company's consent (Art 393(3)); guaranteed any-person access is via 查閱/抄錄/複製 application to MOEA under Art 393(2).
+
+
+### Gufen Youxian Gongsi — Registerauszug
+
+**✅ Provable**
+
+The MOEA/GCIS registration system issues a registration transcript that is the register extract for a 股份有限公司, showing name, business scope, address, capital, and directors/supervisors (with their shareholding). Under Company Act Art 393(2)-(3) these items are publicly disclosed and any person may view items 1-9 on the MOEA website. This is the base document equivalent to the German Registerauszug.
+
+**Document:** 公司登記事項 (抄錄本) / 商工登記公示資料 — delivered as `MOEA company registration transcript / GCIS public registration record`
+
+> **Company Act (公司法) Art 393, para 2 item 5**
+> 
+> „董事、監察人姓名及持股。"
+> 
+> Directors' and supervisors' names and shareholding are publicly-disclosed registered items for a company limited by shares.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393> (retrieved 2026-07-21)
+
+> **MOEA GCIS company registration public query (商工登記公示資料查詢服務)**
+> 
+> Public registration search portal issuing the register extract for a 股份有限公司.
+> 
+> Source: <https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The extract reflects directors/supervisors and promoters, not the general body of shareholders.
+
+
+### Youxian Gongsi — Registerauszug
+
+**✅ Provable**
+
+The MOEA/GCIS company registration system issues a registration transcript that constitutes the register extract for a 有限公司, showing company name, business scope, address, capital, and the director(s). Under Company Act Art 393(2)-(3) these registered particulars are publicly disclosed and any person may inspect, transcribe or copy them (items 1-9 freely on the MOEA website). This is the equivalent of the German Registerauszug and is the base document.
+
+**Document:** 公司登記事項 (抄錄本) / 商工登記公示資料 — delivered as `MOEA company registration transcript / GCIS public registration record`
+
+> **Company Act (公司法) Art 393, para 3**
+> 
+> „前項第一款至第九款，任何人得至主管機關之資訊網站查閱；第十款，經公司同意者，亦同。"
+> 
+> Registered items 1-9 (name, business, address, directors/supervisors, capital, etc.) are freely inspectable by anyone on the MOEA information website.
+> 
+> Source: <https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393> (retrieved 2026-07-21)
+
+> **MOEA GCIS company registration public query (商工登記公示資料查詢服務)**
+> 
+> Public registration search portal that issues the register extract for all company types including 有限公司.
+> 
+> Source: <https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The base free public extract shows the director(s) and capital, not the full non-director shareholder roster (that is treated separately under GESELLSCHAFTERLISTE).
+
+
 ## US
 
 ### Corporation — Gesellschafterliste
@@ -9208,6 +10803,57 @@ Delaware does NOT hold or publish any list of shareholders. Ownership is recorde
 - Shareholders are entirely private in Delaware; no state document evidences them. Ownership proof must come from the company (stock ledger, cap table) — outside the registry.
 
 
+### Delaware Corp — Gesellschafterliste
+
+**❌ Not provable**
+
+Stockholders of a Delaware corporation are not filed with the state. Ownership is recorded in the corporation's own stock ledger. No document from the Division of Corporations evidences the shareholder list.
+
+> **8 Del. C. § 219/§ 224 (stock ledger, DGCL)**
+> 
+> The stock ledger is a corporate record maintained by the company, not a state filing; cite unverified verbatim.
+> 
+> Source: <https://delcode.delaware.gov/title8/c001/sc07/index.html> (retrieved 2026-07-21)
+
+> **8 Del. C. § 102 (certificate contents, DGCL)**
+> 
+> The certificate of incorporation lists authorized shares, not the identities of stockholders.
+> 
+> Source: <https://delcode.delaware.gov/title8/c001/sc01/index.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Shareholders are held only in the company's stock ledger, never filed with the state.
+- UNVERIFIED: statutory verbatim not fetched for §§ 219/224/102.
+
+
+### Delaware LLC — Gesellschafterliste
+
+**❌ Not provable**
+
+Members of a Delaware LLC are not filed with the state. The certificate of formation does not list members, and membership is recorded only in the company's own limited liability company agreement and internal records. No registry document evidences the member list.
+
+> **6 Del. C. § 18-201**
+> 
+> „The certificate of formation shall be filed in the office of the Secretary of State and set forth:"
+> 
+> The enumerated contents cover name and registered office/agent; members are not among the required particulars.
+> 
+> Source: <https://delcode.delaware.gov/title6/c018/sc02/index.html> (retrieved 2026-07-21)
+
+> **6 Del. C. § 18-201(d)**
+> 
+> „A limited liability company agreement shall be entered into or otherwise existing either before, after or at the time of the filing of a certificate of formation"
+> 
+> Membership lives in the private LLC agreement, which is not filed.
+> 
+> Source: <https://delcode.delaware.gov/title6/c018/sc02/index.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Members are held in the company's internal records/operating agreement, never filed with the Secretary of State.
+
+
 ### LLC — Gesellschafterliste
 
 **❌ Not provable**
@@ -9233,6 +10879,71 @@ Delaware does NOT hold any list of LLC members. The Certificate of Formation is 
 **Caveats:**
 
 - Members are entirely private in Delaware; no state document evidences them. Ownership proof must come from the company (operating agreement, member ledger) — outside the registry.
+
+
+### Nevada Corp — Gesellschafterliste
+
+**❌ Not provable**
+
+Stockholders of a Nevada corporation are not filed with the state. The NRS 78.150 Annual List discloses the president, secretary, treasurer and all directors — officers and directors only, not stockholders. Shareholdings live in the corporation's own stock ledger, so no registry document evidences the shareholder list.
+
+> **NRS 78.150(1)**
+> 
+> „The names and titles of the president, secretary and treasurer, or the equivalent thereof, and of all the directors of the corporation"
+> 
+> Confirms the public list is directors/officers, expressly not stockholders.
+> 
+> Source: <https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The Annual List is a common false friend — it evidences officers/directors, never shareholders.
+
+
+### New York Corp — Gesellschafterliste
+
+**❌ Not provable**
+
+Shareholders of a New York business corporation are not filed with the Department of State. The certificate of incorporation states authorized shares, not shareholder identities, and ownership is kept in the corporation's own record of shareholders. No registry document evidences the shareholder list.
+
+> **N.Y. Bus. Corp. Law § 402**
+> 
+> „The name of the corporation."
+> 
+> § 402 contents cover name, purpose, county, and authorized shares — not shareholder identities.
+> 
+> Source: <https://www.nysenate.gov/legislation/laws/BSC/402> (retrieved 2026-07-21)
+
+> **N.Y. Bus. Corp. Law § 624 (books and records of account)**
+> 
+> The record of shareholders is a corporate book maintained by the company, not a state filing; verbatim not fetched.
+> 
+> Source: <https://www.nysenate.gov/legislation/laws/BSC/624> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Shareholders are held only in the company's own record of shareholders, never filed with the Department of State.
+- UNVERIFIED: verbatim of § 624 not fetched.
+
+
+### Wyoming LLC — Gesellschafterliste
+
+**❌ Not provable**
+
+Members of a Wyoming LLC are not filed with the state. The articles of organization require only the LLC name and its registered office/agent (with the agent's consent) — no member list. Membership is held in the company's own operating agreement and records, so no registry document evidences it.
+
+> **Wyo. Stat. § 17-29-201(a)**
+> 
+> „One (1) or more persons may act as organizers to form a limited liability company by signing and delivering to the secretary of state for filing articles of organization."
+> 
+> The enumerated required contents are name and registered office/agent only; members are not required.
+> 
+> Source: <https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Members are held in the company's internal operating agreement/records, never filed with the state.
+- Wyoming is a privacy-oriented filing state; members are deliberately not part of the public record.
 
 
 ### Corporation — Gesellschaftsvertrag
@@ -9265,6 +10976,63 @@ For a Delaware corporation the constitutive/charter document is the Certificate 
 - The Satzung/charter equivalent is the Certificate of Incorporation (filed); the bylaws are the internal governance document (private).
 
 
+### Delaware Corp — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The Certificate of Incorporation is filed with the Delaware Division of Corporations, is public, and a certified copy is obtainable — it constitutes the corporation and proves its charter. The bylaws, which govern internal affairs like a Gesellschaftsvertrag, are adopted internally and not filed, so they cannot be obtained from the registry.
+
+**Document:** Certificate of Incorporation — delivered as `Certified copy of the Certificate of Incorporation`
+
+> **8 Del. C. § 106 (DGCL)**
+> 
+> „Upon the filing with the Secretary of State of the certificate of incorporation"
+> 
+> Filing the certificate constitutes the body corporate; the document is public.
+> 
+> Source: <https://delcode.delaware.gov/title8/c001/sc01/index.html> (retrieved 2026-07-21)
+
+> **8 Del. C. § 109 (bylaws, DGCL)**
+> 
+> INFERENCE: § 109 provides for adoption/amendment of bylaws by the corporation but imposes no requirement to file them with the Secretary of State.
+> 
+> Source: <https://delcode.delaware.gov/title8/c001/sc01/index.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Only the Certificate of Incorporation is provable; bylaws are NOT filed and not provable from the registry.
+- INFERENCE: 'bylaws not filed' rests on the absence of any filing requirement in § 109, not on an affirmative prohibition.
+
+
+### Delaware LLC — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The Certificate of Formation is filed with and public at the Delaware Division of Corporations, and a certified copy is obtainable — it is the foundational constitutional filing and proves the entity's charter. However, the operating (LLC) agreement, which contains most of what a German Gesellschaftsvertrag governs, is a private document that is not filed and cannot be obtained from the registry.
+
+**Document:** Certificate of Formation — delivered as `Certified copy of the Certificate of Formation`
+
+> **6 Del. C. § 18-201**
+> 
+> „The certificate of formation shall be filed in the office of the Secretary of State and set forth:"
+> 
+> The charter document is public and certifiable.
+> 
+> Source: <https://delcode.delaware.gov/title6/c018/sc02/index.html> (retrieved 2026-07-21)
+
+> **6 Del. C. § 18-201(d)**
+> 
+> „A limited liability company agreement shall be entered into or otherwise existing either before, after or at the time of the filing of a certificate of formation"
+> 
+> The LLC agreement exists independently of the filing and is not lodged with the state.
+> 
+> Source: <https://delcode.delaware.gov/title6/c018/sc02/index.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Only the Certificate of Formation is provable; the operating agreement (the substantive constitution) is NOT filed and not provable from the registry.
+
+
 ### LLC — Gesellschaftsvertrag
 
 **✅ Provable**
@@ -9292,6 +11060,90 @@ The constitutive/charter document filed with the state for a Delaware LLC is the
 **Caveats:**
 
 - MAPPING CHOICE: mapped to the filed Certificate of Formation (the charter), which IS provable, but it carries almost no substantive constitutional content — the true Gesellschaftsvertrag analog is the operating agreement, which is PRIVATE (may be oral/implied) and not_provable_from_registry.
+
+
+### Nevada Corp — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The Articles of Incorporation are filed with the Nevada Secretary of State, are public, and a certified copy is obtainable — the foundational charter document. The bylaws, adopted by the directors under NRS ch. 78, are internal and not filed, so they cannot be obtained from the registry.
+
+**Document:** Articles of Incorporation — delivered as `Certified copy of the Articles of Incorporation`
+
+> **NRS 78.030 / 78.035 (articles of incorporation)**
+> 
+> INFERENCE: articles are executed and filed with the Secretary of State and become the public charter; verbatim not fetched.
+> 
+> Source: <https://www.leg.state.nv.us/nrs/nrs-078.html> (retrieved 2026-07-21)
+
+> **NRS 78.120 (bylaws adopted by directors)**
+> 
+> INFERENCE: directors adopt bylaws; the chapter imposes no requirement to file them with the state.
+> 
+> Source: <https://www.leg.state.nv.us/nrs/nrs-078.html> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Only the Articles of Incorporation are provable; bylaws are NOT filed and not provable from the registry.
+- UNVERIFIED: verbatim text of NRS 78.030/78.035/78.120 not fetched (leg.state.nv.us blocked to WebFetch).
+
+
+### New York Corp — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The Certificate of Incorporation is filed with the NY Department of State, is public, and a certified copy is obtainable — the foundational charter. The by-laws, adopted by the shareholders or board under BCL § 601, are internal and carry no filing requirement, so they cannot be obtained from the registry.
+
+**Document:** Certificate of Incorporation — delivered as `Certified copy of the Certificate of Incorporation`
+
+> **N.Y. Bus. Corp. Law § 402**
+> 
+> „The name of the corporation."
+> 
+> § 402 sets out what the filed certificate of incorporation must contain; the document is public.
+> 
+> Source: <https://www.nysenate.gov/legislation/laws/BSC/402> (retrieved 2026-07-21)
+
+> **N.Y. Bus. Corp. Law § 601(a)**
+> 
+> „by-laws may be adopted, amended or repealed by a majority of the votes cast by the shares at the time entitled to vote in the election of any directors"
+> 
+> By-laws are adopted internally; § 601 imposes no requirement to file them with the Department of State.
+> 
+> Source: <https://www.nysenate.gov/legislation/laws/BSC/601> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Only the Certificate of Incorporation is provable; by-laws are NOT filed and not provable from the registry.
+- INFERENCE: 'by-laws not filed' rests on the absence of any filing requirement in § 601.
+
+
+### Wyoming LLC — Gesellschaftsvertrag
+
+**✅ Provable**
+
+The Articles of Organization are filed with the Wyoming Secretary of State, are public, and a certified copy is obtainable — the foundational charter filing. The operating agreement, which governs the LLC's internal affairs like a Gesellschaftsvertrag, is private and not filed, so it cannot be obtained from the registry.
+
+**Document:** Articles of Organization — delivered as `Certified copy of the Articles of Organization`
+
+> **Wyo. Stat. § 17-29-201(a)**
+> 
+> „One (1) or more persons may act as organizers to form a limited liability company by signing and delivering to the secretary of state for filing articles of organization."
+> 
+> The charter document is public and certifiable.
+> 
+> Source: <https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html> (retrieved 2026-07-21)
+
+> **Wyo. Stat. § 17-29-110 (operating agreement)**
+> 
+> INFERENCE: the operating agreement is recognized as a private governance document and is not required to be filed with the state.
+> 
+> Source: <https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Only the Articles of Organization are provable; the operating agreement is NOT filed and not provable from the registry.
+- UNVERIFIED: verbatim text of § 17-29-110 not fetched.
 
 
 ### Corporation — Registerauszug
@@ -9324,6 +11176,62 @@ Delaware has no 'register extract' equivalent to a Handelsregisterauszug. The of
 - Delaware issues no periodic 'extract' document; equivalence to a REGISTERAUSZUG is a functional mapping, not a like-for-like document.
 
 
+### Delaware Corp — Registerauszug
+
+**💶 Provable on request**
+
+Delaware issues no consolidated current-particulars extract. On request the Division of Corporations provides a Certificate of Good Standing evidencing the corporation's existence and standing, optionally listing filed documents (long form), but not a full snapshot of current officers/directors or capital. It is an ordered additional document, not a base register printout.
+
+**Document:** Certificate of Good Standing (Delaware Division of Corporations) — delivered as `Certificate of Good Standing`
+
+> **8 Del. C. § 106 (DGCL)**
+> 
+> „Upon the filing with the Secretary of State of the certificate of incorporation"
+> 
+> Fragment; the state holds the certificate of incorporation and filed amendments, not a live particulars register.
+> 
+> Source: <https://delcode.delaware.gov/title8/c001/sc01/index.html> (retrieved 2026-07-21)
+
+> **Delaware Division of Corporations (Certificate of Good Standing service)**
+> 
+> Good Standing certifies existence/standing only; unverified against verbatim text.
+> 
+> Source: <https://corp.delaware.gov/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/JUDGMENT: a Good Standing certificate is not a true Registerauszug — it proves existence/status, not consolidated current particulars.
+- UNVERIFIED: no verbatim quote fetched for certificate contents.
+
+
+### Delaware LLC — Registerauszug
+
+**💶 Provable on request**
+
+The US has no consolidated 'current particulars' register extract equivalent to a German Registerauszug. On request the Delaware Division of Corporations issues a Certificate of Good Standing, which proves the LLC's existence and standing but NOT its legal form details, registered address history, managers or members. It is an ordered additional document, not an automatically available base register printout.
+
+**Document:** Certificate of Good Standing (Delaware Division of Corporations) — delivered as `Certificate of Good Standing`
+
+> **6 Del. C. § 18-201 (Delaware LLC Act)**
+> 
+> „The certificate of formation shall be filed in the office of the Secretary of State and set forth:"
+> 
+> Only the certificate of formation — not a running register of particulars — is held by the state.
+> 
+> Source: <https://delcode.delaware.gov/title6/c018/sc02/index.html> (retrieved 2026-07-21)
+
+> **Delaware Division of Corporations (Certificate of Good Standing service)**
+> 
+> Good Standing (short/long form) certifies existence and standing only; unverified against a verbatim statutory text.
+> 
+> Source: <https://corp.delaware.gov/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE: a Good Standing certificate is judged to be, at best, a weak substitute for a Registerauszug — it evidences existence/status, not the consolidated current particulars (legal form, address, representatives, members) a German extract carries.
+- UNVERIFIED: no verbatim quote fetched for the Good Standing certificate contents.
+
+
 ### LLC — Registerauszug
 
 **✅ Provable**
@@ -9352,6 +11260,90 @@ As with corporations, Delaware issues no register extract for LLCs. The official
 
 - The Certificate of Good Standing evidences existence/status only; it lists no members, managers, or capital.
 - No periodic 'extract' document exists; equivalence to a REGISTERAUSZUG is a functional mapping.
+
+
+### Nevada Corp — Registerauszug
+
+**💶 Provable on request**
+
+Nevada issues no consolidated current-particulars extract. The Secretary of State provides a Certificate of Existence/Good Standing (existence and status), and — uniquely among these forms — a publicly filed Annual List of the officers and directors under NRS 78.150 can supplement it as to representation. Together these are ordered additional documents, still short of a full German-style register extract, and they do not evidence shareholders.
+
+**Document:** Certificate of Existence with Status; Annual List of Officers and Directors — delivered as `Certificate of Existence / Good Standing (plus Annual List)`
+
+> **NRS 78.150(1)**
+> 
+> „The names and titles of the president, secretary and treasurer, or the equivalent thereof, and of all the directors of the corporation"
+> 
+> The public Annual List covers officers/directors only.
+> 
+> Source: <https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html> (retrieved 2026-07-21)
+
+> **Nevada Secretary of State (Certificate of Existence service)**
+> 
+> Certificate of Existence with Status certifies existence/good standing; unverified verbatim.
+> 
+> Source: <https://www.nvsos.gov/sos/businesses> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/JUDGMENT: even combined, Good Standing + Annual List is not a true Registerauszug; it omits capital and shareholders and is not a single consolidated extract.
+- The Annual List proves officers/directors, NOT shareholders.
+
+
+### New York Corp — Registerauszug
+
+**💶 Provable on request**
+
+New York issues no consolidated current-particulars extract. The Department of State provides a Certificate of Status (also called Certificate of Existence) evidencing that the corporation exists and is active, but not its officers, directors, capital or shareholders. It is an ordered additional document, not a base register printout.
+
+**Document:** Certificate of Status (NY Department of State, Division of Corporations) — delivered as `Certificate of Status (Certificate of Existence)`
+
+> **N.Y. Bus. Corp. Law § 402**
+> 
+> „The name of the corporation."
+> 
+> The state holds the certificate of incorporation and filings, not a live particulars register; § 402 lists the certificate's contents.
+> 
+> Source: <https://www.nysenate.gov/legislation/laws/BSC/402> (retrieved 2026-07-21)
+
+> **NY Department of State, Division of Corporations (Certificate of Status service)**
+> 
+> Certificate of Status certifies existence/active status only; unverified verbatim.
+> 
+> Source: <https://dos.ny.gov/certificate-status> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/JUDGMENT: a Certificate of Status is not a true Registerauszug — existence/status only.
+- UNVERIFIED: no verbatim quote fetched for certificate contents.
+
+
+### Wyoming LLC — Registerauszug
+
+**💶 Provable on request**
+
+Wyoming issues no consolidated current-particulars extract. The Secretary of State provides a Certificate of Good Standing on request, evidencing existence and standing but not legal form details, managers or members. It is an ordered additional document, not a base register printout.
+
+**Document:** Certificate of Good Standing (Wyoming Secretary of State) — delivered as `Certificate of Good Standing`
+
+> **Wyo. Stat. § 17-29-201(a)**
+> 
+> „One (1) or more persons may act as organizers to form a limited liability company by signing and delivering to the secretary of state for filing articles of organization."
+> 
+> The state holds the articles of organization, not a running particulars register.
+> 
+> Source: <https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html> (retrieved 2026-07-21)
+
+> **Wyoming Secretary of State (Certificate of Good Standing service)**
+> 
+> Good Standing certifies existence/standing only; unverified verbatim.
+> 
+> Source: <https://sos.wyo.gov/Business/> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- INFERENCE/JUDGMENT: a Good Standing certificate is not a true Registerauszug — existence/status only, no consolidated particulars.
+- UNVERIFIED: no verbatim quote fetched for certificate contents.
 
 
 ## VG
@@ -9466,6 +11458,154 @@ The BVI Registry of Corporate Affairs maintains only a Register of Companies, a 
 - INFERENCE: BVI has NO full public register extract; mapping the Certificate of Good Standing to 'Registerauszug' is a best-fit, not an exact equivalent. It does NOT list directors or shareholders.
 - The register of directors is filed with the Registrar but NOT open to public inspection (competent-authority access via BOSS). A limited names-only public director search was introduced by the BC (Amendment) Act 2022 from 1 Jan 2023 — UNVERIFIED here (post-dates the consolidated Act text used).
 - The consolidated PDF treats register-of-directors filing as optional (s.231); current law makes filing a copy of the register of directors mandatory — does not change the public/non-public conclusion.
+
+
+## VN
+
+### Cong ty TNHH — Gesellschafterliste
+
+**💶 Provable on request**
+
+For a multi-member LLC the members (thành viên) and their capital contributions are registered particulars: the List of Members is a mandatory component of the registration dossier filed with the Business Registration Office under Article 21, and a change of member/capital contribution must be re-notified as a change to enterprise registration content. The list is a distinct filed document, not part of the ERC itself, hence an additional document. A single-member LLC has no member list because the sole owner is otherwise identified.
+
+**Document:** Danh sách thành viên — delivered as `List of members`
+
+> **Law on Enterprises 2020, Article 21 (Application for registration of limited liability companies) — requires the company charter and the list of members (danh sách thành viên)**
+> 
+> Verbatim text could not be fetched. Art. 21 dossier includes the List of Members for a two-or-more-member LLC.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+> **Law on Enterprises 2020, Articles 30–31 (registration of changes to enterprise registration content) — member/ownership changes must be re-registered**
+> 
+> Keeps the registered member list authoritative and current for LLCs.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Applies to multi-member LLCs; a single-member LLC (một thành viên) has no member list.
+- The NBRP publicly exposes only basic company data; obtaining the actual filed List of Members as a document typically requires a request to the Business Registration Office.
+- Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED.
+
+
+### Cong ty co phan — Gesellschafterliste
+
+**❌ Not provable**
+
+For a JSC, only the founding shareholders (cổ đông sáng lập) are a registered particular — the List of Founding Shareholders is filed with the incorporation dossier under Article 22. Ordinary and subsequent shareholders are recorded only in the company's internal Register of Shareholders (sổ đăng ký cổ đông) under Article 122, which is held by the company and is neither filed with nor published by the Business Registration Office. A complete, current shareholder list is therefore not provable from the registry; the founding-shareholder list captures only the incorporation snapshot and becomes stale after transfers.
+
+> **Law on Enterprises 2020, Article 122 (Register of shareholders) — the shareholder register is maintained by the company, not the registry**
+> 
+> Verbatim text could not be fetched. Current/ordinary shareholders are held internally, not at the registry.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+> **Law on Enterprises 2020, Article 22 (JSC application dossier) — includes the list of founding shareholders (danh sách cổ đông sáng lập), not all shareholders**
+> 
+> Registry evidences only founding shareholders at incorporation.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- A List of Founding Shareholders exists in the registry file as an additional document, but it covers only founders at incorporation and does not reflect current ownership — hence it is not a Gesellschafterliste-equivalent.
+- The complete current shareholder list lives in the company's Article 122 register, which is internal/non-public.
+- Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED.
+
+
+### Cong ty TNHH — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The company charter (Điều lệ công ty) is a mandatory component of the LLC registration dossier under Article 21 of the Law on Enterprises 2020 and is filed with the Business Registration Office at incorporation. It is a filed constitutional document distinct from the ERC, so it is proved by an additional document rather than the base extract. The NBRP does not publish the charter publicly.
+
+**Document:** Điều lệ công ty — delivered as `Company charter`
+
+> **Law on Enterprises 2020, Article 21 (LLC application dossier) and Article 24 (Company charter contents)**
+> 
+> Verbatim text could not be fetched. Art. 21 requires the charter in the dossier; Art. 24 governs its contents.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The filed charter is the incorporation version; subsequent amendments are not consistently re-filed at or published by the registry, so the on-file copy may be outdated.
+- Retrieval generally requires a request to the Business Registration Office or the company; not downloadable from the NBRP.
+- Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED.
+
+
+### Cong ty co phan — Gesellschaftsvertrag
+
+**💶 Provable on request**
+
+The company charter (Điều lệ công ty) is a mandatory component of the JSC registration dossier under Article 22 of the Law on Enterprises 2020 and is filed with the Business Registration Office at incorporation. It is a filed constitutional document distinct from the ERC, so it is proved by an additional document. The NBRP does not publish the charter publicly.
+
+**Document:** Điều lệ công ty — delivered as `Company charter`
+
+> **Law on Enterprises 2020, Article 22 (JSC application dossier) and Article 24 (Company charter contents)**
+> 
+> Verbatim text could not be fetched. Art. 22 requires the charter in the dossier; Art. 24 governs its contents.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The filed charter is the incorporation version; amendments are not consistently re-filed at or published by the registry.
+- Retrieval generally requires a request to the Business Registration Office or the company; not downloadable from the NBRP.
+- Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED.
+
+
+### Cong ty TNHH — Registerauszug
+
+**✅ Provable**
+
+The Enterprise Registration Certificate (ERC) is the base registry document issued to every enterprise by the Business Registration Office under the Ministry of Planning and Investment. Under Article 28 of the Law on Enterprises 2020 it carries the enterprise name and ID number, head-office address, the legal representative's identity, and charter capital. It is the direct functional equivalent of a Registerauszug for an LLC. Company registration data is also publicly retrievable via the National Business Registration Portal.
+
+**Document:** Giấy chứng nhận đăng ký doanh nghiệp — delivered as `Enterprise Registration Certificate`
+
+> **Law on Enterprises 2020 (Law No. 59/2020/QH14), Article 28 (Contents of the enterprise registration certificate)**
+> 
+> Verbatim text could not be fetched (all hosting sources returned 403/404/redirect). Article 28 lists: enterprise name and code; head-office address; legal representative identity; charter capital.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+> **National Business Registration Portal (dangkykinhdoanh.gov.vn), operated by the Business Registration Management Agency, MPI**
+> 
+> Public company-information lookup; ERC is the authoritative issued extract.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- Verbatim statutory text could not be retrieved — Article numbers and contents are stated from established knowledge of the LOE 2020 and should be treated as INFERENCE/UNVERIFIED.
+- The ERC identifies only the legal representative, not the member list.
+
+
+### Cong ty co phan — Registerauszug
+
+**✅ Provable**
+
+As for all enterprises, the joint-stock company's base registry document is the Enterprise Registration Certificate issued by the Business Registration Office under Article 28 of the Law on Enterprises 2020, carrying the company name and ID number, head-office address, legal representative, and charter capital. It is the direct equivalent of a Registerauszug. Registration data is also publicly retrievable via the National Business Registration Portal.
+
+**Document:** Giấy chứng nhận đăng ký doanh nghiệp — delivered as `Enterprise Registration Certificate`
+
+> **Law on Enterprises 2020, Article 28 (Contents of the enterprise registration certificate)**
+> 
+> Verbatim text could not be fetched. Same ERC content applies to JSCs.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+> **National Business Registration Portal (dangkykinhdoanh.gov.vn)**
+> 
+> Public company-information lookup.
+> 
+> Source: <https://dangkykinhdoanh.gov.vn> (retrieved 2026-07-21)
+
+**Caveats:**
+
+- The ERC does not list shareholders (only the legal representative and charter capital).
+- Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED.
 
 
 ## ZA

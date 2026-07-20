@@ -1,0 +1,113 @@
+[
+  {
+    "jurisdiction": "TH",
+    "legalForm": "Private Limited Company",
+    "legalFormLocal": "บริษัทจำกัด",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Company Affidavit / Certificate of the Registrar (DBD)",
+    "documentLocal": "หนังสือรับรองบริษัท (หนังสือรับรอง)",
+    "summary": "A private limited company is registered with the DBD Registrar, who delivers a certificate of registration and, on request, issues the standard company affidavit (หนังสือรับรอง). This affidavit is the DBD's official register extract: it states the registration number, company name, registered capital, registered office, objects, directors and their signing authority. It is the base registry document and is obtainable as a DBD-certified document.",
+    "evidence": [
+      {"basis": "Civil and Commercial Code, Title XXII, Ch. IV, Section 1111 (final paragraph)", "quote": "A certificate of registration shall be delivered to the company.", "note": "The DBD affidavit (หนังสือรับรอง) is the certified extract of these registered particulars; the DBD website was not fetchable for a verbatim product label.", "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company", "retrieved": "2026-07-21"},
+      {"basis": "Civil and Commercial Code, Section 1111(1)-(8) (contents of the register entry)", "quote": "The application and entry in the register must contain, in conformity with the decisions of the statutory meeting, the following particulars: ... 5. The names, occupations and addresses of the directors. 6. If the directors have power to act separately, their respective powers and the number or names of the directors whose signature is binding on the company. ... 8. The address of the principal of business office and of all branch offices.", "note": "These registered particulars are what the affidavit certifies.", "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The DBD affidavit lists directors, capital, objects and signing authority, but NOT shareholders (shareholders sit on the separate BOJ.5 list).",
+      "The exact English product label used by DBD ('Company Affidavit' / 'Certificate') could not be fetched verbatim from dbd.go.th (site returned 404 to WebFetch); label given is established practice."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "TH",
+    "legalForm": "Private Limited Company",
+    "legalFormLocal": "บริษัทจำกัด",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "List of Shareholders (form BOJ.5)",
+    "documentLocal": "บัญชีรายชื่อผู้ถือหุ้น (บอจ.5)",
+    "summary": "Thailand is a notable case: shareholders ARE obtainable from the registry. The CCC obliges the directors to send the DBD Registrar, at least once a year within 14 days after the ordinary (annual) general meeting, a copy of the full list of shareholders (form BOJ.5), and the list is also filed at incorporation. A DBD-certified copy of the BOJ.5 is therefore an additional registry document that evidences the shareholders. It is separate from the base affidavit, which does not carry shareholders.",
+    "evidence": [
+      {"basis": "Civil and Commercial Code, Section 1139 (second paragraph)", "quote": "It shall be the duty of the directors to send once at least in every year to the Registrar, and not later than on the fourteenth day after the ordinary meeting, a copy of the list of all shareholders at the time such meeting and those who have ceased to be shareholders since the date of the last ordinary meeting. Such list shall include all particulars specified in the foregoing section.", "note": "'The foregoing section' is Section 1138 (names, addresses, occupations, shares held, amounts paid). The filed form is BOJ.5 (บอจ.5).", "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company", "retrieved": "2026-07-21"},
+      {"basis": "Civil and Commercial Code, Section 1138 (particulars the list must contain)", "quote": "The names and addresses, and occupations, if any, of the shareholders ... the amount paid or agreed to be considered as paid on the shares of each shareholder.", "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The BOJ.5 on file reflects the position as at the last AGM (updated at least annually); intra-year transfers may not yet be reflected.",
+      "Product/form label 'BOJ.5' is established DBD practice; not fetched verbatim from dbd.go.th."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "TH",
+    "legalForm": "Private Limited Company",
+    "legalFormLocal": "บริษัทจำกัด",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum of Association (BOJ.2) + Articles of Association / company regulations",
+    "documentLocal": "หนังสือบริคณห์สนธิ (บอจ.2) และข้อบังคับของบริษัท",
+    "summary": "The constitution is filed with the DBD. The memorandum of association (หนังสือบริคณห์สนธิ, form BOJ.2) is registered before incorporation, and the company's regulations (articles of association), 'if any', are filed together with the registration application. DBD-certified copies of both are obtainable as additional registry documents.",
+    "evidence": [
+      {"basis": "Civil and Commercial Code, Section 1111 (paragraph on accompanying documents)", "quote": "The application must be accompanied by the copy of the regulations, if any, and of the proceedings of the statutory meeting, both certified by the signature of at least one director.", "note": "'Regulations' = articles of association. Filed with the Registrar and retrievable as a certified copy.", "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company", "retrieved": "2026-07-21"},
+      {"basis": "Civil and Commercial Code, Section 1098 (memorandum contents)", "quote": "The name of the proposed company, which must always end with the word 'limited'. ... The objects of the company. ... A declaration that the liability of the shareholders shall be limited. ... The amount of share capital with which the company proposes to be registered, and the divisions thereof into shares of a fixed amount.", "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Articles ('regulations') are filed only 'if any' — a company that adopts the CCC's default statutory regulations may have no separately filed AOA; the memorandum (BOJ.2) is always filed.",
+      "MOA and AOA are two distinct documents; together they form the German-sense Gesellschaftsvertrag."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "TH",
+    "legalForm": "Public Limited Company",
+    "legalFormLocal": "บริษัทมหาชนจำกัด",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Company Affidavit / Certificate of the Registrar (DBD)",
+    "documentLocal": "หนังสือรับรองบริษัทมหาชนจำกัด (หนังสือรับรอง)",
+    "summary": "A public limited company is incorporated by registration with the DBD Registrar under the Public Limited Companies Act B.E. 2535. The DBD issues the company affidavit (หนังสือรับรอง) as the official register extract, stating registration number, name, registered capital, registered office, objects, directors and signing authority. It is the base registry document.",
+    "evidence": [
+      {"basis": "Public Limited Companies Act B.E. 2535 (registration of the company with the DBD Registrar)", "quote": "", "note": "INFERENCE/UNVERIFIED verbatim: PLCA English text (krisdika/SEC PDFs) returned 403/self-signed-cert and could not be fetched; DBD affidavit for public companies is well-established DBD practice, structurally identical to the private-company affidavit.", "url": "https://www.dbd.go.th/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Verbatim PLCA provision not fetched (source PDFs blocked); status rests on established DBD practice and the PLCA registration regime.",
+      "As with the private company, the public-company affidavit does not list shareholders."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "TH",
+    "legalForm": "Public Limited Company",
+    "legalFormLocal": "บริษัทมหาชนจำกัด",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "List of Shareholders as at the AGM date (form BorMorJor.006)",
+    "documentLocal": "บัญชีรายชื่อผู้ถือหุ้น (บมจ.006)",
+    "summary": "A public company keeps a register of shareholders and must submit to the DBD Registrar a copy of the list of shareholders as at the date of the annual general meeting (form BorMorJor.006 / บมจ.006). A DBD-certified copy is therefore obtainable as an additional registry document. For SET-listed companies the live register is maintained by the Thailand Securities Depository (TSD), but the AGM-date snapshot is still filed with the DBD.",
+    "evidence": [
+      {"basis": "Public Limited Companies Act B.E. 2535 (register of shareholders; annual submission of shareholder list to the Registrar)", "quote": "", "note": "INFERENCE/UNVERIFIED verbatim: PLCA English text could not be fetched (403/self-signed cert). The BorMorJor.006 AGM-date shareholder-list filing with DBD is established practice; exact PLCA section number not verified in this session.", "url": "https://www.dbd.go.th/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Exact PLCA section and the verbatim wording were not verified; treat the filing obligation as established-practice, not quoted statute.",
+      "For listed public companies the current beneficial/registered holdings sit with the TSD; the DBD BorMorJor.006 is an annual snapshot, not a live register."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "TH",
+    "legalForm": "Public Limited Company",
+    "legalFormLocal": "บริษัทมหาชนจำกัด",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum of Association + Articles of Association",
+    "documentLocal": "หนังสือบริคณห์สนธิและข้อบังคับของบริษัทมหาชนจำกัด",
+    "summary": "Under the Public Limited Companies Act B.E. 2535 the promoters register the memorandum of association with the DBD Registrar, and the articles of association are adopted and filed as part of incorporation. DBD-certified copies of both are obtainable as additional registry documents.",
+    "evidence": [
+      {"basis": "Public Limited Companies Act B.E. 2535 (registration of memorandum of association; articles of association)", "quote": "", "note": "INFERENCE/UNVERIFIED verbatim: PLCA English text not fetchable this session; filing of MOA and AOA with the DBD for public companies is established practice and consistent with the PLCA incorporation regime.", "url": "https://www.dbd.go.th/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Verbatim PLCA sections not fetched; status rests on established practice.",
+      "MOA and AOA are separate documents; both are DBD-held for public companies."
+    ],
+    "confidence": "medium"
+  }
+]

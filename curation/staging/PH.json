@@ -1,0 +1,116 @@
+[
+  {
+    "jurisdiction": "PH",
+    "legalForm": "Stock Corporation",
+    "legalFormLocal": "Stock Corporation",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "SEC Certificate of Incorporation (certified copy)",
+    "documentLocal": "Certificate of Incorporation",
+    "summary": "The SEC is the corporate registry; on registration it issues the Certificate of Incorporation, the registry's own act of record evidencing legal existence and registration particulars. Certified/authenticated copies are obtainable from the SEC as a document (not merely parsed data). The Philippines has no single consolidated 'register extract' equivalent to a German Handelsregisterauszug; current particulars beyond the certificate are carried in the annually filed General Information Sheet.",
+    "evidence": [
+      {"basis": "R.A. 11232 (Revised Corporation Code), Sec. 18", "quote": "the Commission shall issue the certificate of incorporation.", "note": "SEC = the registry; certificate is the registration act of record", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"},
+      {"basis": "SEC online document request service (SEC Express)", "quote": "SEC documents can now be requested online.  There is no need to go to the SEC to get plain or authenticated copies anymore.", "note": "authenticated copies of registry documents obtainable as documents", "url": "https://secexpress.ph/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "No single consolidated register-extract document exists (unlike a German Handelsregisterauszug); the closest base document is the SEC Certificate of Incorporation, with current particulars in the GIS.",
+      "INFERENCE: mapping the German 'Registerauszug' onto the SEC Certificate of Incorporation is an equivalence judgement, not a statutory label."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "PH",
+    "legalForm": "Stock Corporation",
+    "legalFormLocal": "Stock Corporation",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "General Information Sheet (GIS)",
+    "documentLocal": "General Information Sheet",
+    "summary": "The stock and transfer book (the true share register) is company-held at the principal office or the stock transfer agent, not at the SEC (Sec. 73), so it is not a registry document. However, every corporation must file a General Information Sheet with the SEC (Sec. 177(b)); the SEC-prescribed GIS form lists the stockholders and their shareholdings, and certified copies are obtainable from the SEC. Shareholders are therefore provable from the registry, but via an additional filed document (the GIS), not from a base extract.",
+    "evidence": [
+      {"basis": "R.A. 11232, Sec. 177", "quote": "every corporation, domestic or foreign, doing business in the Philippines shall submit to the Commission: (a) Annual financial statements ... and (b) A general information sheet.", "note": "GIS is a mandatory SEC filing", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"},
+      {"basis": "R.A. 11232, Sec. 73", "quote": "The stock and transfer book shall be kept in the principal office of the corporation or in the office of its stock transfer agent", "note": "STB is company-held, not filed with SEC", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"},
+      {"basis": "SEC online document request service (SEC Express) — document catalogue", "quote": "General Information Sheet", "note": "GIS is orderable as an authenticated copy from the SEC", "url": "https://secexpress.ph/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The statute (Sec. 177) only names 'a general information sheet'; that the GIS enumerates stockholders and their shareholdings comes from the SEC-prescribed GIS form and settled practice (Philippine jurisprudence treats the GIS as evidence of stock ownership), not from the verbatim text of R.A. 11232 — flagged as UNVERIFIED at the statutory-text level.",
+      "The GIS is a periodic snapshot (filed annually, updated on changes); it may lag the current stock and transfer book."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "PH",
+    "legalForm": "Stock Corporation",
+    "legalFormLocal": "Stock Corporation",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Articles of Incorporation and By-laws",
+    "documentLocal": "Articles of Incorporation and By-laws",
+    "summary": "The constitution is the Articles of Incorporation (Sec. 14) plus the By-laws, both of which are filed with the SEC — the by-laws are 'filed with the Commission and attached to the original articles of incorporation' (Sec. 45). Both are base registry documents and certified/authenticated copies are obtainable from the SEC.",
+    "evidence": [
+      {"basis": "R.A. 11232, Sec. 45", "quote": "A copy thereof, duly certified by a majority of the directors or trustees and countersigned by the secretary of the corporation, shall be filed with the Commission and attached to the original articles of incorporation.", "note": "by-laws filed with SEC", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"},
+      {"basis": "R.A. 11232, Sec. 73(a)", "quote": "The articles of incorporation and bylaws of the corporation and all their amendments;", "note": "both are corporate records", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"},
+      {"basis": "SEC online document request service (SEC Express) — document catalogue", "quote": "By-laws (Original and Amended)", "note": "AOA and By-laws orderable as authenticated copies", "url": "https://secexpress.ph/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "German 'Gesellschaftsvertrag' maps to the two-part Philippine constitution (AOA + By-laws); both must be pulled to fully mirror it."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "PH",
+    "legalForm": "One Person Corporation",
+    "legalFormLocal": "One Person Corporation (OPC)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "SEC Certificate of Incorporation (certified copy)",
+    "documentLocal": "Certificate of Incorporation",
+    "summary": "An OPC is registered with the SEC like any corporation and receives a Certificate of Incorporation on approval (Sec. 18); it carries the 'OPC' suffix in its name (Sec. 120). Certified/authenticated copies of the certificate are obtainable from the SEC as a document. As with stock corporations there is no consolidated register-extract; current particulars sit in subsequent SEC filings.",
+    "evidence": [
+      {"basis": "R.A. 11232, Sec. 18", "quote": "the Commission shall issue the certificate of incorporation.", "note": "applies suppletorily to OPCs per Sec. 115", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"},
+      {"basis": "R.A. 11232, Sec. 115", "quote": "The provisions of this Title shall primarily apply to One Person Corporations. Other provisions of this Code apply suppletory", "note": "general incorporation/certificate rules apply suppletorily", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Same mapping caveat as the stock-corporation Registerauszug: SEC Certificate of Incorporation is the base analog, not a German-style consolidated extract.",
+      "INFERENCE: equivalence judgement, not a statutory label."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "PH",
+    "legalForm": "One Person Corporation",
+    "legalFormLocal": "One Person Corporation (OPC)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Articles of Incorporation (One Person Corporation)",
+    "documentLocal": "Articles of Incorporation",
+    "summary": "An OPC is by definition a corporation with a single stockholder (Sec. 116), and that sole stockholder is named in the OPC's Articles of Incorporation filed with the SEC (Sec. 118). The complete 'shareholder list' is therefore established by the base document itself. Certified copies of the AOA are obtainable from the SEC.",
+    "evidence": [
+      {"basis": "R.A. 11232, Sec. 116", "quote": "A One Person Corporation is a corporation with a single stockholder: Provided, That only a natural person, trust, or an estate may form a One Person Corporation.", "note": "membership is inherently a single, identified holder", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"},
+      {"basis": "R.A. 11232, Sec. 118", "quote": "A One Person Corporation shall file articles of incorporation in accordance with the requirements under Section 14 of this Code.", "note": "AOA (naming the single stockholder) is filed with SEC", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "OPC statutory reportorial requirements (Sec. 129) do NOT list a General Information Sheet, unlike ordinary corporations (Sec. 177); the sole-stockholder identity is instead carried by the AOA. SEC administrative practice may still require an OPC GIS, but this is not confirmed in the statute — flagged UNVERIFIED.",
+      "The AOA reflects the stockholder at incorporation; a subsequent transfer of the single stockholder's shares is reflected through later SEC filings/amendments rather than the original AOA, so the base document proves the sole-holder structure but not necessarily the current holder without the latest filing."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "PH",
+    "legalForm": "One Person Corporation",
+    "legalFormLocal": "One Person Corporation (OPC)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Articles of Incorporation (One Person Corporation)",
+    "documentLocal": "Articles of Incorporation",
+    "summary": "For an OPC the constitution is the Articles of Incorporation alone (Sec. 118), filed with the SEC. Unlike a stock corporation, an OPC is expressly not required to submit or file by-laws (Sec. 119), so the constitution is a single base document. Certified copies of the AOA are obtainable from the SEC.",
+    "evidence": [
+      {"basis": "R.A. 11232, Sec. 118", "quote": "A One Person Corporation shall file articles of incorporation in accordance with the requirements under Section 14 of this Code. It shall likewise substantially contain the following:", "note": "AOA filed with SEC", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"},
+      {"basis": "R.A. 11232, Sec. 119", "quote": "The One Person Corporation is not required to submit and file corporate bylaws.", "note": "no by-laws component for the OPC constitution", "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The German Gesellschaftsvertrag equivalent for an OPC is the AOA only; there is deliberately no By-laws document to obtain (Sec. 119 exemption)."
+    ],
+    "confidence": "high"
+  }
+]

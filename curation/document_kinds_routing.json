@@ -347,6 +347,193 @@
    ]
   },
   {
+   "jurisdiction": "AR",
+   "legalForm": "S.A.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 19.550, art. 213",
+     "url": "https://leyes-ar.com/ley_general_de_sociedades/213.htm"
+    },
+    {
+     "basis": "Ley 19.550, art. 215",
+     "url": "https://leyes-ar.com/ley_general_de_sociedades/215.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AR",
+   "legalForm": "S.R.L.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Contrato social inscripto y cesiones de cuotas inscriptas",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 19.550, art. 11 inc. 4",
+     "url": "https://leyes-ar.com/ley_general_de_sociedades/11.htm"
+    },
+    {
+     "basis": "Ley 19.550, art. 152",
+     "url": "https://leyes-ar.com/ley_general_de_sociedades/152.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AR",
+   "legalForm": "S.A.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Estatuto / acto constitutivo inscripto",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 19.550, art. 5",
+     "url": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AR",
+   "legalForm": "S.R.L.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Contrato social inscripto",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 19.550, art. 5",
+     "url": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AR",
+   "legalForm": "S.A.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificado / constancia de inscripción del Registro Público (IGJ para CABA, o Registro Público de Comercio provincial)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 19.550, art. 5",
+     "url": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "AR",
+   "legalForm": "S.R.L.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificado / constancia de inscripción del Registro Público (IGJ para CABA, o Registro Público de Comercio provincial)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley General de Sociedades 19.550, art. 5",
+     "url": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm"
+    }
+   ]
+  },
+  {
    "jurisdiction": "AT",
    "legalForm": "AG",
    "kind": "GESELLSCHAFTERLISTE",
@@ -873,6 +1060,197 @@
     {
      "basis": "EU e-Justice Portal — Business registers in Bulgaria (official)",
      "url": "https://e-justice.europa.eu/106/EN/business_registers_in_eu_countries?BULGARIA&member=1"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BH",
+   "legalForm": "BSC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Sharecount",
+     "Role",
+     "Nationality",
+     "Other Names"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions on joint-stock companies keeping a register of nominal shares/shareholders and transfer by entry therein; Bahrain Clear (CSD) for listed issuers",
+     "url": "https://legalaffairs.gov.bh"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BH",
+   "legalForm": "WLL",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "السجل التجاري (بيان الشركاء/الملاك)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Sharecount",
+     "Role",
+     "Nationality",
+     "Other Names"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions on the With Limited Liability Company (memorandum must state partners and their shares; shares not offered to the public); MOIC/Sijilat CR record of partners",
+     "url": "https://sijilat.bh"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BH",
+   "legalForm": "BSC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "عقد التأسيس والنظام الأساسي",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions requiring a memorandum and articles of association for a joint-stock company and their filing with MOIC",
+     "url": "https://legalaffairs.gov.bh"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BH",
+   "legalForm": "WLL",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "عقد التأسيس / عقد الشركة",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions requiring a written/authenticated memorandum of association for a WLL and its filing with MOIC",
+     "url": "https://legalaffairs.gov.bh"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BH",
+   "legalForm": "BSC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "السجل التجاري (سجلات)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001 (joint-stock company registration in the Commercial Register); MOIC/Sijilat commercial registration system",
+     "url": "https://sijilat.bh"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "BH",
+   "legalForm": "WLL",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "السجل التجاري (سجلات)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001 (registration in the Commercial Register); MOIC/Sijilat commercial registration system",
+     "url": "https://sijilat.bh"
     }
    ]
   },
@@ -1719,6 +2097,202 @@
    ]
   },
   {
+   "jurisdiction": "CL",
+   "legalForm": "S.A.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Sharecount"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 18.046 sobre Sociedades Anónimas, art. 7",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CL",
+   "legalForm": "SpA",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Sharecount"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código de Comercio, art. 431 (SpA)",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974"
+    },
+    {
+     "basis": "Código de Comercio, art. 426 No. 2 (SpA)",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CL",
+   "legalForm": "S.A.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Copia autorizada de la escritura pública de constitución y sus estatutos (notaría/archivero); o Certificado de Estatuto Actualizado del Registro de Empresas y Sociedades (RES) para la sociedad anónima cerrada acogida a la Ley 20.659",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 18.046 sobre Sociedades Anónimas, art. 5",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473"
+    },
+    {
+     "basis": "Ley 18.046 sobre Sociedades Anónimas, art. 7",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CL",
+   "legalForm": "SpA",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Copia autorizada de la escritura pública o del instrumento privado protocolizado de constitución y sus estatutos (notaría/archivero); o Certificado de Estatuto Actualizado del Registro de Empresas y Sociedades (RES) para sociedades acogidas a la Ley 20.659",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código de Comercio, art. 425 (SpA)",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974"
+    },
+    {
+     "basis": "Código de Comercio, art. 426 (SpA)",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CL",
+   "legalForm": "S.A.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificado de vigencia / copia de la inscripción del extracto en el Registro de Comercio (Conservador de Bienes Raíces); o Certificado de Vigencia del Registro de Empresas y Sociedades (RES) para la sociedad anónima cerrada acogida a la Ley 20.659",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 18.046 sobre Sociedades Anónimas, art. 5",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CL",
+   "legalForm": "SpA",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificado de vigencia / copia de la inscripción del extracto en el Registro de Comercio (Conservador de Bienes Raíces); o Certificado de Vigencia del Registro de Empresas y Sociedades (RES) para sociedades acogidas a la Ley 20.659",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código de Comercio, art. 426 (SpA)",
+     "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974"
+    },
+    {
+     "basis": "Registro de Empresas y Sociedades (RES) portal, Ley 20.659",
+     "url": "https://www.registrodeempresasysociedades.cl/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "CN",
    "legalForm": "Gufen Youxian Gongsi",
    "kind": "GESELLSCHAFTERLISTE",
@@ -1918,6 +2492,192 @@
     {
      "basis": "中华人民共和国公司法 (2023) 第三十二条",
      "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CO",
+   "legalForm": "S.A.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código de Comercio (libro de registro de acciones; registro de la transferencia de acciones en el libro de la sociedad)",
+     "url": "http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CO",
+   "legalForm": "S.A.S.",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 1258 de 2008 (S.A.S.), with remisión to the Sociedad Anónima share-register rules of the Código de Comercio",
+     "url": "http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html"
+    },
+    {
+     "basis": "Wikipedia (ES), 'Sociedad por acciones simplificada' — corroborating framework",
+     "url": "https://es.wikipedia.org/wiki/Sociedad_por_acciones_simplificada"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CO",
+   "legalForm": "S.A.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Escritura pública de constitución / Estatutos (inscrita en el Registro Mercantil)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código de Comercio, art. 110 (contenido de la escritura de constitución) and Registro Mercantil inscription rules",
+     "url": "http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CO",
+   "legalForm": "S.A.S.",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Documento de constitución / Estatutos (inscrito en el Registro Mercantil)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Ley 1258 de 2008, art. 5 (contenido del documento de constitución; inscripción en el Registro Mercantil)",
+     "url": "http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html"
+    },
+    {
+     "basis": "Wikipedia (ES), 'Sociedad por acciones simplificada'",
+     "url": "https://es.wikipedia.org/wiki/Sociedad_por_acciones_simplificada"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CO",
+   "legalForm": "S.A.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificado de Existencia y Representación Legal",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Código de Comercio (Registro Mercantil) / Cámara de Comercio",
+     "url": "http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "CO",
+   "legalForm": "S.A.S.",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificado de Existencia y Representación Legal",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Cámara de Comercio / Registro Mercantil (Código de Comercio, Ley 1258 de 2008 art. 5)",
+     "url": "http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html"
     }
    ]
   },
@@ -5059,6 +5819,197 @@
     {
      "basis": "Ctv. 2006. évi V. törvény 10. § (1) — publicity of register data and documents",
      "url": "https://net.jogtar.hu/jogszabaly?docid=a0600005.tv"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ID",
+   "legalForm": "PT",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Akta Pendirian (menyebut pendiri/pemegang saham); Akta Jual Beli Saham / Akta RUPS + penerimaan pemberitahuan; current statutory list: Daftar Pemegang Saham (Pasal 50, dipelihara Direksi)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Share count",
+     "Birth Date (if individual)",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "low",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 8 (contents of deed / founders), Pasal 50 (daftar pemegang saham & daftar khusus kept by Direksi), Pasal 56 (share transfer by deed, notified to Minister)",
+     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ID",
+   "legalForm": "PT Tbk",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Share count",
+     "Birth Date (if individual)",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 50 & 56 (shareholder register / transfers); Capital Markets Law No. 8/1995 and OJK rules (scripless holding via KSEI, share registrar/BAE, substantial-shareholding disclosure)",
+     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ID",
+   "legalForm": "PT",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Akta Pendirian yang memuat Anggaran Dasar (dan Akta Perubahan Anggaran Dasar + SK Persetujuan Menteri)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 8 & 15 (deed contains articles of association), Pasal 21 (amendment of anggaran dasar), Pasal 30 (announcement in Berita Negara)",
+     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ID",
+   "legalForm": "PT Tbk",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Akta Pendirian yang memuat Anggaran Dasar (dan Akta Perubahan Anggaran Dasar + SK Persetujuan Menteri)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 8 & 15 (articles of association in the deed), Pasal 21 (amendments), Pasal 30 (BNRI announcement)",
+     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ID",
+   "legalForm": "PT",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Surat Keputusan Menteri Hukum dan HAM tentang Pengesahan Badan Hukum Perseroan (SK Kemenkumham); data snapshot: Profil Perseroan (AHU/SABH)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UU No. 40 Tahun 2007 (UUPT), Pasal 7(4), 9, 29, 30",
+     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "ID",
+   "legalForm": "PT Tbk",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Surat Keputusan Menteri Hukum dan HAM tentang Pengesahan Badan Hukum Perseroan (SK Kemenkumham); data snapshot: Profil Perseroan (AHU/SABH)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 1(7) (definition of Perseroan Terbuka), Pasal 7(4), 29, 30",
+     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
     }
    ]
   },
@@ -8852,6 +9803,220 @@
    ]
   },
   {
+   "jurisdiction": "MY",
+   "legalForm": "Berhad",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Daftar Ahli / Penyata Tahunan; Rekod Pendeposit (Bursa Malaysia)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Address",
+     "Nationality (if individual)",
+     "Birth Date (if individual)",
+     "Share count",
+     "Document ID Number"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2016 s.50/s.51 (register of members and notification of changes) and s.68 (annual return of a company having share capital)",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx"
+    },
+    {
+     "basis": "Securities Industry (Central Depositories) Act 1991 — central depository / Record of Depositors (for listed public companies)",
+     "url": "https://www.bursamalaysia.com/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MY",
+   "legalForm": "Sdn Bhd",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Profil Syarikat (bahagian pemegang saham) / Daftar Ahli",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Role",
+     "Address",
+     "Nationality (if individual)",
+     "Birth Date (if individual)",
+     "Share count",
+     "Document ID Number"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2016 s.50 (register of members) and s.51 (notification of change in the register of members lodged with the Registrar)",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx"
+    },
+    {
+     "basis": "Companies Act 2016 s.68 (annual return of a company having share capital)",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MY",
+   "legalForm": "Berhad",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Perlembagaan Syarikat",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2016 s.14/s.31 (constitution optional for a company limited by shares) and s.32 (lodgement of adopted constitution)",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MY",
+   "legalForm": "Sdn Bhd",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Perlembagaan Syarikat",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2016 s.14/s.31 (constitution optional) and s.32 (registration/lodgement of adopted constitution)",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MY",
+   "legalForm": "Berhad",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Profil Syarikat",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2016 (Act 777) — Registrar-held company register; SSM e-Info / MyData-SSM company profile product",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "MY",
+   "legalForm": "Sdn Bhd",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Profil Syarikat",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Act 2016 (Act 777) — incorporation and Registrar-held company register; SSM e-Info / MyData-SSM company profile product",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx"
+    },
+    {
+     "basis": "MyData-SSM / SSM e-Search portal (product listing)",
+     "url": "https://www.mydata-ssm.com.my/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "NL",
    "legalForm": "BV",
    "kind": "GESELLSCHAFTERLISTE",
@@ -9606,6 +10771,236 @@
    ]
   },
   {
+   "jurisdiction": "PH",
+   "legalForm": "One Person Corporation",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Nationality (if individual)",
+     "Share count"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "R.A. 11232, Sec. 116",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "R.A. 11232, Sec. 118",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PH",
+   "legalForm": "Stock Corporation",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "General Information Sheet",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Address",
+     "Role",
+     "Nationality (if individual)",
+     "Share count"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": true,
+   "sources": [
+    {
+     "basis": "R.A. 11232, Sec. 177",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "R.A. 11232, Sec. 73",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "SEC online document request service (SEC Express) — document catalogue",
+     "url": "https://secexpress.ph/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PH",
+   "legalForm": "One Person Corporation",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "R.A. 11232, Sec. 118",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "R.A. 11232, Sec. 119",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PH",
+   "legalForm": "Stock Corporation",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Incorporation and By-laws",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "R.A. 11232, Sec. 45",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "R.A. 11232, Sec. 73(a)",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "SEC online document request service (SEC Express) — document catalogue",
+     "url": "https://secexpress.ph/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PH",
+   "legalForm": "One Person Corporation",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "R.A. 11232, Sec. 18",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "R.A. 11232, Sec. 115",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "PH",
+   "legalForm": "Stock Corporation",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "R.A. 11232 (Revised Corporation Code), Sec. 18",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "SEC online document request service (SEC Express)",
+     "url": "https://secexpress.ph/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "PL",
    "legalForm": "P.S.A.",
    "kind": "GESELLSCHAFTERLISTE",
@@ -10342,6 +11737,185 @@
    ]
   },
   {
+   "jurisdiction": "QA",
+   "legalForm": "LLC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "السجل التجاري (بيان الشركاء والحصص) / عقد التأسيس",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law No. 11 of 2015 — LLC provisions: memorandum must state partners and their shares; transfers of quotas must be registered in the Commercial Register",
+     "url": "https://www.moci.gov.qa/en/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "QA",
+   "legalForm": "QPSC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law No. 11 of 2015 — shares of a public shareholding company are negotiable; shareholder register maintained by the company / (listed) via central depository; Qatar Central Securities Depository (Edaa/QCSD) framework",
+     "url": "https://www.moci.gov.qa/en/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "QA",
+   "legalForm": "LLC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "عقد التأسيس / النظام الأساسي",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law No. 11 of 2015 — requirement that the company contract/memorandum be in writing, notarised and registered",
+     "url": "https://www.moci.gov.qa/en/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "QA",
+   "legalForm": "QPSC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "النظام الأساسي / عقد التأسيس",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law No. 11 of 2015 — public shareholding company memorandum and articles of association; filing/publication requirements",
+     "url": "https://www.moci.gov.qa/en/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "QA",
+   "legalForm": "LLC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "مستخرج السجل التجاري / شهادة القيد في السجل التجاري",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law No. 11 of 2015 (general provisions requiring companies to be entered in the Commercial Register); MoCI Commercial Registration service",
+     "url": "https://www.moci.gov.qa/en/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "QA",
+   "legalForm": "QPSC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "مستخرج السجل التجاري / شهادة القيد في السجل التجاري",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Commercial Companies Law No. 11 of 2015 (public shareholding company provisions; registration in the Commercial Register); MoCI Commercial Registration service",
+     "url": "https://www.moci.gov.qa/en/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "RO",
    "legalForm": "SA",
    "kind": "GESELLSCHAFTERLISTE",
@@ -10545,6 +12119,185 @@
     {
      "basis": "ONRC — public services list (certificate constatatoare; informații RC și copii certificate)",
      "url": "https://www.onrc.ro/index.php/ro/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SA",
+   "legalForm": "JSC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Law 2022 (Royal Decree M/132), JSC shareholder-register provisions; Edaa (Securities Depository Center), Tadawul",
+     "url": "https://mc.gov.sa/en/Regulations"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SA",
+   "legalForm": "LLC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "عقد التأسيس",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Law 2022 (Royal Decree M/132), LLC memorandum/AoA provisions; Ministry of Commerce",
+     "url": "https://mc.gov.sa/en/Regulations"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SA",
+   "legalForm": "JSC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "النظام الأساسي (وعقد التأسيس)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Law 2022 (Royal Decree M/132), JSC bylaws/incorporation and publication provisions; Ministry of Commerce",
+     "url": "https://mc.gov.sa/en/Regulations"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SA",
+   "legalForm": "LLC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "عقد التأسيس",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Law 2022 (Royal Decree M/132), LLC constitution/registration provisions; Ministry of Commerce",
+     "url": "https://mc.gov.sa/en/Regulations"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SA",
+   "legalForm": "JSC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "شهادة السجل التجاري",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Law 2022 (Royal Decree M/132) and Commercial Register Law; Ministry of Commerce, mc.gov.sa",
+     "url": "https://mc.gov.sa/en/Regulations"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "SA",
+   "legalForm": "LLC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "شهادة السجل التجاري",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Companies Law 2022 (Royal Decree M/132) and Commercial Register Law; Ministry of Commerce, mc.gov.sa",
+     "url": "https://mc.gov.sa/en/Regulations"
     }
    ]
   },
@@ -11748,6 +13501,214 @@
    ]
   },
   {
+   "jurisdiction": "TH",
+   "legalForm": "Private Limited Company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "บัญชีรายชื่อผู้ถือหุ้น (บอจ.5)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Shares",
+     "Role",
+     "Other Names"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Civil and Commercial Code, Section 1139 (second paragraph)",
+     "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company"
+    },
+    {
+     "basis": "Civil and Commercial Code, Section 1138 (particulars the list must contain)",
+     "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TH",
+   "legalForm": "Public Limited Company",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "บัญชีรายชื่อผู้ถือหุ้น (บมจ.006)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Shares",
+     "Role",
+     "Other Names"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Public Limited Companies Act B.E. 2535 (register of shareholders; annual submission of shareholder list to the Registrar)",
+     "url": "https://www.dbd.go.th/en/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TH",
+   "legalForm": "Private Limited Company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "หนังสือบริคณห์สนธิ (บอจ.2) และข้อบังคับของบริษัท",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Civil and Commercial Code, Section 1111 (paragraph on accompanying documents)",
+     "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company"
+    },
+    {
+     "basis": "Civil and Commercial Code, Section 1098 (memorandum contents)",
+     "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TH",
+   "legalForm": "Public Limited Company",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "หนังสือบริคณห์สนธิและข้อบังคับของบริษัทมหาชนจำกัด",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Public Limited Companies Act B.E. 2535 (registration of memorandum of association; articles of association)",
+     "url": "https://www.dbd.go.th/en/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TH",
+   "legalForm": "Private Limited Company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "หนังสือรับรองบริษัท (หนังสือรับรอง)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Civil and Commercial Code, Title XXII, Ch. IV, Section 1111 (final paragraph)",
+     "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company"
+    },
+    {
+     "basis": "Civil and Commercial Code, Section 1111(1)-(8) (contents of the register entry)",
+     "url": "https://www.thailandlawonline.com/thai-company-and-foreign-business-law/civil-law-companies-and-business-formation-thai-limited-company"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TH",
+   "legalForm": "Public Limited Company",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "หนังสือรับรองบริษัทมหาชนจำกัด (หนังสือรับรอง)",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Public Limited Companies Act B.E. 2535 (registration of the company with the DBD Registrar)",
+     "url": "https://www.dbd.go.th/en/"
+    }
+   ]
+  },
+  {
    "jurisdiction": "TR",
    "legalForm": "AS",
    "kind": "GESELLSCHAFTERLISTE",
@@ -11951,6 +13912,221 @@
    ]
   },
   {
+   "jurisdiction": "TW",
+   "legalForm": "Gufen Youxian Gongsi",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Shares",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Company Act (公司法) Art 169",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=169"
+    },
+    {
+     "basis": "Company Act (公司法) Art 393, para 2 items 4-5",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TW",
+   "legalForm": "Youxian Gongsi",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "公司章程",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Shares",
+     "Role"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Company Act (公司法) Art 111, para 3",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=111"
+    },
+    {
+     "basis": "Company Act (公司法) Art 101 (contents of a limited company's articles of incorporation)",
+     "url": "https://law.moj.gov.tw/ENG/LawClass/LawSingle.aspx?pcode=J0080001&flno=101"
+    },
+    {
+     "basis": "Company Act (公司法) Art 393, para 2 item 10 + para 3",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TW",
+   "legalForm": "Gufen Youxian Gongsi",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "公司章程",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Company Act (公司法) Art 393, para 2 item 10",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393"
+    },
+    {
+     "basis": "Company Act (公司法) Art 393, para 3",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TW",
+   "legalForm": "Youxian Gongsi",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "公司章程",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Company Act (公司法) Art 393, para 2 item 10",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393"
+    },
+    {
+     "basis": "Company Act (公司法) Art 393, para 3",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TW",
+   "legalForm": "Gufen Youxian Gongsi",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "公司登記事項 (抄錄本) / 商工登記公示資料",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Company Act (公司法) Art 393, para 2 item 5",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393"
+    },
+    {
+     "basis": "MOEA GCIS company registration public query (商工登記公示資料查詢服務)",
+     "url": "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "TW",
+   "legalForm": "Youxian Gongsi",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "公司登記事項 (抄錄本) / 商工登記公示資料",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Company Act (公司法) Art 393, para 3",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=393"
+    },
+    {
+     "basis": "MOEA GCIS company registration public query (商工登記公示資料查詢服務)",
+     "url": "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do"
+    }
+   ]
+  },
+  {
    "jurisdiction": "US",
    "legalForm": "Corporation",
    "kind": "GESELLSCHAFTERLISTE",
@@ -11984,6 +14160,70 @@
   },
   {
    "jurisdiction": "US",
+   "legalForm": "Delaware Corp",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "8 Del. C. § 219/§ 224 (stock ledger, DGCL)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc07/index.html"
+    },
+    {
+     "basis": "8 Del. C. § 102 (certificate contents, DGCL)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Delaware LLC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "6 Del. C. § 18-201",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    },
+    {
+     "basis": "6 Del. C. § 18-201(d)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
    "legalForm": "LLC",
    "kind": "GESELLSCHAFTERLISTE",
    "availability": "off_registry",
@@ -12011,6 +14251,94 @@
     {
      "basis": "Delaware Limited Liability Company Act, Title 6, § 18-101(9) (definition of LLC agreement)",
      "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Nevada Corp",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "NRS 78.150(1)",
+     "url": "https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "New York Corp",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.Y. Bus. Corp. Law § 402",
+     "url": "https://www.nysenate.gov/legislation/laws/BSC/402"
+    },
+    {
+     "basis": "N.Y. Bus. Corp. Law § 624 (books and records of account)",
+     "url": "https://www.nysenate.gov/legislation/laws/BSC/624"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Wyoming LLC",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": false,
+    "fields": [],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Wyo. Stat. § 17-29-201(a)",
+     "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html"
     }
    ]
   },
@@ -12049,6 +14377,72 @@
   },
   {
    "jurisdiction": "US",
+   "legalForm": "Delaware Corp",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "8 Del. C. § 106 (DGCL)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
+    },
+    {
+     "basis": "8 Del. C. § 109 (bylaws, DGCL)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Delaware LLC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Formation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "6 Del. C. § 18-201",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    },
+    {
+     "basis": "6 Del. C. § 18-201(d)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
    "legalForm": "LLC",
    "kind": "GESELLSCHAFTSVERTRAG",
    "availability": "base",
@@ -12077,6 +14471,105 @@
     {
      "basis": "Delaware Limited Liability Company Act, Title 6, § 18-101(9)",
      "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Nevada Corp",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "NRS 78.030 / 78.035 (articles of incorporation)",
+     "url": "https://www.leg.state.nv.us/nrs/nrs-078.html"
+    },
+    {
+     "basis": "NRS 78.120 (bylaws adopted by directors)",
+     "url": "https://www.leg.state.nv.us/nrs/nrs-078.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "New York Corp",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Incorporation",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.Y. Bus. Corp. Law § 402",
+     "url": "https://www.nysenate.gov/legislation/laws/BSC/402"
+    },
+    {
+     "basis": "N.Y. Bus. Corp. Law § 601(a)",
+     "url": "https://www.nysenate.gov/legislation/laws/BSC/601"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Wyoming LLC",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Articles of Organization",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Wyo. Stat. § 17-29-201(a)",
+     "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html"
+    },
+    {
+     "basis": "Wyo. Stat. § 17-29-110 (operating agreement)",
+     "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/"
     }
    ]
   },
@@ -12115,6 +14608,72 @@
   },
   {
    "jurisdiction": "US",
+   "legalForm": "Delaware Corp",
+   "kind": "REGISTERAUSZUG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing (Delaware Division of Corporations)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "8 Del. C. § 106 (DGCL)",
+     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
+    },
+    {
+     "basis": "Delaware Division of Corporations (Certificate of Good Standing service)",
+     "url": "https://corp.delaware.gov/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Delaware LLC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing (Delaware Division of Corporations)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "6 Del. C. § 18-201 (Delaware LLC Act)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    },
+    {
+     "basis": "Delaware Division of Corporations (Certificate of Good Standing service)",
+     "url": "https://corp.delaware.gov/"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
    "legalForm": "LLC",
    "kind": "REGISTERAUSZUG",
    "availability": "base",
@@ -12143,6 +14702,105 @@
     {
      "basis": "Delaware Limited Liability Company Act, Title 6, § 18-201(b) (formation on filing)",
      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Nevada Corp",
+   "kind": "REGISTERAUSZUG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Existence with Status; Annual List of Officers and Directors",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "NRS 78.150(1)",
+     "url": "https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html"
+    },
+    {
+     "basis": "Nevada Secretary of State (Certificate of Existence service)",
+     "url": "https://www.nvsos.gov/sos/businesses"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "New York Corp",
+   "kind": "REGISTERAUSZUG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Status (NY Department of State, Division of Corporations)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "N.Y. Bus. Corp. Law § 402",
+     "url": "https://www.nysenate.gov/legislation/laws/BSC/402"
+    },
+    {
+     "basis": "NY Department of State, Division of Corporations (Certificate of Status service)",
+     "url": "https://dos.ny.gov/certificate-status"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "US",
+   "legalForm": "Wyoming LLC",
+   "kind": "REGISTERAUSZUG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Certificate of Good Standing (Wyoming Secretary of State)",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Wyo. Stat. § 17-29-201(a)",
+     "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html"
+    },
+    {
+     "basis": "Wyoming Secretary of State (Certificate of Good Standing service)",
+     "url": "https://sos.wyo.gov/Business/"
     }
    ]
   },
@@ -12253,6 +14911,211 @@
     {
      "basis": "BVI Business Companies Act 2004 (as amended), s.233(1)",
      "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VN",
+   "legalForm": "Cong ty TNHH",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Danh sách thành viên",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Sharecount",
+     "Role",
+     "Address"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Enterprises 2020, Article 21 (Application for registration of limited liability companies) — requires the company charter and the list of members (danh sách thành viên)",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    },
+    {
+     "basis": "Law on Enterprises 2020, Articles 30–31 (registration of changes to enterprise registration content) — member/ownership changes must be re-registered",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VN",
+   "legalForm": "Cong ty co phan",
+   "kind": "GESELLSCHAFTERLISTE",
+   "availability": "off_registry",
+   "action": "manual",
+   "orderable": false,
+   "completeness": null,
+   "flags": [],
+   "order": null,
+   "vendor": "kyc.com",
+   "fallback": "company_register",
+   "dataBackup": {
+    "available": true,
+    "fields": [
+     "Name",
+     "Sharecount",
+     "Role",
+     "Address"
+    ],
+    "source": "kyc.com structured data (parsed)",
+    "isProof": false,
+    "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
+   },
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Enterprises 2020, Article 122 (Register of shareholders) — the shareholder register is maintained by the company, not the registry",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    },
+    {
+     "basis": "Law on Enterprises 2020, Article 22 (JSC application dossier) — includes the list of founding shareholders (danh sách cổ đông sáng lập), not all shareholders",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VN",
+   "legalForm": "Cong ty TNHH",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Điều lệ công ty",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Enterprises 2020, Article 21 (LLC application dossier) and Article 24 (Company charter contents)",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VN",
+   "legalForm": "Cong ty co phan",
+   "kind": "GESELLSCHAFTSVERTRAG",
+   "availability": "additional",
+   "action": "order",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Điều lệ công ty",
+    "howToObtain": "additional_within_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "medium",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Enterprises 2020, Article 22 (JSC application dossier) and Article 24 (Company charter contents)",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VN",
+   "legalForm": "Cong ty TNHH",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Giấy chứng nhận đăng ký doanh nghiệp",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Enterprises 2020 (Law No. 59/2020/QH14), Article 28 (Contents of the enterprise registration certificate)",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    },
+    {
+     "basis": "National Business Registration Portal (dangkykinhdoanh.gov.vn), operated by the Business Registration Management Agency, MPI",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    }
+   ]
+  },
+  {
+   "jurisdiction": "VN",
+   "legalForm": "Cong ty co phan",
+   "kind": "REGISTERAUSZUG",
+   "availability": "base",
+   "action": "use_delivered",
+   "orderable": true,
+   "completeness": "full",
+   "flags": [],
+   "order": {
+    "vendor": "kyc.com",
+    "model": "case_level",
+    "registryName": "Giấy chứng nhận đăng ký doanh nghiệp",
+    "howToObtain": "included_in_case",
+    "vendorCatalog": "jurisdiction_matrix.json",
+    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+   },
+   "vendor": "kyc.com",
+   "fallback": null,
+   "dataBackup": null,
+   "confidence": "high",
+   "needsReview": false,
+   "sources": [
+    {
+     "basis": "Law on Enterprises 2020, Article 28 (Contents of the enterprise registration certificate)",
+     "url": "https://dangkykinhdoanh.gov.vn"
+    },
+    {
+     "basis": "National Business Registration Portal (dangkykinhdoanh.gov.vn)",
+     "url": "https://dangkykinhdoanh.gov.vn"
     }
    ]
   },

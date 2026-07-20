@@ -1,0 +1,115 @@
+[
+  {
+    "jurisdiction": "MY",
+    "legalForm": "Sdn Bhd",
+    "legalFormLocal": "Sendirian Berhad",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "SSM Company Profile / e-Info extract (MyData-SSM)",
+    "documentLocal": "Profil Syarikat",
+    "summary": "SSM (Suruhanjaya Syarikat Malaysia) issues an official company profile/extract via its e-Search / MyData-SSM portal for every registered company. For a Sdn Bhd it contains registration number, name, status, registered office, nature of business, directors, secretary, share capital and shareholder particulars. This issued document is the direct equivalent of a Registerauszug and is the base search product.",
+    "evidence": [
+      {"basis": "Companies Act 2016 (Act 777) — incorporation and Registrar-held company register; SSM e-Info / MyData-SSM company profile product", "quote": "", "note": "SSM's legal-framework page confirms SSM issues company information products; MyData-SSM is the e-Search portal for buying the company profile. Verbatim statute text not fetchable (AGC/CommonLII returned 403).", "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx", "retrieved": "2026-07-21"},
+      {"basis": "MyData-SSM / SSM e-Search portal (product listing)", "quote": "", "note": "Company profile is the base purchasable product. Portal is a JS app; exact on-screen menu not directly readable via fetch (UNVERIFIED layout).", "url": "https://www.mydata-ssm.com.my/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Verbatim statutory text could not be fetched; quotes left empty per instruction.",
+      "Exact fields printed on the SSM profile were not verifiable via fetch (MyData is a SPA) — treated as well-established practice (INFERENCE)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "MY",
+    "legalForm": "Sdn Bhd",
+    "legalFormLocal": "Sendirian Berhad",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "SSM Company Profile (shareholders section) / Register of Members",
+    "documentLocal": "Profil Syarikat (bahagian pemegang saham) / Daftar Ahli",
+    "summary": "A Sdn Bhd is a private company that keeps a register of members (s.50) and must lodge changes to that register with the Registrar within 14 days (s.51), so SSM holds current shareholder data. The SSM company profile therefore already lists shareholders and their holdings, so the base extract itself proves the member list. A standalone register of members and the s.68 annual return (of a company having share capital) are additionally obtainable as documents.",
+    "evidence": [
+      {"basis": "Companies Act 2016 s.50 (register of members) and s.51 (notification of change in the register of members lodged with the Registrar)", "quote": "", "note": "SSM legal-framework page lists the statutory form for notifying changes to the register of members (s.51), confirming SSM captures member changes for private companies.", "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx", "retrieved": "2026-07-21"},
+      {"basis": "Companies Act 2016 s.68 (annual return of a company having share capital)", "quote": "", "note": "SSM legal-framework page lists the 'Annual Return of company having share capital' form (s.68).", "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "That the standard SSM profile prints the full shareholder list (vs. a summary) is well-established for private companies but was not verbatim-verified via fetch (INFERENCE).",
+      "If the base profile is treated as showing only a summary, the register of members / annual return serves as the additional document — the member list remains registry-provable either way."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "MY",
+    "legalForm": "Sdn Bhd",
+    "legalFormLocal": "Sendirian Berhad",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Constitution (formerly Memorandum & Articles of Association) — only if adopted",
+    "documentLocal": "Perlembagaan Syarikat",
+    "summary": "Under s.14/s.31 of the Companies Act 2016, a company limited by shares may but need not have a constitution; the former mandatory Memorandum & Articles of Association was abolished. If a Sdn Bhd adopts a constitution it must lodge it with the Registrar (s.32/s.36), after which it can be purchased from SSM as a separate document. Where no constitution has been adopted (common for Sdn Bhd relying on the Act's default provisions), no such document exists.",
+    "evidence": [
+      {"basis": "Companies Act 2016 s.14/s.31 (constitution optional) and s.32 (registration/lodgement of adopted constitution)", "quote": "", "note": "SSM legal-framework page lists the statutory form 'Lodgement of constitution' (s.32), confirming an adopted constitution is filed with SSM and thereby obtainable as a document.", "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Constitution is OPTIONAL under CA 2016 — a Sdn Bhd may have none, in which case the document does not exist (would be not_provable for that specific company).",
+      "That MyData-SSM sells the lodged constitution as a document image is standard practice but not directly verified via fetch (INFERENCE)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "MY",
+    "legalForm": "Berhad",
+    "legalFormLocal": "Berhad",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "SSM Company Profile / e-Info extract (MyData-SSM)",
+    "documentLocal": "Profil Syarikat",
+    "summary": "As for a Sdn Bhd, SSM issues an official company profile/extract for a Berhad (public company limited by shares) via e-Search / MyData-SSM, containing registration number, name, status, registered office, nature of business, directors, secretary and share capital. This issued document is the Registerauszug equivalent and is the base search product.",
+    "evidence": [
+      {"basis": "Companies Act 2016 (Act 777) — Registrar-held company register; SSM e-Info / MyData-SSM company profile product", "quote": "", "note": "Same SSM base product applies to public companies. Verbatim statute not fetchable.", "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Verbatim statutory text could not be fetched; quotes empty.",
+      "Exact profile fields not verifiable via fetch (INFERENCE from established practice)."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "MY",
+    "legalForm": "Berhad",
+    "legalFormLocal": "Berhad",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Register of Members / Annual Return (s.68); for a listed Berhad: Record of Depositors (Bursa Malaysia Depository / CDS)",
+    "documentLocal": "Daftar Ahli / Penyata Tahunan; Rekod Pendeposit (Bursa Malaysia)",
+    "summary": "A Berhad keeps a register of members (s.50) and lodges an annual return (s.68), from which member particulars can be obtained as documents from SSM — so a shareholder list is provable, but generally via a document additional to the base profile rather than from the profile itself. For a LISTED Berhad, legal/beneficial shareholdings are held in the central depository system operated by Bursa Malaysia Depository, and the authoritative member list is the Record of Depositors sourced from the depository (not an SSM extract); SSM outputs for listed companies may show only substantial shareholders.",
+    "evidence": [
+      {"basis": "Companies Act 2016 s.50/s.51 (register of members and notification of changes) and s.68 (annual return of a company having share capital)", "quote": "", "note": "SSM legal-framework page lists the s.51 register-of-members change form and the s.68 annual return form.", "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx", "retrieved": "2026-07-21"},
+      {"basis": "Securities Industry (Central Depositories) Act 1991 — central depository / Record of Depositors (for listed public companies)", "quote": "", "note": "For listed Berhad, shares are in scripless CDS form; the Record of Depositors (Bursa Malaysia Depository) is the operative member list, sourced outside SSM. UNVERIFIED verbatim.", "url": "https://www.bursamalaysia.com/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Listed vs. unlisted Berhad matters: unlisted -> register of members / annual return at SSM; listed -> Record of Depositors via Bursa Malaysia Depository, not SSM.",
+      "SSM base profile for a public/listed company may disclose only substantial shareholders rather than the full member list (INFERENCE).",
+      "Verbatim statutory/depository text not fetchable; quotes empty."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "MY",
+    "legalForm": "Berhad",
+    "legalFormLocal": "Berhad",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Constitution (formerly Memorandum & Articles of Association) — only if adopted",
+    "documentLocal": "Perlembagaan Syarikat",
+    "summary": "Under s.14/s.31 of the Companies Act 2016, a public company limited by shares (Berhad) may but need not have a constitution; the former mandatory M&A was abolished for companies limited by shares. If a Berhad adopts a constitution it must be lodged with the Registrar (s.32/s.36) and can then be purchased from SSM as a separate document. If none is adopted, the document does not exist. (Public companies adopt a constitution more often than private ones, but it remains optional; only a company limited by guarantee must have one under s.38.)",
+    "evidence": [
+      {"basis": "Companies Act 2016 s.14/s.31 (constitution optional for a company limited by shares) and s.32 (lodgement of adopted constitution)", "quote": "", "note": "SSM legal-framework page lists the 'Lodgement of constitution' form (s.32).", "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Constitution is OPTIONAL for a Berhad limited by shares — may not exist for a given company (then not_provable for that company).",
+      "Only a company limited by guarantee is statutorily required to have a constitution (s.38) — not in scope here.",
+      "That MyData-SSM sells the lodged constitution as a document is standard practice but not directly verified (INFERENCE)."
+    ],
+    "confidence": "high"
+  }
+]

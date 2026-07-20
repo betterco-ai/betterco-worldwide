@@ -1,0 +1,108 @@
+[
+  {
+    "jurisdiction": "AR",
+    "legalForm": "S.R.L.",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract / certificate of registration",
+    "documentLocal": "Certificado / constancia de inscripción del Registro Público (IGJ para CABA, o Registro Público de Comercio provincial)",
+    "summary": "The acto constitutivo of an S.R.L. is registered in the Registro Público del domicilio social (Ley 19.550 art. 5), and the registry (IGJ in CABA, or the provincial Registro Público) issues an extract/certificate evidencing the registered company. The register extract is itself the base document that proves the register-extract kind.",
+    "evidence": [
+      {"basis": "Ley General de Sociedades 19.550, art. 5", "quote": "El acto constitutivo, su modificación y el reglamento, si lo hubiese, se inscribirán en el Registro Público del domicilio social...", "note": "Registration in the Registro Público is the basis for a register extract.", "url": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Argentina has no single standardized nationwide register extract like the German Handelsregisterauszug; the exact document (constancia de inscripción, certificado de vigencia, informe) and its content vary between the IGJ (CABA) and each provincial Registro Público."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "AR",
+    "legalForm": "S.R.L.",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Registered articles of association plus registered cuota (quota) transfers",
+    "documentLocal": "Contrato social inscripto y cesiones de cuotas inscriptas",
+    "summary": "For an S.R.L. the members (socios) and their cuotas are named in the contrato social, because the constitutive instrument must state the capital and each socio's contribution (art. 11 inc. 4). Cuota transfers become enforceable against third parties only upon registration in the Registro Público (art. 152), so current membership is reconstructable from registry-held documents. There is no single standalone 'shareholder list' document; the proof is the registered contrato social together with any registered cesiones de cuotas.",
+    "evidence": [
+      {"basis": "Ley 19.550, art. 11 inc. 4", "quote": "4) El capital social, que deberá ser expresado en moneda argentina, y la mención del aporte de cada socio.", "note": "The constitution names each socio and their contribution/cuotas.", "url": "https://leyes-ar.com/ley_general_de_sociedades/11.htm", "retrieved": "2026-07-21"},
+      {"basis": "Ley 19.550, art. 152", "quote": "La transmisión de las cuotas es oponible a los terceros desde su inscripción en el Registro Público de Comercio, la que puede ser requerida por la sociedad; tambien podrán peticionarla el cedente o el adquirente exhibiendo el título de la transferencia y constancia fehaciente de su comunicación a la gerencia.", "note": "Cuota transfers are registered, so successive membership changes are provable from the registry.", "url": "https://leyes-ar.com/ley_general_de_sociedades/152.htm", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "No standalone consolidated shareholder-list document is issued; current membership must be assembled from the registered contrato social plus each registered cesión de cuotas.",
+      "Whether a routine IGJ/Registro Público extract itself already lists current socios varies by registry; the conservative basis is the registered constitution + registered transfers, hence 'additional_document' rather than 'base_document'."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "AR",
+    "legalForm": "S.R.L.",
+    "legalFormLocal": "Sociedad de Responsabilidad Limitada",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Registered constitutive instrument (articles of association)",
+    "documentLocal": "Contrato social inscripto",
+    "summary": "The S.R.L.'s constitution is the contrato social, which must be registered in the Registro Público (art. 5). A certified copy of the registered contrato social (and its registered amendments) is obtainable from the registry and is a separate document from the register extract, so the constitution is proved by that additional registered document.",
+    "evidence": [
+      {"basis": "Ley 19.550, art. 5", "quote": "El acto constitutivo, su modificación y el reglamento, si lo hubiese, se inscribirán en el Registro Público del domicilio social...", "note": "The constitutive instrument and its modifications are filed in the registry.", "url": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "It is a distinct registry document from the register extract; availability of a certified copy and turnaround varies by IGJ vs provincial registry."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "AR",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract / certificate of registration",
+    "documentLocal": "Certificado / constancia de inscripción del Registro Público (IGJ para CABA, o Registro Público de Comercio provincial)",
+    "summary": "An S.A.'s acto constitutivo (estatuto) is registered in the Registro Público (art. 5), and the registry issues an extract/certificate evidencing the registered company. The register extract is itself the base document for the register-extract kind.",
+    "evidence": [
+      {"basis": "Ley 19.550, art. 5", "quote": "El acto constitutivo, su modificación y el reglamento, si lo hubiese, se inscribirán en el Registro Público del domicilio social...", "url": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "As with the S.R.L., there is no single nationwide standardized extract; document type and content differ between the IGJ (CABA) and provincial registries."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "AR",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For an S.A. the shareholders (accionistas) are recorded in the company-held Libro de Registro de Acciones, which is kept with the formalities of commercial books and is open only to the shareholders — it is not a registry document (art. 213); nominative-share transfers are notified to and inscribed by the issuing company, not the public registry (art. 215). The registered estatuto names only the founders. Therefore the full/current shareholder body is not provable from the public registry.",
+    "evidence": [
+      {"basis": "Ley 19.550, art. 213", "quote": "Se llevará un libro de registro de acciones con las formalidades de los libros de comercio, de libre consulta por los accionistas, en el que se asentará:", "note": "The shareholder record is a company-held book, not a registry filing.", "url": "https://leyes-ar.com/ley_general_de_sociedades/213.htm", "retrieved": "2026-07-21"},
+      {"basis": "Ley 19.550, art. 215", "quote": "La transmisión de las acciones nominativas o escriturales y de los derechos reales que las graven debe notificarse por escrito a la sociedad emisora o entidad que lleve el registro e inscribirse en el libro o cuenta pertinente. Surte efecto contra la sociedad y los terceros desde su inscripción.", "note": "Share transfers are inscribed in the company's book/account, not in the public registry.", "url": "https://leyes-ar.com/ley_general_de_sociedades/215.htm", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "INFERENCE / UNVERIFIED: The IGJ imposes an annual/periodic filing of shareholder composition on certain S.A. (commonly referred to as a nómina/declaración de accionistas, and separately a declaración jurada de beneficiario final). Could not fetch the IGJ regulation text (web-search budget exhausted). Assessment: even where such a filing exists it is a self-declaration (parsed data) filed only by some companies and is not the legally authoritative source of share ownership (the art. 213 book is), so it does not make S.A. shareholders reliably provable by an authoritative registry DOCUMENT.",
+      "Where the specific IGJ filing is legally mandated and obtainable, it might at best support 'proved_by_additional_document' for that subset of S.A.; this should be confirmed against the current IGJ Normas (RG IGJ) before relying on it."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "AR",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Registered constitutive instrument (by-laws / statute)",
+    "documentLocal": "Estatuto / acto constitutivo inscripto",
+    "summary": "The S.A.'s constitution is the estatuto (acto constitutivo), which must be registered in the Registro Público (art. 5). A certified copy of the registered estatuto and its registered amendments is obtainable from the registry and is a distinct document from the register extract, so the constitution is proved by that additional registered document.",
+    "evidence": [
+      {"basis": "Ley 19.550, art. 5", "quote": "El acto constitutivo, su modificación y el reglamento, si lo hubiese, se inscribirán en el Registro Público del domicilio social...", "url": "http://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25553/texact.htm", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Distinct registry document from the register extract; the registered estatuto evidences the founders and by-laws but not the current shareholder body (see GESELLSCHAFTERLISTE / S.A.)."
+    ],
+    "confidence": "high"
+  }
+]

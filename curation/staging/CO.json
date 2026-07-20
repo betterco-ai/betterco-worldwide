@@ -1,0 +1,94 @@
+[
+  {
+    "jurisdiction": "CO",
+    "legalForm": "S.A.S.",
+    "legalFormLocal": "Sociedad por Acciones Simplificada",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certificate of Existence and Legal Representation",
+    "documentLocal": "Certificado de Existencia y Representación Legal",
+    "summary": "The Certificado de Existencia y Representación Legal, issued by the Cámara de Comercio from the Registro Mercantil, is Colombia's register extract and is the direct functional equivalent of the German Registerauszug. It is an issued document (not merely parsed data) that certifies the S.A.S.'s existence, domicile, capital, objeto and legal representatives. It is obtained directly from the registry as the base document for the company.",
+    "evidence": [
+      {"basis": "Cámara de Comercio / Registro Mercantil (Código de Comercio, Ley 1258 de 2008 art. 5)", "quote": "", "note": "Certificado de Existencia y Representación Legal is the standard register extract issued by every Cámara de Comercio; verbatim text of the statute could not be fetched (gov.co sources unreachable).", "url": "http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Verbatim statutory/registry text could not be fetched from primary sources in this environment; the base-document status rests on the well-established role of the Certificado de Existencia y Representación Legal."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CO",
+    "legalForm": "S.A.S.",
+    "legalFormLocal": "Sociedad por Acciones Simplificada",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For an S.A.S. the shareholders are recorded in the company-held libro de registro de accionistas, not in the Registro Mercantil. The Certificado de Existencia y Representación Legal does not certify the current shareholder composition; only the constituting shareholders are named in the documento de constitución, which does not reflect later share transfers. There is therefore no registry-issued document that evidences the current shareholder list.",
+    "evidence": [
+      {"basis": "Ley 1258 de 2008 (S.A.S.), with remisión to the Sociedad Anónima share-register rules of the Código de Comercio", "quote": "", "note": "Share ownership and transfers of an S.A.S. are entered in the company's libro de registro de accionistas, held by the company; the Cámara de Comercio does not register current shareholders. Verbatim article text could not be fetched (gov.co sources unreachable).", "url": "http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html", "retrieved": "2026-07-21"},
+      {"basis": "Wikipedia (ES), 'Sociedad por acciones simplificada' — corroborating framework", "quote": "", "note": "Confirms the S.A.S. is constituted by documento privado registered at 'el registro de la cámara de comercio del lugar del domicilio principal de la sociedad' per Ley 1258 art. 5; does not indicate ongoing shareholder registration at the Cámara.", "url": "https://es.wikipedia.org/wiki/Sociedad_por_acciones_simplificada", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: verbatim statutory text not fetched; conclusion rests on the settled Colombian rule that the libro de registro de accionistas is company-held.", "For a single-shareholder (unipersonal) S.A.S., the sole constituting shareholder may appear in the documento de constitución (and sometimes on the certificate), but this is a snapshot of founders, not a current, transfer-updated shareholder list."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CO",
+    "legalForm": "S.A.S.",
+    "legalFormLocal": "Sociedad por Acciones Simplificada",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of incorporation / bylaws (registered)",
+    "documentLocal": "Documento de constitución / Estatutos (inscrito en el Registro Mercantil)",
+    "summary": "An S.A.S. is constituted by documento privado (or escritura pública where an in-kind contribution or other legal requirement demands it), which must be inscribed in the Registro Mercantil of the Cámara de Comercio under Ley 1258 de 2008 art. 5. The registered constitution/estatutos are a distinct document, obtainable as a certified copy from the Cámara de Comercio in addition to the base register extract. That registered document proves the constitution.",
+    "evidence": [
+      {"basis": "Ley 1258 de 2008, art. 5 (contenido del documento de constitución; inscripción en el Registro Mercantil)", "quote": "", "note": "The constitution document is inscribed in the Cámara de Comercio and can be retrieved as a certified copy. Verbatim text not fetched (gov.co sources unreachable).", "url": "http://www.secretariasenado.gov.co/senado/basedoc/ley_1258_2008.html", "retrieved": "2026-07-21"},
+      {"basis": "Wikipedia (ES), 'Sociedad por acciones simplificada'", "quote": "", "note": "Corroborates: S.A.S. 'se constituye por documento privado' and is registered at the cámara de comercio del domicilio principal (Ley 1258 art. 5).", "url": "https://es.wikipedia.org/wiki/Sociedad_por_acciones_simplificada", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: verbatim art. 5 text not fetched.", "Because the constitution is a document distinct from the base register extract (Certificado de Existencia), it is classified as proved_by_additional_document; the Cámara de Comercio issues certified copies of registered documents."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CO",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certificate of Existence and Legal Representation",
+    "documentLocal": "Certificado de Existencia y Representación Legal",
+    "summary": "As for all commercial companies, the Sociedad Anónima's register extract is the Certificado de Existencia y Representación Legal issued by the Cámara de Comercio from the Registro Mercantil. It is an issued document certifying existence, domicile, capital, objeto and legal representation, and is the direct equivalent of the German Registerauszug. It is obtained directly from the registry as the company's base document.",
+    "evidence": [
+      {"basis": "Código de Comercio (Registro Mercantil) / Cámara de Comercio", "quote": "", "note": "Certificado de Existencia y Representación Legal is the standard register extract for a Sociedad Anónima; verbatim text not fetched (gov.co sources unreachable).", "url": "http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Verbatim registry/statutory text could not be fetched from primary sources; base-document status rests on the established role of the Certificado de Existencia y Representación Legal."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CO",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a Sociedad Anónima the accionistas are recorded in the company-held libro de registro de acciones (libro de accionistas); share transfers are entered in that company book, not in the Registro Mercantil. The Cámara de Comercio's Certificado de Existencia y Representación Legal does not certify the current shareholder composition. No registry-issued document evidences the S.A.'s shareholder list.",
+    "evidence": [
+      {"basis": "Código de Comercio (libro de registro de acciones; registro de la transferencia de acciones en el libro de la sociedad)", "quote": "", "note": "Share ownership and transfers of a S.A. are entered in the company's share-register book, held by the company, not at the Cámara de Comercio. Verbatim article text not fetched (gov.co sources unreachable).", "url": "http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: verbatim Código de Comercio text (share-register and transfer articles) not fetched; conclusion rests on the settled rule that the libro de registro de acciones is company-held and not part of the Registro Mercantil."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CO",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Public deed of incorporation / bylaws (registered)",
+    "documentLocal": "Escritura pública de constitución / Estatutos (inscrita en el Registro Mercantil)",
+    "summary": "A Sociedad Anónima is constituted by escritura pública (Código de Comercio, art. 110), which is inscribed in the Registro Mercantil of the Cámara de Comercio. The registered escritura de constitución / estatutos is a distinct document, obtainable as a certified copy from the Cámara de Comercio (and from the notaría), in addition to the base register extract. That registered document proves the constitution.",
+    "evidence": [
+      {"basis": "Código de Comercio, art. 110 (contenido de la escritura de constitución) and Registro Mercantil inscription rules", "quote": "", "note": "The escritura pública de constitución is registered in the Cámara de Comercio and retrievable as a certified copy. Verbatim text not fetched (gov.co sources unreachable).", "url": "http://www.secretariasenado.gov.co/senado/basedoc/codigo_comercio.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: verbatim art. 110 text not fetched.", "Classified as proved_by_additional_document because the constitution is a document distinct from the base register extract; certified copies are issued by the Cámara de Comercio and/or the originating notaría."],
+    "confidence": "high"
+  }
+]

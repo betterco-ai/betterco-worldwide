@@ -1,0 +1,92 @@
+[
+  {
+    "jurisdiction": "BH",
+    "legalForm": "WLL",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة (ذ.م.م)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Registration (CR) extract",
+    "documentLocal": "السجل التجاري (سجلات)",
+    "summary": "The Ministry of Industry and Commerce (MOIC) maintains the Commercial Register via the Sijilat platform, and a WLL is entered on it. The CR extract is the base register document evidencing company particulars — CR number, legal form, trade name, capital, registered address, activities and the registered owners/partners. This is the direct analogue of a German Registerauszug.",
+    "evidence": [
+      {"basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001 (registration in the Commercial Register); MOIC/Sijilat commercial registration system", "quote": "", "note": "Verbatim text not fetched (all source fetches blocked). WLL registration and CR-extract contents asserted from knowledge of the CCL and Sijilat; UNVERIFIED against primary text.", "url": "https://sijilat.bh", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: no primary-source text fetched; based on knowledge of the CCL 21/2001 and Sijilat.", "Public Sijilat CR search shows summary particulars; a full certified CR extract is issued by MOIC/Sijilat."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BH",
+    "legalForm": "WLL",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة (ذ.م.م)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Registration (CR) extract — owners/partners section",
+    "documentLocal": "السجل التجاري (بيان الشركاء/الملاك)",
+    "summary": "A WLL is not a public-issue company; its partners and their shareholdings are fixed in the registered memorandum of association and reflected on the Commercial Register. The Sijilat CR record shows the company's owners/partners, so the members are provable directly from the registry base document. The authoritative statement of each partner's quota/share is the registered memorandum of association, which corroborates the split.",
+    "evidence": [
+      {"basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions on the With Limited Liability Company (memorandum must state partners and their shares; shares not offered to the public); MOIC/Sijilat CR record of partners", "quote": "", "note": "Relevant provisions sit in the CCL chapter on WLLs (approx. Arts. 262 et seq.) — article numbers UNVERIFIED. Verbatim text not fetched.", "url": "https://sijilat.bh", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: no primary-source text fetched.", "Bahrain has no separate statutory 'shareholder list' filing like Germany's Gesellschafterliste; proof is the CR partners section, backed by the registered memorandum of association.", "Whether the public CR search exposes each partner's percentage (vs. only names) is UNVERIFIED; the definitive split is in the memorandum."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "BH",
+    "legalForm": "WLL",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة (ذ.م.م)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum of Association (contract of establishment)",
+    "documentLocal": "عقد التأسيس / عقد الشركة",
+    "summary": "A WLL is constituted by a written, authenticated memorandum of association (contract of establishment) that is filed with MOIC as part of registration. This is the constitution equivalent to a German Gesellschaftsvertrag and is a document distinct from the CR extract. It is obtained as an additional filed document rather than being contained in the base register extract.",
+    "evidence": [
+      {"basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions requiring a written/authenticated memorandum of association for a WLL and its filing with MOIC", "quote": "", "note": "CCL WLL chapter (approx. Arts. 262 et seq.) — UNVERIFIED. Verbatim text not fetched.", "url": "https://legalaffairs.gov.bh", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: no primary-source text fetched.", "Third-party obtainability of the filed memorandum from MOIC/Sijilat is uncertain — it may require being a stakeholder or a formal request rather than open public download.", "Amendments to the memorandum must also be registered; the current consolidated version is the relevant document."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "BH",
+    "legalForm": "BSC",
+    "legalFormLocal": "شركة مساهمة بحرينية (ش.م.ب)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Registration (CR) extract",
+    "documentLocal": "السجل التجاري (سجلات)",
+    "summary": "A Bahraini Shareholding Company (public B.S.C. or closed B.S.C.(c)) is entered on the Commercial Register maintained by MOIC via Sijilat. The CR extract is the base register document showing company particulars — CR number, legal form, trade name, issued/paid-up capital, registered address, objects and authorized signatories/board. It is the direct analogue of a German Registerauszug.",
+    "evidence": [
+      {"basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001 (joint-stock company registration in the Commercial Register); MOIC/Sijilat commercial registration system", "quote": "", "note": "Verbatim text not fetched (source fetches blocked). UNVERIFIED against primary text.", "url": "https://sijilat.bh", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: no primary-source text fetched.", "Public Sijilat search shows summary particulars; a certified CR extract is issued by MOIC/Sijilat."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "BH",
+    "legalForm": "BSC",
+    "legalFormLocal": "شركة مساهمة بحرينية (ش.م.ب)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a BSC the capital is divided into negotiable shares, and shareholding is established by entry in the company's own register of shareholders held at its head office; for listed public companies the shares are dematerialised and held through the central depository (Bahrain Clear). The Commercial Register / Sijilat shows only the founders and the board/authorized signatories, not the current shareholder body. The current shareholder list is therefore not provable from the MOIC registry — it must come from the company's share register or Bahrain Clear.",
+    "evidence": [
+      {"basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions on joint-stock companies keeping a register of nominal shares/shareholders and transfer by entry therein; Bahrain Clear (CSD) for listed issuers", "quote": "", "note": "Share-register provisions sit in the CCL joint-stock chapter (approx. Arts. 116-118) — UNVERIFIED. Verbatim text not fetched.", "url": "https://legalaffairs.gov.bh", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: no primary-source text fetched.", "The registered memorandum lists only founders/initial subscribers, not current shareholders.", "Current shareholders are evidenced by the company's own share register or, for listed companies, Bahrain Clear — neither is a MOIC/Sijilat registry document."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "BH",
+    "legalForm": "BSC",
+    "legalFormLocal": "شركة مساهمة بحرينية (ش.م.ب)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum and Articles of Association",
+    "documentLocal": "عقد التأسيس والنظام الأساسي",
+    "summary": "A BSC is constituted by its founders through a memorandum of association and articles of association (statute), which are filed with MOIC as part of incorporation. Together these form the constitution equivalent to a German Gesellschaftsvertrag and are documents distinct from the CR extract. They are obtained as additional filed documents rather than being contained in the base register extract.",
+    "evidence": [
+      {"basis": "Commercial Companies Law, Legislative Decree No. 21 of 2001, provisions requiring a memorandum and articles of association for a joint-stock company and their filing with MOIC", "quote": "", "note": "CCL joint-stock chapter (approx. Arts. 63 et seq.) — UNVERIFIED. Verbatim text not fetched.", "url": "https://legalaffairs.gov.bh", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/UNVERIFIED: no primary-source text fetched.", "Third-party obtainability of the filed memorandum and articles from MOIC/Sijilat is uncertain; listed BSCs additionally publish their articles via Bahrain Bourse disclosures.", "Amendments require registration; the current consolidated version is the relevant document."],
+    "confidence": "medium"
+  }
+]

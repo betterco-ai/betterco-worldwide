@@ -1,0 +1,119 @@
+[
+  {
+    "jurisdiction": "CL",
+    "legalForm": "SpA",
+    "legalFormLocal": "Sociedad por Acciones",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract / certificate of good standing (inscription of the extracto in the Registro de Comercio; or RES Certificado de Vigencia)",
+    "documentLocal": "Certificado de vigencia / copia de la inscripción del extracto en el Registro de Comercio (Conservador de Bienes Raíces); o Certificado de Vigencia del Registro de Empresas y Sociedades (RES) para sociedades acogidas a la Ley 20.659",
+    "summary": "An SpA is formed by a written act of constitution whose extract must be inscribed in the Registro de Comercio of the company's domicile and published once in the Diario Oficial (Código de Comercio art. 426). A register extract is therefore obtainable as a base registry document: a certified copy of the inscription plus a certificate of good standing (certificado de vigencia) from the Conservador de Bienes Raíces. SpAs incorporated under the simplified electronic regime (Ley 20.659) instead obtain the equivalent Certificado de Vigencia directly from the Registro de Empresas y Sociedades (RES).",
+    "evidence": [
+      {"basis": "Código de Comercio, art. 426 (SpA)", "quote": "Dentro del plazo de sesenta días contados desde la fecha del acto de constitución social, un extracto del mismo, autorizado por el notario respectivo, deberá inscribirse en el Registro de Comercio correspondiente al domicilio de la sociedad y publicarse por una sola vez en el Diario Oficial.", "note": "Establishes the public register inscription of the extract; a register extract / certificate of vigencia is derived from this inscription.", "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974", "retrieved": "2026-07-21"},
+      {"basis": "Registro de Empresas y Sociedades (RES) portal, Ley 20.659", "quote": "", "note": "INFERENCE/UNVERIFIED: RES issues a Certificado de Vigencia for simplified-regime companies; exact certificate catalogue could not be fetched verbatim.", "url": "https://www.registrodeempresasysociedades.cl/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The register holds/derives an extract, not the full estatutos — see the GESELLSCHAFTSVERTRAG row.",
+      "Two incorporation tracks exist: traditional (escritura pública -> extracto in the Registro de Comercio of the Conservador de Bienes Raíces + Diario Oficial) and simplified electronic (Ley 20.659, RES / tuempresaenundia.cl). The obtainable extract differs by track.",
+      "INFERENCE/UNVERIFIED: exact RES certificate names (Certificado de Vigencia) not confirmed by a fetched verbatim source; leychile/Ley 20.659 text was not retrievable during research."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CL",
+    "legalForm": "SpA",
+    "legalFormLocal": "Sociedad por Acciones",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Current shareholders of an SpA are recorded only in the company's own share register (Registro de Accionistas), which the company keeps and which is available for inspection by shareholders and administrators, not by the public and not filed with any registry (Código de Comercio art. 431). The public registry captures only the founding shareholders named in the constitution/extract (art. 426 No. 2), not subsequent transfers. A current shareholder list is therefore not obtainable from the registry.",
+    "evidence": [
+      {"basis": "Código de Comercio, art. 431 (SpA)", "quote": "La sociedad llevará un registro en el que se anotará, a lo menos, el nombre, domicilio y cédula de identidad o rol único tributario de cada accionista, el número de acciones de que sea titular, la fecha en que éstas se hayan inscrito a su nombre... estará, en todo tiempo, disponible para su examen por cualquier accionista o administrador de la sociedad.", "note": "The share register is company-held and open only to shareholders/administrators — not a public registry filing.", "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974", "retrieved": "2026-07-21"},
+      {"basis": "Código de Comercio, art. 426 No. 2 (SpA)", "quote": "El nombre de los accionistas concurrentes al instrumento de constitución;", "note": "Only founding shareholders appear in the publicly inscribed extract; later ownership changes are not registered publicly.", "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The company-held Registro de Accionistas is not a public registry document; only founders are registry-visible.",
+      "INFERENCE/UNVERIFIED: RES-incorporated SpAs may maintain the share book electronically on the RES platform (the RES portal describes a 'Registro electrónico que permite mantener el libro de accionistas de la sociedad'), but this is company-controlled and not a public, third-party-obtainable proof of current shareholders."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CL",
+    "legalForm": "SpA",
+    "legalFormLocal": "Sociedad por Acciones",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Constitution / bylaws (escritura or instrumento privado of constitution with its estatutos; or RES Certificado de Estatuto Actualizado)",
+    "documentLocal": "Copia autorizada de la escritura pública o del instrumento privado protocolizado de constitución y sus estatutos (notaría/archivero); o Certificado de Estatuto Actualizado del Registro de Empresas y Sociedades (RES) para sociedades acogidas a la Ley 20.659",
+    "summary": "The SpA's constitution carries its estatutos (Código de Comercio art. 425), but the public Registro de Comercio inscribes only the extracto — a summary — not the full bylaws (art. 426). The full constitution is therefore obtained as a separate/additional document: a certified copy of the escritura or protocolized private instrument from the notary/archivero for traditionally incorporated companies, or the Certificado de Estatuto Actualizado from the RES for simplified-regime companies. It is registry-adjacent and obtainable, but not the plain register extract.",
+    "evidence": [
+      {"basis": "Código de Comercio, art. 425 (SpA)", "quote": "La sociedad se forma, existe y prueba por un acto de constitución social escrito, inscrito y publicado en los términos del artículo siguiente, que se perfeccionará mediante escritura pública o por instrumento privado suscrito por sus otorgantes, y cuyas firmas sean autorizadas por notario público... El acto de constitución de la sociedad irá acompañado de su estatuto...", "note": "The estatutos accompany the act of constitution (notarial escritura or protocolized private instrument).", "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974", "retrieved": "2026-07-21"},
+      {"basis": "Código de Comercio, art. 426 (SpA)", "quote": "Dentro del plazo de sesenta días contados desde la fecha del acto de constitución social, un extracto del mismo, autorizado por el notario respectivo, deberá inscribirse en el Registro de Comercio... El extracto deberá expresar: 1.- El nombre de la sociedad;...", "note": "Only the extract (summary) is publicly inscribed; the full estatutos are not, so the full constitution is a separate document.", "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "For the traditional track, the public Registro de Comercio holds only the extracto; the full estatutos are obtained from the notarial escritura (copia autorizada), not the commercial registry itself.",
+      "For the simplified track (Ley 20.659) the full estatutos are held in the RES and obtainable as a Certificado de Estatuto Actualizado — a distinct certificate from the vigencia extract; hence 'additional document'.",
+      "INFERENCE/UNVERIFIED: exact RES certificate name 'Certificado de Estatuto Actualizado' not confirmed by a fetched verbatim source."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "CL",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Register extract / certificate of good standing (inscription of the extracto in the Registro de Comercio; or RES Certificado de Vigencia for a cerrada under Ley 20.659)",
+    "documentLocal": "Certificado de vigencia / copia de la inscripción del extracto en el Registro de Comercio (Conservador de Bienes Raíces); o Certificado de Vigencia del Registro de Empresas y Sociedades (RES) para la sociedad anónima cerrada acogida a la Ley 20.659",
+    "summary": "A Sociedad Anónima is constituted by escritura pública whose extract, authorized by the notary, must be inscribed in the Registro de Comercio of the company's domicile and published once in the Diario Oficial within 60 days (Ley 18.046 art. 5). A register extract is thus obtainable as a base registry document: a certified copy of the inscription plus a certificate of good standing from the Conservador de Bienes Raíces. A sociedad anónima cerrada may alternatively be incorporated under the simplified regime (Ley 20.659) and obtain the equivalent Certificado de Vigencia from the RES.",
+    "evidence": [
+      {"basis": "Ley 18.046 sobre Sociedades Anónimas, art. 5", "quote": "Art. 5º Un extracto de la escritura social, autorizado por el notario respectivo, deberá inscribirse en el Registro de Comercio correspondiente al domicilio de la sociedad y publicarse por una sola vez en el Diario Oficial. La inscripción y publicación deberán efectuarse dentro del plazo de 60 días contado desde la fecha de la escritura social.", "note": "Public register inscription of the extract; a register extract / certificate of vigencia derives from this inscription.", "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The register holds/derives an extract, not the full estatutos — see the GESELLSCHAFTSVERTRAG row.",
+      "Only a sociedad anónima cerrada is eligible for the simplified regime (Ley 20.659, RES). A sociedad anónima abierta must use the traditional Registro de Comercio + Diario Oficial track (and is also entered in the CMF registry).",
+      "INFERENCE/UNVERIFIED: exact RES certificate names not confirmed by a fetched verbatim source."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CL",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Shareholders of a Sociedad Anónima are recorded in the company's Registro de Accionistas, kept by the company (Reglamento de Sociedades Anónimas); Ley 18.046 art. 7 requires the company to keep an up-to-date list of shareholders available to its shareholders, not to the public and not filed with any registry. The public registry records only the founders named in the constitution/extract (art. 5), not later transfers. A current shareholder list is therefore not obtainable from the registry.",
+    "evidence": [
+      {"basis": "Ley 18.046 sobre Sociedades Anónimas, art. 7", "quote": "Art. 7º La sociedad deberá mantener en la sede principal y en la de sus agencias o sucursales, así como en su sitio en Internet, en el caso de las sociedades anónimas abiertas que dispongan de tales medios, a disposición de los accionistas, ejemplares actualizados de sus estatutos... Deberá, asimismo, mantener una lista actualizada de los accionistas, con indicación del domicilio y número de acciones de cada cual.", "note": "The shareholder list is company-held and made available to shareholders — not a public registry filing.", "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The Registro de Accionistas / shareholder list is company-held under Ley 18.046 and the Reglamento de Sociedades Anónimas (D.S. 702/2011); it is not a public registry document.",
+      "Only founding shareholders are registry-visible via the extract; ongoing ownership is not.",
+      "For a sociedad anónima abierta, shareholding information may reach the CMF via disclosure obligations, but that is a supervisory filing, not a Registro de Comercio/RES document, and does not yield a general public shareholder list."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "CL",
+    "legalForm": "S.A.",
+    "legalFormLocal": "Sociedad Anónima",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Constitution / bylaws (escritura pública of constitution with its estatutos; or RES Certificado de Estatuto Actualizado for a cerrada under Ley 20.659)",
+    "documentLocal": "Copia autorizada de la escritura pública de constitución y sus estatutos (notaría/archivero); o Certificado de Estatuto Actualizado del Registro de Empresas y Sociedades (RES) para la sociedad anónima cerrada acogida a la Ley 20.659",
+    "summary": "A Sociedad Anónima's estatutos are contained in its escritura pública of constitution, but the public Registro de Comercio inscribes only the extracto — a summary — not the full bylaws (Ley 18.046 art. 5). The full constitution is obtained as a separate/additional document: a certified copy of the escritura from the notary/archivero, or the Certificado de Estatuto Actualizado from the RES for a cerrada incorporated under Ley 20.659. It is obtainable but is not the plain register extract.",
+    "evidence": [
+      {"basis": "Ley 18.046 sobre Sociedades Anónimas, art. 5", "quote": "Un extracto de la escritura social, autorizado por el notario respectivo, deberá inscribirse en el Registro de Comercio... El extracto de la escritura de constitución deberá expresar: 1) El nombre y domicilio de los accionistas que concurran a su otorgamiento...", "note": "Only the extract (summary) is inscribed; the full estatutos live in the escritura, so the full constitution is a separate document.", "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473", "retrieved": "2026-07-21"},
+      {"basis": "Ley 18.046 sobre Sociedades Anónimas, art. 7", "quote": "...a disposición de los accionistas, ejemplares actualizados de sus estatutos firmados por el gerente, con indicación de la fecha y notaría en que se otorgó la escritura de constitución y la de sus modificaciones...", "note": "Confirms the estatutos originate in the notarial escritura; the company (not the registry) holds the consolidated estatutos.", "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "For the traditional track, the public Registro de Comercio holds only the extracto; the full estatutos are obtained from the notarial escritura (copia autorizada), not the commercial registry itself.",
+      "For a sociedad anónima cerrada under Ley 20.659 the full estatutos are held in the RES and obtainable as a Certificado de Estatuto Actualizado — a distinct certificate from the vigencia extract; hence 'additional document'.",
+      "INFERENCE/UNVERIFIED: exact RES certificate name 'Certificado de Estatuto Actualizado' not confirmed by a fetched verbatim source."
+    ],
+    "confidence": "medium"
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "jurisdiction": "QA",
+    "legalForm": "LLC",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة (Limited Liability Company, W.L.L.)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Registration extract / certificate (Commercial Register printout, MoCI)",
+    "documentLocal": "مستخرج السجل التجاري / شهادة القيد في السجل التجاري",
+    "summary": "Every LLC must be entered in the Commercial Register held by the Ministry of Commerce and Industry (MoCI) under the Commercial Companies Law No. 11 of 2015. The Commercial Registration (CR) extract is the base registry document and states the company's core particulars: trade name, CR number, legal form, capital, objects/activities, registered address and authorised manager(s)/signatories. This is the direct analogue of the German Registerauszug.",
+    "evidence": [
+      {"basis": "Commercial Companies Law No. 11 of 2015 (general provisions requiring companies to be entered in the Commercial Register); MoCI Commercial Registration service", "quote": "", "note": "Verbatim article text could not be retrieved (Al Meezan legal portal failed TLS verification; web-search budget exhausted). MoCI operates the Commercial Register and issues the CR extract/certificate.", "url": "https://www.moci.gov.qa/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Article numbers not verbatim-verified — Al Meezan (almeezan.qa) and other primary-text hosts returned certificate errors; INFERENCE from established Qatar CCL structure.",
+      "Exact CR extract layout/fields is administrative practice by MoCI, not fixed by statute in the fetched sources."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "QA",
+    "legalForm": "LLC",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة (Limited Liability Company, W.L.L.)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Registration extract (partners/ownership section) — alternatively the registered Memorandum of Association",
+    "documentLocal": "السجل التجاري (بيان الشركاء والحصص) / عقد التأسيس",
+    "summary": "For a Qatari LLC the partners (شركاء) and their quotas (حصص) are fixed in the registered memorandum of association, and any transfer of an LLC quota must be notarised and registered with MoCI. The Commercial Registration extract for an LLC therefore lists the partners and their ownership percentages, so membership is provable directly from the registry. If a standalone list is required, the registered memorandum of association serves as the equivalent additional document.",
+    "evidence": [
+      {"basis": "Commercial Companies Law No. 11 of 2015 — LLC provisions: memorandum must state partners and their shares; transfers of quotas must be registered in the Commercial Register", "quote": "", "note": "Verbatim text not retrievable (see caveats). LLC quotas are non-negotiable; the register reflects current membership because transfers require amendment/registration.", "url": "https://www.moci.gov.qa/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "INFERENCE/UNVERIFIED: that the CR extract enumerates every partner and exact percentage is based on known Qatar practice, not on a verbatim statutory/MoCI fetch; if a given CR printout omits shareholdings, fall back to the registered Memorandum of Association (proved_by_additional_document).",
+      "Statute article numbers not verbatim-confirmed due to source-access failures."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "QA",
+    "legalForm": "LLC",
+    "legalFormLocal": "شركة ذات مسؤولية محدودة (Limited Liability Company, W.L.L.)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Memorandum / Articles of Association of the LLC (filed and notarised with MoCI)",
+    "documentLocal": "عقد التأسيس / النظام الأساسي",
+    "summary": "Under Law No. 11 of 2015 an LLC is constituted by a written memorandum of association that must be notarised and registered with MoCI; without registration it is not effective against third parties. This document is the LLC's constitution (German Gesellschaftsvertrag) and is held on the company file at the registry as a distinct document separate from the CR extract, hence an additional document rather than the base extract.",
+    "evidence": [
+      {"basis": "Commercial Companies Law No. 11 of 2015 — requirement that the company contract/memorandum be in writing, notarised and registered", "quote": "", "note": "Verbatim text not retrievable (see caveats). The memorandum is a filed document distinct from the CR extract.", "url": "https://www.moci.gov.qa/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Third-party retrievability of the filed memorandum from MoCI may require authorisation or be obtained via the company; access is not guaranteed to be open/public.",
+      "Statute article numbers not verbatim-confirmed due to source-access failures — INFERENCE from established CCL structure."
+    ],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "QA",
+    "legalForm": "QPSC",
+    "legalFormLocal": "شركة مساهمة عامة قطرية (Qatari Public Shareholding Company)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Commercial Registration extract / certificate (Commercial Register printout, MoCI)",
+    "documentLocal": "مستخرج السجل التجاري / شهادة القيد في السجل التجاري",
+    "summary": "A QPSC must be entered in the Commercial Register held by MoCI under Law No. 11 of 2015. The CR extract is the base registry document showing trade name, CR number, legal form, issued/paid capital, objects, registered address and board/authorised signatories. This is the direct analogue of the German Registerauszug.",
+    "evidence": [
+      {"basis": "Commercial Companies Law No. 11 of 2015 (public shareholding company provisions; registration in the Commercial Register); MoCI Commercial Registration service", "quote": "", "note": "Verbatim article text not retrievable (see caveats).", "url": "https://www.moci.gov.qa/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "Article numbers not verbatim-verified — primary-text hosts returned certificate errors; INFERENCE from established Qatar CCL structure.",
+      "Exact CR extract fields reflect MoCI administrative practice."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "QA",
+    "legalForm": "QPSC",
+    "legalFormLocal": "شركة مساهمة عامة قطرية (Qatari Public Shareholding Company)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a QPSC, shares are negotiable securities and the body of shareholders is not recorded in the Commercial Register. The current register of shareholders is maintained by the company and, for listed companies, held in dematerialised form at the Qatar Central Securities Depository (Edaa / QCSD). The Commercial Register only records the founders at incorporation (in the memorandum), not the fluctuating shareholder base, so a current shareholder list cannot be evidenced from the registry.",
+    "evidence": [
+      {"basis": "Commercial Companies Law No. 11 of 2015 — shares of a public shareholding company are negotiable; shareholder register maintained by the company / (listed) via central depository; Qatar Central Securities Depository (Edaa/QCSD) framework", "quote": "", "note": "Verbatim text not retrievable (see caveats). Registry holds founders/memorandum only, not the ongoing shareholder register.", "url": "https://www.moci.gov.qa/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "The company's own share register or a QCSD/Edaa statement can evidence shareholders, but these are private/depository records, not registry documents.",
+      "Founders named in the registered memorandum are provable, but this is not a current shareholder list.",
+      "Statute article numbers not verbatim-confirmed due to source-access failures — INFERENCE."
+    ],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "QA",
+    "legalForm": "QPSC",
+    "legalFormLocal": "شركة مساهمة عامة قطرية (Qatari Public Shareholding Company)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Articles of Association and Memorandum of Association of the QPSC (filed with MoCI; published)",
+    "documentLocal": "النظام الأساسي / عقد التأسيس",
+    "summary": "A QPSC is constituted by a memorandum of association and articles of association under Law No. 11 of 2015; these must be filed with MoCI and are published. Together they form the company's constitution (German Gesellschaftsvertrag) and exist as distinct filed documents on the registry file, separate from the CR extract, hence an additional document.",
+    "evidence": [
+      {"basis": "Commercial Companies Law No. 11 of 2015 — public shareholding company memorandum and articles of association; filing/publication requirements", "quote": "", "note": "Verbatim text not retrievable (see caveats). The articles/memorandum are filed documents distinct from the CR extract.", "url": "https://www.moci.gov.qa/en/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": [
+      "For a listed QPSC the articles of association are typically publicly available (via QFMA/Qatar Stock Exchange disclosures); for unlisted QPSCs retrieval may require authorisation or the company.",
+      "Statute article numbers not verbatim-confirmed due to source-access failures — INFERENCE from established CCL structure."
+    ],
+    "confidence": "medium"
+  }
+]

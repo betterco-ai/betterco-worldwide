@@ -1,0 +1,240 @@
+[
+  {
+    "jurisdiction": "US",
+    "legalForm": "Delaware LLC",
+    "legalFormLocal": "Limited Liability Company (LLC)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certificate of Good Standing",
+    "documentLocal": "Certificate of Good Standing (Delaware Division of Corporations)",
+    "summary": "The US has no consolidated 'current particulars' register extract equivalent to a German Registerauszug. On request the Delaware Division of Corporations issues a Certificate of Good Standing, which proves the LLC's existence and standing but NOT its legal form details, registered address history, managers or members. It is an ordered additional document, not an automatically available base register printout.",
+    "evidence": [
+      {"basis": "6 Del. C. § 18-201 (Delaware LLC Act)", "quote": "The certificate of formation shall be filed in the office of the Secretary of State and set forth:", "note": "Only the certificate of formation — not a running register of particulars — is held by the state.", "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html", "retrieved": "2026-07-21"},
+      {"basis": "Delaware Division of Corporations (Certificate of Good Standing service)", "quote": "", "note": "Good Standing (short/long form) certifies existence and standing only; unverified against a verbatim statutory text.", "url": "https://corp.delaware.gov/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE: a Good Standing certificate is judged to be, at best, a weak substitute for a Registerauszug — it evidences existence/status, not the consolidated current particulars (legal form, address, representatives, members) a German extract carries.", "UNVERIFIED: no verbatim quote fetched for the Good Standing certificate contents."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Delaware LLC",
+    "legalFormLocal": "Limited Liability Company (LLC)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Members of a Delaware LLC are not filed with the state. The certificate of formation does not list members, and membership is recorded only in the company's own limited liability company agreement and internal records. No registry document evidences the member list.",
+    "evidence": [
+      {"basis": "6 Del. C. § 18-201", "quote": "The certificate of formation shall be filed in the office of the Secretary of State and set forth:", "note": "The enumerated contents cover name and registered office/agent; members are not among the required particulars.", "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html", "retrieved": "2026-07-21"},
+      {"basis": "6 Del. C. § 18-201(d)", "quote": "A limited liability company agreement shall be entered into or otherwise existing either before, after or at the time of the filing of a certificate of formation", "note": "Membership lives in the private LLC agreement, which is not filed.", "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Members are held in the company's internal records/operating agreement, never filed with the Secretary of State."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Delaware LLC",
+    "legalFormLocal": "Limited Liability Company (LLC)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certified copy of the Certificate of Formation",
+    "documentLocal": "Certificate of Formation",
+    "summary": "The Certificate of Formation is filed with and public at the Delaware Division of Corporations, and a certified copy is obtainable — it is the foundational constitutional filing and proves the entity's charter. However, the operating (LLC) agreement, which contains most of what a German Gesellschaftsvertrag governs, is a private document that is not filed and cannot be obtained from the registry.",
+    "evidence": [
+      {"basis": "6 Del. C. § 18-201", "quote": "The certificate of formation shall be filed in the office of the Secretary of State and set forth:", "note": "The charter document is public and certifiable.", "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html", "retrieved": "2026-07-21"},
+      {"basis": "6 Del. C. § 18-201(d)", "quote": "A limited liability company agreement shall be entered into or otherwise existing either before, after or at the time of the filing of a certificate of formation", "note": "The LLC agreement exists independently of the filing and is not lodged with the state.", "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Only the Certificate of Formation is provable; the operating agreement (the substantive constitution) is NOT filed and not provable from the registry."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Delaware Corp",
+    "legalFormLocal": "Corporation (stock corporation)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certificate of Good Standing",
+    "documentLocal": "Certificate of Good Standing (Delaware Division of Corporations)",
+    "summary": "Delaware issues no consolidated current-particulars extract. On request the Division of Corporations provides a Certificate of Good Standing evidencing the corporation's existence and standing, optionally listing filed documents (long form), but not a full snapshot of current officers/directors or capital. It is an ordered additional document, not a base register printout.",
+    "evidence": [
+      {"basis": "8 Del. C. § 106 (DGCL)", "quote": "Upon the filing with the Secretary of State of the certificate of incorporation", "note": "Fragment; the state holds the certificate of incorporation and filed amendments, not a live particulars register.", "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html", "retrieved": "2026-07-21"},
+      {"basis": "Delaware Division of Corporations (Certificate of Good Standing service)", "quote": "", "note": "Good Standing certifies existence/standing only; unverified against verbatim text.", "url": "https://corp.delaware.gov/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/JUDGMENT: a Good Standing certificate is not a true Registerauszug — it proves existence/status, not consolidated current particulars.", "UNVERIFIED: no verbatim quote fetched for certificate contents."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Delaware Corp",
+    "legalFormLocal": "Corporation (stock corporation)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Stockholders of a Delaware corporation are not filed with the state. Ownership is recorded in the corporation's own stock ledger. No document from the Division of Corporations evidences the shareholder list.",
+    "evidence": [
+      {"basis": "8 Del. C. § 219/§ 224 (stock ledger, DGCL)", "quote": "", "note": "The stock ledger is a corporate record maintained by the company, not a state filing; cite unverified verbatim.", "url": "https://delcode.delaware.gov/title8/c001/sc07/index.html", "retrieved": "2026-07-21"},
+      {"basis": "8 Del. C. § 102 (certificate contents, DGCL)", "quote": "", "note": "The certificate of incorporation lists authorized shares, not the identities of stockholders.", "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Shareholders are held only in the company's stock ledger, never filed with the state.", "UNVERIFIED: statutory verbatim not fetched for §§ 219/224/102."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Delaware Corp",
+    "legalFormLocal": "Corporation (stock corporation)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certified copy of the Certificate of Incorporation",
+    "documentLocal": "Certificate of Incorporation",
+    "summary": "The Certificate of Incorporation is filed with the Delaware Division of Corporations, is public, and a certified copy is obtainable — it constitutes the corporation and proves its charter. The bylaws, which govern internal affairs like a Gesellschaftsvertrag, are adopted internally and not filed, so they cannot be obtained from the registry.",
+    "evidence": [
+      {"basis": "8 Del. C. § 106 (DGCL)", "quote": "Upon the filing with the Secretary of State of the certificate of incorporation", "note": "Filing the certificate constitutes the body corporate; the document is public.", "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html", "retrieved": "2026-07-21"},
+      {"basis": "8 Del. C. § 109 (bylaws, DGCL)", "quote": "", "note": "INFERENCE: § 109 provides for adoption/amendment of bylaws by the corporation but imposes no requirement to file them with the Secretary of State.", "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Only the Certificate of Incorporation is provable; bylaws are NOT filed and not provable from the registry.", "INFERENCE: 'bylaws not filed' rests on the absence of any filing requirement in § 109, not on an affirmative prohibition."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Nevada Corp",
+    "legalFormLocal": "Corporation",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certificate of Existence / Good Standing (plus Annual List)",
+    "documentLocal": "Certificate of Existence with Status; Annual List of Officers and Directors",
+    "summary": "Nevada issues no consolidated current-particulars extract. The Secretary of State provides a Certificate of Existence/Good Standing (existence and status), and — uniquely among these forms — a publicly filed Annual List of the officers and directors under NRS 78.150 can supplement it as to representation. Together these are ordered additional documents, still short of a full German-style register extract, and they do not evidence shareholders.",
+    "evidence": [
+      {"basis": "NRS 78.150(1)", "quote": "The names and titles of the president, secretary and treasurer, or the equivalent thereof, and of all the directors of the corporation", "note": "The public Annual List covers officers/directors only.", "url": "https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html", "retrieved": "2026-07-21"},
+      {"basis": "Nevada Secretary of State (Certificate of Existence service)", "quote": "", "note": "Certificate of Existence with Status certifies existence/good standing; unverified verbatim.", "url": "https://www.nvsos.gov/sos/businesses", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/JUDGMENT: even combined, Good Standing + Annual List is not a true Registerauszug; it omits capital and shareholders and is not a single consolidated extract.", "The Annual List proves officers/directors, NOT shareholders."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Nevada Corp",
+    "legalFormLocal": "Corporation",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Stockholders of a Nevada corporation are not filed with the state. The NRS 78.150 Annual List discloses the president, secretary, treasurer and all directors — officers and directors only, not stockholders. Shareholdings live in the corporation's own stock ledger, so no registry document evidences the shareholder list.",
+    "evidence": [
+      {"basis": "NRS 78.150(1)", "quote": "The names and titles of the president, secretary and treasurer, or the equivalent thereof, and of all the directors of the corporation", "note": "Confirms the public list is directors/officers, expressly not stockholders.", "url": "https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["The Annual List is a common false friend — it evidences officers/directors, never shareholders."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Nevada Corp",
+    "legalFormLocal": "Corporation",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certified copy of the Articles of Incorporation",
+    "documentLocal": "Articles of Incorporation",
+    "summary": "The Articles of Incorporation are filed with the Nevada Secretary of State, are public, and a certified copy is obtainable — the foundational charter document. The bylaws, adopted by the directors under NRS ch. 78, are internal and not filed, so they cannot be obtained from the registry.",
+    "evidence": [
+      {"basis": "NRS 78.030 / 78.035 (articles of incorporation)", "quote": "", "note": "INFERENCE: articles are executed and filed with the Secretary of State and become the public charter; verbatim not fetched.", "url": "https://www.leg.state.nv.us/nrs/nrs-078.html", "retrieved": "2026-07-21"},
+      {"basis": "NRS 78.120 (bylaws adopted by directors)", "quote": "", "note": "INFERENCE: directors adopt bylaws; the chapter imposes no requirement to file them with the state.", "url": "https://www.leg.state.nv.us/nrs/nrs-078.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Only the Articles of Incorporation are provable; bylaws are NOT filed and not provable from the registry.", "UNVERIFIED: verbatim text of NRS 78.030/78.035/78.120 not fetched (leg.state.nv.us blocked to WebFetch)."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Wyoming LLC",
+    "legalFormLocal": "Limited Liability Company (LLC)",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certificate of Good Standing",
+    "documentLocal": "Certificate of Good Standing (Wyoming Secretary of State)",
+    "summary": "Wyoming issues no consolidated current-particulars extract. The Secretary of State provides a Certificate of Good Standing on request, evidencing existence and standing but not legal form details, managers or members. It is an ordered additional document, not a base register printout.",
+    "evidence": [
+      {"basis": "Wyo. Stat. § 17-29-201(a)", "quote": "One (1) or more persons may act as organizers to form a limited liability company by signing and delivering to the secretary of state for filing articles of organization.", "note": "The state holds the articles of organization, not a running particulars register.", "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html", "retrieved": "2026-07-21"},
+      {"basis": "Wyoming Secretary of State (Certificate of Good Standing service)", "quote": "", "note": "Good Standing certifies existence/standing only; unverified verbatim.", "url": "https://sos.wyo.gov/Business/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/JUDGMENT: a Good Standing certificate is not a true Registerauszug — existence/status only, no consolidated particulars.", "UNVERIFIED: no verbatim quote fetched for certificate contents."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Wyoming LLC",
+    "legalFormLocal": "Limited Liability Company (LLC)",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Members of a Wyoming LLC are not filed with the state. The articles of organization require only the LLC name and its registered office/agent (with the agent's consent) — no member list. Membership is held in the company's own operating agreement and records, so no registry document evidences it.",
+    "evidence": [
+      {"basis": "Wyo. Stat. § 17-29-201(a)", "quote": "One (1) or more persons may act as organizers to form a limited liability company by signing and delivering to the secretary of state for filing articles of organization.", "note": "The enumerated required contents are name and registered office/agent only; members are not required.", "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Members are held in the company's internal operating agreement/records, never filed with the state.", "Wyoming is a privacy-oriented filing state; members are deliberately not part of the public record."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "Wyoming LLC",
+    "legalFormLocal": "Limited Liability Company (LLC)",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certified copy of the Articles of Organization",
+    "documentLocal": "Articles of Organization",
+    "summary": "The Articles of Organization are filed with the Wyoming Secretary of State, are public, and a certified copy is obtainable — the foundational charter filing. The operating agreement, which governs the LLC's internal affairs like a Gesellschaftsvertrag, is private and not filed, so it cannot be obtained from the registry.",
+    "evidence": [
+      {"basis": "Wyo. Stat. § 17-29-201(a)", "quote": "One (1) or more persons may act as organizers to form a limited liability company by signing and delivering to the secretary of state for filing articles of organization.", "note": "The charter document is public and certifiable.", "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html", "retrieved": "2026-07-21"},
+      {"basis": "Wyo. Stat. § 17-29-110 (operating agreement)", "quote": "", "note": "INFERENCE: the operating agreement is recognized as a private governance document and is not required to be filed with the state.", "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Only the Articles of Organization are provable; the operating agreement is NOT filed and not provable from the registry.", "UNVERIFIED: verbatim text of § 17-29-110 not fetched."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "New York Corp",
+    "legalFormLocal": "Business Corporation",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Certificate of Status (Certificate of Existence)",
+    "documentLocal": "Certificate of Status (NY Department of State, Division of Corporations)",
+    "summary": "New York issues no consolidated current-particulars extract. The Department of State provides a Certificate of Status (also called Certificate of Existence) evidencing that the corporation exists and is active, but not its officers, directors, capital or shareholders. It is an ordered additional document, not a base register printout.",
+    "evidence": [
+      {"basis": "N.Y. Bus. Corp. Law § 402", "quote": "The name of the corporation.", "note": "The state holds the certificate of incorporation and filings, not a live particulars register; § 402 lists the certificate's contents.", "url": "https://www.nysenate.gov/legislation/laws/BSC/402", "retrieved": "2026-07-21"},
+      {"basis": "NY Department of State, Division of Corporations (Certificate of Status service)", "quote": "", "note": "Certificate of Status certifies existence/active status only; unverified verbatim.", "url": "https://dos.ny.gov/certificate-status", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["INFERENCE/JUDGMENT: a Certificate of Status is not a true Registerauszug — existence/status only.", "UNVERIFIED: no verbatim quote fetched for certificate contents."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "New York Corp",
+    "legalFormLocal": "Business Corporation",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "Shareholders of a New York business corporation are not filed with the Department of State. The certificate of incorporation states authorized shares, not shareholder identities, and ownership is kept in the corporation's own record of shareholders. No registry document evidences the shareholder list.",
+    "evidence": [
+      {"basis": "N.Y. Bus. Corp. Law § 402", "quote": "The name of the corporation.", "note": "§ 402 contents cover name, purpose, county, and authorized shares — not shareholder identities.", "url": "https://www.nysenate.gov/legislation/laws/BSC/402", "retrieved": "2026-07-21"},
+      {"basis": "N.Y. Bus. Corp. Law § 624 (books and records of account)", "quote": "", "note": "The record of shareholders is a corporate book maintained by the company, not a state filing; verbatim not fetched.", "url": "https://www.nysenate.gov/legislation/laws/BSC/624", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Shareholders are held only in the company's own record of shareholders, never filed with the Department of State.", "UNVERIFIED: verbatim of § 624 not fetched."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "US",
+    "legalForm": "New York Corp",
+    "legalFormLocal": "Business Corporation",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Certified copy of the Certificate of Incorporation",
+    "documentLocal": "Certificate of Incorporation",
+    "summary": "The Certificate of Incorporation is filed with the NY Department of State, is public, and a certified copy is obtainable — the foundational charter. The by-laws, adopted by the shareholders or board under BCL § 601, are internal and carry no filing requirement, so they cannot be obtained from the registry.",
+    "evidence": [
+      {"basis": "N.Y. Bus. Corp. Law § 402", "quote": "The name of the corporation.", "note": "§ 402 sets out what the filed certificate of incorporation must contain; the document is public.", "url": "https://www.nysenate.gov/legislation/laws/BSC/402", "retrieved": "2026-07-21"},
+      {"basis": "N.Y. Bus. Corp. Law § 601(a)", "quote": "by-laws may be adopted, amended or repealed by a majority of the votes cast by the shares at the time entitled to vote in the election of any directors", "note": "By-laws are adopted internally; § 601 imposes no requirement to file them with the Department of State.", "url": "https://www.nysenate.gov/legislation/laws/BSC/601", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Only the Certificate of Incorporation is provable; by-laws are NOT filed and not provable from the registry.", "INFERENCE: 'by-laws not filed' rests on the absence of any filing requirement in § 601."],
+    "confidence": "high"
+  }
+]

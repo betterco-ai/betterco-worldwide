@@ -1,0 +1,96 @@
+[
+  {
+    "jurisdiction": "VN",
+    "legalForm": "Cong ty TNHH",
+    "legalFormLocal": "Công ty trách nhiệm hữu hạn",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Enterprise Registration Certificate",
+    "documentLocal": "Giấy chứng nhận đăng ký doanh nghiệp",
+    "summary": "The Enterprise Registration Certificate (ERC) is the base registry document issued to every enterprise by the Business Registration Office under the Ministry of Planning and Investment. Under Article 28 of the Law on Enterprises 2020 it carries the enterprise name and ID number, head-office address, the legal representative's identity, and charter capital. It is the direct functional equivalent of a Registerauszug for an LLC. Company registration data is also publicly retrievable via the National Business Registration Portal.",
+    "evidence": [
+      {"basis": "Law on Enterprises 2020 (Law No. 59/2020/QH14), Article 28 (Contents of the enterprise registration certificate)", "quote": "", "note": "Verbatim text could not be fetched (all hosting sources returned 403/404/redirect). Article 28 lists: enterprise name and code; head-office address; legal representative identity; charter capital.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"},
+      {"basis": "National Business Registration Portal (dangkykinhdoanh.gov.vn), operated by the Business Registration Management Agency, MPI", "quote": "", "note": "Public company-information lookup; ERC is the authoritative issued extract.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Verbatim statutory text could not be retrieved — Article numbers and contents are stated from established knowledge of the LOE 2020 and should be treated as INFERENCE/UNVERIFIED.", "The ERC identifies only the legal representative, not the member list."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "VN",
+    "legalForm": "Cong ty TNHH",
+    "legalFormLocal": "Công ty trách nhiệm hữu hạn",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "proved_by_additional_document",
+    "documentLabel": "List of members",
+    "documentLocal": "Danh sách thành viên",
+    "summary": "For a multi-member LLC the members (thành viên) and their capital contributions are registered particulars: the List of Members is a mandatory component of the registration dossier filed with the Business Registration Office under Article 21, and a change of member/capital contribution must be re-notified as a change to enterprise registration content. The list is a distinct filed document, not part of the ERC itself, hence an additional document. A single-member LLC has no member list because the sole owner is otherwise identified.",
+    "evidence": [
+      {"basis": "Law on Enterprises 2020, Article 21 (Application for registration of limited liability companies) — requires the company charter and the list of members (danh sách thành viên)", "quote": "", "note": "Verbatim text could not be fetched. Art. 21 dossier includes the List of Members for a two-or-more-member LLC.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"},
+      {"basis": "Law on Enterprises 2020, Articles 30–31 (registration of changes to enterprise registration content) — member/ownership changes must be re-registered", "quote": "", "note": "Keeps the registered member list authoritative and current for LLCs.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["Applies to multi-member LLCs; a single-member LLC (một thành viên) has no member list.", "The NBRP publicly exposes only basic company data; obtaining the actual filed List of Members as a document typically requires a request to the Business Registration Office.", "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "VN",
+    "legalForm": "Cong ty TNHH",
+    "legalFormLocal": "Công ty trách nhiệm hữu hạn",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Company charter",
+    "documentLocal": "Điều lệ công ty",
+    "summary": "The company charter (Điều lệ công ty) is a mandatory component of the LLC registration dossier under Article 21 of the Law on Enterprises 2020 and is filed with the Business Registration Office at incorporation. It is a filed constitutional document distinct from the ERC, so it is proved by an additional document rather than the base extract. The NBRP does not publish the charter publicly.",
+    "evidence": [
+      {"basis": "Law on Enterprises 2020, Article 21 (LLC application dossier) and Article 24 (Company charter contents)", "quote": "", "note": "Verbatim text could not be fetched. Art. 21 requires the charter in the dossier; Art. 24 governs its contents.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["The filed charter is the incorporation version; subsequent amendments are not consistently re-filed at or published by the registry, so the on-file copy may be outdated.", "Retrieval generally requires a request to the Business Registration Office or the company; not downloadable from the NBRP.", "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "VN",
+    "legalForm": "Cong ty co phan",
+    "legalFormLocal": "Công ty cổ phần",
+    "kind": "REGISTERAUSZUG",
+    "status": "proved_by_base_document",
+    "documentLabel": "Enterprise Registration Certificate",
+    "documentLocal": "Giấy chứng nhận đăng ký doanh nghiệp",
+    "summary": "As for all enterprises, the joint-stock company's base registry document is the Enterprise Registration Certificate issued by the Business Registration Office under Article 28 of the Law on Enterprises 2020, carrying the company name and ID number, head-office address, legal representative, and charter capital. It is the direct equivalent of a Registerauszug. Registration data is also publicly retrievable via the National Business Registration Portal.",
+    "evidence": [
+      {"basis": "Law on Enterprises 2020, Article 28 (Contents of the enterprise registration certificate)", "quote": "", "note": "Verbatim text could not be fetched. Same ERC content applies to JSCs.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"},
+      {"basis": "National Business Registration Portal (dangkykinhdoanh.gov.vn)", "quote": "", "note": "Public company-information lookup.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["The ERC does not list shareholders (only the legal representative and charter capital).", "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."],
+    "confidence": "high"
+  },
+  {
+    "jurisdiction": "VN",
+    "legalForm": "Cong ty co phan",
+    "legalFormLocal": "Công ty cổ phần",
+    "kind": "GESELLSCHAFTERLISTE",
+    "status": "not_provable_from_registry",
+    "documentLabel": null,
+    "documentLocal": null,
+    "summary": "For a JSC, only the founding shareholders (cổ đông sáng lập) are a registered particular — the List of Founding Shareholders is filed with the incorporation dossier under Article 22. Ordinary and subsequent shareholders are recorded only in the company's internal Register of Shareholders (sổ đăng ký cổ đông) under Article 122, which is held by the company and is neither filed with nor published by the Business Registration Office. A complete, current shareholder list is therefore not provable from the registry; the founding-shareholder list captures only the incorporation snapshot and becomes stale after transfers.",
+    "evidence": [
+      {"basis": "Law on Enterprises 2020, Article 122 (Register of shareholders) — the shareholder register is maintained by the company, not the registry", "quote": "", "note": "Verbatim text could not be fetched. Current/ordinary shareholders are held internally, not at the registry.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"},
+      {"basis": "Law on Enterprises 2020, Article 22 (JSC application dossier) — includes the list of founding shareholders (danh sách cổ đông sáng lập), not all shareholders", "quote": "", "note": "Registry evidences only founding shareholders at incorporation.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["A List of Founding Shareholders exists in the registry file as an additional document, but it covers only founders at incorporation and does not reflect current ownership — hence it is not a Gesellschafterliste-equivalent.", "The complete current shareholder list lives in the company's Article 122 register, which is internal/non-public.", "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."],
+    "confidence": "medium"
+  },
+  {
+    "jurisdiction": "VN",
+    "legalForm": "Cong ty co phan",
+    "legalFormLocal": "Công ty cổ phần",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "status": "proved_by_additional_document",
+    "documentLabel": "Company charter",
+    "documentLocal": "Điều lệ công ty",
+    "summary": "The company charter (Điều lệ công ty) is a mandatory component of the JSC registration dossier under Article 22 of the Law on Enterprises 2020 and is filed with the Business Registration Office at incorporation. It is a filed constitutional document distinct from the ERC, so it is proved by an additional document. The NBRP does not publish the charter publicly.",
+    "evidence": [
+      {"basis": "Law on Enterprises 2020, Article 22 (JSC application dossier) and Article 24 (Company charter contents)", "quote": "", "note": "Verbatim text could not be fetched. Art. 22 requires the charter in the dossier; Art. 24 governs its contents.", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-21"}
+    ],
+    "caveats": ["The filed charter is the incorporation version; amendments are not consistently re-filed at or published by the registry.", "Retrieval generally requires a request to the Business Registration Office or the company; not downloadable from the NBRP.", "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."],
+    "confidence": "medium"
+  }
+]
