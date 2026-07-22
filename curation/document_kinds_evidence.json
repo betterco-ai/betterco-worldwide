@@ -1031,24 +1031,47 @@
   "summary": "Bermuda's Registrar of Companies does not issue a line-item 'register extract' listing current directors/shareholders/capital. The Registrar-issued document evidencing current standing is the Certificate of Compliance (a good-standing certificate), confirming the company is incorporated, in existence and has met filing/fee obligations. Closest Registrar-issued base document to a REGISTERAUSZUG; obtained on request from the Registrar.",
   "evidence": [
    {
-    "basis": "Registrar of Companies (Bermuda), Government of Bermuda — company registration / certificates",
-    "note": "Verbatim NOT retrieved: gov.bm is a JS SPA returning only its shell to automated fetch; page confirmed via gov.bm sitemap. Certificate of Compliance / good-standing is the Registrar's current-status document; no comprehensive register extract is issued.",
-    "url": "https://www.gov.bm/articles/limited-companies",
-    "retrieved": "2026-07-19"
+    "basis": "Companies Act 1981 (Bermuda), s.14(1) — Registrar maintains the register of companies",
+    "quote": "Subject to subsection (4), the Registrar shall maintain a register of companies in such form as he shall determine.",
+    "note": "Consolidated Companies Act 1981 (official PDF hosted by the Bermuda Monetary Authority); downloaded and verified verbatim this session.",
+    "url": "https://www.bma.bm/viewPDF/documents/2023-11-14-10-39-37-Companies-Act-1981.pdf",
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "Companies Act 1981 (Bermuda) — Registrar keeps the register of companies; Certificate of Incorporation (one-time) vs current-status certification",
-    "note": "Canonical primary source is the Companies Act 1981 on Bermuda Laws Online; deep-link PDF paths 404'd during retrieval (site redesigned ~July 2026).",
-    "url": "http://www.bermudalaws.bm/",
-    "retrieved": "2026-07-19"
+    "basis": "Companies Act 1981 (Bermuda), s.14(2) — registration and certificate of incorporation",
+    "quote": "shall register the memorandum, issue a certificate of incorporation showing the date of registration and attach to the certificate a facsimile of the memorandum delivered to him.",
+    "note": "The Registrar's registration deliverable is the certificate of incorporation (one-time) attached to the memorandum — not a line-item extract.",
+    "url": "https://www.bma.bm/viewPDF/documents/2023-11-14-10-39-37-Companies-Act-1981.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 1981 (Bermuda), s.14(4) — contents of the register of companies",
+    "quote": "The Registrar shall, in respect of each company registered under this section, enter in the register— ... the name of the company; ... the certificate of incorporation of the company; ... the Memorandum of Association of the company; and ... the address of the registered office of the company.",
+    "note": "Ellipses stand for the subparagraph letters (a)-(d). The statutory register content is limited to these four items — no current directors, members or capital line-items — which is why Bermuda has no itemised Registerauszug-style extract.",
+    "url": "https://www.bma.bm/viewPDF/documents/2023-11-14-10-39-37-Companies-Act-1981.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 1981 (Bermuda), s.14 (final subsection) — public inspection of the register of companies",
+    "quote": "The register of companies, containing the information entered under subsection (4) and such other information as the Registrar may determine, shall be open to public inspection at the office of the Registrar during normal business hours.",
+    "note": "Public access to the Registrar's register is statutory; the register is a base registry source even though its content is thin (s.14(4)).",
+    "url": "https://www.bma.bm/viewPDF/documents/2023-11-14-10-39-37-Companies-Act-1981.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Registrar of Companies (Bermuda) — online portal (registrarofcompanies.gov.bm)",
+    "quote": "Request certificates",
+    "note": "The Registrar's portal offers certificate ordering (in Registrar practice this includes the Certificate of Compliance / good standing). Full-text search of the consolidated Companies Act 1981 this session found NO occurrence of 'certificate of compliance' — it is an administrative product, not a statutory document.",
+    "url": "https://www.registrarofcompanies.gov.bm/",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE: Bermuda has NO true 'register extract' — the Registrar issues certificates (Incorporation, Compliance/good standing), not a listing of current directors/members/capital.",
+   "Bermuda has NO true 'register extract': the statutory register of companies holds only the company name, certificate of incorporation, Memorandum of Association and registered-office address (s.14(4), verified verbatim) — the Registrar issues certificates (Incorporation, Compliance/good standing), not a listing of current directors/members/capital.",
    "The Certificate of Compliance confirms EXISTENCE and GOOD STANDING; it does not itself list shareholders or (fully) directors.",
-   "UNVERIFIED this session: verbatim Registrar wording could not be retrieved (gov.bm SPA; search budget exhausted)."
+   "'Certificate of Compliance' is a Registrar practice/product name — the Companies Act 1981 does not define it (verified by full-text search of the consolidated Act this session); Registrar-issued certificate wording itself could not be fetched (gov.bm/portal are login-gated SPAs)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "BR",
@@ -1073,13 +1096,27 @@
     "note": "Extends the art. 997 mandatory contents (sócios + quotas) to the sociedade limitada.",
     "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
     "retrieved": "2026-07-20"
+   },
+   {
+    "basis": "Lei 8.934/1994, art. 29 — publicidade do Registro Público de Empresas Mercantis",
+    "quote": "Qualquer pessoa, sem necessidade de provar interesse, poderá consultar os assentamentos existentes nas juntas comerciais e obter certidões, mediante pagamento do preço devido.",
+    "note": "English gloss: 'Any person, without having to prove an interest, may consult the records held by the juntas comerciais and obtain certificates (certidões), on payment of the fee due.' Fetched from the Câmara dos Deputados official legislation portal (publicação original text); planalto.gov.br was unreachable this session (ECONNRESET x2).",
+    "url": "https://www2.camara.leg.br/legin/fed/lei/1994/lei-8934-18-novembro-1994-322478-publicacaooriginal-1-pl.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Lei 8.934/1994, art. 32, II, a — arquivamento dos atos constitutivos na Junta Comercial",
+    "quote": "dos documentos relativos à constituição, alteração, dissolução e extinção de firmas mercantis individuais, sociedades mercantis e cooperativas",
+    "note": "English gloss: the registry comprises the arquivamento (archiving) 'of the documents relating to the constitution, amendment, dissolution and extinction of individual merchant firms, commercial companies and cooperatives'. Original 1994 wording from the Câmara portal (later amendments modernised some terms). Together with CC arts. 997/1.054 and art. 29, this closes the chain: the contrato social carrying each sócio's quota is archived at the Junta and obtainable by anyone via certidão.",
+    "url": "https://www2.camara.leg.br/legin/fed/lei/1994/lei-8934-18-novembro-1994-322478-publicacaooriginal-1-pl.html",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
    "INFERENCE: That the Certidão Simplificada itself lists each sócio's capital participation was not fetched verbatim; it rests on established Junta practice. If a caller requires certified per-partner quota amounts, treat the registered contrato social / última alteração (additional document) as the definitive source — its status would be proved_by_additional_document.",
    "Ownership updates via cessão de quotas take effect against the company and third parties only upon averbação of the instrument at the Junta (CC art. 1.057, parágrafo único), so the register reflects a member list only as current as the last archived alteração."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "BR",
@@ -1244,29 +1281,31 @@
    {
     "basis": "Companies Act (Bahamas) CH.308 s.58(1) — Annual list of members",
     "quote": "a list of all persons who ... are members of the company; and such list shall state the names and addresses and occupations of all the members ... and the number of shares held by each of them",
+    "note": "Re-verified verbatim this session against the official consolidated PDF downloaded from laws.bahamas.gov.bs.",
     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf",
-    "retrieved": "2026-07-19"
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Companies Act (Bahamas) CH.308 s.58(2) — filing with Registrar",
     "quote": "a copy shall be forwarded to the Registrar to be kept by him in his office with the original memorandum.",
+    "note": "Re-verified verbatim this session against the official consolidated PDF downloaded from laws.bahamas.gov.bs.",
     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf",
-    "retrieved": "2026-07-19"
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Companies Act (Bahamas) CH.308 s.56(2) — register of members open to public at registered office",
     "quote": "The register of members ... may be inspected by members of the company and any member of the general public upon payment of such fee as may be determined by the directors",
-    "note": "Attaches to the company-held register at the registered office, subject to director-imposed restrictions — distinct from the Registrar-held annual list.",
+    "note": "Attaches to the company-held register at the registered office, subject to director-imposed restrictions — distinct from the Registrar-held annual list. Re-verified verbatim this session against the official consolidated PDF.",
     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf",
-    "retrieved": "2026-07-19"
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
    "The registry-held member evidence is an ANNUAL list (up to ~12 months stale), not a live current-members extract — additional, not base.",
-   "INFERENCE on public accessibility: s.58 fixes the filing duty and that the copy is kept with the (public) memorandum, but the Companies Act lacks an explicit 'any person may inspect' clause like IBC Act s.191; third-party release in practice not verified — UNVERIFIED.",
+   "Public accessibility of the Registrar-held annual list: s.58(2) requires the copy to be kept 'with the original memorandum', but a full-text search of CH.308 this session CONFIRMS the Act contains no general 'any person may inspect' clause for Registrar-held records (unlike IBC Act s.191); third-party release rests on Registrar practice — s.16(3) certified copies expressly cover only the memorandum/articles or extracts therefrom.",
    "Many small/older domestic companies may be delinquent on the annual list, so the document may not exist for a given company."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "BS",
@@ -1371,29 +1410,32 @@
   "evidence": [
    {
     "basis": "Companies Act (Bahamas), CH.308 (Act 18 of 1992) s.19 — Register of companies",
-    "quote": "The Registrar shall maintain a register in which shall be entered the following particulars -- (a) the name of the company; (b) the location in The Bahamas of the registered office;",
+    "quote": "The Registrar shall maintain a register in which shall be entered the following particulars — (a) the name of the company; (b) the location in The Bahamas of the registered office; (c) the amount of capital of the company, the number of shares into which it is divided and either the nominal value of each share or that the shares are shares of no par value; (d) the names, addresses and occupations of the subscribers to the memorandum and the number of shares taken by each subscriber;",
+    "note": "Quote extended and re-verified verbatim this session against the official consolidated PDF (s.19 continues with (e) date of execution, (f) date of filing, (g) company number, (h) guarantee/unlimited statement).",
     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf",
-    "retrieved": "2026-07-19"
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Companies Act (Bahamas) CH.308 s.277(1) — Certificate of good standing",
     "quote": "The Registrar shall, upon request by any person, issue a certificate of good standing under his hand and seal certifying that a company incorporated or registered under this Act is of good standing",
+    "note": "Re-verified verbatim this session; s.277(1) continues with the conditions (name on the Register, fees/penalties paid, required filings made).",
     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf",
-    "retrieved": "2026-07-19"
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Companies Act (Bahamas) CH.308 s.16(3) — certified copies/extracts",
     "quote": "A copy of a memorandum or articles filed and registered in accordance with this Act or any extract therefrom certified under the hand and seal of the Registrar as a true copy shall be received in evidence",
+    "note": "Re-verified verbatim this session against the official consolidated PDF.",
     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/PRINCIPAL/1992/1992-0018/1992-0018_1.pdf",
-    "retrieved": "2026-07-19"
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
    "s.19 records the founding subscribers, not current members; a live consolidated 'extract' is not a defined product — the base proof is the Certificate of Good Standing plus certified copies of filed documents.",
    "Directors are filed (s.80(4)) but that filing's public-inspection is not spelled out as explicitly as the IBC Act.",
-   "Companies Act verified verbatim; live registry search/fee UX not tested."
+   "Companies Act re-verified verbatim this session against the official consolidated PDF; live registry search/fee UX not tested."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "BS",
@@ -1482,24 +1524,40 @@
   "summary": "As with federal corporations, Ontario shareholders are not filed with the registry. Under OBCA s.140 the corporation maintains its own securities/ownership register listing security holders at its registered office; it is never delivered to the Ontario Business Registry. The OBCA transparency register of individuals with significant control (s.140.2, in force since 1 Jan 2023) is likewise corporation-kept and — unlike the federal ISC register — is NOT public: it is accessible only to specified investigative, tax and regulatory authorities. No registry document evidences the shareholders.",
   "evidence": [
    {
-    "basis": "OBCA s.140 — records (securities/ownership register maintained by the corporation)",
-    "note": "Statute text not fetchable (Ontario e-Laws JS-rendered, CanLII 403). OBCA s.140 requires the corporation to keep a register of ownership interests/security holders at its registered office; not filed with the registry. Parallel to CBCA s.50.",
+    "basis": "OBCA s.141(1) — securities register maintained by the corporation at its registered office",
+    "quote": "A corporation shall prepare and maintain at its registered office, or at any other place in Ontario designated by the directors, a securities register in which it records the securities issued by it in registered form, showing with respect to each class or series of securities, (a) the names, alphabetically arranged of persons who, (i) are or have been within six years registered as shareholders of the corporation",
+    "note": "The shareholder/securities register is a corporation-held record; the OBCA contains no requirement to file it with the Ontario Business Registry. Retrieved from the official e-Laws consolidation via the ontario.ca e-Laws API (doc-search endpoint for statute 90b16).",
     "url": "https://www.ontario.ca/laws/statute/90b16",
-    "retrieved": "2026-07-20"
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "OBCA s.140.2/140.3 — register of individuals with significant control and access",
-    "note": "Ontario's transparency register is kept by the corporation and disclosable only to police, the CRA/Ontario tax authorities and specified regulators; it is not open to the public. Statutory text not fetchable.",
+    "basis": "OBCA s.145(1) — examination of company-held records limited to shareholders/creditors (public only for offering corporations)",
+    "quote": "Registered holders of shares, beneficial owners of shares and creditors of a corporation, their agents and legal representatives may examine the records referred to in subsection 140 (1), other than a register of individuals with significant control described in clause 140 (1) (f), during the usual business hours of the corporation, and may take extracts from those records, free of charge, and, if the corporation is an offering corporation, any other person may do so upon payment of a reasonable fee.",
+    "note": "Even the corporation-held records are not open to the general public for a non-offering (private) corporation, and the ISC register is expressly excluded from examination.",
     "url": "https://www.ontario.ca/laws/statute/90b16",
-    "retrieved": "2026-07-20"
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "OBCA s.140.2(1) — register of individuals with significant control kept by the corporation",
+    "quote": "A corporation shall prepare and maintain, at its registered office or at another place in Ontario designated by the directors, a register of individuals with significant control over the corporation showing, (a) the name, date of birth and latest known address of each individual with significant control",
+    "note": "The Ontario transparency register is corporation-kept, not filed with the registry.",
+    "url": "https://www.ontario.ca/laws/statute/90b16",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "OBCA s.140.3(3) — disclosure of the ISC register restricted to law enforcement (with tax and regulatory officials in s.140.3(4) ff.); no public access",
+    "quote": "A member of a police service as defined in subsection 2 (1) of the Community Safety and Policing Act, 2019, a First Nation Officer appointed under section 101 of that Act or a member of the Royal Canadian Mounted Police may request disclosure of the register for the purpose of, (a) conducting an investigation into an offence under a law of Ontario or Canada",
+    "note": "s.140.3 enumerates who may request disclosure (police, tax officials, specified regulators); there is no public-access provision — unlike the federal CBCA ISC regime.",
+    "url": "https://www.ontario.ca/laws/statute/90b16",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE / UNVERIFIED verbatim: OBCA s.140 and s.140.2 text could not be retrieved (Ontario e-Laws is JS-rendered and returned only a header; CanLII returned HTTP 403). Grounded on the OBCA scheme, which is closely modelled on the CBCA, and on Ontario's implementation of a non-public transparency register.",
-   "Unlike the federal ISC register, Ontario did NOT make its transparency register public — this reinforces the not_provable status.",
-   "Securities/shareholder register is company-held and not obtainable from the registry."
+   "The securities/shareholder register and the ISC register are company-held records; nothing shareholder-related is filed with or obtainable from the Ontario Business Registry.",
+   "Unlike the federal ISC register, Ontario did NOT make its transparency register public — disclosure is restricted to police, tax officials and specified regulators (s.140.3) — this reinforces the not_provable status.",
+   "Section numbering precision: the securities register is s.141 (s.140(1) lists the corporate records, including the register of directors); the summary's 's.140' refers to this records regime."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "CA",
@@ -1543,18 +1601,37 @@
   "summary": "An OBCA corporation's constituting document is its Articles of Incorporation, sent to the Director under OBCA s.5, upon which a Certificate of Incorporation is endorsed/issued (s.6). The articles are on the public record and copies/certified copies can be obtained through the Ontario Business Registry. They are the Gesellschaftsvertrag equivalent; by-laws are internal and not filed.",
   "evidence": [
    {
-    "basis": "OBCA s.5 — articles of incorporation sent to the Director; s.6 — certificate of incorporation",
-    "note": "Statute text not fetchable (Ontario e-Laws JS-rendered; CanLII 403). OBCA s.5 requires articles to be sent to the Director; s.6 provides for the certificate. Parallel to CBCA ss.7-8. Copies obtainable via Ontario Business Registry.",
+    "basis": "OBCA s.6 — articles of incorporation sent to the Director; certificate of incorporation endorsed",
+    "quote": "An incorporator shall send to the Director articles of incorporation and any other required documents and information and, upon receipt of the articles, documents and information, the Director shall endorse the articles, in accordance with section 273, with a certificate which shall constitute the certificate of incorporation.",
+    "note": "Retrieved from the official e-Laws consolidation via the ontario.ca e-Laws API (doc-search endpoint for statute 90b16).",
     "url": "https://www.ontario.ca/laws/statute/90b16",
-    "retrieved": "2026-07-20"
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "OBCA s.5(1) — contents of articles",
+    "quote": "Articles of incorporation must be in the form approved by the Director and must set out the information required by this Act, the regulations or the Director.",
+    "url": "https://www.ontario.ca/laws/statute/90b16",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "OBCA s.7 — certificate of incorporation as conclusive proof",
+    "quote": "A certificate of incorporation is conclusive proof that the corporation has been incorporated under this Act on the date set out in the certificate",
+    "url": "https://www.ontario.ca/laws/statute/90b16",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Ontario Business Registry (ontario.ca) — filed information is public record; copies of filed documents orderable",
+    "quote": "Most of the information filed on the OBR, such as registered office or other address information, will be placed on the public record and is publicly available for searches under the business statutes.",
+    "note": "The same page lists the orderable search products: 'profile report – $8', 'document copies – $3', 'certificate of status – $26' — 'document copies' covers copies of the filed articles.",
+    "url": "https://www.ontario.ca/page/ontario-business-registry",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED verbatim: OBCA s.5/s.6 text could not be retrieved (Ontario e-Laws JS-rendered; CanLII HTTP 403). Grounded on the OBCA scheme and its parallel to CBCA ss.7-8.",
    "Scope note: 'constitution' = filed Articles of Incorporation (public); corporate by-laws are internal and not on the public registry record.",
    "Later changes would be evidenced by Articles of Amendment (additional document); the base articles establish the constitution."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "CA",
@@ -1567,24 +1644,31 @@
   "summary": "Corporations Canada (the Director under the CBCA) maintains the federal register and publishes each corporation's current registered particulars — legal name, corporation number, registered office, directors, status and annual-return history — which anyone can view and download. A formal register extract can be ordered as a Certificate of Compliance (or Certificate of Existence). This public corporate record is the register-extract equivalent; it does not, however, show shareholders.",
   "evidence": [
    {
-    "basis": "CBCA s.263 (Director to maintain records) and s.266 (public examination of documents sent to the Director)",
-    "note": "Section text not fetched verbatim; grounded on statutory scheme. The Director keeps the public register and documents sent to the Director are open to public examination on payment of a fee.",
-    "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/",
-    "retrieved": "2026-07-20"
+    "basis": "CBCA s.263.1(1) — Director's certificate (compliance / existence)",
+    "quote": "The Director may provide any person with a certificate stating that a corporation (a) has sent to the Director a document or other information required to be sent under this Act; (b) has paid all required fees; or (c) exists as of a certain date.",
+    "note": "Statutory basis for the Certificate of Compliance / Certificate of Existence issued by Corporations Canada to any person.",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/section-263.1.html",
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "Corporations Canada — Search for a federal corporation (public database)",
-    "note": "Official search tool exposing the federal corporate record; page returned 404 to the automated fetcher but is the canonical public source.",
-    "url": "https://ised-isde.canada.ca/cc/lgcy/fdrlCrpSrch.html",
-    "retrieved": "2026-07-20"
+    "basis": "CBCA s.266(1) — public examination of documents sent to the Director",
+    "quote": "A person who has paid the required fee is entitled during usual business hours to examine and make copies of or take extracts from a document or other information",
+    "note": "Continues: '... that is required to be sent to the Director under this Act' (with carve-outs for ISC information under s.21.21, s.21.303(3) applications and s.230(2) reports). Establishes public access to the federal corporate record.",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/section-266.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "CBCA s.266(2) — certified copies and extracts from the Director",
+    "quote": "The Director shall, on request, provide any person with a copy, extract, certified copy or certified extract of a document that may be examined under subsection (1).",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/section-266.html",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE: There is no single statutory document literally titled 'register extract' for federal corporations; the public 'Corporation Information' record plus an orderable Certificate of Compliance together serve as the Registerauszug equivalent.",
-   "The federal corporate record shows directors/officers and registered office, NOT shareholders.",
-   "Section 263/266 text was not fetched verbatim (empty quote); grounded on the CBCA scheme."
+   "INFERENCE: There is no single statutory document literally titled 'register extract' for federal corporations; the public 'Corporation Information' record plus an orderable Certificate of Compliance/Existence (s.263.1) and certified extracts (s.266(2)) together serve as the Registerauszug equivalent.",
+   "The federal corporate record shows directors/officers and registered office, NOT shareholders (ISC information is expressly carved out of public examination in s.266(1))."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "CA",
@@ -1597,18 +1681,24 @@
   "summary": "The Ontario Business Registry (administered by ServiceOntario) issues a Corporation Profile Report giving the current registered particulars of an OBCA corporation — legal name, Ontario Corporation Number, registered/head office, status, incorporation date and current directors/officers. A certified version is available. This is the register-extract equivalent; it does not list shareholders.",
   "evidence": [
    {
-    "basis": "OBCA / Ontario Business Registry — Corporation Profile Report (ServiceOntario)",
-    "note": "Standard Ontario register-extract product. Official ontario.ca page could not be fetched (JS-rendered / returned 404 to fetcher); grounded on the established Ontario Business Registry product and OBCA public-record scheme.",
+    "basis": "Ontario Business Registry (ontario.ca) — public record and search",
+    "quote": "Most of the information filed on the OBR, such as registered office or other address information, will be placed on the public record and is publicly available for searches under the business statutes.",
     "url": "https://www.ontario.ca/page/ontario-business-registry",
-    "retrieved": "2026-07-20"
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Ontario Business Registry (ontario.ca) — search products including profile report and certificate of status",
+    "quote": "Anyone can search the OBR for free to get basic information about a business or not-for-profit organization. For more detailed information, you can order a search product directly through: the ministry an intermediary an authorized service provider Types of search products include: profile report – $8 document copies – $3 certificate of status – $26",
+    "note": "Official ministry price list confirms the orderable 'profile report' (the Corporation Profile Report) and 'certificate of status' as ServiceOntario/ministry search products — the register-extract equivalents.",
+    "url": "https://www.ontario.ca/page/ontario-business-registry",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "Could not fetch official ontario.ca / ServiceOntario page verbatim (JS-rendered site, fetcher blocked); grounded on knowledge of the Corporation Profile Report product — hence medium confidence.",
-   "The Corporation Profile Report lists directors/officers and registered office, NOT shareholders.",
-   "Empty evidence quote: no verbatim official text could be retrieved."
+   "INFERENCE (contents): the ontario.ca page confirms the profile report product but does not itemise its contents; that it lists directors/officers, registered office, status and incorporation date rests on the established product format. It does NOT list shareholders.",
+   "The list-derived quote concatenates the page's bullet list items ('the ministry / an intermediary / an authorized service provider'; 'profile report – $8' etc.) in page order without bullet markers."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "CH",
@@ -1757,14 +1847,27 @@
     "note": "Confirms the estatutos originate in the notarial escritura; the company (not the registry) holds the consolidated estatutos.",
     "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473",
     "retrieved": "2026-07-21"
+   },
+   {
+    "basis": "Registro de Empresas y Sociedades (Ley 20.659) — Preguntas Frecuentes oficiales, sección certificados",
+    "quote": "Para acreditar que tu empresa o sociedad está constituida legalmente existe el Certificado de Estatuto Actualizado, que puede ser complementado con el de Anotaciones y el de Vigencia.",
+    "note": "English gloss: 'To prove that your company is legally incorporated there is the Certificado de Estatuto Actualizado (updated-bylaws certificate), which can be complemented with the Anotaciones (annotations) and Vigencia (good standing) certificates.' Official RES portal documentation — confirms the exact certificate name and its function for companies under the simplified regime.",
+    "url": "https://www.registrodeempresasysociedades.cl/FAQ.aspx?seccion=10",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Registro de Empresas y Sociedades (Ley 20.659) — FAQ: equivalence of simplified-regime certificates to traditional-registry documents",
+    "quote": "La 'copia de inscripción de la constitución de una sociedad con anotaciones marginales, con vigencia' en el sistema tradicional, equivale a los certificados de 'estatuto actualizado', de 'vigencia' y de 'anotaciones', en conjunto, del sistema simplificado.",
+    "note": "English gloss: 'The copy of the inscription of the company's constitution with marginal annotations and vigencia in the traditional system is equivalent to the estatuto actualizado, vigencia and anotaciones certificates, taken together, of the simplified system.' Confirms the full estatutos are delivered as a distinct certificate — additional to, not part of, the plain register extract.",
+    "url": "https://www.registrodeempresasysociedades.cl/FAQ.aspx?seccion=10",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
    "For the traditional track, the public Registro de Comercio holds only the extracto; the full estatutos are obtained from the notarial escritura (copia autorizada), not the commercial registry itself.",
-   "For a sociedad anónima cerrada under Ley 20.659 the full estatutos are held in the RES and obtainable as a Certificado de Estatuto Actualizado — a distinct certificate from the vigencia extract; hence 'additional document'.",
-   "INFERENCE/UNVERIFIED: exact RES certificate name 'Certificado de Estatuto Actualizado' not confirmed by a fetched verbatim source."
+   "For a sociedad anónima cerrada under Ley 20.659 the full estatutos are held in the RES and obtainable as a Certificado de Estatuto Actualizado — a distinct certificate from the vigencia extract; hence 'additional document'."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "CL",
@@ -1789,14 +1892,27 @@
     "note": "Only the extract (summary) is publicly inscribed; the full estatutos are not, so the full constitution is a separate document.",
     "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974",
     "retrieved": "2026-07-21"
+   },
+   {
+    "basis": "Registro de Empresas y Sociedades (Ley 20.659) — Preguntas Frecuentes oficiales, sección certificados",
+    "quote": "Para acreditar que tu empresa o sociedad está constituida legalmente existe el Certificado de Estatuto Actualizado, que puede ser complementado con el de Anotaciones y el de Vigencia.",
+    "note": "English gloss: 'To prove that your company is legally incorporated there is the Certificado de Estatuto Actualizado (updated-bylaws certificate), which can be complemented with the Anotaciones (annotations) and Vigencia (good standing) certificates.' Official RES portal documentation — confirms the exact certificate name and its function for SpA/companies under the simplified regime.",
+    "url": "https://www.registrodeempresasysociedades.cl/FAQ.aspx?seccion=10",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Registro de Empresas y Sociedades (Ley 20.659) — FAQ: equivalence of simplified-regime certificates to traditional-registry documents",
+    "quote": "La 'copia de inscripción de la constitución de una sociedad con anotaciones marginales, con vigencia' en el sistema tradicional, equivale a los certificados de 'estatuto actualizado', de 'vigencia' y de 'anotaciones', en conjunto, del sistema simplificado.",
+    "note": "English gloss: 'The copy of the inscription of the company's constitution with marginal annotations and vigencia in the traditional system is equivalent to the estatuto actualizado, vigencia and anotaciones certificates, taken together, of the simplified system.' Confirms the full estatutos are delivered as a distinct certificate — additional to, not part of, the plain register extract.",
+    "url": "https://www.registrodeempresasysociedades.cl/FAQ.aspx?seccion=10",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
    "For the traditional track, the public Registro de Comercio holds only the extracto; the full estatutos are obtained from the notarial escritura (copia autorizada), not the commercial registry itself.",
-   "For the simplified track (Ley 20.659) the full estatutos are held in the RES and obtainable as a Certificado de Estatuto Actualizado — a distinct certificate from the vigencia extract; hence 'additional document'.",
-   "INFERENCE/UNVERIFIED: exact RES certificate name 'Certificado de Estatuto Actualizado' not confirmed by a fetched verbatim source."
+   "For the simplified track (Ley 20.659) the full estatutos are held in the RES and obtainable as a Certificado de Estatuto Actualizado — a distinct certificate from the vigencia extract; hence 'additional document'."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "CL",
@@ -5329,12 +5445,26 @@
     "note": "Free basic company search plus orderable documents (Registration Certificate, First Directors/Secretary & Registered Office, Memorandum/Articles). Equivalence inferred from the public register service.",
     "url": "https://www.gov.im/categories/business-and-industries/companies-registry/registries/1931-act-companies/",
     "retrieved": "2026-07-18"
+   },
+   {
+    "basis": "Companies Act 1931 (Isle of Man), s.284A(1) — public inspection and certified copies/extracts of documents kept by the Department (registry)",
+    "quote": "any person may require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document, to be certified by the Department, on payment for the certificate, certified copy or extract, of such fees as may be prescribed under section 283A.",
+    "note": "s.284A(1) opens with 'Any person may inspect' — '(a) a copy of any document, kept by the Department' (or the document itself if the copy is illegible/unavailable) on payment of prescribed fees. So the register record and all filings of a 1931 Act company are publicly inspectable and obtainable as Department-certified copies/extracts.",
+    "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/1931/1931-0002/1931-0002_11.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 1931 (Isle of Man), s.284A(3) — evidential status of certified registry copies/extracts",
+    "quote": "A copy of or extract from any document kept and registered at any of the offices for the registration of companies, certified to be a true copy by the Department (whose official position it shall not be necessary to prove) shall in all legal proceedings be admissible in evidence as of equal validity with the original document.",
+    "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/1931/1931-0002/1931-0002_11.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE: IoM issues a company-details search/certificate, not a single certified consolidated extract like a German Handelsregisterauszug; the public register record is treated as the equivalent."
+   "INFERENCE (retained): IoM issues a company search / certificates and certified copies or extracts of individual filed documents (s.284A), not a single certified consolidated extract like a German Handelsregisterauszug; the public register record is treated as the equivalent.",
+   "In s.284A 'the Department' is the Department for Enterprise, which operates the Companies Registry."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "IM",
@@ -5352,12 +5482,27 @@
     "note": "Confirms 2006 Act company information is filed with and disclosed via the Registry; the page also lists Certificates of Fact and Good Standing and a Company Search as Registry services, supporting availability of a register extract/search.",
     "url": "https://www.gov.im/categories/business-and-industries/companies-registry/registries/2006-act-companies/",
     "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 2006 (Isle of Man), s.209(1) — inspection and certified copies/extracts of Registrar-held documents",
+    "quote": "require a certificate of incorporation, merger, consolidation, continuation, discontinuance, dissolution, re-registration, restoration or good standing of a company incorporated under this Act, or a copy or an extract of any document or any part of a document of which the Registrar has custody, to be certified by the Registrar",
+    "note": "s.209(1)(a) provides that a person may 'inspect the documents kept by the Registrar pursuant to this Act'; the section closes: a certificate 'or a certified copy or extract is conclusive evidence of the matters contained therein' (all literal text from s.209(1)).",
+    "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 2006 (Isle of Man), s.211(1) — certificate of good standing available to any person",
+    "quote": "The Registrar shall, upon request by any person, issue a certificate of good standing certifying that a company is of good standing",
+    "note": "Conditions: the company is on the register and has paid all fees, annual fees and penalties due; s.211(2) requires the certificate to state whether winding-up/dissolution/receivership documents are on file or strike-off proceedings have been instituted.",
+    "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "Registry page states disclosure-by-filing and references good-standing/search services generically; it does not itemise the exact contents of a 2006 Act register extract."
+   "No single consolidated German-style extract product is defined in the Act; the public register record plus certified copies/extracts of filed documents (s.209) and certificates of fact/good standing (s.210-211) together serve as the register-extract equivalent.",
+   "2006 Act companies file less content than 1931 Act companies (e.g. the 2006 Act annual return does not carry member details), so the register record centres on registered agent/office, directors and status."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "IN",
@@ -6144,38 +6289,76 @@
   "summary": "Unusually for a secrecy jurisdiction, LEGAL shareholders ARE evidenced by a registry document in Jersey. The register of members is kept by the company (Art. 41) but the company files an annual return (Art. 71) with the registrar that lists members and their shareholdings; this is on the public record and is routinely sold by data providers as a shareholder document (name, address, number/class of shares). The register of members is also open to inspection by any person on payment (Art. 45). So a current-shareholder document IS obtainable — but only for holders of 1% or more, and it shows REGISTERED (often nominee) holders, not beneficial owners.",
   "evidence": [
    {
-    "basis": "Companies (Jersey) Law 1991, Art. 45(1) (register of members inspection)",
-    "quote": "The register of members shall during business hours be open to the inspection of a member of the company without charge, and of any other person on payment",
-    "url": "https://incorporations.io/companies-act/jersey",
-    "retrieved": "2026-07-18"
+    "basis": "Companies (Jersey) Law 1991, Art. 45(1) — inspection of register of members (official revised edition, jerseylaw.je)",
+    "quote": "The register of members shall during business hours be open to the inspection of a member of the company without charge, and of any other person on payment of such sum (if any), not exceeding the published maximum, as the company may require.",
+    "note": "Verified this session against the official Jersey Legal Information Board text; replaces the earlier incorporations.io citation of the same wording.",
+    "url": "https://www.jerseylaw.je/laws/current/l_30_1991",
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "Companies (Jersey) Law 1991, Art. 71 (annual return) — content summarised from statute",
-    "note": "Art. 71 annual return need not identify persons holding less than one per cent of the shares; if full details are not given it must state how many members hold less than one per cent. Paraphrase from statute search — treat as INFERENCE on exact wording.",
+    "basis": "Companies (Jersey) Law 1991, endnote 255 to Art. 71 — annual return abolished",
+    "quote": "Article 71 substituted by L.9/2002, deleted by R&O.138/2020",
+    "note": "Art. 71 (annual return) no longer exists in the current Law; the body of the Law shows '71' with no text. The registry filing that evidences members is now the annual confirmation statement under the 2020 Disclosure Law.",
     "url": "https://www.jerseylaw.je/laws/current/l_30_1991",
-    "retrieved": "2026-07-18"
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies (Jersey) Law 1991, Art. 127YE(1) — cross-reference identifying the annual confirmation statement's statutory basis",
+    "quote": "Article 5 of the Financial Services (Disclosure and Provision of Information) (Jersey) Law 2020 (which requires a company to provide an annual confirmation statement to the Commission)",
+    "note": "Confirms from within the Companies Law itself that the annual confirmation statement obligation sits in the 2020 Disclosure Law.",
+    "url": "https://www.jerseylaw.je/laws/current/l_30_1991",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Financial Services (Disclosure and Provision of Information) (Jersey) Law 2020, Art. 5(1) — annual confirmation statement",
+    "quote": "An entity must, within the relevant period, provide a statement (an “annual confirmation statement”) to the Commission verifying that the beneficial owner information, significant person information and any other prescribed information provided to the Commission in relation to the entity is accurate.",
+    "note": "Member/share detail enters as prescribed information; the JFSC's registry documentation itemises it (see JFSC entries below). 'Relevant period' is 1 January to end of February each year (Art. 5(4)).",
+    "url": "https://www.jerseylaw.je/laws/current/l_7_2020",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "JFSC Registry — Associated parties (official registry documentation): member details companies must provide",
+    "quote": "Companies must provide us with details of the members on incorporation and confirm the information on a yearly basis through their annual confirmation statement",
+    "note": "The page then itemises the required information: 'name and address of each member who holds not less than 1% of all issued shares in a class'; 'the number of members who each hold less than 1% of all the issued shares of a class'; 'the class and number of shares held by each member in the above two categories' (all literal text from the same page).",
+    "url": "https://www.jerseyfsc.org/registry/associated-parties/",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "JFSC Registry — Associated parties: public availability of member information",
+    "quote": "Member information will be available to the public.",
+    "url": "https://www.jerseyfsc.org/registry/associated-parties/",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "JFSC Registry — Annual confirmation page: what is on the public register",
+    "quote": "The following information will be available on our public register:",
+    "note": "The list that follows this sentence reads (literal items): 'members', 'share information', 'significant person information, except:' (under-18s, company secretaries, share-transfer-property directors). The page also states: 'Companies must also ensure their share capital information is up-to-date before making the annual confirmation statement.'",
+    "url": "https://www.jerseyfsc.org/registry/annual-confirmation/",
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "SystemDay — Jersey company documents (data provider description of the public search report)",
     "quote": "the name, address, number of shares held by shareholders at date of last return, class of share and any addition remarks",
-    "note": "Shareholder detail is derived from the filed annual return and is treated as public.",
+    "note": "Shareholder detail is derived from the filed annual return and is treated as public. Pre-2021-regime framing; retained as evidence of practical retrievability.",
     "url": "https://www.systemday.com/jersey-company-documents/",
     "retrieved": "2026-07-18"
    },
    {
     "basis": "Topograph — Business Registers in Jersey",
     "quote": "Annual Returns: This provides details on shareholders, with their addresses, names, the number of shares, share class, and the secretary",
+    "note": "Pre-2021-regime framing; retained as evidence of practical retrievability.",
     "url": "https://www.topograph.co/guides/business-registers-in-jersey",
     "retrieved": "2026-07-18"
    }
   ],
   "caveats": [
-   "THRESHOLD: members holding <1% of the share capital need not be individually identified on the annual return — a below-threshold shareholder can be non-public.",
-   "NOMINEE/BENEFICIAL: the document shows the REGISTERED member (frequently a nominee), NOT the beneficial owner. Jersey beneficial ownership is held PRIVATELY by the JFSC (restricted OEBO register); no public UBO database.",
-   "CONFLICT: since 2021 the 'annual return' was replaced by the 'annual confirmation statement'. Sources disagree on whether the post-2021 statement's member list remains fully public — one guide says private companies are not required to disclose shareholders publicly, while KYC data providers still supply the members list. Verify current retrievability before relying on it.",
-   "The register of members itself is company-held, not a registry-issued document; the registry document is the annual return/confirmation statement."
+   "THRESHOLD: per JFSC registry documentation, only the name and address of each member holding not less than 1% of all issued shares in a class must be reported individually; below-threshold members are reported only as a count and are not individually public.",
+   "NOMINEE/BENEFICIAL: the public record shows the REGISTERED member (frequently a nominee), NOT the beneficial owner. Beneficial owner and controller information is provided to the JFSC under the 2020 Disclosure Law but is not on the public register (JFSC: visible only to the entity's nominated person).",
+   "TERMINOLOGY (resolves earlier CONFLICT caveat): the Art. 71 annual return was deleted by R&O.138/2020; since 2021 the registry filing is the annual confirmation statement under Art. 5 of the Financial Services (Disclosure and Provision of Information) (Jersey) Law 2020. JFSC documentation confirms member and share information IS available on the public register, so the member list remains publicly provable. References to 'Art. 71' in documentLocal are historical.",
+   "The register of members itself is company-held (Art. 41), though open to inspection by any person on payment (Art. 45); the registry-side document is the annual-confirmation-derived member record.",
+   "Member information is confirmed annually (JFSC: member updates are not subject to the 21-day change-notification duty that applies to beneficial owners/significant persons), so the public member record can be up to ~14 months stale."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "JE",
@@ -6188,30 +6371,68 @@
   "summary": "As for private companies, legal shareholders are evidenced by the annual return filed with the registrar, which lists members and their holdings and is on the public record. The register of members is additionally open to inspection by any person on payment (Art. 45). A current registered-shareholder document is therefore obtainable — subject to the 1% threshold and nominee/beneficial-owner limits.",
   "evidence": [
    {
-    "basis": "Companies (Jersey) Law 1991, Art. 45(1) (register of members inspection)",
-    "quote": "The register of members shall during business hours be open to the inspection of a member of the company without charge, and of any other person on payment",
-    "url": "https://incorporations.io/companies-act/jersey",
-    "retrieved": "2026-07-18"
+    "basis": "Companies (Jersey) Law 1991, Art. 45(1) — inspection of register of members (official revised edition, jerseylaw.je)",
+    "quote": "The register of members shall during business hours be open to the inspection of a member of the company without charge, and of any other person on payment of such sum (if any), not exceeding the published maximum, as the company may require.",
+    "note": "Verified this session against the official Jersey Legal Information Board text; replaces the earlier incorporations.io citation of the same wording. For a public company, Art. 45(2)(b) additionally conditions copies of the register on a declaration under Art. 46.",
+    "url": "https://www.jerseylaw.je/laws/current/l_30_1991",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies (Jersey) Law 1991, endnote 255 to Art. 71 — annual return abolished",
+    "quote": "Article 71 substituted by L.9/2002, deleted by R&O.138/2020",
+    "note": "Art. 71 (annual return) no longer exists in the current Law; the registry filing that evidences members is now the annual confirmation statement under the 2020 Disclosure Law.",
+    "url": "https://www.jerseylaw.je/laws/current/l_30_1991",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Financial Services (Disclosure and Provision of Information) (Jersey) Law 2020, Art. 5(1) — annual confirmation statement",
+    "quote": "An entity must, within the relevant period, provide a statement (an “annual confirmation statement”) to the Commission verifying that the beneficial owner information, significant person information and any other prescribed information provided to the Commission in relation to the entity is accurate.",
+    "note": "Applies to every Jersey company. Member/share detail enters as prescribed information itemised in JFSC registry documentation.",
+    "url": "https://www.jerseylaw.je/laws/current/l_7_2020",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "JFSC Registry — Associated parties (official registry documentation): member details companies must provide",
+    "quote": "Companies must provide us with details of the members on incorporation and confirm the information on a yearly basis through their annual confirmation statement",
+    "note": "Required information (literal items from the same page): 'name and address of each member who holds not less than 1% of all issued shares in a class'; 'the number of members who each hold less than 1% of all the issued shares of a class'; 'the class and number of shares held by each member in the above two categories'.",
+    "url": "https://www.jerseyfsc.org/registry/associated-parties/",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "JFSC Registry — Associated parties: public availability of member information",
+    "quote": "Member information will be available to the public.",
+    "url": "https://www.jerseyfsc.org/registry/associated-parties/",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "JFSC Registry — Annual confirmation page: what is on the public register",
+    "quote": "The following information will be available on our public register:",
+    "note": "The list that follows reads (literal items): 'members', 'share information', 'significant person information, except:' (under-18s, company secretaries, share-transfer-property directors).",
+    "url": "https://www.jerseyfsc.org/registry/annual-confirmation/",
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Topograph — Business Registers in Jersey (annual return content)",
     "quote": "Annual Returns: This provides details on shareholders, with their addresses, names, the number of shares, share class, and the secretary",
+    "note": "Pre-2021-regime framing; retained as evidence of practical retrievability.",
     "url": "https://www.topograph.co/guides/business-registers-in-jersey",
     "retrieved": "2026-07-18"
    },
    {
     "basis": "SystemDay — Jersey company documents",
     "quote": "the name, address, number of shares held by shareholders at date of last return, class of share and any addition remarks",
+    "note": "Pre-2021-regime framing; retained as evidence of practical retrievability.",
     "url": "https://www.systemday.com/jersey-company-documents/",
     "retrieved": "2026-07-18"
    }
   ],
   "caveats": [
-   "THRESHOLD: members holding <1% need not be individually identified on the annual return — significant for public companies with dispersed holdings, where most holders will be non-public.",
-   "NOMINEE/BENEFICIAL: shows REGISTERED members, not beneficial owners; beneficial ownership is held PRIVATELY by the JFSC (restricted OEBO register).",
-   "CONFLICT: post-2021 'annual confirmation statement' replaced the annual return; sources disagree on the exact current public shareholder content. Verify live retrievability."
+   "THRESHOLD: per JFSC registry documentation, only members holding not less than 1% of all issued shares in a class are individually named; below-threshold members are reported only as a count — significant for public companies with dispersed holdings, where most holders will be non-public.",
+   "NOMINEE/BENEFICIAL: shows REGISTERED members, not beneficial owners; beneficial owner and controller information is held by the JFSC under the 2020 Disclosure Law and is not on the public register.",
+   "TERMINOLOGY (resolves earlier CONFLICT caveat): the Art. 71 annual return was deleted by R&O.138/2020; since 2021 the registry filing is the annual confirmation statement under Art. 5 of the Financial Services (Disclosure and Provision of Information) (Jersey) Law 2020. JFSC documentation confirms member and share information IS available on the public register. References to 'Art. 71' in documentLocal are historical.",
+   "Member information is confirmed annually, so the public member record can be up to ~14 months stale."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "JE",
@@ -6810,23 +7031,37 @@
    {
     "basis": "Companies Act (2025 Revision) (Cayman) s.200A(1)-(2)",
     "quote": "The Registrar may on application made by a company issue a certificate of good standing to a company that is in good standing in accordance with subsection (2). A certificate of good standing is evidence of the fact that the company is in good standing on the date that the certificate of good standing is issued.",
-    "note": "Registry-issued status snapshot, not an itemised extract.",
-    "url": "https://www.ciregistry.ky/acts-regulations/",
-    "retrieved": "2026-07-19"
+    "note": "Registry-issued status snapshot, not an itemised extract. Re-verified verbatim this session against the official consolidated Companies Act (2025 Revision) PDF (CIMA-hosted).",
+    "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf",
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Companies Act (2025 Revision) (Cayman) s.26(3A) / Schedule 1A",
     "quote": "The Registrar shall make the register under subsection (3) available for inspection by any person on payment of the fee specified in Part 1A of Schedule 5",
-    "note": "Schedule 1A limits the public register to name, registered-office location, capital/shares, subscribers, incorporation dates, number, nature of business, FY-end — not current members or directors.",
-    "url": "https://www.ciregistry.ky/acts-regulations/",
-    "retrieved": "2026-07-19"
+    "note": "Re-verified verbatim this session; s.26(3A) continues 'and the inspection shall be subject to such conditions as the Registrar may impose.' Schedule 1A limits the public register to incorporation particulars — not current members or a consolidated current extract.",
+    "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act (2025 Revision) (Cayman) Schedule 1A — Required Particulars (section 26(3))",
+    "quote": "The required particulars are — (a) the name of the company and, in the case of an exempted company, the exempted company’s dual foreign name (if any) together with its translated name; (b) the part of the Islands in which the registered office of the company is proposed to be situate; ... (d) the names and addresses of the subscribers to the memorandum and the number of shares taken by each subscriber; ... (i) the nature of the business; and (j) the date of the end of the company’s financial year.",
+    "note": "Verbatim from the official PDF this session (ellipses omit items (c) capital/shares, (e)-(h) dates/number/guarantee statement). The public register records ORIGINAL subscribers only — never current shareholders — confirming no itemised current register extract exists.",
+    "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act (2025 Revision) (Cayman) s.55A(2) — Registrar to make list of directors available for inspection",
+    "quote": "The Registrar shall make available, the list of the names of the current directors of a company and where applicable, the current alternate directors of a company under subsection (1), for inspection by any person, on payment of the fee",
+    "note": "Names-only inspection of current directors — a separate paid inspection, not a certified extract; shareholders remain non-public.",
+    "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
    "INFERENCE: mapping the Certificate of Good Standing to 'Registerauszug' is an analogue — Cayman issues no full itemised current extract; the CoGS proves standing only.",
-   "Since the 2023 Beneficial Ownership Transparency amendments the Registrar also maintains a publicly inspectable list of the NAMES of current directors (s.55A), on payment — a separate inspection, not a certified extract. Shareholders remain non-public."
+   "The Registrar also maintains a publicly inspectable list of the NAMES of current directors (s.55A, verified verbatim this session in the 2025 Revision), on payment — a separate inspection, not a certified extract. Shareholders remain non-public."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "KY",
@@ -6841,23 +7076,37 @@
    {
     "basis": "Companies Act (2025 Revision) (Cayman) s.200A(1)-(2)",
     "quote": "The Registrar may on application made by a company issue a certificate of good standing to a company that is in good standing in accordance with subsection (2).",
-    "note": "s.200A applies to companies generally (Part 11), not only exempted companies.",
-    "url": "https://www.ciregistry.ky/acts-regulations/",
-    "retrieved": "2026-07-19"
+    "note": "s.200A applies to companies generally (Part 11), not only exempted companies. Re-verified verbatim this session against the official consolidated Companies Act (2025 Revision) PDF (CIMA-hosted); s.200A(2) continues: 'A certificate of good standing is evidence of the fact that the company is in good standing on the date that the certificate of good standing is issued.'",
+    "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf",
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Companies Act (2025 Revision) (Cayman) s.26(1),(3),(3A) / Schedule 1A",
     "quote": "A register of companies shall be kept by the Registrar in which shall be entered the particulars set out in Schedule 1A",
-    "note": "Public register holds Schedule 1A particulars only.",
-    "url": "https://www.ciregistry.ky/acts-regulations/",
-    "retrieved": "2026-07-19"
+    "note": "Public register holds Schedule 1A particulars only. Re-verified verbatim this session; s.26(3A) adds public inspection 'by any person on payment of the fee specified in Part 1A of Schedule 5'.",
+    "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act (2025 Revision) (Cayman) Schedule 1A — Required Particulars (section 26(3))",
+    "quote": "The required particulars are — (a) the name of the company and, in the case of an exempted company, the exempted company’s dual foreign name (if any) together with its translated name; (b) the part of the Islands in which the registered office of the company is proposed to be situate; ... (d) the names and addresses of the subscribers to the memorandum and the number of shares taken by each subscriber; ... (i) the nature of the business; and (j) the date of the end of the company’s financial year.",
+    "note": "Verbatim from the official PDF this session (ellipses omit items (c) capital/shares, (e)-(h) dates/number/guarantee statement). The public register records ORIGINAL subscribers only — never current shareholders — confirming no itemised current register extract exists.",
+    "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act (2025 Revision) (Cayman) s.55A(2) — Registrar to make list of directors available for inspection",
+    "quote": "The Registrar shall make available, the list of the names of the current directors of a company and where applicable, the current alternate directors of a company under subsection (1), for inspection by any person, on payment of the fee",
+    "note": "Names-only inspection of current directors — a separate paid inspection, not a certified extract; shareholders remain non-public.",
+    "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
    "INFERENCE: Certificate of Good Standing mapped to 'Registerauszug' as the nearest registry-issued current document; it does not itemise members, directors or capital.",
-   "Since 2023 the Registrar maintains a publicly inspectable list of the NAMES of current directors (s.55A), on payment."
+   "The Registrar maintains a publicly inspectable list of the NAMES of current directors (s.55A, verified verbatim this session in the 2025 Revision), on payment."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "LI",
@@ -7930,24 +8179,40 @@
   "summary": "Current shareholders of a domestic company are registry-held and publicly obtainable: shareholder particulars are lodged at incorporation (s.23(2)(d)) and the annual return filed with the Registrar must list every shareholder's name/address and shares held (s.223 + Tenth Schedule para 11). Mauritius is comparatively transparent and public register access under s.14 covers these particulars, so shareholders are proved from the registry.",
   "evidence": [
    {
-    "basis": "Companies Act 2001 (Mauritius), s.91 (share register)",
-    "quote": "a company shall keep a register, to be called the share register",
-    "note": "s.91(2) requires it to contain the names and addresses of the members, the number and class of shares held by each member; s.91(3) adds date of entry/cessation of membership. This is a company-held register.",
+    "basis": "Companies Act 2001 (Mauritius), s.91(1) and (3) — share register contents",
+    "quote": "A company shall maintain a share register which shall record the shares issued by the company",
+    "note": "s.91(3) (literal items): the share register shall state, with respect to each class of shares, '(i) the names, in alphabetical order, and the last known address of each person who is, or has within the last 7 years been, a shareholder' and '(b) the number of shares of that class held by each shareholder within the last 7 years'. This register is company-held. Replaces an earlier evidence entry whose quote could not be matched verbatim in this source.",
     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30",
     "retrieved": "2026-07-22"
    },
    {
-    "basis": "Companies Act 2001 (Mauritius), s.223 (annual return)",
-    "quote": "every company shall, within the prescribed time after the end of each accounting period, file with the Registrar an annual return",
-    "note": "s.223 cross-refers the Tenth Schedule for contents; the Tenth Schedule text (and its shareholder line-items) was not reproduced in the fetched page, so registry-side shareholder disclosure is not verbatim-confirmed.",
+    "basis": "Companies Act 2001 (Mauritius), s.223(1) and (5) — annual return filed with the Registrar",
+    "quote": "every company shall, once in every year, file with the Registrar for registration, an annual return",
+    "note": "s.223(5) (literal): 'The annual return shall contain the matters specified in the Tenth Schedule'. Replaces an earlier evidence entry whose quote ('within the prescribed time after the end of each accounting period') could not be matched verbatim in this source.",
+    "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 2001 (Mauritius), Tenth Schedule, Part I, para 11 — shareholder contents of the annual return",
+    "quote": "the following information relating to past and present shareholders of the company",
+    "note": "Para 11 items (literal, with typographic soft hyphens in the source removed): (a) the names and addresses (other than residential) of all the shareholders of the company; (c) 'the number of shares held by each shareholder'; plus the names/addresses of all persons who ceased to be shareholders since the last annual return and the shares transferred. Exception: companies within s.223(8) (public companies with more than 500 members providing reasonable access to their register); listed companies additionally report the 10 largest holders per class (para 10).",
+    "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 2001 (Mauritius), s.14(1)-(3) — public inspection and certified copies/extracts of Registrar-held documents",
+    "quote": "a person may, on payment of the prescribed fees and during such time as the Registrar may decide, inspect",
+    "note": "Inspectable items (literal): '(a) any document in a register kept by the Registrar'. Under s.14(2)(b) any person may apply for 'a copy of, or extract from, a document in a register kept by the Registrar', which the Registrar shall issue on payment of the prescribed fee (s.14(3)); Registrar-certified copies/extracts are admissible in evidence to the same extent as the original (s.14(5)). This makes the filed annual return (with its Tenth Schedule shareholder list) publicly obtainable from the registry.",
     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30",
     "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "s.91 register is company-held, not the registry; the annual return (Tenth Schedule) is the registry route but its shareholder content was not verbatim-confirmed from the fetched source."
+   "The registry-held shareholder evidence is the ANNUAL return (Tenth Schedule) — a snapshot as at the return date, not a live register; the s.91 share register (which also captures nominee/beneficial-owner detail) remains company-held.",
+   "Exemptions: s.223(1A)/(1B) — qualifying small companies (e.g. small private companies with annual turnover not exceeding 20 million rupees) need not file an annual return unless there is a change in shareholding or board composition; s.223(8) with Tenth Schedule para 11 — public companies with more than 500 members providing reasonable access to their register need not list all shareholders (listed companies report the 10 largest holders per class).",
+   "Source is the MauritiusLII consolidation as at 30 June 2017 (eng@2017-06-30); later amendments are not reflected in the verified text."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "MU",
@@ -8239,23 +8504,46 @@
    {
     "basis": "LGSM art. 2",
     "quote": "Las sociedades mercantiles inscritas en el Registro Público de Comercio, tienen personalidad jurídica distinta de la de los socios.",
-    "note": "Inscription in the RPC is the constitutive registry act for all mercantile forms.",
+    "note": "Inscription in the RPC is the constitutive registry act for all mercantile forms. (EN: Mercantile companies registered in the Public Registry of Commerce have legal personality distinct from that of the partners.)",
     "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles",
     "retrieved": "2026-07-20"
    },
    {
-    "basis": "Código de Comercio arts. 20-32 (folio mercantil electrónico / SIGER)",
-    "note": "UNVERIFIED verbatim — Código de Comercio text could not be fetched; folio/SIGER/boleta model asserted from domain knowledge.",
-    "url": "https://www.gob.mx/tramites/ficha/inscripcion-de-actos-mercantiles-en-el-registro-publico-de-comercio/SE1911",
-    "retrieved": "2026-07-20"
+    "basis": "Código de Comercio art. 18 — RPC registers mercantile acts; operated by the Secretaría de Economía with the state registry authorities",
+    "quote": "En el Registro Público de Comercio se inscriben los actos mercantiles, así como aquellos que se relacionan con los comerciantes y que conforme a la legislación lo requieran.",
+    "note": "EN: Mercantile acts, and acts relating to merchants that legally require it, are recorded in the Public Registry of Commerce. Source: official Cámara de Diputados consolidated text hosted on gob.mx (Última Reforma DOF 02-05-2017).",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Código de Comercio art. 21 — one electronic folio per company (folio mercantil electrónico)",
+    "quote": "Existirá un folio electrónico por cada comerciante o sociedad, en el que se anotarán: I.- Su nombre, razón social o título.",
+    "note": "Art. 21(V) adds: 'Los instrumentos públicos en los que se haga constar la constitución de las sociedades mercantiles, así como los que contengan su transformación, fusión, escisión, disolución y liquidación'. EN: There shall be an electronic folio for each merchant or company recording its name, and (V) the public instruments evidencing incorporation and structural changes.",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Código de Comercio art. 21 bis, II(d) — boleta de inscripción issued for each registration",
+    "quote": "Emisión de una boleta de inscripción que será entregada física o electrónicamente.",
+    "note": "EN: Issuance of a registration slip (boleta de inscripción) delivered physically or electronically — confirms the 'boleta' as a registry-issued deliverable.",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Código de Comercio art. 30 — public consultation of the databases and certifications of folio entries",
+    "quote": "Los particulares podrán consultar las bases de datos y, en su caso, solicitar las certificaciones respectivas, previo pago de los derechos correspondientes.",
+    "note": "Second paragraph: 'Las certificaciones se expedirán previa solicitud por escrito que deberá contener los datos que sean necesarios para la localización de los asientos sobre los que deba versar la certificación y, en su caso, la mención del folio mercantil electrónico correspondiente.' EN: Private parties may consult the databases and request the corresponding certifications upon payment of fees; certifications are issued on written request identifying the entries and the electronic mercantile folio. This is the statutory register-extract (certificación) route.",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "The RPC certifies inscriptions on the folio mercantil; it does not synthesise a German-style consolidated current extract.",
+   "The RPC certifies inscriptions (asientos) on the folio mercantil (CCom art. 30); it does not synthesise a German-style consolidated current extract.",
    "Capital-variable changes are often not re-registered, so the folio may lag actual capital.",
-   "INFERENCE: exact deliverable name (certificación de folio / boleta) not confirmed by a fetched verbatim quote."
+   "'SIGER' is the Secretaría de Economía's brand name for the 'programa informático' of CCom art. 20; the name SIGER itself does not appear in the code text.",
+   "Edition note: quotes taken from the official Cámara de Diputados consolidated PDF hosted on gob.mx (Última Reforma DOF 02-05-2017); diputados.gob.mx itself was unreachable this session. Arts. 18-30 were not amended by later reforms as far as verified."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "MX",
@@ -8270,23 +8558,46 @@
    {
     "basis": "LGSM art. 2",
     "quote": "Las sociedades mercantiles inscritas en el Registro Público de Comercio, tienen personalidad jurídica distinta de la de los socios.",
-    "note": "Inscription in the RPC is the constitutive registry act.",
+    "note": "Inscription in the RPC is the constitutive registry act. (EN: Mercantile companies registered in the Public Registry of Commerce have legal personality distinct from that of the partners.)",
     "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles",
     "retrieved": "2026-07-20"
    },
    {
-    "basis": "Código de Comercio arts. 20-32 (folio mercantil electrónico / SIGER)",
-    "note": "UNVERIFIED verbatim — could not fetch the Código de Comercio text; the folio mercantil electrónico, SIGER and boleta/certificación model is asserted from domain knowledge, not a fetched quote.",
-    "url": "https://www.gob.mx/tramites/ficha/inscripcion-de-actos-mercantiles-en-el-registro-publico-de-comercio/SE1911",
-    "retrieved": "2026-07-20"
+    "basis": "Código de Comercio art. 18 — RPC registers mercantile acts; operated by the Secretaría de Economía with the state registry authorities",
+    "quote": "En el Registro Público de Comercio se inscriben los actos mercantiles, así como aquellos que se relacionan con los comerciantes y que conforme a la legislación lo requieran.",
+    "note": "EN: Mercantile acts, and acts relating to merchants that legally require it, are recorded in the Public Registry of Commerce. Source: official Cámara de Diputados consolidated text hosted on gob.mx (Última Reforma DOF 02-05-2017).",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Código de Comercio art. 21 — one electronic folio per company (folio mercantil electrónico)",
+    "quote": "Existirá un folio electrónico por cada comerciante o sociedad, en el que se anotarán: I.- Su nombre, razón social o título.",
+    "note": "Art. 21(V) adds: 'Los instrumentos públicos en los que se haga constar la constitución de las sociedades mercantiles, así como los que contengan su transformación, fusión, escisión, disolución y liquidación'. EN: There shall be an electronic folio for each merchant or company recording its name, and (V) the public instruments evidencing incorporation and structural changes.",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Código de Comercio art. 21 bis, II(d) — boleta de inscripción issued for each registration",
+    "quote": "Emisión de una boleta de inscripción que será entregada física o electrónicamente.",
+    "note": "EN: Issuance of a registration slip (boleta de inscripción) delivered physically or electronically — confirms the 'boleta' as a registry-issued deliverable.",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Código de Comercio art. 30 — public consultation of the databases and certifications of folio entries",
+    "quote": "Los particulares podrán consultar las bases de datos y, en su caso, solicitar las certificaciones respectivas, previo pago de los derechos correspondientes.",
+    "note": "Second paragraph: 'Las certificaciones se expedirán previa solicitud por escrito que deberá contener los datos que sean necesarios para la localización de los asientos sobre los que deba versar la certificación y, en su caso, la mención del folio mercantil electrónico correspondiente.' EN: Private parties may consult the databases and request the corresponding certifications upon payment of fees; certifications are issued on written request identifying the entries and the electronic mercantile folio. This is the statutory register-extract (certificación) route.",
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "The RPC does not issue a single consolidated 'current registered particulars' extract like the German Handelsregister; it certifies the inscriptions recorded on the folio mercantil.",
+   "The RPC does not issue a single consolidated 'current registered particulars' extract like the German Handelsregister; it certifies the inscriptions (asientos) recorded on the folio mercantil (CCom art. 30).",
    "Under capital variable, changes to the variable capital are frequently not re-registered, so the folio may lag the company's actual capital.",
-   "INFERENCE: the exact deliverable name (certificación de folio / boleta) is based on the Código de Comercio RPC/SIGER regime and could not be confirmed with a fetched verbatim quote."
+   "'SIGER' is the Secretaría de Economía's brand name for the 'programa informático' of CCom art. 20; the name SIGER itself does not appear in the code text.",
+   "Edition note: quotes taken from the official Cámara de Diputados consolidated PDF hosted on gob.mx (Última Reforma DOF 02-05-2017); diputados.gob.mx itself was unreachable this session. Arts. 18-30 were not amended by later reforms as far as verified."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "MY",
@@ -12332,17 +12643,24 @@
     "retrieved": "2026-07-21"
    },
    {
-    "basis": "Delaware Division of Corporations (Certificate of Good Standing service)",
-    "note": "Good Standing certifies existence/standing only; unverified against verbatim text.",
-    "url": "https://corp.delaware.gov/",
-    "retrieved": "2026-07-21"
+    "basis": "Delaware Division of Corporations — 'Accessing Corporate Information' (official registry documentation): Certificate of Status / Certificate of Good Standing ordered on request",
+    "quote": "You may order a Certificate of Status or Certificate of Good Standing by submitting a request in writing to the Division of Corporations. The fee is $50.00 per certificate for a short form certificate of status (includes the name of the entity and the status at the time the certificate is issued) or $175.00 for a Long Form certificate of Good Standing (states all documents that have been filed, including the dates and times and any name changes that occurred along with the status at the time the certificate is issued).",
+    "note": "Directly confirms: (i) the certificate is an ordered, paid additional document, and (ii) even the long form only lists filed documents and status — no consolidated current-particulars extract (officers/directors/capital) exists.",
+    "url": "https://corp.delaware.gov/directweb/",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Delaware Division of Corporations — FAQ: contents of the free public entity search",
+    "quote": "The entity information provided free of charge, includes the entity name, file number, incorporation/formation date, registered agent name, address and phone number along with the entity kind, type, and residency.",
+    "note": "The free public record is minimal (no officers/directors/shareholders/capital), reinforcing that status evidence comes from the ordered certificate.",
+    "url": "https://corp.delaware.gov/faqs/",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE/JUDGMENT: a Good Standing certificate is not a true Registerauszug — it proves existence/status, not consolidated current particulars.",
-   "UNVERIFIED: no verbatim quote fetched for certificate contents."
+   "A Good Standing certificate is not a true Registerauszug — it proves existence/status (short form: name + status only; long form adds the list of filed documents), not consolidated current particulars such as officers, directors or capital."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "US",
@@ -12362,17 +12680,24 @@
     "retrieved": "2026-07-21"
    },
    {
-    "basis": "Delaware Division of Corporations (Certificate of Good Standing service)",
-    "note": "Good Standing (short/long form) certifies existence and standing only; unverified against a verbatim statutory text.",
-    "url": "https://corp.delaware.gov/",
-    "retrieved": "2026-07-21"
+    "basis": "Delaware Division of Corporations — 'Accessing Corporate Information' (official registry documentation): Certificate of Status / Certificate of Good Standing ordered on request (applies to all entity types administered by the Division, including LLCs)",
+    "quote": "You may order a Certificate of Status or Certificate of Good Standing by submitting a request in writing to the Division of Corporations. The fee is $50.00 per certificate for a short form certificate of status (includes the name of the entity and the status at the time the certificate is issued) or $175.00 for a Long Form certificate of Good Standing (states all documents that have been filed, including the dates and times and any name changes that occurred along with the status at the time the certificate is issued).",
+    "note": "Directly confirms the certificate is an ordered, paid additional document and that even the long form lists only filed documents and status — no consolidated current-particulars extract (managers/members) exists.",
+    "url": "https://corp.delaware.gov/directweb/",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Delaware Division of Corporations — FAQ: contents of the free public entity search",
+    "quote": "The entity information provided free of charge, includes the entity name, file number, incorporation/formation date, registered agent name, address and phone number along with the entity kind, type, and residency.",
+    "note": "The free public record is minimal — no managers or members — reinforcing that status evidence comes from the ordered certificate.",
+    "url": "https://corp.delaware.gov/faqs/",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE: a Good Standing certificate is judged to be, at best, a weak substitute for a Registerauszug — it evidences existence/status, not the consolidated current particulars (legal form, address, representatives, members) a German extract carries.",
-   "UNVERIFIED: no verbatim quote fetched for the Good Standing certificate contents."
+   "A Good Standing certificate is, at best, a weak substitute for a Registerauszug — it evidences existence/status (short form: name + status; long form adds the list of filed documents), not the consolidated current particulars (legal form, address, representatives, members) a German extract carries."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "US",
@@ -12471,17 +12796,31 @@
   "summary": "Wyoming issues no consolidated current-particulars extract. The Secretary of State provides a Certificate of Good Standing on request, evidencing existence and standing but not legal form details, managers or members. It is an ordered additional document, not a base register printout.",
   "evidence": [
    {
-    "basis": "statute (Wyoming Statute 17-29-201)",
-    "quote": "A limited liability company is formed when the articles of organization become effective",
-    "note": "Filing articles of organization with the Secretary of State places the LLC on the register from which a Certificate of Good Standing is issued.",
-    "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html",
+    "basis": "W.S. 17-29-208(a) — Certificate of existence or authorization, furnished by the Secretary of State on request and payment",
+    "quote": "The secretary of state, upon request and payment of the requisite fee, shall furnish to any person a certificate of existence for a limited liability company if the records filed in the office of the secretary of state show that the company has been formed under W.S. 17-29-201 and the secretary of state has not filed articles of dissolution pertaining to the company.",
+    "note": "s.208(a)(i)-(viii) limits the certificate's contents to: name; due formation and date; whether fees/taxes/penalties are paid; whether the latest annual report is filed; administrative dissolution; articles of dissolution; and other facts of record on request — not managers or members. Official statute PDF (Title 17), Wyoming Legislature.",
+    "url": "https://wyoleg.gov/statutes/compress/title17.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "W.S. 17-29-208(b) — evidentiary effect",
+    "quote": "Subject to any qualification stated in the certificate, a certificate of existence or certificate of authorization issued by the secretary of state is conclusive evidence that the limited liability company is in existence.",
+    "url": "https://wyoleg.gov/statutes/compress/title17.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "W.S. 17-29-201(e)(i) — formation upon effectiveness of articles of organization",
+    "quote": "A limited liability company is formed when the articles of organization become effective, unless the articles state a delayed effective date pursuant to W.S. 17-29-205(c)",
+    "note": "Filing articles of organization with the Secretary of State places the LLC on the register from which the certificate of existence is issued. Replaces the earlier FindLaw citation with the official wyoleg.gov statute text.",
+    "url": "https://wyoleg.gov/statutes/compress/title17.pdf",
     "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "The quoted section proves SoS registration/formation, not the content of the Certificate of Good Standing, which is a separate administrative certificate."
+   "Naming: the statutory document is the 'certificate of existence or authorization' (W.S. 17-29-208); 'Certificate of Good Standing' is the Secretary of State's product name for it. The SoS ordering page (wyobiz.wyo.gov) returned an empty response this session, so the product-name styling was not verbatim-verified.",
+   "The certificate evidences existence, fee/annual-report standing and dissolution facts (s.208(a)) — not legal form details, managers or members."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "VG",
