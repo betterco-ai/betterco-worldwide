@@ -365,15 +365,15 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Ley 19.550, art. 213",
+     "basis": "Ley General de Sociedades 19.550, Art. 213 (share register)",
      "url": "https://leyes-ar.com/ley_general_de_sociedades/213.htm"
     },
     {
-     "basis": "Ley 19.550, art. 215",
+     "basis": "Ley General de Sociedades 19.550, Art. 215 (transfer of registered shares)",
      "url": "https://leyes-ar.com/ley_general_de_sociedades/215.htm"
     }
    ]
@@ -686,20 +686,12 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "ASIC 'Guide to reading ASIC company extracts', 'Members' note (Share Information section)",
+     "basis": "ASIC 'Guide to reading ASIC company extracts', Members section of the Current Company Extract",
      "url": "https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf"
-    },
-    {
-     "basis": "Corporations Act 2001 s 178A(1) (Compilation No. 145, vol. 1 p.349)",
-     "url": "https://www.legislation.gov.au/C2004A00818/latest/text"
-    },
-    {
-     "basis": "Corporations Act 2001 s 178B 'Top 20 only' (Compilation No. 145, vol. 1 p.350)",
-     "url": "https://www.legislation.gov.au/C2004A00818/latest/text"
     }
    ]
   },
@@ -2048,11 +2040,11 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Art. 877 OR",
+     "basis": "Handelsregisteramt Kanton Zürich, Merkblatt 'Führung des Verzeichnisses der Genossenschaftsmitglieder' (11.12.2024), quoting Art. 837 OR",
      "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/wirtschaft-arbeit/handelsregister/genossenschaft/gen_merkblatt_fuehrung_genossenschafterliste.pdf"
     }
    ]
@@ -2391,11 +2383,15 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "中华人民共和国公司法 (2023) 第五条",
+     "basis": "中华人民共和国公司法 (2023年) 第九十四条",
+     "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)"
+    },
+    {
+     "basis": "中华人民共和国公司法 (2023年) 第三十条",
      "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)"
     }
    ]
@@ -2420,11 +2416,15 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "中华人民共和国公司法 (2023) 第五条",
+     "basis": "中华人民共和国公司法 (2023年) 第四十五条",
+     "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)"
+    },
+    {
+     "basis": "中华人民共和国公司法 (2023年) 第三十条",
      "url": "https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)"
     }
    ]
@@ -2766,11 +2766,11 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "basis": "Cyprus Registrar of Companies — official list of certified certificates issued",
      "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
     }
    ]
@@ -2824,11 +2824,11 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "basis": "Cyprus Registrar of Companies — official list of certified copies issued",
      "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
     }
    ]
@@ -2886,11 +2886,15 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)",
+     "basis": "Cyprus Registrar of Companies — official list of certified certificates issued",
+     "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
+    },
+    {
+     "basis": "Cyprus Registrar of Companies — official list of certified certificates issued",
      "url": "https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview"
     }
    ]
@@ -4185,16 +4189,12 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Code de commerce, art. L223-7, al. 4 (SARL)",
+     "basis": "Code de commerce, art. L223-7 (Légifrance)",
      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222923"
-    },
-    {
-     "basis": "INPI – Data INPI / dépôt d'actes (statuts filed and publicly consultable)",
-     "url": "https://www.inpi.fr/realiser-demarches/formalites-dentreprises/deposer-actes"
     }
    ]
   },
@@ -4270,11 +4270,7 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Code de commerce, art. L221-13 (parts sociales — cession requires unanimous consent)",
-     "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042"
-    },
-    {
-     "basis": "Code de commerce, art. L221-14 (opposabilité of a parts transfer)",
+     "basis": "Code de commerce, art. L221-1 (Légifrance)",
      "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042"
     }
    ]
@@ -5219,9 +5215,7 @@
    "action": "order",
    "orderable": true,
    "completeness": "full",
-   "flags": [
-    "nominee"
-   ],
+   "flags": [],
    "order": {
     "vendor": "kyc.com",
     "model": "case_level",
@@ -5251,11 +5245,7 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Registry FAQ 'Annual Returns' (public company), citing Cap. 622 s.662",
-     "url": "https://www.cr.gov.hk/en/compliance/annual-return/public-company.htm"
-    },
-    {
-     "basis": "Companies Registry FAQ 'Documents relating to Share Capital / Shares'",
+     "basis": "Companies Registry FAQ, 'Documents on share capital and members'",
      "url": "https://www.cr.gov.hk/en/faq/local-company/doc-sharecapital.htm"
     }
    ]
@@ -6209,15 +6199,15 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Law 5759-1999 (Israel) s.8(1) & s.15 (articles filed at incorporation)",
+     "basis": "Companies Law 5759-1999, Section 8 (application for registration) — ICNL unofficial English translation",
      "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf"
     },
     {
-     "basis": "Companies Law 5759-1999 (Israel) s.145 vs s.140(1) (amendment reporting)",
+     "basis": "Companies Law 5759-1999, Section 15 (company by-laws)",
      "url": "https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf"
     }
    ]
@@ -6488,7 +6478,7 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "IoM Companies Registry (official gov.im portal)",
+     "basis": "Isle of Man Companies Registry — 2006 Act companies page",
      "url": "https://www.gov.im/categories/business-and-industries/companies-registry/registries/2006-act-companies/"
     }
    ]
@@ -6672,12 +6662,8 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act 2013 s.399(1) — reproduced text",
+     "basis": "Companies Act 2013 (India), s.399(1)(a)-(b)",
      "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/"
-    },
-    {
-     "basis": "MCA21 portal (mca.gov.in) — Master Data (free) vs View Public Documents (paid)",
-     "url": "https://www.mca.gov.in/"
     }
    ]
   },
@@ -6698,12 +6684,8 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act 2013 s.399(1) (inspection/copies of documents kept by Registrar) — reproduced text",
+     "basis": "Companies Act 2013 (India), s.399(1)(a)-(b)",
      "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/"
-    },
-    {
-     "basis": "MCA21 portal (mca.gov.in) — 'View Company/LLP Master Data' (free) vs 'View Public Documents' (paid)",
-     "url": "https://www.mca.gov.in/"
     }
    ]
   },
@@ -6801,16 +6783,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Act on Private Limited Companies No. 138/1994, art. 68 (amendment of articles)",
+     "basis": "Lög nr. 138/1994 um einkahlutafélög, 7. gr.",
      "url": "https://www.althingi.is/lagas/nuna/1994138.html"
     },
     {
-     "basis": "Fyrirtækjaskrá / Skatturinn certificates and documents page",
-     "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/"
+     "basis": "Lög nr. 138/1994, 9. gr. (registration)",
+     "url": "https://www.althingi.is/lagas/nuna/1994138.html"
     }
    ]
   },
@@ -6834,16 +6816,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Act on Public Limited Companies No. 2/1995, arts. 9 and 42 (articles / amendment on registration)",
+     "basis": "Lög nr. 2/1995 um hlutafélög, 9. gr.",
      "url": "https://www.althingi.is/lagas/nuna/1995002.html"
     },
     {
-     "basis": "Fyrirtækjaskrá / Skatturinn certificates and documents page",
-     "url": "https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/"
+     "basis": "Lög nr. 2/1995, 3. gr. (founding agreement)",
+     "url": "https://www.althingi.is/lagas/nuna/1995002.html"
     }
    ]
   },
@@ -7547,20 +7529,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "JFSC Registry — About companies (filing requirement)",
+     "basis": "Jersey Financial Services Commission (JFSC) Companies Registry — official registry guidance",
      "url": "https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/"
     },
     {
-     "basis": "Companies (Jersey) Law 1991, Art. 10(1) (effect of memorandum and articles)",
-     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
-    },
-    {
-     "basis": "Topograph — Business Registers in Jersey (retrievability/pricing)",
-     "url": "https://www.topograph.co/guides/business-registers-in-jersey"
+     "basis": "Same JFSC guidance — filing requirement",
+     "url": "https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/"
     }
    ]
   },
@@ -7584,20 +7562,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "JFSC Registry — About companies (filing requirement)",
+     "basis": "Jersey Financial Services Commission (JFSC) Companies Registry — official registry guidance",
      "url": "https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/"
     },
     {
-     "basis": "Companies (Jersey) Law 1991, Art. 10(1)",
-     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
-    },
-    {
-     "basis": "Topograph — Business Registers in Jersey (retrievability/pricing)",
-     "url": "https://www.topograph.co/guides/business-registers-in-jersey"
+     "basis": "Same JFSC guidance — filing requirement",
+     "url": "https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/"
     }
    ]
   },
@@ -7911,12 +7885,8 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Korean-law reference — members not in the register; 사원명부 is a company-held book",
+     "basis": "Korean Wikipedia (유한회사), paraphrasing 상법 제566조 / 제557조",
      "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC"
-    },
-    {
-     "basis": "상법 제566조 (사원명부의 비치) and 제543조 (정관의 작성 — 유한회사) — canonical primary source",
-     "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95"
     }
    ]
   },
@@ -7963,12 +7933,8 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Korean-law reference — 정관 is not registered; only certain 정관 matters are disclosed via registration",
+     "basis": "Korean Wikipedia (유한회사), on the 정관",
      "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC"
-    },
-    {
-     "basis": "상법 제543조 (정관의 작성 — 유한회사) — canonical primary source",
-     "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95"
     }
    ]
   },
@@ -8305,11 +8271,11 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Merkblatt zur Anstalt (organisation)",
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Anstalt, Art. 534–551 PGR)",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
     },
     {
-     "basis": "Merkblatt zur Anstalt, Art. 536 Abs. 2 PGR (Begünstigte)",
+     "basis": "Same Merkblatt, section 3 (Organisation)",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
     }
    ]
@@ -8413,16 +8379,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Merkblatt zur Aktiengesellschaft, Art. 279 PGR",
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Aktiengesellschaft, Art. 261–366 PGR)",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf"
     },
     {
-     "basis": "Art. 953 PGR (Einsicht in den Handelsregisterakt) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'",
-     "url": "https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)"
+     "basis": "Same Merkblatt, section 2 (Errichtung)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf"
     }
    ]
   },
@@ -8446,16 +8412,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Merkblatt zur Anstalt, Art. 536 Abs. 2 PGR",
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Anstalt, Art. 534–551 PGR), section 2 (Errichtung)",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
     },
     {
-     "basis": "Art. 953 PGR public-access regime — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'",
-     "url": "https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)"
+     "basis": "Same Merkblatt, section 4 (Statuten der Anstalt)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
     }
    ]
   },
@@ -8479,16 +8445,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Merkblatt zur GmbH, Art. 390 Abs. 2 PGR",
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur GmbH, Art. 389–427 PGR), section 4.1",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf"
     },
     {
-     "basis": "Art. 953 PGR (Öffentlichkeit / Einsicht in den Handelsregisterakt) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'",
-     "url": "https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)"
+     "basis": "Same Merkblatt, section 2 (Errichtung)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf"
     }
    ]
   },
@@ -8509,12 +8475,12 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Merkblatt zur Stiftung, Art. 552 §16 Abs. 1 PGR",
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung, Art. 552 §§ 1–41 PGR), section 4",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
     },
     {
-     "basis": "Restricted register publicity for Stiftungen/Treuhänderschaften (Art. 953 PGR carve-out) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'",
-     "url": "https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)"
+     "basis": "Same Merkblatt, section 2 (Errichtung)",
+     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
     }
    ]
   },
@@ -8629,11 +8595,7 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Merkblatt zur Stiftung (Amt für Justiz, AJU/h70.008.10), Art. 552 §14 PGR",
-     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
-    },
-    {
-     "basis": "Merkblatt zur Stiftung, Art. 552 §20 Abs. 1 PGR (Hinterlegung)",
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung, Art. 552 §§ 1–41 PGR), section 1",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
     }
    ]
@@ -9418,15 +9380,11 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act 2001 (Mauritius) Tenth Schedule (Sections 223(5) and 269(2)), para 11",
+     "basis": "Companies Act 2001 (Mauritius), s.91 (share register)",
      "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
     },
     {
-     "basis": "Companies Act 2001 (Mauritius) s.91(1),(3)",
-     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
-    },
-    {
-     "basis": "Companies Act 2001 (Mauritius) s.23(2)(d) (application for incorporation)",
+     "basis": "Companies Act 2001 (Mauritius), s.223 (annual return)",
      "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
     }
    ]
@@ -9491,15 +9449,11 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act 2001 (Mauritius) s.23(1)(c)(vii)",
-     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
-    },
-    {
-     "basis": "Companies Act 2001 (Mauritius) s.42(1)(b)",
+     "basis": "Companies Act 2001 (Mauritius), s.39 (constitution)",
      "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
     }
    ]
@@ -9620,15 +9574,19 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "LGSM art. 6",
+     "basis": "Ley General de Sociedades Mercantiles, art. 6, fracción I",
      "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles"
     },
     {
-     "basis": "LGSM art. 73",
+     "basis": "Ley General de Sociedades Mercantiles, art. 5",
+     "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles"
+    },
+    {
+     "basis": "Ley General de Sociedades Mercantiles, art. 73",
      "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles"
     }
    ]
@@ -10229,7 +10187,7 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Brønnøysundregistrene – Information about our products (copies of case documents)",
+     "basis": "Brønnøysund Register Centre — product/document ordering page",
      "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
     }
    ]
@@ -10320,7 +10278,7 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Brønnøysundregistrene – Information about our products (copies of case documents)",
+     "basis": "Brønnøysund Register Centre — product/document ordering page",
      "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
     }
    ]
@@ -10617,19 +10575,19 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Ley 4 de 2009, Art. 5 num. 1 and 5 (contents of pacto social)",
+     "basis": "Ley 4 de 2009 (SRL), Art. 5 (contents of the pacto social)",
      "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
     },
     {
-     "basis": "Ley 4 de 2009, Art. 11 (acts that must be inscribed)",
+     "basis": "Ley 4 de 2009 (SRL), Art. 11 (acts to be registered)",
      "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
     },
     {
-     "basis": "Ley 4 de 2009, Art. 26 (cesión de cuotas)",
+     "basis": "Ley 4 de 2009 (SRL), Art. 26 (transfer of participation)",
      "url": "https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf"
     }
    ]
@@ -11105,11 +11063,11 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Ustawa o KRS, art. 38 (dane o wspólnikach spółek osobowych)",
+     "basis": "Ustawa o Krajowym Rejestrze Sądowym, Art. 38 (contents of the entrepreneurs' register)",
      "url": "https://lexlege.pl/krs/art-38/"
     }
    ]
@@ -12320,19 +12278,19 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.18D — notify change to Authority",
+     "basis": "Companies (Special Licences) Act 2003 (consolidated to 6 Aug 2021), s.22(1)",
      "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
     },
     {
-     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.22(1) — Non-disclosure obligations",
+     "basis": "Companies (Special Licences) Act 2003, s.15(6)",
      "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
     },
     {
-     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.15(6) — narrow public inspection",
+     "basis": "Companies (Special Licences) Act 2003, s.5(2)(b)",
      "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
     }
    ]
@@ -12393,15 +12351,15 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "low",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.5 — application contents",
+     "basis": "Companies (Special Licences) Act 2003, s.5(2)(c)",
      "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
     },
     {
-     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.7(1) — registration of M&A",
+     "basis": "Companies (Special Licences) Act 2003, s.7(1)",
      "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
     }
    ]
@@ -12463,15 +12421,11 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.18B — Certificate of good standing",
-     "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
-    },
-    {
-     "basis": "Companies (Special Licences) Act 2003 (Seychelles) s.7 — registration of M&A on the Companies Act register",
+     "basis": "Companies (Special Licences) Act 2003, s.18B",
      "url": "https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0"
     }
    ]
@@ -12906,16 +12860,12 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "ACRA official page — Types of ACRA information products (Registers product)",
+     "basis": "ACRA — Types of ACRA Information Products ('Registers' product)",
      "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
-    },
-    {
-     "basis": "Companies Act 1967 — electronic register of members kept by the Registrar for private companies (in force since 3 Jan 2016)",
-     "url": "https://sso.agc.gov.sg/Act/CoA1967"
     }
    ]
   },
@@ -14362,15 +14312,15 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Delaware General Corporation Law, Title 8, § 106",
+     "basis": "statute (Delaware General Corporation Law, 8 Del. C. § 106)",
      "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
     },
     {
-     "basis": "Delaware General Corporation Law, Title 8, § 109(a) (bylaws)",
+     "basis": "statute (8 Del. C. § 102(a))",
      "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
     }
    ]
@@ -14461,16 +14411,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Delaware Limited Liability Company Act, Title 6, § 18-201(a)-(b)",
+     "basis": "statute (Delaware LLC Act, 6 Del. C. § 18-201)",
      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
     },
     {
-     "basis": "Delaware Limited Liability Company Act, Title 6, § 18-101(9)",
-     "url": "https://delcode.delaware.gov/title6/c018/sc01/index.html"
+     "basis": "statute (6 Del. C. § 18-201)",
+     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
     }
    ]
   },
@@ -14725,16 +14675,12 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "NRS 78.150(1)",
+     "basis": "statute (NRS 78.150)",
      "url": "https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html"
-    },
-    {
-     "basis": "Nevada Secretary of State (Certificate of Existence service)",
-     "url": "https://www.nvsos.gov/sos/businesses"
     }
    ]
   },
@@ -14758,16 +14704,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "N.Y. Bus. Corp. Law § 402",
-     "url": "https://www.nysenate.gov/legislation/laws/BSC/402"
+     "basis": "registry (NY Department of State, Division of Corporations)",
+     "url": "https://dos.ny.gov/certificate-status"
     },
     {
-     "basis": "NY Department of State, Division of Corporations (Certificate of Status service)",
-     "url": "https://dos.ny.gov/certificate-status"
+     "basis": "statute (NY Business Corporation Law § 402)",
+     "url": "https://www.nysenate.gov/legislation/laws/BSC/402"
     }
    ]
   },
@@ -14795,12 +14741,8 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Wyo. Stat. § 17-29-201(a)",
+     "basis": "statute (Wyoming Statute 17-29-201)",
      "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html"
-    },
-    {
-     "basis": "Wyoming Secretary of State (Certificate of Good Standing service)",
-     "url": "https://sos.wyo.gov/Business/"
     }
    ]
   },
@@ -14897,19 +14839,11 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "BVI Business Companies Act 2004 (as amended), s.230(1)",
-     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
-    },
-    {
-     "basis": "BVI Business Companies Act 2004 (as amended), s.235(1)",
-     "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
-    },
-    {
-     "basis": "BVI Business Companies Act 2004 (as amended), s.233(1)",
+     "basis": "BVI Business Companies Act 2004, Section 235(1) (Certificate of good standing)",
      "url": "https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf"
     }
    ]

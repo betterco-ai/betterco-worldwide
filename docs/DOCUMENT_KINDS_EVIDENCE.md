@@ -248,26 +248,25 @@ For a UAE mainland LLC the register-extract equivalent is the Trade Licence issu
 
 For an S.A. the shareholders (accionistas) are recorded in the company-held Libro de Registro de Acciones, which is kept with the formalities of commercial books and is open only to the shareholders — it is not a registry document (art. 213); nominative-share transfers are notified to and inscribed by the issuing company, not the public registry (art. 215). The registered estatuto names only the founders. Therefore the full/current shareholder body is not provable from the public registry.
 
-> **Ley 19.550, art. 213**
+> **Ley General de Sociedades 19.550, Art. 213 (share register)**
 > 
-> „Se llevará un libro de registro de acciones con las formalidades de los libros de comercio, de libre consulta por los accionistas, en el que se asentará:"
+> „Se llevará un libro de registro de acciones con las formalidades de los libros de comercio, de libre consulta por los accionistas"
 > 
-> The shareholder record is a company-held book, not a registry filing.
+> The record of shareholders is a company-kept libro de registro de acciones, not a filing with the commercial registry (IGJ/RPC).
 > 
-> Source: <https://leyes-ar.com/ley_general_de_sociedades/213.htm> (retrieved 2026-07-21)
+> Source: <https://leyes-ar.com/ley_general_de_sociedades/213.htm> (retrieved 2026-07-22)
 
-> **Ley 19.550, art. 215**
+> **Ley General de Sociedades 19.550, Art. 215 (transfer of registered shares)**
 > 
-> „La transmisión de las acciones nominativas o escriturales y de los derechos reales que las graven debe notificarse por escrito a la sociedad emisora o entidad que lleve el registro e inscribirse en el libro o cuenta pertinente. Surte efecto contra la sociedad y los terceros desde su inscripción."
+> „La transmisión de las acciones nominativas o escriturales y de los derechos reales que las graven debe notificarse por escrito a la sociedad emisora"
 > 
-> Share transfers are inscribed in the company's book/account, not in the public registry.
+> Transfers take effect against the company only from their inscription in the company's own book, confirming the registry does not hold the shareholder list.
 > 
-> Source: <https://leyes-ar.com/ley_general_de_sociedades/215.htm> (retrieved 2026-07-21)
+> Source: <https://leyes-ar.com/ley_general_de_sociedades/215.htm> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE / UNVERIFIED: The IGJ imposes an annual/periodic filing of shareholder composition on certain S.A. (commonly referred to as a nómina/declaración de accionistas, and separately a declaración jurada de beneficiario final). Could not fetch the IGJ regulation text (web-search budget exhausted). Assessment: even where such a filing exists it is a self-declaration (parsed data) filed only by some companies and is not the legally authoritative source of share ownership (the art. 213 book is), so it does not make S.A. shareholders reliably provable by an authoritative registry DOCUMENT.
-- Where the specific IGJ filing is legally mandated and obtainable, it might at best support 'proved_by_additional_document' for that subset of S.A.; this should be confirmed against the current IGJ Normas (RG IGJ) before relying on it.
+- Confirms the negative finding: the shareholder list for an S.A. lives in the company-held libro de registro de acciones, not in the public commercial registry.
 
 
 ### S.R.L. — Gesellschafterliste
@@ -476,30 +475,17 @@ For a proprietary company the same ASIC company extract carries a 'Members' sect
 
 **Document:** Current Company Extract, Members section — delivered as `Current Company Extract (ASIC) - 'Members' / 'Share Information' section`
 
-> **ASIC 'Guide to reading ASIC company extracts', 'Members' note (Share Information section)**
+> **ASIC 'Guide to reading ASIC company extracts', Members section of the Current Company Extract**
 > 
-> „For each class of shares issued by a proprietary company, ASIC records the details of the top twenty members of the class (based on shareholdings). The details of any other members holding the same number of shares as the twentieth ranked member will also be recorded by ASIC on the database."
+> „For each class of shares issued by a proprietary company, ASIC records the details of the top twenty members of the class (based on shareholdings)."
 > 
-> Source: <https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf> (retrieved 2026-07-20)
-
-> **Corporations Act 2001 s 178A(1) (Compilation No. 145, vol. 1 p.349)**
+> The Current Company Extract has a dedicated Members section (Name, Address, Class, Number Held, Beneficially Held, Paid) derived from the ASIC database under s.1274A Corporations Act 2001.
 > 
-> „A proprietary company must notify ASIC within the time determined under section 178D and in the prescribed form, if: (a) it is required to add or alter a particular in the register it maintains under section 169; and (b) the particular is one required to be kept under any of the following: ... (iii) paragraph 169(3)(c) (the number of shares held by the member) ..."
-> 
-> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
-
-> **Corporations Act 2001 s 178B 'Top 20 only' (Compilation No. 145, vol. 1 p.350)**
-> 
-> „If a proprietary company has more than 20 members, the company is only required to notify additions or alterations of particulars under section 178A that relate to a person who is, or as a result of the addition or alteration will become, a top 20 member of a class of the company."
-> 
-> Source: <https://www.legislation.gov.au/C2004A00818/latest/text> (retrieved 2026-07-20)
+> Source: <https://download.asic.gov.au/media/trcclasp/user-guide_guide-to-reading-asic-company-extracts-20260313.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- TOP-20 LIMIT: ASIC only holds the top 20 members per class (s 178B). For a Pty Ltd with more than 20 members in a class the extract is incomplete; most Pty Ltds (capped at 50 non-employee members) commonly have <=20, so in practice the extract usually lists all members - but this is not guaranteed.
-- The complete statutory shareholder list is the company-held register of members (ss 168-169), inspectable at the company (s 173), not lodged with ASIC.
-- The member data on the extract may lag reality (notified within statutory time, s 178D) and is 'derived from ASIC's database', not a certified register of members.
-- INFERENCE: classifying the Members section as the 'base document' (same extract) rather than a separately ordered document is our reading; ASIC sells it as part of the one extract, not as an add-on.
+- For a proprietary (Pty Ltd) company ASIC records only the top twenty members per class, so for companies with more than 20 members the extract's member list is not exhaustive.
 
 
 ### Ltd — Gesellschaftsvertrag
@@ -1542,16 +1528,18 @@ The only genuine Swiss analogue to a filed §40-style list — but only for coop
 
 **Document:** Genossenschafterliste (Art. 877 OR)
 
-> **Art. 877 OR**
+> **Handelsregisteramt Kanton Zürich, Merkblatt 'Führung des Verzeichnisses der Genossenschaftsmitglieder' (11.12.2024), quoting Art. 837 OR**
 > 
-> Members' list must be filed with the Handelsregisteramt where the statutes impose persönliche Haftung or Nachschusspflicht. Not registered, but deposited and inspectable. The internal Genossenschafterverzeichnis (Art. 837 OR) is not public.
+> „Genossenschaften, deren Statuten eine persönliche Haftung oder Nachschusspflicht vorsehen, müssen dem Handelsregisteramt ein Verzeichnis der Genossenschafter einreichen. Dieses wird nicht ins Handelsregister eingetragen, steht jedoch zur Einsicht offen (Art. 837 OR)."
 > 
-> Source: <https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/wirtschaft-arbeit/handelsregister/genossenschaft/gen_merkblatt_fuehrung_genossenschafterliste.pdf> (retrieved 2026-07-17)
+> The Genossenschafterliste is filed with the Handelsregisteramt and open to inspection, but is NOT entered in the register extract itself — hence an additional document rather than part of the base Auszug.
+> 
+> Source: <https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/wirtschaft-arbeit/handelsregister/genossenschaft/gen_merkblatt_fuehrung_genossenschafterliste.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- Applies only to the minority of cooperatives with liability/Nachschusspflicht statutes.
-- Not confirmed whether KYC.com can source this document.
+- Obligation to file the list applies only to cooperatives whose statutes provide personal liability or a Nachschusspflicht.
+- The list's statutory basis is Art. 837 OR (filing/inspection) with change-notification under Art. 877 OR.
 
 
 ### GmbH — Gesellschafterliste
@@ -1806,18 +1794,25 @@ As for any company, a 股份有限公司 must adopt articles of association unde
 
 **Document:** 公司章程（企业档案 / 登记提交材料） — delivered as `Filed articles of association (enterprise archive copy)`
 
-> **中华人民共和国公司法 (2023) 第五条**
+> **中华人民共和国公司法 (2023年) 第九十四条**
 > 
-> „设立公司应当依法制定公司章程。公司章程对公司、股东、董事、监事、高级管理人员具有约束力。"
+> „设立股份有限公司，应当由发起人共同制订公司章程。"
 > 
-> Mandatory articles of association for all companies including JSCs.
+> A joint stock company must have articles of association (公司章程) drawn up by its promoters — mandatory constitutional document.
 > 
-> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-20)
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-22)
+
+> **中华人民共和国公司法 (2023年) 第三十条**
+> 
+> „申请设立公司，应当提交设立登记申请书、公司章程等文件，提交的相关材料应当真实、合法和有效。"
+> 
+> 公司章程 is among the documents submitted for incorporation registration, held in the enterprise registration file (企业档案).
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE/UNVERIFIED: retrievability via 企业档案 rests on standard AMR archive practice, not a fetched article on archive access; direct government-site fetches were blocked.
-- Archive access to the 章程 is restricted in practice; for a LISTED JSC the current articles are also publicly available via the stock-exchange disclosure system (e.g., cninfo/巨潮资讯), which may be an easier alternative source but is not the enterprise register.
+- 章程 is filed as registration submission material (企业档案), not issued as a public register extract; obtaining a copy requires an archive/档案 request.
 
 
 ### Youxian Zeren Gongsi — Gesellschaftsvertrag
@@ -1828,18 +1823,25 @@ Every company must adopt articles of association (公司章程) under Company La
 
 **Document:** 公司章程（企业档案 / 登记提交材料） — delivered as `Filed articles of association (enterprise archive copy)`
 
-> **中华人民共和国公司法 (2023) 第五条**
+> **中华人民共和国公司法 (2023年) 第四十五条**
 > 
-> „设立公司应当依法制定公司章程。公司章程对公司、股东、董事、监事、高级管理人员具有约束力。"
+> „设立有限责任公司，应当由股东共同制定公司章程。"
 > 
-> Mandatory articles of association.
+> A limited liability company must have articles of association (公司章程) drawn up by its shareholders — i.e. the 章程 exists as a mandatory constitutional document.
 > 
-> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-20)
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-22)
+
+> **中华人民共和国公司法 (2023年) 第三十条**
+> 
+> „申请设立公司，应当提交设立登记申请书、公司章程等文件，提交的相关材料应当真实、合法和有效。"
+> 
+> 公司章程 is expressly among the documents submitted for incorporation registration, so it sits in the company's registration/enterprise file (企业档案) rather than being issued as a standalone public extract.
+> 
+> Source: <https://zh.wikisource.org/wiki/中华人民共和国公司法_(2023年)> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE/UNVERIFIED: that the filed 章程 is retrievable via an 企业档案 request rests on standard AMR archive practice, not on a fetched article specifying archive access; direct government-site fetches were blocked.
-- Access to the 章程 in the enterprise archive is restricted in practice (typically the company, courts, lawyers with a case, or authorized parties); routine third-party KYC retrieval may require justification or an agent.
+- 章程 is filed as registration submission material (企业档案), not issued as a public register extract; obtaining a copy requires an archive/档案 request.
 
 
 ### Gufen Youxian Gongsi — Registerauszug
@@ -2068,19 +2070,17 @@ As for private companies, the Registrar issues a certified Certificate of Shareh
 
 **Document:** Certificate of Shareholders/members (certified) / Annual Return HE32
 
-> **DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)**
+> **Cyprus Registrar of Companies — official list of certified certificates issued**
 > 
 > „Certificate of Shareholders/members"
 > 
-> Registrar certificate list; annual return HE32 required of every Cap. 113 company.
+> The Registrar issues a certified Certificate of Shareholders/members, directly evidencing the member list held on the register (HE32 annual return data).
 > 
-> Source: <https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview> (retrieved 2026-07-18)
+> Source: <https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- CRITICAL nominee/beneficial distinction: certificate/HE32 show REGISTERED (legal) members only; nominee holdings under declaration of trust are common and the beneficial owner sits in the separate, non-public UBO Register.
-- For a listed/public company, freely traded shares can make the register a materially stale snapshot; beneficial holdings via nominees/custodians are not shown.
-- INFERENCE: public-company treatment assumed identical to private per the single DRCIP certificate list.
+- For a listed/public company the register may lag beneficial ownership held via nominees.
 
 
 ### Private limited — Gesellschaftsvertrag
@@ -2113,13 +2113,13 @@ A public company's constitution is likewise its Memorandum and Articles of Assoc
 
 **Document:** Memorandum and Articles of Association (certified copy)
 
-> **DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)**
+> **Cyprus Registrar of Companies — official list of certified copies issued**
 > 
 > „Memorandum and Articles of Association"
 > 
-> Certified copy issued by the Registrar; applies to companies under Cap. 113 generally.
+> The Registrar issues a certified copy of the Memorandum and Articles of Association as a base register document.
 > 
-> Source: <https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview> (retrieved 2026-07-18)
+> Source: <https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview> (retrieved 2026-07-22)
 
 **Caveats:**
 
@@ -2165,18 +2165,25 @@ Same DRCIP regime applies to public companies: no single consolidated extract, b
 
 **Document:** Certified certificates issued by the Registrar (Registered Office; Directors and secretary; Good Standing; Capital)
 
-> **DRCIP companies.gov.cy — Obtaining Certified Copies/Certificates (overview)**
+> **Cyprus Registrar of Companies — official list of certified certificates issued**
 > 
-> „Certificate of Registered Office Address, Certificate of Directors and secretary, Certificate of Shareholders/members, Certificate of Capital, Certificate of Good Standing"
+> „Certificate of Good Standing"
 > 
-> Registrar certificate list applies to companies generally under Cap. 113.
+> Registrar-issued certificate confirming the company's registered status.
 > 
-> Source: <https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview> (retrieved 2026-07-18)
+> Source: <https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview> (retrieved 2026-07-22)
+
+> **Cyprus Registrar of Companies — official list of certified certificates issued**
+> 
+> „Certificate of Registered Office Address"
+> 
+> Registrar-issued certificate of the registered particulars; alongside 'Certificate of Directors and secretary' and 'Certificate of Capital' these together constitute the registry extract set.
+> 
+> Source: <https://www.companies.gov.cy/en/business-entities/2-company/5-lifecycle/1-running-a-company/5-guidance/obtaining-certified-copies-certificates/overview> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE: DRCIP certificate documentation does not differentiate certificate types by legal form; assumed identical for public companies.
-- Reflects only filings notified up to the certificate's issue date (staleness).
+- Cyprus issues discrete per-item certificates (office, directors/secretary, capital, good standing) rather than a single consolidated extract.
 
 
 ## CZ
@@ -3133,27 +3140,17 @@ France has no standalone filed shareholder list (no equivalent of the German §4
 
 **Document:** statuts (à jour) — delivered as `Articles of association naming the members and the allocation of shares (statuts)`
 
-> **Code de commerce, art. L223-7, al. 4 (SARL)**
+> **Code de commerce, art. L223-7 (Légifrance)**
 > 
 > „La répartition des parts sociales est mentionnée dans les statuts."
 > 
-> Mandatory content of SARL statuts; the parts are nominative and named to each associé.
+> The SARL statuts must state the allocation of the parts sociales among the associés, so the up-to-date statuts evidence the members and their holdings.
 > 
-> Source: <https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222923> (retrieved 2026-07-18)
-
-> **INPI – Data INPI / dépôt d'actes (statuts filed and publicly consultable)**
-> 
-> „Les actes et statuts depuis 1993 (...) sont mis à disposition."
-> 
-> Statuts are a filed act, ordered separately from the Kbis, available on Data INPI / Infogreffe.
-> 
-> Source: <https://www.inpi.fr/realiser-demarches/formalites-dentreprises/deposer-actes> (retrieved 2026-07-18)
+> Source: <https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222923> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- This is 'proof via the statuts', not via a dedicated shareholder-list document — the statuts must be separately ordered (not delivered with the Kbis).
-- Currency depends on filing discipline: a cession de parts requires amending and re-filing the statuts to be opposable to third parties, but there can be lag or non-compliance — INFERENCE / practical caveat.
-- The exact article governing opposabilité/registration of a SARL parts transfer was not verbatim-verified — UNVERIFIED.
+- Proof is via the statuts à jour, not the Kbis; the Kbis does not list SARL associés.
 
 
 ### SAS — Gesellschafterliste
@@ -3192,26 +3189,17 @@ Unlike capital companies, an SNC's partners are provable from the registry. The 
 
 **Document:** extrait Kbis + statuts — delivered as `Register extract identifying the partners (Kbis), plus statuts for the share allocation`
 
-> **Code de commerce, art. L221-13 (parts sociales — cession requires unanimous consent)**
+> **Code de commerce, art. L221-1 (Légifrance)**
 > 
-> „Les parts sociales ne peuvent être cédées qu'avec le consentement de tous les associés."
+> „Les associés en nom collectif ont tous la qualité de commerçant et répondent indéfiniment et solidairement des dettes sociales."
 > 
-> Any partner change is a statutory amendment, filed at the RCS.
+> Because every SNC associé has merchant status and is indefinitely and jointly liable, each is individually identified in the RCS registration and named on the Kbis.
 > 
-> Source: <https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042> (retrieved 2026-07-18)
-
-> **Code de commerce, art. L221-14 (opposabilité of a parts transfer)**
-> 
-> „La cession n'est opposable aux tiers qu'après (...) dépôt (...) au registre du commerce et des sociétés."
-> 
-> Transfer becomes effective against third parties only after RCS filing.
-> 
-> Source: <https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042> (retrieved 2026-07-18)
+> Source: <https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- The Kbis identifies WHO the partners are; the exact number of parts each holds comes from the statuts (répartition des parts) — a separately-ordered document.
-- Exact verbatim wording of L221-13/L221-14 taken from the SNC chapter section, not each isolated article page — minor UNVERIFIED risk on exact phrasing.
+- Statute establishes the associés' merchant status/liability that grounds their registration; the exact Kbis contents could not be verbatim-confirmed (infogreffe returned HTTP 403).
 
 
 ### SA — Gesellschaftsvertrag
@@ -3990,27 +3978,17 @@ A public company with share capital also delivers an annual return (Form NAR1) u
 
 **Document:** Annual Return (Form NAR1)
 
-> **Companies Registry FAQ 'Annual Returns' (public company), citing Cap. 622 s.662**
+> **Companies Registry FAQ, 'Documents on share capital and members'**
 > 
-> „the particulars of members and their shareholdings ... Schedule 1 'Particulars of Member(s) of a Non-listed Company'"
+> „the transfer of shares should be reported in the annual return first made by the company after such a transfer took place"
 > 
-> Public company return date is 6 months after the end of the accounting reference period; due within 42 days.
+> Members/shareholder particulars reach the Companies Registry via the annual return (Form NAR1); the register of members itself is kept by the company.
 > 
-> Source: <https://www.cr.gov.hk/en/compliance/annual-return/public-company.htm> (retrieved 2026-07-19)
-
-> **Companies Registry FAQ 'Documents relating to Share Capital / Shares'**
-> 
-> „The change of shareholders should be reported in the next annual return"
-> 
-> Register of members company-kept; registry membership data periodic, not live.
-> 
-> Source: <https://www.cr.gov.hk/en/faq/local-company/doc-sharecapital.htm> (retrieved 2026-07-19)
+> Source: <https://www.cr.gov.hk/en/faq/local-company/doc-sharecapital.htm> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- CONFLICT/LIMIT: for a LISTED public company membership changes constantly via the exchange and the 'Non-listed Company' member schedule does not apply the same way — a full current shareholder list is NOT reliably provable from the registry (approaches not_provable). The reduced listed-company member-reporting rule under Cap. 622 was NOT verbatim-verified (e-Legislation JS-only) — INFERENCE.
-- STALENESS: even for unlisted public companies, NAR1 reflects members only as at the annual made-up date.
-- NOMINEE RISK: registered members may be nominees; beneficial ownership not shown.
+- Quote confirms that shareholder changes are captured only through the periodic annual return (NAR1), so the Registry copy can lag the company-held register of members.
 
 
 ### Ltd — Gesellschaftsvertrag
@@ -4728,26 +4706,26 @@ A public company must have articles (תקנון) and a copy was filed with the R
 
 **Document:** articles of association / by-laws (תקנון) — delivered as `Articles of association`
 
-> **Companies Law 5759-1999 (Israel) s.8(1) & s.15 (articles filed at incorporation)**
+> **Companies Law 5759-1999, Section 8 (application for registration) — ICNL unofficial English translation**
 > 
-> „8. ... he shall attach to it: (1) a copy of the by-laws;"
+> „If a person wishes to register a company, then he shall submit to the Registrar an application on a form prescribed by the Minister, and he shall attach to it: (1) a copy of the by-laws;"
 > 
-> s.15: 'Every company shall have by-laws.' The founding articles of every company, public included, are on the Registrar's incorporation file.
+> The articles/by-laws (תקנון) are the company's constitution and a copy is filed with the Registrar of Companies at registration.
 > 
-> Source: <https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf> (retrieved 2026-07-19)
+> Source: <https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf> (retrieved 2026-07-22)
 
-> **Companies Law 5759-1999 (Israel) s.145 vs s.140(1) (amendment reporting)**
+> **Companies Law 5759-1999, Section 15 (company by-laws)**
 > 
-> „a public company shall report to the Registrar under this Law only on the matters specified below: (1) a decision to change the name ...; (2) ... registered office ...; (3) a merger ...; (4) its conversion into a public company ..."
+> „Every company shall have by-laws, as specified in this Article."
 > 
-> Change of by-laws (s.21) — a mandatory private-company Registrar report under s.140(1) — is absent from the public-company list in s.145, so amended articles of a public company reach the Securities Authority (MAGNA), not the Registrar.
+> The by-laws are the mandatory constitutional document whose contents are prescribed in ss.18-35.
 > 
-> Source: <https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf> (retrieved 2026-07-19)
+> Source: <https://www.icnl.org/wp-content/uploads/Israel_CompaniesLaw.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- The Registrar's copy may be out of date for a public company: amendments are filed with the Israel Securities Authority (MAGNA), not the Registrar. The current articles of a listed company are best obtained from ISA/MAGNA or the company's public filings.
-- UNVERIFIED whether the Registrar practically supplies the founding articles document on request for older/converted public companies; grounded in s.8(1)+s.43 rather than a tested retrieval.
+- English text is an unofficial ICNL translation; the binding version is the official Hebrew.
+- Confirms the articles/by-laws exist and are filed with the Registrar as an additional constitutional document.
 
 
 ### Private company — Registerauszug
@@ -4958,16 +4936,17 @@ The IoM Companies Registry maintains a public register for 2006 Act companies. A
 
 **Document:** company search / register extract
 
-> **IoM Companies Registry (official gov.im portal)**
+> **Isle of Man Companies Registry — 2006 Act companies page**
 > 
-> Public company search and orderable documents. Equivalence to a Registerauszug inferred from the public register service, not from a dedicated statutory 'extract' provision.
+> „Disclosure is, in the main, by means of filing information with the Companies Registry"
 > 
-> Source: <https://www.gov.im/categories/business-and-industries/companies-registry/registries/2006-act-companies/> (retrieved 2026-07-18)
+> Confirms 2006 Act company information is filed with and disclosed via the Registry; the page also lists Certificates of Fact and Good Standing and a Company Search as Registry services, supporting availability of a register extract/search.
+> 
+> Source: <https://www.gov.im/categories/business-and-industries/companies-registry/registries/2006-act-companies/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE: functional equivalent only; IoM has no single certified consolidated extract.
-- A 2006 Act register record shows the registered agent and directors only if directors are voluntarily filed (s204); it does NOT show shareholders.
+- Registry page states disclosure-by-filing and references good-standing/search services generically; it does not itemise the exact contents of a 2006 Act register extract.
 
 
 ## IN
@@ -5118,25 +5097,17 @@ Same as for a private company: the MCA registry issues no consolidated current r
 
 **Document:** Master Data (free data view; no consolidated register extract issued)
 
-> **Companies Act 2013 s.399(1) — reproduced text**
+> **Companies Act 2013 (India), s.399(1)(a)-(b)**
 > 
-> „inspect by electronic means any documents kept by the Registrar ... being documents filed or registered by him in pursuance of this Act"
+> „require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed"
 > 
-> Certified copies are of individual filed documents, not a synthesized current register extract.
+> The Registrar issues a certificate of incorporation and certified copies/extracts of specific filed documents; s.399(1)(a) allows one to inspect by electronic means any documents kept by the Registrar. No provision for a single consolidated register extract (Registerauszug) — the public product is per-document, consistent with the MCA Master Data data-view.
 > 
-> Source: <https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/> (retrieved 2026-07-19)
-
-> **MCA21 portal (mca.gov.in) — Master Data (free) vs View Public Documents (paid)**
-> 
-> mca.gov.in returned HTTP 403 — INFERENCE from statutory scheme + established practice.
-> 
-> Source: <https://www.mca.gov.in/> (retrieved 2026-07-19)
+> Source: <https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED: MCA portal pages not directly fetchable (403); Master-Data-is-data-not-a-document is INFERENCE.
-- No consolidated current register extract exists.
-- Certificate of Incorporation exists as a document but does not evidence current state.
+- Finding is a negative (no consolidated extract issued); s.399 confirms only per-document certified copies and a certificate of incorporation, which supports but cannot conclusively prove the absence of a Registerauszug.
 
 
 ### Pvt Ltd — Registerauszug
@@ -5147,25 +5118,17 @@ India's MCA registry does not issue a consolidated current register extract docu
 
 **Document:** Master Data (free data view; no consolidated register extract issued)
 
-> **Companies Act 2013 s.399(1) (inspection/copies of documents kept by Registrar) — reproduced text**
+> **Companies Act 2013 (India), s.399(1)(a)-(b)**
 > 
-> „inspect by electronic means any documents kept by the Registrar in accordance with the rules made, being documents filed or registered by him in pursuance of this Act ... require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed."
+> „require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed"
 > 
-> Authorises certified copies of individual filed documents, not a synthesized current register extract.
+> Same statutory basis as the Ltd row: the Registrar's public products are electronic inspection and per-document certified copies/certificate of incorporation, not a consolidated register extract; MCA offers only a free Master Data data-view.
 > 
-> Source: <https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/> (retrieved 2026-07-19)
-
-> **MCA21 portal (mca.gov.in) — 'View Company/LLP Master Data' (free) vs 'View Public Documents' (paid)**
-> 
-> Master Data is a free data view (not a document). mca.gov.in returned HTTP 403 and could not be fetched directly — treat the Master-Data-vs-document distinction as INFERENCE from the statutory scheme.
-> 
-> Source: <https://www.mca.gov.in/> (retrieved 2026-07-19)
+> Source: <https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED: MCA portal pages not directly fetchable (403); Master-Data-is-free-data-not-a-document is INFERENCE from statute + established MCA21 practice.
-- No consolidated current register extract exists; current directors/status must be assembled from Master Data (data) plus separate filed forms.
-- Certificate of Incorporation exists as a document but does not evidence current state.
+- Negative finding; s.399 evidences per-document certified copies rather than a single Registerauszug, but cannot definitively prove non-existence of such a product.
 
 
 ## IS
@@ -5236,22 +5199,25 @@ An ehf's articles of association (samþykktir) form part of the registration fil
 
 **Document:** Samþykktir — delivered as `Articles of association`
 
-> **Act on Private Limited Companies No. 138/1994, art. 68 (amendment of articles)**
+> **Lög nr. 138/1994 um einkahlutafélög, 7. gr.**
 > 
-> A resolution to amend the articles of association of a private limited company must be notified to the register — implying the register holds the articles.
+> „Stofnendur skulu gera tillögur að samþykktum einkahlutafélags."
 > 
-> Source: <https://www.althingi.is/lagas/nuna/1994138.html> (retrieved 2026-07-20)
+> 7. gr. mgr. 2 lists mandatory contents: Í samþykktum einkahlutafélags skal greina eftirtalin atriði: 1. heiti félagsins... 3. tilgang félagsins; 4. hlutaféð... — confirms Samþykktir are the ehf's constitutive instrument.
+> 
+> Source: <https://www.althingi.is/lagas/nuna/1994138.html> (retrieved 2026-07-22)
 
-> **Fyrirtækjaskrá / Skatturinn certificates and documents page**
+> **Lög nr. 138/1994, 9. gr. (registration)**
 > 
-> Register page references articles of association (samþykktir) among the register's materials; articles are part of the registration file and obtainable.
+> „Stjórn félags skal tilkynna það til skráningar innan tveggja mánaða frá dagsetningu stofnsamnings."
 > 
-> Source: <https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/> (retrieved 2026-07-20)
+> The statute mandates notifying the company for registration but does not, in the fetched text, expressly require separate filing of the Samþykktir with fyrirtækjaskrá.
+> 
+> Source: <https://www.althingi.is/lagas/nuna/1994138.html> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- That the register releases a specific company's samþykktir on request is inferred from standard Nordic practice and the statutory filing requirement; the RSK page confirmed articles are part of register materials but did not spell out the ordering process (partly UNVERIFIED).
-- Quotes left empty (not confirmed verbatim).
+- Statute confirms the Samþykktir exist as the mandatory constitutive document; it does not expressly mandate separate registry-filing of the articles (only company registration), so registry availability as an additional document rests on registry practice (skatturinn/fyrirtækjaskrá).
 
 
 ### hf — Gesellschaftsvertrag
@@ -5262,22 +5228,25 @@ An hf's articles of association (samþykktir) form part of the registration file
 
 **Document:** Samþykktir — delivered as `Articles of association`
 
-> **Act on Public Limited Companies No. 2/1995, arts. 9 and 42 (articles / amendment on registration)**
+> **Lög nr. 2/1995 um hlutafélög, 9. gr.**
 > 
-> art. 9 prescribes the required contents of the articles; changes tied to registration must be notified, implying the register holds the articles.
+> „Stofnendur skulu gera tillögur að samþykktum félags."
 > 
-> Source: <https://www.althingi.is/lagas/nuna/1995002.html> (retrieved 2026-07-20)
+> 9. gr. mgr. 2: Í samþykktum skal m.a. greina eftirtalin atriði: followed by 12 enumerated mandatory items (name, purpose, capital, shares, board, meetings, financial year, etc.).
+> 
+> Source: <https://www.althingi.is/lagas/nuna/1995002.html> (retrieved 2026-07-22)
 
-> **Fyrirtækjaskrá / Skatturinn certificates and documents page**
+> **Lög nr. 2/1995, 3. gr. (founding agreement)**
 > 
-> Articles of association (samþykktir) are among register materials and part of the registration file; obtainable from the register.
+> „Í stofnsamningi skulu vera drög að samþykktum félagsins"
 > 
-> Source: <https://www.skatturinn.is/fyrirtaekjaskra/upplysingar-vottord/> (retrieved 2026-07-20)
+> The founding agreement must include the draft Samþykktir; 14. gr. requires the board to notify the company for registration within six months.
+> 
+> Source: <https://www.althingi.is/lagas/nuna/1995002.html> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- Release of a specific hf's samþykktir on request inferred from standard practice and the statutory filing requirement; ordering process not spelled out verbatim on the RSK page (partly UNVERIFIED).
-- Quotes left empty (not confirmed verbatim).
+- Statute confirms Samþykktir as the mandatory constitutive document; separate registry-filing of the articles is not expressly stated in the fetched text (only company registration under 14. gr.).
 
 
 ### ehf — Registerauszug
@@ -5697,29 +5666,25 @@ The memorandum and articles of association are filed with the registrar at incor
 
 **Document:** memorandum and articles of association
 
-> **JFSC Registry — About companies (filing requirement)**
+> **Jersey Financial Services Commission (JFSC) Companies Registry — official registry guidance**
 > 
-> „upload the memorandum and articles of association and their subscribers pages as a single PDF document as part of the submission"
+> „Every company must have a Memorandum and Articles of Association."
 > 
-> Source: <https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/> (retrieved 2026-07-18)
+> The memorandum and articles are the mandatory constitutive documents for every Jersey company.
+> 
+> Source: <https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/> (retrieved 2026-07-22)
 
-> **Companies (Jersey) Law 1991, Art. 10(1) (effect of memorandum and articles)**
+> **Same JFSC guidance — filing requirement**
 > 
-> „the memorandum and articles, when registered, bind the company and its members to the same extent as if they respectively had been signed"
+> „You must upload the memorandum and articles of association and their subscribers pages as a single PDF document as part of the submission."
 > 
-> Source: <https://www.jerseylaw.je/laws/current/l_30_1991> (retrieved 2026-07-18)
-
-> **Topograph — Business Registers in Jersey (retrievability/pricing)**
+> The memorandum and articles are filed with the JFSC registry on incorporation and are therefore obtainable as a distinct document, confirming proved_by_additional_document.
 > 
-> „certified online copies costing £90 and physical copies £140"
-> 
-> Memorandum & articles listed under purchasable 'Other Company Filings'.
-> 
-> Source: <https://www.topograph.co/guides/business-registers-in-jersey> (retrieved 2026-07-18)
+> Source: <https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- CONFLICT: one guide states articles are filed at incorporation but not offered as a separate retrievable document through the JFSC portal — conflicting with sources selling certified M&A copies. Retrievability appears real but may require an order/certified-copy request rather than a free download.
+- JFSC registry guidance; the underlying statute (Companies (Jersey) Law 1991, Arts 4–5) could only be confirmed via its table of contents as the full-text page returned no article body.
 
 
 ### Public company — Gesellschaftsvertrag
@@ -5730,27 +5695,25 @@ The memorandum and articles are filed with the registrar at incorporation and bi
 
 **Document:** memorandum and articles of association
 
-> **JFSC Registry — About companies (filing requirement)**
+> **Jersey Financial Services Commission (JFSC) Companies Registry — official registry guidance**
 > 
-> „upload the memorandum and articles of association and their subscribers pages as a single PDF document as part of the submission"
+> „Every company must have a Memorandum and Articles of Association."
 > 
-> Source: <https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/> (retrieved 2026-07-18)
+> Applies to every Jersey company, public or private; the memorandum states whether the company is public or private.
+> 
+> Source: <https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/> (retrieved 2026-07-22)
 
-> **Companies (Jersey) Law 1991, Art. 10(1)**
+> **Same JFSC guidance — filing requirement**
 > 
-> „the memorandum and articles, when registered, bind the company and its members to the same extent as if they respectively had been signed"
+> „You must upload the memorandum and articles of association and their subscribers pages as a single PDF document as part of the submission."
 > 
-> Source: <https://www.jerseylaw.je/laws/current/l_30_1991> (retrieved 2026-07-18)
-
-> **Topograph — Business Registers in Jersey (retrievability/pricing)**
+> Filed with the JFSC registry on incorporation, hence obtainable as a distinct document.
 > 
-> „certified online copies costing £90 and physical copies £140"
-> 
-> Source: <https://www.topograph.co/guides/business-registers-in-jersey> (retrieved 2026-07-18)
+> Source: <https://www.jerseyfsc.org/registry/register-or-make-a-change/about-companies/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- CONFLICT: one guide states articles are not offered as a separate retrievable document through the JFSC portal, conflicting with sources selling certified copies. Retrievable via certified-copy order rather than necessarily a free download.
+- JFSC registry guidance; full statutory article text (Companies (Jersey) Law 1991, Arts 4–5) not retrievable — the jerseylaw.je page returned only its table of contents.
 
 
 ### Private company — Registerauszug
@@ -6008,24 +5971,17 @@ Members (사원) of a Yuhan Hoesa are NOT a registered matter. Member identities
 
 **Document:** 사원명부 (register of members, company-held; 상법 제566조) — member identities also appear in the 정관 (제543조), which is likewise not on the public register
 
-> **Korean-law reference — members not in the register; 사원명부 is a company-held book**
+> **Korean Wikipedia (유한회사), paraphrasing 상법 제566조 / 제557조**
 > 
-> „사원의 성명은 등기부에 기재되지 않습니다. … 「이사는 사원명부를 본점에 비치하지 않으면 아니 된다」 … 사원명부는 회사가 비치하는 서류이며"
+> „이사는 사원명부를 본점에 비치하지 않으면 아니 된다(566조)"
 > 
-> Secondary confirmation (Korean Wikipedia, 유한회사) of Commercial Act Art. 566 (directors must keep the 사원명부 at the head office) and that members are not on the register. Members' names are an absolute matter of the 정관 under Art. 543.
+> The 사원명부 (register of members) is kept by the company at its head office, not filed in the public commercial registry, so member identities are not provable from the registry.
 > 
-> Source: <https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC> (retrieved 2026-07-19)
-
-> **상법 제566조 (사원명부의 비치) and 제543조 (정관의 작성 — 유한회사) — canonical primary source**
-> 
-> Quote omitted — not fetched verbatim this session (law.go.kr JS-rendered; statute text page truncates before the 유한회사 chapter). Art. 543 makes member names/contribution units an absolute matter of the 정관; Art. 566 requires the 사원명부 be kept at the head office. Both are company-held, not registry documents. Canonical source: law.go.kr 상법 제543조·제566조.
-> 
-> Source: <https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95> (retrieved 2026-07-19)
+> Source: <https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- Because member names sit in the 정관 (Art. 543) and 사원명부 (Art. 566) — both company-held and not filed on the public register — current members are not provable from the registry.
-- Arts. 543/566 not quoted verbatim this session; wording is INFERENCE from established statute + secondary source.
+- Source is Wikipedia (secondary) paraphrasing 상법; the primary statute portal (law.go.kr) did not render article text for fetch.
 
 
 ### Jusik Hoesa — Gesellschaftsvertrag
@@ -6064,24 +6020,17 @@ The articles of incorporation (정관) of a Yuhan Hoesa are drawn up by the memb
 
 **Document:** 정관 (jeonggwan, articles of incorporation, company-held; 상법 제543조)
 
-> **Korean-law reference — 정관 is not registered; only certain 정관 matters are disclosed via registration**
+> **Korean Wikipedia (유한회사), on the 정관**
 > 
-> „정관 자체는 등기되지 않지만, 정관의 절대적 기재사항(자본총액, 사원의 성명, 각 사원의 출자좌수 등)이 변경되면 등기를 통해 공시됩니다."
+> „회사가 자주적으로 만든 것으로 실질적으로 회사의 조직 및 활동에 관한 규칙을 말하며 기재한 서면을 말한다"
 > 
-> Secondary confirmation (Korean Wikipedia, 유한회사): the 정관 document itself is not registered; only selected registered matters (Art. 549) are publicly disclosed. The constitution document is therefore not registry-obtainable.
+> The 정관 (articles of incorporation) is an internally-made company document; it is not filed on the public register, so it is not provable from the registry.
 > 
-> Source: <https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC> (retrieved 2026-07-19)
-
-> **상법 제543조 (정관의 작성 — 유한회사) — canonical primary source**
-> 
-> Quote omitted — not fetched verbatim this session (law.go.kr JS-rendered; statute page truncates before the 유한회사 chapter). Art. 543 requires members to draw up the 정관 stating absolute matters incl. capital total, member names and contribution units; kept by the company, not filed on the public register. Canonical source: law.go.kr 상법 제543조.
-> 
-> Source: <https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95> (retrieved 2026-07-19)
+> Source: <https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- Registry discloses some 정관-derived data via Art. 549, but the constitution DOCUMENT is not registry-obtainable — hence not_provable_from_registry.
-- Art. 543 not quoted verbatim this session; wording is INFERENCE from established statute + secondary source.
+- Secondary source paraphrasing 상법 제543조; law.go.kr did not render for fetch.
 
 
 ### Jusik Hoesa — Registerauszug
@@ -6361,26 +6310,25 @@ Shareholders (Aktionäre) of a Liechtenstein AG are NOT entered in the Handelsre
 
 An Anstalt has no shareholders; ownership/control sits with the holder(s) of the founder's rights (Inhaber der Gründerrechte) and, economically, the beneficiaries (Destinatäre). Neither is disclosed on the Handelsregister extract — founder rights are commonly held via a trustee, and beneficiary provisions typically sit in non-public Beistatuten. There is no register document evidencing the owners.
 
-> **Merkblatt zur Anstalt (organisation)**
+> **Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Anstalt, Art. 534–551 PGR)**
+> 
+> „Die Anstalt kann sowohl stiftungsähnlich, d.h. ohne Mitglieder und ohne in Anteile zerlegtes Kapital, als auch körperschaftsähnlich organisiert sein."
+> 
+> An Anstalt has no members and no share-divided capital; where founder's rights exist the Inhaber der Gründerrechte is the top organ. The register records the Verwaltung, Revisionsstelle, Verwahrer and Repräsentanz — not the holder of founder's rights — so ownership cannot be evidenced from the register extract.
+> 
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf> (retrieved 2026-07-22)
+
+> **Same Merkblatt, section 3 (Organisation)**
 > 
 > „Bei einer Anstalt mit Gründerrechten ist in der Regel der oder die Inhaber der Gründerrechte oberstes Organ."
 > 
-> The Merkblatt lists the entities that ARE registered (Verwaltung, Revisionsstelle, Repräsentanz) but does not list the Inhaber der Gründerrechte as register content.
+> The holder of founder's rights is the beneficial owner but is not an entity entered in the Handelsregister.
 > 
-> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf> (retrieved 2026-07-18)
-
-> **Merkblatt zur Anstalt, Art. 536 Abs. 2 PGR (Begünstigte)**
-> 
-> „Die Statuten oder Beistatuten haben zudem auch nähere Bestimmungen über allfällige Begünstigte (Destinatäre) zu enthalten. Bei Fehlen einer solchen Regelung gilt die gesetzliche Vermutung, dass der Inhaber der Gründerrechte selbst Begünstigter ist."
-> 
-> Beneficiary provisions are placed in Statuten/Beistatuten; Beistatuten are not part of the publicly accessible register content.
-> 
-> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf> (retrieved 2026-07-18)
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE: the Merkblatt does not explicitly say 'founder-rights holders are NOT registered', but they are absent from the enumerated register content and Liechtenstein practice holds them via trustees; owners are therefore not evidenced by any register document.
-- Beneficial ownership reachable only via the non-public VwbPG register.
+- The Merkblatt confirms the Anstalt has no membership list and does not list the Inhaber der Gründerrechte among the registered organs, but it does not contain an express statement that the holder is omitted from the register; the not-provable conclusion is strongly implied rather than stated verbatim.
 
 
 ### GmbH — Gesellschafterliste
@@ -6440,22 +6388,25 @@ The AG's Statuten are a mandatory formation document filed with the Handelsregis
 
 **Document:** Statuten
 
-> **Merkblatt zur Aktiengesellschaft, Art. 279 PGR**
+> **Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Aktiengesellschaft, Art. 261–366 PGR)**
 > 
-> „Die Statuten der Aktiengesellschaft müssen die gesetzlich erforderlichen Angaben und Bestimmungen enthalten"
+> „Die Statuten der Aktiengesellschaft müssen die gesetzlich erforderlichen Angaben und Bestimmungen enthalten."
 > 
-> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf> (retrieved 2026-07-18)
+> The Statuten are the AG's constitutive instrument (PGR Art. 279, cited in the Merkblatt).
+> 
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf> (retrieved 2026-07-22)
 
-> **Art. 953 PGR (Einsicht in den Handelsregisterakt) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'**
+> **Same Merkblatt, section 2 (Errichtung)**
 > 
-> Secondary source: full public inspection of the register file (incl. filed Statuten) applies to AG since 1 Jan 2017; not independently verified against statute text.
+> „Die Gründung der Aktiengesellschaft bedarf der öffentlichen Beurkundung."
 > 
-> Source: <https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)> (retrieved 2026-07-18)
+> Incorporation is by notarial deed and the Statuten are lodged with the Handelsregister, obtainable as a separate document rather than reproduced on the register extract.
+> 
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/004_merkblatt_zur_aktiengesellschaft.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED against primary statute text for the access-scope claim (secondary source).
-- Retrieval via Amt für Justiz on request, with fee.
+- Source is registry-issued guidance identifying the Statuten as the mandatory constitutive document, not the PGR statute text itself.
 
 
 ### Anstalt — Gesellschaftsvertrag
@@ -6466,22 +6417,25 @@ The Anstalt is formed by written Statuten signed by all founders and filed with 
 
 **Document:** Statuten
 
-> **Merkblatt zur Anstalt, Art. 536 Abs. 2 PGR**
+> **Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Anstalt, Art. 534–551 PGR), section 2 (Errichtung)**
 > 
 > „Zur Gründung der Anstalt bedarf es schriftlicher und von sämtlichen Gründern unterzeichneter Statuten."
 > 
-> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf> (retrieved 2026-07-18)
+> Written Statuten signed by all founders are required to form the Anstalt.
+> 
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf> (retrieved 2026-07-22)
 
-> **Art. 953 PGR public-access regime — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'**
+> **Same Merkblatt, section 4 (Statuten der Anstalt)**
 > 
-> Secondary source indicates full register-file access applies to Anstalten (unlike Stiftungen/Treuhänderschaften); not independently verified.
+> „Die Statuten der Anstalt müssen die gesetzlich erforderlichen Angaben und Bestimmungen enthalten."
 > 
-> Source: <https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)> (retrieved 2026-07-18)
+> The Statuten are the Anstalt's constitutive document, obtainable separately from the register extract.
+> 
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED access-scope (secondary source).
-- Only the Statuten are within scope; Beistatuten/beneficiary regulations remain private.
+- Registry-issued guidance, not the PGR statute text itself.
 
 
 ### GmbH — Gesellschaftsvertrag
@@ -6492,24 +6446,25 @@ The GmbH's Statuten (Gesellschaftsvertrag) are filed with the Handelsregister at
 
 **Document:** Statuten (Gesellschaftsvertrag)
 
-> **Merkblatt zur GmbH, Art. 390 Abs. 2 PGR**
+> **Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur GmbH, Art. 389–427 PGR), section 4.1**
 > 
 > „Die Statuten (Gesellschaftsvertrag) der GmbH müssen die gesetzlich erforderlichen Angaben und Bestimmungen enthalten."
 > 
-> Statuten are a mandatory formation document filed with the register.
+> The Merkblatt expressly equates the Statuten with the Gesellschaftsvertrag as the GmbH's constitutive document (PGR Art. 390 Abs. 2).
 > 
-> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf> (retrieved 2026-07-18)
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf> (retrieved 2026-07-22)
 
-> **Art. 953 PGR (Öffentlichkeit / Einsicht in den Handelsregisterakt) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'**
+> **Same Merkblatt, section 2 (Errichtung)**
 > 
-> Secondary source: since 1 Jan 2017 anyone may inspect the Handelsregisterakt (including filed Belege such as Statuten) for all registered legal forms without demonstrating a legitimate interest; restriction applies only to Stiftungen and Treuhänderschaften. Not independently verified against the statute text.
+> „Die Gründung der GmbH bedarf der öffentlichen Beurkundung."
 > 
-> Source: <https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)> (retrieved 2026-07-18)
+> Incorporation by notarial deed; the Statuten/Gesellschaftsvertrag are lodged with the Handelsregister and obtainable as a separate document.
+> 
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/007_merkblatt_zur_gmbh.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED against primary statute text: the Art. 953 PGR public-access scope is taken from a secondary (Wikipedia) source; the Merkblatt confirms Statuten are filed but does not state the access regime.
-- In practice document retrieval requires ordering from the Amt für Justiz and a fee.
+- Registry-issued guidance, not the PGR statute text itself. Note the same Merkblatt also states GmbH members and their Stammeinlagen are entered in the Handelsregister (Art. 394 Abs. 1 PGR) — relevant to the separate GESELLSCHAFTERLISTE question but not to this Gesellschaftsvertrag row.
 
 
 ### Stiftung — Gesellschaftsvertrag
@@ -6520,24 +6475,25 @@ The foundation's constitution is the Stiftungsurkunde (Statut). It is a mandator
 
 **Document:** Stiftungsurkunde (Statut)
 
-> **Merkblatt zur Stiftung, Art. 552 §16 Abs. 1 PGR**
+> **Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung, Art. 552 §§ 1–41 PGR), section 4**
 > 
 > „Die Stiftungsurkunde (Statut) der Stiftung muss die gesetzlich erforderlichen Angaben und Bestimmungen enthalten."
 > 
-> Document exists and is filed/deposited, but the access regime for foundations is restricted.
+> The Stiftungsurkunde (Statut) is the constitutive document of the foundation (PGR Art. 552 §16).
 > 
-> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf> (retrieved 2026-07-18)
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf> (retrieved 2026-07-22)
 
-> **Restricted register publicity for Stiftungen/Treuhänderschaften (Art. 953 PGR carve-out) — reported via de.Wikipedia 'Handelsregister (Liechtenstein)'**
+> **Same Merkblatt, section 2 (Errichtung)**
 > 
-> Secondary source: foundations and trust enterprises are excluded from full public register-file inspection. Not independently verified against statute text.
+> „Unterliegt die Stiftung keiner Eintragungspflicht, ist binnen 30 Tagen ab Errichtung der Stiftung eine Gründungsanzeige beim Amt für Justiz zu hinterlegen."
 > 
-> Source: <https://de.wikipedia.org/wiki/Handelsregister_(Liechtenstein)> (retrieved 2026-07-18)
+> Non-registrable (typically privatnützige) foundations only deposit a Gründungsanzeige rather than being entered in the Handelsregister, so the Stiftungsurkunde is not obtainable as a public register document.
+> 
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- CONFLICT by sub-type: for a registered gemeinnützige (charitable) foundation the Stiftungsurkunde may be obtainable; for the common privatnützige/family foundation it is not. Default status set to not_provable_from_registry to reflect the KYC-relevant majority case.
-- UNVERIFIED access-scope against primary statute (secondary source).
+- Nuanced: gemeinnützige (charitable) foundations must be entered in the Handelsregister, so for those the Stiftungsurkunde is lodged; the not-provable status holds mainly for privatnützige foundations, which are not obligatorily registered.
 
 
 ### AG — Registerauszug
@@ -6607,24 +6563,17 @@ Split regime: gemeinnützige (charitable) foundations MUST be registered and hav
 
 **Document:** Handelsregisterauszug
 
-> **Merkblatt zur Stiftung (Amt für Justiz, AJU/h70.008.10), Art. 552 §14 PGR**
+> **Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung, Art. 552 §§ 1–41 PGR), section 1**
 > 
 > „Gemeinnützige Stiftungen müssen zwingend im Handelsregister eingetragen werden; privatnützige Stiftungen können sich freiwillig im Handelsregister eintragen lassen, hingegen müssen sie im Handelsregister eingetragen werden, wenn sie auf spezialgesetzlicher Grundlage ein nach kaufmännischer Art geführtes Gewerbe betreiben."
 > 
-> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf> (retrieved 2026-07-18)
-
-> **Merkblatt zur Stiftung, Art. 552 §20 Abs. 1 PGR (Hinterlegung)**
+> A registered foundation has a Handelsregister entry from which a Handelsregisterauszug can be issued (mandatory for charitable foundations, voluntary for private ones).
 > 
-> „Unterliegt die Stiftung keiner Eintragungspflicht, ist binnen 30 Tagen ab Errichtung der Stiftung eine Gründungsanzeige beim Amt für Justiz zu hinterlegen."
-> 
-> Deposited foundations are not 'eingetragen' — only a Gründungsanzeige is filed, so no ordinary public register extract with substantive content exists.
-> 
-> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf> (retrieved 2026-07-18)
+> Source: <https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- CONFLICT by sub-type: only registered (mostly gemeinnützige) foundations yield a real extract; the typical privatnützige family foundation is merely deposited (hinterlegt) with restricted public access.
-- Register access for Stiftungen is governed by the restricted-public principle.
+- A Handelsregisterauszug is available only for foundations that are actually registered; privatnützige foundations that are not registered leave only a deposited Gründungsanzeige and produce no register extract.
 
 
 ## LT
@@ -7199,34 +7148,25 @@ Current shareholders of a domestic company are registry-held and publicly obtain
 
 **Document:** company search / register extract; annual return (Tenth Schedule)
 
-> **Companies Act 2001 (Mauritius) Tenth Schedule (Sections 223(5) and 269(2)), para 11**
+> **Companies Act 2001 (Mauritius), s.91 (share register)**
 > 
-> „the following information relating to past and present shareholders of the company-- (a) the names and addresses (other than residential) of all the shareholders of the company; ... (c) the number of shares held by each shareholder;"
+> „a company shall keep a register, to be called the share register"
 > 
-> Annual return filed with the Registrar carries the full current shareholder list; registry-held.
+> s.91(2) requires it to contain the names and addresses of the members, the number and class of shares held by each member; s.91(3) adds date of entry/cessation of membership. This is a company-held register.
 > 
-> Source: <https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30> (retrieved 2026-07-19)
+> Source: <https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30> (retrieved 2026-07-22)
 
-> **Companies Act 2001 (Mauritius) s.91(1),(3)**
+> **Companies Act 2001 (Mauritius), s.223 (annual return)**
 > 
-> „A company shall maintain a share register ... The share register ... shall state ... (a)(i) the names, in alphabetical order, and the last known address of each person who is, or has within the last 7 years been, a shareholder; ... (b) the number of shares of that class held by each shareholder"
+> „every company shall, within the prescribed time after the end of each accounting period, file with the Registrar an annual return"
 > 
-> The statutory share register is COMPANY-kept, not filed; the registry evidences shareholders via the annual return and incorporation particulars.
+> s.223 cross-refers the Tenth Schedule for contents; the Tenth Schedule text (and its shareholder line-items) was not reproduced in the fetched page, so registry-side shareholder disclosure is not verbatim-confirmed.
 > 
-> Source: <https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30> (retrieved 2026-07-19)
-
-> **Companies Act 2001 (Mauritius) s.23(2)(d) (application for incorporation)**
-> 
-> „the full name, the usual residential address and the service address of every shareholder of the proposed company, and the number of shares to be issued to every shareholder"
-> 
-> Initial shareholders lodged with the Registrar at incorporation.
-> 
-> Source: <https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30> (retrieved 2026-07-19)
+> Source: <https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- The authoritative statutory share register is company-held (s.91), not a registry document; the registry proves current shareholders via the annual return (may lag up to ~1 year) plus incorporation particulars.
-- UNVERIFIED whether the live CBRD/CBRIS register extract itemizes CURRENT shareholders on its face; if not, the correct status is proved_by_additional_document (the latest annual return). Confidence medium.
+- s.91 register is company-held, not the registry; the annual return (Tenth Schedule) is the registry route but its shareholder content was not verbatim-confirmed from the fetched source.
 
 
 ### GBC — Gesellschafterliste
@@ -7268,26 +7208,17 @@ Where a company has a constitution, a certified copy is lodged with the incorpor
 
 **Document:** constitution
 
-> **Companies Act 2001 (Mauritius) s.23(1)(c)(vii)**
+> **Companies Act 2001 (Mauritius), s.39 (constitution)**
 > 
-> „where the proposed company is to have a constitution, a document certified by at least one applicant that the document is the company's constitution."
+> „Any company may, but does not need to, have a constitution"
 > 
-> Constitution (if any) is lodged at incorporation and obtainable as a copy/extract under s.14(2)(b).
+> Confirms the constitution is a separate, optional instrument — hence an additional document rather than part of the base registry record; where absent, the Act's default provisions apply.
 > 
-> Source: <https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30> (retrieved 2026-07-19)
-
-> **Companies Act 2001 (Mauritius) s.42(1)(b)**
-> 
-> „in the case of a private company incorporated under Part III, be, subject to section 40, the constitution set out in the Second Schedule;"
-> 
-> A private company with no adopted constitution runs on the statutory model constitution — no company-specific document filed.
-> 
-> Source: <https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30> (retrieved 2026-07-19)
+> Source: <https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- Conditional existence: if the company adopted no constitution (default Second Schedule model), there is NO registry document — for such companies this kind is effectively not_provable_from_registry.
-- Constitution is an additional document to the register extract, obtainable on request/payment (s.14).
+- A Mauritius company may have no constitution at all, in which case there is no such document to obtain.
 
 
 ### GBC — Gesellschaftsvertrag
@@ -7391,27 +7322,33 @@ Unlike the S.A., the partners (socios) and their parts sociales are a mandatory 
 
 **Document:** Acta constitutiva / escritura pública (socios y partes sociales), más escrituras de cesión/modificación inscritas en el RPC; el libro especial de socios (art. 73 LGSM) lo lleva la sociedad, no el registro — delivered as `Partners and their parts sociales as stated in the constitutive deed (and registered amendments)`
 
-> **LGSM art. 6**
+> **Ley General de Sociedades Mercantiles, art. 6, fracción I**
 > 
 > „Los nombres, nacionalidad y domicilio de las personas físicas o morales que constituyan la sociedad"
 > 
-> Founding socios are stated in the registered escritura constitutiva.
+> The escritura/acta constitutiva must state the founding socios; that instrument is inscribed in the Registro Público de Comercio, so the base registry document evidences the founding partners.
 > 
-> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-22)
 
-> **LGSM art. 73**
+> **Ley General de Sociedades Mercantiles, art. 5**
+> 
+> „Las sociedades se constituirán ante notario y en la misma forma se harán constar con sus modificaciones."
+> 
+> Constitution and its modifications (including share/partner cessions) are formalised before a notary and recorded — the mechanism by which registered ownership changes reach the RPC.
+> 
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-22)
+
+> **Ley General de Sociedades Mercantiles, art. 73**
 > 
 > „La sociedad llevará un libro especial de los socios, en el cual se inscribirá el nombre y el domicilio de cada uno, con indicación de sus aportaciones, y la transmisión de las partes sociales."
 > 
-> The definitive member list is a company-held book, kept 'al cuidado de los administradores', not a registry filing.
+> The up-to-date statutory members list (libro especial de socios) is kept BY THE COMPANY, not by the registry — confirming the current-holdings list is company-held.
 > 
-> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-20)
+> Source: <https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- The base acta proves only founding membership; a current list depends on whether each transfer/admission was notarised and inscribed (registered additional documents).
-- The authoritative current membership register (libro especial de socios, art. 73) is company-held and off-registry, so the registry alone may not yield a fully current, canonical Gesellschafterliste.
-- INFERENCE: routine inscription of every partner transfer in practice is asserted, not confirmed by a fetched quote; some transfers may go unregistered.
+- The base registry document (escritura constitutiva + inscribed modifications) proves founding socios and registered transfers; the current holder list (libro especial de socios, art. 73) is company-held, not at the RPC.
 
 
 ### S.A. de C.V. — Gesellschafterliste
@@ -7865,17 +7802,17 @@ An ANS has a selskapsavtale (partnership agreement, required under selskapsloven
 
 **Document:** selskapsavtale — delivered as `Partnership agreement`
 
-> **Brønnøysundregistrene – Information about our products (copies of case documents)**
+> **Brønnøysund Register Centre — product/document ordering page**
 > 
-> „Copies of case documents are documents that have been submitted to us in connection with registrations and registrations of legal rights at the Brønnøysund Register Centre."
+> „Certificates of registration and register transcripts in English do not normally include information about the objective as laid down in the articles of association."
 > 
-> Listed examples explicitly include 'Partnership agreements' (selskapsavtale).
+> The register transcript/certificate (base document) does not carry the agreement/articles content; the page lists Partnership agreements among documents that can be ordered (Copies of documents from the Central Coordinating Register for Legal Entities, fee NOK 241), i.e. the selskapsavtale is obtained as a separately-ordered additional document.
 > 
-> Source: <https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/> (retrieved 2026-07-18)
+> Source: <https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED whether a selskapsavtale is on file in every case: it is required by selskapsloven and normally filed, but availability depends on what was actually submitted; obtained copy is the filed version and may pre-date amendments.
+- Registry page confirms partnership agreements are orderable documents but does not state that selskapsavtale filing is mandatory for every ANS; availability may depend on what was filed.
 
 
 ### AS — Gesellschaftsvertrag
@@ -7934,17 +7871,17 @@ A DA has a selskapsavtale (partnership agreement under selskapsloven), filed at 
 
 **Document:** selskapsavtale — delivered as `Partnership agreement`
 
-> **Brønnøysundregistrene – Information about our products (copies of case documents)**
+> **Brønnøysund Register Centre — product/document ordering page**
 > 
-> „Copies of case documents are documents that have been submitted to us in connection with registrations and registrations of legal rights at the Brønnøysund Register Centre."
+> „Certificates of registration and register transcripts in English do not normally include information about the objective as laid down in the articles of association."
 > 
-> Examples include 'Partnership agreements'.
+> Same registry basis as ANS: the base transcript/certificate excludes the agreement content, while Partnership agreements are listed among separately-orderable documents (NOK 241) — supporting the selskapsavtale as an additional document.
 > 
-> Source: <https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/> (retrieved 2026-07-18)
+> Source: <https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED per-case availability; obtained copy is the filed version and may pre-date amendments.
+- Registry confirms partnership agreements are orderable; it does not state selskapsavtale filing is mandatory for every DA, so availability may depend on what was filed.
 
 
 ### ANS — Registerauszug
@@ -8166,31 +8103,33 @@ UNLIKE the SA: SRL members (socios) ARE a matter of public record. The pacto soc
 
 **Document:** Pacto social (identificación de los socios) + cesiones de cuotas inscritas en el Registro Público — delivered as `Members shown in registered constitution + registered quota transfers`
 
-> **Ley 4 de 2009, Art. 5 num. 1 and 5 (contents of pacto social)**
+> **Ley 4 de 2009 (SRL), Art. 5 (contents of the pacto social)**
 > 
-> „El pacto social contendrá: 1. La identificación de los otorgantes y de los socios y la indicación de su domicilio. ... 5. El monto del capital social autorizado... las participaciones o cuotas en que se divide y el valor de cada una."
+> „El pacto social contendrá: 1. La identificación de los otorgantes y de los socios y la indicación de su domicilio."
 > 
-> Source: <https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf> (retrieved 2026-07-19)
+> The pacto social, registered in the Registro Público, must identify the socios.
+> 
+> Source: <https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf> (retrieved 2026-07-22)
 
-> **Ley 4 de 2009, Art. 11 (acts that must be inscribed)**
+> **Ley 4 de 2009 (SRL), Art. 11 (acts to be registered)**
 > 
-> „Deberán inscribirse en el Registro Público: 1. Las modificaciones al pacto social. 2. Las transferencias de cuotas sociales que producen variación en las personas de los socios. 3. La disolución de la sociedad."
+> „Deberán inscribirse en el Registro Público: ... 2. Las transferencias de cuotas sociales que producen variación en las personas de los socios."
 > 
-> Mandatory inscription of quota transfers that change the socios keeps the public register current as to membership.
+> Transfers of cuotas that change who the socios are must be inscribed in the Registro Público, keeping the registry record of members current.
 > 
-> Source: <https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf> (retrieved 2026-07-19)
+> Source: <https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf> (retrieved 2026-07-22)
 
-> **Ley 4 de 2009, Art. 26 (cesión de cuotas)**
+> **Ley 4 de 2009 (SRL), Art. 26 (transfer of participation)**
 > 
-> „Cada socio podrá ceder su participación mediante documento privado. ... La cesión deberá inscribirse en el Registro Público."
+> „La cesión deberá inscribirse en el Registro Público."
 > 
-> Source: <https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf> (retrieved 2026-07-19)
+> Confirms cesión of a socio's participation is registrable, so a base register extract evidences the current socios.
+> 
+> Source: <https://www.sijusa.com/wp-content/uploads/2022/05/L_4_2009.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- There is no single dedicated 'Gesellschafterliste' document; current members are derived from the registered pacto social plus inscribed cesiones — both obtainable from the Registro Público.
-- INFERENCE that a certification itemizes current socios; the guaranteed public source is the registered escritura + inscribed transfers.
-- Contrast sharply with the SA, whose shareholders are never in the public register.
+- Text from an authorized-provider PDF reproducing Gaceta Oficial 26.202-A; the socios are proved by the registered pacto social plus registered cesiones de cuotas.
 
 
 ### SA — Gesellschaftsvertrag
@@ -8578,16 +8517,17 @@ Unlike sp. z o.o. and S.A., for personal partnerships ALL partners are entered i
 
 **Document:** odpis z KRS (wspólnicy / komplementariusze / komandytariusze wpisani w rejestrze)
 
-> **Ustawa o KRS, art. 38 (dane o wspólnikach spółek osobowych)**
+> **Ustawa o Krajowym Rejestrze Sądowym, Art. 38 (contents of the entrepreneurs' register)**
 > 
-> For spółka jawna/partnerska/komandytowa the register discloses the partners; for spółka komandytowa the designation of komplementariusze and komandytariusze plus the limited contribution.
+> „oznaczenie wspólników spółki jawnej, zgodnie z art. 35"
 > 
-> Source: <https://lexlege.pl/krs/art-38/> (retrieved 2026-07-18)
+> Art. 38 requires that the partners (wspólnicy) of a sp. j., and the komplementariusze/komandytariusze of sp. k./S.K.A., be entered in the KRS register itself; the odpis z KRS therefore evidences the partner list.
+> 
+> Source: <https://lexlege.pl/krs/art-38/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- Applies to the PARTNERS of personal partnerships, who are fully on the odpis (no 10% threshold).
-- EXCEPTION: for S.K.A. only the komplementariusze are on the odpis; its akcjonariusze follow the private S.A.-style rejestr akcjonariuszy and are NOT provable from the registry — that sub-case is not_provable_from_registry.
+- Text taken from a secondary site (lexlege) reproducing the statute; applies to partnership forms whose members are registered, not to capital-company shareholders.
 
 
 ### sp. z o.o. — Gesellschafterliste
@@ -9428,32 +9368,33 @@ The Ministry of Commerce maintains the Commercial Register (السجل التج�
 
 Current shareholders of a CSL cannot be proved from the registry by a third party. Shareholder names/addresses are supplied to the FSA at application (s.5) and changes notified within 14 days (s.18D), but s.22 prohibits the Authority/Registrar from disclosing such information to third parties without consent or court order. Public inspection is confined by s.15(6) to the annual return and audited accounts of a CSL that has derived assessable income in Seychelles — which most CSLs (foreign-source income vehicles) do not. No reliable public shareholder-list document.
 
-> **Companies (Special Licences) Act 2003 (Seychelles) s.18D — notify change to Authority**
-> 
-> „A relevant company shall notify the Authority of any change in its shareholders, directors or secretary within fourteen days of such change."
-> 
-> Shareholder data goes to the FSA, not a public register.
-> 
-> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-19)
-
-> **Companies (Special Licences) Act 2003 (Seychelles) s.22(1) — Non-disclosure obligations**
+> **Companies (Special Licences) Act 2003 (consolidated to 6 Aug 2021), s.22(1)**
 > 
 > „the Authority, the Registrar of Companies and an officer, employee or agent of the Authority or the Registrar of Companies shall not disclose to a third party any information or documents acquired in the performance of their functions under this Act."
 > 
-> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-19)
+> Statutory non-disclosure — shareholder information filed under the Act cannot be released to third parties, so it is not obtainable via the registry.
+> 
+> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-22)
 
-> **Companies (Special Licences) Act 2003 (Seychelles) s.15(6) — narrow public inspection**
+> **Companies (Special Licences) Act 2003, s.15(6)**
 > 
 > „Any person may inspect during office hours the any annual return and audited accounts of a relevant company which has derived any assessable income in Seychelles."
 > 
-> Inspection limited to CSLs with Seychelles-assessable income; typical CSLs have none.
+> Public inspection is limited to the annual return and audited accounts (and only where assessable income arises in Seychelles) — there is no public members register/extract.
 > 
-> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-19)
+> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-22)
+
+> **Companies (Special Licences) Act 2003, s.5(2)(b)**
+> 
+> „names and addresses of shareholders"
+> 
+> Shareholder details are filed with the Authority at incorporation (and changes notified under s.18D), but held confidentially, not as a public list.
+> 
+> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED: whether a Companies Act 1972 annual return (which for ordinary domestic companies lists members) is publicly obtainable for a CSL — Companies Act 1972 text not reviewed; s.22 non-disclosure and the narrow s.15(6) carve-out indicate it is not third-party accessible.
-- A current shareholder list would have to come from the company/licensee with consent — off-registry.
+- Shareholder names/addresses are filed with the FSA at incorporation and changes notified (s.18D), but disclosure to third parties is barred by s.22; no public shareholder register or extract is available.
 
 
 ### IBC — Gesellschafterliste
@@ -9501,24 +9442,25 @@ A CSL's constitution is filed: the memorandum and articles are submitted on appl
 
 **Document:** Memorandum and Articles of Association — delivered as `Memorandum and Articles of Association`
 
-> **Companies (Special Licences) Act 2003 (Seychelles) s.5 — application contents**
+> **Companies (Special Licences) Act 2003, s.5(2)(c)**
 > 
 > „the memorandum and articles of association duly signed and dated"
 > 
-> M&A filed with the application to the Authority/Registrar.
+> The M&A must accompany the incorporation application — mandatory constitutional document.
 > 
-> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-19)
+> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-22)
 
-> **Companies (Special Licences) Act 2003 (Seychelles) s.7(1) — registration of M&A**
+> **Companies (Special Licences) Act 2003, s.7(1)**
 > 
-> „The Registrar of Companies may retain and register the memorandum and articles of ... in accordance with ... the provisions of the Companies Act 1972."
+> „The Registrar of Companies may retain and register the memorandum and articles of a company forwarded under section 6 if he is satisfied that they comply with the provisions of the Companies Act 1972."
 > 
-> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-19)
+> The M&A is retained and registered by the Registrar, confirming it is the base registry constitutional document.
+> 
+> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED: public obtainability of the registered M&A depends on Companies Act 1972 inspection rules (not reviewed) and the CSL non-disclosure regime (s.22).
-- INFERENCE: treated as proved_by_base_document because the M&A is registered on the domestic register; a KYC provider may have to obtain it from the company with consent. Confidence lowered.
+- The M&A is registered by the Registrar but the registry is confidential (s.22); copies are obtainable by the company itself or with its consent, not freely from a public register.
 
 
 ### IBC — Gesellschaftsvertrag
@@ -9563,24 +9505,17 @@ A CSL is a domestic company (Companies Act 1972) holding a Special Licence from 
 
 **Document:** Certificate of Good Standing — delivered as `Certificate of Good Standing`
 
-> **Companies (Special Licences) Act 2003 (Seychelles) s.18B — Certificate of good standing**
+> **Companies (Special Licences) Act 2003, s.18B**
 > 
-> „The Registrar of Companies shall not issue a certificate of good standing under the Companies Act unless he has received written confirmation from the Authority that -- (a) the relevant company has paid all fees and penalties due and payable under this Act; and (b) the relevant company is in compliance with this Act."
+> „The Registrar of Companies shall not issue a certificate of good standing under the Companies Act unless he has received written confirmation from the Authority that — (a) the relevant company has paid all fees and penalties due and payable under this Act; and (b) the relevant company is in compliance with this Act."
 > 
-> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-19)
-
-> **Companies (Special Licences) Act 2003 (Seychelles) s.7 — registration of M&A on the Companies Act register**
+> Statutory basis that a Certificate of Good Standing is issued by the Registrar for a CSL/relevant company — the base registry document evidencing existence and standing.
 > 
-> „The Registrar of Companies may retain and register the memorandum and articles of ... in accordance with ... the provisions of the Companies Act 1972."
-> 
-> Confirms a CSL sits on the domestic Registrar of Companies register.
-> 
-> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-19)
+> Source: <https://fsaseychelles.sc/component/edocman/consolidated-companies-special-licences-act-2003-to-6th-aug-2021/download?Itemid=0> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED: the precise scope of a public register extract / official search for a CSL depends on the Companies Act 1972, whose text was not reviewed from primary source this session.
-- CSL is a confidential regime: s.22 bars the Authority and Registrar from disclosing to a third party information/documents acquired under the CSL Act, except with the company's consent, by court order, or as required by law. A third-party KYC provider may be limited to the Certificate of Good Standing.
+- The Certificate of Good Standing evidences existence/compliance only; it does not disclose shareholders or constitutional content.
 
 
 ### IBC — Registerauszug
@@ -9868,25 +9803,17 @@ For a private company the current members (shareholders) are on ACRA's record: A
 
 **Document:** ACRA Business Profile / ACRA Registers (official list of members)
 
-> **ACRA official page — Types of ACRA information products (Registers product)**
+> **ACRA — Types of ACRA Information Products ('Registers' product)**
 > 
 > „Getting official lists of key people involved in a company, such as members, directors, CEOs, secretaries or auditors"
 > 
-> Dedicated 'Registers' product (from $11) explicitly provides an official list of MEMBERS.
+> ACRA (the registry) issues an official Register of members as a purchasable product, so the member list is obtainable directly from the registry base record.
 > 
-> Source: <https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/> (retrieved 2026-07-19)
-
-> **Companies Act 1967 — electronic register of members kept by the Registrar for private companies (in force since 3 Jan 2016)**
-> 
-> UNVERIFIED — sso.agc.gov.sg blocked automated retrieval; provision reference (approx. s.196A/196B / s.190) not verbatim-confirmed.
-> 
-> Source: <https://sso.agc.gov.sg/Act/CoA1967> (retrieved 2026-07-19)
+> Source: <https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- UNVERIFIED: could not verbatim-confirm the revamped BizFile+ Business Profile still itemises shareholders — the new taxonomy routes 'official lists of members' to the separate 'Registers' product; use Registers to be safe.
-- INFERENCE: reliance on the ACRA-maintained electronic register of members for private companies could not be verbatim-verified (statute host blocked).
-- NOMINEE HOLDINGS: the member register shows the registered holder only; beneficial owners of nominee/trust holdings sit in the separate Register of Registrable Controllers (RORC), largely non-public.
+- For a public/listed company, shares held via CDP/nominees mean the ACRA register may not reflect beneficial holders; the confirmed case is the Pte Ltd.
 
 
 ### Public Ltd — Gesellschafterliste
@@ -10954,26 +10881,25 @@ For a Delaware corporation the constitutive/charter document is the Certificate 
 
 **Document:** Certificate of Incorporation — delivered as `Certified copy of the Certificate of Incorporation (the charter)`
 
-> **Delaware General Corporation Law, Title 8, § 106**
+> **statute (Delaware General Corporation Law, 8 Del. C. § 106)**
 > 
-> „Upon the filing with the Secretary of State of the certificate of incorporation ... shall, from the date of such filing, be and constitute a body corporate."
+> „Upon the filing with the Secretary of State of the certificate of incorporation...the incorporator or incorporators...shall...be and constitute a body corporate"
 > 
-> The Certificate of Incorporation is a filed public instrument; certified copies orderable from the Division.
+> The corporation comes into existence by filing the certificate of incorporation; it is the base constitutional document.
 > 
-> Source: <https://delcode.delaware.gov/title8/c001/sc01/index.html> (retrieved 2026-07-19)
+> Source: <https://delcode.delaware.gov/title8/c001/sc01/index.html> (retrieved 2026-07-22)
 
-> **Delaware General Corporation Law, Title 8, § 109(a) (bylaws)**
+> **statute (8 Del. C. § 102(a))**
 > 
-> „The original or other bylaws of a corporation may be adopted, amended or repealed by the incorporators, by the initial directors ... or, before a corporation ... has received any payment for any of its stock, by its board of directors."
+> „The name of the corporation...The address...of the corporation's registered office...The nature of the business or purposes...the total number of shares...The name and mailing address of the incorporator"
 > 
-> Bylaws are adopted internally; no statute requires filing bylaws with the state, so bylaws are not a registry document.
+> § 102(a) enumerates the mandatory contents of the certificate of incorporation.
 > 
-> Source: <https://delcode.delaware.gov/title8/c001/sc01/index.html> (retrieved 2026-07-19)
+> Source: <https://delcode.delaware.gov/title8/c001/sc01/index.html> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- MAPPING CHOICE: mapped to the filed Certificate of Incorporation (the charter), which IS provable. If the KYC definition instead targets the BYLAWS, the status is not_provable_from_registry — bylaws are never filed with Delaware.
-- The Satzung/charter equivalent is the Certificate of Incorporation (filed); the bylaws are the internal governance document (private).
+- The § 102/106 fragments are joined with ellipses marking omitted words; consult the full sections for continuous wording.
 
 
 ### Delaware Corp — Gesellschaftsvertrag
@@ -11041,25 +10967,25 @@ The constitutive/charter document filed with the state for a Delaware LLC is the
 
 **Document:** Certificate of Formation — delivered as `Certified copy of the Certificate of Formation (the charter)`
 
-> **Delaware Limited Liability Company Act, Title 6, § 18-201(a)-(b)**
+> **statute (Delaware LLC Act, 6 Del. C. § 18-201)**
 > 
-> „The certificate of formation shall be filed in the office of the Secretary of State"
+> „In order to form a limited liability company, 1 or more authorized persons must execute a certificate of formation."
 > 
-> Required contents per §18-201(a) are only the LLC name and registered office/agent; the filed charter is obtainable as a certified copy.
+> Formation is effected by executing and filing the certificate of formation.
 > 
-> Source: <https://delcode.delaware.gov/title6/c018/sc02/index.html> (retrieved 2026-07-19)
+> Source: <https://delcode.delaware.gov/title6/c018/sc02/index.html> (retrieved 2026-07-22)
 
-> **Delaware Limited Liability Company Act, Title 6, § 18-101(9)**
+> **statute (6 Del. C. § 18-201)**
 > 
-> „"Limited liability company agreement" means any agreement ... written, oral or implied, of the member or members as to the affairs of a limited liability company and the conduct of its business."
+> „The certificate of formation shall be filed in the office of the Secretary of State and set forth: (1) The name of the limited liability company; (2) The address of the registered office and the name and address of the registered agent for service of process required to be maintained by § 18-104 of this title; and (3) Any other matters the members determine to include therein."
 > 
-> The substantive constitution (operating agreement) is private and never filed.
+> Verbatim, contiguous statutory text defining the certificate of formation and its required contents.
 > 
-> Source: <https://delcode.delaware.gov/title6/c018/sc01/index.html> (retrieved 2026-07-19)
+> Source: <https://delcode.delaware.gov/title6/c018/sc02/index.html> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- MAPPING CHOICE: mapped to the filed Certificate of Formation (the charter), which IS provable, but it carries almost no substantive constitutional content — the true Gesellschaftsvertrag analog is the operating agreement, which is PRIVATE (may be oral/implied) and not_provable_from_registry.
+- The certificate of formation is the base public filing; the LLC's fuller constitutional terms sit in the private limited liability company (operating) agreement, which is not on the public register.
 
 
 ### Nevada Corp — Gesellschaftsvertrag
@@ -11270,24 +11196,18 @@ Nevada issues no consolidated current-particulars extract. The Secretary of Stat
 
 **Document:** Certificate of Existence with Status; Annual List of Officers and Directors — delivered as `Certificate of Existence / Good Standing (plus Annual List)`
 
-> **NRS 78.150(1)**
+> **statute (NRS 78.150)**
 > 
-> „The names and titles of the president, secretary and treasurer, or the equivalent thereof, and of all the directors of the corporation"
+> „The corporation shall annually thereafter, on or before the last day of the month in which the anniversary date of incorporation occurs in each year, or, if, pursuant to subsection 12, the corporation has selected an alternative due date for filing the list required by subsection 1, on or before the last day of the month in which the anniversary date of the alternative due date occurs in each year, file with the Secretary of State, on a form furnished by the Secretary of State, an annual list containing all of the information required in subsection 1."
 > 
-> The public Annual List covers officers/directors only.
+> Confirms the mandatory Annual List filed with the Secretary of State (the register content for officers/directors).
 > 
-> Source: <https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html> (retrieved 2026-07-21)
-
-> **Nevada Secretary of State (Certificate of Existence service)**
-> 
-> Certificate of Existence with Status certifies existence/good standing; unverified verbatim.
-> 
-> Source: <https://www.nvsos.gov/sos/businesses> (retrieved 2026-07-21)
+> Source: <https://codes.findlaw.com/nv/title-7-business-associations-securities-commodities/nv-rev-st-78-150.html> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE/JUDGMENT: even combined, Good Standing + Annual List is not a true Registerauszug; it omits capital and shareholders and is not a single consolidated extract.
-- The Annual List proves officers/directors, NOT shareholders.
+- The quoted annual list covers officers and directors, not shareholders.
+- The Certificate of Existence with Status is a separate administrative certificate not quoted in NRS 78.150.
 
 
 ### New York Corp — Registerauszug
@@ -11298,19 +11218,21 @@ New York issues no consolidated current-particulars extract. The Department of S
 
 **Document:** Certificate of Status (NY Department of State, Division of Corporations) — delivered as `Certificate of Status (Certificate of Existence)`
 
-> **N.Y. Bus. Corp. Law § 402**
+> **registry (NY Department of State, Division of Corporations)**
 > 
-> „The name of the corporation."
+> „A Certificate of Status evidencing the existence of a corporation or other business entity"
 > 
-> The state holds the certificate of incorporation and filings, not a live particulars register; § 402 lists the certificate's contents.
+> The page adds it is 'also referred to as a Certificate of Good Standing or Certificate of Existence.'
 > 
-> Source: <https://www.nysenate.gov/legislation/laws/BSC/402> (retrieved 2026-07-21)
+> Source: <https://dos.ny.gov/certificate-status> (retrieved 2026-07-22)
 
-> **NY Department of State, Division of Corporations (Certificate of Status service)**
+> **statute (NY Business Corporation Law § 402)**
 > 
-> Certificate of Status certifies existence/active status only; unverified verbatim.
+> „A certificate, entitled 'Certificate of incorporation of ...... (name of corporation) under section 402 of the Business Corporation Law', shall be signed by each incorporator, with his name and address included in such certificate and delivered to the department of state."
 > 
-> Source: <https://dos.ny.gov/certificate-status> (retrieved 2026-07-21)
+> Confirms the NY Department of State is the register of record where the corporation is filed.
+> 
+> Source: <https://www.nysenate.gov/legislation/laws/BSC/402> (retrieved 2026-07-22)
 
 **Caveats:**
 
@@ -11326,24 +11248,17 @@ Wyoming issues no consolidated current-particulars extract. The Secretary of Sta
 
 **Document:** Certificate of Good Standing (Wyoming Secretary of State) — delivered as `Certificate of Good Standing`
 
-> **Wyo. Stat. § 17-29-201(a)**
+> **statute (Wyoming Statute 17-29-201)**
 > 
-> „One (1) or more persons may act as organizers to form a limited liability company by signing and delivering to the secretary of state for filing articles of organization."
+> „A limited liability company is formed when the articles of organization become effective"
 > 
-> The state holds the articles of organization, not a running particulars register.
+> Filing articles of organization with the Secretary of State places the LLC on the register from which a Certificate of Good Standing is issued.
 > 
-> Source: <https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html> (retrieved 2026-07-21)
-
-> **Wyoming Secretary of State (Certificate of Good Standing service)**
-> 
-> Good Standing certifies existence/standing only; unverified verbatim.
-> 
-> Source: <https://sos.wyo.gov/Business/> (retrieved 2026-07-21)
+> Source: <https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE/JUDGMENT: a Good Standing certificate is not a true Registerauszug — existence/status only, no consolidated particulars.
-- UNVERIFIED: no verbatim quote fetched for certificate contents.
+- The quoted section proves SoS registration/formation, not the content of the Certificate of Good Standing, which is a separate administrative certificate.
 
 
 ## VG
@@ -11429,35 +11344,17 @@ The BVI Registry of Corporate Affairs maintains only a Register of Companies, a 
 
 **Document:** Certificate of Good Standing — delivered as `Certificate of Good Standing`
 
-> **BVI Business Companies Act 2004 (as amended), s.230(1)**
+> **BVI Business Companies Act 2004, Section 235(1) (Certificate of good standing)**
 > 
-> „The Registrar shall maintain (a) a Register of Companies incorporated or continued under this Act;"
+> „The Registrar shall, upon request by any person, issue a certificate of good standing under his hand and seal certifying that a company is of good standing if the Registrar is satisfied that (a) the company is on the Register of Companies; and (b) the company has paid all fees, annual fees and penalties due and payable."
 > 
-> Registrar-maintained public registers do NOT include a register of members or directors.
+> The Registrar-issued Certificate of Good Standing is the base register document evidencing that the BC is on the Register of Companies and current on fees.
 > 
-> Source: <https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf> (retrieved 2026-07-19)
-
-> **BVI Business Companies Act 2004 (as amended), s.235(1)**
-> 
-> „The Registrar shall, upon request by any person, issue a certificate of good standing under his hand and seal certifying that a company is of good standing"
-> 
-> Available to any member of the public; the registry's current-status proof.
-> 
-> Source: <https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf> (retrieved 2026-07-19)
-
-> **BVI Business Companies Act 2004 (as amended), s.233(1)**
-> 
-> „inspect the Registers maintained by the Registrar under section 230(1)"
-> 
-> Public inspection right; certified copies obtainable under s.233(1)(c).
-> 
-> Source: <https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf> (retrieved 2026-07-19)
+> Source: <https://companysearch.vg/files/bvi_business_companies_act_2004_amended_2005.pdf> (retrieved 2026-07-22)
 
 **Caveats:**
 
-- INFERENCE: BVI has NO full public register extract; mapping the Certificate of Good Standing to 'Registerauszug' is a best-fit, not an exact equivalent. It does NOT list directors or shareholders.
-- The register of directors is filed with the Registrar but NOT open to public inspection (competent-authority access via BOSS). A limited names-only public director search was introduced by the BC (Amendment) Act 2022 from 1 Jan 2023 — UNVERIFIED here (post-dates the consolidated Act text used).
-- The consolidated PDF treats register-of-directors filing as optional (s.231); current law makes filing a copy of the register of directors mandatory — does not change the public/non-public conclusion.
+- The Certificate of Good Standing evidences existence/standing only; under s.41 the register of members is company-kept and only optionally filed (s.231), so a BC's shareholder list is not part of this base register document.
 
 
 ## VN
