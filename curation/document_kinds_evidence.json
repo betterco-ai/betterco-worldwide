@@ -3454,12 +3454,20 @@
     "note": "Because every SNC associé has merchant status and is indefinitely and jointly liable, each is individually identified in the RCS registration and named on the Kbis.",
     "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042",
     "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Code de commerce, art. R123-54, 1° (Légifrance) — déclaration aux fins d'immatriculation des personnes morales",
+    "quote": "Les nom, nom d'usage, pseudonyme, prénoms et domicile personnel des associés tenus indéfiniment ou tenus indéfiniment et solidairement des dettes sociales",
+    "note": "English gloss: the company's registration declaration to the RCS must state 'the surname, customary name, pseudonym, first names and personal domicile of the associés who are indefinitely, or indefinitely and jointly-and-severally, liable for the company's debts' (plus their date/place of birth and nationality). For an SNC all associés fall under this (art. L221-1), so the partners are RCS register data — directly supporting registry provability of the partner list.",
+    "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041563764",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "Statute establishes the associés' merchant status/liability that grounds their registration; the exact Kbis contents could not be verbatim-confirmed (infogreffe returned HTTP 403)."
+   "The répartition des parts (share allocation among partners) is not an R123-54 register datum; it is evidenced by the statuts filed at the RCS — hence 'Kbis + statuts' as the document set.",
+   "The precise print layout of the Kbis for an SNC (that the associés block is reproduced on the extract) was not verbatim-confirmed (infogreffe returned HTTP 403); the Kbis is the certified reproduction of the RCS entries in which the associés are, per R123-54, recorded."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "FR",
@@ -3660,20 +3668,29 @@
    {
     "basis": "Infogreffe – official document 'Extrait Kbis'",
     "quote": "L'extrait Kbis (...) constitue la véritable carte d'identité à jour d'une entreprise immatriculée au registre du commerce et des sociétés (RCS).",
+    "note": "English gloss: the Kbis extract is the true, up-to-date identity card of a business registered in the RCS.",
     "url": "https://www.infogreffe.fr/documents-officiels/extrait-kbis",
     "retrieved": "2026-07-18"
    },
    {
     "basis": "Code de commerce, art. L221-1 (SNC — associés indéfiniment et solidairement responsables)",
     "quote": "Les associés en nom collectif ont tous la qualité de commerçant et répondent indéfiniment et solidairement des dettes sociales.",
+    "note": "English gloss: SNC partners all have merchant status and are indefinitely and jointly-and-severally liable for the company's debts.",
     "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042",
     "retrieved": "2026-07-18"
+   },
+   {
+    "basis": "Code de commerce, art. R123-54, 1° (Légifrance) — déclaration aux fins d'immatriculation des personnes morales",
+    "quote": "Les nom, nom d'usage, pseudonyme, prénoms et domicile personnel des associés tenus indéfiniment ou tenus indéfiniment et solidairement des dettes sociales",
+    "note": "English gloss: the RCS immatriculation declaration must identify every associé who is indefinitely (and jointly) liable for the company's debts. This closes the earlier inference gap: SNC associés (all of whom are indefinitely and jointly liable per L221-1) are mandatorily declared to and recorded in the RCS, whose up-to-date extract is the Kbis.",
+    "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041563764",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "Whether every associé (not just gérants) is printed on the SNC Kbis was not verbatim-confirmed from a primary source; it follows from the RCS obligation to register indefinitely-liable partners — INFERENCE."
+   "The Kbis print-out content itself was not verbatim-confirmed from infogreffe (HTTP 403); that the associés declared under R123-54 appear on the extract follows from the Kbis being the certified reproduction of the RCS entries."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "GB",
@@ -4116,11 +4133,18 @@
     "retrieved": "2026-07-20"
    },
    {
-    "basis": "N.4072/2012 (IKE), art. 84",
-    "quote": "Μεταβίβαση εν ζωή",
-    "note": "Article 84 title (verbatim); inter-vivos transfer of an IKE share is subject to GEMI publicity, so partner changes are on the public register. Full sentence not fetched verbatim.",
-    "url": "https://www.taxheaven.gr/law/4072/2012",
-    "retrieved": "2026-07-20"
+    "basis": "N.4072/2012 (IKE), art. 84 para. 1, as in force (text via Lawspot law database reproducing the codified statute)",
+    "quote": "Η μεταβίβαση ή επιβάρυνση των εταιρικών μεριδίων εν ζωή γίνεται εγγράφως και επάγεται αποτελέσματα ως προς την εταιρεία και τους εταίρους από τη γνωστοποίηση σε αυτή της μεταβίβασης.",
+    "note": "English gloss: 'The inter-vivos transfer or encumbrance of company shares is made in writing and takes effect vis-à-vis the company and the partners from the notification of the transfer to the company.' Verbatim operative sentence now obtained, replacing the earlier title-only citation.",
+    "url": "https://www.lawspot.gr/nomothesia/n-4072-2012/arthro-84-nomos-4072-2012-metavivasi-en-zoi/",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "N.4072/2012 (IKE), art. 84, third-party effect sentence, as in force (text via Lawspot law database reproducing the codified statute)",
+    "quote": "Ως προς τους τρίτους η μεταβίβαση θεωρείται ότι έγινε από την καταχώριση στο βιβλίο των εταίρων.",
+    "note": "English gloss: 'Vis-à-vis third parties the transfer is deemed to have taken place from its entry in the book of partners.' Under the current wording of art. 84, third-party effect attaches to the INTERNAL βιβλίο εταίρων, not to a GEMI registration — an important limit on registry provability of current holdings.",
+    "url": "https://www.lawspot.gr/nomothesia/n-4072-2012/arthro-84-nomos-4072-2012-metavivasi-en-zoi/",
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "N.4072/2012 (IKE), art. 66",
@@ -4132,8 +4156,9 @@
   ],
   "caveats": [
    "There is no single German-style standalone 'Gesellschafterliste' document at GEMI for an IKE; the current member list is assembled from the codified καταστατικό and registered transfer announcements. Classified as additional (not base) document.",
-   "That GEMI transfer publicity is constitutive/effective vis-à-vis third parties for IKE shares is INFERENCE from art. 84 title; the operative sentence was not fetched verbatim (paywalled). UNVERIFIED at quote level.",
-   "The internal βιβλίο εταίρων (art. 66) is not obtainable from the registry."
+   "SUBSTANTIVE (verbatim-confirmed 2026-07-22): art. 84 as in force makes an inter-vivos share transfer effective vis-à-vis the company upon notification and vis-à-vis third parties upon entry in the internal βιβλίο εταίρων — the article itself does NOT hinge effectiveness on GEMI registration. The practice of announcing transfers/partner changes at ΓΕΜΗ rests on the GEMI-law publicity regime and chamber procedure, which was not verbatim-confirmed this session; registry-derived holdings can therefore lag or under-record the legally effective state in the βιβλίο εταίρων.",
+   "The internal βιβλίο εταίρων (art. 66) is not obtainable from the registry.",
+   "Art. 84 verbatim text was fetched from lawspot.gr, a Greek legal database reproducing the codified statute; the official et.gr/ΦΕΚ text was not fetched (official portals unreachable within budget)."
   ],
   "confidence": "medium"
  },
@@ -4457,25 +4482,33 @@
   "summary": "Croatian company law (Austrian-derived) records the members of a d.o.o. as register data, so the izvadak shows a 'Članovi društva' section with each member and the nominal amount of their business share (temeljni ulog / poslovni udjel). The dedicated membership record is the knjiga poslovnih udjela, but under ZTD (čl. 410-411) that book is an INTERNAL company register kept by the uprava — inspected on the company's premises, not filed with the court register — so it is not itself obtainable from the registry. Because membership is legally determined by entry in that internal book, the register's member data can lag actual ownership.",
   "evidence": [
    {
+    "basis": "Zakon o sudskom registru, članak 4. — javnost registra (consolidated text, zakon.hr)",
+    "quote": "Registar je javan.",
+    "note": "The register is public. Čl. 4 st. 2 continues verbatim: 'Svatko, bez dokazivanja pravnog interesa, ima pravo uvida u podatke upisane u glavnoj knjizi, u isprave na temelju kojih je obavljen upis i u druge isprave i podatke pohranjene u zbirci isprava' — anyone, without proving legal interest, may inspect the registered data and underlying documents.",
+    "url": "https://www.zakon.hr/z/271/zakon-o-sudskom-registru",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Zakon o sudskom registru, članak 31.c st. 1 t. 3 — podaci koji se upisuju za d.o.o.",
+    "quote": "ime i prezime, prebivalište, OIB članova društva, a za pravne osobe tvrtka ili naziv, sjedište, MBS, OIB i EUID, odnosno odgovarajući podaci za stranu pravnu osobu",
+    "note": "Introductory sentence verbatim: 'Osim podataka iz članka 24. ovoga Zakona za društvo s ograničenom odgovornošću upisuju se slijedeći podaci:'. The MEMBERS of a d.o.o. (name, residence, OIB; for legal persons firm, seat, MBS/OIB/EUID) are thus statutory register data — they appear on the izvadak (base document). Točka 1 of the same provision registers 'ukupni iznos temeljnog kapitala' (total share capital).",
+    "url": "https://www.zakon.hr/z/271/zakon-o-sudskom-registru",
+    "retrieved": "2026-07-22"
+   },
+   {
     "basis": "ZTD, čl. 410-411 (knjiga poslovnih udjela; imatelj poslovnog udjela)",
     "quote": "Član društva je samo ona osoba koja je upisana u knjizi poslovnih udjela društva kao imatelj poslovnog udjela",
     "note": "Quote as reproduced by a secondary Croatian legal source (codex-sortium.hr); the knjiga poslovnih udjela is described as an internal register inspected during working hours, not filed with the public court register.",
     "url": "https://codex-sortium.hr/usluge/knjiga-poslovnih-udjela",
     "retrieved": "2026-07-20"
-   },
-   {
-    "basis": "ZTD (Zakon o trgovačkim društvima) – d.o.o. provisions",
-    "note": "Full ZTD čl. 410 text could not be fetched verbatim (zakon.hr serves the whole act as one truncating page).",
-    "url": "https://www.zakon.hr/z/546/Zakon-o-trgovackim-drustvima",
-    "retrieved": "2026-07-20"
    }
   ],
   "caveats": [
-   "INFERENCE/UNVERIFIED: that the current izvadak still displays 'Članovi društva' with share amounts could not be confirmed verbatim (WebSearch budget exhausted; no live extract fetched). Grounded on the Austrian-model heritage of Croatian d.o.o. law where members are register data.",
    "The authoritative membership record is the internal knjiga poslovnih udjela (ZTD čl. 410), which is NOT filed with the court register and is not publicly downloadable — so registry member data may be secondary/lagging.",
-   "If, contrary to the assessment, members are NOT shown on the izvadak, the correct status would be not_provable_from_registry (the internal book being the only membership record)."
+   "Nominal amounts of individual poslovni udjeli were not verbatim-confirmed among the čl. 31.c register data (confirmed verbatim: total temeljni kapital in t. 1 and member identities in t. 3); per-member share amounts on the izvadak rest on registry practice.",
+   "The ZTD čl. 410 quote is still sourced from a secondary reproduction (zakon.hr serves the full ZTD as one truncating page); it grounds a caveat, not the status claim itself."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "HR",
@@ -5703,15 +5736,31 @@
   "summary": "There is no libro soci; both the general partners (accomandatari) and the limited partners (accomandanti) are named in the registered atto costitutivo and any change is registered, so the current soci appear on the visura.",
   "evidence": [
    {
-    "basis": "Codice civile art. 2317 + art. 2295/2296 (richiamati) — soci indicati nell'atto costitutivo iscritto nel registro delle imprese",
-    "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche",
-    "retrieved": "2026-07-18"
+    "basis": "registroimprese.it (official Registro Imprese portal) — contents of the visura camerale",
+    "quote": "titolari e soci con relative quote",
+    "note": "Official description of the visura camerale contents: 'holders and partners with their respective quotas'. For a registered Sas the soci — accomandatari and accomandanti alike — appear on the visura (base document).",
+    "url": "https://www.registroimprese.it/visura-camerale-ordinaria-storica-e-certificato",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "registroimprese.it — contents of the visura camerale (soci section)",
+    "quote": "soci e titolari di diritti su quote e azioni",
+    "note": "'Partners and holders of rights over quotas and shares' listed as visura content.",
+    "url": "https://www.registroimprese.it/visura-camerale-ordinaria-storica-e-certificato",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Codice civile art. 2316 (l'atto costitutivo deve indicare i soci accomandatari e i soci accomandanti) e art. 2317/2296 (iscrizione nel registro delle imprese)",
+    "note": "Statutory basis: the Sas atto costitutivo must indicate both classes of partners and is registered. Article text NOT fetched verbatim this session — normattiva.it serves the whole code as a single truncating page.",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE: statutory basis cited but not fetched verbatim; that both accomandatari and accomandanti are shown on the visura for a registered Sas is well established operationally."
+   "Codice civile art. 2316/2317 could not be quoted verbatim (normattiva.it delivers the entire code as one truncating page); verbatim support comes from the official Registro Imprese visura documentation.",
+   "The registry's visura documentation uses the generic term 'soci' and does not separately name accomandanti; that limited partners are individually shown on the Sas visura is standard registry practice grounded in art. 2316's requirement that they be indicated in the registered atto costitutivo."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "IT",
@@ -5724,15 +5773,30 @@
   "summary": "In a partnership there is no libro soci; the partners (soci) are named in the registered atto costitutivo (art. 2295 c.c.) and every change is registered, so the current soci appear directly on the visura.",
   "evidence": [
    {
-    "basis": "Codice civile art. 2295 (contenuto dell'atto costitutivo, incl. i soci) e art. 2296 (deposito/iscrizione nel registro delle imprese)",
-    "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche",
-    "retrieved": "2026-07-18"
+    "basis": "registroimprese.it (official Registro Imprese portal) — contents of the visura camerale",
+    "quote": "titolari e soci con relative quote",
+    "note": "Official description of the visura camerale contents: 'holders and partners with their respective quotas' are among the data reported. For a registered Snc the partners therefore appear directly on the visura (base document).",
+    "url": "https://www.registroimprese.it/visura-camerale-ordinaria-storica-e-certificato",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "registroimprese.it — contents of the visura camerale (soci section)",
+    "quote": "soci e titolari di diritti su quote e azioni",
+    "note": "'Partners and holders of rights over quotas and shares' listed as visura content — the registry's own documentation that partner identities and holdings are on the extract.",
+    "url": "https://www.registroimprese.it/visura-camerale-ordinaria-storica-e-certificato",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Codice civile art. 2295 (contenuto dell'atto costitutivo, incl. generalità dei soci) e art. 2296 (iscrizione dell'atto costitutivo nel registro delle imprese)",
+    "note": "Statutory basis: the atto costitutivo must state the partners and is registered, and amendments are registered (art. 2300), so the register tracks current soci. Article text NOT fetched verbatim this session — normattiva.it serves the whole code as a single truncating page.",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE: statutory basis (art. 2295/2296) cited but not fetched verbatim in this run. That partner identities are public on the visura for registered partnerships is well established operationally."
+   "Codice civile art. 2295/2296 could not be quoted verbatim (normattiva.it delivers the entire code as one page that truncates before Book V); the verbatim support comes from the official Registro Imprese documentation of visura contents."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "IT",
@@ -5841,15 +5905,30 @@
   "summary": "The Sas atto costitutivo is deposited at the Registro delle Imprese (art. 2317 richiamando art. 2296 c.c.) and retrievable as a separate archived document.",
   "evidence": [
    {
-    "basis": "Codice civile art. 2317 e art. 2296 — deposito dell'atto costitutivo per l'iscrizione nel registro delle imprese",
-    "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche",
-    "retrieved": "2026-07-18"
+    "basis": "registroimprese.it (official Registro Imprese portal) — Fascicolo d'impresa contents",
+    "quote": "Il Fascicolo contiene informazioni della Visura ordinaria (statuto / patti sociali vigenti, elenco pratiche depositate ma non ancora iscritte, società controllanti, partecipazioni in altre società), l'ultimo bilancio depositato, lo statuto e altre informazioni.",
+    "note": "The registry's Fascicolo product includes the current statuto / patti sociali as deposited — the Sas constitutive deed is on file and retrievable as a separate document.",
+    "url": "https://www.registroimprese.it/fascicolo",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "registroimprese.it — Fascicolo (storico), section for Società di persone",
+    "quote": "i Patti sociali depositati (per le Società di persone)",
+    "note": "For partnerships (incl. Sas) the deposited patti sociali are expressly listed as retrievable Fascicolo content.",
+    "url": "https://www.registroimprese.it/fascicolo",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Codice civile art. 2317 (richiamo dell'art. 2296) — deposito dell'atto costitutivo della Sas per l'iscrizione nel registro delle imprese",
+    "note": "Statutory deposit obligation. Article text NOT fetched verbatim this session — normattiva.it serves the whole code as a single truncating page.",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED URL: article-specific page not fetched verbatim; cited URL is the registry portal."
+   "Codice civile art. 2317/2296 could not be quoted verbatim (normattiva.it truncation); verbatim support comes from the official Registro Imprese documentation showing deposited patti sociali are retrievable (Fascicolo / copie atti)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "IT",
@@ -5862,15 +5941,37 @@
   "summary": "The Snc atto costitutivo (patti sociali) is deposited at the Registro delle Imprese (art. 2296 c.c.) and retrievable as a separate archived document.",
   "evidence": [
    {
+    "basis": "registroimprese.it (official Registro Imprese portal) — Fascicolo d'impresa contents",
+    "quote": "Il Fascicolo contiene informazioni della Visura ordinaria (statuto / patti sociali vigenti, elenco pratiche depositate ma non ancora iscritte, società controllanti, partecipazioni in altre società), l'ultimo bilancio depositato, lo statuto e altre informazioni.",
+    "note": "The registry's Fascicolo product includes the current statuto / patti sociali as deposited — i.e. the constitutive agreement is on file and retrievable as a document beyond the plain visura.",
+    "url": "https://www.registroimprese.it/fascicolo",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "registroimprese.it — Fascicolo (storico), section for Società di persone",
+    "quote": "i Patti sociali depositati (per le Società di persone)",
+    "note": "For partnerships (Snc/Sas) the deposited patti sociali are expressly listed as retrievable Fascicolo content — the atto costitutivo/patti sociali is an obtainable additional registry document.",
+    "url": "https://www.registroimprese.it/fascicolo",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "registroimprese.it — Società di persone e di capitale (constitution of partnerships)",
+    "quote": "formalizzano le regole che disciplineranno i loro rapporti nella società mediante la sottoscrizione dell'atto costitutivo e dello statuto o dei patti sociali",
+    "note": "Official registry documentation that the partners' rules are formalised in the atto costitutivo / patti sociali, which is then registered with the competent Registro delle Imprese.",
+    "url": "https://www.registroimprese.it/societa-di-persone-e-di-capitale",
+    "retrieved": "2026-07-22"
+   },
+   {
     "basis": "Codice civile art. 2296 — deposito dell'atto costitutivo per l'iscrizione nel registro delle imprese",
-    "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche",
-    "retrieved": "2026-07-18"
+    "note": "Statutory deposit obligation. Article text NOT fetched verbatim this session — normattiva.it serves the whole code as a single truncating page.",
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED URL: article-specific page not fetched verbatim; cited URL is the registry portal."
+   "Codice civile art. 2296 could not be quoted verbatim (normattiva.it truncation); verbatim support comes from the official Registro Imprese documentation showing deposited patti sociali are retrievable (Fascicolo / copie atti)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "IT",
@@ -6799,24 +6900,46 @@
   "summary": "An Anstalt has no shareholders; ownership/control sits with the holder(s) of the founder's rights (Inhaber der Gründerrechte) and, economically, the beneficiaries (Destinatäre). Neither is disclosed on the Handelsregister extract — founder rights are commonly held via a trustee, and beneficiary provisions typically sit in non-public Beistatuten. There is no register document evidencing the owners.",
   "evidence": [
    {
-    "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Anstalt, Art. 534–551 PGR)",
+    "basis": "PGR Art. 538 Abs. 1 (Eintragung und Veröffentlichung der Anstalt) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "In das Handelsregister sind einzutragen und im Auszuge zu veröffentlichen: 1. der Gründungsakt, falls er nicht in den Statuten selbst enthalten ist; 2. das Datum der Statuten; 3. der Name beziehungsweise die Firma und der Sitz der Anstalt; 4. der Gegenstand des Unternehmens beziehungsweise Zweck und gegebenenfalls die Zeitdauer der Anstalt; 5. die Höhe des der Anstalt gewidmeten Fonds, sowie des eingezahlten Betrages oder der eingebrachten sonstigen Vermögenswerte mit ihrem Schätzungswerte; 6. gegebenenfalls besonders für Dritte festgesetzte Genussrechte nebst den Berechtigten; 7. Name, Vorname und Wohnort beziehungsweise Firma und Sitz der Mitglieder der Verwaltung, die Form, in der die Verwaltung ihre Willenserklärungen kundgibt und die Art der Ausübung der Vertretung; 8. die Form, in der die von der Anstalt ausgehenden Bekanntmachungen erfolgen.",
+    "note": "Exhaustive list of what is entered in the Handelsregister and published in the extract for an Anstalt: founding act, statutes date, name/seat, purpose, fund, any third-party enjoyment rights, board members, publication form. The holder(s) of the founder's rights (the owners) and any member list are NOT among the registrable items — so ownership is not evidenced by any register document. (Line-wrap hyphenation of the PDF removed.)",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "PGR Art. 543 Abs. 1 (Oberstes Organ der Anstalt) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Der oder die Inhaber der Gründerrechte bilden das oberste Organ der Anstalt. Die Statuten können auch die Verwaltung mit den Befugnissen des obersten Organes betrauen.",
+    "note": "The holder(s) of the founder's rights are the supreme organ (ownership/control position) of the Anstalt — yet they do not appear in the Art. 538 registration list.",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "PGR Art. 541 (Gründerrechte) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Die einer oder mehreren Personen zustehenden Gründerrechte können abgetreten oder sonst übertragen und vererbt, nicht aber verpfändet oder sonst belastet werden.",
+    "note": "Founder's rights pass by assignment, other transfer or inheritance; the statute attaches no Handelsregister registration or filing to such transfers, so changes of ownership never touch the register.",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Anstalt AJU/h70.005.09, 06/2025, Art. 534 bis Art. 551 PGR), section 3",
     "quote": "Die Anstalt kann sowohl stiftungsähnlich, d.h. ohne Mitglieder und ohne in Anteile zerlegtes Kapital, als auch körperschaftsähnlich organisiert sein.",
-    "note": "An Anstalt has no members and no share-divided capital; where founder's rights exist the Inhaber der Gründerrechte is the top organ. The register records the Verwaltung, Revisionsstelle, Verwahrer and Repräsentanz — not the holder of founder's rights — so ownership cannot be evidenced from the register extract.",
+    "note": "An Anstalt has no members and (in the typical foundation-like form) no share-divided capital; there is accordingly no shareholder/member list to register. Quote re-verified verbatim against the current PDF (downloaded this session).",
     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf",
     "retrieved": "2026-07-22"
    },
    {
     "basis": "Same Merkblatt, section 3 (Organisation)",
     "quote": "Bei einer Anstalt mit Gründerrechten ist in der Regel der oder die Inhaber der Gründerrechte oberstes Organ.",
-    "note": "The holder of founder's rights is the beneficial owner but is not an entity entered in the Handelsregister.",
+    "note": "The holder of founder's rights is the beneficial owner but is not an entity entered in the Handelsregister. Quote re-verified verbatim against the current PDF (downloaded this session).",
     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf",
     "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "The Merkblatt confirms the Anstalt has no membership list and does not list the Inhaber der Gründerrechte among the registered organs, but it does not contain an express statement that the holder is omitted from the register; the not-provable conclusion is strongly implied rather than stated verbatim."
+   "Edge case (PGR Art. 538 Abs. 1 Ziff. 6): Genussrechte specially established for third parties are registered together with their holders — so enjoyment (not ownership) rights can exceptionally appear on the extract.",
+   "If the statutes provide for Anstaltsanteile (PGR Art. 540), the Verwaltung keeps an Anteilbuch under the GmbH rules (Art. 540 Abs. 6 PGR) — an internal book of the Anstalt, not a register document; even in the corporate-like variant the holders are not registry-provable."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "LI",
@@ -6973,24 +7096,53 @@
   "summary": "The foundation's constitution is the Stiftungsurkunde (Statut). It is a mandatory document, but for the typical (private-benefit/deposited) foundation it is subject to the restricted-public principle and is NOT freely retrievable from the register — unlike GmbH/AG/Anstalt Statuten. Treat as not obtainable as a public document by default.",
   "evidence": [
    {
-    "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung, Art. 552 §§ 1–41 PGR), section 4",
+    "basis": "PGR Art. 955a Abs. 1 (Öffentlichkeit bei Hinterlegungen) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Einsichtnahme, Auszüge, Abschriften oder Zeugnisse von gemäss Art. 990 hinterlegten Akten und Schriftstücken sowie von Anmeldungen und Belegen nicht im Handelsregister eingetragener Stiftungen und Treuhänderschaften können nur vom Hinterleger und demjenigen, der hierzu ermächtigt ist, verlangt werden.",
+    "note": "Direct statutory rule: inspection, extracts and copies of deposited files of NON-registered foundations may be requested only by the depositor or a person authorised by him — i.e. the foundation documents of the typical (deposited) private-benefit Stiftung are not obtainable by third parties from the registry. (Line-wrap hyphenation of the PDF removed.)",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "PGR Art. 552 § 14 Abs. 5 (Errichtung; keine Eintragungspflicht privatnütziger Stiftungen) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Andere privatnützige Stiftungen können in das Handelsregister eingetragen werden. Eine Rechtspflicht besteht jedoch nicht.",
+    "note": "Private-benefit foundations (other than those running a commercial business on a special statutory basis) are not obliged to register — the default case therefore leaves no register file containing the Stiftungsurkunde.",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "PGR Art. 552 § 20 Abs. 1 und 2 (Hinterlegung der Gründungsanzeige) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Die Gründungsanzeige hat folgende Angaben zu enthalten: 1. Name der Stiftung; 2. Sitz der Stiftung; 3. Zweck der Stiftung; 4. Datum der Errichtung der Stiftung; 5. Dauer der Stiftung, falls diese begrenzt ist;",
+    "note": "For non-registered foundations only a Gründungsanzeige with enumerated DATA items (name, seat, purpose, date, duration, foundation council, representative, confirmations) is deposited — the Stiftungsurkunde itself is not among the deposited items, so the deed never reaches the registry file in the default case. (Quote is the head of the § 20 Abs. 2 list, items 1-5; items 6-11 are further data/confirmations.)",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "PGR Art. 552 § 19 Abs. 1 (Eintragung ins Handelsregister; Beilage der Stiftungsurkunde) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Die Anmeldung ist unter Beilage des Originals oder einer beglaubigten Abschrift der Stiftungsurkunde schriftlich einzureichen.",
+    "note": "Counter-limit documented for precision: for foundations that ARE registered (mandatorily the gemeinnützige), the Stiftungsurkunde is filed with the registration application, and under Art. 953 Abs. 1 PGR ('Das Handelsregister mit Einschluss der Anmeldungen und der Belege ist öffentlich.') the register including supporting documents is public — so for registered foundations the deed is in principle accessible. The not-provable status holds for the typical non-registered private-benefit foundation.",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung AJU/h70.008.10, 07/2026, Art. 552 §§ 1-41 PGR), section 4",
     "quote": "Die Stiftungsurkunde (Statut) der Stiftung muss die gesetzlich erforderlichen Angaben und Bestimmungen enthalten.",
-    "note": "The Stiftungsurkunde (Statut) is the constitutive document of the foundation (PGR Art. 552 §16).",
+    "note": "The Stiftungsurkunde (Statut) is the constitutive document of the foundation (PGR Art. 552 § 16). Quote re-verified verbatim against the current PDF (downloaded this session).",
     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf",
     "retrieved": "2026-07-22"
    },
    {
     "basis": "Same Merkblatt, section 2 (Errichtung)",
     "quote": "Unterliegt die Stiftung keiner Eintragungspflicht, ist binnen 30 Tagen ab Errichtung der Stiftung eine Gründungsanzeige beim Amt für Justiz zu hinterlegen.",
-    "note": "Non-registrable (typically privatnützige) foundations only deposit a Gründungsanzeige rather than being entered in the Handelsregister, so the Stiftungsurkunde is not obtainable as a public register document.",
+    "note": "Non-registrable (typically privatnützige) foundations only deposit a Gründungsanzeige rather than being entered in the Handelsregister, so the Stiftungsurkunde is not obtainable as a public register document. Quote re-verified verbatim against the current PDF (downloaded this session).",
     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf",
     "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "Nuanced: gemeinnützige (charitable) foundations must be entered in the Handelsregister, so for those the Stiftungsurkunde is lodged; the not-provable status holds mainly for privatnützige foundations, which are not obligatorily registered."
+   "Nuanced: gemeinnützige (charitable) foundations must be entered in the Handelsregister (PGR Art. 552 § 14 Abs. 4), the Stiftungsurkunde is filed with the Anmeldung (§ 19 Abs. 1) and register files including Belege are public (Art. 953 PGR) — so for those (and for voluntarily registered private foundations) the Stiftungsurkunde is in principle obtainable; the not-provable status holds for the default, non-registered privatnützige Stiftung.",
+   "Beistatuten (Stiftungszusatzurkunden) and Reglemente, which typically contain beneficiary details, are not deposited at all and remain private in every variant."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "LI",
@@ -7070,17 +7222,38 @@
   "summary": "Split regime: gemeinnützige (charitable) foundations MUST be registered and have a register extract; privatnützige (private-benefit, e.g. family) foundations are usually only DEPOSITED (Gründungsanzeige hinterlegt) and are not entered in the register — for those there is no substantive public extract. Even for registered foundations the 'restricted public principle' limits public access.",
   "evidence": [
    {
-    "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung, Art. 552 §§ 1–41 PGR), section 1",
+    "basis": "PGR Art. 552 § 14 Abs. 4 (Eintragungspflicht) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Gemeinnützige Stiftungen und privatnützige Stiftungen, die auf spezialgesetzlicher Grundlage ein nach kaufmännischer Art geführtes Gewerbe betreiben, sind in das Handelsregister einzutragen und erlangen durch die Eintragung das Recht der Persönlichkeit.",
+    "note": "Charitable foundations (and commercially active private ones on a special statutory basis) MUST be entered in the Handelsregister — a register entry, and hence an extract, exists for them. (Line-wrap hyphenation of the PDF removed.)",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "PGR Art. 552 § 19 Abs. 3 (Inhalt der Eintragung) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Die Eintragung hat folgende Angaben zu enthalten: 1. Name bzw. Firma der Stiftung; 2. Sitz der Stiftung; 3. Zweck der Stiftung; 4. Datum der Errichtung der Stiftung; 5. Dauer der Stiftung, falls diese begrenzt ist; 6. Organisation und Vertretung, wobei Name, Vorname, Geburtsdatum, Staatsbürgerschaft und Wohnsitz oder Kanzleisitz bzw. Firma und Sitz der Mitglieder des Stiftungsrats sowie die Art der Zeichnung anzugeben sind;",
+    "note": "Statutory content of the register entry for a registered foundation (items 7-9 continue with Revisionsstelle, Repräsentant, supervision status) — this is the substance the Handelsregisterauszug evidences.",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "PGR Art. 954 Abs. 1 (Auszüge, Abschriften und Zeugnisse) — konsolidierte Fassung 01.07.2026, gesetze.li",
+    "quote": "Das Amt für Justiz hat auf Verlangen gegen Gebühr von den Einträgen und Registerakten Auszüge, Kopien oder Abschriften in elektronischer Form oder auf ausdrückliches Begehren in Papierform auszustellen.",
+    "note": "The Amt für Justiz issues extracts from entries and register files on request against a fee — the Handelsregisterauszug is an obtainable base document for any registered foundation.",
+    "url": "https://www.gesetze.li/konso/pdf/1926004000",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung AJU/h70.008.10, 07/2026, Art. 552 §§ 1-41 PGR), section 1",
     "quote": "Gemeinnützige Stiftungen müssen zwingend im Handelsregister eingetragen werden; privatnützige Stiftungen können sich freiwillig im Handelsregister eintragen lassen, hingegen müssen sie im Handelsregister eingetragen werden, wenn sie auf spezialgesetzlicher Grundlage ein nach kaufmännischer Art geführtes Gewerbe betreiben.",
-    "note": "A registered foundation has a Handelsregister entry from which a Handelsregisterauszug can be issued (mandatory for charitable foundations, voluntary for private ones).",
+    "note": "A registered foundation has a Handelsregister entry from which a Handelsregisterauszug can be issued (mandatory for charitable foundations, voluntary for private ones). Quote re-verified verbatim against the current PDF (downloaded this session).",
     "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf",
     "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "A Handelsregisterauszug is available only for foundations that are actually registered; privatnützige foundations that are not registered leave only a deposited Gründungsanzeige and produce no register extract."
+   "A Handelsregisterauszug is available only for foundations that are actually registered; privatnützige foundations without registration duty (PGR Art. 552 § 14 Abs. 5) leave only a deposited Gründungsanzeige, whose file is accessible only to the depositor/authorised persons (Art. 955a PGR) — no public extract exists for them (third parties can obtain at most the Amtsbestätigung data under Art. 955a in conjunction with Art. 552 § 20 Abs. 2 Ziff. 1-7 und 10 PGR)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "LT",
@@ -7093,18 +7266,39 @@
   "summary": "For an AB (public company), shares are dematerialised registered securities recorded in personal securities accounts kept by account managers (banks/brokerage firms) and the central securities depository (Nasdaq CSD), not in the Register of Legal Entities. The register does not hold the AB's shareholder list, so no registry document evidences it; the shareholder register is maintained in the securities-accounts system outside Registrų centras. The one narrow exception is a sole-shareholder AB, whose single shareholder is registered in JAR.",
   "evidence": [
    {
-    "basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on registration of shares/shareholders in personal securities accounts; Law on Markets in Financial Instruments; Nasdaq CSD (central securities depository) rules",
-    "note": "AB shareholder records live in securities accounts, not JAR. Verbatim not fetchable.",
-    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr",
-    "retrieved": "2026-07-20"
+    "basis": "Akcinių bendrovių įstatymas (Law on Companies, VIII-1835), 40 str. 7 d. — suvestinė redakcija nuo 2026-07-01, e-seimas",
+    "quote": "Akcinių bendrovių akcijos gali būti tik nematerialios.",
+    "note": "AB (public limited company) shares may ONLY be dematerialised (uncertificated) securities.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Akcinių bendrovių įstatymas, 41 str. 1 ir 2 d. (Akcininkų asmeninių vertybinių popierių sąskaitų tvarkymas) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+    "quote": "1. Bendrovės nematerialios akcijos yra fiksuojamos įrašais akcininkų asmeninėse vertybinių popierių sąskaitose. 2. Akcinės bendrovės akcininkų asmeninės vertybinių popierių sąskaitos tvarkomos vertybinių popierių rinką reglamentuojančių teisės aktų nustatyta tvarka.",
+    "note": "Dematerialised shares are recorded by entries in shareholders' personal securities accounts; for an AB those accounts are administered under securities-market legislation (account managers / CSD system) — i.e. shareholder records live in the securities-accounts system, not in the Register of Legal Entities, and no registry document evidences the AB shareholder list.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Akcinių bendrovių įstatymas, 41-1 str. 1 d. (Juridinių asmenų dalyvių informacinės sistemos duomenys) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+    "quote": "Juridinių asmenų dalyvių informacinės sistemos tvarkytojui teikiami šie duomenys apie uždarosios akcinės bendrovės akcininkus:",
+    "note": "Negative proof: the JADIS filing duty in the Law on Companies is expressly limited to UAB (private company) shareholders — the law imposes no shareholder-data filing to JADIS/the registrar for an AB.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Akcinių bendrovių įstatymas, 12 str. 1 d. 4 p. (Juridinių asmenų registro duomenys) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+    "quote": "duomenys apie bendrovės akcininką, tapatūs duomenims, nurodytiems šio Įstatymo 7 straipsnio 21 dalyje, visų akcijų įgijimo ir visų ar dalies akcijų perleidimo datos (steigiant bendrovę visų akcijų įgijimo data laikoma bendrovės įregistravimo juridinių asmenų registre data), kai bendrovės akcininkas yra vienas asmuo;",
+    "note": "The one narrow exception verbatim: JAR (Register of Legal Entities) records data about the company's shareholder only 'kai bendrovės akcininkas yra vienas asmuo' — when there is a single shareholder.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "INFERENCE/UNVERIFIED: securities-account regime asserted from domain knowledge; no verbatim source retrieved.",
-   "Exception: a single-shareholder AB has its sole shareholder registered in JAR, which would then be registry-provable for that case.",
-   "AB participant data is generally outside JADIS because it is held in the securities-accounts system; confirm operationally."
+   "Exception (now verbatim-grounded, ABĮ 12 str. 1 d. 4 p.): a single-shareholder AB has its sole shareholder registered in JAR, which is registry-provable for that case.",
+   "Which institutions actually keep AB securities accounts (account managers/Nasdaq CSD) follows from the securities-market legislation referenced by ABĮ 41 str. 2 d.; that downstream layer was not fetched verbatim — operationally undisputed."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "LT",
@@ -7117,10 +7311,32 @@
   "summary": "A UAB's shareholders (akcininkai) are not on the ordinary JAR extract, but shareholder/participant data is filed with Registrų centras: a sole shareholder must be registered in the Register of Legal Entities itself, and since the 2018–2019 reforms every private legal entity including a UAB must submit and keep current its participant (shareholder) data in JADIS (Juridinių asmenų dalyvių informacinė sistema — Information System of Participants of Legal Entities), operated by Registrų centras. Registrų centras can issue this participant data as a separate deliverable. It is therefore provable via an additional document, subject to the access and format caveats below.",
   "evidence": [
    {
-    "basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on the register of shareholders kept by the company and on the single-shareholder notification; Civil Code Art. 2.66 (sole participant registered in JAR)",
-    "note": "UAB keeps its own shareholder register; sole shareholder is recorded in JAR. Verbatim text not fetchable.",
-    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr",
-    "retrieved": "2026-07-20"
+    "basis": "Akcinių bendrovių įstatymas (Law on Companies, VIII-1835), 41-1 str. 1 d. (Juridinių asmenų dalyvių informacinės sistemos duomenys) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+    "quote": "Juridinių asmenų dalyvių informacinės sistemos tvarkytojui teikiami šie duomenys apie uždarosios akcinės bendrovės akcininkus: 1) duomenys apie akcininką, tapatūs duomenims, nurodytiems šio Įstatymo 7 straipsnio 21 dalyje; 2) akcininkui nuosavybės teise priklausančių akcijų skaičius, įskaitant akcijų skaičių pagal klases, jeigu yra skirtingų klasių akcijų, akcijos nominali vertė;",
+    "note": "Statutory duty to submit UAB shareholder data — identity of each shareholder and the number/class/nominal value of their shares (further items: acquisitions, transfers, cancellations, conversions) — to the manager of JADIS (the Information System of Participants of Legal Entities, operated by Registrų centras).",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Akcinių bendrovių įstatymas, 41-1 str. 2 d. — suvestinė redakcija nuo 2026-07-01, e-seimas",
+    "quote": "Pasikeitus uždarosios akcinės bendrovės akcininkams ar jų duomenims, duomenys apie uždarosios akcinės bendrovės akcininkus Juridinių asmenų dalyvių informacinės sistemos tvarkytojui pateikiami ne vėliau kaip per 5 dienas nuo dokumentų, kurių pagrindu daromi įrašai uždarosios akcinės bendrovės akcininkų – nematerialių akcijų savininkų – asmeninių vertybinių popierių sąskaitose ar materialių akcijų savininkų registravimo žurnale, gavimo dienos.",
+    "note": "Currency guarantee: any change of UAB shareholders or their data must be filed to JADIS within 5 days — the registrar-held participant data tracks the current shareholders.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Akcinių bendrovių įstatymas, 41-1 str. 5 d. — suvestinė redakcija nuo 2026-07-01, e-seimas",
+    "quote": "Juridinių asmenų dalyvių informacinėje sistemoje kaupiama informacija turintiems teisę ją gauti fiziniams ir juridiniams asmenims teikiama už atlyginimą, išskyrus atvejus, kai ji:",
+    "note": "The information accumulated in JADIS is provided (for a fee) to natural and legal persons 'turintiems teisę ją gauti' — those entitled to receive it — confirming both that the registrar issues the data as a deliverable and that access is conditioned on entitlement.",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Akcinių bendrovių įstatymas, 12 str. 1 d. 4 p. (Juridinių asmenų registro duomenys) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+    "quote": "duomenys apie bendrovės akcininką, tapatūs duomenims, nurodytiems šio Įstatymo 7 straipsnio 21 dalyje, visų akcijų įgijimo ir visų ar dalies akcijų perleidimo datos (steigiant bendrovę visų akcijų įgijimo data laikoma bendrovės įregistravimo juridinių asmenų registre data), kai bendrovės akcininkas yra vienas asmuo;",
+    "note": "Sole-shareholder case: the single shareholder is registered in JAR itself (per 12 str. 5 d. the UAB files these data via the JADIS manager, which forwards them to the JAR registrar within one working day).",
+    "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr",
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Registrų centras — JADIS, Information System of Participants of Legal Entities (Juridinių asmenų dalyvių informacinė sistema)",
@@ -7130,12 +7346,11 @@
    }
   ],
   "caveats": [
-   "INFERENCE/UNVERIFIED: no verbatim source retrieved; JADIS obligation and issuance form asserted from domain knowledge of the 2018–2019 reform.",
-   "'DOCUMENT vs data' risk: JADIS delivers structured participant data; whether Registrų centras issues it as a single formal 'shareholder list' document (rather than a data export) for a multi-shareholder UAB should be confirmed operationally.",
-   "Access to full multi-shareholder JADIS data is partly restricted (entity itself, competent authorities, and — under AML rules — obliged entities); the always-public case is the sole-shareholder entry in JAR.",
-   "Whether a proof exists at all for a given UAB depends on the case: sole-shareholder = clearly provable; multi-shareholder = provable only to the extent JADIS data is accessible/issuable."
+   "'DOCUMENT vs data' judgement call (deliberately left open, per row status): ABĮ 41-1 str. consistently speaks of 'duomenys' (data) submitted to and 'informacija' issued from JADIS, not of a filed shareholder-list document — the statutory language leans toward a data extract; whether Registrų centras' deliverable for a multi-shareholder UAB is a formal 'akcininkų sąrašas' document or a data export should still be confirmed operationally.",
+   "Access to full multi-shareholder JADIS data is conditioned on entitlement (ABĮ 41-1 str. 5 d.: 'turintiems teisę ją gauti'); the always-public case is the sole-shareholder entry in JAR (12 str. 1 d. 4 p.).",
+   "Whether a proof exists at all for a given UAB depends on the case: sole-shareholder = clearly provable from JAR; multi-shareholder = provable only to the extent JADIS data is accessible/issuable to the requester."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "LT",
@@ -7262,6 +7477,20 @@
   "summary": "Shareholders are not filed. The share register is kept at the registered office.",
   "evidence": [
    {
+    "basis": "Loi du 10 août 1915 concernant les sociétés commerciales, art. 39 (texte original, Mémorial n° 90 du 30 octobre 1915, Legilux)",
+    "quote": "Il est tenu au siège social un registre des actions nominatives dont tout actionnaire pourra prendre connaissance; ce registre contient: la désignation précise de chaque actionnaire et l'indication du nombre de ses actions ou coupures; l'indication des versements effectués; les transferts avec leur date ou la conversion des actions en titres au porteur, si les statuts l'autorisent.",
+    "note": "The register of registered shares — the only record naming each shareholder and their holdings — is kept AT THE REGISTERED OFFICE and is open to shareholders ('tout actionnaire'), not to the public; it is not filed with the RCS. (Line breaks of the Mémorial column layout joined.)",
+    "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1915/08/10/n1/jo/fr/pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Loi du 10 août 1915, art. 40 (texte original, Mémorial n° 90 du 30 octobre 1915, Legilux)",
+    "quote": "La propriété de l'action nominative s'établit par une inscription sur le registre prescrit par l'article précédent.",
+    "note": "Ownership of a registered share is established by entry in that internal company-kept register — ownership proof lives at the company seat, not in any registry document.",
+    "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1915/08/10/n1/jo/fr/pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
     "basis": "Guichet.lu — société anonyme",
     "quote": "Un registre des actions nominatives qui établit la propriété est tenu au siège social.",
     "url": "https://guichet.public.lu/fr/entreprises/creation-developpement/forme-juridique/societe-capitaux/societe-anonyme.html",
@@ -7269,9 +7498,10 @@
    }
   ],
   "caveats": [
+   "Numbering: the verbatim quotes are from the original 1915 Mémorial text (art. 39-40); in the current coordinated numbering of the loi de 1915 (règlement grand-ducal du 5 décembre 2017) these provisions live in art. 430-3 ff. with the same substance (as the current-practice guichet.lu quote confirms). The current consolidated Legilux text could not be fetched this session (SPA-only site; consolidated-PDF probes returned 404).",
    "UNVERIFIED: whether an SA's sole shareholder must be disclosed (EU 12th Directive / §42 AktG analogue). No source found. Treat as unclear."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "LU",
@@ -8390,6 +8620,13 @@
   "summary": "An ANS has a selskapsavtale (partnership agreement, required under selskapsloven), not vedtekter. It is filed at registration and obtainable as a copy of a case document (saksdokument) via the brreg webshop.",
   "evidence": [
    {
+    "basis": "Selskapsloven (lov 21. juni 1985 nr. 83) § 2-3 første ledd (Lovdata)",
+    "quote": "I selskap som ikke er indre selskap skal det opprettes en datert skriftlig selskapsavtale som skal undertegnes av samtlige deltakere, unntatt stille deltaker.",
+    "note": "English gloss: 'In companies other than internal partnerships, a dated written partnership agreement shall be drawn up and signed by all participants, except silent participants.' § 2-3 second paragraph further requires minimum content including — verbatim — 'selskapets foretaksnavn' and 'navn og bosted for samtlige deltakere unntatt stille deltaker' (name and residence of all participants). So every registrable ANS mandatorily has a written, dated, signed selskapsavtale naming the partners.",
+    "url": "https://lovdata.no/dokument/NL/lov/1985-06-21-83",
+    "retrieved": "2026-07-22"
+   },
+   {
     "basis": "Brønnøysund Register Centre — product/document ordering page",
     "quote": "Certificates of registration and register transcripts in English do not normally include information about the objective as laid down in the articles of association.",
     "note": "The register transcript/certificate (base document) does not carry the agreement/articles content; the page lists Partnership agreements among documents that can be ordered (Copies of documents from the Central Coordinating Register for Legal Entities, fee NOK 241), i.e. the selskapsavtale is obtained as a separately-ordered additional document.",
@@ -8398,7 +8635,8 @@
    }
   ],
   "caveats": [
-   "Registry page confirms partnership agreements are orderable documents but does not state that selskapsavtale filing is mandatory for every ANS; availability may depend on what was filed."
+   "Mandatory existence of the selskapsavtale for every ANS (other than an indre selskap, which is not registered) is now verbatim-confirmed (selskapsloven § 2-3).",
+   "The filing link — foretaksregisterloven's requirement that the selskapsavtale be held by/attached for the Foretaksregisteret (§§ 3-4, 4-4) — could not be fetched verbatim (lovdata URLs for the act returned 404 this session); registry availability rests on brreg's own product listing of orderable partnership agreements."
   ],
   "confidence": "medium"
  },
@@ -8465,6 +8703,13 @@
   "summary": "A DA has a selskapsavtale (partnership agreement under selskapsloven), filed at registration and obtainable as a copy of a case document via the brreg webshop.",
   "evidence": [
    {
+    "basis": "Selskapsloven (lov 21. juni 1985 nr. 83) § 2-3 første ledd (Lovdata)",
+    "quote": "I selskap som ikke er indre selskap skal det opprettes en datert skriftlig selskapsavtale som skal undertegnes av samtlige deltakere, unntatt stille deltaker.",
+    "note": "English gloss: 'In companies other than internal partnerships, a dated written partnership agreement shall be drawn up and signed by all participants, except silent participants.' A DA (ansvarlig selskap med delt ansvar) is a selskap under selskapsloven, so the same mandatory written selskapsavtale applies; § 2-3 second paragraph requires minimum content including 'navn og bosted for samtlige deltakere unntatt stille deltaker' (verbatim).",
+    "url": "https://lovdata.no/dokument/NL/lov/1985-06-21-83",
+    "retrieved": "2026-07-22"
+   },
+   {
     "basis": "Brønnøysund Register Centre — product/document ordering page",
     "quote": "Certificates of registration and register transcripts in English do not normally include information about the objective as laid down in the articles of association.",
     "note": "Same registry basis as ANS: the base transcript/certificate excludes the agreement content, while Partnership agreements are listed among separately-orderable documents (NOK 241) — supporting the selskapsavtale as an additional document.",
@@ -8473,7 +8718,8 @@
    }
   ],
   "caveats": [
-   "Registry confirms partnership agreements are orderable; it does not state selskapsavtale filing is mandatory for every DA, so availability may depend on what was filed."
+   "Mandatory existence of the selskapsavtale for every DA (other than an indre selskap, which is not registered) is now verbatim-confirmed (selskapsloven § 2-3).",
+   "The filing link — foretaksregisterloven's requirement that the selskapsavtale be held by/attached for the Foretaksregisteret (§§ 3-4, 4-4) — could not be fetched verbatim (lovdata URLs for the act returned 404 this session); registry availability rests on brreg's own product listing of orderable partnership agreements."
   ],
   "confidence": "medium"
  },
@@ -10381,6 +10627,20 @@
   "summary": "No aktiebok exists. The partners of a kommanditbolag — the general partner(s) (komplementär) and limited partner(s) (kommanditdelägare) — are registered in Handelsregistret and appear on the registreringsbevis, together with the registered limited-partner contribution (insats). The current partners are thus evidenced by the registry's base document.",
   "evidence": [
    {
+    "basis": "Handelsregisterlagen (1974:157) § 4 — introductory rule and handelsbolag particulars (riksdagen.se)",
+    "quote": "Handelsregistret skall innehålla följande uppgifter om:",
+    "note": "English gloss: 'The trade register shall contain the following particulars about:'. Under the handelsbolag head (a kommanditbolag is a form of handelsbolag) item 4 requires — verbatim — 'bolagsmännens fullständiga namn, personnummer eller organisationsnummer och postadresser' (the partners' full names, personal or organisation numbers and postal addresses). The partners are thus statutory register content.",
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/handelsregisterlag-1974157_sfs-1974-157/",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Handelsregisterlagen (1974:157) § 4 — kommanditbolag-specific particular (riksdagen.se)",
+    "quote": "om bolaget utgör kommanditbolag, vilken eller vilka av bolagsmännen som är kommanditdelägare och beloppet av varje sådan bolagsmans utfäst insats",
+    "note": "English gloss: 'if the company is a kommanditbolag, which of the partners is/are kommanditdelägare (limited partners) and the amount of each such partner's committed contribution (utfäst insats)'. So the register distinguishes komplementär from kommanditdelägare and records each limited partner's contribution — directly supporting the partner list (with roles and insats) as base register data appearing on the registreringsbevis.",
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/handelsregisterlag-1974157_sfs-1974-157/",
+    "retrieved": "2026-07-22"
+   },
+   {
     "basis": "Bolagsverket, 'Bolagsmän i kommanditbolag'",
     "note": "Both komplementär and kommanditdelägare are registered as bolagsmän; changes must be registered, so the register/registreringsbevis reflects current partners.",
     "url": "https://bolagsverket.se/en/foretag/kommanditbolag/startakommanditbolag/bolagsmanikommanditbolag.917.html",
@@ -10388,9 +10648,9 @@
    }
   ],
   "caveats": [
-   "Register evidences partner identity (and limited-partner contribution amount), not internal profit/ownership shares, which live in the unfiled bolagsavtal."
+   "Register evidences partner identity, roles (komplementär vs kommanditdelägare) and the limited partner's utfäst insats, not internal profit/ownership shares, which live in the unfiled bolagsavtal."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "SE",
@@ -10792,17 +11052,47 @@
   "summary": "The constitution of a d.d. is the statut (statute). It is filed with the court register on incorporation and on amendment and is kept in the public collection of documents (zbirka listin), generally downloadable free through the e-Sodni register. It is a separate registry document from the extract and therefore proved by an additional document.",
   "evidence": [
    {
-    "basis": "ZGD-1 — d.d. is governed by its statut; ZSReg — collection of documents (zbirka listin) is public",
-    "note": "Statute filed and public via zbirka listin; verbatim text not fetched.",
+    "basis": "ZSReg (Zakon o sodnem registru), 7. člen — javnost sodnega registra (Uradni list RS 13/94)",
+    "quote": "V sodni register vpisani podatki so javni in jih sme vsakdo pregledovati, prepisovati ali zahtevati, naj se mu izda overjeni izpisek iz sodnega registra. Pregledovati in prepisovati se smejo tudi listine, na katerih temeljijo vpisi v sodni register.",
+    "note": "Register data are public and anyone may inspect/copy them or demand a certified extract; the DOCUMENTS underlying the entries (incl. the statut) may likewise be inspected and copied — direct statutory support that the filed constitution is obtainable from the registry.",
+    "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "ZSReg, 2. člen (3. odstavek) — zbirka listin",
+    "quote": "Listine, na podlagi katerih je bil opravljen vpis posameznega pravno pomembnega dejstva, ali za katere zakon določa, da se predložijo registrskemu sodišču, se vložijo v zbirko listin.",
+    "note": "Documents on which entries are based, or which must by law be submitted to the register court, are filed in the collection of documents (zbirka listin) — the statut sits there.",
+    "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "ZSReg, 28. člen (1. odstavek) — priloge k predlogu za vpis",
+    "quote": "Predlagatelj mora predlogu priložiti listine, na katerih temeljijo podatki, ki se vpisujejo v sodni register. ter druge listine, če zakon tako določa, v izvirniku oziroma overjenem prepisu.",
+    "note": "The applicant must attach the documents underlying the registered data (for a d.d. incorporation: the statut) in original or certified copy — the constitution is necessarily on file.",
+    "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "AJPES — official documentation of eObjave / informatizirana zbirka listin sodnega registra",
+    "quote": "Listine, ki so podlaga za vpis v sodni register, sklepi sodišč in zbirka listin se objavlja od 1. 2. 2008 dalje",
+    "note": "AJPES confirms that documents underlying court-register entries and the zbirka listin have been published electronically since 1 Feb 2008; the same page states verbatim 'Vsi objavljeni podatki in listine so brezplačno dostopne.' (all published data and documents are accessible free of charge).",
+    "url": "https://www.ajpes.si/Uradne_objave/eObjave_v_postopkih_vpisov_v_poslovni_in_sodni_register/Splosno",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "ZGD-1 — the d.d. is governed by its statut (constitutive document)",
+    "note": "Definitional basis that the d.d.'s constitution is the statut. ZGD-1 text NOT fetched verbatim — pisrs.si is a JavaScript application that could not be rendered this session.",
     "url": "https://www.ajpes.si/",
     "retrieved": "2026-07-20"
    }
   ],
   "caveats": [
-   "INFERENCE/UNVERIFIED verbatim: public availability of the statut via the court register's collection of documents is standard but statutory text not fetched.",
-   "The filed statute may lag the latest consolidated amendments."
+   "The filed statute may lag the latest consolidated amendments.",
+   "ZSReg quotes are from the original 1994 text (Uradni list RS 13/94); the act has since been amended, but current practice (electronic publication of the zbirka listin, free access) is confirmed by AJPES's own documentation.",
+   "AJPES notes that only documents whose publication the law prescribes are publicly accessible online; for other filed documents (which may contain personal data) one must apply to the competent register court.",
+   "ZGD-1's definitional provision (d.d. statut) was not fetched verbatim (pisrs.si unrenderable); the filing-and-publicity chain is verbatim from ZSReg and AJPES."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "SI",
@@ -10815,17 +11105,47 @@
   "summary": "The constitutive document of a d.o.o. — the družbena pogodba (multi-member) or akt o ustanovitvi (single-member) — is filed with the court register and kept in the public collection of documents (zbirka listin). It is a separate document from the register extract but is publicly accessible, generally downloadable free of charge through the e-Sodni register. It is therefore proved by an additional registry document.",
   "evidence": [
    {
-    "basis": "ZGD-1 — d.o.o. is founded by družbena pogodba / akt o ustanovitvi; ZSReg — collection of documents (zbirka listin) is public",
-    "note": "Constitution is filed at incorporation and on amendment; public via zbirka listin. Verbatim text not fetched.",
+    "basis": "ZSReg (Zakon o sodnem registru), 7. člen — javnost sodnega registra (Uradni list RS 13/94)",
+    "quote": "V sodni register vpisani podatki so javni in jih sme vsakdo pregledovati, prepisovati ali zahtevati, naj se mu izda overjeni izpisek iz sodnega registra. Pregledovati in prepisovati se smejo tudi listine, na katerih temeljijo vpisi v sodni register.",
+    "note": "Register data are public and the DOCUMENTS underlying the entries (incl. the družbena pogodba / akt o ustanovitvi) may be inspected and copied — direct statutory support that the filed constitution is obtainable from the registry.",
+    "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "ZSReg, 2. člen (3. odstavek) — zbirka listin",
+    "quote": "Listine, na podlagi katerih je bil opravljen vpis posameznega pravno pomembnega dejstva, ali za katere zakon določa, da se predložijo registrskemu sodišču, se vložijo v zbirko listin.",
+    "note": "Documents on which entries are based are filed in the zbirka listin — the d.o.o. constitution sits there.",
+    "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "ZSReg, 28. člen (1. odstavek) — priloge k predlogu za vpis",
+    "quote": "Predlagatelj mora predlogu priložiti listine, na katerih temeljijo podatki, ki se vpisujejo v sodni register. ter druge listine, če zakon tako določa, v izvirniku oziroma overjenem prepisu.",
+    "note": "The applicant must attach the documents underlying the registered data (for a d.o.o. incorporation: the družbena pogodba or akt o ustanovitvi) in original or certified copy.",
+    "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "AJPES — official documentation of eObjave / informatizirana zbirka listin sodnega registra",
+    "quote": "Listine, ki so podlaga za vpis v sodni register, sklepi sodišč in zbirka listin se objavlja od 1. 2. 2008 dalje",
+    "note": "AJPES confirms electronic publication of the zbirka listin since 1 Feb 2008; the same page states verbatim 'Vsi objavljeni podatki in listine so brezplačno dostopne.' (all published data and documents are accessible free of charge).",
+    "url": "https://www.ajpes.si/Uradne_objave/eObjave_v_postopkih_vpisov_v_poslovni_in_sodni_register/Splosno",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "ZGD-1 — the d.o.o. is founded by družbena pogodba / akt o ustanovitvi",
+    "note": "Definitional basis that the d.o.o.'s constitution is the družbena pogodba (multi-member) or akt o ustanovitvi (single-member). ZGD-1 text NOT fetched verbatim — pisrs.si is a JavaScript application that could not be rendered this session.",
     "url": "https://www.ajpes.si/",
     "retrieved": "2026-07-20"
    }
   ],
   "caveats": [
-   "INFERENCE/UNVERIFIED verbatim: public availability of the constitution via the court register's collection of documents is standard but statutory text not fetched.",
-   "The filed constitution may be an older amended version; it need not reflect the very latest consolidated text."
+   "The filed constitution may be an older amended version; it need not reflect the very latest consolidated text.",
+   "ZSReg quotes are from the original 1994 text (Uradni list RS 13/94); the act has since been amended, but current practice (electronic publication of the zbirka listin, free access) is confirmed by AJPES's own documentation.",
+   "AJPES notes that only documents whose publication the law prescribes are publicly accessible online; for other filed documents (which may contain personal data) one must apply to the competent register court.",
+   "ZGD-1's definitional provision (družbena pogodba / akt o ustanovitvi) was not fetched verbatim (pisrs.si unrenderable); the filing-and-publicity chain is verbatim from ZSReg and AJPES."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "SI",
