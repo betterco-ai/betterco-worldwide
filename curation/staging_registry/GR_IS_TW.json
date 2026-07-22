@@ -1,0 +1,60 @@
+[
+  {
+    "jurisdiction": "GR",
+    "registryName": "Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) — General Commercial Registry (GEMI)",
+    "registryBody": "Greek Ministry of Development / General Secretariat of Commerce; operated with the Central Union of Chambers of Commerce (KEEE/UHCCI). Legal basis: Law 4919/2022.",
+    "registryUrl": "https://publicity.businessportal.gr",
+    "openApi": "partial",
+    "apiName": "GEMI publicity search + e-Services portal; system-to-system interconnection web services (restricted, for banks/public sector)",
+    "apiDocsUrl": "",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Public 'publicity' search is free with no login; certificates and document copies via services.businessportal.gr require login and carry fees; machine interconnection is provided to banks/public bodies by agreement, not as an open public API.",
+    "cost": {"model": "per_document", "detail": "Free public search of publicity data; certificates and copies of filed documents (articles of association, financial statements, GEMI announcements) are obtained through the e-services portal for statutory fees. INFERENCE: exact fee schedule not confirmed on the fetched pages."},
+    "notes": "publicity.businessportal.gr offers a free search UI returning company data (no API confirmed on the page). Documents exist in the system but are retrieved by application via the e-services portal, not via a documented open API. No public open-data/REST endpoint delivering documents was found. UNVERIFIED: existence and terms of any programmatic interconnection API — inferred from known bank/public-sector interconnection practice, not confirmed on official pages.",
+    "confidence": "low",
+    "sources": [
+      {"basis": "GEMI publicity portal — free search interface, no API/pricing shown", "url": "https://publicity.businessportal.gr/", "retrieved": "2026-07-22"},
+      {"basis": "businessportal.gr — describes e-Services (services.businessportal.gr) for certificates and company info; no API docs shown", "url": "https://www.businessportal.gr/", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "IS",
+    "registryName": "Fyrirtækjaskrá (Register of Enterprises)",
+    "registryBody": "Skatturinn (Iceland Revenue and Customs; formerly Ríkisskattstjóri / RSK)",
+    "registryUrl": "https://www.skatturinn.is/english/companies/",
+    "openApi": "no",
+    "apiName": "Free online company search (fyrirtækjaskrá/leit); government machine access via Straumurinn (X-Road) is restricted, not an open public API",
+    "apiDocsUrl": "",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Free public online search (no login) for basic company data (name, kennitala/ID, address, legal form, status). No documented open public API. Straumurinn/island.is integrations are limited to authorized/government parties.",
+    "cost": {"model": "per_document", "detail": "Basic online search is free; certified extracts and annual accounts (via Ársreikningaskrá / Register of Annual Accounts) are obtained for a fee, largely by manual request. INFERENCE: exact per-document fees and any bulk/subscription data option not confirmed on fetched pages."},
+    "notes": "Register operated by Skatturinn with a free search at skatturinn.is/fyrirtaekjaskra/leit. No open, publicly documented REST API delivering data or documents was found; Iceland routes agency data via the Straumurinn (X-Road) layer, which is not open to the public. Documents (articles of association, annual accounts) are retrieved manually/for a fee, not via API. Confidence low: absence of a public API is inferred from the official pages not mentioning one.",
+    "confidence": "low",
+    "sources": [
+      {"basis": "Skatturinn English 'Companies' page — links to company search and service portal; no API/pricing detail", "url": "https://www.skatturinn.is/english/companies/", "retrieved": "2026-07-22"},
+      {"basis": "island.is Skatturinn org page — references company registry search and Register of Annual Accounts; no API specifics", "url": "https://island.is/en/o/skatturinn", "retrieved": "2026-07-22"},
+      {"basis": "devland.is technical direction — confirms Straumurinn (X-Road) is the integration layer; no open company-register API cataloged", "url": "https://docs.devland.is/", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "TW",
+    "registryName": "Company registration records (公司登記) — GCIS commercial/industrial registration public data",
+    "registryBody": "Department of Commerce, Ministry of Economic Affairs (MOEA); published via GCIS 商工行政資料開放平臺 (Commerce Industrial Services open data platform)",
+    "registryUrl": "https://findbiz.nat.gov.tw",
+    "openApi": "yes",
+    "apiName": "GCIS Open Data / Company Registration Open API (商工行政資料開放平臺)",
+    "apiDocsUrl": "https://data.gcis.nat.gov.tw/od/rule",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "No API key required, but the caller's public/external IP must be whitelisted via a 'usage notification form' (使用告知書) emailed to opendata.gcis@gmail.com; daily-query, concurrency and platform-wide rate limits apply.",
+    "cost": {"model": "free", "detail": "Free of charge, subject to rate limits (max daily queries, concurrent-connection caps)."},
+    "notes": "Verified on the portal: ~60 APIs across ~508 datasets covering company/branch/business registration. APIs return structured registration fields only — company name, unified business number, capital, responsible person, directors/supervisors, business-item (scope) codes, establishment/change dates, status. Company documents such as articles of incorporation (章程) are NOT delivered via API; they are obtained separately (e.g., paid application via findbiz/MOEA). Highest confidence of the three.",
+    "confidence": "high",
+    "sources": [
+      {"basis": "data.gcis.nat.gov.tw portal — states 508 datasets / 60 APIs for company & business registration", "url": "https://data.gcis.nat.gov.tw/", "retrieved": "2026-07-22"},
+      {"basis": "GCIS Open API guide (/od/rule) — API list, data-fields-only scope, no-API-key + IP-whitelist via usage form, free with rate limits", "url": "https://data.gcis.nat.gov.tw/od/rule", "retrieved": "2026-07-22"}
+    ]
+  }
+]

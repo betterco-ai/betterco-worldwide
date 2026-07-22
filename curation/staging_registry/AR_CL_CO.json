@@ -1,0 +1,59 @@
+[
+  {
+    "jurisdiction": "AR",
+    "registryName": "Registro Público (a cargo de la Inspección General de Justicia)",
+    "registryBody": "Inspección General de Justicia (IGJ), Ministerio de Justicia de la Nación — competencia limitada a CABA; cada provincia tiene su propio Registro Público (p. ej. DPPJ en Prov. de Buenos Aires)",
+    "registryUrl": "https://www.igj.gob.ar/",
+    "openApi": "no",
+    "apiName": "Sin API oficial de registro; datos masivos vía CKAN de datos.gob.ar (dataset 'Entidades constituidas en la IGJ')",
+    "apiDocsUrl": "https://datos.gob.ar/api/3/action/help_show?name=package_search",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Ninguna para el open data CKAN (descarga pública). El registro en sí no expone API",
+    "cost": {"model": "contract", "detail": "Trámites y copias/certificaciones se piden por TAD (Trámites a Distancia) o presencialmente, con tasas por trámite; open data CKAN es gratuito. Montos de tasas no verificados en esta sesión (INFERENCE)"},
+    "notes": "Sistema FRAGMENTADO: IGJ cubre solo CABA; el resto son ~24 registros provinciales sin API unificada — no hay registro/API nacional. El único acceso programático hallado es el open data (CSV semestral 2016-2026 de entidades CABA), que entrega DATOS, no documentos. Descarga de documentos (estatutos, actas) es por TAD/papel, no vía API. UNVERIFIED: sitio igj.gob.ar dio timeout de DNS; cobertura provincial y tasas no confirmadas en vivo.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "CKAN open-data catalog confirms IGJ bulk datasets (data-only, CABA) with API endpoint", "url": "https://datos.gob.ar/api/3/action/package_search?q=IGJ+sociedades", "retrieved": "2026-07-22"},
+      {"basis": "Registry hint / prior knowledge: IGJ = CABA registry, provinces separate; no unified national API", "url": "https://www.igj.gob.ar/", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "CL",
+    "registryName": "Registro de Empresas y Sociedades (RES) — Régimen Simplificado, Ley 20.659 ('Tu Empresa en un Día')",
+    "registryBody": "Ministerio de Economía, Fomento y Turismo — Subsecretaría de Economía y Empresas de Menor Tamaño",
+    "registryUrl": "https://www.registrodeempresasysociedades.cl/",
+    "openApi": "no",
+    "apiName": "Sin API pública de documentos; datos masivos vía CKAN de datos.gob.cl (dataset 'Registro de Empresas y Sociedades')",
+    "apiDocsUrl": "https://datos.gob.cl/api/3/action/help_show?name=package_search",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Ninguna para el open data CKAN (CC-BY). El portal RES no expone API programática",
+    "cost": {"model": "free", "detail": "Certificados del régimen simplificado (estatuto actualizado, vigencia, anotaciones) se descargan como PDF desde el portal, gratuitos en este régimen; open data gratuito. 'Gratuito' es INFERENCE — no verificado en vivo (portal ASP.NET no renderizó precios)"},
+    "notes": "COBERTURA PARCIAL: RES solo contiene empresas constituidas electrónicamente bajo Ley 20.659 (SpA, EIRL, SRL, etc. del régimen simplificado). Sociedades constituidas por escritura pública NO están en RES — esas viven en el Registro de Comercio a cargo de los Conservadores de Bienes Raíces (papel/pagado, por comuna) + publicación en el Diario Oficial. El open data (14 recursos anuales 2013-2026, CC-BY) entrega DATOS, no documentos. tuempresaenundia.cl redirige 308 a registrodeempresasysociedades.cl. UNVERIFIED: gratuidad exacta y ausencia total de API de documentos.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "CKAN open-data confirms RES dataset (data-only) with active API; publisher = Subsecretaría de Economía", "url": "https://datos.gob.cl/api/3/action/package_search?q=empresas+sociedades+registro", "retrieved": "2026-07-22"},
+      {"basis": "Sitio RES confirma operador (Ministerio de Economía) y oferta de certificados; sin mención de API", "url": "https://www.registrodeempresasysociedades.cl/", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "CO",
+    "registryName": "Registro Único Empresarial y Social (RUES) / Registro Mercantil; documento clave: Certificado de Existencia y Representación Legal",
+    "registryBody": "Confederación Colombiana de Cámaras de Comercio (Confecámaras) que integra las 57 Cámaras de Comercio; supervisión de la Superintendencia de Industria y Comercio (SIC)",
+    "registryUrl": "https://www.rues.org.co/",
+    "openApi": "partial",
+    "apiName": "Datos Abiertos RUES vía Socrata SODA API (datos.gov.co); además una API/servicios de integración RUES para entidades por convenio",
+    "apiDocsUrl": "https://dev.socrata.com/",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "App token opcional de Socrata para el open data; la API de integración RUES requiere convenio/acuerdo (no self-service abierto)",
+    "cost": {"model": "per_document", "detail": "Certificado de Existencia y Representación Legal se compra en línea como PDF (~COP 6.500 por certificado, aprox. USD 1,5 — cifra INFERENCE, no verificada en vivo); consulta básica de datos y open data son gratuitos"},
+    "notes": "Registro NACIONAL unificado (RUES) operado por Confecámaras — a diferencia de AR/CL es de cobertura nacional. Vía programática abierta = solo DATOS (Socrata SODA: datasets verificados c82u-588k 'Personas Naturales/Jurídicas/ESAL', nb3d-v3n7 'Establecimientos-Agencias-Sucursales'). El DOCUMENTO (certificado) NO se entrega por API abierta: se emite/compra individualmente en rues.org.co o en el portal de cada Cámara (p. ej. CCB) como PDF con firma. Existe una API de integración RUES pero es por convenio (entidades públicas/vigiladas), no abierta. UNVERIFIED: precio exacto del certificado y términos de la API de integración.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "Socrata catalog API confirma datasets RUES/Confecámaras (data-only) con IDs y descripciones", "url": "https://www.datos.gov.co/api/catalog/v1?q=RUES", "retrieved": "2026-07-22"},
+      {"basis": "Sitio RUES confirma el registro ('Registro Único Empresarial y Social')", "url": "https://www.rues.org.co/", "retrieved": "2026-07-22"}
+    ]
+  }
+]

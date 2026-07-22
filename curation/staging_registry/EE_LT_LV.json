@@ -1,0 +1,59 @@
+[
+  {
+    "jurisdiction": "EE",
+    "registryName": "e-Business Register (Äriregister)",
+    "registryBody": "Centre of Registers and Information Systems (RIK / Registrite ja Infosüsteemide Keskus), Ministry of Justice",
+    "registryUrl": "https://ariregister.rik.ee",
+    "openApi": "yes",
+    "apiName": "e-Business Register Open Data & REST API (avaandmed.ariregister.rik.ee); plus X-Road REST interface",
+    "apiDocsUrl": "https://avaandmed.ariregister.rik.ee/en",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": true,
+    "apiAuth": "Free registration / API key for the Business Registry REST API; bulk open-data files need no key",
+    "cost": {"model": "free", "detail": "Open data and REST API are free under CC BY 4.0. Company data, annual reports, articles of association and beneficial-owner data are exposed. Certain premium/commercial 'Business Register queries' can be chargeable, but the open-data channel is free."},
+    "notes": "Strongest of the three. Portal explicitly lists an Open Data API, a Business Registry REST API (API-key auth) and a REST X-Road interface, and names annual reports and articles of association among available data. UNVERIFIED nuance: whether every historical document is returned as a downloadable PDF vs. structured/XBRL data via the same API was not fully confirmed on the docs page.",
+    "confidence": "high",
+    "sources": [
+      {"basis": "e-Business Register open-data portal — lists Open Data API, Business Registry REST API (API-key auth), REST X-Road; annual reports + articles of association; CC BY 4.0", "url": "https://avaandmed.ariregister.rik.ee/en", "retrieved": "2026-07-22"},
+      {"basis": "RIK e-Business Register access methods (portal, XML service, company-registration API)", "url": "https://www.rik.ee/en/e-business-register", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "LT",
+    "registryName": "Register of Legal Entities (Juridinių asmenų registras, JAR)",
+    "registryBody": "State Enterprise Centre of Registers (VĮ Registrų centras)",
+    "registryUrl": "https://www.registrucentras.lt",
+    "openApi": "partial",
+    "apiName": "JAR primary open data ('JAR pirminiai duomenys / raw data'); Registrų centras contract web services / self-service (savitarna); national portal data.gov.lt",
+    "apiDocsUrl": "https://www.registrucentras.lt/atviri-duomenys-ir-statistika/jar-pirminiai-duomenys-raw-data",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "None for the free JAR primary open-data download; registration/contract for detailed web services and paid documents",
+    "cost": {"model": "contract", "detail": "JAR 'primary data' is published free as bulk open data. Detailed extracts, financial statements (Finansinių ataskaitų rinkiniai) and founding documents are paid per-item via self-service or under a data-supply contract; programmatic access to full data is subscription/contract-based, not a fully open API."},
+    "notes": "VERIFIED: the free JAR primary open-data page exists (URL confirmed via a 301 redirect from registrucentras.lt/p/1094). INFERENCE/UNVERIFIED: the registrucentras.lt site is a JS single-page app that could not be scraped, so the split between free open data vs. paid per-document self-service and the exact web-service/API auth model rests on established public knowledge of Registrų centras rather than a freshly-read official page. Documents are obtainable but paid and not via a free open API. Beneficial-owner data sits in a separate register (JANGIS).",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "Registrų centras open-data page for JAR primary/raw data (existence + canonical URL confirmed via redirect)", "url": "https://www.registrucentras.lt/atviri-duomenys-ir-statistika/jar-pirminiai-duomenys-raw-data", "retrieved": "2026-07-22"},
+      {"basis": "Registrų centras site root (confirms VĮ Registrų centras as operating body; page content JS-rendered, not fully extractable)", "url": "https://www.registrucentras.lt/en/", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "LV",
+    "registryName": "Enterprise Register (Uzņēmumu reģistrs) — Register of Enterprises of the Republic of Latvia",
+    "registryBody": "Register of Enterprises of the Republic of Latvia (Latvijas Republikas Uzņēmumu reģistrs)",
+    "registryUrl": "https://www.ur.gov.lv",
+    "openApi": "partial",
+    "apiName": "data.gov.lv CKAN Action API over UR open datasets; e-services portal (registrs.ur.gov.lv) and info portal (info.ur.gov.lv) for documents",
+    "apiDocsUrl": "https://data.gov.lv/dati/eng/api/3",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "None for open data (CKAN API, CC0); authenticated e-services required for documents/certified extracts",
+    "cost": {"model": "free", "detail": "~35 UR open datasets on data.gov.lv are free (34 CC0): main enterprise register (daily), beneficial owners, share capital / investments (shareholders), historical names, reorganizations/liquidations — CSV/JSON/XLSX/XML. Documents (annual reports, statutes) and certified extracts are obtained through the paid ur.gov.lv e-services, not the open API."},
+    "notes": "VERIFIED via data.gov.lv: rich free structured open data including beneficial owners and share-capital/shareholder info, accessible through a CKAN API. Documents themselves (annual reports, articles) are NOT in the open datasets — they come from the ur.gov.lv e-services portal and are chargeable. UNVERIFIED: the ur.gov.lv 'receive automated data for systems' page (a possible direct machine channel) returned 404, so any dedicated UR-hosted API beyond the CKAN open data was not confirmed.",
+    "confidence": "high",
+    "sources": [
+      {"basis": "data.gov.lv catalogue — ~35 Uzņēmumu reģistrs datasets (main register, beneficial owners, share capital, historical names, reorg/liquidation), CSV/JSON/XLSX/XML, CKAN API, CC0", "url": "https://data.gov.lv/dati/eng/api/3", "retrieved": "2026-07-22"},
+      {"basis": "UR homepage — 'Receive Automated Data for Systems' (API + open data), e-services registrs.ur.gov.lv, info portal info.ur.gov.lv", "url": "https://www.ur.gov.lv/en/", "retrieved": "2026-07-22"}
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "jurisdiction": "RO",
+    "registryName": "Registrul Comerțului (Romanian Trade Register)",
+    "registryBody": "Oficiul Național al Registrului Comerțului (ONRC), under the Ministry of Justice",
+    "registryUrl": "https://www.onrc.ro",
+    "openApi": "no",
+    "apiName": "RECOM online / InfoCert (paid portal services, not a developer API)",
+    "apiDocsUrl": "https://portal.onrc.ro",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": false,
+    "apiAuth": "Qualified electronic signature / registered portal account (RECOM); card payment for InfoCert certificates; no open API key scheme",
+    "cost": {"model": "per_document", "detail": "RECOM online and InfoCert are paid, fee-per-request/subscription portal services (certificates of status, certified extracts, financial info). data.gov.ro carries only limited ONRC open datasets, not a full company/document API. UNVERIFIED exact tariff schedule."},
+    "notes": "ONRC delivers both data and documents (certified extracts, furnizare informații), but ONLY via the human-facing RECOM/InfoCert portals behind payment — there is no free, open, programmatic REST API and no developer docs. Treat as a paid portal, not build-vs-buy API. INFERENCE: no open documents-via-API channel exists nationally; go-direct would mean portal automation or a vendor.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "ONRC English site: lists RECOM online, InfoCert, certified copies; portal-only, 'site under construction', no API docs", "url": "https://www.onrc.ro/index.php/en", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "SK",
+    "registryName": "Obchodný register SR (Business Register) + Register právnických osôb (RPO) + Register účtovných závierok (RÚZ)",
+    "registryBody": "Business Register: courts under Ministry of Justice (orsr.sk / ru.justice.sk). RPO (reference register): Štatistický úrad SR (Statistical Office). RÚZ: DataCentrum / Ministry of Finance",
+    "registryUrl": "https://www.orsr.sk",
+    "openApi": "yes",
+    "apiName": "RPO REST API (Statistical Office) + RÚZ Open API v2.5 (Register of Financial Statements)",
+    "apiDocsUrl": "https://susrrpo.docs.apiary.io/",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": true,
+    "apiAuth": "None — both APIs are public/open, no key required",
+    "cost": {"model": "free", "detail": "RPO API is free and open (structured legal-entity data). RÚZ Open API is free under CC0 and additionally serves financial-statement PDFs and attachments via /domain/financialreport/pdf/{id} and /attachment/{id}. Business Register deeds (zbierka listín) on orsr.sk are viewable but NOT exposed as an open API."},
+    "notes": "Best of the three. Structured company data via the free open RPO REST API (no auth). Actual DOCUMENTS available via API only for financial statements (RÚZ Open API, PDFs). Core Obchodný register deeds are portal-only. INFERENCE: full corporate deeds still require orsr.sk portal or a vendor; but financials + identity data are fully API-accessible for free.",
+    "confidence": "high",
+    "sources": [
+      {"basis": "RÚZ page confirms 'RÚZ Open API v2.5', CC0 licence, JSON data + PDF/attachment document endpoints, free", "url": "https://www.registeruz.sk/cruz-public/home/api", "retrieved": "2026-07-22"},
+      {"basis": "RPO API documentation (Apiary) referencing production base https://api.statistics.sk/rpo/v1/", "url": "https://susrrpo.docs.apiary.io/", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "SI",
+    "registryName": "Poslovni register Slovenije (PRS) + Sodni register (court register / ePRS)",
+    "registryBody": "AJPES — Agencija Republike Slovenije za javnopravne evidence in storitve (Agency for Public Legal Records and Related Services)",
+    "registryUrl": "https://www.ajpes.si",
+    "openApi": "partial",
+    "apiName": "restPrsInfo / wsPrsInfo (PRS company data), wsProFi-Po (annual-report financial data)",
+    "apiDocsUrl": "https://www.ajpes.si/Za_razvijalce_programske_opreme",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "SI-PASS (eIDAS) registration and/or server digital certificate for the web services",
+    "cost": {"model": "subscription", "detail": "PRS base data is published as free open data (bulk download); production web services (restPrsInfo, wsProFi-Po) require registration and are governed by the AJPES price list (Cenik storitev) — some free, some paid. UNVERIFIED exact per-service tariff."},
+    "notes": "AJPES has a genuine developer programme with documented REST/SOAP web services, but they deliver structured DATA (company profile via restPrsInfo, financials via wsProFi-Po), NOT documents. Court-register document collection (Informatizirana zbirka listin sodnega registra) and annual reports are available through the AJPES web portal (eObjave), not via an open documents API. INFERENCE: documents = portal-only; data = solid free/low-cost API.",
+    "confidence": "high",
+    "sources": [
+      {"basis": "AJPES developer page lists restPrsInfo/wsPrsInfo (PRS data) and wsProFi-Po (financial data) with DevOps PDFs; auth via SI-PASS/certificates", "url": "https://www.ajpes.si/Za_razvijalce_programske_opreme", "retrieved": "2026-07-22"},
+      {"basis": "AJPES eObjave shows court-register document collection + annual reports available via portal (not an open document API); pricing via Cenik storitev", "url": "https://www.ajpes.si/eObjave/default.asp", "retrieved": "2026-07-22"}
+    ]
+  }
+]

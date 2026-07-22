@@ -8,11 +8,11 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 
 | Verdict | Jurisdictions |
 |---|---|
-| 🟢 Go direct (strong) | DK, FR, GB, PL |
+| 🟢 Go direct (strong) | DK, EE, FR, GB, PL, SK |
 | 🟢 Go direct (paid docs) | IE, IT, NO |
 | 🟡 Direct, contract needed | AT, AU, ES, SE, ZA |
-| 🟠 Direct for DATA only — vendor for documents | BE, CA, CH, CZ, FI, IL, IN, JE, LU, MT, NL, NZ, SG |
-| 🔴 Vendor only (no usable API) | AE, BM, BR, BS, CN, CY, GG, HK, IM, JP, KR, KY, LI, MU, MX, PA, PT, SC, TR, US, VG |
+| 🟠 Direct for DATA only — vendor for documents | BE, BG, CA, CH, CO, CZ, FI, GR, HR, IL, IN, JE, LT, LU, LV, MT, MY, NL, NZ, SA, SG, SI, TH, TW |
+| 🔴 Vendor only (no usable API) | AE, AR, BH, BM, BR, BS, CL, CN, CY, GG, HK, HU, ID, IM, IS, JP, KR, KY, LI, MU, MX, PA, PH, PT, QA, RO, SC, TR, US, VG, VN |
 
 ## Per jurisdiction
 
@@ -28,6 +28,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** UAE is fragmented — three worlds. DIFC and ADGM are separate common-law free zones, each with its own online public register (free structured search, no API, documents orderable for a fee). Mainland is split across each emirate's DED/DET plus dozens of free zones (JAFZA, DMCC, RAKEZ...), each with its own system and mostly no public bulk search or API. NO unified UAE registry and NO open API anywhere; direct integration would mean building multiple bespoke scrapers. An aggregation vendor is hard to avoid for broad UAE coverage.
 - **Confidence:** medium
 - **Sources:** [DIFC public register page (official difc.com)](https://www.difc.com/business/public-register); [ADGM Registration Authority / Online Registry Solution (official adgm.com)](https://www.adgm.com/registration-authority/registration-and-incorporation)
+
+### AR — Registro Público (a cargo de la Inspección General de Justicia)
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Inspección General de Justicia (IGJ), Ministerio de Justicia de la Nación — competencia limitada a CABA; cada provincia tiene su propio Registro Público (p. ej. DPPJ en Prov. de Buenos Aires)
+- **Open API:** no · Sin API oficial de registro; datos masivos vía CKAN de datos.gob.ar (dataset 'Entidades constituidas en la IGJ') · docs: <https://datos.gob.ar/api/3/action/help_show?name=package_search>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Ninguna para el open data CKAN (descarga pública). El registro en sí no expone API
+- **Cost (contract):** Trámites y copias/certificaciones se piden por TAD (Trámites a Distancia) o presencialmente, con tasas por trámite; open data CKAN es gratuito. Montos de tasas no verificados en esta sesión (INFERENCE)
+- **Notes:** Sistema FRAGMENTADO: IGJ cubre solo CABA; el resto son ~24 registros provinciales sin API unificada — no hay registro/API nacional. El único acceso programático hallado es el open data (CSV semestral 2016-2026 de entidades CABA), que entrega DATOS, no documentos. Descarga de documentos (estatutos, actas) es por TAD/papel, no vía API. UNVERIFIED: sitio igj.gob.ar dio timeout de DNS; cobertura provincial y tasas no confirmadas en vivo.
+- **Confidence:** medium
+- **Sources:** [CKAN open-data catalog confirms IGJ bulk datasets (data-only, CABA) with API endpoint](https://datos.gob.ar/api/3/action/package_search?q=IGJ+sociedades); [Registry hint / prior knowledge: IGJ = CABA registry, provinces separate; no unified national API](https://www.igj.gob.ar/)
 
 ### AT — Firmenbuch (Austrian Company/Business Register)
 
@@ -67,6 +80,32 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** KBO/BCE holds STRUCTURED DATA ONLY (identification, address, legal form, NACE activity, status) — it does NOT hold filing documents. Company statuts/acts are published separately in the Belgian Official Gazette (Moniteur belge / Belgisch Staatsblad); annual accounts live at the National Bank of Belgium Central Balance Sheet Office (low per-document fee). A 'documents' integration in BE means wiring Staatsblad + NBB, not KBO. For data alone, the free monthly bulk Open Data is the cheapest direct route; the live REST API is paid and opaquely priced.
 - **Confidence:** high
 - **Sources:** [FPS Economy 'CBE - Open data' — free bulk data for reuse](https://economie.fgov.be/en/themes/enterprises/crossroads-bank-enterprises/services-everyone/public-data-available-reuse/cbe-open-data); [FPS Economy 'CBE Public Search' — free web consultation, no account](https://economie.fgov.be/en/themes/enterprises/crossroads-bank-enterprises/services-everyone/consultation-and-research-data/cbe-public-search); [KBO Open Data registration portal](https://kbopub.economie.fgov.be/kbo-open-data/login)
+
+### BG — Търговски регистър и регистър на ЮЛНЦ (Commercial Register and Register of Non-Profit Legal Entities)
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Агенция по вписванията / Registry Agency (Ministry of Justice)
+- **Open API:** partial · Registry Agency web services / REGIX inter-registry gateway; Commercial Register open data bulk publication · docs: <https://data.egov.bg>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Public portal browsing is free and anonymous. Programmatic/system access historically runs through REGIX (government-to-government, contract + credentials, not open to the public). UNVERIFIED whether a public developer API exists.
+- **Cost (free):** Browsing the register and viewing scanned filed documents on the portal is free of charge. Certified certificates/copies carry a state fee under the Registry Agency tariff. Any programmatic REGIX access is contract-based (institutional). INFERENCE — specific web-service tariff not confirmed via official page in this pass.
+- **Notes:** Portal confirmed to expose free electronic services, public reference (справки) and document viewing. A general open, self-service developer API delivering documents was NOT confirmed; institutional programmatic access is via REGIX. Bulgaria also publishes CR data as periodic open-data bulk. Treat openApi=partial and documentsViaApi=false as best-supported; flag as needing direct confirmation with the Registry Agency.
+- **Confidence:** medium
+- **Sources:** [Registry Agency portal — confirms Commercial Register hosted here with free electronic services, public reference and document templates](https://portal.registryagency.bg); [REGIX gateway and open-data publication — INFERENCE from domain knowledge, not re-confirmed on an official page this pass](https://data.egov.bg)
+
+### BH — Sijilat — Commercial Registration (CR)
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Ministry of Industry and Commerce (MOIC) — formerly MOICT
+- **Open API:** no · None public for the registry. A national open-data portal (data.gov.bh, OpenDataSoft) exposes the OpenDataSoft Explore API v2.1, but it does NOT contain commercial-registry data. · docs: <https://www.data.gov.bh/api/>
+- **Delivers:** — | documents via API: **no**
+- **Auth:** n/a — Sijilat is an interactive web platform (business registration, licensing, CR services) with account login; no public API or developer docs found. Contact ir@moic.gov.bh / 8000 8001.
+- **Cost (per_document):** No programmatic option. CR certificates/extracts are issued through the Sijilat portal against MOIC statutory fees. UNVERIFIED exact fee schedule.
+- **Notes:** Sijilat pages show only user-facing services (register business, obtain licence, change address, CR services) — no API/integration surface. The data.gov.bh open-data portal runs OpenDataSoft (public Explore API confirmed) but a direct 'commercial' query returned only telecom statistics (commercial internet/phone lines), confirming the CR registry is not published as open data. INFERENCE: any programmatic CR access would be a government e-gov integration, contract-based and not publicly documented.
+- **Confidence:** medium
+- **Sources:** [Sijilat portal — user-facing CR/licensing services only, no API/developer references; contact ir@moic.gov.bh](https://www.sijilat.bh/); [data.gov.bh OpenDataSoft Explore API v2.1 queried for 'commercial' — only telecom-line statistics returned, no company registry dataset](https://data.gov.bh/api/explore/v2.1/catalog/datasets)
 
 ### BM — Companies and Partnerships Register (Catalyst online registry system)
 
@@ -133,6 +172,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Confidence:** high
 - **Sources:** [Zefix Public REST API endpoint (JSON, no auth for basic queries)](https://www.zefix.admin.ch/ZefixPublicREST/); [opendata.swiss / i14y catalog listing of the Zefix REST dataservice](https://www.i14y.admin.ch/de/catalog/dataservices/6ef8f5d2-3d6a-4d84-bf60-5e65fde98a87)
 
+### CL — Registro de Empresas y Sociedades (RES) — Régimen Simplificado, Ley 20.659 ('Tu Empresa en un Día')
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Ministerio de Economía, Fomento y Turismo — Subsecretaría de Economía y Empresas de Menor Tamaño
+- **Open API:** no · Sin API pública de documentos; datos masivos vía CKAN de datos.gob.cl (dataset 'Registro de Empresas y Sociedades') · docs: <https://datos.gob.cl/api/3/action/help_show?name=package_search>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Ninguna para el open data CKAN (CC-BY). El portal RES no expone API programática
+- **Cost (free):** Certificados del régimen simplificado (estatuto actualizado, vigencia, anotaciones) se descargan como PDF desde el portal, gratuitos en este régimen; open data gratuito. 'Gratuito' es INFERENCE — no verificado en vivo (portal ASP.NET no renderizó precios)
+- **Notes:** COBERTURA PARCIAL: RES solo contiene empresas constituidas electrónicamente bajo Ley 20.659 (SpA, EIRL, SRL, etc. del régimen simplificado). Sociedades constituidas por escritura pública NO están en RES — esas viven en el Registro de Comercio a cargo de los Conservadores de Bienes Raíces (papel/pagado, por comuna) + publicación en el Diario Oficial. El open data (14 recursos anuales 2013-2026, CC-BY) entrega DATOS, no documentos. tuempresaenundia.cl redirige 308 a registrodeempresasysociedades.cl. UNVERIFIED: gratuidad exacta y ausencia total de API de documentos.
+- **Confidence:** medium
+- **Sources:** [CKAN open-data confirms RES dataset (data-only) with active API; publisher = Subsecretaría de Economía](https://datos.gob.cl/api/3/action/package_search?q=empresas+sociedades+registro); [Sitio RES confirma operador (Ministerio de Economía) y oferta de certificados; sin mención de API](https://www.registrodeempresasysociedades.cl/)
+
 ### CN — National Enterprise Credit Information Publicity System (国家企业信用信息公示系统, GSXT)
 
 **🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
@@ -145,6 +197,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** GSXT delivers STRUCTURED data only (registration, shareholders, annual reports, penalties) and is deliberately anti-bot (CAPTCHA), so even the free data is not integrable via a supported API. Filing/register DOCUMENTS are not downloadable — certified 档案 copies are pulled in person at provincial/municipal AMR bureaus. Commercial providers (Tianyancha, Qichacha, QCC) scrape GSXT and resell via APIs; that is effectively the only programmatic path. Direct integration NOT viable.
 - **Confidence:** high
 - **Sources:** [GSXT is SAMR's free public disclosure portal, structured data, CAPTCHA-gated, no API (established knowledge; gsxt.gov.cn 521 to automated fetch this session)](https://www.gsxt.gov.cn)
+
+### CO — Registro Único Empresarial y Social (RUES) / Registro Mercantil; documento clave: Certificado de Existencia y Representación Legal
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Confederación Colombiana de Cámaras de Comercio (Confecámaras) que integra las 57 Cámaras de Comercio; supervisión de la Superintendencia de Industria y Comercio (SIC)
+- **Open API:** partial · Datos Abiertos RUES vía Socrata SODA API (datos.gov.co); además una API/servicios de integración RUES para entidades por convenio · docs: <https://dev.socrata.com/>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** App token opcional de Socrata para el open data; la API de integración RUES requiere convenio/acuerdo (no self-service abierto)
+- **Cost (per_document):** Certificado de Existencia y Representación Legal se compra en línea como PDF (~COP 6.500 por certificado, aprox. USD 1,5 — cifra INFERENCE, no verificada en vivo); consulta básica de datos y open data son gratuitos
+- **Notes:** Registro NACIONAL unificado (RUES) operado por Confecámaras — a diferencia de AR/CL es de cobertura nacional. Vía programática abierta = solo DATOS (Socrata SODA: datasets verificados c82u-588k 'Personas Naturales/Jurídicas/ESAL', nb3d-v3n7 'Establecimientos-Agencias-Sucursales'). El DOCUMENTO (certificado) NO se entrega por API abierta: se emite/compra individualmente en rues.org.co o en el portal de cada Cámara (p. ej. CCB) como PDF con firma. Existe una API de integración RUES pero es por convenio (entidades públicas/vigiladas), no abierta. UNVERIFIED: precio exacto del certificado y términos de la API de integración.
+- **Confidence:** medium
+- **Sources:** [Socrata catalog API confirma datasets RUES/Confecámaras (data-only) con IDs y descripciones](https://www.datos.gov.co/api/catalog/v1?q=RUES); [Sitio RUES confirma el registro ('Registro Único Empresarial y Social')](https://www.rues.org.co/)
 
 ### CY — Department of Registrar of Companies and Intellectual Property (DRCIP)
 
@@ -184,6 +249,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** Best DIRECT-integration candidate. Both structured data AND financial-statement documents come free via official channels, so an aggregation vendor adds little beyond convenience. Articles of association (vedtægter) coverage is less complete than annual reports, but the accounts themselves are fully open.
 - **Confidence:** high
 - **Sources:** [Erhvervsstyrelsen CVR data catalog — system-to-system access page](https://data.virk.dk/datakatalog/erhvervsstyrelsen/system-til-system-adgang-til-cvr-data); [datacvr.virk.dk — download regnskaber (annual-reports)](https://datacvr.virk.dk/data/cvr-hj%C3%A6lp/f%C3%A5-hj%C3%A6lp-til-cvr/download-regnskaber)
+
+### EE — e-Business Register (Äriregister)
+
+**🟢 Go direct (strong)** — open API delivers documents, free/low cost
+
+- **Body:** Centre of Registers and Information Systems (RIK / Registrite ja Infosüsteemide Keskus), Ministry of Justice
+- **Open API:** yes · e-Business Register Open Data & REST API (avaandmed.ariregister.rik.ee); plus X-Road REST interface · docs: <https://avaandmed.ariregister.rik.ee/en>
+- **Delivers:** data, documents | documents via API: **yes**
+- **Auth:** Free registration / API key for the Business Registry REST API; bulk open-data files need no key
+- **Cost (free):** Open data and REST API are free under CC BY 4.0. Company data, annual reports, articles of association and beneficial-owner data are exposed. Certain premium/commercial 'Business Register queries' can be chargeable, but the open-data channel is free.
+- **Notes:** Strongest of the three. Portal explicitly lists an Open Data API, a Business Registry REST API (API-key auth) and a REST X-Road interface, and names annual reports and articles of association among available data. UNVERIFIED nuance: whether every historical document is returned as a downloadable PDF vs. structured/XBRL data via the same API was not fully confirmed on the docs page.
+- **Confidence:** high
+- **Sources:** [e-Business Register open-data portal — lists Open Data API, Business Registry REST API (API-key auth), REST X-Road; annual reports + articles of association; CC BY 4.0](https://avaandmed.ariregister.rik.ee/en); [RIK e-Business Register access methods (portal, XML service, company-registration API)](https://www.rik.ee/en/e-business-register)
 
 ### ES — Registro Mercantil (Central + provincial commercial registries)
 
@@ -250,6 +328,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Confidence:** high
 - **Sources:** [Company search guidance — free fields, portal-only, no API](https://www.guernseyregistry.com/Companysearches); [Limited Companies fee schedule — per-document GBP amounts](https://www.guernseyregistry.com/companyfees); [Online Services Portal — the only access channel (SPA)](https://portal.guernseyregistry.com/)
 
+### GR — Γενικό Εμπορικό Μητρώο (Γ.Ε.ΜΗ.) — General Commercial Registry (GEMI)
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Greek Ministry of Development / General Secretariat of Commerce; operated with the Central Union of Chambers of Commerce (KEEE/UHCCI). Legal basis: Law 4919/2022.
+- **Open API:** partial · GEMI publicity search + e-Services portal; system-to-system interconnection web services (restricted, for banks/public sector)
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Public 'publicity' search is free with no login; certificates and document copies via services.businessportal.gr require login and carry fees; machine interconnection is provided to banks/public bodies by agreement, not as an open public API.
+- **Cost (per_document):** Free public search of publicity data; certificates and copies of filed documents (articles of association, financial statements, GEMI announcements) are obtained through the e-services portal for statutory fees. INFERENCE: exact fee schedule not confirmed on the fetched pages.
+- **Notes:** publicity.businessportal.gr offers a free search UI returning company data (no API confirmed on the page). Documents exist in the system but are retrieved by application via the e-services portal, not via a documented open API. No public open-data/REST endpoint delivering documents was found. UNVERIFIED: existence and terms of any programmatic interconnection API — inferred from known bank/public-sector interconnection practice, not confirmed on official pages.
+- **Confidence:** low
+- **Sources:** [GEMI publicity portal — free search interface, no API/pricing shown](https://publicity.businessportal.gr/); [businessportal.gr — describes e-Services (services.businessportal.gr) for certificates and company info; no API docs shown](https://www.businessportal.gr/)
+
 ### HK — ICRIS e-Search Services (Cyber Search Centre) / e-Services Portal
 
 **🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
@@ -262,6 +353,45 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** Portal (not an API) DOES deliver both data and imaged copies of filed documents (PDFs) for a per-item fee — good coverage, but only via manual/portal access. No open/developer API, so 'direct integration' means screen-scraping a paid portal (against ToS) — not a clean build. No viable direct API; aggregator or portal automation only.
 - **Confidence:** medium
 - **Sources:** [CR site nav confirms e-Services Portal + e-Search Services; no API surfaced](https://www.cr.gov.hk/en/home/index.htm); [e-Services Portal (ICRIS) — JS SPA, confirmed a login/portal not an API](https://www.e-services.cr.gov.hk/)
+
+### HR — Sudski registar (Court Register)
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Ministarstvo pravosuđa i uprave / Ministry of Justice and Public Administration (commercial courts maintain the register)
+- **Open API:** yes · Otvoreni podaci sudskog registra — Sudski registar Open Data REST API · docs: <https://sudreg-data.gov.hr>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Free self-service registration at sudreg-data.gov.hr issues Client ID + Client Secret; OAuth-style access token valid ~6 hours, renewed periodically. Public (javni) endpoints e.g. /api/javni/sudovi, /api/javni/subjekt.
+- **Cost (free):** No fee for API access; registration required. Support: sudski.registar@pravosudje.hr.
+- **Notes:** Confirmed REST API with OpenAPI docs returning STRUCTURED DATA ONLY (subjects, courts, statuses); documentation makes no mention of retrieving scanned documents. Filed documents / articles and financial statements are not delivered by this API (financial statements sit in FINA's RGFI). Strongest go-direct candidate of the three.
+- **Confidence:** high
+- **Sources:** [data.gov.hr dataset page — confirms REST API, registration issuing Client ID/Secret, 6-hour token, no cost stated, structured data only, no document retrieval, support email](https://data.gov.hr); [sudreg-data.gov.hr — official open-data API host (Swagger/OpenAPI)](https://sudreg-data.gov.hr); [Public search front-end](https://sudreg.pravosudje.hr)
+
+### HU — Cégjegyzék (Company Register)
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Cégbíróságok (registry courts) under the Ministry of Justice; Céginformációs Szolgálat (Company Information Service) publishes data/reports
+- **Open API:** no · None public. Free web search (e-cegjegyzek.hu 'Ingyenes Céginformáció'); financial reports via e-beszamolo.im.gov.hu; paid certified extracts via the registry courts/commercial providers
+- **Delivers:** data, documents | documents via API: **no**
+- **Auth:** Web-only. e-beszamolo financial-report search and download works without registration; e-cegjegyzek basic company search is free; certified company extracts (cégkivonat) are paid.
+- **Cost (free):** Free: basic company data on e-cegjegyzek.hu and published financial reports (with downloadable attachments) on e-beszamolo.im.gov.hu. Paid: certified electronic company extracts and richer real-time company information via the Company Information Service / commercial resellers. No open/free bulk API.
+- **Notes:** Documents ARE downloadable (financial reports on e-beszamolo confirmed; certified extracts paid), but only through web portals — NO documented public API. apiDelivers lists documents because the portals do deliver them; documentsViaApi=false because there is no API channel. Access via BRIS or paid providers is the realistic programmatic route.
+- **Confidence:** medium
+- **Sources:** [e-beszamolo.im.gov.hu — confirmed free search of company financial reports by reg. number/tax number/name, downloadable report attachments, no API/open-data, Ministry of Justice operated](https://e-beszamolo.im.gov.hu); [e-cegjegyzek.hu — confirmed free company information ('Ingyenes Céginformáció') front-end](https://www.e-cegjegyzek.hu)
+
+### ID — Legal Entity registry (PT company profiles) via SABH/AHU; business-licensing identity (NIB) via OSS
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Directorate General of General Legal Administration (Ditjen AHU), Ministry of Law (Kemenkumham) — company legal entities; OSS/NIB operated by the Ministry of Investment (BKPM)
+- **Open API:** no · None public. AHU and OSS expose web portals plus government-to-government (K/L/D) integration interfaces, not an open developer API
+- **Delivers:** data, documents | documents via API: **no**
+- **Auth:** Portal account (AHU Online / OSS); any system integration is restricted gov-to-gov, not open to the public
+- **Cost (per_document):** Free basic NIB lookup on OSS (NIB Search). AHU Online company documents are paid PNBP: approx IDR 50,000-500,000 (~USD 3-31) per document depending on type (profil perseroan / akta / SK per Law No. 40/2007). After payment users print/download from the portal. Beneficial-ownership data is collected but not publicly searchable as of mid-2026.
+- **Notes:** BUY / scrape-tier: no public API from AHU or OSS. Data and documents are behind paid portal access (AHU) or free basic lookup (OSS NIB). Third-party aggregators supply programmatic access to extracted data. INFERENCE flagged: OSS/AHU gov-to-gov integration exists but is not a public API; exact PNBP per document type not itemized here.
+- **Confidence:** medium
+- **Sources:** [OpenCorporates: 'Ministry of Law and Human Rights – Company Information' (no data currently in OC, openness 0/100)](https://opencorporates.com/registers); [AHU Online (ahu.go.id) is the PT registry; 'no public API'; full company profile IDR 50,000-500,000; BO not publicly searchable; third-party scrapers provide API access](https://ahu.go.id); [OSS portal (oss.go.id): NIB Search lookup, no developer/API documentation published publicly](https://oss.go.id/informasi)
 
 ### IE — Companies Registration Office (CRO) / CORE
 
@@ -314,6 +444,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** Structured master data is partly open (data.gov.in datasets, free API key) but is snapshot/bulk, not a live per-company lookup API. Filing DOCUMENTS come only through the paid, login-gated 'View Public Documents' / certified-copy flow on MCA21 V3 — NO API delivers them. Commercial aggregators wrap this manually. Direct integration gives open structured data but NOT documents.
 - **Confidence:** high
 - **Sources:** [MCA21 is the RoC portal; VPD/certified copies paid & login-gated (established knowledge; mca.gov.in 403 to automated fetch this session)](https://www.mca.gov.in); [Open MCA company/LLP datasets published with free API key](https://www.data.gov.in)
+
+### IS — Fyrirtækjaskrá (Register of Enterprises)
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Skatturinn (Iceland Revenue and Customs; formerly Ríkisskattstjóri / RSK)
+- **Open API:** no · Free online company search (fyrirtækjaskrá/leit); government machine access via Straumurinn (X-Road) is restricted, not an open public API
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Free public online search (no login) for basic company data (name, kennitala/ID, address, legal form, status). No documented open public API. Straumurinn/island.is integrations are limited to authorized/government parties.
+- **Cost (per_document):** Basic online search is free; certified extracts and annual accounts (via Ársreikningaskrá / Register of Annual Accounts) are obtained for a fee, largely by manual request. INFERENCE: exact per-document fees and any bulk/subscription data option not confirmed on fetched pages.
+- **Notes:** Register operated by Skatturinn with a free search at skatturinn.is/fyrirtaekjaskra/leit. No open, publicly documented REST API delivering data or documents was found; Iceland routes agency data via the Straumurinn (X-Road) layer, which is not open to the public. Documents (articles of association, annual accounts) are retrieved manually/for a fee, not via API. Confidence low: absence of a public API is inferred from the official pages not mentioning one.
+- **Confidence:** low
+- **Sources:** [Skatturinn English 'Companies' page — links to company search and service portal; no API/pricing detail](https://www.skatturinn.is/english/companies/); [island.is Skatturinn org page — references company registry search and Register of Annual Accounts; no API specifics](https://island.is/en/o/skatturinn); [devland.is technical direction — confirms Straumurinn (X-Road) is the integration layer; no open company-register API cataloged](https://docs.devland.is/)
 
 ### IT — Registro delle Imprese
 
@@ -393,6 +536,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Confidence:** high
 - **Sources:** [Registry portal — free partial + paid certified extract, JSF app, no API](https://handelsregister.li/cr-portal/suche/suche.xhtml); [Official fee ordinance GbHr-GebV LR 214.011 Anhang 2 — CHF fee amounts](https://www.gesetze.li/konso/pdf/2003067000?version=6); [Liechtenstein participates in BRIS via EEA; register run by Amt für Justiz](https://www.llv.li/en/national-administration/office-of-justice/commercial-register-hr-)
 
+### LT — Register of Legal Entities (Juridinių asmenų registras, JAR)
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** State Enterprise Centre of Registers (VĮ Registrų centras)
+- **Open API:** partial · JAR primary open data ('JAR pirminiai duomenys / raw data'); Registrų centras contract web services / self-service (savitarna); national portal data.gov.lt · docs: <https://www.registrucentras.lt/atviri-duomenys-ir-statistika/jar-pirminiai-duomenys-raw-data>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** None for the free JAR primary open-data download; registration/contract for detailed web services and paid documents
+- **Cost (contract):** JAR 'primary data' is published free as bulk open data. Detailed extracts, financial statements (Finansinių ataskaitų rinkiniai) and founding documents are paid per-item via self-service or under a data-supply contract; programmatic access to full data is subscription/contract-based, not a fully open API.
+- **Notes:** VERIFIED: the free JAR primary open-data page exists (URL confirmed via a 301 redirect from registrucentras.lt/p/1094). INFERENCE/UNVERIFIED: the registrucentras.lt site is a JS single-page app that could not be scraped, so the split between free open data vs. paid per-document self-service and the exact web-service/API auth model rests on established public knowledge of Registrų centras rather than a freshly-read official page. Documents are obtainable but paid and not via a free open API. Beneficial-owner data sits in a separate register (JANGIS).
+- **Confidence:** medium
+- **Sources:** [Registrų centras open-data page for JAR primary/raw data (existence + canonical URL confirmed via redirect)](https://www.registrucentras.lt/atviri-duomenys-ir-statistika/jar-pirminiai-duomenys-raw-data); [Registrų centras site root (confirms VĮ Registrų centras as operating body; page content JS-rendered, not fully extractable)](https://www.registrucentras.lt/en/)
+
 ### LU — Registre de Commerce et des Sociétés (RCS)
 
 **🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
@@ -405,6 +561,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** LOWEST confidence of the four on API specifics. Primary sources confirm the free-portal + paid-certified-extract model and a contractual B2B API; but the widely-cited 'open, no-auth REST/XML company-search API' claims come from aggregator/marketing sites (zephira, topograph, kyckr), NOT an LBR developer portal — treat as unproven. Realistic direct path: contractual LBR B2B API, or scrape the free portal, or data.public.lu open datasets for bulk. Documents are cheap/free but access is portal/account-gated rather than cleanly API-delivered.
 - **Confidence:** medium
 - **Sources:** [LBR press item — LBR API for the private sector (i-Hub)](https://www.i-hub.com/b2b/wp-content/uploads/sites/3/2022/10/LBR-API-i-Hub-PR-October-2022-EN.pdf); [Luxembourg national open-data portal (LBR/RCS datasets)](https://data.public.lu); [Guichet.lu — RCS filings/publications and extract ordering via LBR](https://guichet.public.lu/en/entreprises/creation-developpement/constitution/entreprise-individuelle/immatriculation-entreprise-publication-rcs.html); [European e-Justice Portal — LU business register overview](https://e-justice.europa.eu/topics/registers-business-insolvency-land/business-registers-eu-countries/lu_en)
+
+### LV — Enterprise Register (Uzņēmumu reģistrs) — Register of Enterprises of the Republic of Latvia
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Register of Enterprises of the Republic of Latvia (Latvijas Republikas Uzņēmumu reģistrs)
+- **Open API:** partial · data.gov.lv CKAN Action API over UR open datasets; e-services portal (registrs.ur.gov.lv) and info portal (info.ur.gov.lv) for documents · docs: <https://data.gov.lv/dati/eng/api/3>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** None for open data (CKAN API, CC0); authenticated e-services required for documents/certified extracts
+- **Cost (free):** ~35 UR open datasets on data.gov.lv are free (34 CC0): main enterprise register (daily), beneficial owners, share capital / investments (shareholders), historical names, reorganizations/liquidations — CSV/JSON/XLSX/XML. Documents (annual reports, statutes) and certified extracts are obtained through the paid ur.gov.lv e-services, not the open API.
+- **Notes:** VERIFIED via data.gov.lv: rich free structured open data including beneficial owners and share-capital/shareholder info, accessible through a CKAN API. Documents themselves (annual reports, articles) are NOT in the open datasets — they come from the ur.gov.lv e-services portal and are chargeable. UNVERIFIED: the ur.gov.lv 'receive automated data for systems' page (a possible direct machine channel) returned 404, so any dedicated UR-hosted API beyond the CKAN open data was not confirmed.
+- **Confidence:** high
+- **Sources:** [data.gov.lv catalogue — ~35 Uzņēmumu reģistrs datasets (main register, beneficial owners, share capital, historical names, reorg/liquidation), CSV/JSON/XLSX/XML, CKAN API, CC0](https://data.gov.lv/dati/eng/api/3); [UR homepage — 'Receive Automated Data for Systems' (API + open data), e-services registrs.ur.gov.lv, info portal info.ur.gov.lv](https://www.ur.gov.lv/en/)
 
 ### MT — Malta Business Registry
 
@@ -444,6 +613,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** RPC is the mercantile registry; SIGER 2.0 is the electronic operating platform (rpc.economia.gob.mx/siger2/ redirects to a login) and is NOT open — it serves notaries/authorized filers. A public 'consulta' returns structured data only. PSM (psm.economia.gob.mx) hosts mandatory company publications (share registrations, dissolutions/liquidations) as documents you can query, but again no programmatic API. Direct integration is NOT viable without a private arrangement; an aggregator or screen-level integration would be required.
 - **Confidence:** medium
 - **Sources:** [rpc.economia.gob.mx homepage (portal reachable but resource error at fetch time; identifies Secretaría de Economía internal services)](https://rpc.economia.gob.mx); [SIGER 2.0 portal 302-redirects to login.xhtml — login-gated, not open](https://rpc.economia.gob.mx/siger2/); [PSM portal — publishes mercantile company notices (share registrations, dissolutions/liquidations); has 'Consulta publicaciones'; no API mentioned; registration by e-credential to publish](https://psm.economia.gob.mx)
+
+### MY — Companies Commission of Malaysia (Suruhanjaya Syarikat Malaysia)
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Companies Commission of Malaysia (SSM) — federal statutory registrar of companies and businesses
+- **Open API:** partial · MyData-SSM / SSM API4U (e-Info Services) · docs: <https://www.ssm.com.my/Pages/e-Info-Services/e-Info.aspx>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Registered/licensed data-provider account (contracted subscription); not an open public API
+- **Cost (subscription):** SSM e-Info products (MyData-SSM, SSM Search, e-CBID company profiles) are paid per document/query via the portal; API4U real-time data access is a licensed/contracted subscription for approved data providers. Exact tariffs UNVERIFIED (SPA/tariff page not retrievable).
+- **Notes:** SSM homepage confirms e-Info, MyData-SSM, SSM Search and e-CBID services and references an 'API4U / developer' programme. INFERENCE: API4U/MyData-SSM return structured company DATA (real-time lookups/verification) rather than downloadable document files; PDF documents (company profiles, e-CBID reports) appear to be portal purchases, not API deliverables. Documents-via-API is UNVERIFIED — MyData-SSM site is a JS SPA that returned no readable content and the API4U detail page 404'd/reset.
+- **Confidence:** medium
+- **Sources:** [SSM homepage lists e-Info, MyData-SSM, SSM Search, e-CBID and references 'API4U / developer'](https://www.ssm.com.my/); [SSM identity and e-Info services (statutory registrar)](https://en.wikipedia.org/wiki/Companies_Commission_of_Malaysia)
 
 ### NL — Handelsregister (Netherlands Commercial / Business Register)
 
@@ -497,6 +679,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Confidence:** low
 - **Sources:** [OpenCorporates register listing corroborates a public online register for Panama (~945k companies) with no documented API](https://opencorporates.com/registers); [Official registry site (attempted primary source; unreachable/geo-blocked — connection refused)](https://www.rp.gob.pa/)
 
+### PH — Securities and Exchange Commission (Philippines)
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Securities and Exchange Commission (SEC) — registrar of corporations and partnerships
+- **Open API:** no · None (SEC Express = web ordering portal; eFAST = online filing system)
+- **Delivers:** — | documents via API: **no**
+- **Auth:** n/a — no public API; SEC Express is an account-based web ordering portal
+- **Cost (per_document):** Documents ordered via SEC Express (secexpress.ph) as plain or authenticated copies; per-document fees + delivery, updated under SEC Memorandum Circular No. 18 (effective 1 June 2026). Payment via GCash, Maya, cards, bank transfer. Delivery 3-5 working days Metro Manila, up to 7 provincial.
+- **Notes:** SEC Express delivers copies of Articles of Incorporation/Partnership, By-laws, GIS, Audited Financial Statements, Secretary's Certificates, etc. NO API found for either data or documents — SEC Express is a manual online ordering/courier service and eFAST is the filing portal. Ordering documents is web-form + human fulfilment, not programmatic.
+- **Confidence:** high
+- **Sources:** [SEC Express confirmed as online document-ordering service (document list, fees per MC No. 18, delivery timelines, payment methods; no API mentioned)](https://secexpress.ph/); [Registry name confirmation](https://opencorporates.com/registers)
+
 ### PL — Krajowy Rejestr Sądowy (KRS) — National Court Register (register of entrepreneurs)
 
 **🟢 Go direct (strong)** — open API delivers documents, free/low cost
@@ -522,6 +717,45 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** No direct API. The Certidão Permanente is a web product: pay per certificate, receive an access code granting online consultation for the paid validity window (1–4 years) — economically a subscription-per-entity. Delivers DOCUMENTS (certidão, estatutos, IES accounts) but NO programmatic channel, so scraping the code-access page is the only DIY route (fragile, likely against terms). The jurisdiction where an aggregation vendor is hardest to avoid. The access-code model does make re-fetching a known entity cheap within its validity window.
 - **Confidence:** high
 - **Sources:** [IRN permanent-certificate request page (types + per-validity pricing)](https://registo.justica.gov.pt/en/Companies/Request-permanent-certificate); [IRN Consultar Certidão Permanente page (access-code model; no API)](https://registo.justica.gov.pt/Empresas/Consultar-Certidao-Permanente); [gov.pt service page for the certidão permanente](https://www.gov.pt/servicos/consultar-a-certidao-permanente-de-registo-comercial)
+
+### QA — Commercial Registration (Sijil Tijari) / Single Window
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Ministry of Commerce and Industry (MoCI)
+- **Open API:** no · None for the registry. A national open-data portal (data.gov.qa, OpenDataSoft) has a public REST API, but it does NOT contain company/commercial-registry data. · docs: <https://www.data.gov.qa/api/explore/v2.1/>
+- **Delivers:** — | documents via API: **no**
+- **Auth:** n/a — no public registry API. MoCI services (Single Window sw.gov.qa, Trade Names Search, e-Services) are interactive web portals with login, not programmatic endpoints.
+- **Cost (per_document):** No programmatic option. CR extracts/certificates are obtained manually through MoCI Single Window / e-Services against statutory government fees. UNVERIFIED exact fee schedule.
+- **Notes:** MoCI site advertises Single Window, Trade Names Search, Qatar Business Map and e-Services — all web UIs, no API/developer docs found. The OpenDataSoft open-data portal API was queried directly (search 'commercial'/'commercial registration') and returns only unrelated statistics (vehicle registration transactions, etc.), confirming the registry is not exposed there. INFERENCE: any bulk/integration access would be a government-only, contract-based arrangement, not a published open API.
+- **Confidence:** medium
+- **Sources:** [MoCI homepage — lists Single Window, Trade Names Search, e-Services as web portals; no API/developer references](https://www.moci.gov.qa/en/); [data.gov.qa OpenDataSoft catalog API queried for 'commercial registration' — only vehicle-registration statistics returned, no company registry dataset](https://www.data.gov.qa/api/explore/v2.1/catalog/datasets)
+
+### RO — Registrul Comerțului (Romanian Trade Register)
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Oficiul Național al Registrului Comerțului (ONRC), under the Ministry of Justice
+- **Open API:** no · RECOM online / InfoCert (paid portal services, not a developer API) · docs: <https://portal.onrc.ro>
+- **Delivers:** data, documents | documents via API: **no**
+- **Auth:** Qualified electronic signature / registered portal account (RECOM); card payment for InfoCert certificates; no open API key scheme
+- **Cost (per_document):** RECOM online and InfoCert are paid, fee-per-request/subscription portal services (certificates of status, certified extracts, financial info). data.gov.ro carries only limited ONRC open datasets, not a full company/document API. UNVERIFIED exact tariff schedule.
+- **Notes:** ONRC delivers both data and documents (certified extracts, furnizare informații), but ONLY via the human-facing RECOM/InfoCert portals behind payment — there is no free, open, programmatic REST API and no developer docs. Treat as a paid portal, not build-vs-buy API. INFERENCE: no open documents-via-API channel exists nationally; go-direct would mean portal automation or a vendor.
+- **Confidence:** medium
+- **Sources:** [ONRC English site: lists RECOM online, InfoCert, certified copies; portal-only, 'site under construction', no API docs](https://www.onrc.ro/index.php/en)
+
+### SA — Commercial Register (Sijil Tijari), Ministry of Commerce
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Ministry of Commerce (MC) — maintains the Commercial Register; unified access via Saudi Business Center (business.sa)
+- **Open API:** partial · National Information Center (NIC) business-verification services — 'Wathiq' (واثق) / related NIC APIs
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Contract-gated access restricted to licensed/authorized entities (banks, fintechs); not an open public API
+- **Cost (contract):** INFERENCE/UNVERIFIED: NIC/Wathiq business-information access is a paid, contracted service to authorized entities (typically per-query pricing). Public open API for CR documents does not appear to exist. data.gov.sa hosts some open datasets but not downloadable CR documents. Could not confirm tariffs.
+- **Notes:** UNVERIFIED — all Saudi endpoints (business.sa, mc.gov.sa, wathiq.sa, open.data.gov.sa) were unreachable from this environment (connection refused / DNS / cert errors, likely geoblocking), so this entry rests on prior knowledge, not a retrieved source. Ministry of Commerce maintains the Commercial Register; business.sa is the unified Saudi Business Center portal. INFERENCE: programmatic CR access exists only via NIC business-verification APIs (Wathiq) restricted to licensed entities and returns DATA/verification attributes, not document files. Re-verify from an environment that can reach business.sa / NIC.
+- **Confidence:** low
+- **Sources:** [Ministry of Commerce oversees commercial activity in the Kingdom (register-maintaining body)](https://en.wikipedia.org/wiki/Ministry_of_Commerce_(Saudi_Arabia)); [Registry name confirmation ('Ministry of Commerce and Industry - Commercial Register')](https://opencorporates.com/registers)
 
 ### SC — Seychelles FSA — Registrar of International Business Companies / Registry of Companies
 
@@ -562,6 +796,45 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Confidence:** medium
 - **Sources:** [ACRA 'buying information' page confirms an ACRA API Marketplace and downloadable information products](https://www.acra.gov.sg/how-to-guides/buying-information); [ACRA info-products overview (buy/download/verify flow)](https://www.acra.gov.sg/how-to-guides/buying-information/information-products)
 
+### SI — Poslovni register Slovenije (PRS) + Sodni register (court register / ePRS)
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** AJPES — Agencija Republike Slovenije za javnopravne evidence in storitve (Agency for Public Legal Records and Related Services)
+- **Open API:** partial · restPrsInfo / wsPrsInfo (PRS company data), wsProFi-Po (annual-report financial data) · docs: <https://www.ajpes.si/Za_razvijalce_programske_opreme>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** SI-PASS (eIDAS) registration and/or server digital certificate for the web services
+- **Cost (subscription):** PRS base data is published as free open data (bulk download); production web services (restPrsInfo, wsProFi-Po) require registration and are governed by the AJPES price list (Cenik storitev) — some free, some paid. UNVERIFIED exact per-service tariff.
+- **Notes:** AJPES has a genuine developer programme with documented REST/SOAP web services, but they deliver structured DATA (company profile via restPrsInfo, financials via wsProFi-Po), NOT documents. Court-register document collection (Informatizirana zbirka listin sodnega registra) and annual reports are available through the AJPES web portal (eObjave), not via an open documents API. INFERENCE: documents = portal-only; data = solid free/low-cost API.
+- **Confidence:** high
+- **Sources:** [AJPES developer page lists restPrsInfo/wsPrsInfo (PRS data) and wsProFi-Po (financial data) with DevOps PDFs; auth via SI-PASS/certificates](https://www.ajpes.si/Za_razvijalce_programske_opreme); [AJPES eObjave shows court-register document collection + annual reports available via portal (not an open document API); pricing via Cenik storitev](https://www.ajpes.si/eObjave/default.asp)
+
+### SK — Obchodný register SR (Business Register) + Register právnických osôb (RPO) + Register účtovných závierok (RÚZ)
+
+**🟢 Go direct (strong)** — open API delivers documents, free/low cost
+
+- **Body:** Business Register: courts under Ministry of Justice (orsr.sk / ru.justice.sk). RPO (reference register): Štatistický úrad SR (Statistical Office). RÚZ: DataCentrum / Ministry of Finance
+- **Open API:** yes · RPO REST API (Statistical Office) + RÚZ Open API v2.5 (Register of Financial Statements) · docs: <https://susrrpo.docs.apiary.io/>
+- **Delivers:** data, documents | documents via API: **yes**
+- **Auth:** None — both APIs are public/open, no key required
+- **Cost (free):** RPO API is free and open (structured legal-entity data). RÚZ Open API is free under CC0 and additionally serves financial-statement PDFs and attachments via /domain/financialreport/pdf/{id} and /attachment/{id}. Business Register deeds (zbierka listín) on orsr.sk are viewable but NOT exposed as an open API.
+- **Notes:** Best of the three. Structured company data via the free open RPO REST API (no auth). Actual DOCUMENTS available via API only for financial statements (RÚZ Open API, PDFs). Core Obchodný register deeds are portal-only. INFERENCE: full corporate deeds still require orsr.sk portal or a vendor; but financials + identity data are fully API-accessible for free.
+- **Confidence:** high
+- **Sources:** [RÚZ page confirms 'RÚZ Open API v2.5', CC0 licence, JSON data + PDF/attachment document endpoints, free](https://www.registeruz.sk/cruz-public/home/api); [RPO API documentation (Apiary) referencing production base https://api.statistics.sk/rpo/v1/](https://susrrpo.docs.apiary.io/)
+
+### TH — Juristic Person (company) Register / Central Registration
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Department of Business Development (DBD), Ministry of Commerce
+- **Open API:** partial · DBD Open API (juristic person data) + DBD open datasets on CKAN (opendata.dbd.go.th / data.go.th); DBD DataWarehouse+ is a web portal, not an API · docs: <https://openapi.dbd.go.th>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** Registration + token/API key issued via DBD Digital ID (dbdid.egov.go.th) for the Open API; CKAN datasets are open with optional key
+- **Cost (free):** Open API and open datasets are free to registered developers (quota-limited, data only, e.g. /api/v1/juristic_person). Certified DOCUMENTS are NOT via API: obtained through DBD e-Service (ebiz.dbd.go.th) as e-Certificates, paid ~40 THB base fee + ~50 THB/page certification (~200-350 THB/document).
+- **Notes:** Best build-vs-buy of the three: structured company/juristic-person DATA is available via a genuine open API (JSON) and via CKAN. Documents (certificate/หนังสือรับรอง, financial statements, affidavit) are delivered only through the paid e-Service web channel, not the API. DBD DataWarehouse+ (datawarehouse.dbd.go.th) adds financials/analytics but is a web UI. INFERENCE: exact Open API quota tiers and whether any premium data tier is charged were not confirmed from the live docs (site returned 403 to automated fetch).
+- **Confidence:** medium
+- **Sources:** [OpenCorporates register listing confirming DBD as Thailand's company register](https://opencorporates.com/registers); [DBD Open API endpoints (openapi.dbd.go.th/api/v1/juristic_person...), CKAN open data (opendata.dbd.go.th), token-based, data-only](https://openapi.dbd.go.th); [DBD e-Service certified documents (ebiz.dbd.go.th): ~40 THB fee + ~50 THB/page, electronic delivery](https://ebiz.dbd.go.th)
+
 ### TR — Ticaret Sicili (Trade Registry) + MERSIS + Türkiye Ticaret Sicili Gazetesi (Trade Registry Gazette)
 
 **🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
@@ -574,6 +847,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** Two distinct sources: MERSIS holds structured company DATA (registration/modification/deletion records) but is login-gated for end users with no programmatic access; the Trade Registry Gazette is the DOCUMENT source — announcements (incorporation, changes, etc.) are free-searchable and viewable/printable, with certified copies sold per copy. Neither exposes a clean open API. Direct integration is NOT viable via an official API; you would need screen-level/portal automation or a vendor. Documents (Gazette announcements) are the reliably free, publicly reachable asset.
 - **Confidence:** medium
 - **Sources:** [MERSIS portal — central registry system for companies; only end-user guides (login/establishment/modification); no API/developer docs; e-Devlet integration noted](https://mersis.ticaret.gov.tr); [Türkiye Ticaret Sicili Gazetesi portal — free membership to search announcements; announcements saveable/printable; certified copies (digital/wet signature) purchasable; 'announcement fee tariff' referenced; no API](https://www.ticaretsicil.gov.tr)
+
+### TW — Company registration records (公司登記) — GCIS commercial/industrial registration public data
+
+**🟠 Direct for DATA only — vendor for documents** — API delivers data but NOT documents — vendor still needed for filings
+
+- **Body:** Department of Commerce, Ministry of Economic Affairs (MOEA); published via GCIS 商工行政資料開放平臺 (Commerce Industrial Services open data platform)
+- **Open API:** yes · GCIS Open Data / Company Registration Open API (商工行政資料開放平臺) · docs: <https://data.gcis.nat.gov.tw/od/rule>
+- **Delivers:** data | documents via API: **no**
+- **Auth:** No API key required, but the caller's public/external IP must be whitelisted via a 'usage notification form' (使用告知書) emailed to opendata.gcis@gmail.com; daily-query, concurrency and platform-wide rate limits apply.
+- **Cost (free):** Free of charge, subject to rate limits (max daily queries, concurrent-connection caps).
+- **Notes:** Verified on the portal: ~60 APIs across ~508 datasets covering company/branch/business registration. APIs return structured registration fields only — company name, unified business number, capital, responsible person, directors/supervisors, business-item (scope) codes, establishment/change dates, status. Company documents such as articles of incorporation (章程) are NOT delivered via API; they are obtained separately (e.g., paid application via findbiz/MOEA). Highest confidence of the three.
+- **Confidence:** high
+- **Sources:** [data.gcis.nat.gov.tw portal — states 508 datasets / 60 APIs for company & business registration](https://data.gcis.nat.gov.tw/); [GCIS Open API guide (/od/rule) — API list, data-fields-only scope, no-API-key + IP-whitelist via usage form, free with rate limits](https://data.gcis.nat.gov.tw/od/rule)
 
 ### US — Delaware General Information Name Search / Document Filing & Certificate Request Service
 
@@ -600,6 +886,19 @@ For each analysed jurisdiction: what the registry is, whether it has an open API
 - **Notes:** VIRRGIN is agent-gated: only FSC-licensed registered agents can incorporate, file and pull records. NO open public API and only limited public-facing data. Direct integration is effectively impossible without being (or contracting) a BVI registered agent; in practice route through an agent or an aggregation vendor. bvifsc.vg returns 403 to automated fetches, so specifics rest on established registry facts.
 - **Confidence:** medium
 - **Sources:** [BVI FSC Registry of Corporate Affairs / VIRRGIN official domain (blocked automated fetch, 403)](https://www.bvifsc.vg/)
+
+### VN — National Enterprise Registration Database (company register)
+
+**🔴 Vendor only (no usable API)** — no registry API — portal/per-document only
+
+- **Body:** Business Registration Management Agency (Cục Quản lý đăng ký kinh doanh); parent ministry MPI merged into the Ministry of Finance in the 2025 government reorganization
+- **Open API:** no · None public. The National Business Registration System (NBRS) is an internal government system; only a web portal is exposed to the public
+- **Delivers:** data, documents | documents via API: **no**
+- **Auth:** Registered account on the information portal (dichvuthongtin.dkkd.gov.vn); no programmatic API for the public
+- **Cost (per_document):** Free basic name/company search on the public portal. Paid information provision governed by Circular 47/2019/TT-BTC (per-document fees, e.g. registration-certificate/extract items and full-file/financial-statement items, plus a paid annual information-account subscription). UNVERIFIED exact amounts: commonly cited ~20,000-50,000 VND per information item and an annual account on the order of a few million VND; exact fee table not confirmed from the primary text in this session.
+- **Notes:** BUY, not build-direct: no public API exists. Data and documents (registration certificate copy, contents of the registration file, financial statements) are obtainable only via the paid web portal, per Circular 47/2019/TT-BTC. English UI is limited. INFERENCE flagged: (1) post-2025 the parent ministry is Finance (MPI merged); (2) exact VND fee schedule unverified.
+- **Confidence:** medium
+- **Sources:** [OpenCorporates listing: 'Ministry of Planning and Investment – Department of Business Registration – Company Register', openness 20/100](https://opencorporates.com/registers); [dangkykinhdoanh.gov.vn (public portal, name search, publication) and paid information service dichvuthongtin.dkkd.gov.vn; no API mentioned](https://dangkykinhdoanh.gov.vn); [Circular 47/2019/TT-BTC governs fees for providing enterprise information (fee-table amounts not retrieved)](https://dichvuthongtin.dkkd.gov.vn)
 
 ### ZA — CIPC company register
 

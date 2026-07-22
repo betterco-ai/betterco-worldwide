@@ -1,0 +1,59 @@
+[
+  {
+    "jurisdiction": "MY",
+    "registryName": "Companies Commission of Malaysia (Suruhanjaya Syarikat Malaysia)",
+    "registryBody": "Companies Commission of Malaysia (SSM) — federal statutory registrar of companies and businesses",
+    "registryUrl": "https://www.ssm.com.my",
+    "openApi": "partial",
+    "apiName": "MyData-SSM / SSM API4U (e-Info Services)",
+    "apiDocsUrl": "https://www.ssm.com.my/Pages/e-Info-Services/e-Info.aspx",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Registered/licensed data-provider account (contracted subscription); not an open public API",
+    "cost": {"model": "subscription", "detail": "SSM e-Info products (MyData-SSM, SSM Search, e-CBID company profiles) are paid per document/query via the portal; API4U real-time data access is a licensed/contracted subscription for approved data providers. Exact tariffs UNVERIFIED (SPA/tariff page not retrievable)."},
+    "notes": "SSM homepage confirms e-Info, MyData-SSM, SSM Search and e-CBID services and references an 'API4U / developer' programme. INFERENCE: API4U/MyData-SSM return structured company DATA (real-time lookups/verification) rather than downloadable document files; PDF documents (company profiles, e-CBID reports) appear to be portal purchases, not API deliverables. Documents-via-API is UNVERIFIED — MyData-SSM site is a JS SPA that returned no readable content and the API4U detail page 404'd/reset.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "SSM homepage lists e-Info, MyData-SSM, SSM Search, e-CBID and references 'API4U / developer'", "url": "https://www.ssm.com.my/", "retrieved": "2026-07-22"},
+      {"basis": "SSM identity and e-Info services (statutory registrar)", "url": "https://en.wikipedia.org/wiki/Companies_Commission_of_Malaysia", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "PH",
+    "registryName": "Securities and Exchange Commission (Philippines)",
+    "registryBody": "Securities and Exchange Commission (SEC) — registrar of corporations and partnerships",
+    "registryUrl": "https://www.sec.gov.ph",
+    "openApi": "no",
+    "apiName": "None (SEC Express = web ordering portal; eFAST = online filing system)",
+    "apiDocsUrl": "",
+    "apiDelivers": [],
+    "documentsViaApi": false,
+    "apiAuth": "n/a — no public API; SEC Express is an account-based web ordering portal",
+    "cost": {"model": "per_document", "detail": "Documents ordered via SEC Express (secexpress.ph) as plain or authenticated copies; per-document fees + delivery, updated under SEC Memorandum Circular No. 18 (effective 1 June 2026). Payment via GCash, Maya, cards, bank transfer. Delivery 3-5 working days Metro Manila, up to 7 provincial."},
+    "notes": "SEC Express delivers copies of Articles of Incorporation/Partnership, By-laws, GIS, Audited Financial Statements, Secretary's Certificates, etc. NO API found for either data or documents — SEC Express is a manual online ordering/courier service and eFAST is the filing portal. Ordering documents is web-form + human fulfilment, not programmatic.",
+    "confidence": "high",
+    "sources": [
+      {"basis": "SEC Express confirmed as online document-ordering service (document list, fees per MC No. 18, delivery timelines, payment methods; no API mentioned)", "url": "https://secexpress.ph/", "retrieved": "2026-07-22"},
+      {"basis": "Registry name confirmation", "url": "https://opencorporates.com/registers", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "SA",
+    "registryName": "Commercial Register (Sijil Tijari), Ministry of Commerce",
+    "registryBody": "Ministry of Commerce (MC) — maintains the Commercial Register; unified access via Saudi Business Center (business.sa)",
+    "registryUrl": "https://business.sa",
+    "openApi": "partial",
+    "apiName": "National Information Center (NIC) business-verification services — 'Wathiq' (واثق) / related NIC APIs",
+    "apiDocsUrl": "",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Contract-gated access restricted to licensed/authorized entities (banks, fintechs); not an open public API",
+    "cost": {"model": "contract", "detail": "INFERENCE/UNVERIFIED: NIC/Wathiq business-information access is a paid, contracted service to authorized entities (typically per-query pricing). Public open API for CR documents does not appear to exist. data.gov.sa hosts some open datasets but not downloadable CR documents. Could not confirm tariffs."},
+    "notes": "UNVERIFIED — all Saudi endpoints (business.sa, mc.gov.sa, wathiq.sa, open.data.gov.sa) were unreachable from this environment (connection refused / DNS / cert errors, likely geoblocking), so this entry rests on prior knowledge, not a retrieved source. Ministry of Commerce maintains the Commercial Register; business.sa is the unified Saudi Business Center portal. INFERENCE: programmatic CR access exists only via NIC business-verification APIs (Wathiq) restricted to licensed entities and returns DATA/verification attributes, not document files. Re-verify from an environment that can reach business.sa / NIC.",
+    "confidence": "low",
+    "sources": [
+      {"basis": "Ministry of Commerce oversees commercial activity in the Kingdom (register-maintaining body)", "url": "https://en.wikipedia.org/wiki/Ministry_of_Commerce_(Saudi_Arabia)", "retrieved": "2026-07-22"},
+      {"basis": "Registry name confirmation ('Ministry of Commerce and Industry - Commercial Register')", "url": "https://opencorporates.com/registers", "retrieved": "2026-07-22"}
+    ]
+  }
+]

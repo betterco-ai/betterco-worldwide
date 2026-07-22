@@ -1,0 +1,60 @@
+[
+  {
+    "jurisdiction": "BG",
+    "registryName": "Търговски регистър и регистър на ЮЛНЦ (Commercial Register and Register of Non-Profit Legal Entities)",
+    "registryBody": "Агенция по вписванията / Registry Agency (Ministry of Justice)",
+    "registryUrl": "https://portal.registryagency.bg",
+    "openApi": "partial",
+    "apiName": "Registry Agency web services / REGIX inter-registry gateway; Commercial Register open data bulk publication",
+    "apiDocsUrl": "https://data.egov.bg",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Public portal browsing is free and anonymous. Programmatic/system access historically runs through REGIX (government-to-government, contract + credentials, not open to the public). UNVERIFIED whether a public developer API exists.",
+    "cost": {"model": "free", "detail": "Browsing the register and viewing scanned filed documents on the portal is free of charge. Certified certificates/copies carry a state fee under the Registry Agency tariff. Any programmatic REGIX access is contract-based (institutional). INFERENCE — specific web-service tariff not confirmed via official page in this pass."},
+    "notes": "Portal confirmed to expose free electronic services, public reference (справки) and document viewing. A general open, self-service developer API delivering documents was NOT confirmed; institutional programmatic access is via REGIX. Bulgaria also publishes CR data as periodic open-data bulk. Treat openApi=partial and documentsViaApi=false as best-supported; flag as needing direct confirmation with the Registry Agency.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "Registry Agency portal — confirms Commercial Register hosted here with free electronic services, public reference and document templates", "url": "https://portal.registryagency.bg", "retrieved": "2026-07-22"},
+      {"basis": "REGIX gateway and open-data publication — INFERENCE from domain knowledge, not re-confirmed on an official page this pass", "url": "https://data.egov.bg", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "HR",
+    "registryName": "Sudski registar (Court Register)",
+    "registryBody": "Ministarstvo pravosuđa i uprave / Ministry of Justice and Public Administration (commercial courts maintain the register)",
+    "registryUrl": "https://sudreg.pravosudje.hr",
+    "openApi": "yes",
+    "apiName": "Otvoreni podaci sudskog registra — Sudski registar Open Data REST API",
+    "apiDocsUrl": "https://sudreg-data.gov.hr",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Free self-service registration at sudreg-data.gov.hr issues Client ID + Client Secret; OAuth-style access token valid ~6 hours, renewed periodically. Public (javni) endpoints e.g. /api/javni/sudovi, /api/javni/subjekt.",
+    "cost": {"model": "free", "detail": "No fee for API access; registration required. Support: sudski.registar@pravosudje.hr."},
+    "notes": "Confirmed REST API with OpenAPI docs returning STRUCTURED DATA ONLY (subjects, courts, statuses); documentation makes no mention of retrieving scanned documents. Filed documents / articles and financial statements are not delivered by this API (financial statements sit in FINA's RGFI). Strongest go-direct candidate of the three.",
+    "confidence": "high",
+    "sources": [
+      {"basis": "data.gov.hr dataset page — confirms REST API, registration issuing Client ID/Secret, 6-hour token, no cost stated, structured data only, no document retrieval, support email", "url": "https://data.gov.hr", "retrieved": "2026-07-22"},
+      {"basis": "sudreg-data.gov.hr — official open-data API host (Swagger/OpenAPI)", "url": "https://sudreg-data.gov.hr", "retrieved": "2026-07-22"},
+      {"basis": "Public search front-end", "url": "https://sudreg.pravosudje.hr", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "HU",
+    "registryName": "Cégjegyzék (Company Register)",
+    "registryBody": "Cégbíróságok (registry courts) under the Ministry of Justice; Céginformációs Szolgálat (Company Information Service) publishes data/reports",
+    "registryUrl": "https://www.e-cegjegyzek.hu",
+    "openApi": "no",
+    "apiName": "None public. Free web search (e-cegjegyzek.hu 'Ingyenes Céginformáció'); financial reports via e-beszamolo.im.gov.hu; paid certified extracts via the registry courts/commercial providers",
+    "apiDocsUrl": "",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": false,
+    "apiAuth": "Web-only. e-beszamolo financial-report search and download works without registration; e-cegjegyzek basic company search is free; certified company extracts (cégkivonat) are paid.",
+    "cost": {"model": "free", "detail": "Free: basic company data on e-cegjegyzek.hu and published financial reports (with downloadable attachments) on e-beszamolo.im.gov.hu. Paid: certified electronic company extracts and richer real-time company information via the Company Information Service / commercial resellers. No open/free bulk API."},
+    "notes": "Documents ARE downloadable (financial reports on e-beszamolo confirmed; certified extracts paid), but only through web portals — NO documented public API. apiDelivers lists documents because the portals do deliver them; documentsViaApi=false because there is no API channel. Access via BRIS or paid providers is the realistic programmatic route.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "e-beszamolo.im.gov.hu — confirmed free search of company financial reports by reg. number/tax number/name, downloadable report attachments, no API/open-data, Ministry of Justice operated", "url": "https://e-beszamolo.im.gov.hu", "retrieved": "2026-07-22"},
+      {"basis": "e-cegjegyzek.hu — confirmed free company information ('Ingyenes Céginformáció') front-end", "url": "https://www.e-cegjegyzek.hu", "retrieved": "2026-07-22"}
+    ]
+  }
+]

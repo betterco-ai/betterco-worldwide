@@ -1,0 +1,40 @@
+[
+  {
+    "jurisdiction": "QA",
+    "registryName": "Commercial Registration (Sijil Tijari) / Single Window",
+    "registryBody": "Ministry of Commerce and Industry (MoCI)",
+    "registryUrl": "https://www.moci.gov.qa",
+    "openApi": "no",
+    "apiName": "None for the registry. A national open-data portal (data.gov.qa, OpenDataSoft) has a public REST API, but it does NOT contain company/commercial-registry data.",
+    "apiDocsUrl": "https://www.data.gov.qa/api/explore/v2.1/",
+    "apiDelivers": [],
+    "documentsViaApi": false,
+    "apiAuth": "n/a — no public registry API. MoCI services (Single Window sw.gov.qa, Trade Names Search, e-Services) are interactive web portals with login, not programmatic endpoints.",
+    "cost": {"model": "per_document", "detail": "No programmatic option. CR extracts/certificates are obtained manually through MoCI Single Window / e-Services against statutory government fees. UNVERIFIED exact fee schedule."},
+    "notes": "MoCI site advertises Single Window, Trade Names Search, Qatar Business Map and e-Services — all web UIs, no API/developer docs found. The OpenDataSoft open-data portal API was queried directly (search 'commercial'/'commercial registration') and returns only unrelated statistics (vehicle registration transactions, etc.), confirming the registry is not exposed there. INFERENCE: any bulk/integration access would be a government-only, contract-based arrangement, not a published open API.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "MoCI homepage — lists Single Window, Trade Names Search, e-Services as web portals; no API/developer references", "url": "https://www.moci.gov.qa/en/", "retrieved": "2026-07-22"},
+      {"basis": "data.gov.qa OpenDataSoft catalog API queried for 'commercial registration' — only vehicle-registration statistics returned, no company registry dataset", "url": "https://www.data.gov.qa/api/explore/v2.1/catalog/datasets", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "BH",
+    "registryName": "Sijilat — Commercial Registration (CR)",
+    "registryBody": "Ministry of Industry and Commerce (MOIC) — formerly MOICT",
+    "registryUrl": "https://www.sijilat.bh",
+    "openApi": "no",
+    "apiName": "None public for the registry. A national open-data portal (data.gov.bh, OpenDataSoft) exposes the OpenDataSoft Explore API v2.1, but it does NOT contain commercial-registry data.",
+    "apiDocsUrl": "https://www.data.gov.bh/api/",
+    "apiDelivers": [],
+    "documentsViaApi": false,
+    "apiAuth": "n/a — Sijilat is an interactive web platform (business registration, licensing, CR services) with account login; no public API or developer docs found. Contact ir@moic.gov.bh / 8000 8001.",
+    "cost": {"model": "per_document", "detail": "No programmatic option. CR certificates/extracts are issued through the Sijilat portal against MOIC statutory fees. UNVERIFIED exact fee schedule."},
+    "notes": "Sijilat pages show only user-facing services (register business, obtain licence, change address, CR services) — no API/integration surface. The data.gov.bh open-data portal runs OpenDataSoft (public Explore API confirmed) but a direct 'commercial' query returned only telecom statistics (commercial internet/phone lines), confirming the CR registry is not published as open data. INFERENCE: any programmatic CR access would be a government e-gov integration, contract-based and not publicly documented.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "Sijilat portal — user-facing CR/licensing services only, no API/developer references; contact ir@moic.gov.bh", "url": "https://www.sijilat.bh/", "retrieved": "2026-07-22"},
+      {"basis": "data.gov.bh OpenDataSoft Explore API v2.1 queried for 'commercial' — only telecom-line statistics returned, no company registry dataset", "url": "https://data.gov.bh/api/explore/v2.1/catalog/datasets", "retrieved": "2026-07-22"}
+    ]
+  }
+]

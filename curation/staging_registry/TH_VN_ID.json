@@ -1,0 +1,62 @@
+[
+  {
+    "jurisdiction": "TH",
+    "registryName": "Juristic Person (company) Register / Central Registration",
+    "registryBody": "Department of Business Development (DBD), Ministry of Commerce",
+    "registryUrl": "https://www.dbd.go.th",
+    "openApi": "partial",
+    "apiName": "DBD Open API (juristic person data) + DBD open datasets on CKAN (opendata.dbd.go.th / data.go.th); DBD DataWarehouse+ is a web portal, not an API",
+    "apiDocsUrl": "https://openapi.dbd.go.th",
+    "apiDelivers": ["data"],
+    "documentsViaApi": false,
+    "apiAuth": "Registration + token/API key issued via DBD Digital ID (dbdid.egov.go.th) for the Open API; CKAN datasets are open with optional key",
+    "cost": {"model": "free", "detail": "Open API and open datasets are free to registered developers (quota-limited, data only, e.g. /api/v1/juristic_person). Certified DOCUMENTS are NOT via API: obtained through DBD e-Service (ebiz.dbd.go.th) as e-Certificates, paid ~40 THB base fee + ~50 THB/page certification (~200-350 THB/document)."},
+    "notes": "Best build-vs-buy of the three: structured company/juristic-person DATA is available via a genuine open API (JSON) and via CKAN. Documents (certificate/หนังสือรับรอง, financial statements, affidavit) are delivered only through the paid e-Service web channel, not the API. DBD DataWarehouse+ (datawarehouse.dbd.go.th) adds financials/analytics but is a web UI. INFERENCE: exact Open API quota tiers and whether any premium data tier is charged were not confirmed from the live docs (site returned 403 to automated fetch).",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "OpenCorporates register listing confirming DBD as Thailand's company register", "url": "https://opencorporates.com/registers", "retrieved": "2026-07-22"},
+      {"basis": "DBD Open API endpoints (openapi.dbd.go.th/api/v1/juristic_person...), CKAN open data (opendata.dbd.go.th), token-based, data-only", "url": "https://openapi.dbd.go.th", "retrieved": "2026-07-22"},
+      {"basis": "DBD e-Service certified documents (ebiz.dbd.go.th): ~40 THB fee + ~50 THB/page, electronic delivery", "url": "https://ebiz.dbd.go.th", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "VN",
+    "registryName": "National Enterprise Registration Database (company register)",
+    "registryBody": "Business Registration Management Agency (Cục Quản lý đăng ký kinh doanh); parent ministry MPI merged into the Ministry of Finance in the 2025 government reorganization",
+    "registryUrl": "https://dangkykinhdoanh.gov.vn",
+    "openApi": "no",
+    "apiName": "None public. The National Business Registration System (NBRS) is an internal government system; only a web portal is exposed to the public",
+    "apiDocsUrl": "",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": false,
+    "apiAuth": "Registered account on the information portal (dichvuthongtin.dkkd.gov.vn); no programmatic API for the public",
+    "cost": {"model": "per_document", "detail": "Free basic name/company search on the public portal. Paid information provision governed by Circular 47/2019/TT-BTC (per-document fees, e.g. registration-certificate/extract items and full-file/financial-statement items, plus a paid annual information-account subscription). UNVERIFIED exact amounts: commonly cited ~20,000-50,000 VND per information item and an annual account on the order of a few million VND; exact fee table not confirmed from the primary text in this session."},
+    "notes": "BUY, not build-direct: no public API exists. Data and documents (registration certificate copy, contents of the registration file, financial statements) are obtainable only via the paid web portal, per Circular 47/2019/TT-BTC. English UI is limited. INFERENCE flagged: (1) post-2025 the parent ministry is Finance (MPI merged); (2) exact VND fee schedule unverified.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "OpenCorporates listing: 'Ministry of Planning and Investment – Department of Business Registration – Company Register', openness 20/100", "url": "https://opencorporates.com/registers", "retrieved": "2026-07-22"},
+      {"basis": "dangkykinhdoanh.gov.vn (public portal, name search, publication) and paid information service dichvuthongtin.dkkd.gov.vn; no API mentioned", "url": "https://dangkykinhdoanh.gov.vn", "retrieved": "2026-07-22"},
+      {"basis": "Circular 47/2019/TT-BTC governs fees for providing enterprise information (fee-table amounts not retrieved)", "url": "https://dichvuthongtin.dkkd.gov.vn", "retrieved": "2026-07-22"}
+    ]
+  },
+  {
+    "jurisdiction": "ID",
+    "registryName": "Legal Entity registry (PT company profiles) via SABH/AHU; business-licensing identity (NIB) via OSS",
+    "registryBody": "Directorate General of General Legal Administration (Ditjen AHU), Ministry of Law (Kemenkumham) — company legal entities; OSS/NIB operated by the Ministry of Investment (BKPM)",
+    "registryUrl": "https://ahu.go.id",
+    "openApi": "no",
+    "apiName": "None public. AHU and OSS expose web portals plus government-to-government (K/L/D) integration interfaces, not an open developer API",
+    "apiDocsUrl": "",
+    "apiDelivers": ["data", "documents"],
+    "documentsViaApi": false,
+    "apiAuth": "Portal account (AHU Online / OSS); any system integration is restricted gov-to-gov, not open to the public",
+    "cost": {"model": "per_document", "detail": "Free basic NIB lookup on OSS (NIB Search). AHU Online company documents are paid PNBP: approx IDR 50,000-500,000 (~USD 3-31) per document depending on type (profil perseroan / akta / SK per Law No. 40/2007). After payment users print/download from the portal. Beneficial-ownership data is collected but not publicly searchable as of mid-2026."},
+    "notes": "BUY / scrape-tier: no public API from AHU or OSS. Data and documents are behind paid portal access (AHU) or free basic lookup (OSS NIB). Third-party aggregators supply programmatic access to extracted data. INFERENCE flagged: OSS/AHU gov-to-gov integration exists but is not a public API; exact PNBP per document type not itemized here.",
+    "confidence": "medium",
+    "sources": [
+      {"basis": "OpenCorporates: 'Ministry of Law and Human Rights – Company Information' (no data currently in OC, openness 0/100)", "url": "https://opencorporates.com/registers", "retrieved": "2026-07-22"},
+      {"basis": "AHU Online (ahu.go.id) is the PT registry; 'no public API'; full company profile IDR 50,000-500,000; BO not publicly searchable; third-party scrapers provide API access", "url": "https://ahu.go.id", "retrieved": "2026-07-22"},
+      {"basis": "OSS portal (oss.go.id): NIB Search lookup, no developer/API documentation published publicly", "url": "https://oss.go.id/informasi", "retrieved": "2026-07-22"}
+    ]
+  }
+]
