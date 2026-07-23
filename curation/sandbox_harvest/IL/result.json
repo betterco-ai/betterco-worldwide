@@ -1,0 +1,42 @@
+{
+ "jurisdiction": "IL",
+ "query": "Ltd",
+ "company": {
+  "name": "OPTIVAL LTD",
+  "externalCode": "515430080",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003818,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "custom_1692377098895",
+   "name": "Certificate of Incorporation",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000587"
+  },
+  {
+   "category": "custom_1692377107164",
+   "name": "Annual Return",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000588"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "custom_1692377098895",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "custom_1692377107164",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003818/report?language=en"
+}

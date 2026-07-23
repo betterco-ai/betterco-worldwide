@@ -1,0 +1,79 @@
+{
+ "jurisdiction": "HK",
+ "query": "Ubizense",
+ "company": {
+  "name": "Ubizense Limited",
+  "externalCode": "69293323",
+  "status": "Active",
+  "dataSource": "HKCR"
+ },
+ "caseCommonId": 1000003840,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "FNAR1",
+   "name": "Annual Return (FNAR1) <18/05/2026>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35465"
+  },
+  {
+   "category": "Articles of Association",
+   "name": "Articles of Association <30/04/2018>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35468"
+  },
+  {
+   "category": "FNNC1",
+   "name": "FNNC1 - Incorporation Form <30/04/2018>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35469"
+  },
+  {
+   "category": "HK CR Company Particulars",
+   "name": "HK CR Company Particulars <28/06/2026>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35466"
+  },
+  {
+   "category": "Certificate of Incorporation",
+   "name": "Certificate of Incorporation <30/04/2018>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35467"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "HKCR",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  },
+  {
+   "dataSource": "HKCR",
+   "mandatoryDocument": "Business Registration Certificate",
+   "otherNames": []
+  },
+  {
+   "dataSource": "HKCR",
+   "mandatoryDocument": "Annual Return (NAR1)",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "FNAR1",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "Articles of Association",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "FNNC1",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "HK CR Company Particulars",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "Certificate of Incorporation",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003840/report?language=en"
+}

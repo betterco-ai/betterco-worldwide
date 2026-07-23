@@ -1,0 +1,33 @@
+{
+ "jurisdiction": "ES",
+ "query": "POSA",
+ "company": {
+  "name": "POSA REALTY ES SL",
+  "externalCode": "B42644112",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003826,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "Informacion Imprimible",
+   "name": "Registry Extract <30/08/2023>",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2001092"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "Informacion Imprimible",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003826/report?language=en"
+}

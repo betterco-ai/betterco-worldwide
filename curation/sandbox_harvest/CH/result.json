@@ -1,0 +1,60 @@
+{
+ "jurisdiction": "CH",
+ "query": "GmbH",
+ "company": {
+  "name": "BLUEROCK SWITZERLAND GMBH",
+  "externalCode": "CHE-449.572.759",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003815,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "Registration Extract",
+   "name": "Registration Extract <15/08/2023>",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000259"
+  },
+  {
+   "category": "Company Registration",
+   "name": "Company Registration <15/08/2023>",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000260"
+  },
+  {
+   "category": "Registration Extract",
+   "name": "Registration Extract",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000110"
+  },
+  {
+   "category": "Company Registration",
+   "name": "Company Registration",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000111"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "Registration Extract",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "Company Registration",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "Registration Extract",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "Company Registration",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003815/report?language=en"
+}

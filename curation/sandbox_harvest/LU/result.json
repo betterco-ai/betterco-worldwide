@@ -1,0 +1,51 @@
+{
+ "jurisdiction": "LU",
+ "query": "Luxembourg",
+ "company": {
+  "name": "UNIVERSAL-INVESTMENT-LUXEMBOURG S.A.",
+  "externalCode": "B75014",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003807,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "Articles of Association",
+   "name": "Memorandum & Articles of Association",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000464"
+  },
+  {
+   "category": "Financial information",
+   "name": "Annual Accounts",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000465"
+  },
+  {
+   "category": "Registration",
+   "name": "Official Registry Extract",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000463"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "Articles of Association",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "Financial information",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "Registration",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003807/report?language=en"
+}

@@ -1,0 +1,216 @@
+{
+ "GB": {
+  "cc": "GB",
+  "cid": 92,
+  "name": "HSBC HOLDINGS PLC",
+  "documents": [
+   {
+    "category": "NEWINC",
+    "name": "New Incorporation <01/01/1959>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "CS01",
+    "name": "CS01 <15/05/2026>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "CERTNM",
+    "name": "Certificate of Change of Name <24/12/1990>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "CERTNM",
+    "name": "Certificate of Change of Name <12/12/1990>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "CERTNM",
+    "name": "Certificate of Change of Name <13/08/1981>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "AA",
+    "name": "Accounts <20/05/2026>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "CERT5",
+    "name": "Certificate of Change of Name <24/12/1990>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "custom_1784016204186",
+    "name": "Certificate of Change of Name <01/02/1959>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "custom_1784016234912",
+    "name": "Certificate of Change of Name <10/02/1959>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "custom_1784016237327",
+    "name": "Certificate of Change of Name <10/02/1959>",
+    "owner": "HSBC HOLDINGS PLC"
+   },
+   {
+    "category": "custom_1784016238913",
+    "name": "Certificate of Change of Name <11/12/1990>",
+    "owner": "HSBC HOLDINGS PLC"
+   }
+  ],
+  "mandatory": [
+   "NEWINC"
+  ]
+ },
+ "US": {
+  "cc": "US",
+  "cid": 149,
+  "name": "INTREPID CONTROL SYSTEMS, INC.",
+  "documents": [
+   {
+    "category": "custom_1783504614969",
+    "name": "Registry Extract",
+    "owner": "INTREPID CONTROL SYSTEMS, INC."
+   },
+   {
+    "category": "custom_1783504615914",
+    "name": "Annual Report",
+    "owner": "INTREPID CONTROL SYSTEMS, INC."
+   },
+   {
+    "category": "custom_1783504616961",
+    "name": "Incorporation",
+    "owner": "INTREPID CONTROL SYSTEMS, INC."
+   }
+  ],
+  "mandatory": []
+ },
+ "ES": {
+  "cc": "ES",
+  "cid": 37,
+  "name": "AURO HOLDCO SL",
+  "documents": [
+   {
+    "category": "Informacion Imprimible",
+    "name": "Registry Extract <18/06/2026>",
+    "owner": "AURO HOLDCO SL"
+   }
+  ],
+  "mandatory": [
+   "Informacion Imprimible"
+  ]
+ },
+ "NL": {
+  "cc": "NL",
+  "cid": 29,
+  "name": "Dyna Dental Engineering B.V.",
+  "documents": [
+   {
+    "category": "CompanyRegistration",
+    "name": "Company Registration Extract",
+    "owner": "Dyna Dental Engineering B.V."
+   }
+  ],
+  "mandatory": [
+   "CompanyRegistration"
+  ]
+ },
+ "LU": {
+  "cc": "LU",
+  "cid": 119,
+  "name": "SPEEDTRACING S.A R.L.",
+  "documents": [
+   {
+    "category": "Registration",
+    "name": "Official Registry Extract",
+    "owner": "SPEEDTRACING S.À R.L."
+   },
+   {
+    "category": "Articles of Association",
+    "name": "Memorandum & Articles of Association",
+    "owner": "SPEEDTRACING S.À R.L."
+   },
+   {
+    "category": "Financial information",
+    "name": "Annual Accounts",
+    "owner": "SPEEDTRACING S.À R.L."
+   },
+   {
+    "category": "Registration Certificate",
+    "name": "Registration certificate",
+    "owner": "SPEEDTRACING S.À R.L."
+   }
+  ],
+  "mandatory": [
+   "Registration",
+   "Articles of Association",
+   "Financial information",
+   "Registration Certificate"
+  ]
+ },
+ "CH": {
+  "cc": "CH",
+  "cid": 28,
+  "name": "BIO DEVELOPMENT AG",
+  "documents": [
+   {
+    "category": "Registration Extract",
+    "name": "Registration Extract",
+    "owner": "BIO DEVELOPMENT AG"
+   },
+   {
+    "category": "Company Registration",
+    "name": "Company Registration",
+    "owner": "BIO DEVELOPMENT AG"
+   }
+  ],
+  "mandatory": [
+   "Registration Extract",
+   "Company Registration"
+  ]
+ },
+ "IL": {
+  "cc": "IL",
+  "cid": 157,
+  "name": "PHOENIX FINANCIAL LTD",
+  "documents": [
+   {
+    "category": "Registry Extract",
+    "name": "Registry Extract",
+    "owner": "PHOENIX FINANCIAL LTD"
+   }
+  ],
+  "mandatory": [
+   "Registry Extract"
+  ]
+ },
+ "BE": {
+  "cc": "BE",
+  "cid": 22,
+  "name": "ENNOO MOBILITY BELGIUM",
+  "documents": [
+   {
+    "category": "Registry Extract",
+    "name": "Registry Extract",
+    "owner": "ENNOO MOBILITY BELGIUM"
+   },
+   {
+    "category": "custom_1781533773552",
+    "name": "Annual Accounts",
+    "owner": "ENNOO MOBILITY BELGIUM"
+   },
+   {
+    "category": "custom_1781533774306",
+    "name": "Constitution",
+    "owner": "ENNOO MOBILITY BELGIUM"
+   }
+  ],
+  "mandatory": [
+   "Company Identity",
+   "Registry Extract",
+   "Annual Account"
+  ]
+ }
+}

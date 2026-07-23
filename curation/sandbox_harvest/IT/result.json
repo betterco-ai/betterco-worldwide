@@ -1,0 +1,33 @@
+{
+ "jurisdiction": "IT",
+ "query": "S.r.l.",
+ "company": {
+  "name": "Quick Light Food S.R.L.",
+  "externalCode": "04891070288",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003788,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "custom_1692972410299",
+   "name": "Registry Extract <25/08/2023>",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2001040"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "custom_1692972410299",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003788/report?language=en"
+}

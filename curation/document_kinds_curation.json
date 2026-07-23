@@ -263,7 +263,8 @@
   "kind": "REGISTERAUSZUG",
   "label": "Commercial register extrait - certified",
   "via": "document",
-  "tier": "additional"
+  "tier": "base",
+  "note": "PROD-corrected 2026-07-23: the KYC.com channel delivers the CH Registration Extract as a MANDATORY (base) document (verified on existing prod case BIO DEVELOPMENT AG, id 28). The per-canton CHF20-50 fee in registry_intelligence applies to the CERTIFIED extract ordered DIRECT from the canton, not to the channel-delivered extract."
  },
  {
   "jurisdiction": "CH",

@@ -1,0 +1,33 @@
+{
+ "jurisdiction": "FR",
+ "query": "BLONDEAU",
+ "company": {
+  "name": "ETABLISSEMENTS J BLONDEAU",
+  "externalCode": "572 820 629",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003823,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "Registry Extract",
+   "name": "Registry Extract",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2001053"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "Registry Extract",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003823/report?language=en"
+}

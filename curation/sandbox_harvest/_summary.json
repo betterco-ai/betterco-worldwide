@@ -1,0 +1,99 @@
+[
+ {
+  "j": "FR",
+  "company": "SCHNEIDER ELECTRIC INDUSTRIES SAS ",
+  "cid": 1000003787,
+  "ndocs": 0,
+  "categories": [],
+  "secs": 5.5,
+  "err": null
+ },
+ {
+  "j": "IT",
+  "company": "Quick Light Food S.R.L.",
+  "cid": 1000003788,
+  "ndocs": 1,
+  "categories": [
+   "custom_1692972410299"
+  ],
+  "secs": 6.3,
+  "err": null
+ },
+ {
+  "j": "US",
+  "company": "SALEM FARMS, INC.",
+  "cid": 1000003791,
+  "ndocs": 3,
+  "categories": [
+   "custom_1692181128523",
+   "custom_1692181149367",
+   "custom_1692183173806"
+  ],
+  "secs": 11.6,
+  "err": null
+ },
+ {
+  "j": "DK",
+  "company": "KLARAVIK APS",
+  "cid": 1000003794,
+  "ndocs": 5,
+  "categories": [
+   "ADDAS",
+   "Annual Accounts",
+   "REPOF",
+   "Registry Certificate",
+   "Registry Extract"
+  ],
+  "secs": 8.5,
+  "err": null
+ },
+ {
+  "j": "NL",
+  "company": "Whitford B.V.",
+  "cid": 1000003802,
+  "ndocs": 2,
+  "categories": [
+   "CompanyRegistration",
+   "custom_1692163486847"
+  ],
+  "secs": 5.9,
+  "err": null
+ },
+ {
+  "j": "LU",
+  "company": "UNIVERSAL-INVESTMENT-LUXEMBOURG S.A.",
+  "cid": 1000003807,
+  "ndocs": 3,
+  "categories": [
+   "Articles of Association",
+   "Financial information",
+   "Registration"
+  ],
+  "secs": 7.3,
+  "err": null
+ },
+ {
+  "j": "CH",
+  "company": "BLUEROCK SWITZERLAND GMBH",
+  "cid": 1000003815,
+  "ndocs": 4,
+  "categories": [
+   "Company Registration",
+   "Registration Extract"
+  ],
+  "secs": 8.2,
+  "err": null
+ },
+ {
+  "j": "IL",
+  "company": "OPTIVAL LTD",
+  "cid": 1000003818,
+  "ndocs": 2,
+  "categories": [
+   "custom_1692377098895",
+   "custom_1692377107164"
+  ],
+  "secs": 6.0,
+  "err": null
+ }
+]

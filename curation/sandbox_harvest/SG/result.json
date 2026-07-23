@@ -1,0 +1,33 @@
+{
+ "jurisdiction": "SG",
+ "query": "SC Engineering",
+ "company": {
+  "name": "SC ENGINEERING PRIVATE LIMITED",
+  "externalCode": "200815219G",
+  "status": "Active",
+  "dataSource": ""
+ },
+ "caseCommonId": 1000003845,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "Registration",
+   "name": "Business Profile",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35458"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "Registration",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003845/report?language=en"
+}

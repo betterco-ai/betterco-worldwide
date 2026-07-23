@@ -1,0 +1,302 @@
+{
+ "generated": "2026-07-24",
+ "method": "Keyed off the delivered document NAME (minus the ' <date>' suffix) — per KYC.com support 2026-07-23 the reliable type signal; `cat` (category) is a weak secondary hint only, NOT canonical across jurisdictions. Tier from the PROD mandatory catalogue where a prod case exists (GB US ES NL LU CH IL BE), else the evidence-file classification. Hand-curated.",
+ "kinds": [
+  "REGISTERAUSZUG",
+  "GESELLSCHAFTSVERTRAG",
+  "GESELLSCHAFTERLISTE",
+  "OTHER"
+ ],
+ "tiers": {
+  "base": "comes with the standard case",
+  "additional": "separately obtainable/observed but not in mandatory set",
+  "none": "present but does not evidence the kind (e.g. GB CS01 delta)"
+ },
+ "jurisdictions": {
+  "FR": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registry Extract"
+   }
+  ],
+  "IT": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "custom"
+   }
+  ],
+  "GB": [
+   {
+    "name": "New Incorporation",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "NEWINC",
+    "note": "incorporation record; GB has no register-extract in the German sense"
+   },
+   {
+    "name": "CS01",
+    "kind": "GESELLSCHAFTERLISTE",
+    "tier": "none",
+    "cat": "CS01",
+    "note": "confirmation statement = periodic DELTA, NOT a standing shareholder list"
+   },
+   {
+    "name": "Annual Return",
+    "kind": "GESELLSCHAFTERLISTE",
+    "tier": "none",
+    "cat": "AR01",
+    "note": "legacy AR01; superseded by CS01; not a current standing list"
+   },
+   {
+    "name": "Accounts",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "AA",
+    "note": "financial statements"
+   },
+   {
+    "name": "Certificate of Change of Name",
+    "kind": "OTHER",
+    "tier": "additional",
+    "cat": "CERTNM"
+   }
+  ],
+  "US": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "custom"
+   },
+   {
+    "name": "Incorporation",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "tier": "base",
+    "cat": "custom",
+    "note": "= Certificate/Articles of Incorporation = the filed charter (Satzung equivalent); bylaws are internal, not filed"
+   },
+   {
+    "name": "Annual Report",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "custom"
+   }
+  ],
+  "ES": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Informacion Imprimible",
+    "note": "delivered name 'Informacion Imprimible' = the printable mercantile extract"
+   }
+  ],
+  "DK": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registry Extract"
+   },
+   {
+    "name": "Register Report",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "REPOF",
+    "note": "secondary register report"
+   },
+   {
+    "name": "Registration certificate",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "Registry Certificate",
+    "note": "existence certificate"
+   },
+   {
+    "name": "Memorandum & Articles of Association",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "tier": "additional",
+    "cat": "ADDAS",
+    "note": "delivered in sandbox All-journey but NOT confirmed base (no DK prod case); vedtægter = separately filed"
+   },
+   {
+    "name": "Annual Accounts",
+    "kind": "OTHER",
+    "tier": "additional",
+    "cat": "Annual Accounts"
+   }
+  ],
+  "NL": [
+   {
+    "name": "Company Registration Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "CompanyRegistration"
+   },
+   {
+    "name": "Status Report",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "custom"
+   }
+  ],
+  "LU": [
+   {
+    "name": "Official Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registration"
+   },
+   {
+    "name": "Memorandum & Articles of Association",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "tier": "base",
+    "cat": "Articles of Association",
+    "note": "prod-confirmed mandatory"
+   },
+   {
+    "name": "Registration Certificate",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "custom",
+    "note": "existence certificate"
+   },
+   {
+    "name": "Annual Accounts",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "Financial information"
+   }
+  ],
+  "CH": [
+   {
+    "name": "Registration Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registration Extract",
+    "note": "prod-confirmed mandatory; certified per-canton extract is the paid direct route, not this"
+   },
+   {
+    "name": "Company Registration",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Company Registration",
+    "note": "secondary registration doc"
+   }
+  ],
+  "IL": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registry Extract"
+   },
+   {
+    "name": "Certificate of Incorporation",
+    "kind": "OTHER",
+    "tier": "additional",
+    "cat": "custom",
+    "note": "existence cert; IL articles not delivered"
+   },
+   {
+    "name": "Annual Return",
+    "kind": "GESELLSCHAFTERLISTE",
+    "tier": "additional",
+    "cat": "custom",
+    "note": "IL annual return carries the shareholder list"
+   }
+  ],
+  "JP": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registry Extract",
+    "note": "GVERTRAG not provable from JP register"
+   }
+  ],
+  "BE": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registry Extract"
+   },
+   {
+    "name": "Constitution",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "tier": "additional",
+    "cat": "custom",
+    "note": "delivered in prod but NOT in the mandatory set → additional"
+   },
+   {
+    "name": "Annual Account",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "Annual Account"
+   },
+   {
+    "name": "Company Identity",
+    "kind": "OTHER",
+    "tier": "base",
+    "cat": "custom",
+    "note": "identity data bundle"
+   }
+  ],
+  "KW": [
+   {
+    "name": "Registry Extract",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registry Extract"
+   }
+  ],
+  "SG": [
+   {
+    "name": "Business Profile",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "Registration",
+    "note": "ACRA business profile = the register extract AND carries shareholders as data (no separate list document)"
+   }
+  ],
+  "HK": [
+   {
+    "name": "HK CR Company Particulars",
+    "kind": "REGISTERAUSZUG",
+    "tier": "base",
+    "cat": "HK CR Company Particulars"
+   },
+   {
+    "name": "Articles of Association",
+    "kind": "GESELLSCHAFTSVERTRAG",
+    "tier": "additional",
+    "cat": "Articles of Association"
+   },
+   {
+    "name": "Annual Return",
+    "kind": "GESELLSCHAFTERLISTE",
+    "tier": "additional",
+    "cat": "FNAR1",
+    "note": "HK NAR1 carries the shareholder list"
+   },
+   {
+    "name": "Certificate of Incorporation",
+    "kind": "OTHER",
+    "tier": "additional",
+    "cat": "Certificate of Incorporation",
+    "note": "existence cert"
+   },
+   {
+    "name": "FNNC1 - Incorporation Form",
+    "kind": "OTHER",
+    "tier": "additional",
+    "cat": "FNNC1"
+   }
+  ]
+ }
+}

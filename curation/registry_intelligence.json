@@ -441,6 +441,21 @@
   "goDirect": {
    "verdict": "direct_data_only",
    "reason": "API delivers data but NOT documents — vendor still needed for filings"
+  },
+  "licence": {
+   "commercialReuse": "yes_with_attribution",
+   "instrument": "opendata.swiss terms (Zefix / central legal-entity DB, EHRA/FCRO) — 'open use, source must be cited'",
+   "fee": "free",
+   "obligations": "Cite the source (Federal Commercial Registry Office / Zefix).",
+   "restrictions": "API delivers STRUCTURED DATA only (Zefix REST + LINDAS). Certified/official Handelsregisterauszug PDFs are NOT delivered by the API — ordered and paid per canton (~CHF 20-50).",
+   "confidence": "medium",
+   "sources": [
+    {
+     "basis": "opendata.swiss — Zefix 'Zentraler Firmenindex' dataset; FCRO makes central legal-entity data publicly available for free use (opendata.swiss terms, source attribution)",
+     "url": "https://opendata.swiss/en/dataset/zefix-zentraler-firmenindex",
+     "retrieved": "2026-07-23"
+    }
+   ]
   }
  },
  {
@@ -656,6 +671,26 @@
   "goDirect": {
    "verdict": "direct_strong",
    "reason": "open API delivers documents, free/low cost"
+  },
+  "licence": {
+   "commercialReuse": "yes",
+   "instrument": "CC BY 4.0 (CVR basic data via Datafordeler / CVR distribution API)",
+   "fee": "free",
+   "obligations": "Attribution required: credit 'Det Centrale Virksomhedsregister (CVR)'.",
+   "restrictions": "System-til-System / bulk feed requires registering (email cvrselvbetjening@erst.dk) and signing a declaration to comply with the terms. Annual reports (regnskaber) published free as PDF/XBRL. No per-search/per-document fee.",
+   "confidence": "high",
+   "sources": [
+    {
+     "basis": "Datafordeler / Erhvervsstyrelsen — CVR basic data under CC BY 4.0; free download/share/adapt with attribution to CVR",
+     "url": "https://datafordeler.dk/vejledning/brugervilkaar/det-centrale-virksomhedsregister-cvr/",
+     "retrieved": "2026-07-23"
+    },
+    {
+     "basis": "CVR system-til-system access — apply via cvrselvbetjening@erst.dk, sign declaration",
+     "url": "https://datacvr.virk.dk/artikel/system-til-system-adgang-til-cvr-data",
+     "retrieved": "2026-07-23"
+    }
+   ]
   }
  },
  {
@@ -818,6 +853,26 @@
   "goDirect": {
    "verdict": "direct_strong",
    "reason": "open API delivers documents, free/low cost"
+  },
+  "licence": {
+   "commercialReuse": "yes",
+   "instrument": "Licence de réutilisation des informations du RNE (INPI), homologuée (art. L.323-2 / D.323-2-2 CRPA)",
+   "fee": "free",
+   "obligations": "Attribution: name the source and the last-update date of the reused information (art. 2.4). Must not mislead as to content/source/date.",
+   "restrictions": "Personal data: the FREE public feed is legally reduced for natural persons (surname, usual name, pseudonym, first names, month+year of birth, municipality only — art. A.123-69 / L123-52). Full personal detail goes only to authorities/regulated professions by decree. Certified Kbis / certified copies are NOT covered — paid via Infogreffe/greffes (~EUR 3.20+/doc).",
+   "confidence": "high",
+   "sources": [
+    {
+     "basis": "INPI 'Licence de réutilisation des informations du RNE' (PDF, 2024) — art. 2.1 grants a free, non-exclusive right of reuse 'à des fins commerciales ou non'",
+     "url": "https://www.inpi.fr/sites/default/files/Licence%20donn%C3%A9es%20RNE_2024_0.pdf",
+     "retrieved": "2026-07-23"
+    },
+    {
+     "basis": "Code de commerce, RNE public-availability + reduced personal identity fields",
+     "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000044046606/2023-01-01",
+     "retrieved": "2026-07-23"
+    }
+   ]
   }
  },
  {
@@ -855,6 +910,26 @@
   "goDirect": {
    "verdict": "direct_strong",
    "reason": "open API delivers documents, free/low cost"
+  },
+  "licence": {
+   "commercialReuse": "yes",
+   "instrument": "Companies House public register — statutory disclosure under the Companies Act 2006; no reuse licence imposed",
+   "fee": "free",
+   "obligations": "None imposed by Companies House on how register data is used.",
+   "restrictions": "Registrar's database right not infringed by extraction/use (s.47 Copyright, Designs and Patents Act 1988 + Sch.1 Database Regulations). Reuser remains responsible for its own data-protection / copyright compliance. Filing images downloadable free via the Document API.",
+   "confidence": "high",
+   "sources": [
+    {
+     "basis": "Companies House — 'imposes no rules or requirements on how the information on the public register is used'; data available by s.47 CDPA 1988 + Database Regulations",
+     "url": "https://developer.company-information.service.gov.uk/",
+     "retrieved": "2026-07-23"
+    },
+    {
+     "basis": "Companies House API — Public Data API + Document API free, no per-call charge",
+     "url": "https://www.api.gov.uk/ch/companies-house/",
+     "retrieved": "2026-07-23"
+    }
+   ]
   }
  },
  {

@@ -1,0 +1,51 @@
+{
+ "jurisdiction": "BE",
+ "query": "JVG",
+ "company": {
+  "name": "JVG MANAGEMENT",
+  "externalCode": "0764.938.733",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003833,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "Annual Account",
+   "name": "Annual Account",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000265"
+  },
+  {
+   "category": "custom_1692149809235",
+   "name": "Constitution",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000266"
+  },
+  {
+   "category": "Registry Extract",
+   "name": "Registry Extract",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000264"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "Annual Account",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "custom_1692149809235",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "Registry Extract",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003833/report?language=en"
+}

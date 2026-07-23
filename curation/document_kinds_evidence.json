@@ -2722,11 +2722,17 @@
     "note": "Copies of vedtægter / stiftelsesdokument orderable from CVR.",
     "url": "https://erhvervsstyrelsen.dk/hent-oplysninger-fra-cvr",
     "retrieved": "2026-07-18"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — KLARAVIK APS (case 1000003794)",
+    "quote": "",
+    "note": "Delivered in-bundle: Registry Extract, Registration certificate, Register Report, Memorandum & Articles of Association (ADDAS), Annual Accounts. No standing shareholder-list document (GESELLSCHAFTERLISTE=none confirmed)."
    }
   ],
   "caveats": [
    "Confirm the retrieved version is the current consolidated vedtægter, not only the original founding document.",
-   "IVS (iværksætterselskab) was abolished in 2019 (transition ended ~2021, converting to ApS); residual IVS should no longer appear as an active legal form."
+   "IVS (iværksætterselskab) was abolished in 2019 (transition ended ~2021, converting to ApS); residual IVS should no longer appear as an active legal form.",
+   "REVERTED 2026-07-23 to proved_by_additional_document. The sandbox delivered the vedtaegter in the case bundle, but that ran the 'All' journey (which also fetches additional-tier docs) and the sandbox mandatory catalogue is a generic stub. The reliable base signal is the PROD mandatory catalogue, and there is NO existing DK case in prod to confirm base tier — so the statute reading (vedtaegter = a separately filed document) stands. Re-open only with a real DK prod case."
   ],
   "confidence": "high"
  },
@@ -2751,10 +2757,16 @@
     "note": "Copies of a company's vedtægter and stiftelsesdokument can be ordered/downloaded from CVR.",
     "url": "https://erhvervsstyrelsen.dk/hent-oplysninger-fra-cvr",
     "retrieved": "2026-07-18"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — KLARAVIK APS (case 1000003794)",
+    "quote": "",
+    "note": "Delivered in-bundle: Registry Extract, Registration certificate, Register Report, Memorandum & Articles of Association (ADDAS), Annual Accounts. No standing shareholder-list document (GESELLSCHAFTERLISTE=none confirmed)."
    }
   ],
   "caveats": [
-   "Confirm the retrieved vedtægter are the CURRENT consolidated version (senest ændrede vedtægter), not only the original stiftelsesdokument."
+   "Confirm the retrieved vedtægter are the CURRENT consolidated version (senest ændrede vedtægter), not only the original stiftelsesdokument.",
+   "REVERTED 2026-07-23 to proved_by_additional_document. The sandbox delivered the vedtaegter in the case bundle, but that ran the 'All' journey (which also fetches additional-tier docs) and the sandbox mandatory catalogue is a generic stub. The reliable base signal is the PROD mandatory catalogue, and there is NO existing DK case in prod to confirm base tier — so the statute reading (vedtaegter = a separately filed document) stands. Re-open only with a real DK prod case."
   ],
   "confidence": "high"
  },
@@ -12695,6 +12707,11 @@
     "note": "§ 102(a) enumerates the mandatory contents of the certificate of incorporation.",
     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html",
     "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — SALEM FARMS, INC. (case 1000003791)",
+    "quote": "",
+    "note": "CONFIRMS proved_by_base_document: the case delivered a 'Registry Extract' and an 'Incorporation' document (= the filed Certificate of Incorporation / charter) as base. No bylaws/operating-agreement document was delivered — consistent with our note that the internal-governance instrument is not filed with the state registry."
    }
   ],
   "caveats": [
@@ -12724,6 +12741,11 @@
     "note": "INFERENCE: § 109 provides for adoption/amendment of bylaws by the corporation but imposes no requirement to file them with the Secretary of State.",
     "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html",
     "retrieved": "2026-07-21"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — SALEM FARMS, INC. (case 1000003791)",
+    "quote": "",
+    "note": "CONFIRMS proved_by_base_document: the case delivered a 'Registry Extract' and an 'Incorporation' document (= the filed Certificate of Incorporation / charter) as base. No bylaws/operating-agreement document was delivered — consistent with our note that the internal-governance instrument is not filed with the state registry."
    }
   ],
   "caveats": [
@@ -12755,6 +12777,11 @@
     "note": "The LLC agreement exists independently of the filing and is not lodged with the state.",
     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
     "retrieved": "2026-07-21"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — SALEM FARMS, INC. (case 1000003791)",
+    "quote": "",
+    "note": "CONFIRMS proved_by_base_document: the case delivered a 'Registry Extract' and an 'Incorporation' document (= the filed Certificate of Incorporation / charter) as base. No bylaws/operating-agreement document was delivered — consistent with our note that the internal-governance instrument is not filed with the state registry."
    }
   ],
   "caveats": [
@@ -12785,6 +12812,11 @@
     "note": "Verbatim, contiguous statutory text defining the certificate of formation and its required contents.",
     "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html",
     "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — SALEM FARMS, INC. (case 1000003791)",
+    "quote": "",
+    "note": "CONFIRMS proved_by_base_document: the case delivered a 'Registry Extract' and an 'Incorporation' document (= the filed Certificate of Incorporation / charter) as base. No bylaws/operating-agreement document was delivered — consistent with our note that the internal-governance instrument is not filed with the state registry."
    }
   ],
   "caveats": [
@@ -12813,6 +12845,11 @@
     "note": "INFERENCE: directors adopt bylaws; the chapter imposes no requirement to file them with the state.",
     "url": "https://www.leg.state.nv.us/nrs/nrs-078.html",
     "retrieved": "2026-07-21"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — SALEM FARMS, INC. (case 1000003791)",
+    "quote": "",
+    "note": "CONFIRMS proved_by_base_document: the case delivered a 'Registry Extract' and an 'Incorporation' document (= the filed Certificate of Incorporation / charter) as base. No bylaws/operating-agreement document was delivered — consistent with our note that the internal-governance instrument is not filed with the state registry."
    }
   ],
   "caveats": [
@@ -12844,6 +12881,11 @@
     "note": "By-laws are adopted internally; § 601 imposes no requirement to file them with the Department of State.",
     "url": "https://www.nysenate.gov/legislation/laws/BSC/601",
     "retrieved": "2026-07-21"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — SALEM FARMS, INC. (case 1000003791)",
+    "quote": "",
+    "note": "CONFIRMS proved_by_base_document: the case delivered a 'Registry Extract' and an 'Incorporation' document (= the filed Certificate of Incorporation / charter) as base. No bylaws/operating-agreement document was delivered — consistent with our note that the internal-governance instrument is not filed with the state registry."
    }
   ],
   "caveats": [
@@ -12874,6 +12916,11 @@
     "note": "INFERENCE: the operating agreement is recognized as a private governance document and is not required to be filed with the state.",
     "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/",
     "retrieved": "2026-07-21"
+   },
+   {
+    "basis": "KYC.com v2 sandbox harvest, 2026-07-23 — SALEM FARMS, INC. (case 1000003791)",
+    "quote": "",
+    "note": "CONFIRMS proved_by_base_document: the case delivered a 'Registry Extract' and an 'Incorporation' document (= the filed Certificate of Incorporation / charter) as base. No bylaws/operating-agreement document was delivered — consistent with our note that the internal-governance instrument is not filed with the state registry."
    }
   ],
   "caveats": [

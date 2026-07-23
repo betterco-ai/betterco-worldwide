@@ -1,0 +1,54 @@
+[
+ {
+  "j": "FR",
+  "hit": true,
+  "company": "ETABLISSEMENTS J BLONDEAU",
+  "cid": 1000003823,
+  "ndocs": 1,
+  "cats": [
+   "Registry Extract"
+  ]
+ },
+ {
+  "j": "ES",
+  "hit": true,
+  "company": "POSA REALTY ES SL",
+  "cid": 1000003826,
+  "ndocs": 1,
+  "cats": [
+   "Informacion Imprimible"
+  ]
+ },
+ {
+  "j": "JP",
+  "hit": true,
+  "company": "株式会社ブルーキャピタルマネジメント",
+  "cid": 1000003828,
+  "ndocs": 1,
+  "cats": [
+   "Registry Extract"
+  ]
+ },
+ {
+  "j": "BE",
+  "hit": true,
+  "company": "JVG MANAGEMENT",
+  "cid": 1000003833,
+  "ndocs": 3,
+  "cats": [
+   "Annual Account",
+   "Registry Extract",
+   "custom_1692149809235"
+  ]
+ },
+ {
+  "j": "KW",
+  "hit": true,
+  "company": "CALI UNITED REAL ESTATE RENTAL & MANAGEMENT CO. WLL",
+  "cid": 1000003835,
+  "ndocs": 1,
+  "cats": [
+   "Registry Extract"
+  ]
+ }
+]

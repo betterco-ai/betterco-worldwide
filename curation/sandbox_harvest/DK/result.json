@@ -1,0 +1,69 @@
+{
+ "jurisdiction": "DK",
+ "query": "ApS",
+ "company": {
+  "name": "KLARAVIK APS",
+  "externalCode": "36920882",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003794,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "Annual Accounts",
+   "name": "Annual Accounts",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000471"
+  },
+  {
+   "category": "Registry Certificate",
+   "name": "Registration certificate <18/08/2023>",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000469"
+  },
+  {
+   "category": "Registry Extract",
+   "name": "Registry Extract <18/08/2023>",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000470"
+  },
+  {
+   "category": "ADDAS",
+   "name": "Memorandum & Articles of Association",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000474"
+  },
+  {
+   "category": "REPOF",
+   "name": "Register Report",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000473"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "Annual Accounts",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "Registry Certificate",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "Registry Extract",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "ADDAS",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "REPOF",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003794/report?language=en"
+}

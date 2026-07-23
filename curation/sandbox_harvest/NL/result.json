@@ -1,0 +1,42 @@
+{
+ "jurisdiction": "NL",
+ "query": "B.V.",
+ "company": {
+  "name": "Whitford B.V.",
+  "externalCode": "33145574",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003802,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "CompanyRegistration",
+   "name": "Company Registration Extract",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000319"
+  },
+  {
+   "category": "custom_1692163486847",
+   "name": "Status Report",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000346"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "CompanyRegistration",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  },
+  {
+   "category": "custom_1692163486847",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003802/report?language=en"
+}

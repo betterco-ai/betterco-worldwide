@@ -1,0 +1,33 @@
+{
+ "jurisdiction": "JP",
+ "query": "ブルーキャピタル",
+ "company": {
+  "name": "株式会社ブルーキャピタルマネジメント",
+  "externalCode": "０１０４０１０９６７２２",
+  "status": "Active",
+  "dataSource": "demo-harvest"
+ },
+ "caseCommonId": 1000003828,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "Registry Extract",
+   "name": "Registry Extract",
+   "link": "https://api-service-hk.knowyourcustomer.com/v2/documents/2000581"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "demo-harvest",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "Registry Extract",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-hk.knowyourcustomer.com/v2/documents/200"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003828/report?language=en"
+}

@@ -1,0 +1,2695 @@
+[
+{
+"cc": "AE",
+"name": "UAE",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 3
+},
+"gv": {
+"add": 3
+},
+"gl": {
+"add": 3
+},
+"api": "no",
+"docs": false,
+"cost": "free",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "AL",
+"name": "Albania",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "AM",
+"name": "Armenia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "AO",
+"name": "Angola",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "AR",
+"name": "Argentina",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"add": 1
+},
+"api": "no",
+"docs": false,
+"cost": "contract",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "AT",
+"name": "Austria",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {
+"additional": 1
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "partial",
+"docs": true,
+"cost": "per_document",
+"gd": "direct_contract",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "AU",
+"name": "Australia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 1,
+"none": 1
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "partial",
+"docs": true,
+"cost": "per_document",
+"gd": "direct_contract",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "AX",
+"name": "Aaland Islands",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "AZ",
+"name": "Azerbaijan",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "BA",
+"name": "Bosnia Herzegovina",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "BE",
+"name": "Belgium",
+"area": "Live jurisdictions",
+"stp": 12,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"none": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "BG",
+"name": "Bulgaria",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "BH",
+"name": "Bahrain",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "BM",
+"name": "Bermuda",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {
+"base": 1
+},
+"gl": {
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "BN",
+"name": "Brunei",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "BR",
+"name": "Brazil",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"base": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "BS",
+"name": "Bahamas",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"add": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "low",
+"lic": false,
+"ri": true
+},
+{
+"cc": "BW",
+"name": "Botswana",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "BY",
+"name": "Belarus",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "BZ",
+"name": "Belize",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "CA",
+"name": "Canada",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"none": 2
+},
+"api": "yes",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "CC",
+"name": "Cocos (Keeling) Islands",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "CH",
+"name": "Switzerland",
+"area": "Live jurisdictions",
+"stp": 9,
+"reg": {
+"base": 1
+},
+"gv": {
+"additional": 1
+},
+"gl": {
+"none": 1,
+"add": 1,
+"base": 1
+},
+"api": "yes",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": true,
+"ri": true
+},
+{
+"cc": "CL",
+"name": "Chile",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 2
+},
+"api": "no",
+"docs": false,
+"cost": "free",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "CN",
+"name": "China",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "no",
+"docs": false,
+"cost": "free",
+"gd": "vendor_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "CO",
+"name": "Colombia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 2
+},
+"api": "partial",
+"docs": false,
+"cost": "per_document",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "CR",
+"name": "Costa Rica",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "CW",
+"name": "Curaçao",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "CX",
+"name": "Christmas Island",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "CY",
+"name": "Cyprus",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"base": 2
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "CZ",
+"name": "Czech Republic",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "yes",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "DK",
+"name": "Denmark",
+"area": "Live jurisdictions",
+"stp": 6,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 2
+},
+"api": "yes",
+"docs": true,
+"cost": "free",
+"gd": "direct_strong",
+"conf": "high",
+"lic": true,
+"ri": true
+},
+{
+"cc": "EC",
+"name": "Ecuador",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "EE",
+"name": "Estonia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "yes",
+"docs": true,
+"cost": "free",
+"gd": "direct_strong",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "ES",
+"name": "Spain",
+"area": "Live jurisdictions",
+"stp": 5,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 2
+},
+"api": "partial",
+"docs": true,
+"cost": "per_document",
+"gd": "direct_contract",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "FI",
+"name": "Finland",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 4
+},
+"gv": {
+"add": 4
+},
+"gl": {
+"base": 2,
+"none": 2
+},
+"api": "partial",
+"docs": false,
+"cost": "per_document",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "FO",
+"name": "Faroe Islands",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "FR",
+"name": "France",
+"area": "Live jurisdictions",
+"stp": 1,
+"reg": {
+"base": 4
+},
+"gv": {
+"add": 4
+},
+"gl": {
+"none": 2,
+"add": 1,
+"base": 1
+},
+"api": "yes",
+"docs": true,
+"cost": "free",
+"gd": "direct_strong",
+"conf": "high",
+"lic": true,
+"ri": true
+},
+{
+"cc": "GB",
+"name": "UK",
+"area": "Live jurisdictions",
+"stp": 3,
+"reg": {
+"none": 3
+},
+"gv": {
+"none": 1,
+"base": 2
+},
+"gl": {
+"none": 4
+},
+"api": "yes",
+"docs": true,
+"cost": "free",
+"gd": "direct_strong",
+"conf": "high",
+"lic": true,
+"ri": true
+},
+{
+"cc": "GE",
+"name": "Georgia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "GG",
+"name": "Guernsey",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {
+"base": 1
+},
+"gl": {
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "GI",
+"name": "Gibraltar",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {},
+"gv": {
+"additional": 1
+},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "GL",
+"name": "Greenland",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "GR",
+"name": "Greece",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"add": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "per_document",
+"gd": "direct_data_only",
+"conf": "low",
+"lic": false,
+"ri": true
+},
+{
+"cc": "HK",
+"name": "HK IRD",
+"area": "Live jurisdictions",
+"stp": 15,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"add": 2
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "HR",
+"name": "Croatia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "yes",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "HU",
+"name": "Hungary",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"base": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "free",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "ID",
+"name": "Indonesia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"add": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "IE",
+"name": "Ireland",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {},
+"gv": {},
+"gl": {
+"base": 1
+},
+"api": "yes",
+"docs": true,
+"cost": "per_document",
+"gd": "direct_good",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "IL",
+"name": "Israel",
+"area": "Live jurisdictions",
+"stp": 10,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"base": 1,
+"none": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "IM",
+"name": "Isle of Man",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"add": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "IN",
+"name": "India",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"none": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"add": 2
+},
+"api": "partial",
+"docs": false,
+"cost": "per_document",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "IQ",
+"name": "Iraq",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "IR",
+"name": "Iran",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "IS",
+"name": "Iceland",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 2
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "low",
+"lic": false,
+"ri": true
+},
+{
+"cc": "IT",
+"name": "Italy",
+"area": "Live jurisdictions",
+"stp": 2,
+"reg": {
+"base": 5
+},
+"gv": {
+"add": 5
+},
+"gl": {
+"base": 4,
+"add": 1
+},
+"api": "yes",
+"docs": true,
+"cost": "per_document",
+"gd": "direct_good",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "JE",
+"name": "Jersey",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"add": 2
+},
+"api": "partial",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "JO",
+"name": "Jordan",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "JP",
+"name": "Japan",
+"area": "Live jurisdictions",
+"stp": 11,
+"reg": {
+"base": 2
+},
+"gv": {
+"none": 2
+},
+"gl": {
+"base": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "KE",
+"name": "Kenya",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "KG",
+"name": "Kyrgyzstan",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "KH",
+"name": "Cambodia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "KR",
+"name": "South Korea",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"none": 2
+},
+"gl": {
+"none": 2
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "KW",
+"name": "Kuwait",
+"area": "Live jurisdictions",
+"stp": 13,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "KY",
+"name": "Cayman Islands",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"none": 2
+},
+"api": "no",
+"docs": false,
+"cost": "per_search",
+"gd": "vendor_only",
+"conf": "low",
+"lic": false,
+"ri": true
+},
+{
+"cc": "LA",
+"name": "Laos",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "LI",
+"name": "Liechtenstein",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 4
+},
+"gv": {
+"add": 3,
+"none": 1
+},
+"gl": {
+"none": 3,
+"base": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "LK",
+"name": "Sri Lanka",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "LS",
+"name": "Lesotho",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "LT",
+"name": "Register of Legal Entiti",
+"area": "",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"add": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "contract",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "LU",
+"name": "Luxembourg",
+"area": "Live jurisdictions",
+"stp": 8,
+"reg": {
+"base": 1
+},
+"gv": {
+"base": 1
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "per_document",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "LV",
+"name": "Latvia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"add": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "MA",
+"name": "Morocco",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "MC",
+"name": "Monaco",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "MD",
+"name": "Moldova",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "ME",
+"name": "Montenegro",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "MH",
+"name": "Marshall Islands",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "MK",
+"name": "Macedonia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "MM",
+"name": "Myanmar",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "MT",
+"name": "Malta",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"add": 2
+},
+"api": "partial",
+"docs": false,
+"cost": "subscription",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "MU",
+"name": "Mauritius",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1,
+"none": 1
+},
+"gv": {
+"add": 1,
+"none": 1
+},
+"gl": {
+"base": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "free",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "MX",
+"name": "Mexico",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"base": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "MY",
+"name": "Malaysia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"add": 1,
+"base": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "subscription",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "NL",
+"name": "Netherlands",
+"area": "Live jurisdictions",
+"stp": 7,
+"reg": {
+"base": 1
+},
+"gv": {
+"additional": 1
+},
+"gl": {
+"none": 1
+},
+"api": "yes",
+"docs": false,
+"cost": "per_search",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "NO",
+"name": "Norway",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 4
+},
+"gv": {
+"add": 4
+},
+"gl": {
+"base": 2,
+"none": 2
+},
+"api": "yes",
+"docs": true,
+"cost": "per_document",
+"gd": "direct_good",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "NP",
+"name": "Nepal",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "NZ",
+"name": "New Zealand",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {
+"add": 1
+},
+"gl": {
+"base": 1
+},
+"api": "yes",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "OM",
+"name": "Oman",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "PA",
+"name": "Panama",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "no",
+"docs": false,
+"cost": "free",
+"gd": "vendor_only",
+"conf": "low",
+"lic": false,
+"ri": true
+},
+{
+"cc": "PE",
+"name": "Peru",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "PF",
+"name": "French Polynesia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "PG",
+"name": "Papua New Guinea",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "PH",
+"name": "Philippines - DTI",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"base": 1,
+"add": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "PK",
+"name": "Pakistan",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "PL",
+"name": "Poland",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 4
+},
+"gv": {
+"add": 4
+},
+"gl": {
+"none": 2,
+"base": 1,
+"add": 1
+},
+"api": "yes",
+"docs": true,
+"cost": "free",
+"gd": "direct_strong",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "PR",
+"name": "Puerto Rico",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "PS",
+"name": "Palestine",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "PT",
+"name": "Portugal",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 3
+},
+"gv": {
+"add": 3
+},
+"gl": {
+"base": 2,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "PY",
+"name": "Paraguay",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "QA",
+"name": "Qatar",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"base": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "RO",
+"name": "Romania",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "RS",
+"name": "Serbia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "RU",
+"name": "Russia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "SA",
+"name": "Saudi Arabia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"add": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "contract",
+"gd": "direct_data_only",
+"conf": "low",
+"lic": false,
+"ri": true
+},
+{
+"cc": "SB",
+"name": "Solomon Islands",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "SC",
+"name": "Seychelles - FSA",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"none": 2
+},
+"api": "no",
+"docs": false,
+"cost": "free",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "SE",
+"name": "Sweden",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 4
+},
+"gv": {
+"add": 2,
+"none": 2
+},
+"gl": {
+"none": 2,
+"base": 2
+},
+"api": "partial",
+"docs": true,
+"cost": "subscription",
+"gd": "direct_contract",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "SG",
+"name": "Singapore",
+"area": "Live jurisdictions",
+"stp": 14,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"base": 1,
+"none": 1
+},
+"api": "yes",
+"docs": false,
+"cost": "per_document",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "SI",
+"name": "Slovenia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "partial",
+"docs": false,
+"cost": "subscription",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "SK",
+"name": "Slovakia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "yes",
+"docs": true,
+"cost": "free",
+"gd": "direct_strong",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "SM",
+"name": "San Marino",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "SN",
+"name": "Senegal",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "TH",
+"name": "Thailand",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"add": 2
+},
+"api": "partial",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "TN",
+"name": "Tunisia",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "TO",
+"name": "Tonga",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "TR",
+"name": "Turkey",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"base": 2
+},
+"gl": {
+"none": 1,
+"base": 1
+},
+"api": "no",
+"docs": false,
+"cost": "free",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "TT",
+"name": "Trinidad and Tobago",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "TW",
+"name": "Taiwan",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 1,
+"add": 1
+},
+"api": "yes",
+"docs": false,
+"cost": "free",
+"gd": "direct_data_only",
+"conf": "high",
+"lic": false,
+"ri": true
+},
+{
+"cc": "UA",
+"name": "Ukraine",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "US",
+"name": "USA",
+"area": "Live jurisdictions",
+"stp": 4,
+"reg": {
+"base": 2,
+"add": 5
+},
+"gv": {
+"base": 7
+},
+"gl": {
+"none": 7
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "UZ",
+"name": "Uzbekistan",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "VG",
+"name": "British Virgin Island (BVI)",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {
+"base": 1
+},
+"gl": {
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "VI",
+"name": "U.S. Virgin Islands",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "VN",
+"name": "Viet Nam - GDT",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"add": 1,
+"none": 1
+},
+"api": "no",
+"docs": false,
+"cost": "per_document",
+"gd": "vendor_only",
+"conf": "medium",
+"lic": false,
+"ri": true
+},
+{
+"cc": "VU",
+"name": "Vanuatu",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {
+"additional": 1
+},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "WS",
+"name": "Samoa",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {
+"data": 1
+},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "YE",
+"name": "Yemen",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 1
+},
+"gv": {},
+"gl": {},
+"api": null,
+"docs": null,
+"cost": null,
+"gd": null,
+"conf": null,
+"lic": false,
+"ri": false
+},
+{
+"cc": "ZA",
+"name": "South Africa",
+"area": "Live jurisdictions",
+"stp": null,
+"reg": {
+"base": 2
+},
+"gv": {
+"add": 2
+},
+"gl": {
+"none": 2
+},
+"api": "partial",
+"docs": true,
+"cost": "per_document",
+"gd": "direct_contract",
+"conf": "medium",
+"lic": false,
+"ri": true
+}
+]

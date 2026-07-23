@@ -1,0 +1,110 @@
+{
+ "jurisdiction": "GB",
+ "query": "Cropwell Bishop",
+ "company": {
+  "name": "CROPWELL BISHOP CREAMERY LIMITED",
+  "externalCode": "00364890",
+  "status": "Active",
+  "dataSource": ""
+ },
+ "caseCommonId": 1000003766,
+ "statusId": 0,
+ "documents": [
+  {
+   "category": "CS01",
+   "name": "CS01 <13/01/2026>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35460"
+  },
+  {
+   "category": "AR01",
+   "name": "Annual Return <25/01/2016>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35461"
+  },
+  {
+   "category": "CERTNM",
+   "name": "Certificate of Change of Name <20/04/2006>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35462"
+  },
+  {
+   "category": "AA",
+   "name": "Accounts <24/12/2025>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35463"
+  },
+  {
+   "category": "NEWINC",
+   "name": "New Incorporation <15/01/1941>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35459"
+  },
+  {
+   "category": "CS01",
+   "name": "CS01 <04/09/2025>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35479"
+  },
+  {
+   "category": "AR01",
+   "name": "Annual Return <16/09/2015>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35498"
+  },
+  {
+   "category": "AA",
+   "name": "Accounts <24/12/2025>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35499"
+  },
+  {
+   "category": "NEWINC",
+   "name": "New Incorporation <15/08/2005>",
+   "link": "https://api-service-uathk.knowyourcustomer.com/v2/documents/35470"
+  }
+ ],
+ "mandatory": [
+  {
+   "dataSource": "",
+   "mandatoryDocument": "Certificate of Incorporation",
+   "otherNames": []
+  },
+  {
+   "dataSource": "",
+   "mandatoryDocument": "Confirmation Statement (CS01)",
+   "otherNames": []
+  }
+ ],
+ "downloads": [
+  {
+   "category": "CS01",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "AR01",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "CERTNM",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "AA",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "NEWINC",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "CS01",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "AR01",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "AA",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  },
+  {
+   "category": "NEWINC",
+   "download_error": "401 Client Error: Unauthorized for url: https://api-service-uathk.knowyourcustomer.com/v2/documents/"
+  }
+ ],
+ "report_error": "409 Client Error: Conflict for url: https://api.knowyourcustomer.dev/v2/Companies/1000003766/report?language=en"
+}
