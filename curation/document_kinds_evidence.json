@@ -4438,6 +4438,34 @@
   "summary": "A public company with share capital also delivers an annual return (Form NAR1) under s.662 whose member particulars evidence shareholders as at the return date — a publicly searchable additional filing. DISTINCTION: NAR1 Schedule 1 is 'Particulars of Member(s) of a Non-listed Company'. For an UNLISTED public company this gives a full member list; for a LISTED public company the annual return does not carry a usable full current member list (members trade on the exchange, maintained by a share registrar), so a registry-based current shareholder list is effectively not obtainable.",
   "evidence": [
    {
+    "basis": "Companies Registry, Form NAR1 specimen (public company), Notes for Completion, note 1 + title ('ANNUAL RETURN — For the purposes of section 662 of Companies Ordinance (Cap. 622)')",
+    "quote": "Every private company, public company or company limited by guarantee must make an annual return which should be delivered to the Registrar of Companies (the Registrar) for registration.",
+    "note": "Official CR documentation confirms the s.662 annual-return obligation for public companies; NAR1 Section 14 ('Particulars of Member(s) of a Company Having a Share Capital') carries the member particulars, with 'Company having a share capital must complete this section'.",
+    "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NAR1(public)_Specimen-e.pdf",
+    "retrieved": "2026-07-23"
+   },
+   {
+    "basis": "Form NAR1 Notes for Completion, note 33(b) — Schedule 1 'Particulars of Member(s) of a Non-listed Company (Section 14)'",
+    "quote": "Please provide the full name and address of each member and the number of shares held.",
+    "note": "For a NON-LISTED company (including an unlisted public company) Schedule 1 requires every member's full name, address and shares held — a full shareholder list as at the return date.",
+    "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NAR1(public)_Specimen-e.pdf",
+    "retrieved": "2026-07-23"
+   },
+   {
+    "basis": "Form NAR1 Notes for Completion, note 34(a) — Schedule 2 (listed company)",
+    "quote": "The particulars of members of a listed company to be provided in Schedule 2 are limited to those relating to members who held not less than 5% of the issued shares in any class of the company's shares as at the date of the return.",
+    "note": "For a LISTED public company the annual return does NOT carry a full member list — only holders of >=5% per class; confirms the listed/unlisted distinction in the summary.",
+    "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NAR1(public)_Specimen-e.pdf",
+    "retrieved": "2026-07-23"
+   },
+   {
+    "basis": "Form NAR1, Section 14 (member particulars delivered on CD-ROM/DVD-ROM)",
+    "quote": "Particulars of members recorded in the CD-ROM or DVD-ROM will be available for public search electronically in PDF format.",
+    "note": "Member particulars delivered with the annual return are publicly searchable at the Companies Registry — supports registry-provability.",
+    "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NAR1(public)_Specimen-e.pdf",
+    "retrieved": "2026-07-23"
+   },
+   {
     "basis": "Companies Registry FAQ, 'Documents on share capital and members'",
     "quote": "the transfer of shares should be reported in the annual return first made by the company after such a transfer took place",
     "note": "Members/shareholder particulars reach the Companies Registry via the annual return (Form NAR1); the register of members itself is kept by the company.",
@@ -4446,9 +4474,11 @@
    }
   ],
   "caveats": [
-   "Quote confirms that shareholder changes are captured only through the periodic annual return (NAR1), so the Registry copy can lag the company-held register of members."
+   "Shareholder changes are captured only through the periodic annual return (NAR1), so the Registry copy can lag the company-held register of members.",
+   "For a LISTED public company Schedule 2 discloses only members holding >=5% of a class — a full current member list is not obtainable from the registry; the full-list route (Schedule 1) applies to non-listed companies only.",
+   "The s.662/Schedule 6 statute text itself was not fetched (elegislation.gov.hk is JS-rendered); the verbatim evidence is the Companies Registry's official NAR1 specimen form and Notes for Completion, which state the s.662 basis on their face."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "HK",
@@ -4935,19 +4965,47 @@
   "summary": "The founding shareholders are named as a document fact in the Akta Pendirian (Pasal 8 UUPT), and share transfers must be effected by notarial deed and notified to the Minister for recording in the Daftar Perseroan (Pasal 56). Thus a shareholder list is provable through documents, but as a point-in-time / founders proof rather than a guaranteed current cap table. The statutory CURRENT shareholder register is the company's Daftar Pemegang Saham kept by the Board of Directors (Pasal 50), which is company-held and open only to shareholders, not the general public; the AHU Profil Perseroan may display current shareholders but is parsed data with restricted access.",
   "evidence": [
    {
-    "basis": "UU No. 40 Tahun 2007, Pasal 8 (contents of deed / founders), Pasal 50 (daftar pemegang saham & daftar khusus kept by Direksi), Pasal 56 (share transfer by deed, notified to Minister)",
-    "note": "Verbatim text not retrievable this session; article numbers from knowledge of UUPT.",
-    "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007",
-    "retrieved": "2026-07-21"
+    "basis": "UU No. 40 Tahun 2007 (UUPT), Pasal 8 ayat (2) huruf c — the akta pendirian's 'keterangan lain' must name the initial shareholders and their shareholdings",
+    "quote": "nama pemegang saham yang telah mengambil bagian saham, rincian jumlah saham, dan nilai nominal saham yang telah ditempatkan dan disetor.",
+    "note": "English gloss: '(the deed of establishment shall state) the names of the shareholders who have taken up shares, details of the number of shares, and the nominal value of the shares issued and paid up.' Confirms the founding shareholders are a document fact in the Akta Pendirian. Quoted verbatim from the official PDF (peraturan.bpk.go.id download of UU 40/2007).",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 50 ayat (1) — the current statutory shareholder register (Daftar Pemegang Saham) is kept by the Board of Directors",
+    "quote": "Direksi Perseroan wajib mengadakan dan menyimpan daftar pemegang saham",
+    "note": "English gloss: 'The Board of Directors of the Company is obliged to make and keep a register of shareholders.' The current register is company-held, not registry-held.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 50 ayat (4) — access to the Daftar Pemegang Saham is for shareholders, at the company's seat",
+    "quote": "disediakan di tempat kedudukan Perseroan agar dapat dilihat oleh para pemegang saham.",
+    "note": "English gloss: '(the register of shareholders and the special register) shall be made available at the Company's domicile so that they can be viewed by the shareholders.' Confirms the DPS is not open to the general public.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 56 ayat (1) dan (3) — share transfers by deed, changes in the shareholder composition notified to the Minister for recording in the Daftar Perseroan",
+    "quote": "Pemindahan hak atas saham dilakukan dengan akta pemindahan hak.",
+    "note": "English gloss: 'Transfer of rights over shares shall be effected by a deed of transfer of rights.' Pasal 56(3) continues (also verbatim in the same source): 'memberitahukan perubahan susunan pemegang saham kepada Menteri untuk dicatat dalam daftar Perseroan paling lambat 30 (tiga puluh) hari' — 'notify the change in the composition of shareholders to the Minister for recording in the register of companies within at most 30 days'. Together these make post-incorporation shareholdings provable via notarial transfer deeds plus ministerial notification receipts.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 29 ayat (2) huruf g dan ayat (5) — the Minister's Daftar Perseroan contains shareholder names/addresses and is open to the public",
+    "quote": "nama lengkap dan alamat pemegang saham, anggota Direksi, dan anggota Dewan Komisaris Perseroan;",
+    "note": "English gloss: '(the register of companies contains) the full names and addresses of the shareholders, members of the Board of Directors, and members of the Board of Commissioners of the Company.' Pasal 29(5), also verbatim in the same source: 'Daftar Perseroan sebagaimana dimaksud pada ayat (1) terbuka untuk umum.' — 'The register of companies referred to in paragraph (1) is open to the public.' This is the statutory basis of the AHU Profil Perseroan data view: shareholder names are registered DATA, not an issued document.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED: no verbatim Pasal 8/50/56 quote obtained.",
-   "The akta proves FOUNDERS / a historical snapshot; it does not by itself prove the CURRENT shareholder body.",
-   "The current statutory register (Daftar Pemegang Saham, Pasal 50) is maintained by the company, not the registry, and is not routinely public.",
-   "INFERENCE: reconstructing a current list from the registry generally requires the latest akta perubahan + notification receipts, or the company's own DPS; the AHU Profil Perseroan snapshot is parsed data, not a document."
+   "The akta proves FOUNDERS / a historical snapshot (Pasal 8(2)(c)); it does not by itself prove the CURRENT shareholder body.",
+   "The current statutory register (Daftar Pemegang Saham, Pasal 50(1)) is maintained by the company's Direksi and, per Pasal 50(4), is made available at the company's seat for inspection by shareholders — not the general public.",
+   "Current shareholder names do reach the Minister's Daftar Perseroan (Pasal 29(2)(g), public per Pasal 29(5)) through Pasal 56(3) notifications, but that is registered data — the AHU Profil Perseroan snapshot is parsed data, not a document; reconstructing a current list as a DOCUMENT generally requires the latest akta (perubahan/pemindahan hak) plus notification receipts, or the company's own DPS."
   ],
-  "confidence": "low"
+  "confidence": "medium"
  },
  {
   "jurisdiction": "ID",
@@ -4960,19 +5018,33 @@
   "summary": "For a listed PT Tbk, shares are dematerialised (scripless) and held collectively through the central securities depository KSEI, with the shareholder register maintained by a securities administration bureau (Biro Administrasi Efek), not by the company-law registry. No AHU/Kemenkumham document lists the current full body of public shareholders. The founding shareholders remain named in the Akta Pendirian, and holders of significant stakes (e.g. >=5%) are disclosed to OJK/IDX and in the annual report/prospectus, but a complete current shareholder list is not obtainable as a registry document.",
   "evidence": [
    {
-    "basis": "UU No. 40 Tahun 2007, Pasal 50 & 56 (shareholder register / transfers); Capital Markets Law No. 8/1995 and OJK rules (scripless holding via KSEI, share registrar/BAE, substantial-shareholding disclosure)",
-    "note": "Verbatim text not fetched. KSEI = Kustodian Sentral Efek Indonesia (central depository); could not retrieve the KSEI/OJK source pages this session.",
-    "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007",
-    "retrieved": "2026-07-21"
+    "basis": "UU No. 40 Tahun 2007, Pasal 29 ayat (4) — carve-out: shareholder name/address data of a Perseroan Terbuka in the Daftar Perseroan follows capital-markets law, not the normal company-register rule",
+    "quote": "Ketentuan sebagaimana dimaksud pada ayat (2) huruf g mengenai nama lengkap dan alamat pemegang saham Perseroan Terbuka sesuai dengan ketentuan peraturan perundang-undangan di bidang pasar modal.",
+    "note": "English gloss: 'The provision referred to in paragraph (2) letter g concerning the full names and addresses of shareholders of a Publicly Listed Company shall be in accordance with the laws and regulations in the capital markets field.' The statute itself removes Tbk shareholders from the ordinary Daftar Perseroan shareholder-data regime — the company-law registry does not carry the public shareholder body.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 50 ayat (5) — the company-held shareholder-register provisions apply to a Perseroan Terbuka only insofar as capital-markets law does not provide otherwise",
+    "quote": "Dalam hal peraturan perundang-undangan di bidang pasar modal tidak mengatur lain, ketentuan sebagaimana dimaksud pada ayat (1), ayat (3), dan ayat (4) berlaku juga bagi Perseroan Terbuka.",
+    "note": "English gloss: 'To the extent that the laws and regulations in the capital markets field do not provide otherwise, the provisions of paragraphs (1), (3) and (4) also apply to a Publicly Listed Company.' Shareholder administration of a listed PT is deferred to the capital-markets regime (KSEI depository / share registrar).",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 56 ayat (5) — transfers of exchange-traded shares governed by capital-markets law (so the Pasal 56(3) minister-notification chain does not track listed trading)",
+    "quote": "Ketentuan mengenai tata cara pemindahan hak atas saham yang diperdagangkan di pasar modal diatur dalam peraturan perundang-undangan di bidang pasar modal.",
+    "note": "English gloss: 'Provisions on the procedure for the transfer of rights over shares traded on the capital market are regulated in the laws and regulations in the capital markets field.'",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED: KSEI/OJK primary sources not fetched this session; based on knowledge of Indonesian capital-markets practice.",
    "Founding shareholders are still documented in the Akta Pendirian, and major (>=5%) holders are disclosed via OJK/IDX filings and the annual report/prospectus.",
-   "The current full shareholder list sits in the KSEI depository / share registrar (BAE), which are not the company-law registry and do not issue a public list.",
+   "The current full shareholder list sits in the KSEI depository / share registrar (BAE), which are not the company-law registry and do not issue a public list; KSEI/OJK primary sources were not fetched this session (statutory deference is proven, the operational depository detail is established practice).",
    "INFERENCE on the exact substantial-shareholding threshold and disclosure vehicle."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "ID",
@@ -4985,18 +5057,39 @@
   "summary": "The constitution of a PT is the Anggaran Dasar contained in the notarial Akta Pendirian (Pasal 8 and 15 UUPT), which is ratified by the Minister (SK Pengesahan) and announced in the Berita Negara / Tambahan Berita Negara (Pasal 30). It exists as a concrete document; the current constitution is the original akta as amended by any Akta Perubahan Anggaran Dasar approved by the Minister. Copies are held by the officiating notary and evidenced by the ministerial decree and the BNRI announcement, rather than by a self-service registry download.",
   "evidence": [
    {
-    "basis": "UU No. 40 Tahun 2007, Pasal 8 & 15 (deed contains articles of association), Pasal 21 (amendment of anggaran dasar), Pasal 30 (announcement in Berita Negara)",
-    "note": "id.wikipedia paraphrase confirms: notarial akta in Indonesian contains the anggaran dasar, ratified by the Minister and announced in BNRI. Verbatim article text not fetched.",
-    "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007",
-    "retrieved": "2026-07-21"
+    "basis": "UU No. 40 Tahun 2007, Pasal 8 ayat (1) — the deed of establishment contains the articles of association",
+    "quote": "Akta pendirian memuat anggaran dasar dan keterangan lain berkaitan dengan pendirian Perseroan.",
+    "note": "English gloss: 'The deed of establishment contains the articles of association and other information relating to the establishment of the Company.'",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 15 ayat (1) — mandatory minimum contents of the anggaran dasar",
+    "quote": "Anggaran dasar sebagaimana dimaksud dalam Pasal 8 ayat (1) memuat sekurang-kurangnya:",
+    "note": "English gloss: 'The articles of association referred to in Article 8 paragraph (1) shall contain at least:' (name/seat, objects, duration, capital, shares, organs, etc.). Confirms the anggaran dasar is a defined constitutional document inside the akta.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 21 ayat (1) — certain amendments of the articles require ministerial approval (others are notified, ayat (3)); all are made in a notarial deed (ayat (4))",
+    "quote": "Perubahan anggaran dasar tertentu harus mendapat persetujuan Menteri.",
+    "note": "English gloss: 'Certain amendments to the articles of association must obtain the approval of the Minister.' The currently effective constitution = akta pendirian as amended by ministerially approved/notified Akta Perubahan Anggaran Dasar.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 30 ayat (1) huruf a — the Minister announces the deed of establishment (with the ratification decree) in the State Gazette supplement",
+    "quote": "Menteri mengumumkan dalam Tambahan Berita Negara Republik Indonesia: a. akta pendirian Perseroan beserta Keputusan Menteri sebagaimana dimaksud dalam Pasal 7 ayat (4);",
+    "note": "English gloss: 'The Minister announces in the Supplement to the State Gazette of the Republic of Indonesia: a. the deed of establishment of the Company together with the Ministerial Decree referred to in Article 7 paragraph (4).' Confirms official publication of the constitutional document (and, per letters b-c, of amendment deeds).",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED: no verbatim Pasal 8/15/21/30 quote obtained this session.",
-   "The akta/anggaran dasar is primarily obtained from the officiating notary; the registry evidences it via the SK and the BNRI announcement rather than issuing the deed itself.",
+   "The akta/anggaran dasar is primarily obtained from the officiating notary; the registry evidences it via the SK and the BNRI/TBNRI announcement rather than issuing the deed itself.",
    "Only the anggaran dasar (articles) and its amendments are public; the full deed may contain details accessed via the notary."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "ID",
@@ -5009,18 +5102,32 @@
   "summary": "As for any PT, the constitution of a PT Tbk is the Anggaran Dasar contained in the notarial Akta Pendirian (Pasal 8/15 UUPT), ratified by the Minister and announced in the Berita Negara (Pasal 30); amendments are made by ministerially-approved deeds. It exists as a document, obtained from the notary and evidenced via the SK and BNRI announcement. For a listed company the current consolidated anggaran dasar is additionally reproduced in public OJK/IDX filings (prospectus, annual report), reinforcing document-based provability.",
   "evidence": [
    {
-    "basis": "UU No. 40 Tahun 2007, Pasal 8 & 15 (articles of association in the deed), Pasal 21 (amendments), Pasal 30 (BNRI announcement)",
-    "note": "Verbatim article text not fetched; framework per UUPT.",
-    "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007",
-    "retrieved": "2026-07-21"
+    "basis": "UU No. 40 Tahun 2007, Pasal 1 angka 7 — a Perseroan Terbuka is (a species of) Perseroan, so the same akta/anggaran dasar regime applies",
+    "quote": "Perseroan Terbuka adalah Perseroan Publik atau Perseroan yang melakukan penawaran umum saham, sesuai dengan ketentuan peraturan perundang-undangan di bidang pasar modal.",
+    "note": "English gloss: 'A Publicly Listed Company is a Public Company or a Company that conducts a public offering of shares, in accordance with the laws and regulations in the capital markets field.'",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 8 ayat (1) — the deed of establishment contains the articles of association",
+    "quote": "Akta pendirian memuat anggaran dasar dan keterangan lain berkaitan dengan pendirian Perseroan.",
+    "note": "English gloss: 'The deed of establishment contains the articles of association and other information relating to the establishment of the Company.'",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 21 ayat (1) (amendments require ministerial approval/notification) and Pasal 30 ayat (1) huruf a (BNRI announcement)",
+    "quote": "Perubahan anggaran dasar tertentu harus mendapat persetujuan Menteri.",
+    "note": "English gloss: 'Certain amendments to the articles of association must obtain the approval of the Minister.' Pasal 21(2)(f) expressly includes the change of status from a closed company to a Perseroan Terbuka among the amendments requiring ministerial approval, and Pasal 30(1) provides for announcement of the deed and amendment deeds in the Tambahan Berita Negara.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED: no verbatim article quote obtained this session.",
    "The deed/anggaran dasar is primarily obtained from the notary; the registry evidences it via the SK and BNRI announcement.",
-   "For a Tbk, the current anggaran dasar is also publicly available through OJK/IDX disclosure documents."
+   "For a Tbk, the current anggaran dasar is also publicly available through OJK/IDX disclosure documents (prospectus, annual report)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "ID",
@@ -5033,19 +5140,33 @@
   "summary": "The registry (Ministry of Law and Human Rights via AHU Online) maintains the Daftar Perseroan and issues the SK Pengesahan Badan Hukum that confers legal-entity status on the PT, plus further SKs approving/receiving each anggaran-dasar or data change (Pasal 7(4), 29, 30 UUPT). Those decrees are the registry-issued documents evidencing the company's existence and current legal data. Indonesia has no single certified 'current extract' document in the German Handelsregisterauszug sense; the current-state snapshot is the AHU 'Profil Perseroan', which is a data printout (parsed data) with restricted access.",
   "evidence": [
    {
-    "basis": "UU No. 40 Tahun 2007 (UUPT), Pasal 7(4), 9, 29, 30",
-    "note": "Could not retrieve verbatim text (source hosts returned 403/404). Framework confirmed via id.wikipedia paraphrase: akta pendirian is ratified by the Minister and the PT becomes a badan hukum upon the ministerial decree/announcement.",
-    "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007",
-    "retrieved": "2026-07-21"
+    "basis": "UU No. 40 Tahun 2007, Pasal 7 ayat (4) — legal-entity status is conferred by the Ministerial Decree (SK Pengesahan), making the SK the registry-issued base document",
+    "quote": "Perseroan memperoleh status badan hukum pada tanggal diterbitkannya Keputusan Menteri mengenai pengesahan badan hukum Perseroan.",
+    "note": "English gloss: 'The Company obtains legal-entity status on the date of issuance of the Ministerial Decree concerning the ratification of the Company's legal-entity status.'",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 29 ayat (1) dan (5) — the Daftar Perseroan is administered by the Minister and open to the public",
+    "quote": "Daftar Perseroan diselenggarakan oleh Menteri.",
+    "note": "English gloss: 'The register of companies is administered by the Minister.' Pasal 29(5), also verbatim in the same source: 'Daftar Perseroan sebagaimana dimaksud pada ayat (1) terbuka untuk umum.' — 'The register of companies referred to in paragraph (1) is open to the public.' Pasal 29(2) enumerates its data content (name/seat, objects, capital, deed and decree numbers/dates, shareholders, directors, commissioners, etc.) — a data register, not an issued extract document.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 30 ayat (1) huruf a — official announcement of the deed plus decree in the Tambahan Berita Negara",
+    "quote": "Menteri mengumumkan dalam Tambahan Berita Negara Republik Indonesia: a. akta pendirian Perseroan beserta Keputusan Menteri sebagaimana dimaksud dalam Pasal 7 ayat (4);",
+    "note": "English gloss: 'The Minister announces in the Supplement to the State Gazette of the Republic of Indonesia: a. the deed of establishment of the Company together with the Ministerial Decree referred to in Article 7 paragraph (4).'",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED: verbatim Pasal 29/30 text not fetched; article mapping is from knowledge of UUPT, not a live quote.",
-   "INFERENCE: SK Kemenkumham is treated as the register-extract equivalent because no standalone certified 'current extract' document exists in ID.",
+   "INFERENCE: SK Kemenkumham is treated as the register-extract equivalent because no standalone certified 'current extract' document exists in ID; the statutory register (Daftar Perseroan, Pasal 29) is a public data register, not an extract-issuing product.",
    "The AHU 'Profil Perseroan' shows current consolidated data but is parsed data, not a document, and public self-service access is limited (notary/paid access).",
-   "UUPT was amended by the Job Creation Law (UU 11/2020, re-enacted as UU 6/2023); core incorporation/registration articles remain substantively intact."
+   "UUPT was amended by the Job Creation Law (UU 11/2020, re-enacted as UU 6/2023); core incorporation/registration articles remain substantively intact (quotes above are from the original 2007 text as published by peraturan.bpk.go.id)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "ID",
@@ -5058,19 +5179,33 @@
   "summary": "A PT Tbk is still a Perseroan Terbatas registered at AHU and holds the same registry footprint as a private PT: the SK Pengesahan Badan Hukum and subsequent SKs recorded in the Daftar Perseroan are the registry-issued documents evidencing existence and legal data (Pasal 7(4), 29, 30 UUPT). As with a private PT, there is no single certified 'current extract' document; the AHU Profil Perseroan is the current-state data snapshot (parsed data). For a listed company, additional current status is also visible via OJK/IDX disclosures, but the core company-law register is the same as for a PT.",
   "evidence": [
    {
-    "basis": "UU No. 40 Tahun 2007, Pasal 1(7) (definition of Perseroan Terbuka), Pasal 7(4), 29, 30",
-    "note": "Verbatim text not fetched; a Tbk remains an AHU-registered PT with an SK Pengesahan.",
-    "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007",
-    "retrieved": "2026-07-21"
+    "basis": "UU No. 40 Tahun 2007, Pasal 1 angka 7 — definition: a Perseroan Terbuka is a Perseroan, hence same AHU registry footprint",
+    "quote": "Perseroan Terbuka adalah Perseroan Publik atau Perseroan yang melakukan penawaran umum saham, sesuai dengan ketentuan peraturan perundang-undangan di bidang pasar modal.",
+    "note": "English gloss: 'A Publicly Listed Company is a Public Company or a Company that conducts a public offering of shares, in accordance with the laws and regulations in the capital markets field.' A Tbk remains an AHU-registered PT.",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 7 ayat (4) — legal-entity status via the Ministerial Decree (SK Pengesahan)",
+    "quote": "Perseroan memperoleh status badan hukum pada tanggal diterbitkannya Keputusan Menteri mengenai pengesahan badan hukum Perseroan.",
+    "note": "English gloss: 'The Company obtains legal-entity status on the date of issuance of the Ministerial Decree concerning the ratification of the Company's legal-entity status.'",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "UU No. 40 Tahun 2007, Pasal 29 ayat (1) dan (5) — the Daftar Perseroan (Minister-administered, public) records the company data for every Perseroan including a Tbk",
+    "quote": "Daftar Perseroan sebagaimana dimaksud pada ayat (1) terbuka untuk umum.",
+    "note": "English gloss: 'The register of companies referred to in paragraph (1) is open to the public.'",
+    "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "UNVERIFIED: no verbatim article quote obtained.",
    "INFERENCE: SK Kemenkumham treated as register-extract equivalent; no standalone certified current extract exists.",
    "Listed-company current data is additionally disclosed via OJK and IDX, but that is a securities-disclosure channel, not the company register.",
    "AHU Profil Perseroan is parsed data with restricted public access."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "IE",
@@ -5655,11 +5790,11 @@
   "summary": "Same as for a private company: the MCA registry issues no consolidated current register extract document. Current particulars are exposed only as free 'Master Data' (structured data, not a document). The Certificate of Incorporation is static. Certified copies of specific filed forms are obtainable under s.399, but there is no single current-state extract document.",
   "evidence": [
    {
-    "basis": "Companies Act 2013 (India), s.399(1)(a)-(b)",
-    "quote": "require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed",
-    "note": "The Registrar issues a certificate of incorporation and certified copies/extracts of specific filed documents; s.399(1)(a) allows one to inspect by electronic means any documents kept by the Registrar. No provision for a single consolidated register extract (Registerauszug) — the public product is per-document, consistent with the MCA Master Data data-view.",
-    "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/",
-    "retrieved": "2026-07-22"
+    "basis": "Companies Act 2013 (India), s.399(1)(a)-(b) — official India Code consolidated Act text",
+    "quote": "399. Inspection, production and evidence of documents kept by Registrar.—(1) Save as otherwise provided elsewhere in this Act, any person may—\n(a) inspect by electronic means any documents kept by the Registrar in accordance with the rules made, being documents filed or registered by him in pursuance of this Act, or making a record of any fact required or authorised to be recorded or registered in pursuance of this Act, on payment for each inspection of such fees as may be prescribed;\n(b) require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed",
+    "note": "The Registrar's public products are (a) electronic inspection of filed documents and (b) a certificate of incorporation or certified copies/extracts of specific filed documents. No provision creates a single consolidated current register extract (Registerauszug) — consistent with MCA exposing current particulars only as the free 'Master Data' data-view. Verbatim from the official India Code PDF of the Act.",
+    "url": "https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf",
+    "retrieved": "2026-07-23"
    }
   ],
   "caveats": [
@@ -5678,11 +5813,11 @@
   "summary": "India's MCA registry does not issue a consolidated current register extract document. Current particulars (status, directors, registered office, paid-up capital) are exposed only via free 'Master Data', a structured data view, not an issued/certified document — parsed data is not a substitute. The Certificate of Incorporation is a document but static. Certified copies of specific filed forms can be obtained under s.399, but there is no single current-state extract document.",
   "evidence": [
    {
-    "basis": "Companies Act 2013 (India), s.399(1)(a)-(b)",
-    "quote": "require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed",
-    "note": "Same statutory basis as the Ltd row: the Registrar's public products are electronic inspection and per-document certified copies/certificate of incorporation, not a consolidated register extract; MCA offers only a free Master Data data-view.",
-    "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/",
-    "retrieved": "2026-07-22"
+    "basis": "Companies Act 2013 (India), s.399(1)(a)-(b) — official India Code consolidated Act text",
+    "quote": "399. Inspection, production and evidence of documents kept by Registrar.—(1) Save as otherwise provided elsewhere in this Act, any person may—\n(a) inspect by electronic means any documents kept by the Registrar in accordance with the rules made, being documents filed or registered by him in pursuance of this Act, or making a record of any fact required or authorised to be recorded or registered in pursuance of this Act, on payment for each inspection of such fees as may be prescribed;\n(b) require a certificate of the incorporation of any company, or a copy or extract of any other document or any part of any other document to be certified by the Registrar, on payment in advance of such fees as may be prescribed",
+    "note": "Same statutory basis as the Ltd row: the Registrar's public products are electronic inspection and per-document certified copies/certificate of incorporation, not a consolidated register extract; MCA offers only a free Master Data data-view. Verbatim from the official India Code PDF of the Act.",
+    "url": "https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf",
+    "retrieved": "2026-07-23"
    }
   ],
   "caveats": [
@@ -6563,25 +6698,31 @@
   "summary": "Unlike a KK (where no owners appear on the register), a GK's members (社員) partly appear on the register itself: Art. 914 registers the names of members who execute the business (業務を執行する社員) and the names and addresses of representative members (代表社員). By default all members execute business (Art. 590(1)), so in the common configuration the register shows every member. Hence current members can, in that case, be evidenced by the base register extract. However this is NOT a guaranteed-complete ownership list: if the articles designate only some members as business-executing (Art. 591), non-executing members are not registered, and the register never shows members' equity/investment interests. Whether such carve-outs exist is not visible from the register alone, so completeness must be corroborated by the 定款/company records.",
   "evidence": [
    {
-    "basis": "Companies Act Art. 914 — GK registered matters (members)",
-    "quote": "六 業務を執行する社員の氏名又は名称 七 代表社員の氏名又は名称及び住所",
-    "note": "Only business-executing and representative members are registered — not all members, and no equity interests.",
+    "basis": "会社法 (Companies Act, Act No. 86 of 2005) Art. 914 — registered matters for a Godo Kaisha; chapeau plus items 6 and 7",
+    "quote": "合同会社の設立の登記は、その本店の所在地において、次に掲げる事項を登記してしなければならない。\n六　合同会社の業務を執行する社員の氏名又は名称\n七　合同会社を代表する社員の氏名又は名称及び住所",
+    "note": "English gloss: 'Registration of the formation of a GK must record ... (vi) the names of the members who execute the business of the GK; (vii) the names and addresses of the members who represent the GK.' Only business-executing and representative members are registered — not all members, and no equity interests. Verbatim from the official e-Gov statute XML (laws.e-gov.go.jp law API, law ID 417AC0000000086).",
     "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
-    "retrieved": "2026-07-19"
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "Companies Act Art. 590(1) — default that all members execute business",
+    "basis": "会社法 Art. 590(1) — default that all members execute business",
     "quote": "社員は、定款に別段の定めがある場合を除き、持分会社の業務を執行する。",
-    "note": "Default = all members are business-executing (hence registered); a contrary provision in the articles removes non-executing members from the register.",
+    "note": "English gloss: 'Members execute the business of a membership company, unless otherwise provided in the articles of incorporation.' Default = all members are business-executing (hence registered under Art. 914(vi)); a contrary provision in the articles removes non-executing members from the register. Verbatim from the official e-Gov statute XML.",
     "url": "https://laws.e-gov.go.jp/law/417AC0000000086",
-    "retrieved": "2026-07-19"
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "商業登記法 (Commercial Registration Act, Act No. 125 of 1963) Art. 10(1) — anyone may obtain a certificate of registered matters",
+    "quote": "何人も、手数料を納付して、登記簿に記録されている事項を証明した書面（以下「登記事項証明書」という。）の交付を請求することができる。",
+    "note": "English gloss: 'Any person may, on payment of a fee, request the issuance of a document certifying the matters recorded in the registry (a certificate of registered matters).' The 登記事項証明書 showing the Art. 914 member entries is publicly obtainable. Verbatim from the official e-Gov statute data (law ID 338AC0000000125).",
+    "url": "https://laws.e-gov.go.jp/law/338AC0000000125",
+    "retrieved": "2026-07-23"
    }
   ],
   "caveats": [
-   "COMPLETENESS RISK: the register reliably lists ALL members only when the articles do not restrict business execution (Art. 591). Non-executing members and members' equity shares are not on the register; corroborate against the 定款/company records for a full current-member picture.",
-   "Statutory quotes are keyed to the e-Gov URL but could not be freshly rendered (SPA) — INFERENCE from statute, partially UNVERIFIED via live fetch."
+   "COMPLETENESS RISK: the register reliably lists ALL members only when the articles do not restrict business execution (Art. 591). Non-executing members and members' equity shares are not on the register; corroborate against the 定款/company records for a full current-member picture."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "JP",
@@ -6762,17 +6903,24 @@
   "summary": "Members (사원) of a Yuhan Hoesa are NOT a registered matter. Member identities are an absolute requirement of the articles (정관, Art. 543) and are recorded in the company's register of members (사원명부), which the directors must keep at the head office under Art. 566. Neither the 정관 nor the 사원명부 forms part of the public court register, so there is no registry-issued document proving current members.",
   "evidence": [
    {
-    "basis": "Korean Wikipedia (유한회사), paraphrasing 상법 제566조 / 제557조",
-    "quote": "이사는 사원명부를 본점에 비치하지 않으면 아니 된다(566조)",
-    "note": "The 사원명부 (register of members) is kept by the company at its head office, not filed in the public commercial registry, so member identities are not provable from the registry.",
-    "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC",
-    "retrieved": "2026-07-22"
+    "basis": "상법 제549조 제2항 (Commercial Act Art. 549(2)) — closed enumeration of the registered matters for a 유한회사; members (사원) are not among them",
+    "quote": "②제1항의 등기에서 다음 각 호의 사항을 등기하여야 한다.\n1.  제179조제1호ㆍ제2호 및 제5호에 규정된 사항과 지점을 둔 때에는 그 소재지\n2.  제543조제2항제2호와 제3호에 게기한 사항\n3.  이사의 성명ㆍ주민등록번호 및 주소. 다만, 회사를 대표할 이사를 정한 때에는 그 외의 이사의 주소를 제외한다.\n4.  회사를 대표할 이사를 정한 때에는 그 성명, 주소와 주민등록번호\n5.  수인의 이사가 공동으로 회사를 대표할 것을 정한 때에는 그 규정\n6.  존립기간 기타의 해산사유를 정한 때에는 그 기간과 사유\n7.  감사가 있는 때에는 그 성명 및 주민등록번호",
+    "note": "English gloss: the incorporation registration records purpose/trade name/head office (via Art. 179 items), total capital and amount per contribution unit (via Art. 543(2) items 2-3), directors, representative director, duration, and auditor. Members are NOT a registered matter. Verbatim from the Ministry of Government Legislation statute portal (law.go.kr, DRF open-API rendering of 상법 제549조).",
+    "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=054900",
+    "retrieved": "2026-07-23"
+   },
+   {
+    "basis": "상법 제566조 (Art. 566 — 서류의 비치, 열람: register of members kept at the company, inspection restricted)",
+    "quote": "①이사는 정관과 사원총회의 의사록을 본점과 지점에, 사원명부를 본점에 비치하여야 한다.\n②사원명부에는 사원의 성명, 주소와 그 출자좌수를 기재하여야 한다.\n③사원과 회사채권자는 영업시간 내에 언제든지 제1항에 게기한 서류의 열람 또는 등사를 청구할 수 있다.",
+    "note": "English gloss: '(1) The directors must keep the articles of incorporation and the minutes of the general meeting at the head and branch offices, and the register of members (사원명부) at the head office. (2) The register of members must state each member's name, address and number of contribution units. (3) Members and company creditors may inspect or copy those documents during business hours.' The member list is company-held and open only to members and creditors — not filed with or issued by the public commercial registry. Verbatim from law.go.kr.",
+    "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=056600",
+    "retrieved": "2026-07-23"
    }
   ],
   "caveats": [
-   "Source is Wikipedia (secondary) paraphrasing 상법; the primary statute portal (law.go.kr) did not render article text for fetch."
+   "Negative claim is evidenced by the closed enumeration of registered matters in 상법 제549조(2) (members omitted) together with 제566조 locating the 사원명부 at the company's head office with inspection restricted to members and creditors — the statute affirmatively places the member list outside the public register."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "KR",
@@ -6815,17 +6963,31 @@
   "summary": "The articles of incorporation (정관) of a Yuhan Hoesa are drawn up by the members under Commercial Act Art. 543 and are NOT filed as part of the public court register. Some articles-derived facts (purpose, trade name, total capital, contribution-unit amount) are separately registered under Art. 549, but the constitution document itself cannot be obtained from the commercial registry. A notarized 정관 is submitted only as a supporting incorporation filing, not as a publicly retrievable register document.",
   "evidence": [
    {
-    "basis": "Korean Wikipedia (유한회사), on the 정관",
-    "quote": "회사가 자주적으로 만든 것으로 실질적으로 회사의 조직 및 활동에 관한 규칙을 말하며 기재한 서면을 말한다",
-    "note": "The 정관 (articles of incorporation) is an internally-made company document; it is not filed on the public register, so it is not provable from the registry.",
-    "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC",
-    "retrieved": "2026-07-22"
+    "basis": "상법 제543조 제1항 (Commercial Act Art. 543(1)) — the members draw up the 정관",
+    "quote": "①유한회사를 설립함에는 사원이 정관을 작성하여야 한다.",
+    "note": "English gloss: 'To incorporate a limited company (유한회사), the members must draw up the articles of incorporation (정관).' The 정관 is a company-made constitutional document. Verbatim from law.go.kr (DRF open-API rendering of 상법 제543조).",
+    "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=054300",
+    "retrieved": "2026-07-23"
+   },
+   {
+    "basis": "상법 제566조 제1항·제3항 (Art. 566(1),(3)) — the 정관 is kept at the company; inspection restricted to members and creditors",
+    "quote": "①이사는 정관과 사원총회의 의사록을 본점과 지점에, 사원명부를 본점에 비치하여야 한다.\n③사원과 회사채권자는 영업시간 내에 언제든지 제1항에 게기한 서류의 열람 또는 등사를 청구할 수 있다.",
+    "note": "English gloss: 'The directors must keep the articles of incorporation ... at the head and branch offices'; 'Members and company creditors may at any time during business hours request inspection or copying of those documents.' The 정관 is company-held with member/creditor-only access — it is not a document the public commercial registry files or issues. Verbatim from law.go.kr.",
+    "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=056600",
+    "retrieved": "2026-07-23"
+   },
+   {
+    "basis": "상법 제549조 제2항 (Art. 549(2)) — only specific articles-derived facts are registered, not the 정관 itself",
+    "quote": "②제1항의 등기에서 다음 각 호의 사항을 등기하여야 한다.\n1.  제179조제1호ㆍ제2호 및 제5호에 규정된 사항과 지점을 둔 때에는 그 소재지\n2.  제543조제2항제2호와 제3호에 게기한 사항",
+    "note": "English gloss: the registration carries selected 정관-derived data points (purpose, trade name, head office, total capital, amount per contribution unit) — the constitution document itself is not a registered/issuable item. Verbatim from law.go.kr.",
+    "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=054900",
+    "retrieved": "2026-07-23"
    }
   ],
   "caveats": [
-   "Secondary source paraphrasing 상법 제543조; law.go.kr did not render for fetch."
+   "정관-derived facts (purpose, trade name, capital, contribution-unit amount) ARE registered via 제549조(2) and appear on the 등기사항증명서, but the 정관 document itself is company-held (제566조(1)) and inspectable only by members and creditors (제566조(3))."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "KR",
@@ -6869,9 +7031,17 @@
   "evidence": [
    {
     "basis": "상법 제549조 (유한회사 설립의 등기) — registered matters for a limited company",
-    "note": "Quote omitted — Art. 549 could not be fetched verbatim this session (statute text page truncates before the 유한회사 chapter; law.go.kr JS-rendered). Established content of Art. 549(2): 목적, 상호, 본점 소재지, 자본금의 총액, 출자1좌의 금액, 이사의 성명·주민등록번호, 회사를 대표할 이사의 성명·주소 등 — directors and capital are registered; members are not. Canonical source: law.go.kr 상법 제549조.",
-    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95",
-    "retrieved": "2026-07-19"
+    "quote": "①유한회사의 설립등기는 제548조의 납입 또는 현물출자의 이행이 있은 날로부터 2주간 내에 하여야 한다.\n②제1항의 등기에서 다음 각 호의 사항을 등기하여야 한다.\n1.  제179조제1호ㆍ제2호 및 제5호에 규정된 사항과 지점을 둔 때에는 그 소재지\n2.  제543조제2항제2호와 제3호에 게기한 사항\n3.  이사의 성명ㆍ주민등록번호 및 주소. 다만, 회사를 대표할 이사를 정한 때에는 그 외의 이사의 주소를 제외한다.\n4.  회사를 대표할 이사를 정한 때에는 그 성명, 주소와 주민등록번호\n5.  수인의 이사가 공동으로 회사를 대표할 것을 정한 때에는 그 규정\n6.  존립기간 기타의 해산사유를 정한 때에는 그 기간과 사유\n7.  감사가 있는 때에는 그 성명 및 주민등록번호",
+    "note": "English gloss: incorporation registration within 2 weeks of payment/contribution; registered matters = Art. 179 items 1, 2, 5 (purpose, trade name, head office) plus branches; Art. 543(2) items 2-3 (자본금의 총액 total capital, 출자1좌의 금액 amount per contribution unit); directors' names/RRN/addresses; representative director; joint representation; duration/dissolution grounds; auditor. Existence, capital and management are registered — members are not. Verbatim from law.go.kr (DRF open-API rendering).",
+    "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=054900",
+    "retrieved": "2026-07-23"
+   },
+   {
+    "basis": "상업등기법 제15조 제1항 (Commercial Registration Act Art. 15(1)) — anyone may obtain the certificate of registered matters",
+    "quote": "① 누구든지 수수료를 내고 대법원규칙으로 정하는 바에 따라 등기기록에 기록되어 있는 사항의 전부 또는 일부의 열람과 이를 증명하는 등기사항증명서의 발급을 신청할 수 있다. 다만, 등기기록의 부속서류에 대해서는 이해관계 있는 부분만 열람을 신청할 수 있다.",
+    "note": "English gloss: 'Any person may, on payment of a fee and as prescribed by Supreme Court Rules, apply to inspect all or part of the matters recorded in the registry record and to be issued a certificate of registered matters (등기사항증명서) evidencing them; provided that annexed documents of the registry record may be inspected only as to parts in which the applicant has an interest.' Public obtainability of the register certificate (issued via IROS, iros.go.kr). Verbatim from law.go.kr.",
+    "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EC%97%85%EB%93%B1%EA%B8%B0%EB%B2%95&JO=001500",
+    "retrieved": "2026-07-23"
    },
    {
     "basis": "Korean-law reference confirming register content for 유한회사",
@@ -6882,10 +7052,10 @@
    }
   ],
   "caveats": [
-   "Art. 549 not quoted verbatim this session; the enumerated registered matters are from established statute + secondary confirmation, flagged as INFERENCE on exact wording.",
-   "Modern name 등기사항전부증명서; 등기부등본 is legacy terminology."
+   "Modern name 등기사항전부증명서; 등기부등본 is legacy terminology.",
+   "Annexed filing documents (등기기록의 부속서류, e.g. the notarized 정관 filed at incorporation) are inspectable only by interested parties (상업등기법 제15조(1) proviso), so the public product is the certificate of registered matters, not the underlying dossier."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "KY",
@@ -8610,10 +8780,39 @@
   "summary": "A Berhad keeps a register of members (s.50) and lodges an annual return (s.68), from which member particulars can be obtained as documents from SSM — so a shareholder list is provable, but generally via a document additional to the base profile rather than from the profile itself. For a LISTED Berhad, legal/beneficial shareholdings are held in the central depository system operated by Bursa Malaysia Depository, and the authoritative member list is the Record of Depositors sourced from the depository (not an SSM extract); SSM outputs for listed companies may show only substantial shareholders.",
   "evidence": [
    {
-    "basis": "Companies Act 2016 s.50/s.51 (register of members and notification of changes) and s.68 (annual return of a company having share capital)",
-    "note": "SSM legal-framework page lists the s.51 register-of-members change form and the s.68 annual return form.",
-    "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx",
-    "retrieved": "2026-07-21"
+    "basis": "Companies Act 2016 (Act 777), s.50(1) — every company keeps a register of members",
+    "quote": "Every company shall keep a register of its members",
+    "note": "s.50(1)(a)-(b) require the register to record names/addresses/ID numbers of members and a statement of the shares held by each member. Quoted from the official SSM consolidated PDF (as at 1.8.2022).",
+    "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_Akta%20777_BI%20(1.8.2022).pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 2016, s.68(1) and s.68(3)(i) — the annual return lodged with the Registrar contains the list of members",
+    "quote": "A company shall lodge with the Registrar an annual return for each calendar year not later than thirty days from the anniversary of its incorporation date.",
+    "note": "s.68(3) enumerates the annual return's contents, including verbatim item '(i) the list of its members; and' plus '(f) in the case of a company with a share capital, the summary of its shareholding structure, including debentures'. This is the statutory channel by which the member list reaches SSM as an obtainable filed document — supporting proved_by_additional_document.",
+    "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_Akta%20777_BI%20(1.8.2022).pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 2016, s.68(7) — public-company exception: >500 members with inspection facilities may file only the twenty largest holders per class",
+    "quote": "A public company which has more than five hundred members and provides reasonable opportunities and facilities for a person to inspect and take copies of its list of members and its particulars of shares transferred need not comply with the requirement under paragraph (3)(i)",
+    "note": "The exception requires instead, verbatim, 'a list showing the prescribed particulars of the twenty largest holders of each class of equity shares.' — so for a large/listed Berhad the SSM annual return does not carry the full member list.",
+    "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_Akta%20777_BI%20(1.8.2022).pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 2016, s.51(1) and s.51(3) — changes in the register of members are notified to the Registrar within 14 days, EXCEPT for exchange-quoted companies",
+    "quote": "This section is not applicable to a company whose shares are quoted on a stock exchange.",
+    "note": "s.51(1), verbatim in the same source: 'A company shall notify the Registrar of the changes in the particulars in the register within fourteen days'. s.51(3) (quoted) removes listed companies from that notification duty — grounding the listed/unlisted split: SSM shareholder data is maintained current for unlisted companies only.",
+    "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_Akta%20777_BI%20(1.8.2022).pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "SSM e-Info service — purchasable registry products include shareholder information",
+    "quote": "Particular of Shareholders",
+    "note": "The e-Info price list offers 'Particular of Shareholders' (RM25.40, CTC RM40.80) and 'Company Profile (ROC)' as purchasable products, confirming shareholder particulars are obtainable from SSM as a registry output additional to the base profile.",
+    "url": "https://www.ssm-einfo.my/",
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "Securities Industry (Central Depositories) Act 1991 — central depository / Record of Depositors (for listed public companies)",
@@ -8623,11 +8822,10 @@
    }
   ],
   "caveats": [
-   "Listed vs. unlisted Berhad matters: unlisted -> register of members / annual return at SSM; listed -> Record of Depositors via Bursa Malaysia Depository, not SSM.",
-   "SSM base profile for a public/listed company may disclose only substantial shareholders rather than the full member list (INFERENCE).",
-   "Verbatim statutory/depository text not fetchable; quotes empty."
+   "Listed vs. unlisted Berhad matters: unlisted -> register of members / annual return at SSM (s.50, s.51, s.68(3)(i)); listed -> excluded from s.51 notification (s.51(3)) and may file only the twenty largest holders per class in the annual return (s.68(7)); the operative member list is the Record of Depositors via Bursa Malaysia Depository, not SSM.",
+   "SICDA/Record of Depositors text not verified verbatim this session (SSM statute and e-Info product are verified; the depository mechanics rest on established practice)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "MY",
@@ -9433,25 +9631,46 @@
   "summary": "An OPC is by definition a corporation with a single stockholder (Sec. 116), and that sole stockholder is named in the OPC's Articles of Incorporation filed with the SEC (Sec. 118). The complete 'shareholder list' is therefore established by the base document itself. Certified copies of the AOA are obtainable from the SEC.",
   "evidence": [
    {
-    "basis": "R.A. 11232, Sec. 116",
+    "basis": "R.A. 11232 (Revised Corporation Code), Sec. 116",
     "quote": "A One Person Corporation is a corporation with a single stockholder: Provided, That only a natural person, trust, or an estate may form a One Person Corporation.",
-    "note": "membership is inherently a single, identified holder",
+    "note": "Membership is inherently a single, identified holder. Re-verified against lawphil.net full text this session.",
     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html",
-    "retrieved": "2026-07-21"
+    "retrieved": "2026-07-22"
    },
    {
     "basis": "R.A. 11232, Sec. 118",
     "quote": "A One Person Corporation shall file articles of incorporation in accordance with the requirements under Section 14 of this Code.",
-    "note": "AOA (naming the single stockholder) is filed with SEC",
+    "note": "The OPC's AOA is filed with the SEC per the Sec. 14 form. Re-verified against lawphil.net full text this session.",
     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html",
-    "retrieved": "2026-07-21"
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "R.A. 11232, Sec. 14 (Form of Articles of Incorporation), Fifth clause",
+    "quote": "Fifth: That the names, nationalities, and residence addresses of the incorporators of the corporation are as follows:",
+    "note": "The prescribed AOA form names the incorporator(s); for an OPC the incorporator is the single stockholder (Sec. 116: only a natural person, trust, or estate may form an OPC), so the filed AOA identifies the sole stockholder.",
+    "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "R.A. 11232, Sec. 129 (Reportorial Requirements of an OPC)",
+    "quote": "The One Person Corporation shall submit the following within such period as the Commission may prescribe: (a) Annual financial statements audited by an independent certified public accountant ... (c) A disclosure of all self-dealings and related party transactions entered into between the One Person Corporation and the single stockholder; and (d) Other reports as the Commission may require.",
+    "note": "The OPC statutory reportorial list contains NO General Information Sheet — the sole-stockholder identity is carried by the AOA (and any SEC-required 'other reports'), not by a statutory GIS.",
+    "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "R.A. 11232, Sec. 177 (Reportorial Requirements of Corporations) — contrast provision",
+    "quote": "every corporation, domestic or foreign, doing business in the Philippines shall submit to the Commission: (a) Annual financial statements audited by an independent certified public accountant ... and (b) A general information sheet.",
+    "note": "Ordinary corporations file a statutory GIS under Sec. 177(b); the OPC-specific list in Sec. 129 omits it. Grounds the judgement call that for an OPC the AOA (not a GIS) is the registry document evidencing the single stockholder. Sec. 177 opens 'Except as otherwise provided in this Code or in the rules issued by the Commission' — SEC rules may still impose a GIS on OPCs administratively.",
+    "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "OPC statutory reportorial requirements (Sec. 129) do NOT list a General Information Sheet, unlike ordinary corporations (Sec. 177); the sole-stockholder identity is instead carried by the AOA. SEC administrative practice may still require an OPC GIS, but this is not confirmed in the statute — flagged UNVERIFIED.",
-   "The AOA reflects the stockholder at incorporation; a subsequent transfer of the single stockholder's shares is reflected through later SEC filings/amendments rather than the original AOA, so the base document proves the sole-holder structure but not necessarily the current holder without the latest filing."
+   "JUDGEMENT CALL (now grounded in statute): Sec. 129 lists no GIS for OPCs while Sec. 177(b) requires one from ordinary corporations, so the AOA is the statutory registry document naming the single stockholder. However Sec. 177's opening ('Except as otherwise provided ... in the rules issued by the Commission') and Sec. 129(d) ('Other reports as the Commission may require') leave room for the SEC to require an OPC GIS administratively — SEC-practice documents were not verified this session.",
+   "The AOA reflects the stockholder at incorporation; a subsequent transfer of the single stockholder's shares is reflected through later SEC filings/amendments (cf. Sec. 131 conversion mechanics issuing amended AOA) rather than the original AOA, so the base document proves the sole-holder structure but not necessarily the current holder without the latest filing."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "PH",
@@ -11171,26 +11390,40 @@
   "summary": "For a public company ACRA does not maintain the authoritative register of members: the company (or its share registrar; for listed companies the depository/CDP) keeps the register under the Companies Act. ACRA holds only limited shareholder information (e.g. substantial-shareholder disclosures), so a complete current list of shareholders is not reliably provable from the ACRA registry. The ACRA-maintained electronic register of members applies to private companies only.",
   "evidence": [
    {
+    "basis": "Companies Act 1967 (Singapore), s.190(1) — the register of members of a PUBLIC company is kept by the company itself",
+    "quote": "Every public company must keep a register of its members and enter therein",
+    "note": "s.190(1)(a)-(d) require names/addresses, shareholdings, entry and cessation dates. The authoritative member register of a public company is company-held, not Registrar-held. Fetched from Singapore Statutes Online (sso.agc.gov.sg).",
+    "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 1967, s.196A(1) — the Registrar-kept electronic register of members exists for PRIVATE companies only",
+    "quote": "On and after 3 January 2016, the Registrar must, in respect of every private company, keep and maintain an electronic register of members of that company containing such information notified to the Registrar on or after that date.",
+    "note": "The ACRA-maintained electronic register of members is expressly limited to private companies; there is no equivalent Registrar-kept member register for public companies — supporting not_provable_from_registry for a public company.",
+    "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Companies Act 1967, s.19(6)(a) — on incorporation, subscribers of a public company are entered in the COMPANY-kept register (vs the Registrar-kept register for private companies)",
+    "quote": "in the case of a public company — in the register of members kept by the public company under section 190",
+    "note": "s.19(6)(b), same source: 'in the case of a private company — in the electronic register of members kept by the Registrar under section 196A.' The statute draws the public/private split explicitly.",
+    "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-",
+    "retrieved": "2026-07-22"
+   },
+   {
     "basis": "ACRA official page — Registers product (lists 'members' but for public/listed companies ACRA does not hold the full membership)",
     "quote": "Getting official lists of key people involved in a company, such as members, directors, CEOs, secretaries or auditors",
     "note": "The 'members' list is authoritative for private companies (ACRA e-register); for public companies the full register is kept by the company/share registrar, not ACRA.",
     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/",
     "retrieved": "2026-07-19"
-   },
-   {
-    "basis": "Companies Act 1967 — company keeps its own register of members (approx. s.190); electronic register kept by Registrar limited to private companies",
-    "note": "UNVERIFIED — sso.agc.gov.sg blocked automated retrieval.",
-    "url": "https://sso.agc.gov.sg/Act/CoA1967",
-    "retrieved": "2026-07-19"
    }
   ],
   "caveats": [
-   "UNVERIFIED against reachable primary source (statute host blocked); determination rests on the structural fact that the electronic register of members is a private-company-only regime.",
-   "Only substantial shareholders (typically >=5%) are disclosed to ACRA; not a full member list.",
+   "Only substantial shareholders (typically >=5%) are disclosed to ACRA/SGX channels; not a full member list.",
    "For listed public companies, beneficial holdings sit with the Central Depository (CDP), not ACRA.",
    "NOMINEE HOLDINGS: registered holder vs beneficial owner distinction applies; RORC largely non-public."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "SG",
@@ -11203,25 +11436,33 @@
   "summary": "Every Singapore company must have a constitution, lodged with the Registrar as part of incorporation. The filed constitution is held by ACRA and retrievable via ACRA's 'Extracts' product (copies of past documents filed by the entity).",
   "evidence": [
    {
-    "basis": "ACRA official page — Types of ACRA information products (Extracts product)",
-    "quote": "Getting copies of past documents filed by businesses, such as annual returns or audited accounts",
-    "note": "Extracts (from $11) = copies of past FILED documents; the constitution is filed at incorporation.",
-    "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/",
-    "retrieved": "2026-07-19"
+    "basis": "Companies Act 1967, s.19(1)(a) — the constitution is submitted to the Registrar to incorporate",
+    "quote": "submit to the Registrar the constitution of the proposed company and such other documents as may be prescribed",
+    "note": "s.19(3), same source, verbatim: 'the Registrar must, subject to this Act, register the company by registering its constitution.' The constitution is the filed base document of incorporation, held by ACRA.",
+    "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-",
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "Companies Act 1967 — requirement to have and lodge a constitution at incorporation (approx. s.19 / s.22)",
-    "note": "UNVERIFIED — sso.agc.gov.sg blocked automated retrieval; provision reference not verbatim-confirmed.",
-    "url": "https://sso.agc.gov.sg/Act/CoA1967",
+    "basis": "Companies Act 1967, s.26(2) — after any alteration, a copy of the constitution as adopted or altered is lodged with the Registrar",
+    "quote": "lodge with the Registrar a copy of such resolution or other document or a copy of such order together with (unless the Registrar dispenses therewith) a copy of the constitution as adopted or altered, as the case may be.",
+    "note": "s.26(3), same source: 'The Registrar must register every resolution, order or other document lodged with the Registrar under this Act that affects the constitution of a company'. So the current constitution (as altered) is on the ACRA file, subject to the dispensation proviso.",
+    "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "ACRA official page — Types of ACRA information products (Extracts product)",
+    "quote": "Getting copies of past documents filed by businesses, such as annual returns or audited accounts",
+    "note": "Extracts (from $11) = copies of past FILED documents; the constitution is filed at incorporation (s.19) and on alteration (s.26(2)).",
+    "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/",
     "retrieved": "2026-07-19"
    }
   ],
   "caveats": [
-   "INFERENCE: 'constitution' is not named explicitly on the reachable Extracts page; inferred within 'copies of past documents filed'.",
-   "A company may have adopted a prescribed Model Constitution — the filed record may reference the model rather than a bespoke document.",
-   "Amendments (special resolutions) alter the constitution; the currently effective version may require the original plus subsequent amendment filings."
+   "A company may have adopted a prescribed Model Constitution — s.26(1AB) permits adoption 'by reference to the title of the model constitution' and the resolution 'need not set out the text of the whole or part of the model constitution to be adopted' (verbatim, same source), so the filed record may reference the model rather than a bespoke document.",
+   "s.26(2) lets the Registrar dispense with lodging the consolidated altered constitution; in that case the currently effective version must be assembled from the original constitution plus registered amendment resolutions.",
+   "The ACRA 'Extracts' product page does not name the constitution explicitly; its retrievability is inferred from 'copies of past documents filed' plus the statutory filing duty (s.19/s.26)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "SG",
@@ -11234,24 +11475,32 @@
   "summary": "A public company, like any Singapore company, must have a constitution lodged with the Registrar at incorporation. The filed constitution is held by ACRA and retrievable via the 'Extracts' product (copies of past documents filed by the entity).",
   "evidence": [
    {
-    "basis": "ACRA official page — Extracts product",
-    "quote": "Getting copies of past documents filed by businesses, such as annual returns or audited accounts",
-    "note": "Extracts = copies of past FILED documents; constitution is filed at incorporation.",
-    "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/",
-    "retrieved": "2026-07-19"
+    "basis": "Companies Act 1967, s.19(1)(a) — the constitution is submitted to the Registrar to incorporate (applies to every company, public included)",
+    "quote": "submit to the Registrar the constitution of the proposed company and such other documents as may be prescribed",
+    "note": "s.19(3), same source, verbatim: 'the Registrar must, subject to this Act, register the company by registering its constitution.'",
+    "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-",
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "Companies Act 1967 — requirement to have and lodge a constitution at incorporation (approx. s.19 / s.22)",
-    "note": "UNVERIFIED — sso.agc.gov.sg blocked automated retrieval.",
-    "url": "https://sso.agc.gov.sg/Act/CoA1967",
+    "basis": "Companies Act 1967, s.26(2)-(3) — altered constitutions are lodged with and registered by the Registrar",
+    "quote": "lodge with the Registrar a copy of such resolution or other document or a copy of such order together with (unless the Registrar dispenses therewith) a copy of the constitution as adopted or altered, as the case may be.",
+    "note": "Constitutional amendments by special resolution (s.26(1)) reach the ACRA file, keeping the filed constitution reconstructable.",
+    "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "ACRA official page — Extracts product",
+    "quote": "Getting copies of past documents filed by businesses, such as annual returns or audited accounts",
+    "note": "Extracts = copies of past FILED documents; constitution is filed at incorporation and on alteration.",
+    "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/",
     "retrieved": "2026-07-19"
    }
   ],
   "caveats": [
-   "INFERENCE: 'constitution' not named explicitly on the reachable Extracts page; inferred within 'copies of past documents filed'.",
-   "Listed public companies file constitutional amendments by special resolution; currently effective constitution may require original plus amendments."
+   "Listed public companies file constitutional amendments by special resolution; the currently effective constitution may require the original plus amendments (s.26(2) allows the Registrar to dispense with lodging a consolidated altered copy).",
+   "The ACRA 'Extracts' product page does not name the constitution explicitly; retrievability is inferred from 'copies of past documents filed' plus the statutory filing duty (s.19/s.26)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "SG",
@@ -11720,17 +11969,33 @@
   "summary": "A public company keeps a register of shareholders and must submit to the DBD Registrar a copy of the list of shareholders as at the date of the annual general meeting (form BorMorJor.006 / บมจ.006). A DBD-certified copy is therefore obtainable as an additional registry document. For SET-listed companies the live register is maintained by the Thailand Securities Depository (TSD), but the AGM-date snapshot is still filed with the DBD.",
   "evidence": [
    {
-    "basis": "Public Limited Companies Act B.E. 2535 (register of shareholders; annual submission of shareholder list to the Registrar)",
-    "note": "INFERENCE/UNVERIFIED verbatim: PLCA English text could not be fetched (403/self-signed cert). The BorMorJor.006 AGM-date shareholder-list filing with DBD is established practice; exact PLCA section number not verified in this session.",
-    "url": "https://www.dbd.go.th/en/",
-    "retrieved": "2026-07-21"
+    "basis": "Public Limited Companies Act B.E. 2535 (1992), Section 64 — annual filing of the shareholder list with the Registrar",
+    "quote": "Section 64. The company shall file a list of persons who are shareholders on the date of the annual ordinary meeting which includes the particulars required under section 39 paragraph two to the Registrar within one month as from the date of completion of the meeting.",
+    "note": "Direct statutory basis for the AGM-date shareholder-list filing with the DBD Registrar (form BorMorJor.006 in practice). English translation of the Thai statute; extraction whitespace normalized.",
+    "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Public Limited Companies Act B.E. 2535, Section 39 paragraph two — shareholder-list particulars filed at registration",
+    "quote": "In applying for registration under paragraph one, the board of directors shall simultaneously submit the articles of association and the list of shareholders which indicate names, nationalities, addresses, number of shares held and share certificate serial numbers, including the minutes of the statutory meeting.",
+    "note": "Defines the particulars (names, nationalities, addresses, shares held) that the Section 64 annual list must also contain; the initial list is filed with the Registrar at company registration.",
+    "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Public Limited Companies Act B.E. 2535, Section 10 — public inspection and certified copies of Registrar-held documents",
+    "quote": "Any person who has paid the prescribed fee shall be entitled to inspect or to copy the contents of the register or the documents kept by the Registrar or to request the Registrar to make copies or photocopies of any documents together with a certification by the Registrar that they are correct or to request the Registrar to issue a certificate of any registered particulars.",
+    "note": "Any person can obtain Registrar-certified copies of filed documents — making the filed shareholder list obtainable as a registry document.",
+    "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "Exact PLCA section and the verbatim wording were not verified; treat the filing obligation as established-practice, not quoted statute.",
-   "For listed public companies the current beneficial/registered holdings sit with the TSD; the DBD BorMorJor.006 is an annual snapshot, not a live register."
+   "The Section 64 filing is an annual snapshot as at the AGM date; for SET-listed companies the live register sits with the Thailand Securities Depository (TSD), so the DBD copy can lag current holdings.",
+   "The company-held register of shareholders (Sections 61-62) is the live record; Section 63 inspection rights over it belong to shareholders, not the public — public access runs through the Registrar-filed copies (Sections 39/64 + Section 10).",
+   "Quotes are from an English translation of the Thai statute (AustLII-hosted PDF; PDF text extraction whitespace normalized); the Thai Government Gazette text is authoritative."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "TH",
@@ -11773,17 +12038,39 @@
   "summary": "Under the Public Limited Companies Act B.E. 2535 the promoters register the memorandum of association with the DBD Registrar, and the articles of association are adopted and filed as part of incorporation. DBD-certified copies of both are obtainable as additional registry documents.",
   "evidence": [
    {
-    "basis": "Public Limited Companies Act B.E. 2535 (registration of memorandum of association; articles of association)",
-    "note": "INFERENCE/UNVERIFIED verbatim: PLCA English text not fetchable this session; filing of MOA and AOA with the DBD for public companies is established practice and consistent with the PLCA incorporation regime.",
-    "url": "https://www.dbd.go.th/en/",
-    "retrieved": "2026-07-21"
+    "basis": "Public Limited Companies Act B.E. 2535, Section 19 — registration of the memorandum of association",
+    "quote": "The memorandum shall be signed by all the promoters and shall be applied for registration to the Registrar.",
+    "note": "The memorandum of association (nangsue borikonsonthi) is registered with the DBD Registrar; Section 18 prescribes its minimum contents (name, objects, registered capital, head office, promoters).",
+    "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Public Limited Companies Act B.E. 2535, Section 39 paragraph two — articles of association filed at company registration",
+    "quote": "In applying for registration under paragraph one, the board of directors shall simultaneously submit the articles of association and the list of shareholders which indicate names, nationalities, addresses, number of shares held and share certificate serial numbers, including the minutes of the statutory meeting.",
+    "note": "The articles of association (kho bangkap) are filed with the Registrar as part of the company registration.",
+    "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Public Limited Companies Act B.E. 2535, Section 31 paragraph two — registration of amendments",
+    "quote": "For amending the memorandum of association or the articles of association of the company, the company shall apply to register the amendment within fourteen days as from the date on which the resolution was passed at the meeting.",
+    "note": "Amendments to MOA/AOA must be registered within 14 days, keeping the Registrar-held constitutional documents current.",
+    "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Public Limited Companies Act B.E. 2535, Section 10 — public inspection and certified copies of Registrar-held documents",
+    "quote": "Any person who has paid the prescribed fee shall be entitled to inspect or to copy the contents of the register or the documents kept by the Registrar or to request the Registrar to make copies or photocopies of any documents together with a certification by the Registrar that they are correct or to request the Registrar to issue a certificate of any registered particulars.",
+    "note": "Any person can obtain Registrar-certified copies of the filed MOA and AOA.",
+    "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "Verbatim PLCA sections not fetched; status rests on established practice.",
-   "MOA and AOA are separate documents; both are DBD-held for public companies."
+   "MOA and AOA are separate documents; both are DBD-held for public companies (memorandum registered under Section 19, articles filed under Section 39 paragraph two).",
+   "Quotes are from an English translation of the Thai statute (AustLII-hosted PDF; PDF text extraction whitespace normalized); the Thai Government Gazette text is authoritative."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "TH",
@@ -12042,16 +12329,17 @@
   "summary": "For a 有限公司 the shareholders and their capital contributions are not a separate freely-public register item, but Company Act Art 101 requires the articles of incorporation (章程) to state each shareholder's name and each shareholder's capital contribution, and Art 111(3) confirms any change of shareholder/contribution is effected by amending those provisions of the 章程. The 章程 is a filed document that MOEA discloses under Art 393(2) item 10, obtainable by any person on application (online only with company consent). Thus the shareholder list is provable, but via the additional 章程 document rather than the base extract.",
   "evidence": [
    {
+    "basis": "Company Act (公司法) Art 101, para 1 — mandatory contents of a limited company's articles of incorporation",
+    "quote": "公司章程應載明下列事項：一、公司名稱。二、所營事業。三、股東姓名或名稱。四、資本總額及各股東出資額。",
+    "note": "The articles (章程) of a 有限公司 MUST state each shareholder's name (item 3) and each shareholder's capital contribution (item 4) — so the filed 章程 is a complete shareholder list. Fetched verbatim from the official MOJ law database.",
+    "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=101",
+    "retrieved": "2026-07-22"
+   },
+   {
     "basis": "Company Act (公司法) Art 111, para 3",
     "quote": "前二項轉讓，不同意之股東有優先受讓權；如不承受，視為同意轉讓，並同意修改章程有關股東及其出資額事項。",
     "note": "Confirms the 有限公司 articles (章程) contain the 'shareholders and their capital contributions' matters, updated on any transfer.",
     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=111",
-    "retrieved": "2026-07-21"
-   },
-   {
-    "basis": "Company Act (公司法) Art 101 (contents of a limited company's articles of incorporation)",
-    "note": "Art 101(1) requires the articles to state each shareholder's name (股東姓名或名稱) and each shareholder's capital contribution (各股東出資額). Verbatim Chinese not captured; content confirmed via official English translation.",
-    "url": "https://law.moj.gov.tw/ENG/LawClass/LawSingle.aspx?pcode=J0080001&flno=101",
     "retrieved": "2026-07-21"
    },
    {
@@ -12065,9 +12353,9 @@
   "caveats": [
    "The separate at-company shareholder roster under Art 103 (股東名簿) is NOT a registry document — it is held by the company; the registry-provable proof is the 章程.",
    "INFERENCE: classified as additional (not base) because the full shareholder roster is not on the free public extract; if the MOEA full registration file / 登記事項卡 is treated as showing all shareholders and 出資額, it could instead be read as proved_by_base_document.",
-   "UNVERIFIED: online availability of the 章程 depends on company consent per Art 393(3); offline any-person application under Art 393(2) is the reliable route."
+   "Online availability of the 章程 on the MOEA information website depends on company consent per Art 393(3); offline any-person application under Art 393(2) is the reliable route."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "TW",
@@ -12931,24 +13219,40 @@
   "summary": "For a multi-member LLC the members (thành viên) and their capital contributions are registered particulars: the List of Members is a mandatory component of the registration dossier filed with the Business Registration Office under Article 21, and a change of member/capital contribution must be re-notified as a change to enterprise registration content. The list is a distinct filed document, not part of the ERC itself, hence an additional document. A single-member LLC has no member list because the sole owner is otherwise identified.",
   "evidence": [
    {
-    "basis": "Law on Enterprises 2020, Article 21 (Application for registration of limited liability companies) — requires the company charter and the list of members (danh sách thành viên)",
-    "note": "Verbatim text could not be fetched. Art. 21 dossier includes the List of Members for a two-or-more-member LLC.",
-    "url": "https://dangkykinhdoanh.gov.vn",
-    "retrieved": "2026-07-21"
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 21 (Registration dossier for a limited liability company)",
+    "quote": "Article 21. Registration dossier for a limited liability company 1. A written request for enterprise registration. 2. Company charter. 3. List of members.",
+    "note": "English translation (LuatVietnam) of Dieu 21 Luat Doanh nghiep 2020; 'List of members' = danh sach thanh vien. The member list is a mandatory, distinct filed component of the LLC registration dossier — supports proof via an additional registry document.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "Law on Enterprises 2020, Articles 30–31 (registration of changes to enterprise registration content) — member/ownership changes must be re-registered",
-    "note": "Keeps the registered member list authoritative and current for LLCs.",
-    "url": "https://dangkykinhdoanh.gov.vn",
-    "retrieved": "2026-07-21"
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 25 (contents of the list of members)",
+    "quote": "The list of members of a limited liability company or partnership or the list of founding shareholders and shareholders being foreign investors of a joint stock company must contain the following principal details: 1. Full names, signatures, citizenship and contact addresses of individual members, for a limited liability company or partnership",
+    "note": "Article 25 also requires (item 4) 'Contributed capital amounts and their value, holding rate of contributed capital amounts' per member — the filed list identifies each member and their stake.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 28(3) (contents of the enterprise registration certificate)",
+    "quote": "full name, contact address, citizenship, and serial number of the legal paper of each individual member; or name, identification number and head office address of the institutional member, for a limited liability company.",
+    "note": "Supporting: even the base ERC itself carries LLC member identities, reinforcing that LLC membership is a registered particular kept current via change registration (Articles 30-31).",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 33 (Provision of information about contents of enterprise registration)",
+    "quote": "Organizations and individuals may request the state management agency in charge of business registration and the business registration agency to provide information stored on the national information system on business registration and shall pay charges in accordance with law.",
+    "note": "Any organization or individual can obtain registered enterprise information from the business registration authority for a fee — the route to actually obtain the registered member information.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "Applies to multi-member LLCs; a single-member LLC (một thành viên) has no member list.",
-   "The NBRP publicly exposes only basic company data; obtaining the actual filed List of Members as a document typically requires a request to the Business Registration Office.",
-   "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."
+   "Applies to multi-member LLCs; a single-member LLC (mot thanh vien) has no member list (the sole owner is identified directly in the registration).",
+   "The NBRP publicly exposes only basic company data; obtaining the actual filed List of Members as a document typically requires an Article 33 information request to the Business Registration Office.",
+   "Quotes are from the LuatVietnam English translation of Law 59/2020/QH14; the Vietnamese original is authoritative (official portals vbpl.vn / vanban.chinhphu.vn were unreachable this session)."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "VN",
@@ -12961,24 +13265,40 @@
   "summary": "For a JSC, only the founding shareholders (cổ đông sáng lập) are a registered particular — the List of Founding Shareholders is filed with the incorporation dossier under Article 22. Ordinary and subsequent shareholders are recorded only in the company's internal Register of Shareholders (sổ đăng ký cổ đông) under Article 122, which is held by the company and is neither filed with nor published by the Business Registration Office. A complete, current shareholder list is therefore not provable from the registry; the founding-shareholder list captures only the incorporation snapshot and becomes stale after transfers.",
   "evidence": [
    {
-    "basis": "Law on Enterprises 2020, Article 122 (Register of shareholders) — the shareholder register is maintained by the company, not the registry",
-    "note": "Verbatim text could not be fetched. Current/ordinary shareholders are held internally, not at the registry.",
-    "url": "https://dangkykinhdoanh.gov.vn",
-    "retrieved": "2026-07-21"
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 22 (Registration dossier for a joint stock company)",
+    "quote": "Article 22. Registration dossier for a joint stock company 1. A written request for enterprise registration. 2. Company charter. 3. List of founding shareholders; list of shareholders being foreign investors.",
+    "note": "English translation (LuatVietnam) of Dieu 22. Only FOUNDING shareholders (danh sach co dong sang lap) and foreign-investor shareholders are filed — not the full shareholder body.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
    },
    {
-    "basis": "Law on Enterprises 2020, Article 22 (JSC application dossier) — includes the list of founding shareholders (danh sách cổ đông sáng lập), not all shareholders",
-    "note": "Registry evidences only founding shareholders at incorporation.",
-    "url": "https://dangkykinhdoanh.gov.vn",
-    "retrieved": "2026-07-21"
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 122 (Register of shareholders)",
+    "quote": "A joint stock company shall make and keep a register of shareholders from the date it is granted the enterprise registration certificate.",
+    "note": "The complete current shareholder record (so dang ky co dong) is a company-made and company-kept register, not a registry filing.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 122(3) (custody of the register of shareholders)",
+    "quote": "The register of shareholders shall be kept at the head office of the company or at an organization having the function of keeping the register of shareholders.",
+    "note": "The register sits at the company (or a registrar organization), never at the Business Registration Office — hence a complete current shareholder list is not obtainable from the registry.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 31(1)(b) (notification of changes)",
+    "quote": "b/ Founding shareholder(s) and shareholder(s) being foreign investor(s), for a joint stock company, except listed companies;",
+    "note": "From the list of registration contents whose changes must be notified: for a JSC the registry tracks only founding and foreign-investor shareholders (and not even those for listed companies) — ordinary shareholder turnover never reaches the registry.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "A List of Founding Shareholders exists in the registry file as an additional document, but it covers only founders at incorporation and does not reflect current ownership — hence it is not a Gesellschafterliste-equivalent.",
-   "The complete current shareholder list lives in the company's Article 122 register, which is internal/non-public.",
-   "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."
+   "A List of Founding Shareholders exists in the registry file as an additional document, but it covers only founders at incorporation (plus foreign-investor shareholders) and does not reflect current ownership — hence it is not a Gesellschafterliste-equivalent.",
+   "The complete current shareholder list lives in the company's Article 122 register (or with a registrar organization); shareholders' inspection rights under Article 122(3) do not extend to the general public.",
+   "Quotes are from the LuatVietnam English translation of Law 59/2020/QH14; the Vietnamese original is authoritative."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "VN",
@@ -12991,18 +13311,33 @@
   "summary": "The company charter (Điều lệ công ty) is a mandatory component of the LLC registration dossier under Article 21 of the Law on Enterprises 2020 and is filed with the Business Registration Office at incorporation. It is a filed constitutional document distinct from the ERC, so it is proved by an additional document rather than the base extract. The NBRP does not publish the charter publicly.",
   "evidence": [
    {
-    "basis": "Law on Enterprises 2020, Article 21 (LLC application dossier) and Article 24 (Company charter contents)",
-    "note": "Verbatim text could not be fetched. Art. 21 requires the charter in the dossier; Art. 24 governs its contents.",
-    "url": "https://dangkykinhdoanh.gov.vn",
-    "retrieved": "2026-07-21"
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 21 (Registration dossier for a limited liability company)",
+    "quote": "Article 21. Registration dossier for a limited liability company 1. A written request for enterprise registration. 2. Company charter. 3. List of members.",
+    "note": "English translation (LuatVietnam); 'Company charter' = Dieu le cong ty. The charter is a mandatory filed component of the LLC registration dossier — a filed constitutional document distinct from the ERC.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 24 (Company charter)",
+    "quote": "The company charter means the charter upon enterprise registration and the charter that is revised in the process of operation.",
+    "note": "Article 24(1); Article 24(2) then enumerates mandatory contents (name, business lines, charter capital, members and their contributed capital for an LLC, governance, etc.) — the charter is a concrete constitutional document.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 33 (Provision of information about contents of enterprise registration)",
+    "quote": "Organizations and individuals may request the state management agency in charge of business registration and the business registration agency to provide information stored on the national information system on business registration and shall pay charges in accordance with law.",
+    "note": "Statutory route for third parties to obtain registered enterprise information from the business registration authority.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "The filed charter is the incorporation version; subsequent amendments are not consistently re-filed at or published by the registry, so the on-file copy may be outdated.",
-   "Retrieval generally requires a request to the Business Registration Office or the company; not downloadable from the NBRP.",
-   "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."
+   "The filed charter is the incorporation version; charter revisions in the course of operation (Article 24(1) 'charter that is revised') are not consistently re-filed at or published by the registry, so the on-file copy may be outdated.",
+   "Retrieval generally requires a request to the Business Registration Office or the company; the charter is not downloadable from the NBRP public portal.",
+   "Quotes are from the LuatVietnam English translation of Law 59/2020/QH14; the Vietnamese original is authoritative."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "VN",
@@ -13015,18 +13350,33 @@
   "summary": "The company charter (Điều lệ công ty) is a mandatory component of the JSC registration dossier under Article 22 of the Law on Enterprises 2020 and is filed with the Business Registration Office at incorporation. It is a filed constitutional document distinct from the ERC, so it is proved by an additional document. The NBRP does not publish the charter publicly.",
   "evidence": [
    {
-    "basis": "Law on Enterprises 2020, Article 22 (JSC application dossier) and Article 24 (Company charter contents)",
-    "note": "Verbatim text could not be fetched. Art. 22 requires the charter in the dossier; Art. 24 governs its contents.",
-    "url": "https://dangkykinhdoanh.gov.vn",
-    "retrieved": "2026-07-21"
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 22 (Registration dossier for a joint stock company)",
+    "quote": "Article 22. Registration dossier for a joint stock company 1. A written request for enterprise registration. 2. Company charter.",
+    "note": "English translation (LuatVietnam); 'Company charter' = Dieu le cong ty, a mandatory filed component of the JSC registration dossier — a filed constitutional document distinct from the ERC.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 24 (Company charter)",
+    "quote": "The company charter means the charter upon enterprise registration and the charter that is revised in the process of operation.",
+    "note": "Article 24(1); Article 24(2) enumerates mandatory contents including, for a JSC, charter capital, total shares, types and par value of shares, and founding shareholders.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
+   },
+   {
+    "basis": "Law on Enterprises No. 59/2020/QH14, Article 33 (Provision of information about contents of enterprise registration)",
+    "quote": "Organizations and individuals may request the state management agency in charge of business registration and the business registration agency to provide information stored on the national information system on business registration and shall pay charges in accordance with law.",
+    "note": "Statutory route for third parties to obtain registered enterprise information from the business registration authority.",
+    "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html",
+    "retrieved": "2026-07-22"
    }
   ],
   "caveats": [
-   "The filed charter is the incorporation version; amendments are not consistently re-filed at or published by the registry.",
-   "Retrieval generally requires a request to the Business Registration Office or the company; not downloadable from the NBRP.",
-   "Verbatim statutory text unverified (sources blocked) — INFERENCE/UNVERIFIED."
+   "The filed charter is the incorporation version; revisions are not consistently re-filed at or published by the registry, so the on-file copy may be outdated.",
+   "Retrieval generally requires a request to the Business Registration Office or the company; the charter is not downloadable from the NBRP public portal.",
+   "Quotes are from the LuatVietnam English translation of Law 59/2020/QH14; the Vietnamese original is authoritative."
   ],
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "jurisdiction": "VN",
