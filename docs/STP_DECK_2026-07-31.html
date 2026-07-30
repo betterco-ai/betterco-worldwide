@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registerdokumente international — BetterCo</title>
+<style>
+/* ============================================================
+   BetterCo Design Tokens — übernommen aus dem generierten
+   betterco-tokens.css (Quelle: betterco.tokens.json)
+   ============================================================ */
+:root {
+  --bc-blue: #6895FF;
+  --bc-blue-light: #8FB0FF;
+  --bc-blue-dark: #4A75DD;
+  --bc-navy: #1a2340;
+  --bc-navy-light: #2a3558;
+  --bc-white: #ffffff;
+  --bc-gray-50: #f8f9fc;
+  --bc-gray-100: #eef1f6;
+  --bc-gray-200: #d8dde8;
+  --bc-gray-400: #8892a8;
+  --bc-gray-600: #5a6478;
+  --bc-teal: #006B9F;
+  --bc-green: #34c759;
+  --bc-orange: #ff9500;
+  --bc-red: #ff3b30;
+
+  /* Montserrat zuerst — falls lokal installiert. Kein Webfont-Request,
+     das Deck muss offline laufen. */
+  --bc-font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  --bc-radius-sm: 8px;
+  --bc-radius: 12px;
+  --bc-radius-lg: 20px;
+  --bc-radius-pill: 30px;
+
+  --bc-shadow: 0 4px 24px rgba(26, 35, 64, 0.10);
+  --bc-shadow-lg: 0 8px 40px rgba(26, 35, 64, 0.15);
+
+  --bc-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   BetterCo Base CSS — Component Classes (unverändert übernommen,
+   ohne den Google-Fonts-@import: keine externen Requests)
+   ============================================================ */
+.bc-block {
+  font-family: var(--bc-font);
+  color: var(--bc-navy);
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+.bc-block *, .bc-block *::before, .bc-block *::after { box-sizing: inherit; }
+
+.bc-block h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.15; margin: 0 0 0.5em; }
+.bc-block h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; margin: 0 0 0.4em; }
+.bc-block h3 { font-size: 1.3rem; font-weight: 600; line-height: 1.3; margin: 0 0 0.3em; }
+.bc-block h4 { font-size: 1.1rem; font-weight: 600; line-height: 1.4; margin: 0 0 0.2em; }
+.bc-block p  { font-size: 1rem;   font-weight: 400; margin: 0 0 0.8em; }
+.bc-block .bc-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--bc-blue); }
+.bc-block .bc-subtitle { font-size: 1.15rem; font-weight: 300; color: var(--bc-gray-600); }
+
+.bc-flex { display: flex; gap: 2rem; }
+.bc-flex-center { align-items: center; justify-content: center; }
+.bc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.bc-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+.bc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+
+.bc-slide {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 3rem 4rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bc-bg-white { background: var(--bc-white); }
+.bc-bg-light { background: var(--bc-gray-50); }
+.bc-bg-navy  { background: var(--bc-navy); color: var(--bc-white); }
+.bc-bg-navy h1, .bc-bg-navy h2, .bc-bg-navy h3, .bc-bg-navy h4 { color: var(--bc-white); }
+.bc-bg-navy p, .bc-bg-navy li { color: rgba(255,255,255,0.85); }
+.bc-bg-navy .bc-label { color: var(--bc-blue-light); }
+.bc-bg-gradient {
+  background: linear-gradient(135deg, var(--bc-navy) 0%, #2a3a6a 50%, var(--bc-blue-dark) 100%);
+  color: var(--bc-white);
+}
+.bc-bg-gradient h1, .bc-bg-gradient h2, .bc-bg-gradient h3 { color: var(--bc-white); }
+.bc-bg-gradient p { color: rgba(255,255,255,0.85); }
+
+.bc-card {
+  background: var(--bc-white);
+  border-radius: var(--bc-radius);
+  padding: 1.5rem;
+  box-shadow: var(--bc-shadow);
+  transition: transform var(--bc-transition), box-shadow var(--bc-transition);
+}
+.bc-card:hover { transform: translateY(-2px); box-shadow: var(--bc-shadow-lg); }
+.bc-card-accent { border-top: 3px solid var(--bc-blue); }
+.bc-card-navy { background: var(--bc-navy); color: var(--bc-white); }
+.bc-card-navy h3, .bc-card-navy h4 { color: var(--bc-white); }
+.bc-card-navy p { color: rgba(255,255,255,0.8); }
+
+.bc-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.7rem 1.8rem; border-radius: var(--bc-radius-pill);
+  font-family: var(--bc-font); font-weight: 600; font-size: 0.9rem;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: all var(--bc-transition);
+}
+.bc-btn-primary { background: var(--bc-blue); color: var(--bc-white); }
+.bc-btn-primary:hover { background: var(--bc-blue-dark); }
+.bc-btn-outline { background: transparent; color: var(--bc-blue); border: 2px solid var(--bc-blue); }
+.bc-btn-outline:hover { background: var(--bc-blue); color: var(--bc-white); }
+.bc-btn-white { background: var(--bc-white); color: var(--bc-navy); }
+
+.bc-icon {
+  width: 48px; height: 48px; border-radius: var(--bc-radius-sm);
+  background: rgba(104, 149, 255, 0.1);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 1.4rem;
+}
+.bc-icon-sm { width: 32px; height: 32px; font-size: 1rem; }
+.bc-icon-lg { width: 64px; height: 64px; font-size: 2rem; }
+
+.bc-steps { display: flex; gap: 0; position: relative; }
+.bc-step { flex: 1; text-align: center; padding: 1rem; position: relative; }
+.bc-step-num {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bc-blue); color: var(--bc-white);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem;
+}
+.bc-step-connector {
+  position: absolute; top: calc(1rem + 18px);
+  left: calc(50% + 24px); right: calc(-50% + 24px);
+  height: 2px; background: var(--bc-gray-200);
+}
+.bc-step:last-child .bc-step-connector { display: none; }
+
+.bc-tag {
+  display: inline-block; padding: 0.2rem 0.7rem;
+  border-radius: var(--bc-radius-pill); font-size: 0.7rem;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.bc-tag-blue { background: rgba(104,149,255,0.15); color: var(--bc-blue-dark); }
+.bc-tag-green { background: rgba(52,199,89,0.15); color: #1d8a38; }
+.bc-tag-orange { background: rgba(255,149,0,0.15); color: #b36800; }
+.bc-tag-navy { background: var(--bc-navy); color: var(--bc-white); }
+
+.bc-block table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.bc-block th {
+  background: var(--bc-navy); color: var(--bc-white);
+  padding: 0.7rem 1rem; text-align: left; font-weight: 600;
+}
+.bc-block td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--bc-gray-100); }
+.bc-block tr:nth-child(even) td { background: var(--bc-gray-50); }
+
+.bc-stat { text-align: center; }
+.bc-stat-value { font-size: 2.5rem; font-weight: 800; color: var(--bc-blue); line-height: 1; }
+.bc-stat-label { font-size: 0.85rem; color: var(--bc-gray-600); margin-top: 0.3rem; }
+
+.bc-img { border-radius: var(--bc-radius); box-shadow: var(--bc-shadow); max-width: 100%; height: auto; }
+.bc-img-screen { border: 1px solid var(--bc-gray-200); border-radius: var(--bc-radius-sm); }
+
+.bc-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 0 1.5rem;
+}
+.bc-header img { height: 28px; width: auto; }
+.bc-footer {
+  margin-top: auto; padding-top: 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.7rem; color: var(--bc-gray-400);
+}
+
+.bc-divider { width: 60px; height: 3px; background: var(--bc-blue); border: none; margin: 1rem 0; }
+
+.bc-block ul { padding-left: 1.2em; margin: 0 0 1em; }
+.bc-block ul li { margin-bottom: 0.4em; }
+.bc-check-list { list-style: none; padding: 0; }
+.bc-check-list li { padding-left: 1.6em; position: relative; margin-bottom: 0.5em; }
+.bc-check-list li::before {
+  content: "\203A"; position: absolute; left: 0;
+  color: var(--bc-blue); font-weight: 700; font-size: 1.15em; line-height: 1.2;
+}
+
+/* ============================================================
+   Deck-Rahmen — eigenes CSS, konsequent mit deck- benannt,
+   damit es niemals mit dem bc-*-System kollidiert.
+   ============================================================ */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  overflow-x: hidden;                 /* die Seite scrollt NIE horizontal */
+  background: var(--deck-bg, #e9edf5);
+  font-family: var(--bc-font);
+}
+:root { --deck-bg: #e9edf5; --deck-chrome: #ffffff; --deck-chrome-fg: #5a6478; --deck-chrome-line: #d8dde8; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --deck-bg: #10141f; --deck-chrome: #1a2340; --deck-chrome-fg: #b9c2d6; --deck-chrome-line: #2a3558; }
+}
+
+.deck-viewport {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem 1.5rem 4.5rem;
+}
+.deck-stage {
+  width: 100%;
+  max-width: 1280px;
+  box-shadow: 0 10px 60px rgba(10, 16, 34, 0.28);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.deck-slide { display: none; }
+.deck-slide.is-active { display: flex; }
+
+/* ------------------------------------------------------------
+   BetterCo-Logo: der Data-URI steht GENAU EINMAL in dieser Regel.
+   (Vorher lag er 18x im Dokument — 500 KB von 584 KB.)
+   ------------------------------------------------------------ */
+.deck-logo {
+  display: inline-block;
+  width: 168px; height: 28px;
+  background-image: url("data:image/png;base64,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");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+.deck-logo--invert { filter: brightness(0) invert(1); }
+
+/* ------------------------------------------------------------
+   CO-BRANDING SEPTEO
+   Zum Entfernen genügt EINE Änderung: die nächste Zeile auf
+   `display:none` setzen. Dann verschwindet das Septeo-Zeichen
+   auf Titelfolie und in allen Fußzeilen.
+        .deck-cobrand { display: none !important; }
+   Die Textnennungen von Septeo (Folien 1, 2, 5, 18) sind davon
+   bewusst NICHT betroffen — die sind inhaltlich, nicht dekorativ.
+   ------------------------------------------------------------ */
+.deck-cobrand { display: inline-flex; align-items: center; gap: 0.45rem; }
+.deck-septeo { height: 0.95rem; width: auto; color: #2E3862; }
+.deck-septeo--onDark { color: #ffffff; }
+.deck-cobrand-label { font-size: 0.68rem; letter-spacing: 0.04em; opacity: 0.75; }
+.deck-foot-right { display: inline-flex; align-items: center; gap: 1.1rem; }
+
+/* Steuerleiste */
+.deck-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+  padding: 0.55rem 1rem;
+  background: var(--deck-chrome);
+  border-top: 1px solid var(--deck-chrome-line);
+  font-size: 0.78rem; color: var(--deck-chrome-fg);
+}
+.deck-btn {
+  font-family: var(--bc-font); font-size: 0.78rem; font-weight: 600;
+  padding: 0.3rem 0.85rem; border-radius: var(--bc-radius-pill);
+  border: 1px solid var(--deck-chrome-line);
+  background: transparent; color: var(--deck-chrome-fg);
+  cursor: pointer; transition: all var(--bc-transition);
+}
+.deck-btn:hover { background: var(--bc-blue); color: #fff; border-color: var(--bc-blue); }
+.deck-counter { min-width: 5.5rem; text-align: center; font-variant-numeric: tabular-nums; }
+.deck-hint { opacity: 0.65; font-size: 0.7rem; }
+@media (max-width: 640px) { .deck-hint { display: none; } }
+
+/* Fortschritt */
+.deck-progress {
+  position: fixed; top: 0; left: 0; height: 3px; z-index: 60;
+  background: var(--bc-blue); width: 0; transition: width var(--bc-transition);
+}
+
+/* Foliennummer auf der Folie selbst */
+.deck-num { font-variant-numeric: tabular-nums; }
+
+/* Breite Tabellen: eigener Scroll-Container, damit die Seite nie
+   horizontal scrollt (Vorgabe). */
+.deck-scroll-x { overflow-x: auto; overflow-y: hidden; width: 100%; }
+
+/* ------------------------------------------------------------
+   Architekturdiagramm (Folie 5) — reines HTML/CSS, kein Bild
+   ------------------------------------------------------------ */
+.deck-arch { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.deck-arch-box {
+  border-radius: var(--bc-radius); padding: 0.6rem 1.6rem;
+  font-weight: 700; font-size: 1rem; text-align: center; min-width: 190px;
+}
+.deck-arch-box small { display: block; font-weight: 400; font-size: 0.7rem; opacity: 0.8; margin-top: 0.1rem; }
+.deck-arch-arrow { width: 2px; height: 1.15rem; background: var(--bc-gray-200); position: relative; }
+.deck-arch-arrow::after {
+  content: ""; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+  border-left: 5px solid transparent; border-right: 5px solid transparent;
+  border-top: 7px solid var(--bc-gray-200);
+}
+.deck-arch-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; width: 100%; margin-top: 0.15rem; }
+.deck-arch-leg {
+  border-radius: var(--bc-radius); padding: 0.85rem 1rem; text-align: center;
+  border: 1px solid var(--bc-gray-200); background: var(--bc-white);
+}
+.deck-arch-leg h4 { margin: 0 0 0.35rem; font-size: 0.92rem; }
+.deck-arch-codes {
+  display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: center; margin-top: 0.4rem;
+}
+.deck-arch-code {
+  font-size: 0.68rem; font-weight: 600; padding: 0.15rem 0.5rem;
+  border-radius: var(--bc-radius-pill); background: var(--bc-gray-100); color: var(--bc-navy);
+}
+
+/* Leeres Gerüst (Business-Case-Folie) */
+.deck-blank { color: var(--bc-gray-200); font-weight: 700; letter-spacing: 0.1em; }
+
+/* Direktanbindungs-Marker in der Preisklassen-Tabelle */
+.deck-direct {
+  display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.03em;
+  padding: 0.05rem 0.35rem; border-radius: var(--bc-radius-pill);
+  background: rgba(52,199,89,0.18); color: #1d8a38; vertical-align: 0.05rem;
+}
+.deck-direct--soon { background: rgba(255,149,0,0.18); color: #b36800; }
+/* Klasse gilt fuer diesen Markt nicht — abgeschwaecht, aber lesbar */
+.deck-na { opacity: 0.4; text-decoration: line-through; }
+
+/* Preisklassen-Uebersicht nach Region (Folie 16) */
+.deck-regions { column-count: 2; column-gap: 1.4rem; }
+.deck-region {
+  break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid;
+  margin: 0 0 0.55rem;
+}
+.deck-region h4 {
+  margin: 0 0 0.2rem; font-size: 0.78rem; color: var(--bc-navy);
+  border-bottom: 1px solid var(--bc-gray-200); padding-bottom: 0.12rem;
+}
+.deck-region p { margin: 0 0 0.15rem; font-size: 0.63rem; line-height: 1.35; color: var(--bc-gray-600); }
+.deck-region b {
+  display: inline-block; min-width: 0.85rem; color: var(--bc-navy); font-weight: 700;
+}
+
+/* ============================================================
+   Druck: genau eine Folie pro Seite, alle Folien sichtbar
+   ============================================================ */
+@page { size: 297mm 167mm; margin: 0; }
+@media print {
+  :root { --deck-bg: #ffffff; }
+  html, body { background: #fff; }
+  .deck-viewport { display: block; min-height: 0; padding: 0; }
+  .deck-stage { max-width: none; box-shadow: none; border-radius: 0; }
+  .deck-bar, .deck-progress { display: none !important; }
+  .deck-slide { display: flex !important; page-break-after: always; break-after: page; }
+  .deck-slide:last-child { page-break-after: auto; break-after: auto; }
+  .bc-slide { page-break-inside: avoid; break-inside: avoid; }
+  .bc-card { box-shadow: none; border: 1px solid var(--bc-gray-200); }
+  .bc-card:hover { transform: none; }
+  .deck-scroll-x { overflow: visible; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<!-- Septeo-Wortmarke als wiederverwendbares Symbol. Die Diagonalen-Bildmarke
+     nutzt currentColor, damit sie auf dunklen Folien weiß erscheint; der
+     Schriftzug behält das Markenorange #FF6136. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="septeoLogo" viewBox="0 0 447.6 106.4">
+    <path fill="#FF6136" d="M370.9,25c3.4,0,4.9,2.3,4.9,4.5s-1.1,3.7-3.9,6.5L360,47.9h14.8l4.5-4.5c3.3-3.2,7-7.8,7-13.9c0-8.4-6.1-14.9-15.4-14.9h-21.2c-9.7,0-17.6,7.9-17.6,17.6v19c0,9.7,7.9,17.6,17.6,17.7h33.1V58.3h-33.1c-3.9,0-7.1-3.2-7.1-7.1v-19c0-3.9,3.2-7.1,7.1-7.1L370.9,25z"/>
+    <path fill="#FF6136" d="M317.8,58.3c-3.9,0-7.1-3.2-7.1-7.1V25H321V14.4h-10.4V0h-10.5v51.1c0,9.7,7.9,17.6,17.6,17.6h7.2V58.3H317.8z"/>
+    <path fill="#FF6136" d="M247.4,83.3h-10.5V32.1c0-9.7,7.9-17.6,17.6-17.7h19c9.7,0,17.6,7.9,17.6,17.7v19c0,9.7-7.9,17.6-17.6,17.7h-15.8V58.3h15.8c3.9,0,7.1-3.2,7.1-7.1v-19c0-3.9-3.2-7.1-7.1-7.1h-19c-3.9,0-7.1,3.2-7.1,7.1L247.4,83.3z"/>
+    <path fill="#FF6136" d="M152.9,46.9c3.4,0,4.9,2.3,4.9,4.5s-1.1,3.7-3.9,6.5l-48.6,48.5h14.9l41.2-41.2c3.2-3.2,7-7.8,7-13.9c0-8.4-6.1-14.9-15.4-14.9h-33.3c-3.1,0-5.7-2.5-5.7-5.7c0-3.1,2.5-5.7,5.7-5.7c0,0,0,0,0,0h44.7V14.4h-44.7c-9,0-16.2,7.3-16.2,16.2s7.3,16.2,16.2,16.2H152.9z"/>
+    <path fill="#FF6136" d="M214.9,25c3.4,0,4.9,2.3,4.9,4.5s-1.1,3.7-3.9,6.5L204,47.9h14.8l4.5-4.5c3.3-3.2,7-7.8,7-13.9c0-8.4-6.1-14.9-15.4-14.9h-21.6c-9.7,0-17.6,7.9-17.6,17.6v19c0,9.7,7.9,17.6,17.6,17.7h33.1V58.3h-33.1c-3.9,0-7.1-3.2-7.1-7.1v-19c0-3.9,3.2-7.1,7.1-7.1L214.9,25z"/>
+    <path fill="#FF6136" d="M429.9,68.8h-19c-9.7,0-17.6-7.9-17.6-17.7v-19c0-9.7,7.9-17.6,17.6-17.6h19c9.7,0,17.6,7.9,17.6,17.6v19C447.5,60.9,439.6,68.8,429.9,68.8 M410.9,25c-3.9,0-7.1,3.2-7.1,7.1v19c0,3.9,3.2,7.1,7.1,7.1h19c3.9,0,7.1-3.2,7.1-7.1v-19c0-3.9-3.2-7.1-7.1-7.1L410.9,25z"/>
+    <path fill="currentColor" d="M63.3,25.6L5.7,83.3h8.1l53.6-53.6c0.2-0.2,0.2-0.5,0-0.7L64,25.6C63.8,25.4,63.5,25.4,63.3,25.6z"/>
+    <path fill="currentColor" d="M6.8,41.3L48,0h-8.1L2.7,37.2c-0.2,0.2-0.2,0.5,0,0.7l3.4,3.4C6.3,41.5,6.6,41.5,6.8,41.3z"/>
+    <path fill="currentColor" d="M71.5,33.8L22.1,83.3h8l45.5-45.4c0.2-0.2,0.2-0.5,0-0.7l-3.4-3.4C72,33.6,71.7,33.6,71.5,33.8C71.5,33.8,71.5,33.8,71.5,33.8z"/>
+    <path fill="currentColor" d="M79.7,41.9L38.4,83.3h8.1L83.7,46c0.2-0.2,0.2-0.5,0-0.7l-3.4-3.4C80.2,41.8,79.9,41.8,79.7,41.9z"/>
+    <path fill="currentColor" d="M10.9,46l3.4,3.4c0.2,0.2,0.5,0.2,0.7,0L64.3,0h-8.1L10.9,45.4C10.7,45.5,10.7,45.8,10.9,46z"/>
+    <path fill="currentColor" d="M19.1,54.2l3.4,3.4c0.2,0.2,0.5,0.2,0.7,0L80.7,0h-8.1L19.1,53.5C18.9,53.7,18.9,54,19.1,54.2z"/>
+  </symbol>
+</svg>
+
+<div class="deck-progress" id="deckProgress"></div>
+
+<div class="deck-viewport">
+<div class="deck-stage" id="deckStage">
+
+<!-- ============ 1 · Titel ============ -->
+<div class="bc-block bc-slide bc-bg-gradient deck-slide is-active" id="slide-1">
+  <div class="bc-header">
+    <span class="deck-logo deck-logo--invert" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Leistungsbeschreibung</span>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+    <h1 style="max-width:22ch;">Registerdokumente international</h1>
+    <p style="font-size:1.35rem; font-weight:300; max-width:52ch;">
+      Architektur, Verfügbarkeit und Preismodell für Gesellschaften außerhalb Deutschlands
+    </p>
+    <hr class="bc-divider" style="background:var(--bc-blue-light);">
+    <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.5rem;">
+      <span class="bc-tag bc-tag-blue">15 Märkte</span>
+      <span class="bc-tag bc-tag-blue">3 Dokumentenkategorien</span>
+      <span class="bc-tag bc-tag-blue">Preis je Jurisdiktion</span>
+    </div>
+
+    <div class="deck-cobrand" style="margin-top:1.8rem; gap:0.7rem;">
+      <span class="deck-cobrand-label" style="color:rgba(255,255,255,0.7);">Vorgelegt für</span>
+      <svg class="deck-septeo deck-septeo--onDark" style="height:1.5rem;" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg>
+    </div>
+  </div>
+
+  <div class="bc-footer" style="color:rgba(255,255,255,0.6);">
+    <span>BetterCo · 31. Juli 2026 · Version 2.0 — Entwurf zur Abstimmung</span>
+    <span class="deck-num">1</span>
+  </div>
+</div>
+
+<!-- ============ 2 · Ausgangslage ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-2">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Ausgangslage</span>
+  </div>
+
+  <h2>Ausgangslage</h2>
+  <p class="bc-subtitle">Ein Projekt mit einer großen deutschen Bank.</p>
+  <hr class="bc-divider">
+
+  <div style="display:flex; flex:1; gap:1.5rem; overflow:hidden;">
+
+    <div style="flex:1; display:flex; flex-direction:column; gap:0.7rem;">
+      <div class="bc-card" style="padding:1rem 1.2rem; border-top:3px solid var(--bc-blue);">
+        <h4 style="margin:0 0 0.25rem;">Was heute schon läuft</h4>
+        <p style="font-size:0.85rem; line-height:1.5; color:var(--bc-gray-600); margin:0;">
+          Septeo liefert für die KYC-Strecke der Bank bereits <strong style="color:var(--bc-navy);">Unternehmensdaten</strong>.
+          Die Datenseite ist etabliert und steht nicht zur Diskussion.
+        </p>
+      </div>
+
+      <div class="bc-card" style="padding:1rem 1.2rem; border-top:3px solid var(--bc-orange);">
+        <h4 style="margin:0 0 0.25rem;">Was zusätzlich verlangt wird</h4>
+        <p style="font-size:0.85rem; line-height:1.5; color:var(--bc-gray-600); margin:0;">
+          Die Bank benötigt <strong style="color:var(--bc-navy);">Dokumente als Nachweis</strong> — nicht als
+          Ergänzung der Daten, sondern als eigenständigen Beleg, der einer Prüfung standhält.
+        </p>
+      </div>
+
+      <div class="bc-card" style="padding:1rem 1.2rem; border-top:3px solid var(--bc-navy);">
+        <h4 style="margin:0 0 0.25rem;">Daten und Dokument sind nicht dasselbe</h4>
+        <p style="font-size:0.85rem; line-height:1.5; color:var(--bc-gray-600); margin:0;">
+          Ein Datensatz sagt, <em>was</em> im Register steht. Ein Dokument <strong style="color:var(--bc-navy);">belegt</strong> es.
+          Führt ein Register eine Angabe nur als Daten, gibt es dort
+          <strong style="color:var(--bc-navy);">kein Nachweisdokument dazu</strong> — unabhängig davon,
+          über welchen Weg das Register abgefragt wird.
+        </p>
+      </div>
+    </div>
+
+    <div style="flex:0 0 34%; display:flex; flex-direction:column; gap:0.8rem;">
+      <div style="background:var(--bc-navy); border-radius:var(--bc-radius); padding:1.1rem 1.2rem; text-align:center;">
+        <div style="font-size:2.6rem; font-weight:800; color:var(--bc-blue-light); line-height:1;">15</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.75); margin-top:0.3rem;">Märkte im Fokus</div>
+      </div>
+      <div style="background:var(--bc-navy); border-radius:var(--bc-radius); padding:1.1rem 1.2rem; text-align:center;">
+        <div style="font-size:2.6rem; font-weight:800; color:var(--bc-blue-light); line-height:1;">3</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.75); margin-top:0.3rem;">Dokumentenkategorien je Gesellschaft</div>
+      </div>
+      <div style="background:var(--bc-gray-50); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.7rem 0.9rem; font-size:0.76rem; line-height:1.45; color:var(--bc-gray-600); margin-top:auto;">
+        Die 15 Märkte sind priorisiert vorgegeben. Alles Weitere in diesem Dokument folgt dieser Reihenfolge.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">2</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 3 · Anforderung: drei Dokumentenkategorien ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-3">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Anforderung</span>
+  </div>
+
+  <h2>Anforderung: drei Dokumentenkategorien</h2>
+  <p class="bc-subtitle">Die Dreiteilung ist ein deutsches Modell und nicht ohne Weiteres übertragbar.</p>
+  <hr class="bc-divider">
+
+  <div style="display:flex; flex:1; gap:1.5rem; overflow:hidden;">
+
+    <div style="flex:0 0 40%; display:flex; flex-direction:column; gap:0.6rem;">
+      <div class="bc-card bc-card-accent" style="padding:0.8rem 1rem;">
+        <h4 style="margin-bottom:0.15rem;">Registerauszug</h4>
+        <p style="font-size:0.8rem; color:var(--bc-gray-600); margin:0;">der aktuelle amtliche Registerstand</p>
+      </div>
+      <div class="bc-card bc-card-accent" style="padding:0.8rem 1rem;">
+        <h4 style="margin-bottom:0.15rem;">Gesellschaftsvertrag</h4>
+        <p style="font-size:0.8rem; color:var(--bc-gray-600); margin:0;">Satzung, Statuten, Articles, Charter</p>
+      </div>
+      <div class="bc-card bc-card-accent" style="padding:0.8rem 1rem;">
+        <h4 style="margin-bottom:0.15rem;">Gesellschafterliste</h4>
+        <p style="font-size:0.8rem; color:var(--bc-gray-600); margin:0;">wer die Anteile hält, als fortgeschriebener Nachweis</p>
+      </div>
+    </div>
+
+    <div style="flex:1; display:flex; flex-direction:column; gap:0.55rem; overflow:hidden;">
+      <div style="background:var(--bc-gray-50); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.65rem 0.9rem; font-size:0.82rem; line-height:1.45; color:var(--bc-gray-600);">
+        <strong style="display:block; color:var(--bc-navy); margin-bottom:0.15rem;">Registerauszug: nahezu überall vorhanden</strong>
+        Der Registerauszug ist die belastbarste der drei Kategorien, wird aber in jedem Land anders benannt.
+        <strong style="color:var(--bc-navy);">Im Vereinigten Königreich existiert er nicht.</strong>
+      </div>
+      <div style="background:var(--bc-gray-50); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.65rem 0.9rem; font-size:0.82rem; line-height:1.45; color:var(--bc-gray-600);">
+        <strong style="display:block; color:var(--bc-navy); margin-bottom:0.15rem;">Gesellschaftsvertrag: meist hinterlegt, selten im Standardabruf</strong>
+        In den meisten Registern vorhanden, aber nur in einer Minderheit Teil der Basislieferung.
+      </div>
+      <div style="background:var(--bc-gray-50); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.65rem 0.9rem; font-size:0.82rem; line-height:1.45; color:var(--bc-gray-600);">
+        <strong style="display:block; color:var(--bc-navy); margin-bottom:0.15rem;">Gesellschafterliste: abhängig von der Rechtsform, nicht vom Land</strong>
+        Für Gesellschaften mit Anteilen führt das Register die Inhaber vielerorts mit, oft
+        <strong style="color:var(--bc-navy);">bereits im Auszug</strong>. Für Aktiengesellschaften
+        fast nirgends — dort liegt das Anteilsbuch bei der Gesellschaft.
+      </div>
+      <div style="background:var(--bc-navy); border-radius:var(--bc-radius-sm); padding:0.65rem 0.9rem; font-size:0.82rem; line-height:1.45; color:rgba(255,255,255,0.88);">
+        <strong style="display:block; color:#fff; margin-bottom:0.15rem;">Konsequenz für die Verarbeitung</strong>
+        Die Schnittstelle muss <em>„existiert in dieser Rechtsordnung nicht"</em> von
+        <em>„konnte nicht beschafft werden"</em> unterscheiden. Das erste ist ein endgültiges Ergebnis,
+        das zweite ein Fehler.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">3</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 4 · Ein Zugang, weltweit ============ -->
+<div class="bc-block bc-slide bc-bg-light deck-slide" id="slide-4">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Lösung</span>
+  </div>
+
+  <h2>Ein Zugang, weltweit</h2>
+  <p class="bc-subtitle">Eine Schnittstelle für alle Jurisdiktionen — der Bezugsweg wird intern aufgelöst.</p>
+  <hr class="bc-divider">
+
+  <div class="bc-grid-3" style="gap:1.1rem; flex:1;">
+
+    <div class="bc-card" style="padding:1.1rem 1.2rem; border-top:3px solid var(--bc-blue); display:flex; flex-direction:column;">
+      <div class="bc-icon" style="margin-bottom:0.7rem;">1</div>
+      <h4 style="margin:0 0 0.3rem;">Die Anfrage nennt die Gesellschaft</h4>
+      <p style="font-size:0.82rem; line-height:1.5; color:var(--bc-gray-600); margin:0;">
+        Angefragt werden <strong style="color:var(--bc-navy);">alle Dokumente oder eine einzelne
+        Dokumentenkategorie für eine Gesellschaft</strong> — nicht ein Register, nicht ein
+        Bezugsweg, nicht ein Produktname.
+      </p>
+    </div>
+
+    <div class="bc-card" style="padding:1.1rem 1.2rem; border-top:3px solid var(--bc-blue); display:flex; flex-direction:column;">
+      <div class="bc-icon" style="margin-bottom:0.7rem;">2</div>
+      <h4 style="margin:0 0 0.3rem;">Bezugsweg je Jurisdiktion</h4>
+      <p style="font-size:0.82rem; line-height:1.5; color:var(--bc-gray-600); margin:0;">
+        Welcher Weg genutzt wird, richtet sich nach der
+        <strong style="color:var(--bc-navy);">Jurisdiktion</strong>.
+      </p>
+    </div>
+
+    <div class="bc-card" style="padding:1.1rem 1.2rem; border-top:3px solid var(--bc-blue); display:flex; flex-direction:column;">
+      <div class="bc-icon" style="margin-bottom:0.7rem;">3</div>
+      <h4 style="margin:0 0 0.3rem;">Einheitliche Rückgabe</h4>
+      <p style="font-size:0.82rem; line-height:1.5; color:var(--bc-gray-600); margin:0;">
+        Dokument, Herkunftsnachweis, Nachweisstufe und beide Datumsangaben
+        (Abrufdatum und Inhaltsdatum) —
+        <strong style="color:var(--bc-navy);">in jeder Jurisdiktion identisch aufgebaut</strong>.
+      </p>
+    </div>
+
+  </div>
+
+  <div style="background:var(--bc-navy); border-radius:var(--bc-radius); padding:1rem 1.3rem; margin-top:1.1rem;">
+    <p style="font-size:0.88rem; line-height:1.5; color:rgba(255,255,255,0.88); margin:0;">
+      <strong style="color:#fff;">Zwei Anbindungsarten, eine Schnittstelle.</strong>
+      In einem Teil der Jurisdiktionen besteht eine <strong style="color:#fff;">direkte</strong> Anbindung an das
+      Register, in den übrigen eine <strong style="color:#fff;">indirekte</strong>. Für die Anbindung macht das
+      keinen Unterschied — sichtbar wird er nur im Preis.
+    </p>
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">4</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 5 · Architektur ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-5">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Architektur</span>
+  </div>
+
+  <h2>Architektur</h2>
+  <p class="bc-subtitle">Ein Bezugspunkt. Kein Bezugsweg ist von außen sichtbar oder erreichbar.</p>
+  <hr class="bc-divider" style="margin:0.7rem 0;">
+
+  <div style="display:flex; flex:1; gap:1.8rem; overflow:hidden; align-items:stretch;">
+
+    <div style="flex:1; display:flex; align-items:center;">
+      <div class="deck-arch">
+        <div class="deck-arch-box" style="background:#2E3862; color:#fff;">
+          Septeo
+          <small>fragt an, liest, verarbeitet</small>
+        </div>
+        <div class="deck-arch-arrow"></div>
+        <div class="deck-arch-box" style="background:var(--bc-navy); color:#fff; min-width:230px;">
+          BetterCo
+          <small>Beschaffung · Aufbereitung · Herkunftsnachweis</small>
+        </div>
+        <div class="deck-arch-arrow"></div>
+
+        <div class="deck-arch-split">
+          <div class="deck-arch-leg" style="border-color:var(--bc-green);">
+            <h4 style="color:#1d8a38;">Direktanbindung</h4>
+            <div style="font-size:0.72rem; color:var(--bc-gray-600);">eigener Zugang zum Register</div>
+            <div class="deck-arch-codes">
+              <span class="deck-arch-code">Deutschland</span>
+              <span class="deck-arch-code">Frankreich</span>
+              <span class="deck-arch-code">Ver. Königreich</span>
+              <span class="deck-arch-code" style="background:rgba(255,149,0,0.18); color:#b36800;">Dänemark *</span>
+            </div>
+          </div>
+          <div class="deck-arch-leg" style="border-color:var(--bc-blue);">
+            <h4 style="color:var(--bc-blue-dark);">Indirekte Anbindung</h4>
+            <div style="font-size:0.72rem; color:var(--bc-gray-600);">Bezug über etablierte Kanäle</div>
+            <div class="deck-arch-codes">
+              <span class="deck-arch-code">die übrigen 12 der 15 Märkte</span>
+              <span class="deck-arch-code">über 120 weitere Jurisdiktionen</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size:0.68rem; color:var(--bc-gray-400); margin-top:0.5rem;">* in Vorbereitung</div>
+      </div>
+    </div>
+
+    <div style="flex:0 0 31%; display:flex; flex-direction:column; gap:0.7rem; justify-content:center;">
+      <div style="background:var(--bc-gray-50); border-left:3px solid var(--bc-blue); border-radius:var(--bc-radius-sm); padding:0.75rem 0.95rem; font-size:0.8rem; line-height:1.5; color:var(--bc-gray-600);">
+        <strong style="display:block; color:var(--bc-navy); margin-bottom:0.2rem;">Warum die Trennung nach außen unsichtbar bleibt</strong>
+        Die Beschaffungsseite verändert sich laufend. Bliebe sie sichtbar, müsste die anbindende Seite
+        bei jeder Änderung nachziehen.
+      </div>
+      <div style="background:var(--bc-gray-50); border-left:3px solid var(--bc-blue); border-radius:var(--bc-radius-sm); padding:0.75rem 0.95rem; font-size:0.8rem; line-height:1.5; color:var(--bc-gray-600);">
+        <strong style="display:block; color:var(--bc-navy); margin-bottom:0.2rem;">Beispiel</strong>
+        Wird Dänemark auf Direktanbindung umgestellt, ändern sich <strong style="color:var(--bc-navy);">Kosten und
+        Herkunftsnachweis</strong> — die Schnittstelle bleibt unverändert.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">5</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 6 · Direkt- und Indirektanbindung im Vergleich ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-6">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Anbindungsarten</span>
+  </div>
+
+  <h2>Direkt- und Indirektanbindung im Vergleich</h2>
+  <p class="bc-subtitle">Identisch in Schnittstelle und Ablauf. Unterschiedlich in Preis und Aktualitätsprüfung.</p>
+  <hr class="bc-divider">
+
+  <div class="deck-scroll-x" style="flex:1;">
+  <table style="font-size:0.85rem;">
+    <thead>
+      <tr>
+        <th style="padding:0.6rem 0.9rem; width:30%;">Merkmal</th>
+        <th style="padding:0.6rem 0.9rem;">Direktanbindung</th>
+        <th style="padding:0.6rem 0.9rem;">Indirekte Anbindung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.55rem 0.9rem;"><strong>Schnittstelle</strong></td>
+        <td style="padding:0.55rem 0.9rem; color:var(--bc-green); font-weight:600;" colspan="2">identisch — eine Anfrage, ein Rückgabeformat</td>
+      </tr>
+      <tr>
+        <td style="padding:0.55rem 0.9rem;"><strong>Datenformat und Metadaten</strong></td>
+        <td style="padding:0.55rem 0.9rem; color:var(--bc-green); font-weight:600;" colspan="2">identisch — Herkunftsnachweis, Nachweisstufe, beide Datumsangaben</td>
+      </tr>
+      <tr>
+        <td style="padding:0.55rem 0.9rem;"><strong>Preis</strong></td>
+        <td style="padding:0.55rem 0.9rem;">amtliche Gebühr, teils <strong style="color:var(--bc-navy);">kostenfrei</strong></td>
+        <td style="padding:0.55rem 0.9rem;">Grundpreis nach Preisklasse des Landes</td>
+      </tr>
+      <tr>
+        <td style="padding:0.55rem 0.9rem;"><strong>Prüfung auf neuere Fassung</strong></td>
+        <td style="padding:0.55rem 0.9rem;"><strong style="color:var(--bc-green);">kostenfrei</strong> — beliebig oft möglich</td>
+        <td style="padding:0.55rem 0.9rem;">in der Regel wie ein Abruf; <strong style="color:var(--bc-navy);">Ausnahme Hongkong</strong>, dort ist das Auflisten kostenfrei</td>
+      </tr>
+      <tr>
+        <td style="padding:0.55rem 0.9rem;"><strong>Abdeckung</strong></td>
+        <td style="padding:0.55rem 0.9rem;">wenige Jurisdiktionen, wachsend</td>
+        <td style="padding:0.55rem 0.9rem;">über 150 Jurisdiktionen</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="background:var(--bc-navy); border-radius:var(--bc-radius); padding:0.9rem 1.2rem; margin-top:1rem;">
+    <p style="font-size:0.85rem; line-height:1.5; color:rgba(255,255,255,0.88); margin:0;">
+      <strong style="color:#fff;">Die kostenfreie Aktualitätsprüfung wiegt schwerer als der Stückpreis.</strong>
+      Wo sich kostenfrei feststellen lässt, ob eine neuere Fassung vorliegt, bleibt das vorhandene Dokument
+      in Verwendung, solange es gültig ist. Ein Abruf entsteht nur bei einer tatsächlichen Änderung.
+    </p>
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">6</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 7 · Anbindungsart je Jurisdiktion ============ -->
+<div class="bc-block bc-slide bc-bg-light deck-slide" id="slide-7">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Startlösung</span>
+  </div>
+
+  <h2>Anbindungsart je Jurisdiktion</h2>
+  <p class="bc-subtitle">Der Stand zum Projektbeginn. Die Direktseite wächst, die Schnittstelle bleibt gleich.</p>
+  <hr class="bc-divider">
+
+  <div style="display:flex; flex:1; gap:1.1rem; overflow:hidden;">
+
+    <div style="flex:0 0 32%; display:flex; flex-direction:column; gap:0.6rem;">
+      <div class="bc-card" style="padding:0.85rem 1.05rem; border-top:3px solid var(--bc-green);">
+        <span class="bc-tag bc-tag-green">Direkt · produktiv</span>
+        <div style="margin-top:0.5rem; font-size:0.84rem; line-height:1.6; color:var(--bc-navy); font-weight:600;">
+          Deutschland &middot; Frankreich &middot; Ver. Königreich
+        </div>
+        <p style="font-size:0.71rem; color:var(--bc-gray-600); margin:0.4rem 0 0; line-height:1.4;">
+          Deutschland zählt nicht zu den 15 Märkten, ist aber direkt angebunden.
+        </p>
+      </div>
+      <div class="bc-card" style="padding:0.85rem 1.05rem; border-top:3px solid var(--bc-orange); flex:1;">
+        <span class="bc-tag bc-tag-orange">Direkt &middot; in Vorbereitung</span>
+        <div style="margin-top:0.5rem; font-size:0.84rem; line-height:1.6; color:var(--bc-navy); font-weight:600;">
+          Dänemark
+        </div>
+        <p style="font-size:0.71rem; color:var(--bc-gray-600); margin:0.45rem 0 0; line-height:1.4;">
+          Die Direktseite wächst um die Märkte, deren Register <strong style="color:var(--bc-navy);">Dokumente</strong>
+          über eine Schnittstelle herausgibt. Register, die nur Daten liefern, zählen ausdrücklich nicht dazu —
+          der Bezug für Dokumente bliebe dort bestehen.
+        </p>
+      </div>
+    </div>
+
+    <div style="flex:1; display:flex; flex-direction:column; gap:0.6rem;">
+      <div class="bc-card" style="padding:0.9rem 1.2rem; border-top:3px solid var(--bc-blue); flex:1; display:flex; flex-direction:column;">
+        <span class="bc-tag bc-tag-blue">Indirekt angebunden</span>
+        <h4 style="margin:0.55rem 0 0.45rem;">Die übrigen 12 der 15 Märkte</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:0.35rem;">
+          <span class="deck-arch-code" style="background:rgba(255,149,0,0.12); border-color:rgba(255,149,0,0.45); color:#b36800;">Italien <sup>2</sup></span>
+          <span class="deck-arch-code">Vereinigte Staaten</span>
+          <span class="deck-arch-code">Spanien</span>
+          <span class="deck-arch-code">Niederlande</span>
+          <span class="deck-arch-code" style="background:rgba(255,149,0,0.12); border-color:rgba(255,149,0,0.45); color:#b36800;">Luxemburg <sup>2</sup></span>
+          <span class="deck-arch-code">Schweiz</span>
+          <span class="deck-arch-code" style="background:rgba(52,199,89,0.12); border-color:rgba(52,199,89,0.5); color:#1a7f37;">Israel <sup>1</sup></span>
+          <span class="deck-arch-code">Japan</span>
+          <span class="deck-arch-code" style="background:rgba(52,199,89,0.12); border-color:rgba(52,199,89,0.5); color:#1a7f37;">Belgien <sup>1</sup></span>
+          <span class="deck-arch-code" style="background:var(--bc-gray-50); border-style:dashed; color:var(--bc-gray-600);">Kuwait <sup>3</sup></span>
+          <span class="deck-arch-code">Singapur</span>
+          <span class="deck-arch-code">Hongkong</span>
+        </div>
+        <p style="font-size:0.71rem; line-height:1.45; color:var(--bc-gray-600); margin:0.6rem 0 0;">
+          <sup>1</sup> <strong style="color:#1a7f37;">Direktanbindung geplant</strong> — das Register gibt
+          Dokumente über eine Schnittstelle heraus, und der Zugang verursacht keine laufenden Fixkosten.
+          Heute läuft der Bezug noch indirekt.<br>
+          <sup>2</sup> <strong style="color:#b36800;">Abhängig vom Business Case</strong> — das Register gibt
+          Dokumente heraus, der Zugang kostet aber eine jährliche Gebühr. Ob er sich trägt, entscheidet die
+          Menge je Markt (Folie 18).<br>
+          <sup>3</sup> <strong style="color:var(--bc-navy);">Nicht erhoben</strong> — der Markt ist indirekt
+          erreichbar, eine Bewertung der Direktanbindung steht aus. Bis dahin wird dazu keine Aussage getroffen.
+        </p>
+        <div style="margin-top:auto; padding-top:0.8rem;">
+          <h4 style="margin:0 0 0.3rem;">Darüber hinaus</h4>
+          <p style="font-size:0.82rem; line-height:1.5; color:var(--bc-gray-600); margin:0;">
+            <strong style="color:var(--bc-navy);">Über 120 weitere Jurisdiktionen</strong> sind indirekt angebunden
+            und mit derselben Anfrage erreichbar — die Übersicht nach Region und Preisklasse folgt auf Folie 16.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">7</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 8 · Vier Verfügbarkeitsfälle ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-8">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Verfügbarkeit</span>
+  </div>
+
+  <h2>Vier Verfügbarkeitsfälle</h2>
+  <p class="bc-subtitle">Für jede Kombination aus Land × Rechtsform × Dokumentenkategorie gilt genau einer.</p>
+  <hr class="bc-divider">
+
+  <div class="bc-grid-4" style="gap:1rem; margin-bottom:1.1rem;">
+    <div class="bc-card" style="padding:1rem; border-top:3px solid var(--bc-green);">
+      <span class="bc-tag bc-tag-green">Fall 1</span>
+      <h4 style="margin:0.5rem 0 0.2rem;">Basisdokument</h4>
+      <p style="font-size:0.8rem; color:var(--bc-gray-600); margin:0 0 0.5rem;">kommt mit dem Standardabruf</p>
+      <div style="font-size:0.72rem; font-weight:600; color:var(--bc-green);">im Grundpreis enthalten</div>
+    </div>
+    <div class="bc-card" style="padding:1rem; border-top:3px solid var(--bc-orange);">
+      <span class="bc-tag bc-tag-orange">Fall 2</span>
+      <h4 style="margin:0.5rem 0 0.2rem;">Zusatzdokument</h4>
+      <p style="font-size:0.8rem; color:var(--bc-gray-600); margin:0 0 0.5rem;">im Register vorhanden, nicht Teil des Standardabrufs</p>
+      <div style="font-size:0.72rem; font-weight:600; color:var(--bc-orange);">Zuschlag</div>
+    </div>
+    <div class="bc-card" style="padding:1rem; border-top:3px solid var(--bc-blue);">
+      <span class="bc-tag bc-tag-blue">Fall 3</span>
+      <h4 style="margin:0.5rem 0 0.2rem;">nur Daten</h4>
+      <p style="font-size:0.8rem; color:var(--bc-gray-600); margin:0 0 0.5rem;">kein Dokument, aber strukturierte Angaben im Profil</p>
+      <div style="font-size:0.72rem; font-weight:600; color:var(--bc-blue);">im Grundpreis enthalten</div>
+    </div>
+    <div class="bc-card" style="padding:1rem; border-top:3px solid var(--bc-gray-400);">
+      <span class="bc-tag" style="background:var(--bc-gray-200); color:var(--bc-gray-600);">Fall 4</span>
+      <h4 style="margin:0.5rem 0 0.2rem;">nicht verfügbar</h4>
+      <p style="font-size:0.8rem; color:var(--bc-gray-600); margin:0 0 0.5rem;">in dieser Rechtsordnung nicht zu beschaffen</p>
+      <div style="font-size:0.72rem; font-weight:600; color:var(--bc-gray-400);">entfällt</div>
+    </div>
+  </div>
+
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">8</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 9 · Einschränkungen aus der Rechtslage ============ -->
+<div class="bc-block bc-slide bc-bg-light deck-slide" id="slide-9">
+  <!-- Kachel 2 wurde 2026-07-30 auf die korrigierte Gesellschafterlisten-Aussage umgestellt und
+       ist dadurch laenger. Die Kachel-Paddings stehen inline, daher !important. -->
+  <style>
+    #slide-9 .bc-card    { padding:0.72rem 0.95rem !important; }
+    #slide-9 .bc-card h4 { margin:0 0 0.2rem !important; font-size:0.92rem; }
+    #slide-9 .bc-card p  { font-size:0.745rem !important; line-height:1.4 !important; }
+    #slide-9 .bc-grid-2  { gap:0.7rem !important; }
+  </style>
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Rechtslage</span>
+  </div>
+
+  <h2>Einschränkungen aus der Rechtslage</h2>
+  <p class="bc-subtitle">Eigenschaften der jeweiligen Rechtsordnung — unabhängig vom Bezugsweg.</p>
+  <hr class="bc-divider">
+
+  <div class="bc-grid-2" style="gap:0.9rem; flex:1;">
+
+    <div class="bc-card" style="padding:1rem 1.2rem; border-top:3px solid var(--bc-red);">
+      <h4 style="margin:0 0 0.3rem;">1 · Im Vereinigten Königreich existiert kein Registerauszug</h4>
+      <p style="font-size:0.8rem; line-height:1.45; color:var(--bc-gray-600); margin:0;">
+        Es gibt dort kein Dokument, das dem deutschen Handelsregisterauszug entspricht.
+        Der Registerstand <em>ist</em> der Datensatz, nicht ein Dokument darüber. Geliefert wird ein
+        Datensatz mit Herkunftsnachweis und Abrufdatum — aber kein Auszugsdokument.
+        <strong style="color:var(--bc-navy);">Verlangt der Prozess zwingend ein Dokument, ist das ein Prozesspunkt.</strong>
+      </p>
+    </div>
+
+    <div class="bc-card" style="padding:1rem 1.2rem; border-top:3px solid var(--bc-orange);">
+      <h4 style="margin:0 0 0.3rem;">2 · Die Gesellschafterliste hängt an der Rechtsform, nicht am Land</h4>
+      <p style="font-size:0.8rem; line-height:1.45; color:var(--bc-gray-600); margin:0;">
+        In <strong style="color:var(--bc-navy);">acht</strong> der fünfzehn Märkte ist ein registerseitiger
+        Nachweis erreichbar — jeweils nur für bestimmte Rechtsformen: typischerweise für die Gesellschaft
+        mit Anteilen, praktisch nie für die Aktiengesellschaft. In
+        <strong style="color:var(--bc-navy);">Italien, Luxemburg, der Schweiz, Japan und Singapur</strong>
+        steht die Angabe bereits im Registerauszug und kostet nichts extra.<br>
+        In <strong style="color:var(--bc-navy);">sechs</strong> Märkten — GB, US, ES, DK, NL, BE — ist sie für
+        keine Rechtsform aus dem Register zu führen; öffentlich sind allenfalls Teilangaben, also Daten und
+        kein Nachweis. Für Kuwait steht die Erhebung aus.
+      </p>
+    </div>
+
+    <div class="bc-card" style="padding:1rem 1.2rem; border-top:3px solid var(--bc-orange);">
+      <h4 style="margin:0 0 0.3rem;">3 · Als Jahresmeldung ist sie ein Stichtagsdokument</h4>
+      <p style="font-size:0.8rem; line-height:1.45; color:var(--bc-gray-600); margin:0;">
+        Gilt <strong style="color:var(--bc-navy);">nicht</strong> für die fünf Märkte mit der Angabe im Auszug —
+        der Auszug gibt den aktuellen Registerstand wieder, keinen Jahresstichtag.<br>
+        <strong style="color:var(--bc-navy);">Hongkong</strong> führt sie als Jahresmeldung.
+        Anteilsübertragungen erscheinen erst in der nächsten Meldung — die Liste kann bis zu rund
+        ein Jahr alt sein. Ausgewiesen wird der <em>eingetragene</em> Gesellschafter, der auch ein Treuhänder
+        sein kann; wirtschaftlich Berechtigte stehen dort nicht. Bei börsennotierten Gesellschaften nur Halter ab 5 %.
+        Für <strong style="color:var(--bc-navy);">Israel</strong> wird gerade geklärt, ob der Registerauszug
+        die Angabe bereits trägt oder ob es die Jahresmeldung braucht.
+      </p>
+    </div>
+
+    <div class="bc-card" style="padding:1rem 1.2rem; border-top:3px solid var(--bc-orange);">
+      <h4 style="margin:0 0 0.3rem;">4 · Kuwait ohne Anteilszahl · beim Gesellschaftsvertrag zählt die Fassung</h4>
+      <p style="font-size:0.8rem; line-height:1.45; color:var(--bc-gray-600); margin:0;">
+        <strong style="color:var(--bc-navy);">Kuwait</strong> liefert Namen und Rollen, aber keine Beteiligungshöhe —
+        für eine Beteiligungsrechnung reicht das nicht.<br>
+        Beim <strong style="color:var(--bc-navy);">Gesellschaftsvertrag</strong> führen Register oft Gründungsfassung
+        <em>und</em> Änderungen. Aufgelöst wird grundsätzlich die <strong style="color:var(--bc-navy);">jüngste Fassung</strong>,
+        das Fassungsdatum wird mitgeliefert. Gemessenes Beispiel: sechs Satzungsfassungen, Gründung 2015, gültig 2024.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">9</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 10 · Dokumente je Jurisdiktion 1/2 ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-10">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Dokumente je Jurisdiktion · 1 von 2</span>
+  </div>
+
+  <h2 style="font-size:1.6rem;">Dokumente je Jurisdiktion</h2>
+  <p class="bc-subtitle" style="font-size:0.92rem;">In allen 15 Märkten wurde ein Vorgang angelegt und die gelieferte Dokumentenliste ausgewertet — in 11 davon lagen echte Dokumentdateien vor, in 8 zusätzlich ein produktiver Vorgang.</p>
+  <hr class="bc-divider" style="margin:0.6rem 0;">
+
+  <div style="display:flex; flex-wrap:wrap; gap:0.9rem; font-size:0.7rem; color:var(--bc-gray-600); margin-bottom:0.5rem;">
+    <span><strong style="color:var(--bc-green); font-size:0.95rem;">&#9679;</strong> Basisdokument</span>
+    <span><strong style="color:var(--bc-orange); font-size:0.95rem;">&#9680;</strong> eigenes Dokument, gesondert zu beschaffen — <em>direkt</em> = eigener Bezugsweg, sonst Zuschlag</span>
+    <span><strong style="color:var(--bc-blue); font-size:0.95rem;">&#9675;</strong> kein eigenes Dokument, Angabe im Basisdokument enthalten</span>
+    <span><strong style="color:var(--bc-gray-400); font-size:0.95rem;">&mdash;</strong> nicht verfügbar</span>
+    <span><strong style="color:var(--bc-red); font-size:0.95rem;">?</strong> in Prüfung, heute nicht zugesagt</span>
+  </div>
+
+  <div class="deck-scroll-x" style="flex:1;">
+  <table style="font-size:0.74rem;">
+    <thead>
+      <tr>
+        <th style="padding:0.45rem 0.6rem;">#</th>
+        <th style="padding:0.45rem 0.6rem;">Markt</th>
+        <th style="padding:0.45rem 0.6rem; text-align:center;">Register&shy;auszug</th>
+        <th style="padding:0.45rem 0.6rem; text-align:center;">Gesellschafts&shy;vertrag</th>
+        <th style="padding:0.45rem 0.6rem; text-align:center;">Gesellschafter&shy;liste</th>
+        <th style="padding:0.45rem 0.6rem;">Gesellschafter als Daten</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:0.38rem 0.6rem;">1</td><td style="padding:0.38rem 0.6rem;"><strong>Frankreich</strong></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">direkt</span></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">direkt</span></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-orange);">&#9680; <span style="font-size:0.62rem; color:var(--bc-gray-600);">SARL, SNC <sup>1</sup> &middot; direkt</span></td>
+        <td style="padding:0.38rem 0.6rem;">Name, Anschrift, Anteile, Rolle</td></tr>
+      <tr><td style="padding:0.38rem 0.6rem;">2</td><td style="padding:0.38rem 0.6rem;"><strong>Italien</strong></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-red); font-weight:700;">?</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-blue);">&#9675; <span style="font-size:0.62rem; color:var(--bc-gray-600);">Srl, Srls, Snc, Sas</span></td>
+        <td style="padding:0.38rem 0.6rem;">Name, Nationalität, Anteile, Rolle</td></tr>
+      <tr><td style="padding:0.38rem 0.6rem;">3</td><td style="padding:0.38rem 0.6rem;"><strong>Ver. Königreich</strong></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-gray-400); font-weight:700;">&mdash;</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">direkt</span></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-gray-400); font-weight:700;">&mdash;</td>
+        <td style="padding:0.38rem 0.6rem;">Name, Anteile, Rolle, Anschrift</td></tr>
+      <tr><td style="padding:0.38rem 0.6rem;">4</td><td style="padding:0.38rem 0.6rem;"><strong>Vereinigte Staaten</strong><sup style="font-weight:400;">9</sup></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">Incorporation</span></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-gray-400); font-weight:700;">&mdash;</td>
+        <td style="padding:0.38rem 0.6rem;">bundesstaatsabhängig</td></tr>
+      <tr><td style="padding:0.38rem 0.6rem;">5</td><td style="padding:0.38rem 0.6rem;"><strong>Spanien</strong></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-red); font-weight:700;">?</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-gray-400); font-weight:700;">&mdash;</td>
+        <td style="padding:0.38rem 0.6rem; color:var(--bc-gray-400);">keine</td></tr>
+      <tr><td style="padding:0.38rem 0.6rem;">6</td><td style="padding:0.38rem 0.6rem;"><strong>Dänemark</strong></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">2 Dok.</span></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-orange);">&#9680;</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-gray-400); font-weight:700;">&mdash;<sup style="font-weight:400;">2</sup></td>
+        <td style="padding:0.38rem 0.6rem;">Name, Anschrift, Reg.-Nr., Rolle, Anteile</td></tr>
+      <tr><td style="padding:0.38rem 0.6rem;">7</td><td style="padding:0.38rem 0.6rem;"><strong>Niederlande</strong></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-orange);">&#9680; <span style="font-size:0.62rem; color:var(--bc-gray-600);">statuten <sup>10</sup></span></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-gray-400); font-weight:700;">&mdash;<sup style="font-weight:400;">2</sup></td>
+        <td style="padding:0.38rem 0.6rem;">Name, Geburtsdatum, Sitz, Anschrift, Rolle, Anteile</td></tr>
+      <tr><td style="padding:0.38rem 0.6rem;">8</td><td style="padding:0.38rem 0.6rem;"><strong>Luxemburg</strong></td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.38rem 0.6rem; text-align:center; color:var(--bc-blue);">&#9675; <span style="font-size:0.62rem; color:var(--bc-gray-600);">SARL</span></td>
+        <td style="padding:0.38rem 0.6rem;">Name, Rolle, Anschrift, Nationalität, Anteile</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p style="font-size:0.65rem; line-height:1.4; color:var(--bc-gray-600); margin:0.45rem 0 0;">
+    <sup>1</sup> Nur SARL und SNC — dort weist die hinterlegte Satzung die Anteilsverteilung aus.
+    Für <strong style="color:var(--bc-navy);">SA und SAS nicht</strong>.
+    &nbsp;&nbsp;<sup>2</sup> Teilangaben sind öffentlich (Halter ab einer Schwelle, Allein- oder
+    Gründungsgesellschafter) — Daten, kein Nachweis.
+    &nbsp;&nbsp;<sup>9</sup> Kein einheitlicher Registerraum: Auszug und Gründungsurkunde sind je
+    Bundesstaat unterschiedlich geführt, Gesellschafterangaben liefert nur ein Teil der Staaten.
+    Die Zeile fasst 50 Register zusammen — für den Einzelfall gilt der jeweilige Bundesstaat.
+    &nbsp;&nbsp;<sup>10</sup> Über den Bezugskatalog als Zusatzdokument bestellbar; die
+    Rechtsgrundlage ist dort noch nicht erhoben.
+  </p>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">10</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 11 · Dokumente je Jurisdiktion 2/2 ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-11">
+  <!-- Die Fussnoten 6, 7, 8 und 10 kamen hinzu und haben die Tabelle im .deck-scroll-x
+       um 42px abgeschnitten (Hongkong fiel raus). Wichtig: .deck-scroll-x hat
+       overflow-y:hidden — ein Ueberlauftest, der nur die FOLIE misst, sieht das NICHT.
+       Immer auch die inneren Scroll-Container pruefen. -->
+  <style>
+    #slide-11 table        { font-size:0.7rem !important; }
+    #slide-11 th           { padding:0.28rem 0.6rem !important; }
+    #slide-11 td           { padding:0.12rem 0.6rem !important; }
+    #slide-11 h2           { margin-bottom:0.1rem; }
+    /* Der praezisierte "?"-Erklaertext hat weitere 15px gekostet. */
+    #slide-11 .deck-fn     { font-size:0.65rem !important; line-height:1.35 !important; }
+  </style>
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Dokumente je Jurisdiktion · 2 von 2</span>
+  </div>
+
+  <h2 style="font-size:1.5rem;">Dokumente je Jurisdiktion</h2>
+  <hr class="bc-divider" style="margin:0.55rem 0;">
+
+  <!-- Legende identisch zu Folie 10 — beide Folien werden einzeln verwendet und muessen
+       gleich lesen. Aenderungen hier IMMER auch auf #slide-10 nachziehen. -->
+  <div style="display:flex; flex-wrap:wrap; gap:0.9rem; font-size:0.7rem; color:var(--bc-gray-600); margin-bottom:0.5rem;">
+    <span><strong style="color:var(--bc-green); font-size:0.95rem;">&#9679;</strong> Basisdokument</span>
+    <span><strong style="color:var(--bc-orange); font-size:0.95rem;">&#9680;</strong> eigenes Dokument, gesondert zu beschaffen — <em>direkt</em> = eigener Bezugsweg, sonst Zuschlag</span>
+    <span><strong style="color:var(--bc-blue); font-size:0.95rem;">&#9675;</strong> kein eigenes Dokument, Angabe im Basisdokument enthalten</span>
+    <span><strong style="color:var(--bc-gray-400); font-size:0.95rem;">&mdash;</strong> nicht verfügbar</span>
+    <span><strong style="color:var(--bc-red); font-size:0.95rem;">?</strong> in Prüfung, heute nicht zugesagt</span>
+  </div>
+
+  <div class="deck-scroll-x">
+  <table style="font-size:0.74rem;">
+    <thead>
+      <tr>
+        <th style="padding:0.42rem 0.6rem;">#</th>
+        <th style="padding:0.42rem 0.6rem;">Markt</th>
+        <th style="padding:0.42rem 0.6rem; text-align:center;">Register&shy;auszug</th>
+        <th style="padding:0.42rem 0.6rem; text-align:center;">Gesellschafts&shy;vertrag</th>
+        <th style="padding:0.42rem 0.6rem; text-align:center;">Gesellschafter&shy;liste</th>
+        <th style="padding:0.42rem 0.6rem;">Gesellschafter als Daten</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:0.33rem 0.6rem;">9</td><td style="padding:0.33rem 0.6rem;"><strong>Schweiz</strong></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">2 Dok.</span></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-orange);">&#9680; <span style="font-size:0.62rem; color:var(--bc-gray-600);"><strong style="color:var(--bc-navy);">beglaubigt</strong> <sup>10</sup></span></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-blue);">&#9675; <span style="font-size:0.62rem; color:var(--bc-gray-600);">GmbH</span></td>
+        <td style="padding:0.33rem 0.6rem;">Name, Rolle, Anteile</td></tr>
+      <tr><td style="padding:0.33rem 0.6rem;">10</td><td style="padding:0.33rem 0.6rem;"><strong>Israel</strong></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-red); font-weight:700;">?</td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-red); font-weight:700;">?<sup style="font-weight:400;">3</sup></td>
+        <td style="padding:0.33rem 0.6rem;">Name, Anschrift, Rolle, Nationalität, Anteile, Ausweis-Nr.</td></tr>
+      <tr><td style="padding:0.33rem 0.6rem;">11</td><td style="padding:0.33rem 0.6rem;"><strong>Japan</strong></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-gray-400); font-weight:700;">&mdash;</td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-blue);">&#9675; <span style="font-size:0.62rem; color:var(--bc-gray-600);">GK <sup>4</sup></span></td>
+        <td style="padding:0.33rem 0.6rem; color:var(--bc-gray-400);">keine</td></tr>
+      <tr><td style="padding:0.33rem 0.6rem;">12</td><td style="padding:0.33rem 0.6rem;"><strong>Belgien</strong></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-orange);">&#9680; <span style="font-size:0.62rem; color:var(--bc-gray-600);">in Klärung <sup>6</sup></span></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-gray-400); font-weight:700;">&mdash;<sup style="font-weight:400;">2</sup></td>
+        <td style="padding:0.33rem 0.6rem;">Name, Anteile, Rolle</td></tr>
+      <tr><td style="padding:0.33rem 0.6rem;">13</td><td style="padding:0.33rem 0.6rem;"><strong>Kuwait</strong></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679;</td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-red); font-weight:700;">?</td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-red); font-weight:700;">?<sup style="font-weight:400;">5</sup></td>
+        <td style="padding:0.33rem 0.6rem;">Name, Rolle, Nationalität — <strong style="color:var(--bc-red);">ohne Anteilszahl</strong></td></tr>
+      <tr><td style="padding:0.33rem 0.6rem;">14</td><td style="padding:0.33rem 0.6rem;"><strong>Singapur</strong></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">Business Profile</span></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-red); font-weight:700;">?<sup style="font-weight:400;">7</sup></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-blue);">&#9675; <span style="font-size:0.62rem; color:var(--bc-gray-600);">Pte Ltd</span></td>
+        <td style="padding:0.33rem 0.6rem;">Name, Anschrift, Nationalität, Sitz, Reg.-Nr., Rolle, Anteile, Ausweis-Nr.</td></tr>
+      <tr><td style="padding:0.33rem 0.6rem;">15</td><td style="padding:0.33rem 0.6rem;"><strong>Hongkong</strong></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">Company Particulars</span></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">Articles <sup>8</sup></span></td>
+        <td style="padding:0.33rem 0.6rem; text-align:center; color:var(--bc-green);">&#9679; <span style="font-size:0.62rem; color:var(--bc-gray-600);">NAR1 <sup>8</sup></span></td>
+        <td style="padding:0.33rem 0.6rem;">Name, Rolle, Anschrift, Anteile, Ausweis-Nr.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="display:flex; gap:0.8rem; margin-top:0.8rem;">
+    <div style="flex:1; background:rgba(255,59,48,0.06); border:1px solid rgba(255,59,48,0.3); border-radius:var(--bc-radius-sm); padding:0.65rem 0.9rem; font-size:0.76rem; line-height:1.45; color:var(--bc-gray-600);">
+      <strong style="color:var(--bc-navy);">Zum „?"</strong> — es steht für drei verschiedene Sachlagen.
+      <strong style="color:var(--bc-navy);">Italien, Spanien, Israel:</strong> die Satzung liegt beim
+      Register — der Standardbezug führt sie aber nicht im Katalog, und einen eigenen Zugang gibt es
+      dort noch nicht. Das Dokument existiert, ist heute aber nicht zu beschaffen.
+      <strong style="color:var(--bc-navy);">Singapur:</strong> hinterlegt, kam aber bei keinem Abruf mit
+      (Fußnote 7). <strong style="color:var(--bc-navy);">Kuwait:</strong> Erhebung steht vollständig aus
+      (Fußnote 5). Bei der Gesellschafterliste gilt „?" für Israel (Fußnote 3) und Kuwait.
+      Alles mit „?" wird <strong style="color:var(--bc-navy);">heute nicht zugesagt</strong>.
+    </div>
+    <div style="flex:1; background:var(--bc-gray-50); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.65rem 0.9rem; font-size:0.76rem; line-height:1.45; color:var(--bc-gray-600);">
+      <strong style="color:var(--bc-navy);">Zur letzten Spalte</strong> — „Gesellschafter als Daten" ist von den drei
+      Dokumentenspalten unabhängig. Sie zeigt die strukturierten Angaben, die zusätzlich geliefert werden.
+      Das ist Fall 3 und <strong style="color:var(--bc-navy);">in keinem Fall ein Nachweisdokument</strong>.
+    </div>
+  </div>
+
+  <p style="font-size:0.64rem; line-height:1.38; color:var(--bc-gray-600); margin:0.45rem 0 0;">
+    <sup>2</sup> Teilangaben öffentlich (Gründungsgesellschafter) — Daten, kein Nachweis.
+    &nbsp;&nbsp;<sup>3</sup> Widersprüchliche Befunde: Registerauszug der Private Company oder
+    Jahresmeldung — wird geklärt.
+    &nbsp;&nbsp;<sup>4</sup> Nur, wenn die Satzung die Geschäftsführung nicht auf einzelne
+    Mitglieder beschränkt.
+    &nbsp;&nbsp;<sup>5</sup> Für Kuwait steht die Erhebung noch aus.
+    &nbsp;&nbsp;<sup>6</sup> Widersprüchliche Quellen: Der Bezugskatalog führt die Constitution als
+    <strong style="color:var(--bc-navy);">Pflicht</strong>dokument, ein produktiver Vorgang lieferte sie
+    ohne Pflichtkennzeichnung. Ob überhaupt ein Zuschlag anfällt, wird vor jeder Preiszusage geklärt.
+    &nbsp;&nbsp;<sup>7</sup> Beim Register hinterlegt, kam aber bei keinem Abruf mit dem Standardabruf —
+    und der Bezugskatalog führt sie weder als Pflicht- noch als Zusatzdokument.
+    &nbsp;&nbsp;<sup>8</sup> Das Register führt Satzung und Jahresmeldung als
+    <strong style="color:var(--bc-navy);">Pflichtdokumente</strong>; beide kommen mit dem Standardabruf,
+    ohne Zuschlag. Die Einzelbestellung lohnt nur für ältere Jahrgänge und frühere Satzungsfassungen.
+    &nbsp;&nbsp;<sup>10</sup> Über den Bezugskatalog als Zusatzdokument bestellbar; die Rechtsgrundlage
+    ist dort noch nicht erhoben.
+  </p>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">11</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 12 · Zusatzdokumente im Standardfall ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-12">
+  <!-- Der Hongkong-Vorbehalt in der Fussleiste hat die Folie 17px ueber die Hoehe getrieben.
+       Wie bei #slide-18: folienlokal kompaktieren, Inhalt bleibt vollstaendig. -->
+  <style>
+    #slide-12 .bc-card        { padding:0.95rem 1.15rem !important; }
+    #slide-12 .bc-card p      { font-size:0.8rem !important; }
+    #slide-12 .bc-check-list  { font-size:0.78rem !important; }
+    #slide-12 h2              { margin-bottom:0.1rem; }
+    #slide-12 .bc-subtitle    { margin-bottom:0.2rem; }
+  </style>
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Zusatzdokumente</span>
+  </div>
+
+  <h2>Zusatzdokumente im Standardfall</h2>
+  <p class="bc-subtitle">Der Zuschlag kommt in beiden Modi zum Vorgangspreis hinzu. Der Modus bestimmt, wann er anfällt.</p>
+  <hr class="bc-divider">
+
+  <div class="bc-grid-2" style="gap:1.3rem; flex:1;">
+
+    <div class="bc-card" style="border-top:3px solid var(--bc-green); display:flex; flex-direction:column; padding:1.2rem 1.3rem;">
+      <span class="bc-tag bc-tag-green" style="align-self:flex-start;">Modus A</span>
+      <h3 style="margin:0.55rem 0 0.15rem;">Landesregel</h3>
+      <p style="font-size:0.85rem; color:var(--bc-gray-600); margin:0 0 0.7rem;">Das Zusatzdokument wird je Land dauerhaft mitgeliefert</p>
+      <p style="font-size:0.84rem; line-height:1.45; margin:0 0 0.7rem;">
+        Für ein Land wird einmalig festgelegt, dass zu jedem Vorgang zusätzlich ein bestimmtes Dokument
+        geliefert wird. Es kommt <strong>zusammen mit den Basisdokumenten</strong> an.
+      </p>
+      <ul class="bc-check-list" style="font-size:0.82rem; margin:0;">
+        <li>Kein zweiter Aufruf, keine zweite Wartezeit</li>
+        <li>Kein Sonderprozess auf der anbindenden Seite</li>
+        <li>Der Vorgang ist mit einem Mal vollständig</li>
+      </ul>
+      <div style="margin-top:auto; padding-top:0.7rem; border-top:1px solid var(--bc-gray-100); font-size:0.78rem; color:var(--bc-gray-600); line-height:1.4;">
+        <strong style="color:var(--bc-orange);">Preis:</strong> Der Zuschlag fällt bei
+        <strong style="color:var(--bc-navy);">jedem</strong> Vorgang in diesem Land an — auch dort, wo das
+        Dokument im Einzelfall nicht benötigt worden wäre.
+      </div>
+    </div>
+
+    <div class="bc-card" style="border-top:3px solid var(--bc-blue); display:flex; flex-direction:column; padding:1.2rem 1.3rem;">
+      <span class="bc-tag bc-tag-blue" style="align-self:flex-start;">Modus B</span>
+      <h3 style="margin:0.55rem 0 0.15rem;">Einzelanforderung</h3>
+      <p style="font-size:0.85rem; color:var(--bc-gray-600); margin:0 0 0.7rem;">Nachfordern im Einzelfall</p>
+      <p style="font-size:0.84rem; line-height:1.45; margin:0 0 0.7rem;">
+        Der Vorgang läuft mit den Basisdokumenten. Fehlt eine Dokumentenkategorie, wird sie gezielt
+        nachgefordert — je Vorgang und Dokument.
+      </p>
+      <ul class="bc-check-list" style="font-size:0.82rem; margin:0;">
+        <li>Bezahlt wird nur, was tatsächlich angefordert wird</li>
+        <li>Zweistufiger Ablauf mit eigener Wartezeit</li>
+        <li>In einigen Ländern ein <strong>manueller</strong> Vorgang</li>
+      </ul>
+      <div style="margin-top:auto; padding-top:0.7rem; border-top:1px solid var(--bc-gray-100); font-size:0.78rem; color:var(--bc-gray-600); line-height:1.4;">
+        <strong style="color:var(--bc-blue);">Geeignet,</strong> wenn das Dokument in diesem Land nur in
+        Ausnahmefällen benötigt wird.
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:flex; gap:0.8rem; margin-top:1rem;">
+    <div style="flex:1; background:var(--bc-gray-50); border-left:3px solid var(--bc-blue); border-radius:var(--bc-radius-sm); padding:0.65rem 1rem; font-size:0.8rem; line-height:1.45; color:var(--bc-gray-600);">
+      <strong style="color:var(--bc-navy);">Betroffen sind zwei Märkte sicher:</strong> Dänemark
+      (automatisch) und Israel (manuelle Bearbeitung, längere Laufzeit) — dazu Belgien unter Vorbehalt.
+      <strong style="color:var(--bc-navy);">Hongkong gehört nicht dazu:</strong> dort sind beide Dokumente
+      Pflicht und im Grundpreis enthalten; die dokumentgenaue Bestellung greift nur für ältere
+      Jahrgänge (nächste Folie).
+    </div>
+    <div style="flex:1; background:rgba(255,149,0,0.08); border-left:3px solid var(--bc-orange); border-radius:var(--bc-radius-sm); padding:0.65rem 1rem; font-size:0.8rem; line-height:1.45; color:var(--bc-gray-600);">
+      <strong style="color:#b36800;">Offener Punkt:</strong> Die konkreten Zuschlagsbeträge liegen noch
+      nicht vor. Sie werden nachgereicht, <strong style="color:var(--bc-navy);">bevor</strong> die Entscheidung
+      je Land ansteht.
+    </div>
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">12</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 13 · Dokumentgenaue Bestellung ============ -->
+<div class="bc-block bc-slide bc-bg-light deck-slide" id="slide-13">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Hongkong</span>
+  </div>
+
+  <h2>Dokumentgenaue Bestellung</h2>
+  <p class="bc-subtitle">Nur in Hongkong ist eine dokumentgenaue Bestellung möglich.</p>
+  <hr class="bc-divider">
+
+  <div style="display:flex; flex:1; gap:1.5rem; overflow:hidden;">
+
+    <div style="flex:1; display:flex; flex-direction:column; gap:0.6rem;">
+      <div style="background:var(--bc-white); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.75rem 1rem; font-size:0.84rem; line-height:1.5; color:var(--bc-gray-600);">
+        <strong style="display:block; color:var(--bc-navy); margin-bottom:0.2rem;">Auflisten — kostenfrei</strong>
+        Die beim Register vorliegenden Einreichungen lassen sich auflisten, ohne etwas auszulösen.
+        Jede hat eine eigene Kennung, ein Einreichungsdatum und eine Bezeichnung.
+      </div>
+      <div style="background:var(--bc-white); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.75rem 1rem; font-size:0.84rem; line-height:1.5; color:var(--bc-gray-600);">
+        <strong style="display:block; color:var(--bc-navy); margin-bottom:0.2rem;">Gezielt bestellen</strong>
+        Bestellt wird <strong style="color:var(--bc-navy);">genau ein Dokument</strong> —
+        nicht das, was das Register sonst noch beilegt.
+      </div>
+      <div style="background:rgba(255,149,0,0.08); border:1px solid rgba(255,149,0,0.35); border-radius:var(--bc-radius-sm); padding:0.75rem 1rem; font-size:0.84rem; line-height:1.5; color:var(--bc-gray-600);">
+        <strong style="display:block; color:#b36800; margin-bottom:0.2rem;">Ein Teil der Einreichungen gehört bereits zum Vorgang</strong>
+        Die Auflistung weist aus, welche davon schon abgerufen sind. Nur die übrigen kosten etwas.
+        Ein Kauf wird zudem nur auf ausdrückliche Bestätigung hin ausgelöst.
+      </div>
+    </div>
+
+    <div style="flex:0 0 42%; background:var(--bc-navy); border-radius:var(--bc-radius); padding:1.1rem 1.3rem; display:flex; flex-direction:column;">
+      <h4 style="color:#fff; margin:0 0 0.6rem;">Wofür sich die Bestellung tatsächlich lohnt</h4>
+      <p style="font-size:0.85rem; color:rgba(255,255,255,0.85); line-height:1.5; margin:0 0 0.8rem;">
+        In Hongkong kommen <strong style="color:#fff;">Satzung und Jahresmeldung beim Standardabruf meist
+        bereits mit</strong> — das Register führt beide als Pflichtdokumente.
+      </p>
+      <p style="font-size:0.85rem; color:rgba(255,255,255,0.85); line-height:1.5; margin:0;">
+        Die Bestellung trägt daher vor allem für das, was <em>nicht</em> mitkommt:
+        ältere Jahrgänge der Jahresmeldung oder eine frühere beziehungsweise geänderte Satzungsfassung.
+      </p>
+      <div style="margin-top:auto; padding-top:0.8rem; font-size:0.78rem; color:rgba(255,255,255,0.6); line-height:1.4;">
+        Der Weg ist angebunden und geprüft, aber noch nicht an einem produktiven Vorgang
+        durchgespielt. Auch der Preis je Einreichung steht noch aus. Zwischenstand Anfang August.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">13</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 14 · Preisbestandteile ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-14">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Preismodell</span>
+  </div>
+
+  <h2>Preisbestandteile</h2>
+  <p class="bc-subtitle">Drei Positionen. Nur die zweite ist optional.</p>
+  <hr class="bc-divider">
+
+  <div style="display:flex; flex:1; gap:1.5rem; overflow:hidden;">
+
+    <div style="flex:0 0 48%; display:flex; flex-direction:column;">
+      <div style="background:var(--bc-navy); border-radius:var(--bc-radius); padding:1.1rem 1.3rem; color:#fff;">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.35rem 0; font-size:0.86rem;">
+          <span>Grundpreis je Vorgang</span><span style="color:var(--bc-blue-light); font-size:0.72rem;">Preisklasse des Landes</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.35rem 0; font-size:0.86rem; border-top:1px solid rgba(255,255,255,0.15);">
+          <span>+ Zuschlag je Zusatzdokument</span><span style="color:var(--bc-orange); font-size:0.72rem;">nur bei Fall 2</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.35rem 0; font-size:0.86rem; border-top:1px solid rgba(255,255,255,0.15);">
+          <span>+ Servicepauschale BetterCo</span><span style="color:rgba(255,255,255,0.5); font-size:0.72rem;">fix</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; padding:0.55rem 0 0; margin-top:0.35rem; border-top:2px solid var(--bc-blue); font-size:0.98rem; font-weight:700;">
+          <span>Preis des Vorgangs</span>
+        </div>
+      </div>
+
+      <p style="font-size:0.82rem; line-height:1.5; color:var(--bc-gray-600); margin:1rem 0 0;">
+        Der Grundpreis ist <strong style="color:var(--bc-navy);">pro Land</strong> festgelegt, nicht pro Dokument.
+        Er deckt den Standardabruf mit <strong style="color:var(--bc-navy);">allen Basisdokumenten</strong> und den
+        strukturierten Daten ab — unabhängig davon, ob das ein Dokument ist oder fünf.
+      </p>
+      <p style="font-size:0.82rem; line-height:1.5; color:var(--bc-gray-600); margin:0.6rem 0 0;">
+        Bei <strong style="color:var(--bc-navy);">Direktanbindung</strong> tritt an die Stelle des Grundpreises die
+        amtliche Gebühr des jeweiligen Registers — in mehreren Fällen null.
+      </p>
+    </div>
+
+    <div style="flex:1; display:flex; flex-direction:column;">
+      <h4 style="margin:0 0 0.5rem;">Vier Preisklassen</h4>
+      <table style="font-size:0.8rem;">
+        <thead><tr><th style="padding:0.5rem 0.8rem; width:22%;">Klasse</th><th style="padding:0.5rem 0.8rem;">Verbreitung</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:0.5rem 0.8rem;"><span class="bc-tag bc-tag-green">A</span></td><td style="padding:0.5rem 0.8rem;">der Regelfall — rund zwei Drittel aller Jurisdiktionen</td></tr>
+          <tr><td style="padding:0.5rem 0.8rem;"><span class="bc-tag bc-tag-blue">B</span></td><td style="padding:0.5rem 0.8rem;">erhöht</td></tr>
+          <tr><td style="padding:0.5rem 0.8rem;"><span class="bc-tag bc-tag-orange">C</span></td><td style="padding:0.5rem 0.8rem;">hoch — aufwendige oder gebührenpflichtige Register</td></tr>
+          <tr><td style="padding:0.5rem 0.8rem;"><span class="bc-tag bc-tag-navy">D</span></td><td style="padding:0.5rem 0.8rem;">Sondertarif — einzelne Offshore-Register</td></tr>
+        </tbody>
+      </table>
+
+      <div style="background:rgba(255,149,0,0.08); border:1px solid rgba(255,149,0,0.35); border-radius:var(--bc-radius-sm); padding:0.7rem 1rem; margin-top:auto; font-size:0.8rem; line-height:1.45; color:var(--bc-gray-600);">
+        <strong style="color:#b36800;">Offener Punkt:</strong>
+        Die konkreten <strong style="color:var(--bc-navy);">Zuschlagsbeträge liegen noch nicht vor</strong>.
+        Sie sind angefragt. Für Dänemark, Israel und Belgien lässt sich daher heute kein
+        Endpreis nennen.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">14</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 15 · Kosten je Jurisdiktion — indirekte Anbindung ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-15">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Kosten · indirekt</span>
+  </div>
+
+  <h2>Kosten je Jurisdiktion — indirekte Anbindung</h2>
+  <p class="bc-subtitle">Dreizehn der fünfzehn Märkte liegen in den beiden günstigsten Klassen — acht in A, fünf in B.</p>
+  <hr class="bc-divider">
+
+  <div class="deck-scroll-x" style="flex:1;">
+  <table style="font-size:0.82rem;">
+    <thead>
+      <tr>
+        <th style="padding:0.55rem 0.8rem;">#</th><th style="padding:0.55rem 0.8rem;">Markt</th><th style="padding:0.55rem 0.8rem; text-align:center;">Klasse</th>
+        <th style="padding:0.55rem 0.8rem;">#</th><th style="padding:0.55rem 0.8rem;">Markt</th><th style="padding:0.55rem 0.8rem; text-align:center;">Klasse</th>
+        <th style="padding:0.55rem 0.8rem;">#</th><th style="padding:0.55rem 0.8rem;">Markt</th><th style="padding:0.55rem 0.8rem; text-align:center;">Klasse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.45rem 0.8rem;">1</td><td style="padding:0.45rem 0.8rem;">Frankreich <span class="deck-direct">direkt</span></td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-orange deck-na">C</span></td>
+        <td style="padding:0.45rem 0.8rem;">6</td><td style="padding:0.45rem 0.8rem;">Dänemark <span class="deck-direct deck-direct--soon">direkt i. V.</span></td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-green">A</span></td>
+        <td style="padding:0.45rem 0.8rem;">11</td><td style="padding:0.45rem 0.8rem;">Japan</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-green">A</span></td>
+      </tr>
+      <tr>
+        <td style="padding:0.45rem 0.8rem;">2</td><td style="padding:0.45rem 0.8rem;">Italien</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-blue">B</span></td>
+        <td style="padding:0.45rem 0.8rem;">7</td><td style="padding:0.45rem 0.8rem;">Niederlande</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-green">A</span></td>
+        <td style="padding:0.45rem 0.8rem;">12</td><td style="padding:0.45rem 0.8rem;">Belgien</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-green">A</span></td>
+      </tr>
+      <tr>
+        <td style="padding:0.45rem 0.8rem;">3</td><td style="padding:0.45rem 0.8rem;">Ver. Königreich <span class="deck-direct">direkt</span></td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-green deck-na">A</span></td>
+        <td style="padding:0.45rem 0.8rem;">8</td><td style="padding:0.45rem 0.8rem;">Luxemburg</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-orange">C</span></td>
+        <td style="padding:0.45rem 0.8rem;">13</td><td style="padding:0.45rem 0.8rem;">Kuwait</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-green">A</span></td>
+      </tr>
+      <tr>
+        <td style="padding:0.45rem 0.8rem;">4</td><td style="padding:0.45rem 0.8rem;">Vereinigte Staaten</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-blue">B</span></td>
+        <td style="padding:0.45rem 0.8rem;">9</td><td style="padding:0.45rem 0.8rem;">Schweiz</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-green">A</span></td>
+        <td style="padding:0.45rem 0.8rem;">14</td><td style="padding:0.45rem 0.8rem;">Singapur</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-green">A</span></td>
+      </tr>
+      <tr>
+        <td style="padding:0.45rem 0.8rem;">5</td><td style="padding:0.45rem 0.8rem;">Spanien</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-blue">B</span></td>
+        <td style="padding:0.45rem 0.8rem;">10</td><td style="padding:0.45rem 0.8rem;">Israel</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-blue">B</span></td>
+        <td style="padding:0.45rem 0.8rem;">15</td><td style="padding:0.45rem 0.8rem;">Hongkong</td><td style="padding:0.45rem 0.8rem; text-align:center;"><span class="bc-tag bc-tag-blue">B</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="background:rgba(52,199,89,0.07); border-left:3px solid var(--bc-green); border-radius:var(--bc-radius-sm); padding:0.7rem 1rem; margin-top:0.8rem; font-size:0.82rem; line-height:1.45; color:var(--bc-gray-600);">
+    <strong style="color:var(--bc-navy);">Die Klasse beschreibt den Preis der indirekten Anbindung — für die
+    als <span class="deck-direct">direkt</span> markierten Märkte gilt sie nicht.</strong>
+    Frankreich steht hier in Klasse C, der teuersten der fünfzehn — und ist genau der Markt, der nicht
+    so bezogen wird. Dort zählen die eigenen Beträge (Folie 17).
+  </div>
+
+  <div style="background:var(--bc-gray-50); border-left:3px solid var(--bc-blue); border-radius:var(--bc-radius-sm); padding:0.6rem 1rem; margin-top:0.6rem; font-size:0.8rem; line-height:1.45; color:var(--bc-gray-600);">
+    Die Ausreißer sind <strong style="color:var(--bc-navy);">Frankreich und Luxemburg</strong> (Klasse C) —
+    für Frankreich der Grund für den bereits aufgebauten eigenen Bezugsweg. Die vollständige Übersicht
+    nach Region folgt auf der nächsten Folie.
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">15</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 16 · Preisklassen im Überblick ============
+     Laenderzuordnung und Regionen stammen aus docs/generated/customer_tables.md
+     (Abschnitt C), erzeugt von scripts/build_customer_tables.py. Nicht von Hand
+     pflegen — Aenderungen gehoeren in curation/price_bands.json.
+     ============================================================ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-16">
+  <style>
+    #slide-16 h2           { margin-bottom:0.1rem; }
+    #slide-16 .bc-subtitle { margin-bottom:0.2rem; font-size:0.85rem; }
+  </style>
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Preisklassen · Überblick</span>
+  </div>
+
+  <h2>Preisklassen im Überblick</h2>
+  <p class="bc-subtitle">Vier Klassen, 139 Jurisdiktionen mit hinterlegter Preisangabe.</p>
+  <hr class="bc-divider" style="margin:0.45rem 0;">
+
+  <div style="display:flex; gap:0.5rem; margin-bottom:0.5rem;">
+    <div style="flex:1; background:rgba(52,199,89,0.08); border:1px solid rgba(52,199,89,0.3); border-radius:var(--bc-radius-sm); padding:0.4rem 0.7rem;">
+      <span class="bc-tag bc-tag-green">A</span>
+      <span style="font-size:0.72rem; color:var(--bc-gray-600); margin-left:0.35rem;">der Regelfall — <strong style="color:var(--bc-navy);">93</strong></span>
+    </div>
+    <div style="flex:1; background:rgba(104,149,255,0.08); border:1px solid rgba(104,149,255,0.3); border-radius:var(--bc-radius-sm); padding:0.4rem 0.7rem;">
+      <span class="bc-tag bc-tag-blue">B</span>
+      <span style="font-size:0.72rem; color:var(--bc-gray-600); margin-left:0.35rem;">erhöht — <strong style="color:var(--bc-navy);">33</strong></span>
+    </div>
+    <div style="flex:1; background:rgba(255,149,0,0.08); border:1px solid rgba(255,149,0,0.3); border-radius:var(--bc-radius-sm); padding:0.4rem 0.7rem;">
+      <span class="bc-tag bc-tag-orange">C</span>
+      <span style="font-size:0.72rem; color:var(--bc-gray-600); margin-left:0.35rem;">aufwendige oder gebührenpflichtige Register — <strong style="color:var(--bc-navy);">11</strong></span>
+    </div>
+    <div style="flex:1; background:var(--bc-gray-50); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.4rem 0.7rem;">
+      <span class="bc-tag bc-tag-navy">D</span>
+      <span style="font-size:0.72rem; color:var(--bc-gray-600); margin-left:0.35rem;">Sondertarif — <strong style="color:var(--bc-navy);">2</strong></span>
+    </div>
+  </div>
+
+  <div class="deck-regions" style="flex:1; overflow:hidden;">
+
+    <div class="deck-region">
+      <h4>Europa <span style="font-weight:400; color:var(--bc-gray-400);">49</span></h4>
+      <p><b>A</b> Albanien, Belarus, Belgien, Bosnien und Herzegowina, Bulgarien, Deutschland, Dänemark, Estland, Färöer, Griechenland, Grönland, Irland, Island, Jersey, Kroatien, Lettland, Moldau, Montenegro, Niederlande, Norwegen, Polen, Russland, Schweiz, Serbien, Slowakei, Slowenien, Tschechien, Ukraine, Ungarn, Vereinigtes Königreich</p>
+      <p><b>B</b> Finnland, Gibraltar, Isle of Man, Italien, Liechtenstein, Malta, Nordmazedonien, Rumänien, San Marino, Spanien, Zypern, Åland, Österreich</p>
+      <p><b>C</b> Frankreich, Guernsey, Luxemburg, Monaco, Portugal, Schweden</p>
+    </div>
+
+    <div class="deck-region">
+      <h4>Asien-Pazifik <span style="font-weight:400; color:var(--bc-gray-400);">39</span></h4>
+      <p><b>A</b> Aserbaidschan, China, Cookinseln, Französisch-Polynesien, Georgien, Indien, Japan, Kambodscha, Kasachstan, Kirgisistan, Laos, Malediven, Marshallinseln, Myanmar, Nepal, Neuseeland, Papua-Neuguinea, Salomonen, Samoa, Singapur, Südkorea, Taiwan, Thailand, Tonga, Usbekistan, Vanuatu</p>
+      <p><b>B</b> Armenien, Australien, Hongkong, Hongkong (Steuerbehörde), Kokosinseln, Malaysia, Pakistan, Philippinen, Sri Lanka, Vietnam, Weihnachtsinsel</p>
+      <p><b>C</b> Brunei, Indonesien</p>
+    </div>
+
+    <div class="deck-region">
+      <h4>Naher Osten &amp; Afrika <span style="font-weight:400; color:var(--bc-gray-400);">25</span></h4>
+      <p><b>A</b> Angola, Bahrain, Botsuana, Dschibuti, Irak, Iran, Jemen, Jordanien, Katar, Kuwait, Lesotho, Mauritius, Oman, Palästina, Saudi-Arabien, Senegal, Südafrika, Türkei, Vereinigte Arabische Emirate, Äthiopien</p>
+      <p><b>B</b> Israel, Kenia, Tunesien</p>
+      <p><b>C</b> Marokko, Seychellen</p>
+    </div>
+
+    <div class="deck-region">
+      <h4>Amerika <span style="font-weight:400; color:var(--bc-gray-400);">18</span></h4>
+      <p><b>A</b> Amerikanische Jungferninseln, Argentinien, Brasilien, Chile, Ecuador, Guadeloupe, Kolumbien, Martinique, Mayotte, Mexiko, Panama, Paraguay, Peru, Puerto Rico, Trinidad und Tobago</p>
+      <p><b>B</b> Costa Rica, Kanada, Vereinigte Staaten</p>
+    </div>
+
+    <div class="deck-region">
+      <h4>Finanz- und Offshore-Plätze <span style="font-weight:400; color:var(--bc-gray-400);">8</span></h4>
+      <p><b>A</b> Curaçao, St. Vincent und die Grenadinen</p>
+      <p><b>B</b> Aruba, Bahamas, Bermuda</p>
+      <p><b>C</b> Belize</p>
+      <p><b>D</b> Britische Jungferninseln, Kaimaninseln</p>
+    </div>
+
+  </div>
+
+  <p style="font-size:0.66rem; line-height:1.4; color:var(--bc-gray-600); margin:0.4rem 0 0;">
+    Für die vier direkt angebundenen Märkte — Deutschland, Frankreich, Ver. Königreich und künftig
+    Dänemark — gilt die Klasse nicht; dort zählen die Beträge der nächsten Folie. Gesellschaften in
+    Ländern ohne Registeranbindung können als manuell erfasster Vorgang geführt werden, dann ohne
+    automatischen Dokumentenabruf.
+  </p>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">16</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 17 · Stückkosten je Jurisdiktion — Direktanbindung ============ -->
+<div class="bc-block bc-slide bc-bg-light deck-slide" id="slide-17">
+  <!-- Der Kbis/RNE-Block hat die Folie um 54 px ueberlaufen lassen (Tabelle unten
+       abgeschnitten). Folienlokal kompaktiert; td-Paddings stehen inline, daher !important. -->
+  <style>
+    #slide-17 table            { font-size:0.78rem !important; }
+    #slide-17 th,
+    #slide-17 td               { padding:0.28rem 0.8rem !important; }
+    #slide-17 h2               { margin-bottom:0.1rem; }
+    #slide-17 .bc-subtitle     { margin-bottom:0.15rem; }
+    #slide-17 .bc-divider      { margin:0.45rem 0 !important; }
+  </style>
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Kosten · direkt</span>
+  </div>
+
+  <h2>Stückkosten je Jurisdiktion — Direktanbindung</h2>
+  <p class="bc-subtitle">Hier stehen konkrete Beträge statt Preisklassen.</p>
+  <hr class="bc-divider">
+
+  <div class="deck-scroll-x">
+  <table style="font-size:0.82rem;">
+    <thead>
+      <tr><th style="padding:0.55rem 0.9rem;">Markt</th><th style="padding:0.55rem 0.9rem;">Registerauszug</th><th style="padding:0.55rem 0.9rem;">Gesellschaftsvertrag</th><th style="padding:0.55rem 0.9rem;">Gesellschafterliste</th><th style="padding:0.55rem 0.9rem;">Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:0.5rem 0.9rem;"><strong>Deutschland</strong></td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-green); font-weight:600;">kostenfrei</td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-green); font-weight:600;">kostenfrei</td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-green); font-weight:600;">kostenfrei</td>
+        <td style="padding:0.5rem 0.9rem;"><span class="bc-tag bc-tag-green">produktiv</span></td>
+      </tr>
+      <tr>
+        <td style="padding:0.5rem 0.9rem;"><strong>Frankreich</strong></td>
+        <td style="padding:0.5rem 0.9rem;"><strong>3,06 €</strong> <span style="font-size:0.7rem; color:var(--bc-gray-600);">gesetzliche Gebühr, Kbis <sup>2</sup></span></td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-green); font-weight:600;">kostenfrei</td>
+        <td style="padding:0.5rem 0.9rem;"><strong>3,00 €</strong> <span style="font-size:0.7rem; color:var(--bc-gray-600);"><sup>1</sup></span></td>
+        <td style="padding:0.5rem 0.9rem;"><span class="bc-tag bc-tag-green">produktiv</span></td>
+      </tr>
+      <tr>
+        <td style="padding:0.5rem 0.9rem;"><strong>Ver. Königreich</strong></td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-gray-400);">existiert nicht</td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-green); font-weight:600;">kostenfrei</td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-gray-400);">existiert nicht</td>
+        <td style="padding:0.5rem 0.9rem;"><span class="bc-tag bc-tag-green">produktiv</span></td>
+      </tr>
+      <tr>
+        <td style="padding:0.5rem 0.9rem;"><strong>Dänemark</strong></td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-gray-600);">in Prüfung</td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-gray-600);">in Prüfung</td>
+        <td style="padding:0.5rem 0.9rem; color:var(--bc-gray-400);">existiert nicht</td>
+        <td style="padding:0.5rem 0.9rem;"><span class="bc-tag bc-tag-orange">in Vorbereitung</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="display:flex; gap:0.9rem; margin-top:0.9rem;">
+    <div style="flex:1; font-size:0.72rem; line-height:1.4; color:var(--bc-gray-600); background:var(--bc-white); border:1px solid var(--bc-gray-200); border-radius:var(--bc-radius-sm); padding:0.6rem 0.85rem;">
+      <sup>1</sup> <strong style="color:var(--bc-navy);">Kapitalverteilungsnachweis:</strong> Gesellschafter mit Anteilszahl und Prozentsatz,
+      auf Briefkopf des zuständigen Gerichts. <strong style="color:var(--bc-navy);">Ohne Siegel und ohne Beglaubigungsvermerk</strong>
+      — daher Nachweisstufe „Dokument", nicht „beglaubigt". Der Inhalt gibt den Stand der letzten hinterlegten Urkunde wieder;
+      das Stichtagsdatum wird mitgeliefert.
+    </div>
+    <div style="flex:1; font-size:0.72rem; line-height:1.4; color:var(--bc-gray-600); background:rgba(255,149,0,0.07); border:1px solid rgba(255,149,0,0.3); border-radius:var(--bc-radius-sm); padding:0.6rem 0.85rem;">
+      <sup>2</sup> <strong style="color:#b36800;">Der Kbis ist der französische Registerauszug</strong> — vom Handelsgericht
+      ausgestellt und gesiegelt, Nachweisstufe „beglaubigt". Die 3,06 € sind die gesetzliche Gebühr: 2,03 € Auszug
+      zzgl. 0,52 € elektronischer Übermittlung. Er ist der einzige Direktbezug
+      <strong style="color:var(--bc-navy);">ohne Bestellschnittstelle</strong> — die Bestellung läuft über ein Portal.
+      Für hohes Volumen wird der Weg ausgebaut; <strong style="color:var(--bc-navy);">dafür wird das Mengengerüst benötigt.</strong>
+    </div>
+  </div>
+
+  <div style="background:rgba(0,122,255,0.07); border:1px solid rgba(0,122,255,0.3); border-radius:var(--bc-radius-sm); padding:0.65rem 1rem; margin-top:0.7rem; font-size:0.78rem; line-height:1.45; color:var(--bc-gray-600);">
+    <strong style="color:var(--bc-navy);">Frage an Septeo — sie entscheidet über den Preis in Frankreich.</strong>
+    Frankreich kennt seit 2023 ein <strong style="color:var(--bc-navy);">zweites, kostenloses</strong> Auszugsdokument:
+    die Bescheinigung der nationalen Registerbehörde. Sie ist nicht vom Handelsgericht gesiegelt und damit ein anderes
+    Instrument als der Kbis — beide sind nur über ein Portal zu beziehen.
+    <strong style="color:var(--bc-navy);">Reicht die amtliche Bescheinigung, oder muss es der Kbis sein?</strong>
+    Im ersten Fall wird der französische Registerauszug kostenfrei.
+  </div>
+
+  <div style="background:var(--bc-navy); border-radius:var(--bc-radius-sm); padding:0.65rem 1rem; margin-top:0.8rem; font-size:0.8rem; line-height:1.45; color:rgba(255,255,255,0.88);">
+    <strong style="color:#fff;">An der Schnittstelle ändert sich nichts.</strong>
+    Angefragt werden alle Dokumente oder eine einzelne Dokumentenkategorie für eine Gesellschaft — welcher Weg genutzt wird, wird intern entschieden.
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">17</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 18 · Gemeinsamer Business Case (LEERES GERÜST) ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-18">
+  <!-- Folie 18 hat 16 Datenzeilen und lief ueber die Folienhoehe hinaus (Kuwait/Singapur/
+       Hongkong/weitere wurden abgeschnitten). Die td-Paddings stehen inline, daher !important. -->
+  <style>
+    #slide-18 table          { font-size:0.66rem !important; }
+    #slide-18 th,
+    #slide-18 td             { padding:0.14rem 0.55rem !important; }
+    #slide-18 .bc-tag        { font-size:0.56rem; padding:0.04rem 0.4rem; }
+    #slide-18 h2             { margin-bottom:0.1rem; }
+    #slide-18 .bc-subtitle   { margin-bottom:0.15rem; }
+  </style>
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Zur gemeinsamen Abstimmung</span>
+  </div>
+
+  <h2>Gemeinsamer Business Case</h2>
+  <p class="bc-subtitle">Einkauf und Verkauf je Klasse stehen. Was fehlt, ist die Menge je Markt — ohne sie lässt sich der Business Case nicht rechnen. <span style="font-size:0.8rem;">Anbindungsart: <span class="bc-tag bc-tag-green">direkt</span> produktiv &middot; <span class="bc-tag bc-tag-orange">direkt i. V.</span> &middot; <span class="bc-tag" style="background:rgba(52,199,89,0.14); color:#1a7f37;">geplant</span> &middot; <span class="bc-tag bc-tag-orange">Business Case</span> &middot; <span class="bc-tag bc-tag-blue">indirekt</span></span></p>
+  <hr class="bc-divider" style="margin:0.6rem 0;">
+
+  <div class="deck-scroll-x" style="flex:1;">
+  <table style="font-size:0.72rem;">
+    <thead>
+      <tr>
+        <th style="padding:0.4rem 0.6rem;">Jurisdiktion</th>
+        <th style="padding:0.4rem 0.6rem;">Anbindungsart</th>
+        <th style="padding:0.4rem 0.6rem; text-align:center;">Klasse</th>
+        <th style="padding:0.4rem 0.6rem; text-align:center;">Menge pro Jahr</th>
+        <th style="padding:0.4rem 0.6rem; text-align:center;">Einkauf</th>
+        <th style="padding:0.4rem 0.6rem; text-align:center;">Verkauf</th>
+        <th style="padding:0.4rem 0.6rem; text-align:center;">Marge</th>
+        <th style="padding:0.4rem 0.6rem; text-align:center;">Zuschlag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:0.3rem 0.6rem;">Frankreich</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-green">direkt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>C</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">54,50&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>70,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">15,50&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Italien</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-orange">Business Case</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>B</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">26,70&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>35,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">8,30&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Ver. Königreich</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-green">direkt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>A</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">10,80&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>15,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">4,20&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Vereinigte Staaten</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-blue">indirekt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>B</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">26,70&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>35,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">8,30&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Spanien</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-blue">indirekt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>B</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">26,70&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>35,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">8,30&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Dänemark</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-orange">direkt i. V.</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>A</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">10,80&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>15,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">4,20&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Niederlande</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-blue">indirekt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>A</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">10,80&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>15,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">4,20&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Luxemburg</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-orange">Business Case</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>C</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">54,50&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>70,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">15,50&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Schweiz</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-blue">indirekt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>A</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">10,80&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>15,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">4,20&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Israel</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag" style="background:rgba(52,199,89,0.14); color:#1a7f37;">geplant</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>B</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">26,70&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>35,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">8,30&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Japan</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-blue">indirekt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>A</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">10,80&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>15,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">4,20&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Belgien</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag" style="background:rgba(52,199,89,0.14); color:#1a7f37;">geplant</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>A</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">10,80&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>15,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">4,20&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Kuwait</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag" style="background:var(--bc-gray-50); color:var(--bc-gray-600);">nicht erhoben</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>A</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">10,80&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>15,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">4,20&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Singapur</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-blue">indirekt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>A</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">10,80&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>15,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">4,20&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;">Hongkong</td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-blue">indirekt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>B</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;">26,70&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;"><strong>35,00&nbsp;€</strong></td><td style="padding:0.3rem 0.6rem; text-align:center;">8,30&nbsp;€</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+      <tr><td style="padding:0.3rem 0.6rem;"><em>weitere Jurisdiktionen</em></td><td style="padding:0.3rem 0.6rem;"><span class="bc-tag bc-tag-blue">indirekt</span></td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td><td style="padding:0.3rem 0.6rem; text-align:center;" class="deck-blank">&mdash;</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:0.7rem; line-height:1.4; color:var(--bc-gray-600); margin:0.5rem 0 0;">Beträge je Vorgang, netto. Summe über alle 15 Märkte: Einkauf 328,90&nbsp;€ &middot; Verkauf 435,00&nbsp;€ &middot; Marge 106,10&nbsp;€. Für die direkt angebundenen Märkte liegen die tatsächlichen Kosten unter dem hier ausgewiesenen Einkauf (Folie 17) — die Marge ist dort entsprechend höher. Der Zuschlag für Zusatzdokumente ist noch offen.</p>
+
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">18</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 19 · Next Steps ============ -->
+<div class="bc-block bc-slide bc-bg-gradient deck-slide" id="slide-19">
+  <div class="bc-header">
+    <span class="deck-logo deck-logo--invert" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Next Steps</span>
+  </div>
+
+  <h2>Next Steps</h2>
+  <hr class="bc-divider" style="background:var(--bc-blue-light); margin:0.6rem 0;">
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:1.05rem; max-width:60ch;">
+
+    <div style="display:flex; gap:1rem; align-items:baseline;">
+      <span style="flex-shrink:0; width:30px; height:30px; border-radius:50%; background:rgba(255,255,255,0.18); color:#fff; font-size:0.85rem; font-weight:700; display:inline-flex; align-items:center; justify-content:center;">1</span>
+      <span style="font-size:1.08rem; line-height:1.4; color:#fff;">Architektur und gemeinsamen Go-to-Market vereinbaren</span>
+    </div>
+
+    <div style="display:flex; gap:1rem; align-items:baseline;">
+      <span style="flex-shrink:0; width:30px; height:30px; border-radius:50%; background:rgba(255,255,255,0.18); color:#fff; font-size:0.85rem; font-weight:700; display:inline-flex; align-items:center; justify-content:center;">2</span>
+      <span style="font-size:1.08rem; line-height:1.4; color:#fff;">Preise klären — Zusatzdokumente und laufende Änderungsmeldung</span>
+    </div>
+
+    <div style="display:flex; gap:1rem; align-items:baseline;">
+      <span style="flex-shrink:0; width:30px; height:30px; border-radius:50%; background:rgba(255,255,255,0.18); color:#fff; font-size:0.85rem; font-weight:700; display:inline-flex; align-items:center; justify-content:center;">3</span>
+      <span style="font-size:1.08rem; line-height:1.4; color:#fff;">Sourcing der Zusatzdokumente entscheiden — als Teil des Vorgangs oder separat</span>
+    </div>
+
+    <div style="display:flex; gap:1rem; align-items:baseline;">
+      <span style="flex-shrink:0; width:30px; height:30px; border-radius:50%; background:rgba(255,255,255,0.18); color:#fff; font-size:0.85rem; font-weight:700; display:inline-flex; align-items:center; justify-content:center;">4</span>
+      <div>
+        <span style="font-size:1.08rem; line-height:1.4; color:#fff;">Business Case gemeinsam füllen</span><br>
+        <span style="font-size:0.82rem; color:rgba(255,255,255,0.72);">Dafür wird das Mengengerüst je Markt benötigt — erwartete Vorgänge pro Jahr.</span>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:1rem; align-items:baseline;">
+      <span style="flex-shrink:0; width:30px; height:30px; border-radius:50%; background:rgba(255,255,255,0.18); color:#fff; font-size:0.85rem; font-weight:700; display:inline-flex; align-items:center; justify-content:center;">5</span>
+      <span style="font-size:1.08rem; line-height:1.4; color:#fff;">Schnittstellen gemeinsam definieren</span>
+    </div>
+
+    <div style="display:flex; gap:1rem; align-items:baseline;">
+      <span style="flex-shrink:0; width:30px; height:30px; border-radius:50%; background:var(--bc-orange); color:#3d2400; font-size:0.85rem; font-weight:700; display:inline-flex; align-items:center; justify-content:center;">6</span>
+      <span style="font-size:1.08rem; line-height:1.4; color:#fff;">Umsetzung finalisieren</span>
+    </div>
+
+  </div>
+
+  <div style="font-size:0.78rem; line-height:1.45; color:rgba(255,255,255,0.7);">
+    Offene Punkte in Arbeit, Zwischenstand Mitte August — Einzelheiten in der Leistungsbeschreibung.
+  </div>
+
+  <div class="bc-footer" style="color:rgba(255,255,255,0.55);">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label" style="color:rgba(255,255,255,0.6);">für</span><svg class="deck-septeo deck-septeo--onDark" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">19</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============================================================
+     ANHANG — Deckblatt auf Folie 20, Inhalt auf Folien 21 bis 24.
+     Die Inhaltsfolien behalten zusaetzlich ihr Anhang-Label in der
+     Kopfzeile, damit sie auch einzeln gezeigt zuzuordnen sind.
+     ============================================================ -->
+
+<!-- ============ 20 · Anhang (Deckblatt) ============ -->
+<div class="bc-block bc-slide bc-bg-gradient deck-slide" id="slide-20">
+  <div class="bc-header">
+    <span class="deck-logo deck-logo--invert" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Anhang</span>
+  </div>
+
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+    <h1 style="max-width:14ch;">Anhang</h1>
+    <p style="font-size:1.15rem; font-weight:300; max-width:48ch;">
+      Vertragliche und technische Einzelheiten zur Anbindung
+    </p>
+    <hr class="bc-divider" style="background:var(--bc-blue-light);">
+
+    <div style="display:flex; flex-direction:column; gap:0.55rem; margin-top:0.9rem; max-width:44ch;">
+      <div style="display:flex; gap:0.9rem; align-items:baseline; font-size:1rem; color:rgba(255,255,255,0.92);">
+        <span style="flex-shrink:0; width:1.6rem; font-variant-numeric:tabular-nums; color:rgba(255,255,255,0.55); font-size:0.85rem;">21</span>
+        <span>Schnittstelle</span>
+      </div>
+      <div style="display:flex; gap:0.9rem; align-items:baseline; font-size:1rem; color:rgba(255,255,255,0.92);">
+        <span style="flex-shrink:0; width:1.6rem; font-variant-numeric:tabular-nums; color:rgba(255,255,255,0.55); font-size:0.85rem;">22</span>
+        <span>Nachweisstufen</span>
+      </div>
+      <div style="display:flex; gap:0.9rem; align-items:baseline; font-size:1rem; color:rgba(255,255,255,0.92);">
+        <span style="flex-shrink:0; width:1.6rem; font-variant-numeric:tabular-nums; color:rgba(255,255,255,0.55); font-size:0.85rem;">23</span>
+        <span>Abrufdatum und Inhaltsdatum</span>
+      </div>
+      <div style="display:flex; gap:0.9rem; align-items:baseline; font-size:1rem; color:rgba(255,255,255,0.92);">
+        <span style="flex-shrink:0; width:1.6rem; font-variant-numeric:tabular-nums; color:rgba(255,255,255,0.55); font-size:0.85rem;">24</span>
+        <span>Umstellung</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bc-footer" style="color:rgba(255,255,255,0.55);">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label" style="color:rgba(255,255,255,0.6);">für</span><svg class="deck-septeo deck-septeo--onDark" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">20</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 21 · Schnittstelle ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-21">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Anhang · Schnittstelle</span>
+  </div>
+
+  <h2>Schnittstelle</h2>
+  <p class="bc-subtitle">Vier Aufrufe. Keine Bezeichnung eines Bezugswegs in Pfad, Feld oder Status.</p>
+  <hr class="bc-divider">
+
+  <div style="display:flex; flex:1; gap:1.5rem; overflow:hidden;">
+
+    <div style="flex:1; display:flex; flex-direction:column; overflow:hidden;">
+      <div style="background:var(--bc-navy); border-radius:var(--bc-radius-sm); padding:0.85rem 1rem; font-family:ui-monospace,'Cascadia Mono','Consolas',monospace; font-size:0.7rem; line-height:1.8; color:rgba(255,255,255,0.9);">
+        <div><span style="color:var(--bc-blue-light);">POST</span> /cases <span style="color:rgba(255,255,255,0.5);">— Land, Rechtsform, Identifikatoren, benötigte Kategorien, Nachweisstufe</span></div>
+        <div><span style="color:var(--bc-blue-light);">GET&nbsp;</span> /cases/{id} <span style="color:rgba(255,255,255,0.5);">— Status, je Kategorie ein eigener Zustand</span></div>
+        <div><span style="color:var(--bc-blue-light);">GET&nbsp;</span> /cases/{id}/documents <span style="color:rgba(255,255,255,0.5);">— mit Herkunft, Stufe, beiden Datumsangaben</span></div>
+        <div><span style="color:var(--bc-blue-light);">GET&nbsp;</span> /cases/{id}/documents/{d} <span style="color:rgba(255,255,255,0.5);">— die Datei selbst</span></div>
+      </div>
+
+      <h4 style="margin:1rem 0 0.4rem;">Zustände je Dokumentenkategorie</h4>
+      <div style="display:flex; align-items:center; gap:0.35rem; flex-wrap:wrap; font-size:0.72rem;">
+        <span class="bc-tag bc-tag-blue">angefordert</span><span style="color:var(--bc-gray-400);">&rarr;</span>
+        <span class="bc-tag bc-tag-blue">beauftragt</span><span style="color:var(--bc-gray-400);">&rarr;</span>
+        <span class="bc-tag bc-tag-blue">geliefert</span><span style="color:var(--bc-gray-400);">&rarr;</span>
+        <span class="bc-tag bc-tag-green">gespeichert</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:0.35rem; flex-wrap:wrap; font-size:0.72rem; margin-top:0.45rem;">
+        <span style="color:var(--bc-gray-400); font-size:0.7rem;">Abzweige:</span>
+        <span class="bc-tag" style="background:rgba(255,59,48,0.15); color:#b3271f;">fehlgeschlagen</span>
+        <span class="bc-tag" style="background:var(--bc-gray-200); color:var(--bc-gray-600);">nicht verfügbar</span>
+      </div>
+
+      <div style="background:var(--bc-gray-50); border-left:3px solid var(--bc-blue); border-radius:var(--bc-radius-sm); padding:0.7rem 0.95rem; margin-top:auto; font-size:0.79rem; line-height:1.45; color:var(--bc-gray-600);">
+        <strong style="color:var(--bc-navy);">Der Ablauf ist asynchron.</strong>
+        Ein Teil der Beschaffung dauert Minuten, ein Teil Stunden bis Tage. Eine synchrone Anfrage kann das
+        nicht abbilden. Der Fortschritt wird per Callback gemeldet; Polling ist möglich, aber nicht vorgesehen.
+      </div>
+    </div>
+
+    <div style="flex:0 0 38%; display:flex; flex-direction:column;">
+      <h4 style="margin:0 0 0.5rem;">Was zu jedem Dokument mitgeliefert wird</h4>
+      <table style="font-size:0.76rem;">
+        <thead><tr><th style="padding:0.45rem 0.7rem;">Angabe</th><th style="padding:0.45rem 0.7rem;">Bedeutung</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:0.42rem 0.7rem;"><strong>Abrufdatum</strong></td><td style="padding:0.42rem 0.7rem;">Alter der Kopie</td></tr>
+          <tr><td style="padding:0.42rem 0.7rem;"><strong>Inhaltsdatum</strong></td><td style="padding:0.42rem 0.7rem;">Stand, auf den sich das Dokument bezieht</td></tr>
+          <tr><td style="padding:0.42rem 0.7rem;"><strong>Kategorie und Fassung</strong></td><td style="padding:0.42rem 0.7rem;">z. B. Satzung, Fassung 12.03.2024</td></tr>
+          <tr><td style="padding:0.42rem 0.7rem;"><strong>Nachweisstufe</strong></td><td style="padding:0.42rem 0.7rem;">daten · dokument · beglaubigt</td></tr>
+          <tr><td style="padding:0.42rem 0.7rem;"><strong>Quellenangabe</strong></td><td style="padding:0.42rem 0.7rem;">Aktenzeichen beim Register</td></tr>
+          <tr><td style="padding:0.42rem 0.7rem;"><strong>Textfassung</strong></td><td style="padding:0.42rem 0.7rem;">Ergebnis der Texterkennung</td></tr>
+        </tbody>
+      </table>
+
+      <div style="background:var(--bc-gray-50); border-radius:var(--bc-radius-sm); padding:0.7rem 0.95rem; margin-top:auto; font-size:0.76rem; line-height:1.45; color:var(--bc-gray-600);">
+        <strong style="color:var(--bc-navy);">Texterkennung inklusive.</strong> Registerdokumente sind
+        vielfach Scans ohne Textebene. Gemessen an zwei Bezugswegen: null Textzeichen über 15 und
+        43 Seiten. Die Erkennung erfolgt
+        <strong style="color:var(--bc-navy);">einmal bei der Aufnahme</strong>; das Ergebnis wird neben der PDF
+        abgelegt und mitgeliefert.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">21</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 22 · Nachweisstufen ============ -->
+<div class="bc-block bc-slide bc-bg-navy deck-slide" id="slide-22">
+  <div class="bc-header">
+    <span class="deck-logo deck-logo--invert" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Anhang · Nachweisstufen</span>
+  </div>
+
+  <h2>Nachweisstufen</h2>
+  <p style="font-size:1.05rem; font-weight:300; color:rgba(255,255,255,0.8); margin:0 0 0.3rem;">Wird je Anfrage festgelegt und bestimmt, welche Antwort richtig ist.</p>
+  <hr class="bc-divider" style="background:var(--bc-blue-light); margin:0.7rem 0;">
+
+  <div style="display:flex; flex:1; gap:1.5rem; overflow:hidden;">
+
+    <div style="flex:0 0 46%; display:flex; flex-direction:column; gap:0.5rem;">
+      <div style="background:rgba(255,255,255,0.07); border-left:3px solid var(--bc-gray-400); border-radius:var(--bc-radius-sm); padding:0.6rem 0.9rem;">
+        <strong style="color:#fff; font-size:0.85rem;">daten</strong>
+        <div style="font-size:0.76rem; color:rgba(255,255,255,0.75); line-height:1.4;">eine Information, kein Dokument. <strong style="color:#fff;">Nie ein Nachweis.</strong></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07); border-left:3px solid var(--bc-blue); border-radius:var(--bc-radius-sm); padding:0.6rem 0.9rem;">
+        <strong style="color:#fff; font-size:0.85rem;">dokument</strong>
+        <div style="font-size:0.76rem; color:rgba(255,255,255,0.75); line-height:1.4;">ein tatsächlich eingereichtes Dokument, ohne Siegel</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07); border-left:3px solid var(--bc-green); border-radius:var(--bc-radius-sm); padding:0.6rem 0.9rem;">
+        <strong style="color:#fff; font-size:0.85rem;">beglaubigt</strong>
+        <div style="font-size:0.76rem; color:rgba(255,255,255,0.75); line-height:1.4;">von der Registerbehörde ausgestellt und gesiegelt</div>
+      </div>
+      <p style="font-size:0.76rem; color:rgba(255,255,255,0.65); line-height:1.45; margin:0.3rem 0 0;">
+        Eine Apostille ist <strong style="color:#fff;">keine vierte Stufe</strong>, sondern eine Eigenschaft
+        eines beglaubigten Dokuments.
+      </p>
+    </div>
+
+    <div style="flex:1; display:flex; flex-direction:column;">
+      <div style="background:rgba(255,255,255,0.1); border-radius:var(--bc-radius); padding:1rem 1.2rem;">
+        <h4 style="color:#fff; margin:0 0 0.5rem;">Testfall: eine französische Gesellschafterliste</h4>
+        <div style="display:flex; gap:0.7rem; align-items:flex-start; margin-bottom:0.55rem;">
+          <span class="bc-tag bc-tag-green" style="flex-shrink:0;">beglaubigt</span>
+          <div style="font-size:0.8rem; color:rgba(255,255,255,0.9); line-height:1.4;">
+            &rarr; richtige Antwort: <strong style="color:#fff;">„nicht verfügbar"</strong>
+            — und <em>nicht</em> der 3,00-€-Nachweis
+          </div>
+        </div>
+        <div style="display:flex; gap:0.7rem; align-items:flex-start;">
+          <span class="bc-tag bc-tag-blue" style="flex-shrink:0;">dokument</span>
+          <div style="font-size:0.8rem; color:rgba(255,255,255,0.9); line-height:1.4;">
+            &rarr; richtige Antwort: genau <strong style="color:#fff;">dieser Nachweis</strong>
+          </div>
+        </div>
+        <div style="margin-top:0.7rem; padding-top:0.7rem; border-top:1px solid rgba(255,255,255,0.2); font-size:0.85rem; color:#fff; font-weight:600;">
+          Gleiche Anfrage, unterschiedliches Ergebnis.
+        </div>
+      </div>
+
+      <p style="font-size:0.8rem; color:rgba(255,255,255,0.8); line-height:1.5; margin:0.9rem 0 0;">
+        Ohne dieses Feld bliebe nur die Vermutung — und im Zweifel würde das Günstigere geliefert.
+        Auffallen würde das erst, wenn eine Prüfstelle die KYC-Akte ablehnt.
+      </p>
+
+      <div style="background:var(--bc-orange); border-radius:var(--bc-radius-sm); padding:0.7rem 1rem; margin-top:auto; font-size:0.8rem; line-height:1.45; color:#3d2400;">
+        <strong>Zu klären:</strong> ob die Strecke zwischen <em>dokument</em> und <em>beglaubigt</em>
+        unterscheiden muss. Die Antwort wird <strong>vor</strong> dem Festschreiben des Vertrags benötigt —
+        nachträglich wäre sie eine brechende Änderung.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer" style="color:rgba(255,255,255,0.55);">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label" style="color:rgba(255,255,255,0.6);">für</span><svg class="deck-septeo deck-septeo--onDark" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">22</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 23 · Abrufdatum und Inhaltsdatum ============ -->
+<div class="bc-block bc-slide bc-bg-white deck-slide" id="slide-23">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Anhang · Aktualität</span>
+  </div>
+
+  <h2>Abrufdatum und Inhaltsdatum</h2>
+  <p class="bc-subtitle">Die beiden Angaben beantworten verschiedene Fragen.</p>
+  <hr class="bc-divider">
+
+  <div style="display:flex; flex:1; gap:1.5rem; overflow:hidden;">
+
+    <div style="flex:0 0 44%; display:flex; flex-direction:column;">
+      <div class="bc-grid-2" style="gap:0.7rem; margin-bottom:0.8rem;">
+        <div class="bc-card" style="padding:0.8rem 1rem; border-top:3px solid var(--bc-blue);">
+          <h4 style="margin:0 0 0.15rem; font-size:1rem;">Abrufdatum</h4>
+          <p style="font-size:0.78rem; color:var(--bc-gray-600); margin:0;">Wie alt ist die Kopie?</p>
+        </div>
+        <div class="bc-card" style="padding:0.8rem 1rem; border-top:3px solid var(--bc-orange);">
+          <h4 style="margin:0 0 0.15rem; font-size:1rem;">Inhaltsdatum</h4>
+          <p style="font-size:0.78rem; color:var(--bc-gray-600); margin:0;">Worauf bezieht sich das Dokument?</p>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,149,0,0.08); border:1px solid rgba(255,149,0,0.35); border-radius:var(--bc-radius-sm); padding:0.7rem 0.95rem; font-size:0.8rem; line-height:1.5; color:var(--bc-gray-600);">
+        <strong style="color:var(--bc-navy);">Gemessen, nicht theoretisch:</strong>
+        Ein Kapitalverteilungsnachweis, <strong style="color:var(--bc-navy);">heute</strong> abgerufen, kann
+        eine Hinterlegung aus <strong style="color:var(--bc-navy);">2019</strong> wiedergeben.
+        Eine Regel, die nur auf das Abrufdatum sieht, hält dieses Dokument für aktuell.
+        <strong style="color:var(--bc-navy);">Empfehlung: Regeln auf dem Inhaltsdatum aufsetzen.</strong>
+      </div>
+
+      <div style="margin-top:auto; font-size:0.78rem; line-height:1.45; color:var(--bc-gray-600); background:var(--bc-gray-50); border-radius:var(--bc-radius-sm); padding:0.7rem 0.95rem;">
+        Beide Angaben werden zu jedem Dokument mitgeliefert. Welche davon die Aktualitätsregel steuert,
+        ist eine fachliche Vorgabe und wird nicht automatisch gesetzt.
+        <span style="display:block; margin-top:0.4rem;">Für <strong style="color:var(--bc-navy);">ReKYC</strong>
+        ist die wiederkehrende Frage nach einer Änderung der Kostentreiber, nicht die erstmalige
+        Beschaffung der Dokumente.</span>
+      </div>
+    </div>
+
+    <div style="flex:1; display:flex; flex-direction:column;">
+      <h4 style="margin:0 0 0.5rem;">Aktualität — Vorschlag als Ausgangsregel</h4>
+      <table style="font-size:0.78rem;">
+        <thead><tr><th style="padding:0.5rem 0.7rem;">Kategorie</th><th style="padding:0.5rem 0.7rem;">Regel</th><th style="padding:0.5rem 0.7rem;">Begründung</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:0.5rem 0.7rem;"><strong>Registerauszug</strong></td><td style="padding:0.5rem 0.7rem;"><strong>3 Monate</strong> Höchstalter</td><td style="padding:0.5rem 0.7rem;"><strong style="color:var(--bc-navy);">Vorschlag</strong> — gegen die Compliance-Vorgabe des Endkunden zu prüfen</td></tr>
+          <tr><td style="padding:0.5rem 0.7rem;"><strong>Gesellschaftsvertrag</strong></td><td style="padding:0.5rem 0.7rem;">ereignisbasiert</td><td style="padding:0.5rem 0.7rem;">ändert sich selten — aber eine überholte Fassung ist <em>falsch</em>, nicht nur alt</td></tr>
+          <tr><td style="padding:0.5rem 0.7rem;"><strong>Gesellschafterliste</strong></td><td style="padding:0.5rem 0.7rem;">ereignisbasiert, Inhaltsdatum sichtbar</td><td style="padding:0.5rem 0.7rem;">das Inhaltsdatum ist die Angabe, die bewertet werden muss</td></tr>
+        </tbody>
+      </table>
+
+      <div style="background:var(--bc-navy); border-radius:var(--bc-radius-sm); padding:0.7rem 1rem; margin-top:auto; font-size:0.76rem; line-height:1.45; color:rgba(255,255,255,0.88);">
+        <strong style="color:#fff;">Wie eine Änderung erkannt wird.</strong>
+        „Ereignisbasiert" heißt: Geprüft wird, ob beim Register etwas Neueres vorliegt; neu beschafft
+        wird nur dann.
+        <span style="display:block; margin-top:0.35rem;"><strong style="color:#fff;">Direktanbindung</strong>
+        — die Prüfung ist kostenfrei und beliebig oft möglich.</span>
+        <span style="display:block;"><strong style="color:#fff;">Indirekte Anbindung</strong>
+        — eine laufende Änderungsmeldung ist im Bezugskanal angelegt, für uns aber noch nicht nutzbar.
+        Freischaltung, Umfang und Preis werden geklärt.</span>
+        <span style="display:block;"><strong style="color:#fff;">Hongkong</strong>
+        — die Einreichungsliste lässt sich kostenfrei abfragen.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">23</span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ 24 · Umstellung ============ -->
+<div class="bc-block bc-slide bc-bg-light deck-slide" id="slide-24">
+  <div class="bc-header">
+    <span class="deck-logo" role="img" aria-label="BetterCo"></span>
+    <span class="bc-label">Anhang · Umstellung</span>
+  </div>
+
+  <h2>Umstellung</h2>
+  <p class="bc-subtitle">Vier Schritte, eine Migration.</p>
+  <hr class="bc-divider">
+
+  <div class="bc-steps" style="margin:0.5rem 0 1.2rem;">
+    <div class="bc-step">
+      <div class="bc-step-connector"></div>
+      <div class="bc-step-num">1</div>
+      <h4 style="font-size:0.92rem; margin:0 0 0.2rem;">Vertrag festschreiben</h4>
+      <p style="font-size:0.75rem; color:var(--bc-gray-600); margin:0; line-height:1.4;">Schnittstelle und Nachweisstufen — gemeinsam, vor der ersten Zeile Code</p>
+    </div>
+    <div class="bc-step">
+      <div class="bc-step-connector"></div>
+      <div class="bc-step-num">2</div>
+      <h4 style="font-size:0.92rem; margin:0 0 0.2rem;">Parallelbetrieb</h4>
+      <p style="font-size:0.75rem; color:var(--bc-gray-600); margin:0; line-height:1.4;">Beide Wege laufen gleichzeitig, mit Abgleich und Nachweis der Gleichwertigkeit</p>
+    </div>
+    <div class="bc-step">
+      <div class="bc-step-connector"></div>
+      <div class="bc-step-num">3</div>
+      <h4 style="font-size:0.92rem; margin:0 0 0.2rem;">Umschaltung</h4>
+      <p style="font-size:0.75rem; color:var(--bc-gray-600); margin:0; line-height:1.4;">Nach dem vereinbarten Freigabekriterium</p>
+    </div>
+    <div class="bc-step">
+      <div class="bc-step-num">4</div>
+      <h4 style="font-size:0.92rem; margin:0 0 0.2rem;">Weitere Bezugswege</h4>
+      <p style="font-size:0.75rem; color:var(--bc-gray-600); margin:0; line-height:1.4;">Ohne Änderung auf der anbindenden Seite — der Beweis, dass die Schnittstelle richtig geschnitten ist</p>
+    </div>
+  </div>
+
+  <div class="bc-card" style="padding:1rem 1.3rem; border-top:3px solid var(--bc-blue);">
+    <h4 style="margin:0 0 0.3rem;">Warum nicht in zwei Etappen</h4>
+    <p style="font-size:0.85rem; line-height:1.5; color:var(--bc-gray-600); margin:0;">
+      Eine Schnittstelle, die dem heutigen Bezugsweg nachgebildet ist, wäre kurzfristig bequem — sie
+      erzwingt aber <strong style="color:var(--bc-navy);">zwei Umstellungen</strong>, und die Begriffe des
+      heutigen Bezugswegs schrieben sich dauerhaft in den Vertrag ein.
+      <strong style="color:var(--bc-navy);">Empfehlung: der Aufwand einmal, nicht zweimal.</strong>
+    </p>
+  </div>
+
+  <div class="bc-footer">
+    <span>www.betterco.ai</span>
+    <span class="deck-foot-right">
+      <span class="deck-cobrand"><span class="deck-cobrand-label">für</span><svg class="deck-septeo" role="img" aria-label="Septeo"><use href="#septeoLogo"></use></svg></span>
+      <span class="deck-num">24</span>
+    </span>
+  </div>
+</div>
+
+</div><!-- /deck-stage -->
+</div><!-- /deck-viewport -->
+
+<nav class="deck-bar">
+  <button class="deck-btn" id="deckPrev" type="button" aria-label="Vorherige Folie">&larr; Zurück</button>
+  <span class="deck-counter"><strong id="deckCur">1</strong> / <span id="deckTotal">24</span></span>
+  <button class="deck-btn" id="deckNext" type="button" aria-label="Nächste Folie">Weiter &rarr;</button>
+  <span class="deck-hint">Pfeiltasten · Leertaste · Pos1/Ende · P = Drucken</span>
+</nav>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.deck-slide'));
+  var stage  = document.getElementById('deckStage');
+  var cur    = 0;
+
+  document.getElementById('deckTotal').textContent = slides.length;
+
+  function show(i) {
+    cur = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach(function (s, n) { s.classList.toggle('is-active', n === cur); });
+    document.getElementById('deckCur').textContent = cur + 1;
+    document.getElementById('deckProgress').style.width =
+      ((cur + 1) / slides.length * 100) + '%';
+    if (location.hash !== '#' + (cur + 1)) {
+      history.replaceState(null, '', '#' + (cur + 1));
+    }
+  }
+
+  // rem-basiertes Scaling: alle Maße im Design-System sind rem,
+  // also skaliert die gesamte Folie proportional zur Bühnenbreite.
+  function fit() {
+    var w = stage.clientWidth;
+    if (!w) return;
+    document.documentElement.style.fontSize = (16 * (w / 1280)) + 'px';
+  }
+
+  document.getElementById('deckPrev').addEventListener('click', function () { show(cur - 1); });
+  document.getElementById('deckNext').addEventListener('click', function () { show(cur + 1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    switch (e.key) {
+      case 'ArrowRight': case 'PageDown': case ' ': case 'Spacebar':
+        e.preventDefault(); show(cur + 1); break;
+      case 'ArrowLeft': case 'PageUp': case 'Backspace':
+        e.preventDefault(); show(cur - 1); break;
+      case 'Home': e.preventDefault(); show(0); break;
+      case 'End':  e.preventDefault(); show(slides.length - 1); break;
+      case 'p': case 'P': e.preventDefault(); window.print(); break;
+    }
+  });
+
+  window.addEventListener('resize', fit);
+  window.addEventListener('hashchange', function () {
+    var n = parseInt(location.hash.slice(1), 10);
+    if (!isNaN(n)) show(n - 1);
+  });
+
+  fit();
+  var start = parseInt(location.hash.slice(1), 10);
+  show(isNaN(start) ? 0 : start - 1);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,855 @@
+{
+ "_meta": {
+  "bandPriceUsd": {
+   "High": 88.0,
+   "Low": 18.0,
+   "Medium": 43.5,
+   "Premium": 114.0
+  },
+  "classMap": {
+   "High": "C",
+   "Low": "A",
+   "Medium": "B",
+   "Premium": "D"
+  },
+  "note": "Baender sind EINKAUF. Kundenseitig nur die Klassen A-D verwenden.",
+  "retrieved": "2026-07-30",
+  "source": "knowyourcustomer.com — Preisbandseite + Report-Preisseite"
+ },
+ "jurisdictions": {
+  "AE": {
+   "band": "Low",
+   "de": "Vereinigte Arabische Emirate",
+   "en": "UAE",
+   "region": "Naher Osten & Afrika"
+  },
+  "AL": {
+   "band": "Low",
+   "de": "Albanien",
+   "en": "Albania",
+   "region": "Europa"
+  },
+  "AM": {
+   "band": "Medium",
+   "de": "Armenien",
+   "en": "Armenia",
+   "region": "Asien-Pazifik"
+  },
+  "AO": {
+   "band": "Low",
+   "de": "Angola",
+   "en": "Angola",
+   "region": "Naher Osten & Afrika"
+  },
+  "AR": {
+   "band": "Low",
+   "de": "Argentinien",
+   "en": "Argentina",
+   "region": "Amerika"
+  },
+  "AT": {
+   "band": "Medium",
+   "de": "Österreich",
+   "en": "Austria",
+   "region": "Europa"
+  },
+  "AU": {
+   "band": "Medium",
+   "de": "Australien",
+   "en": "Australia",
+   "region": "Asien-Pazifik"
+  },
+  "AW": {
+   "band": "Medium",
+   "de": "Aruba",
+   "en": "Aruba",
+   "region": "Finanz- und Offshore-Plaetze"
+  },
+  "AX": {
+   "band": "Medium",
+   "de": "Åland",
+   "en": "Aaland Islands",
+   "region": "Europa"
+  },
+  "AZ": {
+   "band": "Low",
+   "de": "Aserbaidschan",
+   "en": "Azerbaijan",
+   "region": "Asien-Pazifik"
+  },
+  "BA": {
+   "band": "Low",
+   "de": "Bosnien und Herzegowina",
+   "en": "Bosnia Herzegovina",
+   "region": "Europa"
+  },
+  "BE": {
+   "band": "Low",
+   "de": "Belgien",
+   "en": "Belgium",
+   "region": "Europa"
+  },
+  "BG": {
+   "band": "Low",
+   "de": "Bulgarien",
+   "en": "Bulgaria",
+   "region": "Europa"
+  },
+  "BH": {
+   "band": "Low",
+   "de": "Bahrain",
+   "en": "Bahrain",
+   "region": "Naher Osten & Afrika"
+  },
+  "BM": {
+   "band": "Medium",
+   "de": "Bermuda",
+   "en": "Bermuda",
+   "region": "Finanz- und Offshore-Plaetze"
+  },
+  "BN": {
+   "band": "High",
+   "de": "Brunei",
+   "en": "Brunei",
+   "region": "Asien-Pazifik"
+  },
+  "BR": {
+   "band": "Low",
+   "de": "Brasilien",
+   "en": "Brazil",
+   "region": "Amerika"
+  },
+  "BS": {
+   "band": "Medium",
+   "de": "Bahamas",
+   "en": "Bahamas",
+   "region": "Finanz- und Offshore-Plaetze"
+  },
+  "BW": {
+   "band": "Low",
+   "de": "Botsuana",
+   "en": "Botswana",
+   "region": "Naher Osten & Afrika"
+  },
+  "BY": {
+   "band": "Low",
+   "de": "Belarus",
+   "en": "Belarus",
+   "region": "Europa"
+  },
+  "BZ": {
+   "band": "High",
+   "de": "Belize",
+   "en": "Belize",
+   "region": "Finanz- und Offshore-Plaetze"
+  },
+  "CA": {
+   "band": "Medium",
+   "de": "Kanada",
+   "en": "Canada",
+   "region": "Amerika"
+  },
+  "CC": {
+   "band": "Medium",
+   "de": "Kokosinseln",
+   "en": "Cocos (Keeling) Islands",
+   "region": "Asien-Pazifik"
+  },
+  "CH": {
+   "band": "Low",
+   "de": "Schweiz",
+   "en": "Switzerland",
+   "region": "Europa"
+  },
+  "CK": {
+   "band": "Low",
+   "de": "Cookinseln",
+   "en": "Cook Islands",
+   "region": "Asien-Pazifik"
+  },
+  "CL": {
+   "band": "Low",
+   "de": "Chile",
+   "en": "Chile",
+   "region": "Amerika"
+  },
+  "CN": {
+   "band": "Low",
+   "de": "China",
+   "en": "China",
+   "region": "Asien-Pazifik"
+  },
+  "CO": {
+   "band": "Low",
+   "de": "Kolumbien",
+   "en": "Colombia",
+   "region": "Amerika"
+  },
+  "CR": {
+   "band": "Medium",
+   "de": "Costa Rica",
+   "en": "Costa Rica",
+   "region": "Amerika"
+  },
+  "CW": {
+   "band": "Low",
+   "de": "Curaçao",
+   "en": "Curaçao",
+   "region": "Finanz- und Offshore-Plaetze"
+  },
+  "CX": {
+   "band": "Medium",
+   "de": "Weihnachtsinsel",
+   "en": "Christmas Island",
+   "region": "Asien-Pazifik"
+  },
+  "CY": {
+   "band": "Medium",
+   "de": "Zypern",
+   "en": "Cyprus",
+   "region": "Europa"
+  },
+  "CZ": {
+   "band": "Low",
+   "de": "Tschechien",
+   "en": "Czech Republic",
+   "region": "Europa"
+  },
+  "DE": {
+   "band": "Low",
+   "de": "Deutschland",
+   "en": "Germany",
+   "region": "Europa"
+  },
+  "DJ": {
+   "band": "Low",
+   "de": "Dschibuti",
+   "en": "Djibouti",
+   "region": "Naher Osten & Afrika"
+  },
+  "DK": {
+   "band": "Low",
+   "de": "Dänemark",
+   "en": "Denmark",
+   "region": "Europa"
+  },
+  "EC": {
+   "band": "Low",
+   "de": "Ecuador",
+   "en": "Ecuador",
+   "region": "Amerika"
+  },
+  "EE": {
+   "band": "Low",
+   "de": "Estland",
+   "en": "Estonia",
+   "region": "Europa"
+  },
+  "ES": {
+   "band": "Medium",
+   "de": "Spanien",
+   "en": "Spain",
+   "region": "Europa"
+  },
+  "ET": {
+   "band": "Low",
+   "de": "Äthiopien",
+   "en": "Ethiopia",
+   "region": "Naher Osten & Afrika"
+  },
+  "FI": {
+   "band": "Medium",
+   "de": "Finnland",
+   "en": "Finland",
+   "region": "Europa"
+  },
+  "FO": {
+   "band": "Low",
+   "de": "Färöer",
+   "en": "Faroe Islands",
+   "region": "Europa"
+  },
+  "FR": {
+   "band": "High",
+   "de": "Frankreich",
+   "en": "France",
+   "region": "Europa"
+  },
+  "GB": {
+   "band": "Low",
+   "de": "Vereinigtes Königreich",
+   "en": "United Kingdom",
+   "region": "Europa"
+  },
+  "GE": {
+   "band": "Low",
+   "de": "Georgien",
+   "en": "Georgia",
+   "region": "Asien-Pazifik"
+  },
+  "GG": {
+   "band": "High",
+   "de": "Guernsey",
+   "en": "Guernsey",
+   "region": "Europa"
+  },
+  "GI": {
+   "band": "Medium",
+   "de": "Gibraltar",
+   "en": "Gibraltar",
+   "region": "Europa"
+  },
+  "GL": {
+   "band": "Low",
+   "de": "Grönland",
+   "en": "Greenland",
+   "region": "Europa"
+  },
+  "GP": {
+   "band": "Low",
+   "de": "Guadeloupe",
+   "en": "Guadeloupe",
+   "region": "Amerika"
+  },
+  "GR": {
+   "band": "Low",
+   "de": "Griechenland",
+   "en": "Greece",
+   "region": "Europa"
+  },
+  "HK": {
+   "band": "Medium",
+   "de": "Hongkong",
+   "en": "Hong Kong S.A.R. China",
+   "region": "Asien-Pazifik"
+  },
+  "HK-IRD": {
+   "band": "Medium",
+   "de": "Hongkong (Steuerbehörde)",
+   "en": "Hong Kong – Inland Revenue Department",
+   "region": "Asien-Pazifik"
+  },
+  "HR": {
+   "band": "Low",
+   "de": "Kroatien",
+   "en": "Croatia",
+   "region": "Europa"
+  },
+  "HU": {
+   "band": "Low",
+   "de": "Ungarn",
+   "en": "Hungary",
+   "region": "Europa"
+  },
+  "ID": {
+   "band": "High",
+   "de": "Indonesien",
+   "en": "Indonesia",
+   "region": "Asien-Pazifik"
+  },
+  "IE": {
+   "band": "Low",
+   "de": "Irland",
+   "en": "Ireland",
+   "region": "Europa"
+  },
+  "IL": {
+   "band": "Medium",
+   "de": "Israel",
+   "en": "Israel",
+   "region": "Naher Osten & Afrika"
+  },
+  "IM": {
+   "band": "Medium",
+   "de": "Isle of Man",
+   "en": "Isle of Man",
+   "region": "Europa"
+  },
+  "IN": {
+   "band": "Low",
+   "de": "Indien",
+   "en": "India",
+   "region": "Asien-Pazifik"
+  },
+  "IQ": {
+   "band": "Low",
+   "de": "Irak",
+   "en": "Iraq",
+   "region": "Naher Osten & Afrika"
+  },
+  "IR": {
+   "band": "Low",
+   "de": "Iran",
+   "en": "Iran",
+   "region": "Naher Osten & Afrika"
+  },
+  "IS": {
+   "band": "Low",
+   "de": "Island",
+   "en": "Iceland",
+   "region": "Europa"
+  },
+  "IT": {
+   "band": "Medium",
+   "de": "Italien",
+   "en": "Italy",
+   "region": "Europa"
+  },
+  "JE": {
+   "band": "Low",
+   "de": "Jersey",
+   "en": "Jersey",
+   "region": "Europa"
+  },
+  "JO": {
+   "band": "Low",
+   "de": "Jordanien",
+   "en": "Jordan",
+   "region": "Naher Osten & Afrika"
+  },
+  "JP": {
+   "band": "Low",
+   "de": "Japan",
+   "en": "Japan",
+   "region": "Asien-Pazifik"
+  },
+  "KE": {
+   "band": "Medium",
+   "de": "Kenia",
+   "en": "Kenya",
+   "region": "Naher Osten & Afrika"
+  },
+  "KG": {
+   "band": "Low",
+   "de": "Kirgisistan",
+   "en": "Kyrgyzstan",
+   "region": "Asien-Pazifik"
+  },
+  "KH": {
+   "band": "Low",
+   "de": "Kambodscha",
+   "en": "Cambodia",
+   "region": "Asien-Pazifik"
+  },
+  "KR": {
+   "band": "Low",
+   "de": "Südkorea",
+   "en": "South Korea",
+   "region": "Asien-Pazifik"
+  },
+  "KW": {
+   "band": "Low",
+   "de": "Kuwait",
+   "en": "Kuwait",
+   "region": "Naher Osten & Afrika"
+  },
+  "KY": {
+   "band": "Premium",
+   "de": "Kaimaninseln",
+   "en": "Cayman Islands",
+   "region": "Finanz- und Offshore-Plaetze"
+  },
+  "KZ": {
+   "band": "Low",
+   "de": "Kasachstan",
+   "en": "Kazakhstan",
+   "region": "Asien-Pazifik"
+  },
+  "LA": {
+   "band": "Low",
+   "de": "Laos",
+   "en": "Laos",
+   "region": "Asien-Pazifik"
+  },
+  "LI": {
+   "band": "Medium",
+   "de": "Liechtenstein",
+   "en": "Liechtenstein",
+   "region": "Europa"
+  },
+  "LK": {
+   "band": "Medium",
+   "de": "Sri Lanka",
+   "en": "Sri Lanka",
+   "region": "Asien-Pazifik"
+  },
+  "LS": {
+   "band": "Low",
+   "de": "Lesotho",
+   "en": "Lesotho",
+   "region": "Naher Osten & Afrika"
+  },
+  "LU": {
+   "band": "High",
+   "de": "Luxemburg",
+   "en": "Luxembourg",
+   "region": "Europa"
+  },
+  "LV": {
+   "band": "Low",
+   "de": "Lettland",
+   "en": "Latvia",
+   "region": "Europa"
+  },
+  "MA": {
+   "band": "High",
+   "de": "Marokko",
+   "en": "Morocco",
+   "region": "Naher Osten & Afrika"
+  },
+  "MC": {
+   "band": "High",
+   "de": "Monaco",
+   "en": "Monaco",
+   "region": "Europa"
+  },
+  "MD": {
+   "band": "Low",
+   "de": "Moldau",
+   "en": "Moldova",
+   "region": "Europa"
+  },
+  "ME": {
+   "band": "Low",
+   "de": "Montenegro",
+   "en": "Montenegro",
+   "region": "Europa"
+  },
+  "MH": {
+   "band": "Low",
+   "de": "Marshallinseln",
+   "en": "Marshall Islands",
+   "region": "Asien-Pazifik"
+  },
+  "MK": {
+   "band": "Medium",
+   "de": "Nordmazedonien",
+   "en": "North Macedonia",
+   "region": "Europa"
+  },
+  "MM": {
+   "band": "Low",
+   "de": "Myanmar",
+   "en": "Myanmar",
+   "region": "Asien-Pazifik"
+  },
+  "MQ": {
+   "band": "Low",
+   "de": "Martinique",
+   "en": "Martinique",
+   "region": "Amerika"
+  },
+  "MT": {
+   "band": "Medium",
+   "de": "Malta",
+   "en": "Malta",
+   "region": "Europa"
+  },
+  "MU": {
+   "band": "Low",
+   "de": "Mauritius",
+   "en": "Mauritius",
+   "region": "Naher Osten & Afrika"
+  },
+  "MV": {
+   "band": "Low",
+   "de": "Malediven",
+   "en": "Maldives",
+   "region": "Asien-Pazifik"
+  },
+  "MX": {
+   "band": "Low",
+   "de": "Mexiko",
+   "en": "Mexico",
+   "region": "Amerika"
+  },
+  "MY": {
+   "band": "Medium",
+   "de": "Malaysia",
+   "en": "Malaysia",
+   "region": "Asien-Pazifik"
+  },
+  "NL": {
+   "band": "Low",
+   "de": "Niederlande",
+   "en": "Netherlands",
+   "region": "Europa"
+  },
+  "NO": {
+   "band": "Low",
+   "de": "Norwegen",
+   "en": "Norway",
+   "region": "Europa"
+  },
+  "NP": {
+   "band": "Low",
+   "de": "Nepal",
+   "en": "Nepal",
+   "region": "Asien-Pazifik"
+  },
+  "NZ": {
+   "band": "Low",
+   "de": "Neuseeland",
+   "en": "New Zealand",
+   "region": "Asien-Pazifik"
+  },
+  "OM": {
+   "band": "Low",
+   "de": "Oman",
+   "en": "Oman",
+   "region": "Naher Osten & Afrika"
+  },
+  "PA": {
+   "band": "Low",
+   "de": "Panama",
+   "en": "Panama",
+   "region": "Amerika"
+  },
+  "PE": {
+   "band": "Low",
+   "de": "Peru",
+   "en": "Peru",
+   "region": "Amerika"
+  },
+  "PF": {
+   "band": "Low",
+   "de": "Französisch-Polynesien",
+   "en": "French Polynesia",
+   "region": "Asien-Pazifik"
+  },
+  "PG": {
+   "band": "Low",
+   "de": "Papua-Neuguinea",
+   "en": "Papua New Guinea",
+   "region": "Asien-Pazifik"
+  },
+  "PH": {
+   "band": "Medium",
+   "de": "Philippinen",
+   "en": "Philippines",
+   "region": "Asien-Pazifik"
+  },
+  "PK": {
+   "band": "Medium",
+   "de": "Pakistan",
+   "en": "Pakistan",
+   "region": "Asien-Pazifik"
+  },
+  "PL": {
+   "band": "Low",
+   "de": "Polen",
+   "en": "Poland",
+   "region": "Europa"
+  },
+  "PR": {
+   "band": "Low",
+   "de": "Puerto Rico",
+   "en": "Puerto Rico",
+   "region": "Amerika"
+  },
+  "PS": {
+   "band": "Low",
+   "de": "Palästina",
+   "en": "Palestine",
+   "region": "Naher Osten & Afrika"
+  },
+  "PT": {
+   "band": "High",
+   "de": "Portugal",
+   "en": "Portugal",
+   "region": "Europa"
+  },
+  "PY": {
+   "band": "Low",
+   "de": "Paraguay",
+   "en": "Paraguay",
+   "region": "Amerika"
+  },
+  "QA": {
+   "band": "Low",
+   "de": "Katar",
+   "en": "Qatar",
+   "region": "Naher Osten & Afrika"
+  },
+  "RO": {
+   "band": "Medium",
+   "de": "Rumänien",
+   "en": "Romania",
+   "region": "Europa"
+  },
+  "RS": {
+   "band": "Low",
+   "de": "Serbien",
+   "en": "Serbia",
+   "region": "Europa"
+  },
+  "RU": {
+   "band": "Low",
+   "de": "Russland",
+   "en": "Russia",
+   "region": "Europa"
+  },
+  "SA": {
+   "band": "Low",
+   "de": "Saudi-Arabien",
+   "en": "Saudi Arabia",
+   "region": "Naher Osten & Afrika"
+  },
+  "SB": {
+   "band": "Low",
+   "de": "Salomonen",
+   "en": "Solomon Islands",
+   "region": "Asien-Pazifik"
+  },
+  "SC": {
+   "band": "High",
+   "de": "Seychellen",
+   "en": "Seychelles",
+   "region": "Naher Osten & Afrika"
+  },
+  "SE": {
+   "band": "High",
+   "de": "Schweden",
+   "en": "Sweden",
+   "region": "Europa"
+  },
+  "SG": {
+   "band": "Low",
+   "de": "Singapur",
+   "en": "Singapore",
+   "region": "Asien-Pazifik"
+  },
+  "SI": {
+   "band": "Low",
+   "de": "Slowenien",
+   "en": "Slovenia",
+   "region": "Europa"
+  },
+  "SK": {
+   "band": "Low",
+   "de": "Slowakei",
+   "en": "Slovakia",
+   "region": "Europa"
+  },
+  "SM": {
+   "band": "Medium",
+   "de": "San Marino",
+   "en": "San Marino",
+   "region": "Europa"
+  },
+  "SN": {
+   "band": "Low",
+   "de": "Senegal",
+   "en": "Senegal",
+   "region": "Naher Osten & Afrika"
+  },
+  "TH": {
+   "band": "Low",
+   "de": "Thailand",
+   "en": "Thailand",
+   "region": "Asien-Pazifik"
+  },
+  "TN": {
+   "band": "Medium",
+   "de": "Tunesien",
+   "en": "Tunisia",
+   "region": "Naher Osten & Afrika"
+  },
+  "TO": {
+   "band": "Low",
+   "de": "Tonga",
+   "en": "Tonga",
+   "region": "Asien-Pazifik"
+  },
+  "TR": {
+   "band": "Low",
+   "de": "Türkei",
+   "en": "Turkey",
+   "region": "Naher Osten & Afrika"
+  },
+  "TT": {
+   "band": "Low",
+   "de": "Trinidad und Tobago",
+   "en": "Trinidad and Tobago",
+   "region": "Amerika"
+  },
+  "TW": {
+   "band": "Low",
+   "de": "Taiwan",
+   "en": "Taiwan, China",
+   "region": "Asien-Pazifik"
+  },
+  "UA": {
+   "band": "Low",
+   "de": "Ukraine",
+   "en": "Ukraine",
+   "region": "Europa"
+  },
+  "US": {
+   "band": "Medium",
+   "de": "Vereinigte Staaten",
+   "en": "United States of America",
+   "region": "Amerika"
+  },
+  "UZ": {
+   "band": "Low",
+   "de": "Usbekistan",
+   "en": "Uzbekistan",
+   "region": "Asien-Pazifik"
+  },
+  "VC": {
+   "band": "Low",
+   "de": "St. Vincent und die Grenadinen",
+   "en": "Saint Vincent and the Grenadines",
+   "region": "Finanz- und Offshore-Plaetze"
+  },
+  "VG": {
+   "band": "Premium",
+   "de": "Britische Jungferninseln",
+   "en": "British Virgin Islands",
+   "region": "Finanz- und Offshore-Plaetze"
+  },
+  "VI": {
+   "band": "Low",
+   "de": "Amerikanische Jungferninseln",
+   "en": "U.S. Virgin Islands",
+   "region": "Amerika"
+  },
+  "VN": {
+   "band": "Medium",
+   "de": "Vietnam",
+   "en": "Vietnam",
+   "region": "Asien-Pazifik"
+  },
+  "VU": {
+   "band": "Low",
+   "de": "Vanuatu",
+   "en": "Vanuatu",
+   "region": "Asien-Pazifik"
+  },
+  "WS": {
+   "band": "Low",
+   "de": "Samoa",
+   "en": "Samoa",
+   "region": "Asien-Pazifik"
+  },
+  "YE": {
+   "band": "Low",
+   "de": "Jemen",
+   "en": "Yemen",
+   "region": "Naher Osten & Afrika"
+  },
+  "YT": {
+   "band": "Low",
+   "de": "Mayotte",
+   "en": "Mayotte",
+   "region": "Amerika"
+  },
+  "ZA": {
+   "band": "Low",
+   "de": "Südafrika",
+   "en": "South Africa",
+   "region": "Naher Osten & Afrika"
+  }
+ }
+}
