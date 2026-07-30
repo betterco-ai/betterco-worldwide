@@ -116,6 +116,21 @@ Customer documents are a *slot* — "replace, don't append". A new register extr
 old. Correct for freshness, but it destroys history. If STP ever needs a document *as of* a past
 date, that conflicts. Settle before building ingestion.
 
+### N7. Hong Kong per-filing purchase — wired, not yet seen live
+`GET /v2/DocumentPurchase/{caseCommonId}` + `POST /v2/DocumentPurchase {caseCommonId,
+registryDocumentId}` is the **only** upstream route where kyc.com is document-level rather than
+case-level, and it is **HKCR-only** (400 elsewhere). Contract read off the prod swagger and wired:
+`kyc_com_client.list_document_filings / find_document_filings / purchase_document(confirm=…)`,
+routes `GET /kyccom/cases/{id}/filings` + `POST …/filings/{id}/purchase?confirm=true`, HK rows in
+`document_kinds_routing.json` now say `howToObtain: "document_purchase"`, gateway ask in
+`BACKEND_DEV_MEMO.md`. **Open:** the sandbox *stubs* the route (200 for any case, `documents: null`),
+so the filing payload has never been seen with real content — needs one prod HK case, list only,
+**nothing purchased**. Also unresolved: the evidence file calls HK Articles/NAR1 `additional`, while
+the kyc.com matrix lists both as *mandatory* for HK CR (and the sandbox bundle contained them) — so
+for most HK cases the purchase route is for the filings the bundle does *not* carry (older NAR1s,
+altered articles), not for the current ones. The `purchased` flag encodes that; the base/additional
+classification itself is left as is.
+
 ---
 
 ## 4. Next step

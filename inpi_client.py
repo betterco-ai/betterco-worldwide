@@ -78,10 +78,24 @@ class KbisViaInfogreffe(InpiError):
     ~3.06 EUR electronic). Raised on purpose so a caller routes it to the paid vendor."""
 
 
+class DryRunBlocked(InpiError):
+    """dry_run=True and something tried to hit the network. Carries the call that was blocked.
+
+    Deliberately a hard stop rather than a fake response: returning synthetic JSON would let a
+    caller 'succeed' against data INPI never sent, which is exactly the illusion a dry run must
+    not create."""
+
+    def __init__(self, method: str, url: str, params=None):
+        self.method, self.url, self.params = method, url, params
+        suffix = f" params={params}" if params else ""
+        super().__init__(f"[dry-run] blocked: {method} {url}{suffix}")
+
+
 class InpiClient:
     def __init__(self, username: str | None = None, password: str | None = None,
                  download_dir: str = "outputs/inpi", base: str = BASE,
-                 throttle_s: float = 0.5, timeout_s: int = 60, max_retries: int = 3):
+                 throttle_s: float = 0.5, timeout_s: int = 60, max_retries: int = 3,
+                 dry_run: bool = False):
         self.username = username or os.getenv("INPI_USERNAME")
         self.password = password or os.getenv("INPI_PASSWORD")
         self.base = base.rstrip("/")
@@ -89,6 +103,9 @@ class InpiClient:
         self.throttle_s = throttle_s
         self.timeout_s = timeout_s
         self.max_retries = max_retries
+        self.dry_run = dry_run
+        # every call the client wanted to make, in order — populated in dry-run
+        self.attempted: list[dict] = []
         self.session = requests.Session()
         self._token: str | None = None
         self._last_call = 0.0
@@ -105,6 +122,11 @@ class InpiClient:
         if not self.username or not self.password:
             raise InpiAuthError("Missing INPI credentials (set INPI_USERNAME / INPI_PASSWORD "
                                 "or pass username=/password=).")
+        if self.dry_run:
+            url = f"{self.base}/sso/login"
+            self.attempted.append({"method": "POST", "url": url,
+                                   "body": {"username": self.username, "password": "***"}})
+            raise DryRunBlocked("POST", url)
         r = self.session.post(f"{self.base}/sso/login",
                               json={"username": self.username, "password": self.password},
                               timeout=self.timeout_s)
@@ -126,9 +148,12 @@ class InpiClient:
 
     def _request(self, method: str, path: str, *, stream: bool = False, **kw):
         """Authenticated request with lazy login, one 401 re-login, and backoff on 429/5xx."""
+        url = f"{self.base}{path}"
+        if self.dry_run:
+            self.attempted.append({"method": method, "url": url, "params": kw.get("params")})
+            raise DryRunBlocked(method, url, kw.get("params"))
         if self._token is None:
             self._login()
-        url = f"{self.base}{path}"
         for attempt in range(self.max_retries):
             self._throttle()
             headers = {**kw.pop("headers", {}), "Authorization": f"Bearer {self._token}"}
@@ -244,6 +269,38 @@ class InpiClient:
             return self.download_acte(doc["id"], dest_path)
         return self.download_bilan(doc["id"], dest_path)
 
+    # ── dry run ─────────────────────────────────────────────────────────────
+    def plan(self, siren: str, doc_type: str) -> list[dict]:
+        """The call sequence `download(siren, doc_type, ...)` would make — no network.
+
+        Derived from the same DOC_TYPE_CHANNEL / KBIS_TYPES constants the real path uses, so it
+        cannot drift from actual behaviour. The document id in the final step is only knowable at
+        runtime (it comes out of /attachments), so it is shown as a placeholder."""
+        siren = self._norm_siren(siren)
+        dt = doc_type.lower()
+        if dt in KBIS_TYPES:
+            return [{"step": 1, "call": "(no INPI call)",
+                     "note": "Kbis is not on INPI; download() raises KbisViaInfogreffe and the "
+                             "router sends this to the paid Infogreffe vendor."}]
+        channel = DOC_TYPE_CHANNEL.get(dt)
+        if channel is None:
+            raise ValueError(f"unknown doc_type {doc_type!r}; choose from "
+                             f"{sorted(set(DOC_TYPE_CHANNEL))} (or 'extract' -> Infogreffe)")
+        pick = ("filter actes by label "
+                f"{STATUTS_NEEDLES} -> newest downloadable"
+                if channel == "acte" and dt in ("articles", "statuts", "satzung")
+                else f"newest downloadable {channel}")
+        seg = "actes" if channel == "acte" else "bilans"
+        return [
+            {"step": 1, "call": f"POST {self.base}/sso/login",
+             "note": "username/password -> session JWT; re-login on 401"},
+            {"step": 2, "call": f"GET {self.base}/companies/{siren}/attachments",
+             "note": "SECONDARY: response field names unvalidated against a live account"},
+            {"step": 3, "call": f"(local) {pick}", "note": "no request"},
+            {"step": 4, "call": f"GET {self.base}/{seg}/{{id}}/download",
+             "note": "SECONDARY: path unvalidated; id resolved from step 2"},
+        ]
+
     def download_acte(self, acte_id: str, dest_path: str) -> str:
         return self._download(f"/actes/{acte_id}/download", dest_path, f"acte {acte_id}")
 
@@ -328,31 +385,52 @@ def _main(argv):
     import argparse
     ap = argparse.ArgumentParser(description="INPI RNE free document client (France)")
     sub = ap.add_subparsers(dest="cmd", required=True)
+    ap.add_argument("--dry-run", action="store_true",
+                    help="make NO network calls; print the request that would be sent and stop")
     sp = sub.add_parser("search"); sp.add_argument("query")
     dl = sub.add_parser("download")
     dl.add_argument("siren")
     dl.add_argument("docs", nargs="+", help="doc types: " + ", ".join(sorted(set(DOC_TYPE_CHANNEL))))
     dl.add_argument("--outdir", default="outputs/inpi")
+    pl = sub.add_parser("plan", help="show the call sequence a download would make (no network)")
+    pl.add_argument("siren")
+    pl.add_argument("docs", nargs="+", help="doc types: " + ", ".join(sorted(set(DOC_TYPE_CHANNEL))))
     st = sub.add_parser("selftest", help="offline checks (no network/creds)")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
     if args.cmd == "selftest":
         return _selftest()
+    if args.cmd == "plan":
+        c = InpiClient(dry_run=True)
+        for doc in args.docs:
+            print(f"\n=== {args.siren} / {doc} ===")
+            for s in c.plan(args.siren, doc):
+                print(f"  {s['step']}. {s['call']}")
+                print(f"     {s['note']}")
+        creds = "present" if (c.username and c.password) else "MISSING"
+        print(f"\ncredentials: {creds}   |   no request was sent")
+        return 0
     if args.cmd == "search":
-        with InpiClient() as c:
-            for h in c.search(args.query):
-                print(f"{h['siren']}  {h['name']}")
+        with InpiClient(dry_run=args.dry_run) as c:
+            try:
+                for h in c.search(args.query):
+                    print(f"{h['siren']}  {h['name']}")
+            except DryRunBlocked as e:
+                print(e)
         return 0
     if args.cmd == "download":
         out = Path(args.outdir)
-        with InpiClient() as c:
+        with InpiClient(dry_run=args.dry_run) as c:
             for doc in args.docs:
                 dest = out / f"{args.siren}_{doc}.pdf"
                 try:
                     print(f"  [ok]   {doc}: {c.download(args.siren, doc, str(dest))}")
                 except KbisViaInfogreffe as e:
                     print(f"  [kbis] {doc}: {e}")
+                except DryRunBlocked as e:
+                    # not a failure — the guard did its job
+                    print(f"  [dry]  {doc}: would send {e.method} {e.url}")
                 except InpiError as e:
                     print(f"  [FAIL] {doc}: {e}")
         return 0
@@ -384,6 +462,30 @@ def _selftest() -> int:
           and a["downloadable"])
     b = _norm_attachment({"id": "B1", "dateCloture": "2022-12-31", "confidentialite": True}, "bilan")
     check("confidential bilan not downloadable", b["confidential"] and not b["downloadable"])
+
+    # dry-run guard: prove no request can leave the process. session.request/post are replaced
+    # with tripwires — if the guard leaks, these fire instead of hitting the network.
+    dc = InpiClient(username="u", password="p", dry_run=True)
+    fired = []
+    dc.session.request = lambda *a, **k: fired.append(("request", a, k))
+    dc.session.post = lambda *a, **k: fired.append(("post", a, k))
+    for label, fn in (("login", lambda: dc._login()),
+                      ("get_company", lambda: dc.get_company("552081317")),
+                      ("list_documents", lambda: dc.list_documents("552081317")),
+                      ("download", lambda: dc.download("552081317", "articles", "x.pdf"))):
+        try:
+            fn()
+            check(f"dry-run blocks {label}", False)
+        except DryRunBlocked:
+            check(f"dry-run blocks {label}", True)
+        except InpiError:
+            check(f"dry-run blocks {label} (wrong exception)", False)
+    check("dry-run sent nothing", not fired)
+    check("dry-run recorded the attempts", len(dc.attempted) == 4)
+    check("plan is network-free and 4 steps",
+          len(InpiClient(username="u", password="p", dry_run=True).plan("552081317", "articles")) == 4)
+    check("plan routes kbis to Infogreffe",
+          "Infogreffe" in InpiClient(dry_run=True).plan("552081317", "extract")[0]["note"])
     print("\nSELFTEST", "OK" if ok else "FAILED")
     return 0 if ok else 1
 

@@ -64,6 +64,8 @@
  .badge.opt{color:var(--opt);background:var(--opt-bg);border:1px solid var(--success-border)}
  .res{border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-top:9px;cursor:pointer;display:flex;gap:12px;align-items:flex-start}
  .res:hover{border-color:var(--accent);background:#f8fbff}
+ .res.inert{cursor:default;opacity:.62}
+ .res.inert:hover{border-color:var(--line);background:transparent}
  .res.sel{border-color:var(--accent);background:#eff6ff}
  .res .nm{flex:1}.res .nm b{font-size:14px}.res .nm small{color:var(--muted);display:block}
  .res .st{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}
@@ -227,6 +229,11 @@ const T = {
   manualBanner:n=>esc(n)+" is a <b>manual jurisdiction</b> — no registry search is available here, so the case is created directly from the name + legal form below.",
   lblCompanyName:"Company name", lblAddr:"Address — street (optional)",
   lblPostcode:"Postcode", lblCity:"City",
+  lblAddr2:"Address — line 2 (optional)",
+  lblProvince:"Province / state (optional)",
+  lblRegistryNo:"Registry number (optional)",
+  lblUnregistered:"Unregistered entity (no registry entry)",
+  unregHint:"For manual jurisdictions the address helps locate the right entity. Tick “unregistered” only if it has no company-registry entry at all.",
   lblSelectCT:"Select company type", lblGenericCT:"companyType (generic master list)",
   selDash:"— select —",
   noMapping:(code,n)=>"No curated mapping for "+code+" — pick from the "+n+" valid values.",
@@ -252,6 +259,9 @@ const T = {
   crawlNote:" · processing can take a while — refresh later.",
   loadingCase:"loading case", loadingDocs:"loading documents…",
   noDocs:"No documents yet (they populate once the case is Ready).",
+  availAvailable:"available", availPending:"pending", availMissing:"missing",
+  caseNotCreated:"not created — no documents",
+  srcSnapshot:"local snapshot",
   tabCreate:"Create case", tabDocs:"Retrieve documents",
   docStep1:"Search cases", selectCase:"Select a case", docsFor:"Documents — ",
   docPlaceholder:"Search all cases by name, ID or country…",
@@ -300,6 +310,11 @@ const T = {
   manualBanner:n=>esc(n)+" ist eine <b>manuelle Jurisdiktion</b> — hier ist keine Registersuche verfügbar, daher wird der Fall direkt aus Name + Rechtsform unten angelegt.",
   lblCompanyName:"Firmenname", lblAddr:"Adresse — Straße (optional)",
   lblPostcode:"PLZ", lblCity:"Stadt",
+  lblAddr2:"Adresse — Zeile 2 (optional)",
+  lblProvince:"Bundesland / Provinz (optional)",
+  lblRegistryNo:"Registernummer (optional)",
+  lblUnregistered:"Nicht registrierte Einheit (kein Registereintrag)",
+  unregHint:"Bei manuellen Jurisdiktionen hilft die Adresse, die richtige Einheit zu finden. „Nicht registriert“ nur ankreuzen, wenn kein Handelsregistereintrag existiert.",
   lblSelectCT:"Company type wählen", lblGenericCT:"companyType (generische Hauptliste)",
   selDash:"— wählen —",
   noMapping:(code,n)=>"Keine kuratierte Zuordnung für "+code+" — aus den "+n+" gültigen Werten wählen.",
@@ -325,6 +340,9 @@ const T = {
   crawlNote:" · die Verarbeitung kann etwas dauern — später aktualisieren.",
   loadingCase:"lade Fall", loadingDocs:"lade Dokumente…",
   noDocs:"Noch keine Dokumente (erscheinen, sobald der Fall bereit ist).",
+  availAvailable:"verfügbar", availPending:"ausstehend", availMissing:"fehlt",
+  caseNotCreated:"nicht erstellt — keine Dokumente",
+  srcSnapshot:"lokaler Snapshot",
   tabCreate:"Fall anlegen", tabDocs:"Dokumente abrufen",
   docStep1:"Fälle suchen", selectCase:"Fall auswählen", docsFor:"Dokumente — ",
   docPlaceholder:"Alle Fälle nach Name, ID oder Land durchsuchen…",
@@ -555,11 +573,18 @@ function renderForm(){
 
  if(sel.manual){
    h+='<div class="row" style="margin-top:12px">'
-     +'<div class="grow"><label>'+t('lblCompanyName')+'</label><input id="mName" style="width:100%" value="'+esc(sel.rawname)+'"></div></div>'
+     +'<div class="grow"><label>'+t('lblCompanyName')+'</label><input id="mName" style="width:100%" value="'+esc(sel.rawname)+'"></div>'
+     +'<div class="grow"><label>'+t('lblRegistryNo')+'</label><input id="mReg" style="width:100%" value="'+esc(sel.externalCode||'')+'"></div></div>'
      +'<div class="row" style="margin-top:8px">'
      +'<div class="grow"><label>'+t('lblAddr')+'</label><input id="mAddr" style="width:100%"></div>'
+     +'<div class="grow"><label>'+t('lblAddr2')+'</label><input id="mAddr2" style="width:100%"></div></div>'
+     +'<div class="row" style="margin-top:8px">'
      +'<div><label>'+t('lblPostcode')+'</label><input id="mZip" style="width:110px"></div>'
-     +'<div><label>'+t('lblCity')+'</label><input id="mCity"></div></div>';
+     +'<div><label>'+t('lblCity')+'</label><input id="mCity"></div>'
+     +'<div><label>'+t('lblProvince')+'</label><input id="mProv"></div></div>'
+     +'<div class="row" style="margin-top:8px"><label style="display:flex;align-items:center;gap:6px;cursor:pointer">'
+     +'<input type="checkbox" id="mUnreg" style="width:auto"> '+t('lblUnregistered')+'</label></div>'
+     +'<div class="hint">'+t('unregHint')+'</div>';
  }
 
  if(info.forms){
@@ -580,7 +605,9 @@ function renderForm(){
  fb.querySelectorAll('.fcard').forEach(c=>c.onclick=()=>{selForm=+c.dataset.i;renderForm();renderPayload();});
  const g=fb.querySelector('#genCT'); if(g) g.onchange=()=>{genCT=g.value||null;renderPayload();};
  const mn=fb.querySelector('#mName'); if(mn) mn.oninput=()=>{sel.rawname=mn.value;renderPayload();};
- ['mAddr','mZip','mCity'].forEach(id=>{const el=fb.querySelector('#'+id); if(el) el.oninput=renderPayload;});
+ const mr=fb.querySelector('#mReg'); if(mr) mr.oninput=()=>{sel.externalCode=mr.value.trim()||null;renderPayload();};
+ ['mAddr','mAddr2','mZip','mCity','mProv'].forEach(id=>{const el=fb.querySelector('#'+id); if(el) el.oninput=renderPayload;});
+ const mu=fb.querySelector('#mUnreg'); if(mu) mu.onchange=renderPayload;
  renderPayload();
 }
 
@@ -618,12 +645,14 @@ function renderPayload(){
 }
 
 function gv(id){const e=document.getElementById(id);return e&&e.value.trim()?e.value.trim():null;}
+function cv(id){const e=document.getElementById(id);return e&&e.checked?true:null;}
 function createBody(confirm){
  const {et,ct}=resolved();
  return {jurisdiction:sel.jurisdiction, name:sel.rawname||sel.name,
    externalCode:sel.externalCode||null, entityType:et, companyType:ct,
    datasource:sel.dataSource||null, journeyName:'All',
-   addressLine1:gv('mAddr'), postcode:gv('mZip'), city:gv('mCity'),
+   addressLine1:gv('mAddr'), addressLine2:gv('mAddr2'), postcode:gv('mZip'),
+   city:gv('mCity'), province:gv('mProv'), unregisteredEntity:cv('mUnreg'),
    confirm:!!confirm};
 }
 
@@ -632,7 +661,8 @@ function mockPayload(){
  const {et,ct}=resolved();
  return {jurisdiction:sel.jurisdiction, name:sel.rawname||sel.name, journeyName:'All',
    externalCode:sel.externalCode||null, entityType:et, companyType:ct,
-   addressLine1:gv('mAddr'), postcode:gv('mZip'), city:gv('mCity')};
+   addressLine1:gv('mAddr'), addressLine2:gv('mAddr2'), postcode:gv('mZip'),
+   city:gv('mCity'), province:gv('mProv'), unregisteredEntity:cv('mUnreg')};
 }
 
 // Dry run — mocked on the frontend: build + show the payload, send nothing.
@@ -749,8 +779,22 @@ function renderJurInfoList(q){
  }).join('');
  list.querySelectorAll('.res').forEach(el=>el.onclick=()=>{
    list.querySelectorAll('.res').forEach(x=>x.classList.remove('sel')); el.classList.add('sel');
-   renderJurDetail(MATRIX.jurisdictions[+el.dataset.i]);
+   selectJurisdiction(MATRIX.jurisdictions[+el.dataset.i]);
  });
+}
+
+// The list comes from the local snapshot (it holds all 217 rows, including the US
+// states and Canadian provinces the gateway has no code for), but the DETAIL is
+// fetched live so coverage is never served stale. /api/jurisdiction answers in one
+// shape either way and reports which source it used.
+async function selectJurisdiction(row){
+ show('infoCard');
+ document.getElementById('infoCardTitle').textContent=row.name;
+ document.getElementById('infoDetail').innerHTML='<div class="hint"><span class="spin"></span> …</div>';
+ const qs=row.code?('code='+encodeURIComponent(row.code)):('name='+encodeURIComponent(row.name));
+ const {ok,d}=await api('/api/jurisdiction?'+qs);
+ if(!ok){ document.getElementById('infoDetail').innerHTML='<div class="err">'+esc(d.error||'error')+'</div>'; return; }
+ renderJurDetail(d);
 }
 
 function chips(arr,na){
@@ -763,23 +807,42 @@ function docBadges(arr,style){
  return '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">'
    +arr.map(d=>'<span class="badge" style="'+style+'">'+esc(d)+'</span>').join('')+'</div>';
 }
+// Consumes the /api/jurisdiction shape: dataFields{...} and baseDocuments /
+// additionalDocuments as [{type, description}]. `source` is "gateway" (live) or
+// "matrix" (local snapshot — the US states, Canadian provinces and code-less rows
+// the gateway cannot address, or a fallback if it is unreachable).
 function renderJurDetail(x){
  show('infoCard');
  document.getElementById('infoCardTitle').textContent=x.name;
+ const df=x.dataFields||{};
+ const labels=a=>(a||[]).map(d=>d.description||d.type||'');
+ const snapshot=(x.source!=='gateway');
  document.getElementById('infoDetail').innerHTML=
    '<div class="row" style="align-items:center;margin-bottom:2px">'
-   +'<span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(x.group)+'</span>'
+   +'<span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(x.group||'—')+'</span>'
    +'<span class="badge opt">'+t('slaWord')+': '+esc(x.sla||'—')+'</span>'
-   +(x.registryAccess?'<span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(x.registryAccess)+'</span>':'')
+   +((x.registries&&x.registries.length)?'<span class="badge" style="background:var(--chip);color:var(--ink)">'+esc(x.registries.join(' / '))+'</span>':'')
+   +(snapshot?'<span class="badge" style="color:#92400e;background:#fffbeb;border:1px solid #fde68a">'+t('srcSnapshot')+'</span>':'')
    +'</div>'
-   +'<label style="margin-top:12px">'+t('colIdentity')+'</label>'+chips(x.companyIdentity)
-   +'<label style="margin-top:12px">'+t('colControl')+'</label>'+chips(x.controlling)
-   +'<label style="margin-top:12px">'+t('colShare')+'</label>'+chips(x.shareholders,t('shareNa'))
+   +'<label style="margin-top:12px">'+t('colIdentity')+'</label>'+chips(df.companyIdentity)
+   +'<label style="margin-top:12px">'+t('colControl')+'</label>'+chips(df.controllingEntitiesAndIndividuals)
+   +'<label style="margin-top:12px">'+t('colShare')+'</label>'+chips(df.shareholdersPartnersAndUBOs,t('shareNa'))
    +'<label style="margin-top:14px">'+t('colDocs')+' — '+t('mandatoryWord')+'</label>'
-   +docBadges(x.documentsMandatory,'color:var(--opt);background:var(--opt-bg);border:1px solid #bbf7d0')
+   +docBadges(labels(x.baseDocuments),'color:var(--opt);background:var(--opt-bg);border:1px solid #bbf7d0')
    +'<label style="margin-top:12px">'+t('colDocs')+' — '+t('nonMandatoryWord')+'</label>'
-   +docBadges(x.documentsNonMandatory,'color:#92400e;background:#fffbeb;border:1px solid #fde68a')
+   +docBadges(labels(x.additionalDocuments),'color:#92400e;background:#fffbeb;border:1px solid #fde68a')
    +'<div class="hint" style="margin-top:14px">'+t('docNote')+'</div>';
+}
+
+// statusName/ready come from the case list (scope=workspace only). The value is
+// the gateway's own English wording ("Ready", "Processing", "Create failed"), so
+// it is shown verbatim rather than translated.
+function caseStatusPill(c){
+ if(!c.statusName) return '';
+ const style = c.ready ? 'color:var(--opt);background:var(--opt-bg)'
+   : (/fail/i.test(c.statusName) ? 'color:var(--req);background:var(--req-bg)'
+                                 : 'color:#92400e;background:#fffbeb');
+ return '<span class="st" style="'+style+'">'+esc(c.statusName)+'</span>';
 }
 
 let docQTimer=null;
@@ -793,13 +856,30 @@ async function loadCases(q){
  if(!ok){box.innerHTML='<div class="err">'+esc(d.error)+'</div>';return;}
  const cs=d.cases||[];
  if(!cs.length){box.innerHTML='<div class="hint">'+t('noCases')+'</div>';return;}
- box.innerHTML=cs.map(c=>
-   '<div class="res" data-id="'+esc(String(c.caseCommonId))+'">'
+ box.innerHTML=cs.map(c=>{
+   // scope=workspace also returns cases that are still building or failed to
+   // create; those have no caseCommonId, so there is nothing to select or fetch.
+   const has=(c.caseCommonId!==null&&c.caseCommonId!==undefined);
+   return '<div class="res'+(has?'':' inert')+'"'+(has?(' data-id="'+esc(String(c.caseCommonId))+'"'):'')+'>'
    +'<div class="nm"><b>'+esc(c.name)+'</b>'
-   +'<small>Case '+esc(String(c.caseCommonId))+(c.docCount?(' · '+c.docCount+' '+t('docsWord')):'')+'</small></div></div>').join('');
- box.querySelectorAll('.res').forEach(el=>el.onclick=()=>{
+   +'<small>'+(has?('Case '+esc(String(c.caseCommonId))):t('caseNotCreated'))
+   +(c.docCount?(' · '+c.docCount+' '+t('docsWord')):'')+'</small></div>'
+   +caseStatusPill(c)+'</div>';}).join('');
+ box.querySelectorAll('.res[data-id]').forEach(el=>el.onclick=()=>{
    box.querySelectorAll('.res').forEach(x=>x.classList.remove('sel')); el.classList.add('sel');
    selectCase(el.dataset.id);});
+}
+
+// Gateway availability flag on a document: available | pending | missing.
+// Absent on older responses, so an unknown/empty value renders nothing.
+const _AVAIL_STYLE={
+  available:'color:var(--opt);background:var(--opt-bg);border:1px solid var(--success-border)',
+  pending:'color:#92400e;background:#fffbeb;border:1px solid #fde68a',
+  missing:'color:var(--muted);background:var(--chip);border:1px solid var(--line)'};
+const _AVAIL_LABEL={available:'availAvailable',pending:'availPending',missing:'availMissing'};
+function availBadge(a){
+ if(!a||!_AVAIL_STYLE[a]) return '';
+ return '<span class="badge" style="'+_AVAIL_STYLE[a]+'">'+t(_AVAIL_LABEL[a])+'</span>';
 }
 
 async function selectCase(id){
@@ -815,6 +895,9 @@ async function selectCase(id){
    '<div class="dlrow"><span class="code">'+esc(doc.type||'?')+'</span>'
    +'<b style="flex:1">'+esc(doc.name)+'</b>'
    +'<span class="muted">'+esc(doc.category||'')+'</span>'
+   +availBadge(doc.availability)
+   // Only `available` documents carry a docId — `pending` and `missing` have
+   // nothing to fetch yet, so they get a status badge instead of a button.
    +(doc.docId?('<button class="ghost" data-c="'+esc(id)+'" data-d="'+esc(doc.docId)+'">'+t('docDownload')+'</button>'):'')
    +'</div>').join('');
  body.querySelectorAll('button[data-d]').forEach(b=>b.onclick=()=>{

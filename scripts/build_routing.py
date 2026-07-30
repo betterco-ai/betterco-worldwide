@@ -81,6 +81,28 @@ VENDOR_ORDER_MODEL = {
                                    "Serves filed document images incl. articles."},
 }
 
+# Per-(vendor, jurisdiction) ordering-CHANNEL override. The vendor stays case-level — the
+# case is still what you order first — but HONG KONG is the one place where KYC.com does
+# expose a real per-filing SKU on top of it: the HKCR sells filings individually, so a
+# document that is not in the case bundle is BOUGHT per filing, not "requested within the
+# case". Verified against the v2 swagger 2026-07-29 ("Works only for HKCR cases").
+VENDOR_ORDER_CHANNEL = {
+    ("kyc.com", "HK"): {
+        "channel": "document_purchase",
+        "list": "GET /v2/DocumentPurchase/{caseCommonId}",
+        "buy": "POST /v2/DocumentPurchase {caseCommonId, registryDocumentId}",
+        "idField": "registryDocumentId",
+        "requires": "an existing HKCR case — filings are listed per case, not per search hit",
+        "note": "Per-filing SKU: the Articles and the Annual Return (NAR1) are bought "
+                "individually. Delivery is asynchronous — the filing carries a "
+                "caseDocumentId once it has arrived on the case. CHECK BEFORE BUYING: "
+                "HK CR lists both as mandatory documents, so the case bundle often "
+                "already carries them; such a filing comes back purchased=true and "
+                "must not be bought again. The purchase route earns its keep for the "
+                "filings the bundle does NOT carry (older NAR1s, altered articles).",
+    },
+}
+
 
 def vendor_for(j, kind=None):
     if kind is not None and (j, kind) in VENDOR_BY_JURISDICTION_KIND:
@@ -207,6 +229,17 @@ def decide(r):
     order = None
     if availability in ("base", "additional"):
         model = VENDOR_ORDER_MODEL.get(vendor, {})
+        # The channel only applies to what must be OBTAINED — a base document arrives with
+        # the case and is never purchased.
+        channel = VENDOR_ORDER_CHANNEL.get((vendor, j)) if availability == "additional" else None
+        if model.get("model") == "case_level":
+            how = "included_in_case" if availability == "base" else "additional_within_case"
+            # A per-filing channel (HK) replaces the vague "additional within case": the
+            # document has a real id and is bought individually.
+            if channel and availability != "base":
+                how = channel["channel"]
+        else:
+            how = "order_document"
         order = {
             "vendor": vendor,
             "model": model.get("model"),
@@ -214,13 +247,17 @@ def decide(r):
             # registry/matrix name; there is no SKU. For a document-level vendor it maps to
             # that vendor's document type. `registryName` is our normalized handle either way.
             "registryName": r.get("documentLocal") or r.get("documentLabel"),
-            "howToObtain": ("included_in_case" if availability == "base"
-                            else "additional_within_case") if model.get("model") == "case_level"
-                            else "order_document",
+            "howToObtain": how,
             "vendorCatalog": model.get("catalog"),
-            "aggregationNote": "Document-level request provided by our aggregation layer; "
-                               "for a case-level vendor no per-document SKU exists.",
+            "aggregationNote": (
+                "Per-filing purchase inside an existing case — the vendor exposes a real "
+                "document id here, so our document-level request maps 1:1."
+                if channel else
+                "Document-level request provided by our aggregation layer; "
+                "for a case-level vendor no per-document SKU exists."),
         }
+        if channel:
+            order["channel"] = channel
     return {
         "jurisdiction": j, "legalForm": form, "kind": kind,
         "availability": availability, "action": action,
@@ -245,6 +282,7 @@ def main():
         "vendorRouting": VENDOR_BY_JURISDICTION,
         "vendorRoutingByKind": {"%s/%s" % k: v for k, v in VENDOR_BY_JURISDICTION_KIND.items()},
         "vendorOrderModel": VENDOR_ORDER_MODEL,
+        "vendorOrderChannel": {"%s/%s" % k: v for k, v in VENDOR_ORDER_CHANNEL.items()},
         "actionVocabulary": {
             "use_delivered": "Document arrives with the case bundle; classify the delivered file.",
             "use_delivered_with_warning": "As above, but flag the completeness limitation.",

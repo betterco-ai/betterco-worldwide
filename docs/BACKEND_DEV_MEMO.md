@@ -1,4 +1,4 @@
-# Backend memo — two new APIs to add to the document-search gateway
+# Backend memo — new APIs to add to the document-search gateway
 
 From the KYC-worldwide work. The app currently works around two gaps with app-side
 code; both should move into the **BetterCo document-search backend** so every client
@@ -8,6 +8,92 @@ proven against the staging tenant (`stg-stp-kyccom`).
 Related hand-off (already delivered, not an API): `curation/legal_forms_curation_ALL.json`
 — 330 legal-form rows for the 82 unmapped manual jurisdictions, to be ingested into the
 same `legal-forms` store that holds the existing 14. See `curation/README.md`.
+
+---
+
+## 🔧 Action for backend — 2026-07-29: expose the Hong Kong per-filing document order
+
+**Why this is new:** we modelled KYC.com as purely *case-level* — order a case, take what the
+bundle contains, no per-document SKU. **Hong Kong is the exception.** The HKCR sells filings
+individually and KYC.com exposes that: a case's filings can be **listed** and then **bought one by
+one**. This is the first upstream route that matches our aggregation layer's document-level request
+**1:1**, so it should not stay hidden behind "order the whole case".
+
+Upstream contract (verified against the prod v2 swagger 2026-07-29 — *"Works only for HKCR cases"*;
+other jurisdictions answer **400**):
+
+| | Upstream | Cost |
+|---|---|---|
+| List filings | `GET /v2/DocumentPurchase/{caseCommonId}?refreshList=false` | free |
+| Buy one filing | `POST /v2/DocumentPurchase` `{caseCommonId, registryDocumentId}` → `{message}` | **billable, per filing** |
+
+Response `{caseDetail:{company:{caseCompanyId, lastRefreshedDate, registryDocuments:{documents:[…]}}}}`,
+each filing `{caseDocumentId?, registrydocumentId, name, filingDate, status, category, updateDatetime}`.
+
+**Proposed gateway routes** (vendor-neutral naming — the client must not learn the word
+*DocumentPurchase*):
+
+```
+GET  /document-search/cases/{caseCommonId}/orderable-documents[?refresh=true]
+     -> [{documentId, name, category, filingDate, status, alreadyOnCase: bool}]
+POST /document-search/cases/{caseCommonId}/orderable-documents/{documentId}/order
+     {confirm: true}   -> {message}   # billable, gated like case creation
+```
+
+**Four things the gateway must get right:**
+
+1. ⚠️ **Casing trap.** The upstream **GET response** field is `registrydocumentId` (**lowercase d**);
+   the **POST body** field is `registryDocumentId` (**capital D**). Both spellings are correct in
+   their own place — reading the id with the POST spelling silently yields `null`.
+2. **`caseDocumentId` set ⇒ the filing is already on the case** (bought earlier, or delivered with
+   the bundle) → serve it from the existing document-download route; **never buy it again**. HK CR
+   lists *Memorandum & Articles of Association* and *Annual Return (FNAR1)* as **mandatory**, so the
+   bundle usually already carries them — the purchase route is for what it does *not* carry (older
+   NAR1s, altered articles, special resolutions). Surface this as `alreadyOnCase`.
+3. **Billing gate + explicit confirm.** Treat the order like case creation: paid gate *and* an
+   explicit `confirm` — an accidental retry buys a second copy.
+4. **Delivery is asynchronous.** After a 200, the filing appears on the case later — poll the list
+   (or use the `DocumentUploaded` webhook) until it carries a `caseDocumentId`.
+
+**Reference implementation (working, contract-tested):** `kyc_com_client.py` in `betterco_claude_api`
+— `list_document_filings()`, `find_document_filings()`, `purchase_document(confirm=…)`, plus our own
+API routes `GET /kyccom/cases/{id}/filings` and
+`POST /kyccom/cases/{id}/filings/{registryDocumentId}/purchase?confirm=true`.
+
+**Routing data already updated:** `curation/document_kinds_routing.json` — the HK
+Gesellschafterliste/Gesellschaftsvertrag rows now carry `order.howToObtain = "document_purchase"`
+plus an `order.channel` block with the exact list/buy calls, instead of the old (for HK wrong)
+"no per-document SKU exists" note.
+
+⚠️ **Not yet exercised against a live HK case — nothing was purchased.** The v2 sandbox *stubs* this
+route (200 for any case, `documents: null`), so the filing list can only be seen on prod, against a
+real HKCR case. Do that before building UI on the payload shape.
+
+---
+
+## 🔧 Action for backend — 2026-07-11: forward the extra manual-create fields
+
+The app's **create** call (`POST /document-search/cases`) now sends **more optional fields** for
+**manual (no-registry-search) jurisdictions**. Manual cases can't anchor on an `externalCode` from a
+search hit, so the **address block + province + a user-typed registry number** are what let the
+upstream locate the right entity — and `unregisteredEntity` flags an entity with no register entry
+at all. These map 1:1 to KYC.com's `CreateCompanyModel`.
+
+**Please make the gateway pass these through** to KYC.com create (some may currently be dropped):
+
+| Field (app → gateway) | KYC.com `CreateCompanyModel` | Notes |
+|---|---|---|
+| `addressLine1` | `addressLine1` | already forwarded |
+| `addressLine2` | `addressLine2` | **new — please forward** |
+| `postcode` | `postcode` | already forwarded |
+| `city` | `city` | already forwarded |
+| `province` | `province` | **new — please forward** (state/province/region) |
+| `externalCode` | `externalCode` | now also user-enterable in manual mode (registry no.) |
+| `unregisteredEntity` | `unregisteredEntity` | **new — boolean** |
+
+App side is done (`kyc_case_app.py` `/api/create-case` whitelist + `kyc_case.html` manual form). No
+new required fields — all optional; behaviour is unchanged when they're empty. Just don't silently
+drop them at the gateway.
 
 ---
 

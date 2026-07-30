@@ -72,11 +72,18 @@ INPI does not issue the Kbis. Options:
 So if a customer needs a genuine Kbis, that's a separate paid Infogreffe integration; budget it.
 
 ## 6. Gotchas / open items
-- **⚠️ PDF redistribution licence — VERIFY BEFORE SHIPPING.** RNE data is Open Data (Licence Ouverte),
-  which cleanly covers the structured JSON. Whether the same terms permit **re-serving the document
-  PDFs** (actes/comptes) to our customers is **NOT confirmed** — read
-  `https://data.inpi.fr/content/editorial/licences_reutilisation_donnees_inpi` + the CGU and confirm
-  explicitly. Do not assume the JSON open-data licence authorises PDF redistribution.
+- **✅ PDF redistribution licence — RESOLVED 2026-07-26, permitted.** Full licence text read
+  (*Licence de réutilisation des informations du RNE*, INPI 2024, homologated under art. L.323-2 /
+  D.323-2-2 CRPA — `https://www.inpi.fr/sites/default/files/Licence%20donn%C3%A9es%20RNE_2024_0.pdf`).
+  The instrument is this specific RNE licence, **not** the generic Licence Ouverte as previously
+  assumed here. Art. 1 defines "Information" as data in the register *"et dans les documents
+  communiqués ou reçus par l'INPI"* — the filed PDFs are in scope. Art. 2.1 grants reuse *"à des fins
+  commerciales ou non, dans le monde entier et pour une durée illimitée"*; art. 2.2 explicitly permits
+  *"la communiquer, la diffuser, la redistribuer, la publier et la transmettre"*. **Three obligations
+  to implement:** (1) art. 2.4 — cite source **and last-update date** per record, captured at fetch
+  time, and claim no INPI endorsement; (2) art. 2.5 — respect the art. A.123-69 code de commerce
+  search-criteria restriction, which constrains the **search widget**, not just this client;
+  (3) art. 4.4 — do not mislead as to content, source or update date.
 - Handle "listed in metadata but no downloadable file" (confidential / not-yet-digitised) as
   unavailable, not an error.
 - **API versioning:** Actes tech doc is **v3.0**; pin to the current versioned PDF per package and

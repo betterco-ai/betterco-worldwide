@@ -53,236 +53,6 @@ def jurisdiction_matrix():
     return _matrix
 
 
-# ── India CIN decoder ────────────────────────────────────────────────────────
-# CIN = [L|U][5-digit industry][2-letter STATE][4-digit year][3-letter class][6-digit reg#].
-# The STATE segment is the Registrar-of-Companies jurisdiction = the registering city.
-# This lets us reconstruct the CITY from a search hit whose address is truncated to the
-# state — a FREE pre-purchase check (customer gives name+city → confirm before billing).
-_CIN_STATE = {
-    "TG": ("Telangana", "Hyderabad"), "AP": ("Andhra Pradesh", "Vijayawada"),
-    "MH": ("Maharashtra", "Mumbai / Pune"), "DL": ("Delhi", "Delhi"), "HR": ("Haryana", "Delhi"),
-    "KA": ("Karnataka", "Bengaluru"), "TN": ("Tamil Nadu", "Chennai"), "GJ": ("Gujarat", "Ahmedabad"),
-    "WB": ("West Bengal", "Kolkata"), "UP": ("Uttar Pradesh", "Kanpur"), "RJ": ("Rajasthan", "Jaipur"),
-    "KL": ("Kerala", "Ernakulam (Kochi)"), "MP": ("Madhya Pradesh", "Gwalior"), "PB": ("Punjab", "Chandigarh"),
-    "CH": ("Chandigarh", "Chandigarh"), "BR": ("Bihar", "Patna"), "OR": ("Odisha", "Cuttack"),
-    "GA": ("Goa", "Goa"), "AS": ("Assam", "Guwahati/Shillong"), "JH": ("Jharkhand", "Ranchi"),
-    "CT": ("Chhattisgarh", "Bilaspur"), "UT": ("Uttarakhand", "Dehradun"), "UK": ("Uttarakhand", "Dehradun"),
-    "HP": ("Himachal Pradesh", "Shimla"), "JK": ("Jammu & Kashmir", "Jammu"), "PY": ("Puducherry", "Puducherry"),
-}
-_CIN_CLASS = {"PLC": "Public Limited Company", "PTC": "Private Limited Company", "OPC": "One Person Company",
-              "NPL": "Not-for-Profit (Sec 8)", "GOI": "Government of India company", "SGC": "State Government company",
-              "ULL": "Unlimited (public)", "ULT": "Unlimited (private)", "FLC": "Foreign public", "FTC": "Foreign private"}
-
-
-def decode_cin(cin):
-    """Decode an Indian CIN → {listed, state, rocCity, class, year, regNo, label}.
-    Returns None if the string is not a valid CIN."""
-    m = re.match(r"^([LU])(\d{5})([A-Z]{2})(\d{4})([A-Z]{3})(\d{6})$", (cin or "").strip().upper())
-    if not m:
-        return None
-    listed, _ind, st, year, cls, reg = m.groups()
-    state, roc = _CIN_STATE.get(st, (None, None))
-    return {
-        "cin": m.group(0), "listed": listed == "L",
-        "stateCode": st, "state": state, "rocCity": roc,
-        "classCode": cls, "class": _CIN_CLASS.get(cls, cls),
-        "year": int(year), "regNo": reg,
-        "label": "%s %s · RoC %s%s · est. %d" % (
-            "Listed" if listed == "L" else "Unlisted",
-            _CIN_CLASS.get(cls, cls), roc or "?",
-            (" (%s)" % state) if state else "", int(year)),
-    }
-
-
-# ── More jurisdiction decoders (same pattern as India CIN) ───────────────────
-# Each takes the search hit's externalCode and returns a partial of the enrichment
-# fields it can derive {idScheme, entityType, listed, incorporationYear, city,
-# region, source}; None if it can't decode. Wired via _DECODERS below.
-
-_RU_REGION = {  # OGRN region code (digits 4-5) -> subject of the RF
-    "77": "Moscow", "78": "St Petersburg", "50": "Moscow Oblast", "47": "Leningrad Oblast",
-    "23": "Krasnodar Krai", "61": "Rostov Oblast", "66": "Sverdlovsk Oblast", "16": "Tatarstan",
-    "52": "Nizhny Novgorod", "63": "Samara Oblast", "02": "Bashkortostan", "74": "Chelyabinsk",
-    "24": "Krasnoyarsk Krai", "54": "Novosibirsk", "55": "Omsk", "59": "Perm Krai",
-    "34": "Volgograd", "36": "Voronezh", "72": "Tyumen", "86": "Khanty-Mansi", "38": "Irkutsk",
-    "40": "Kaluga", "33": "Vladimir", "76": "Yaroslavl", "64": "Saratov", "31": "Belgorod",
-}
-
-
-def _decode_ogrn(code):  # RU
-    c = (code or "").strip()
-    if not (c.isdigit() and len(c) == 13):
-        return None
-    yy = int(c[1:3])
-    year = (2000 + yy) if yy <= 50 else (1900 + yy)
-    reg = c[3:5]
-    return {"idScheme": "OGRN", "incorporationYear": year,
-            "region": _RU_REGION.get(reg, "region " + reg), "source": "ogrn-decode"}
-
-
-_CN_PROVINCE = {  # USCC admin-division code, first 2 digits -> province
-    "11": "Beijing", "12": "Tianjin", "13": "Hebei", "14": "Shanxi", "15": "Inner Mongolia",
-    "21": "Liaoning", "22": "Jilin", "23": "Heilongjiang", "31": "Shanghai", "32": "Jiangsu",
-    "33": "Zhejiang", "34": "Anhui", "35": "Fujian", "36": "Jiangxi", "37": "Shandong",
-    "41": "Henan", "42": "Hubei", "43": "Hunan", "44": "Guangdong", "45": "Guangxi",
-    "46": "Hainan", "50": "Chongqing", "51": "Sichuan", "52": "Guizhou", "53": "Yunnan",
-    "54": "Tibet", "61": "Shaanxi", "62": "Gansu", "63": "Qinghai", "64": "Ningxia",
-    "65": "Xinjiang", "71": "Taiwan", "81": "Hong Kong", "82": "Macau",
-}
-
-
-def _decode_uscc(code):  # CN
-    c = (code or "").strip().upper()
-    if len(c) != 18 or not c[2:4].isdigit():
-        return None
-    prov = _CN_PROVINCE.get(c[2:4])
-    return {"idScheme": "USCC", "region": prov or ("division " + c[2:8]), "source": "uscc-decode"}
-
-
-_DE_REG = {"HRB": "Company", "HRA": "Sole trader / Partnership", "GnR": "Cooperative",
-           "VR": "Association", "PR": "Partnership", "GsR": "Cooperative"}
-
-
-def _decode_de_register(code):  # DE — court city sits in the externalCode
-    m = re.search(r"\b(HRB|HRA|GnR|VR|PR|GsR)\b", code or "", re.I)
-    if not m:
-        return None
-    rtype = m.group(1).upper()
-    before = code[:m.start()]
-    for w in ("District court", "Amtsgericht", "Registergericht"):
-        before = before.replace(w, " ")
-    toks = before.split()
-    city = toks[-1] if toks else None
-    region = toks[0] if len(toks) > 1 else None
-    return {"idScheme": rtype, "entityType": _DE_REG.get(rtype),
-            "city": city, "region": region, "source": "de-register"}
-
-
-def _decode_cuit(code):  # AR
-    c = (code or "").replace("-", "").strip()
-    if not (c.isdigit() and len(c) == 11):
-        return None
-    pre = c[:2]
-    et = "Company" if pre in ("30", "33", "34") else ("Individual" if pre in ("20", "23", "24", "27") else None)
-    return {"idScheme": "CUIT", "entityType": et, "source": "cuit-decode"}
-
-
-_HU_COUNTY = {
-    "01": "Budapest", "02": "Baranya (Pécs)", "03": "Bács-Kiskun", "04": "Békés",
-    "05": "Borsod-Abaúj-Zemplén", "06": "Csongrád-Csanád", "07": "Fejér", "08": "Győr-Moson-Sopron",
-    "09": "Hajdú-Bihar", "10": "Heves", "11": "Komárom-Esztergom", "12": "Nógrád", "13": "Pest",
-    "14": "Somogy", "15": "Szabolcs-Szatmár-Bereg", "16": "Jász-Nagykun-Szolnok", "17": "Tolna",
-    "18": "Vas", "19": "Veszprém", "20": "Zala",
-}
-
-
-def _decode_hu(code):  # HU
-    c = (code or "").replace("-", "").strip()
-    if not (c.isdigit() and len(c) >= 8):
-        return None
-    return {"idScheme": "Cégjegyzékszám", "region": _HU_COUNTY.get(c[:2], "county " + c[:2]),
-            "source": "hu-decode"}
-
-
-_GB_PREFIX = {  # company-number prefix -> (jurisdiction, entity type hint)
-    "SC": ("Scotland", None), "SO": ("Scotland", "Limited Liability Partnership"),
-    "NI": ("Northern Ireland", None), "NC": ("Northern Ireland", "Limited Liability Partnership"),
-    "OC": ("England & Wales", "Limited Liability Partnership"), "FC": ("Foreign company", None),
-}
-
-
-def _decode_gb(code):  # GB
-    c = (code or "").strip().upper()
-    if c[:2] in _GB_PREFIX:
-        reg, et = _GB_PREFIX[c[:2]]
-        return {"idScheme": "CRN", "region": reg, "entityType": et, "source": "gb-crn"}
-    if c.isdigit() and len(c) == 8:
-        return {"idScheme": "CRN", "region": "England & Wales", "source": "gb-crn"}
-    return None
-
-
-def _decode_sg(code):  # SG — UEN yyyynnnnnX, first 4 digits = year
-    c = (code or "").strip()
-    if len(c) == 10 and c[:4].isdigit() and 1850 <= int(c[:4]) <= 2100:
-        return {"idScheme": "UEN", "incorporationYear": int(c[:4]), "source": "uen-decode"}
-    return None
-
-
-_DECODERS = {"RU": _decode_ogrn, "CN": _decode_uscc, "DE": _decode_de_register,
-             "AR": _decode_cuit, "HU": _decode_hu, "GB": _decode_gb, "SG": _decode_sg}
-
-
-def enrich_search_result(jur, r):
-    """ONE generic enrichment shape for a search hit — SAME schema for every
-    jurisdiction. Jurisdiction-specific decoders (e.g. India CIN) fill what they
-    can; unknown fields stay null. Consumers get an identical object everywhere.
-
-    Schema:
-        registryId, idScheme, entityType, listed, incorporationYear, status,
-        location:{city, region, countryCode, raw}, summary, source
-    """
-    reg_id = r.get("externalCode")
-    enr = {
-        "registryId": reg_id,
-        "idScheme": None,
-        "entityType": None,
-        "listed": None,
-        "incorporationYear": None,
-        "status": r.get("companyStatus"),
-        "location": {
-            "city": r.get("city") or None,
-            "region": None,
-            "countryCode": (jur or "").upper() or None,
-            "raw": r.get("rawAddress") or None,
-        },
-        "summary": None,
-        "source": "registry",
-    }
-
-    # ── jurisdiction-specific decoders write INTO the shape above ──
-    juu = (jur or "").upper()
-    if juu == "IN":
-        d = decode_cin(reg_id)
-        if d:
-            enr["idScheme"] = "CIN"
-            enr["entityType"] = d["class"]
-            enr["listed"] = d["listed"]
-            enr["incorporationYear"] = d["year"]
-            enr["location"]["city"] = d["rocCity"]
-            enr["location"]["region"] = d["state"]
-            enr["source"] = "cin-decode"
-    elif juu in _DECODERS:
-        p = _DECODERS[juu](reg_id) or {}
-        for k in ("idScheme", "entityType", "listed", "incorporationYear"):
-            if p.get(k) is not None:
-                enr[k] = p[k]
-        if p.get("city"):
-            enr["location"]["city"] = p["city"]
-        if p.get("region"):
-            enr["location"]["region"] = p["region"]
-        if p.get("source"):
-            enr["source"] = p["source"]
-    # Every decoder just fills the same `enr` fields; the returned JSON shape
-    # never changes. Add a jurisdiction = add a decoder + one _DECODERS entry.
-
-    # human one-liner assembled from whatever is populated (segments joined by " · ")
-    head = " ".join(x for x in [
-        ("Listed" if enr["listed"] else "Unlisted") if enr["listed"] is not None else None,
-        enr["entityType"],
-    ] if x)
-    city, region = enr["location"]["city"], enr["location"]["region"]
-    loc = city or region
-    segs = []
-    if head:
-        segs.append(head)
-    if loc:
-        segs.append(loc + (" (%s)" % region if city and region and region != city else ""))
-    if enr["incorporationYear"]:
-        segs.append("est. %d" % enr["incorporationYear"])
-    enr["summary"] = " · ".join(segs) or None
-    return enr
-
-
 def _doc_type(label: str) -> str:
     """Canonical machine type derived from a document label:
     'Registered financial statements' -> 'REGISTERED_FINANCIAL_STATEMENTS'."""
@@ -293,9 +63,35 @@ def _doc_type(label: str) -> str:
 
 
 def jurisdiction_detail(code=None, name=None):
-    """Structured coverage for ONE jurisdiction, looked up by ISO code (baked into
-    the matrix) or by exact matrix name. Returns None if not found. Documents are
-    shaped as {type, description}. No backend call — pure static matrix."""
+    """Structured coverage for ONE jurisdiction. Returns None if not found.
+
+    Live from the gateway when an ISO code is supplied and the gateway has a
+    coverage row for it; otherwise from the static matrix. `source` records which
+    answered ("gateway" | "matrix") so the UI can say whether it is showing live
+    data or the snapshot.
+
+    The fallback is not just belt-and-braces: 89 of the matrix's 217 rows have no
+    ISO code (the 50 US states, 14 Canadian provinces, and code-less entries like
+    Anguilla), so the gateway cannot address them at all — they are name-only
+    lookups. The 128 coded rows map 1:1 onto the gateway's 128 coverage rows.
+    """
+    if code:
+        try:
+            live = gw.jurisdiction_coverage(code.strip().upper())
+            if live:
+                live["source"] = "gateway"
+                return live
+        except requests.HTTPError as e:
+            # 404 = priced but uncovered (AF/BD/GH) — expected; fall through to the
+            # matrix, which has no row for them either, so the caller gets a 404.
+            sc = e.response.status_code if e.response is not None else None
+            if sc != 404:
+                print(f"WARNING: coverage lookup failed for {code} (HTTP {sc}) — using snapshot.")
+        except (requests.Timeout, requests.ConnectionError, ValueError) as e:
+            # Unreachable or unconfigured gateway: serve the snapshot rather than
+            # fail, but `source` will say "matrix" so it is never passed off as live.
+            print(f"WARNING: coverage unavailable for {code} ({type(e).__name__}) — using snapshot.")
+
     juris = jurisdiction_matrix().get("jurisdictions", [])
     entry = None
     if code:
@@ -325,6 +121,7 @@ def jurisdiction_detail(code=None, name=None):
         },
         "baseDocuments": docs(entry.get("documentsMandatory")),
         "additionalDocuments": docs(entry.get("documentsNonMandatory")),
+        "source": "matrix",
     }
 
 
@@ -351,26 +148,33 @@ def persist_env(updates: dict):
         f.write("\n".join(out) + "\n")
 
 def list_cases_with_documents(refresh=False):
-    """All account cases that currently have >=1 document, via the gateway
-    (scope=account). The gateway does the search-by-properties + parallel
-    doc-count + caching server-side; returns [{caseCommonId, name, docCount}]."""
-    return gw.list_cases(scope="account", with_documents=True, refresh=refresh)
+    """All workspace cases that currently have >=1 document, via the gateway
+    (scope=workspace — the only scope that carries `ready`/`statusName`). The
+    gateway does the search-by-properties + parallel doc-count + caching
+    server-side; returns [{caseCommonId, name, docCount, ready, statusName}]."""
+    return gw.list_cases(scope="workspace", with_documents=True, refresh=refresh)
 
-def case_documents_flat(case_common_id):
+def case_documents_flat(case_common_id, include_pending=True):
     """A case's documents via the gateway, flattened to the shape the UI expects:
-    {name, documents:[{type, name, category, docId}]}. 'type' is the per-document
-    category code (AD/DK/...); 'category' is the human grouping."""
-    d = gw.case_documents(case_common_id)
+    {name, documents:[{type, name, category, docId, availability}]}. 'type' is the
+    per-document category code (AD/DK/...); 'category' is the human grouping.
+
+    include_pending=True (default) also surfaces documents while the case is still
+    building. 'availability' is available | pending | missing; a missing row is a
+    placeholder for a gap and carries no docId, so it can't be downloaded."""
+    d = gw.case_documents(case_common_id, include_pending=include_pending)
     flat = [{"type": doc.get("type") or "",
              "name": doc.get("name") or "document",
              "category": doc.get("category") or "",
-             "docId": doc.get("documentId")}
+             "docId": doc.get("documentId"),
+             "availability": doc.get("availability") or ""}
             for doc in (d.get("documents") or [])]
     return {"name": d.get("name"), "documents": flat}
 
-def fetch_document_bytes(case_common_id, doc_id):
-    """Download a document via the backend document-search API."""
-    return gw.download_document(case_common_id, doc_id)
+def fetch_document_bytes(case_common_id, doc_id, include_pending=True):
+    """Download a document via the backend document-search API. include_pending
+    mirrors how the document was listed (see case_documents_flat)."""
+    return gw.download_document(case_common_id, doc_id, include_pending=include_pending)
 
 def _send_bytes(handler, data, content_type, filename):
     handler.send_response(200)
@@ -443,6 +247,10 @@ class H(BaseHTTPRequestHandler):
                     body = f.read()
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html; charset=utf-8")
+                # The page is read from disk on every request, so it is never stale
+                # server-side — but without this the browser caches it and keeps
+                # showing an old UI after the HTML changes.
+                self.send_header("Cache-Control", "no-store, must-revalidate")
                 self.send_header("Content-Length", str(len(body)))
                 self.end_headers()
                 self.wfile.write(body)
@@ -463,6 +271,7 @@ class H(BaseHTTPRequestHandler):
                     body = f.read()
                 self.send_response(200)
                 self.send_header("Content-Type", "text/css; charset=utf-8")
+                self.send_header("Cache-Control", "no-store, must-revalidate")
                 self.send_header("Content-Length", str(len(body)))
                 self.end_headers()
                 self.wfile.write(body)
@@ -502,13 +311,11 @@ class H(BaseHTTPRequestHandler):
                                         "(some jurisdictions, e.g. Cayman, are slow). Please refine "
                                         "your search or try again in a moment.",
                                         "slow": True, "jurisdiction": jur, "query": query}, 504)
-                # Attach ONE generic `enrichment` object to every hit (same schema for
-                # all jurisdictions) so the free search surfaces location/type/etc. that
-                # the raw address may hide (e.g. India's address is truncated to state).
-                if isinstance(results, list):
-                    for r in results:
-                        if isinstance(r, dict):
-                            r["enrichment"] = enrich_search_result(jur, r)
+                # Each hit carries the gateway's own `enrichment` object (one schema for
+                # every jurisdiction) surfacing location/type the raw address may hide —
+                # e.g. India's address is truncated to the state, but the CIN yields the
+                # city. Passed straight through; the app decoded this itself until the
+                # gateway adopted the same decoders (verified field-identical).
                 _json(self, {"jurisdiction": jur, "query": query, "results": results})
             elif u.path == "/api/case":
                 cid = q.get("id", [None])[0]
@@ -522,7 +329,7 @@ class H(BaseHTTPRequestHandler):
                 })
             elif u.path == "/api/cases":
                 qq = (q.get("q", [""])[0] or "").strip()
-                cases = gw.list_cases(scope="account", with_documents=True,
+                cases = gw.list_cases(scope="workspace", with_documents=True,
                                       q=(qq or None),
                                       refresh=q.get("refresh", [""])[0] == "1")
                 _json(self, {"cases": cases[:300], "total": len(cases)})
@@ -582,8 +389,13 @@ class H(BaseHTTPRequestHandler):
 
                 body = {"jurisdiction": jur, "name": name,
                         "journeyName": payload.get("journeyName") or "All"}
+                # Manual (no-registry-search) jurisdictions can't anchor on an externalCode,
+                # so the address block + province + registry number are what let the upstream
+                # locate the right entity; unregisteredEntity flags an entity with no register
+                # entry at all. All optional; forwarded straight through to the gateway.
                 for key in ("externalCode", "legalType", "entityType", "companyType",
-                            "addressLine1", "postcode", "city"):
+                            "addressLine1", "addressLine2", "postcode", "city", "province",
+                            "unregisteredEntity"):
                     if payload.get(key):
                         body[key] = payload[key]
 

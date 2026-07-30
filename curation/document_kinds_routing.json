@@ -38,6 +38,16 @@
    "note": "Free REST API (Public Data + Document API), free API key. Serves filed document images incl. articles."
   }
  },
+ "vendorOrderChannel": {
+  "kyc.com/HK": {
+   "channel": "document_purchase",
+   "list": "GET /v2/DocumentPurchase/{caseCommonId}",
+   "buy": "POST /v2/DocumentPurchase {caseCommonId, registryDocumentId}",
+   "idField": "registryDocumentId",
+   "requires": "an existing HKCR case — filings are listed per case, not per search hit",
+   "note": "Per-filing SKU: the Articles and the Annual Return (NAR1) are bought individually. Delivery is asynchronous — the filing carries a caseDocumentId once it has arrived on the case. CHECK BEFORE BUYING: HK CR lists both as mandatory documents, so the case bundle often already carries them; such a filing comes back purchased=true and must not be bought again. The purchase route earns its keep for the filings the bundle does NOT carry (older NAR1s, altered articles)."
+  }
+ },
  "actionVocabulary": {
   "use_delivered": "Document arrives with the case bundle; classify the delivered file.",
   "use_delivered_with_warning": "As above, but flag the completeness limitation.",
@@ -1331,16 +1341,28 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Registrar of Companies (Bermuda), Government of Bermuda — company registration / certificates",
-     "url": "https://www.gov.bm/articles/limited-companies"
+     "basis": "Companies Act 1981 (Bermuda), s.14(1) — Registrar maintains the register of companies",
+     "url": "https://www.bma.bm/viewPDF/documents/2023-11-14-10-39-37-Companies-Act-1981.pdf"
     },
     {
-     "basis": "Companies Act 1981 (Bermuda) — Registrar keeps the register of companies; Certificate of Incorporation (one-time) vs current-status certification",
-     "url": "http://www.bermudalaws.bm/"
+     "basis": "Companies Act 1981 (Bermuda), s.14(2) — registration and certificate of incorporation",
+     "url": "https://www.bma.bm/viewPDF/documents/2023-11-14-10-39-37-Companies-Act-1981.pdf"
+    },
+    {
+     "basis": "Companies Act 1981 (Bermuda), s.14(4) — contents of the register of companies",
+     "url": "https://www.bma.bm/viewPDF/documents/2023-11-14-10-39-37-Companies-Act-1981.pdf"
+    },
+    {
+     "basis": "Companies Act 1981 (Bermuda), s.14 (final subsection) — public inspection of the register of companies",
+     "url": "https://www.bma.bm/viewPDF/documents/2023-11-14-10-39-37-Companies-Act-1981.pdf"
+    },
+    {
+     "basis": "Registrar of Companies (Bermuda) — online portal (registrarofcompanies.gov.bm)",
+     "url": "https://www.registrarofcompanies.gov.bm/"
     }
    ]
   },
@@ -1377,7 +1399,7 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -1387,6 +1409,14 @@
     {
      "basis": "Código Civil, Art. 1.054",
      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+    },
+    {
+     "basis": "Lei 8.934/1994, art. 29 — publicidade do Registro Público de Empresas Mercantis",
+     "url": "https://www2.camara.leg.br/legin/fed/lei/1994/lei-8934-18-novembro-1994-322478-publicacaooriginal-1-pl.html"
+    },
+    {
+     "basis": "Lei 8.934/1994, art. 32, II, a — arquivamento dos atos constitutivos na Junta Comercial",
+     "url": "https://www2.camara.leg.br/legin/fed/lei/1994/lei-8934-18-novembro-1994-322478-publicacaooriginal-1-pl.html"
     }
    ]
   },
@@ -1592,7 +1622,7 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -1732,7 +1762,7 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -1841,15 +1871,23 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "OBCA s.140 — records (securities/ownership register maintained by the corporation)",
+     "basis": "OBCA s.141(1) — securities register maintained by the corporation at its registered office",
      "url": "https://www.ontario.ca/laws/statute/90b16"
     },
     {
-     "basis": "OBCA s.140.2/140.3 — register of individuals with significant control and access",
+     "basis": "OBCA s.145(1) — examination of company-held records limited to shareholders/creditors (public only for offering corporations)",
+     "url": "https://www.ontario.ca/laws/statute/90b16"
+    },
+    {
+     "basis": "OBCA s.140.2(1) — register of individuals with significant control kept by the corporation",
+     "url": "https://www.ontario.ca/laws/statute/90b16"
+    },
+    {
+     "basis": "OBCA s.140.3(3) — disclosure of the ISC register restricted to law enforcement (with tax and regulatory officials in s.140.3(4) ff.); no public access",
      "url": "https://www.ontario.ca/laws/statute/90b16"
     }
    ]
@@ -1907,12 +1945,24 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "OBCA s.5 — articles of incorporation sent to the Director; s.6 — certificate of incorporation",
+     "basis": "OBCA s.6 — articles of incorporation sent to the Director; certificate of incorporation endorsed",
      "url": "https://www.ontario.ca/laws/statute/90b16"
+    },
+    {
+     "basis": "OBCA s.5(1) — contents of articles",
+     "url": "https://www.ontario.ca/laws/statute/90b16"
+    },
+    {
+     "basis": "OBCA s.7 — certificate of incorporation as conclusive proof",
+     "url": "https://www.ontario.ca/laws/statute/90b16"
+    },
+    {
+     "basis": "Ontario Business Registry (ontario.ca) — filed information is public record; copies of filed documents orderable",
+     "url": "https://www.ontario.ca/page/ontario-business-registry"
     }
    ]
   },
@@ -1936,16 +1986,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "CBCA s.263 (Director to maintain records) and s.266 (public examination of documents sent to the Director)",
-     "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/"
+     "basis": "CBCA s.263.1(1) — Director's certificate (compliance / existence)",
+     "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/section-263.1.html"
     },
     {
-     "basis": "Corporations Canada — Search for a federal corporation (public database)",
-     "url": "https://ised-isde.canada.ca/cc/lgcy/fdrlCrpSrch.html"
+     "basis": "CBCA s.266(1) — public examination of documents sent to the Director",
+     "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/section-266.html"
+    },
+    {
+     "basis": "CBCA s.266(2) — certified copies and extracts from the Director",
+     "url": "https://laws-lois.justice.gc.ca/eng/acts/C-44/section-266.html"
     }
    ]
   },
@@ -1969,11 +2023,15 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "OBCA / Ontario Business Registry — Corporation Profile Report (ServiceOntario)",
+     "basis": "Ontario Business Registry (ontario.ca) — public record and search",
+     "url": "https://www.ontario.ca/page/ontario-business-registry"
+    },
+    {
+     "basis": "Ontario Business Registry (ontario.ca) — search products including profile report and certificate of status",
      "url": "https://www.ontario.ca/page/ontario-business-registry"
     }
    ]
@@ -2176,7 +2234,7 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -2186,6 +2244,14 @@
     {
      "basis": "Ley 18.046 sobre Sociedades Anónimas, art. 7",
      "url": "https://www.bcn.cl/leychile/navegar?idNorma=29473"
+    },
+    {
+     "basis": "Registro de Empresas y Sociedades (Ley 20.659) — Preguntas Frecuentes oficiales, sección certificados",
+     "url": "https://www.registrodeempresasysociedades.cl/FAQ.aspx?seccion=10"
+    },
+    {
+     "basis": "Registro de Empresas y Sociedades (Ley 20.659) — FAQ: equivalence of simplified-regime certificates to traditional-registry documents",
+     "url": "https://www.registrodeempresasysociedades.cl/FAQ.aspx?seccion=10"
     }
    ]
   },
@@ -2209,7 +2275,7 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -2219,6 +2285,14 @@
     {
      "basis": "Código de Comercio, art. 426 (SpA)",
      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1974"
+    },
+    {
+     "basis": "Registro de Empresas y Sociedades (Ley 20.659) — Preguntas Frecuentes oficiales, sección certificados",
+     "url": "https://www.registrodeempresasysociedades.cl/FAQ.aspx?seccion=10"
+    },
+    {
+     "basis": "Registro de Empresas y Sociedades (Ley 20.659) — FAQ: equivalence of simplified-regime certificates to traditional-registry documents",
+     "url": "https://www.registrodeempresasysociedades.cl/FAQ.aspx?seccion=10"
     }
    ]
   },
@@ -4266,12 +4340,16 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
      "basis": "Code de commerce, art. L221-1 (Légifrance)",
      "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042"
+    },
+    {
+     "basis": "Code de commerce, art. R123-54, 1° (Légifrance) — déclaration aux fins d'immatriculation des personnes morales",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041563764"
     }
    ]
   },
@@ -4518,7 +4596,7 @@
    "vendor": "infogreffe",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -4528,6 +4606,10 @@
     {
      "basis": "Code de commerce, art. L221-1 (SNC — associés indéfiniment et solidairement responsables)",
      "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006146042"
+    },
+    {
+     "basis": "Code de commerce, art. R123-54, 1° (Légifrance) — déclaration aux fins d'immatriculation des personnes morales",
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041563764"
     }
    ]
   },
@@ -5021,8 +5103,12 @@
      "url": "https://www.taxheaven.gr/law/4072/2012"
     },
     {
-     "basis": "N.4072/2012 (IKE), art. 84",
-     "url": "https://www.taxheaven.gr/law/4072/2012"
+     "basis": "N.4072/2012 (IKE), art. 84 para. 1, as in force (text via Lawspot law database reproducing the codified statute)",
+     "url": "https://www.lawspot.gr/nomothesia/n-4072-2012/arthro-84-nomos-4072-2012-metavivasi-en-zoi/"
+    },
+    {
+     "basis": "N.4072/2012 (IKE), art. 84, third-party effect sentence, as in force (text via Lawspot law database reproducing the codified statute)",
+     "url": "https://www.lawspot.gr/nomothesia/n-4072-2012/arthro-84-nomos-4072-2012-metavivasi-en-zoi/"
     },
     {
      "basis": "N.4072/2012 (IKE), art. 66",
@@ -5173,9 +5259,17 @@
     "vendor": "kyc.com",
     "model": "case_level",
     "registryName": "Annual Return (Form NAR1), Schedule 1 'Particulars of Member(s) of a Non-listed Company'",
-    "howToObtain": "additional_within_case",
+    "howToObtain": "document_purchase",
     "vendorCatalog": "jurisdiction_matrix.json",
-    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+    "aggregationNote": "Per-filing purchase inside an existing case — the vendor exposes a real document id here, so our document-level request maps 1:1.",
+    "channel": {
+     "channel": "document_purchase",
+     "list": "GET /v2/DocumentPurchase/{caseCommonId}",
+     "buy": "POST /v2/DocumentPurchase {caseCommonId, registryDocumentId}",
+     "idField": "registryDocumentId",
+     "requires": "an existing HKCR case — filings are listed per case, not per search hit",
+     "note": "Per-filing SKU: the Articles and the Annual Return (NAR1) are bought individually. Delivery is asynchronous — the filing carries a caseDocumentId once it has arrived on the case. CHECK BEFORE BUYING: HK CR lists both as mandatory documents, so the case bundle often already carries them; such a filing comes back purchased=true and must not be bought again. The purchase route earns its keep for the filings the bundle does NOT carry (older NAR1s, altered articles)."
+    }
    },
    "vendor": "kyc.com",
    "fallback": null,
@@ -5220,9 +5314,17 @@
     "vendor": "kyc.com",
     "model": "case_level",
     "registryName": "Annual Return (Form NAR1)",
-    "howToObtain": "additional_within_case",
+    "howToObtain": "document_purchase",
     "vendorCatalog": "jurisdiction_matrix.json",
-    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+    "aggregationNote": "Per-filing purchase inside an existing case — the vendor exposes a real document id here, so our document-level request maps 1:1.",
+    "channel": {
+     "channel": "document_purchase",
+     "list": "GET /v2/DocumentPurchase/{caseCommonId}",
+     "buy": "POST /v2/DocumentPurchase {caseCommonId, registryDocumentId}",
+     "idField": "registryDocumentId",
+     "requires": "an existing HKCR case — filings are listed per case, not per search hit",
+     "note": "Per-filing SKU: the Articles and the Annual Return (NAR1) are bought individually. Delivery is asynchronous — the filing carries a caseDocumentId once it has arrived on the case. CHECK BEFORE BUYING: HK CR lists both as mandatory documents, so the case bundle often already carries them; such a filing comes back purchased=true and must not be bought again. The purchase route earns its keep for the filings the bundle does NOT carry (older NAR1s, altered articles)."
+    }
    },
    "vendor": "kyc.com",
    "fallback": null,
@@ -5241,9 +5343,25 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
-   "needsReview": false,
+   "confidence": "high",
+   "needsReview": true,
    "sources": [
+    {
+     "basis": "Companies Registry, Form NAR1 specimen (public company), Notes for Completion, note 1 + title ('ANNUAL RETURN — For the purposes of section 662 of Companies Ordinance (Cap. 622)')",
+     "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NAR1(public)_Specimen-e.pdf"
+    },
+    {
+     "basis": "Form NAR1 Notes for Completion, note 33(b) — Schedule 1 'Particulars of Member(s) of a Non-listed Company (Section 14)'",
+     "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NAR1(public)_Specimen-e.pdf"
+    },
+    {
+     "basis": "Form NAR1 Notes for Completion, note 34(a) — Schedule 2 (listed company)",
+     "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NAR1(public)_Specimen-e.pdf"
+    },
+    {
+     "basis": "Form NAR1, Section 14 (member particulars delivered on CD-ROM/DVD-ROM)",
+     "url": "https://www.cr.gov.hk/en/companies_ordinance/docs/NAR1(public)_Specimen-e.pdf"
+    },
     {
      "basis": "Companies Registry FAQ, 'Documents on share capital and members'",
      "url": "https://www.cr.gov.hk/en/faq/local-company/doc-sharecapital.htm"
@@ -5263,9 +5381,17 @@
     "vendor": "kyc.com",
     "model": "case_level",
     "registryName": "Articles of Association (registered constitution)",
-    "howToObtain": "additional_within_case",
+    "howToObtain": "document_purchase",
     "vendorCatalog": "jurisdiction_matrix.json",
-    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+    "aggregationNote": "Per-filing purchase inside an existing case — the vendor exposes a real document id here, so our document-level request maps 1:1.",
+    "channel": {
+     "channel": "document_purchase",
+     "list": "GET /v2/DocumentPurchase/{caseCommonId}",
+     "buy": "POST /v2/DocumentPurchase {caseCommonId, registryDocumentId}",
+     "idField": "registryDocumentId",
+     "requires": "an existing HKCR case — filings are listed per case, not per search hit",
+     "note": "Per-filing SKU: the Articles and the Annual Return (NAR1) are bought individually. Delivery is asynchronous — the filing carries a caseDocumentId once it has arrived on the case. CHECK BEFORE BUYING: HK CR lists both as mandatory documents, so the case bundle often already carries them; such a filing comes back purchased=true and must not be bought again. The purchase route earns its keep for the filings the bundle does NOT carry (older NAR1s, altered articles)."
+    }
    },
    "vendor": "kyc.com",
    "fallback": null,
@@ -5296,9 +5422,17 @@
     "vendor": "kyc.com",
     "model": "case_level",
     "registryName": "Articles of Association (registered constitution)",
-    "howToObtain": "additional_within_case",
+    "howToObtain": "document_purchase",
     "vendorCatalog": "jurisdiction_matrix.json",
-    "aggregationNote": "Document-level request provided by our aggregation layer; for a case-level vendor no per-document SKU exists."
+    "aggregationNote": "Per-filing purchase inside an existing case — the vendor exposes a real document id here, so our document-level request maps 1:1.",
+    "channel": {
+     "channel": "document_purchase",
+     "list": "GET /v2/DocumentPurchase/{caseCommonId}",
+     "buy": "POST /v2/DocumentPurchase {caseCommonId, registryDocumentId}",
+     "idField": "registryDocumentId",
+     "requires": "an existing HKCR case — filings are listed per case, not per search hit",
+     "note": "Per-filing SKU: the Articles and the Annual Return (NAR1) are bought individually. Delivery is asynchronous — the filing carries a caseDocumentId once it has arrived on the case. CHECK BEFORE BUYING: HK CR lists both as mandatory documents, so the case bundle often already carries them; such a filing comes back purchased=true and must not be bought again. The purchase route earns its keep for the filings the bundle does NOT carry (older NAR1s, altered articles)."
+    }
    },
    "vendor": "kyc.com",
    "fallback": null,
@@ -5446,16 +5580,20 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "ZTD, čl. 410-411 (knjiga poslovnih udjela; imatelj poslovnog udjela)",
-     "url": "https://codex-sortium.hr/usluge/knjiga-poslovnih-udjela"
+     "basis": "Zakon o sudskom registru, članak 4. — javnost registra (consolidated text, zakon.hr)",
+     "url": "https://www.zakon.hr/z/271/zakon-o-sudskom-registru"
     },
     {
-     "basis": "ZTD (Zakon o trgovačkim društvima) – d.o.o. provisions",
-     "url": "https://www.zakon.hr/z/546/Zakon-o-trgovackim-drustvima"
+     "basis": "Zakon o sudskom registru, članak 31.c st. 1 t. 3 — podaci koji se upisuju za d.o.o.",
+     "url": "https://www.zakon.hr/z/271/zakon-o-sudskom-registru"
+    },
+    {
+     "basis": "ZTD, čl. 410-411 (knjiga poslovnih udjela; imatelj poslovnog udjela)",
+     "url": "https://codex-sortium.hr/usluge/knjiga-poslovnih-udjela"
     }
    ]
   },
@@ -5844,12 +5982,28 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "low",
+   "confidence": "medium",
    "needsReview": false,
    "sources": [
     {
-     "basis": "UU No. 40 Tahun 2007, Pasal 8 (contents of deed / founders), Pasal 50 (daftar pemegang saham & daftar khusus kept by Direksi), Pasal 56 (share transfer by deed, notified to Minister)",
-     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+     "basis": "UU No. 40 Tahun 2007 (UUPT), Pasal 8 ayat (2) huruf c — the akta pendirian's 'keterangan lain' must name the initial shareholders and their shareholdings",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 50 ayat (1) — the current statutory shareholder register (Daftar Pemegang Saham) is kept by the Board of Directors",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 50 ayat (4) — access to the Daftar Pemegang Saham is for shareholders, at the company's seat",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 56 ayat (1) dan (3) — share transfers by deed, changes in the shareholder composition notified to the Minister for recording in the Daftar Perseroan",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 29 ayat (2) huruf g dan ayat (5) — the Minister's Daftar Perseroan contains shareholder names/addresses and is open to the public",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
     }
    ]
   },
@@ -5878,12 +6032,20 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "UU No. 40 Tahun 2007, Pasal 50 & 56 (shareholder register / transfers); Capital Markets Law No. 8/1995 and OJK rules (scripless holding via KSEI, share registrar/BAE, substantial-shareholding disclosure)",
-     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+     "basis": "UU No. 40 Tahun 2007, Pasal 29 ayat (4) — carve-out: shareholder name/address data of a Perseroan Terbuka in the Daftar Perseroan follows capital-markets law, not the normal company-register rule",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 50 ayat (5) — the company-held shareholder-register provisions apply to a Perseroan Terbuka only insofar as capital-markets law does not provide otherwise",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 56 ayat (5) — transfers of exchange-traded shares governed by capital-markets law (so the Pasal 56(3) minister-notification chain does not track listed trading)",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
     }
    ]
   },
@@ -5907,12 +6069,24 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "UU No. 40 Tahun 2007, Pasal 8 & 15 (deed contains articles of association), Pasal 21 (amendment of anggaran dasar), Pasal 30 (announcement in Berita Negara)",
-     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+     "basis": "UU No. 40 Tahun 2007, Pasal 8 ayat (1) — the deed of establishment contains the articles of association",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 15 ayat (1) — mandatory minimum contents of the anggaran dasar",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 21 ayat (1) — certain amendments of the articles require ministerial approval (others are notified, ayat (3)); all are made in a notarial deed (ayat (4))",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 30 ayat (1) huruf a — the Minister announces the deed of establishment (with the ratification decree) in the State Gazette supplement",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
     }
    ]
   },
@@ -5936,12 +6110,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "UU No. 40 Tahun 2007, Pasal 8 & 15 (articles of association in the deed), Pasal 21 (amendments), Pasal 30 (BNRI announcement)",
-     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+     "basis": "UU No. 40 Tahun 2007, Pasal 1 angka 7 — a Perseroan Terbuka is (a species of) Perseroan, so the same akta/anggaran dasar regime applies",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 8 ayat (1) — the deed of establishment contains the articles of association",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 21 ayat (1) (amendments require ministerial approval/notification) and Pasal 30 ayat (1) huruf a (BNRI announcement)",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
     }
    ]
   },
@@ -5965,12 +6147,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "UU No. 40 Tahun 2007 (UUPT), Pasal 7(4), 9, 29, 30",
-     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+     "basis": "UU No. 40 Tahun 2007, Pasal 7 ayat (4) — legal-entity status is conferred by the Ministerial Decree (SK Pengesahan), making the SK the registry-issued base document",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 29 ayat (1) dan (5) — the Daftar Perseroan is administered by the Minister and open to the public",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 30 ayat (1) huruf a — official announcement of the deed plus decree in the Tambahan Berita Negara",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
     }
    ]
   },
@@ -5994,12 +6184,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "UU No. 40 Tahun 2007, Pasal 1(7) (definition of Perseroan Terbuka), Pasal 7(4), 29, 30",
-     "url": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007"
+     "basis": "UU No. 40 Tahun 2007, Pasal 1 angka 7 — definition: a Perseroan Terbuka is a Perseroan, hence same AHU registry footprint",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 7 ayat (4) — legal-entity status via the Ministerial Decree (SK Pengesahan)",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
+    },
+    {
+     "basis": "UU No. 40 Tahun 2007, Pasal 29 ayat (1) dan (5) — the Daftar Perseroan (Minister-administered, public) records the company data for every Perseroan including a Tbk",
+     "url": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf"
     }
    ]
   },
@@ -6445,12 +6643,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
      "basis": "IoM Companies Registry (official gov.im portal)",
      "url": "https://www.gov.im/categories/business-and-industries/companies-registry/registries/1931-act-companies/"
+    },
+    {
+     "basis": "Companies Act 1931 (Isle of Man), s.284A(1) — public inspection and certified copies/extracts of documents kept by the Department (registry)",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/1931/1931-0002/1931-0002_11.pdf"
+    },
+    {
+     "basis": "Companies Act 1931 (Isle of Man), s.284A(3) — evidential status of certified registry copies/extracts",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/1931/1931-0002/1931-0002_11.pdf"
     }
    ]
   },
@@ -6474,12 +6680,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
      "basis": "Isle of Man Companies Registry — 2006 Act companies page",
      "url": "https://www.gov.im/categories/business-and-industries/companies-registry/registries/2006-act-companies/"
+    },
+    {
+     "basis": "Companies Act 2006 (Isle of Man), s.209(1) — inspection and certified copies/extracts of Registrar-held documents",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf"
+    },
+    {
+     "basis": "Companies Act 2006 (Isle of Man), s.211(1) — certificate of good standing available to any person",
+     "url": "https://legislation.gov.im/cms/images/LEGISLATION/PRINCIPAL/2006/2006-0013/2006-0013_11.pdf"
     }
    ]
   },
@@ -6662,8 +6876,8 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act 2013 (India), s.399(1)(a)-(b)",
-     "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/"
+     "basis": "Companies Act 2013 (India), s.399(1)(a)-(b) — official India Code consolidated Act text",
+     "url": "https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf"
     }
    ]
   },
@@ -6684,8 +6898,8 @@
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act 2013 (India), s.399(1)(a)-(b)",
-     "url": "https://corporatelawreporter.com/companies_act/section-399-of-companies-act-2013-inspection-production-and-evidence-of-documents-kept-by-registrar/"
+     "basis": "Companies Act 2013 (India), s.399(1)(a)-(b) — official India Code consolidated Act text",
+     "url": "https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf"
     }
    ]
   },
@@ -6926,12 +7140,20 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Codice civile art. 2317 + art. 2295/2296 (richiamati) — soci indicati nell'atto costitutivo iscritto nel registro delle imprese",
-     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+     "basis": "registroimprese.it (official Registro Imprese portal) — contents of the visura camerale",
+     "url": "https://www.registroimprese.it/visura-camerale-ordinaria-storica-e-certificato"
+    },
+    {
+     "basis": "registroimprese.it — contents of the visura camerale (soci section)",
+     "url": "https://www.registroimprese.it/visura-camerale-ordinaria-storica-e-certificato"
+    },
+    {
+     "basis": "Codice civile art. 2316 (l'atto costitutivo deve indicare i soci accomandatari e i soci accomandanti) e art. 2317/2296 (iscrizione nel registro delle imprese)",
+     "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262"
     }
    ]
   },
@@ -6966,12 +7188,20 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Codice civile art. 2295 (contenuto dell'atto costitutivo, incl. i soci) e art. 2296 (deposito/iscrizione nel registro delle imprese)",
-     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+     "basis": "registroimprese.it (official Registro Imprese portal) — contents of the visura camerale",
+     "url": "https://www.registroimprese.it/visura-camerale-ordinaria-storica-e-certificato"
+    },
+    {
+     "basis": "registroimprese.it — contents of the visura camerale (soci section)",
+     "url": "https://www.registroimprese.it/visura-camerale-ordinaria-storica-e-certificato"
+    },
+    {
+     "basis": "Codice civile art. 2295 (contenuto dell'atto costitutivo, incl. generalità dei soci) e art. 2296 (iscrizione dell'atto costitutivo nel registro delle imprese)",
+     "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262"
     }
    ]
   },
@@ -7133,12 +7363,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Codice civile art. 2317 e art. 2296 — deposito dell'atto costitutivo per l'iscrizione nel registro delle imprese",
-     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+     "basis": "registroimprese.it (official Registro Imprese portal) — Fascicolo d'impresa contents",
+     "url": "https://www.registroimprese.it/fascicolo"
+    },
+    {
+     "basis": "registroimprese.it — Fascicolo (storico), section for Società di persone",
+     "url": "https://www.registroimprese.it/fascicolo"
+    },
+    {
+     "basis": "Codice civile art. 2317 (richiamo dell'art. 2296) — deposito dell'atto costitutivo della Sas per l'iscrizione nel registro delle imprese",
+     "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262"
     }
    ]
   },
@@ -7162,12 +7400,24 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
+     "basis": "registroimprese.it (official Registro Imprese portal) — Fascicolo d'impresa contents",
+     "url": "https://www.registroimprese.it/fascicolo"
+    },
+    {
+     "basis": "registroimprese.it — Fascicolo (storico), section for Società di persone",
+     "url": "https://www.registroimprese.it/fascicolo"
+    },
+    {
+     "basis": "registroimprese.it — Società di persone e di capitale (constitution of partnerships)",
+     "url": "https://www.registroimprese.it/societa-di-persone-e-di-capitale"
+    },
+    {
      "basis": "Codice civile art. 2296 — deposito dell'atto costitutivo per l'iscrizione nel registro delle imprese",
-     "url": "https://www.registroimprese.it/partecipazioni-attuali-e-storiche"
+     "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262"
     }
    ]
   },
@@ -7437,16 +7687,36 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies (Jersey) Law 1991, Art. 45(1) (register of members inspection)",
-     "url": "https://incorporations.io/companies-act/jersey"
+     "basis": "Companies (Jersey) Law 1991, Art. 45(1) — inspection of register of members (official revised edition, jerseylaw.je)",
+     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
     },
     {
-     "basis": "Companies (Jersey) Law 1991, Art. 71 (annual return) — content summarised from statute",
+     "basis": "Companies (Jersey) Law 1991, endnote 255 to Art. 71 — annual return abolished",
      "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
+    },
+    {
+     "basis": "Companies (Jersey) Law 1991, Art. 127YE(1) — cross-reference identifying the annual confirmation statement's statutory basis",
+     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
+    },
+    {
+     "basis": "Financial Services (Disclosure and Provision of Information) (Jersey) Law 2020, Art. 5(1) — annual confirmation statement",
+     "url": "https://www.jerseylaw.je/laws/current/l_7_2020"
+    },
+    {
+     "basis": "JFSC Registry — Associated parties (official registry documentation): member details companies must provide",
+     "url": "https://www.jerseyfsc.org/registry/associated-parties/"
+    },
+    {
+     "basis": "JFSC Registry — Associated parties: public availability of member information",
+     "url": "https://www.jerseyfsc.org/registry/associated-parties/"
+    },
+    {
+     "basis": "JFSC Registry — Annual confirmation page: what is on the public register",
+     "url": "https://www.jerseyfsc.org/registry/annual-confirmation/"
     },
     {
      "basis": "SystemDay — Jersey company documents (data provider description of the public search report)",
@@ -7492,12 +7762,32 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies (Jersey) Law 1991, Art. 45(1) (register of members inspection)",
-     "url": "https://incorporations.io/companies-act/jersey"
+     "basis": "Companies (Jersey) Law 1991, Art. 45(1) — inspection of register of members (official revised edition, jerseylaw.je)",
+     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
+    },
+    {
+     "basis": "Companies (Jersey) Law 1991, endnote 255 to Art. 71 — annual return abolished",
+     "url": "https://www.jerseylaw.je/laws/current/l_30_1991"
+    },
+    {
+     "basis": "Financial Services (Disclosure and Provision of Information) (Jersey) Law 2020, Art. 5(1) — annual confirmation statement",
+     "url": "https://www.jerseylaw.je/laws/current/l_7_2020"
+    },
+    {
+     "basis": "JFSC Registry — Associated parties (official registry documentation): member details companies must provide",
+     "url": "https://www.jerseyfsc.org/registry/associated-parties/"
+    },
+    {
+     "basis": "JFSC Registry — Associated parties: public availability of member information",
+     "url": "https://www.jerseyfsc.org/registry/associated-parties/"
+    },
+    {
+     "basis": "JFSC Registry — Annual confirmation page: what is on the public register",
+     "url": "https://www.jerseyfsc.org/registry/annual-confirmation/"
     },
     {
      "basis": "Topograph — Business Registers in Jersey (annual return content)",
@@ -7667,16 +7957,20 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act Art. 914 — GK registered matters (members)",
+     "basis": "会社法 (Companies Act, Act No. 86 of 2005) Art. 914 — registered matters for a Godo Kaisha; chapeau plus items 6 and 7",
      "url": "https://laws.e-gov.go.jp/law/417AC0000000086"
     },
     {
-     "basis": "Companies Act Art. 590(1) — default that all members execute business",
+     "basis": "会社法 Art. 590(1) — default that all members execute business",
      "url": "https://laws.e-gov.go.jp/law/417AC0000000086"
+    },
+    {
+     "basis": "商業登記法 (Commercial Registration Act, Act No. 125 of 1963) Art. 10(1) — anyone may obtain a certificate of registered matters",
+     "url": "https://laws.e-gov.go.jp/law/338AC0000000125"
     }
    ]
   },
@@ -7881,12 +8175,16 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Korean Wikipedia (유한회사), paraphrasing 상법 제566조 / 제557조",
-     "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC"
+     "basis": "상법 제549조 제2항 (Commercial Act Art. 549(2)) — closed enumeration of the registered matters for a 유한회사; members (사원) are not among them",
+     "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=054900"
+    },
+    {
+     "basis": "상법 제566조 (Art. 566 — 서류의 비치, 열람: register of members kept at the company, inspection restricted)",
+     "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=056600"
     }
    ]
   },
@@ -7929,12 +8227,20 @@
    "vendor": "kyc.com",
    "fallback": "none",
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Korean Wikipedia (유한회사), on the 정관",
-     "url": "https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC"
+     "basis": "상법 제543조 제1항 (Commercial Act Art. 543(1)) — the members draw up the 정관",
+     "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=054300"
+    },
+    {
+     "basis": "상법 제566조 제1항·제3항 (Art. 566(1),(3)) — the 정관 is kept at the company; inspection restricted to members and creditors",
+     "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=056600"
+    },
+    {
+     "basis": "상법 제549조 제2항 (Art. 549(2)) — only specific articles-derived facts are registered, not the 정관 itself",
+     "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=054900"
     }
    ]
   },
@@ -7991,12 +8297,16 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
      "basis": "상법 제549조 (유한회사 설립의 등기) — registered matters for a limited company",
-     "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%83%81%EB%B2%95"
+     "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EB%B2%95&JO=054900"
+    },
+    {
+     "basis": "상업등기법 제15조 제1항 (Commercial Registration Act Art. 15(1)) — anyone may obtain the certificate of registered matters",
+     "url": "https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML&LM=%EC%83%81%EC%97%85%EB%93%B1%EA%B8%B0%EB%B2%95&JO=001500"
     },
     {
      "basis": "Korean-law reference confirming register content for 유한회사",
@@ -8158,16 +8468,24 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
      "basis": "Companies Act (2025 Revision) (Cayman) s.200A(1)-(2)",
-     "url": "https://www.ciregistry.ky/acts-regulations/"
+     "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf"
     },
     {
      "basis": "Companies Act (2025 Revision) (Cayman) s.26(3A) / Schedule 1A",
-     "url": "https://www.ciregistry.ky/acts-regulations/"
+     "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) Schedule 1A — Required Particulars (section 26(3))",
+     "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.55A(2) — Registrar to make list of directors available for inspection",
+     "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf"
     }
    ]
   },
@@ -8191,16 +8509,24 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
      "basis": "Companies Act (2025 Revision) (Cayman) s.200A(1)-(2)",
-     "url": "https://www.ciregistry.ky/acts-regulations/"
+     "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf"
     },
     {
      "basis": "Companies Act (2025 Revision) (Cayman) s.26(1),(3),(3A) / Schedule 1A",
-     "url": "https://www.ciregistry.ky/acts-regulations/"
+     "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) Schedule 1A — Required Particulars (section 26(3))",
+     "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf"
+    },
+    {
+     "basis": "Companies Act (2025 Revision) (Cayman) s.55A(2) — Registrar to make list of directors available for inspection",
+     "url": "https://www.cima.ky/upimages/lawsregulations/CompaniesAct2025Revision_1738876914.pdf"
     }
    ]
   },
@@ -8267,11 +8593,23 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Anstalt, Art. 534–551 PGR)",
+     "basis": "PGR Art. 538 Abs. 1 (Eintragung und Veröffentlichung der Anstalt) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "PGR Art. 543 Abs. 1 (Oberstes Organ der Anstalt) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "PGR Art. 541 (Gründerrechte) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Anstalt AJU/h70.005.09, 06/2025, Art. 534 bis Art. 551 PGR), section 3",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/005_merkblatt_zur_anstalt.pdf"
     },
     {
@@ -8471,11 +8809,27 @@
    "vendor": "kyc.com",
    "fallback": "none",
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung, Art. 552 §§ 1–41 PGR), section 4",
+     "basis": "PGR Art. 955a Abs. 1 (Öffentlichkeit bei Hinterlegungen) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "PGR Art. 552 § 14 Abs. 5 (Errichtung; keine Eintragungspflicht privatnütziger Stiftungen) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "PGR Art. 552 § 20 Abs. 1 und 2 (Hinterlegung der Gründungsanzeige) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "PGR Art. 552 § 19 Abs. 1 (Eintragung ins Handelsregister; Beilage der Stiftungsurkunde) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung AJU/h70.008.10, 07/2026, Art. 552 §§ 1-41 PGR), section 4",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
     },
     {
@@ -8591,11 +8945,23 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung, Art. 552 §§ 1–41 PGR), section 1",
+     "basis": "PGR Art. 552 § 14 Abs. 4 (Eintragungspflicht) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "PGR Art. 552 § 19 Abs. 3 (Inhalt der Eintragung) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "PGR Art. 954 Abs. 1 (Auszüge, Abschriften und Zeugnisse) — konsolidierte Fassung 01.07.2026, gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/1926004000"
+    },
+    {
+     "basis": "Official Liechtenstein Handelsregister guidance (Amt für Justiz, Merkblatt zur Stiftung AJU/h70.008.10, 07/2026, Art. 552 §§ 1-41 PGR), section 1",
      "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-justiz/handelsregister/merkblaetter/008_merkblatt_zur_stiftung.pdf"
     }
    ]
@@ -8619,12 +8985,24 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on registration of shares/shareholders in personal securities accounts; Law on Markets in Financial Instruments; Nasdaq CSD (central securities depository) rules",
-     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr"
+     "basis": "Akcinių bendrovių įstatymas (Law on Companies, VIII-1835), 40 str. 7 d. — suvestinė redakcija nuo 2026-07-01, e-seimas",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr"
+    },
+    {
+     "basis": "Akcinių bendrovių įstatymas, 41 str. 1 ir 2 d. (Akcininkų asmeninių vertybinių popierių sąskaitų tvarkymas) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr"
+    },
+    {
+     "basis": "Akcinių bendrovių įstatymas, 41-1 str. 1 d. (Juridinių asmenų dalyvių informacinės sistemos duomenys) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr"
+    },
+    {
+     "basis": "Akcinių bendrovių įstatymas, 12 str. 1 d. 4 p. (Juridinių asmenų registro duomenys) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr"
     }
    ]
   },
@@ -8654,12 +9032,24 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": true,
    "sources": [
     {
-     "basis": "Law on Companies (Akcinių bendrovių įstatymas), provisions on the register of shareholders kept by the company and on the single-shareholder notification; Civil Code Art. 2.66 (sole participant registered in JAR)",
-     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.194433/asr"
+     "basis": "Akcinių bendrovių įstatymas (Law on Companies, VIII-1835), 41-1 str. 1 d. (Juridinių asmenų dalyvių informacinės sistemos duomenys) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr"
+    },
+    {
+     "basis": "Akcinių bendrovių įstatymas, 41-1 str. 2 d. — suvestinė redakcija nuo 2026-07-01, e-seimas",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr"
+    },
+    {
+     "basis": "Akcinių bendrovių įstatymas, 41-1 str. 5 d. — suvestinė redakcija nuo 2026-07-01, e-seimas",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr"
+    },
+    {
+     "basis": "Akcinių bendrovių įstatymas, 12 str. 1 d. 4 p. (Juridinių asmenų registro duomenys) — suvestinė redakcija nuo 2026-07-01, e-seimas",
+     "url": "https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.106080/asr"
     },
     {
      "basis": "Registrų centras — JADIS, Information System of Participants of Legal Entities (Juridinių asmenų dalyvių informacinė sistema)",
@@ -8824,9 +9214,17 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
+    {
+     "basis": "Loi du 10 août 1915 concernant les sociétés commerciales, art. 39 (texte original, Mémorial n° 90 du 30 octobre 1915, Legilux)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1915/08/10/n1/jo/fr/pdf"
+    },
+    {
+     "basis": "Loi du 10 août 1915, art. 40 (texte original, Mémorial n° 90 du 30 octobre 1915, Legilux)",
+     "url": "https://data.legilux.public.lu/eli/etat/leg/loi/1915/08/10/n1/jo/fr/pdf"
+    },
     {
      "basis": "Guichet.lu — société anonyme",
      "url": "https://guichet.public.lu/fr/entreprises/creation-developpement/forme-juridique/societe-capitaux/societe-anonyme.html"
@@ -9352,7 +9750,9 @@
    "action": "use_delivered",
    "orderable": true,
    "completeness": "full",
-   "flags": [],
+   "flags": [
+    "nominee"
+   ],
    "order": {
     "vendor": "kyc.com",
     "model": "case_level",
@@ -9376,15 +9776,23 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act 2001 (Mauritius), s.91 (share register)",
+     "basis": "Companies Act 2001 (Mauritius), s.91(1) and (3) — share register contents",
      "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
     },
     {
-     "basis": "Companies Act 2001 (Mauritius), s.223 (annual return)",
+     "basis": "Companies Act 2001 (Mauritius), s.223(1) and (5) — annual return filed with the Registrar",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "Companies Act 2001 (Mauritius), Tenth Schedule, Part I, para 11 — shareholder contents of the annual return",
+     "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
+    },
+    {
+     "basis": "Companies Act 2001 (Mauritius), s.14(1)-(3) — public inspection and certified copies/extracts of Registrar-held documents",
      "url": "https://mauritiuslii.org/akn/mu/act/2001/15/eng@2017-06-30"
     }
    ]
@@ -9714,7 +10122,7 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -9722,8 +10130,20 @@
      "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles"
     },
     {
-     "basis": "Código de Comercio arts. 20-32 (folio mercantil electrónico / SIGER)",
-     "url": "https://www.gob.mx/tramites/ficha/inscripcion-de-actos-mercantiles-en-el-registro-publico-de-comercio/SE1911"
+     "basis": "Código de Comercio art. 18 — RPC registers mercantile acts; operated by the Secretaría de Economía with the state registry authorities",
+     "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf"
+    },
+    {
+     "basis": "Código de Comercio art. 21 — one electronic folio per company (folio mercantil electrónico)",
+     "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf"
+    },
+    {
+     "basis": "Código de Comercio art. 21 bis, II(d) — boleta de inscripción issued for each registration",
+     "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf"
+    },
+    {
+     "basis": "Código de Comercio art. 30 — public consultation of the databases and certifications of folio entries",
+     "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf"
     }
    ]
   },
@@ -9747,7 +10167,7 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -9755,8 +10175,20 @@
      "url": "https://es.wikisource.org/wiki/Ley_General_de_Sociedades_Mercantiles"
     },
     {
-     "basis": "Código de Comercio arts. 20-32 (folio mercantil electrónico / SIGER)",
-     "url": "https://www.gob.mx/tramites/ficha/inscripcion-de-actos-mercantiles-en-el-registro-publico-de-comercio/SE1911"
+     "basis": "Código de Comercio art. 18 — RPC registers mercantile acts; operated by the Secretaría de Economía with the state registry authorities",
+     "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf"
+    },
+    {
+     "basis": "Código de Comercio art. 21 — one electronic folio per company (folio mercantil electrónico)",
+     "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf"
+    },
+    {
+     "basis": "Código de Comercio art. 21 bis, II(d) — boleta de inscripción issued for each registration",
+     "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf"
+    },
+    {
+     "basis": "Código de Comercio art. 30 — public consultation of the databases and certifications of folio entries",
+     "url": "https://www.gob.mx/cms/uploads/attachment/file/235546/Co_digo_de_Comercio.pdf"
     }
    ]
   },
@@ -9794,12 +10226,28 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Companies Act 2016 s.50/s.51 (register of members and notification of changes) and s.68 (annual return of a company having share capital)",
-     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Companies-Act-2016.aspx"
+     "basis": "Companies Act 2016 (Act 777), s.50(1) — every company keeps a register of members",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_Akta%20777_BI%20(1.8.2022).pdf"
+    },
+    {
+     "basis": "Companies Act 2016, s.68(1) and s.68(3)(i) — the annual return lodged with the Registrar contains the list of members",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_Akta%20777_BI%20(1.8.2022).pdf"
+    },
+    {
+     "basis": "Companies Act 2016, s.68(7) — public-company exception: >500 members with inspection facilities may file only the twenty largest holders per class",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_Akta%20777_BI%20(1.8.2022).pdf"
+    },
+    {
+     "basis": "Companies Act 2016, s.51(1) and s.51(3) — changes in the register of members are notified to the Registrar within 14 days, EXCEPT for exchange-quoted companies",
+     "url": "https://www.ssm.com.my/Pages/Legal_Framework/Document/Companies%20Act%202016_Akta%20777_BI%20(1.8.2022).pdf"
+    },
+    {
+     "basis": "SSM e-Info service — purchasable registry products include shareholder information",
+     "url": "https://www.ssm-einfo.my/"
     },
     {
      "basis": "Securities Industry (Central Depositories) Act 1991 — central depository / Record of Depositors (for listed public companies)",
@@ -10187,6 +10635,10 @@
    "needsReview": false,
    "sources": [
     {
+     "basis": "Selskapsloven (lov 21. juni 1985 nr. 83) § 2-3 første ledd (Lovdata)",
+     "url": "https://lovdata.no/dokument/NL/lov/1985-06-21-83"
+    },
+    {
      "basis": "Brønnøysund Register Centre — product/document ordering page",
      "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
     }
@@ -10277,6 +10729,10 @@
    "confidence": "medium",
    "needsReview": false,
    "sources": [
+    {
+     "basis": "Selskapsloven (lov 21. juni 1985 nr. 83) § 2-3 første ledd (Lovdata)",
+     "url": "https://lovdata.no/dokument/NL/lov/1985-06-21-83"
+    },
     {
      "basis": "Brønnøysund Register Centre — product/document ordering page",
      "url": "https://www.brreg.no/en/how-can-we-help-you/information-about-our-products/"
@@ -10760,15 +11216,27 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "R.A. 11232, Sec. 116",
+     "basis": "R.A. 11232 (Revised Corporation Code), Sec. 116",
      "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
     },
     {
      "basis": "R.A. 11232, Sec. 118",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "R.A. 11232, Sec. 14 (Form of Articles of Incorporation), Fifth clause",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "R.A. 11232, Sec. 129 (Reportorial Requirements of an OPC)",
+     "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
+    },
+    {
+     "basis": "R.A. 11232, Sec. 177 (Reportorial Requirements of Corporations) — contrast provision",
      "url": "https://lawphil.net/statutes/repacts/ra2019/ra_11232_2019.html"
     }
    ]
@@ -12592,9 +13060,17 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
+    {
+     "basis": "Handelsregisterlagen (1974:157) § 4 — introductory rule and handelsbolag particulars (riksdagen.se)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/handelsregisterlag-1974157_sfs-1974-157/"
+    },
+    {
+     "basis": "Handelsregisterlagen (1974:157) § 4 — kommanditbolag-specific particular (riksdagen.se)",
+     "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/handelsregisterlag-1974157_sfs-1974-157/"
+    },
     {
      "basis": "Bolagsverket, 'Bolagsmän i kommanditbolag'",
      "url": "https://bolagsverket.se/en/foretag/kommanditbolag/startakommanditbolag/bolagsmanikommanditbolag.917.html"
@@ -12899,16 +13375,24 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "ACRA official page — Registers product (lists 'members' but for public/listed companies ACRA does not hold the full membership)",
-     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+     "basis": "Companies Act 1967 (Singapore), s.190(1) — the register of members of a PUBLIC company is kept by the company itself",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-"
     },
     {
-     "basis": "Companies Act 1967 — company keeps its own register of members (approx. s.190); electronic register kept by Registrar limited to private companies",
-     "url": "https://sso.agc.gov.sg/Act/CoA1967"
+     "basis": "Companies Act 1967, s.196A(1) — the Registrar-kept electronic register of members exists for PRIVATE companies only",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-"
+    },
+    {
+     "basis": "Companies Act 1967, s.19(6)(a) — on incorporation, subscribers of a public company are entered in the COMPANY-kept register (vs the Registrar-kept register for private companies)",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-"
+    },
+    {
+     "basis": "ACRA official page — Registers product (lists 'members' but for public/listed companies ACRA does not hold the full membership)",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
     }
    ]
   },
@@ -12932,16 +13416,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "ACRA official page — Types of ACRA information products (Extracts product)",
-     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+     "basis": "Companies Act 1967, s.19(1)(a) — the constitution is submitted to the Registrar to incorporate",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-"
     },
     {
-     "basis": "Companies Act 1967 — requirement to have and lodge a constitution at incorporation (approx. s.19 / s.22)",
-     "url": "https://sso.agc.gov.sg/Act/CoA1967"
+     "basis": "Companies Act 1967, s.26(2) — after any alteration, a copy of the constitution as adopted or altered is lodged with the Registrar",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-"
+    },
+    {
+     "basis": "ACRA official page — Types of ACRA information products (Extracts product)",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
     }
    ]
   },
@@ -12965,16 +13453,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "ACRA official page — Extracts product",
-     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
+     "basis": "Companies Act 1967, s.19(1)(a) — the constitution is submitted to the Registrar to incorporate (applies to every company, public included)",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-"
     },
     {
-     "basis": "Companies Act 1967 — requirement to have and lodge a constitution at incorporation (approx. s.19 / s.22)",
-     "url": "https://sso.agc.gov.sg/Act/CoA1967"
+     "basis": "Companies Act 1967, s.26(2)-(3) — altered constitutions are lodged with and registered by the Registrar",
+     "url": "https://sso.agc.gov.sg/Act/CoA1967?ProvIds=pr190-,pr196A-,pr19-,pr26-"
+    },
+    {
+     "basis": "ACRA official page — Extracts product",
+     "url": "https://www.acra.gov.sg/resources/buying-business-information/types-of-acra-information-products/"
     }
    ]
   },
@@ -13141,11 +13633,27 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "ZGD-1 — d.d. is governed by its statut; ZSReg — collection of documents (zbirka listin) is public",
+     "basis": "ZSReg (Zakon o sodnem registru), 7. člen — javnost sodnega registra (Uradni list RS 13/94)",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514"
+    },
+    {
+     "basis": "ZSReg, 2. člen (3. odstavek) — zbirka listin",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514"
+    },
+    {
+     "basis": "ZSReg, 28. člen (1. odstavek) — priloge k predlogu za vpis",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514"
+    },
+    {
+     "basis": "AJPES — official documentation of eObjave / informatizirana zbirka listin sodnega registra",
+     "url": "https://www.ajpes.si/Uradne_objave/eObjave_v_postopkih_vpisov_v_poslovni_in_sodni_register/Splosno"
+    },
+    {
+     "basis": "ZGD-1 — the d.d. is governed by its statut (constitutive document)",
      "url": "https://www.ajpes.si/"
     }
    ]
@@ -13170,11 +13678,27 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "ZGD-1 — d.o.o. is founded by družbena pogodba / akt o ustanovitvi; ZSReg — collection of documents (zbirka listin) is public",
+     "basis": "ZSReg (Zakon o sodnem registru), 7. člen — javnost sodnega registra (Uradni list RS 13/94)",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514"
+    },
+    {
+     "basis": "ZSReg, 2. člen (3. odstavek) — zbirka listin",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514"
+    },
+    {
+     "basis": "ZSReg, 28. člen (1. odstavek) — priloge k predlogu za vpis",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina?urlurid=1994514"
+    },
+    {
+     "basis": "AJPES — official documentation of eObjave / informatizirana zbirka listin sodnega registra",
+     "url": "https://www.ajpes.si/Uradne_objave/eObjave_v_postopkih_vpisov_v_poslovni_in_sodni_register/Splosno"
+    },
+    {
+     "basis": "ZGD-1 — the d.o.o. is founded by družbena pogodba / akt o ustanovitvi",
      "url": "https://www.ajpes.si/"
     }
    ]
@@ -13525,12 +14049,20 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Public Limited Companies Act B.E. 2535 (register of shareholders; annual submission of shareholder list to the Registrar)",
-     "url": "https://www.dbd.go.th/en/"
+     "basis": "Public Limited Companies Act B.E. 2535 (1992), Section 64 — annual filing of the shareholder list with the Registrar",
+     "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf"
+    },
+    {
+     "basis": "Public Limited Companies Act B.E. 2535, Section 39 paragraph two — shareholder-list particulars filed at registration",
+     "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf"
+    },
+    {
+     "basis": "Public Limited Companies Act B.E. 2535, Section 10 — public inspection and certified copies of Registrar-held documents",
+     "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf"
     }
    ]
   },
@@ -13587,12 +14119,24 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Public Limited Companies Act B.E. 2535 (registration of memorandum of association; articles of association)",
-     "url": "https://www.dbd.go.th/en/"
+     "basis": "Public Limited Companies Act B.E. 2535, Section 19 — registration of the memorandum of association",
+     "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf"
+    },
+    {
+     "basis": "Public Limited Companies Act B.E. 2535, Section 39 paragraph two — articles of association filed at company registration",
+     "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf"
+    },
+    {
+     "basis": "Public Limited Companies Act B.E. 2535, Section 31 paragraph two — registration of amendments",
+     "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf"
+    },
+    {
+     "basis": "Public Limited Companies Act B.E. 2535, Section 10 — public inspection and certified copies of Registrar-held documents",
+     "url": "https://www2.austlii.edu.au/~graham/AsianLII/Thai_Translation/Public%20Limited%20Company%20Act.pdf"
     }
    ]
   },
@@ -13927,16 +14471,16 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Company Act (公司法) Art 111, para 3",
-     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=111"
+     "basis": "Company Act (公司法) Art 101, para 1 — mandatory contents of a limited company's articles of incorporation",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=101"
     },
     {
-     "basis": "Company Act (公司法) Art 101 (contents of a limited company's articles of incorporation)",
-     "url": "https://law.moj.gov.tw/ENG/LawClass/LawSingle.aspx?pcode=J0080001&flno=101"
+     "basis": "Company Act (公司法) Art 111, para 3",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=111"
     },
     {
      "basis": "Company Act (公司法) Art 393, para 2 item 10 + para 3",
@@ -14576,7 +15120,7 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -14584,8 +15128,12 @@
      "url": "https://delcode.delaware.gov/title8/c001/sc01/index.html"
     },
     {
-     "basis": "Delaware Division of Corporations (Certificate of Good Standing service)",
-     "url": "https://corp.delaware.gov/"
+     "basis": "Delaware Division of Corporations — 'Accessing Corporate Information' (official registry documentation): Certificate of Status / Certificate of Good Standing ordered on request",
+     "url": "https://corp.delaware.gov/directweb/"
+    },
+    {
+     "basis": "Delaware Division of Corporations — FAQ: contents of the free public entity search",
+     "url": "https://corp.delaware.gov/faqs/"
     }
    ]
   },
@@ -14609,7 +15157,7 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
@@ -14617,8 +15165,12 @@
      "url": "https://delcode.delaware.gov/title6/c018/sc02/index.html"
     },
     {
-     "basis": "Delaware Division of Corporations (Certificate of Good Standing service)",
-     "url": "https://corp.delaware.gov/"
+     "basis": "Delaware Division of Corporations — 'Accessing Corporate Information' (official registry documentation): Certificate of Status / Certificate of Good Standing ordered on request (applies to all entity types administered by the Division, including LLCs)",
+     "url": "https://corp.delaware.gov/directweb/"
+    },
+    {
+     "basis": "Delaware Division of Corporations — FAQ: contents of the free public entity search",
+     "url": "https://corp.delaware.gov/faqs/"
     }
    ]
   },
@@ -14737,12 +15289,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "statute (Wyoming Statute 17-29-201)",
-     "url": "https://codes.findlaw.com/wy/title-17-corporations-partnerships-and-associations/wy-st-sect-17-29-201.html"
+     "basis": "W.S. 17-29-208(a) — Certificate of existence or authorization, furnished by the Secretary of State on request and payment",
+     "url": "https://wyoleg.gov/statutes/compress/title17.pdf"
+    },
+    {
+     "basis": "W.S. 17-29-208(b) — evidentiary effect",
+     "url": "https://wyoleg.gov/statutes/compress/title17.pdf"
+    },
+    {
+     "basis": "W.S. 17-29-201(e)(i) — formation upon effectiveness of articles of organization",
+     "url": "https://wyoleg.gov/statutes/compress/title17.pdf"
     }
    ]
   },
@@ -14879,16 +15439,24 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Law on Enterprises 2020, Article 21 (Application for registration of limited liability companies) — requires the company charter and the list of members (danh sách thành viên)",
-     "url": "https://dangkykinhdoanh.gov.vn"
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 21 (Registration dossier for a limited liability company)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
     },
     {
-     "basis": "Law on Enterprises 2020, Articles 30–31 (registration of changes to enterprise registration content) — member/ownership changes must be re-registered",
-     "url": "https://dangkykinhdoanh.gov.vn"
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 25 (contents of the list of members)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
+    },
+    {
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 28(3) (contents of the enterprise registration certificate)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
+    },
+    {
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 33 (Provision of information about contents of enterprise registration)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
     }
    ]
   },
@@ -14916,16 +15484,24 @@
     "isProof": false,
     "note": "Data, not a proof document. Deliverable as a data sheet / generated document where the proof document is unavailable."
    },
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Law on Enterprises 2020, Article 122 (Register of shareholders) — the shareholder register is maintained by the company, not the registry",
-     "url": "https://dangkykinhdoanh.gov.vn"
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 22 (Registration dossier for a joint stock company)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
     },
     {
-     "basis": "Law on Enterprises 2020, Article 22 (JSC application dossier) — includes the list of founding shareholders (danh sách cổ đông sáng lập), not all shareholders",
-     "url": "https://dangkykinhdoanh.gov.vn"
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 122 (Register of shareholders)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
+    },
+    {
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 122(3) (custody of the register of shareholders)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
+    },
+    {
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 31(1)(b) (notification of changes)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
     }
    ]
   },
@@ -14949,12 +15525,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Law on Enterprises 2020, Article 21 (LLC application dossier) and Article 24 (Company charter contents)",
-     "url": "https://dangkykinhdoanh.gov.vn"
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 21 (Registration dossier for a limited liability company)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
+    },
+    {
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 24 (Company charter)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
+    },
+    {
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 33 (Provision of information about contents of enterprise registration)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
     }
    ]
   },
@@ -14978,12 +15562,20 @@
    "vendor": "kyc.com",
    "fallback": null,
    "dataBackup": null,
-   "confidence": "medium",
+   "confidence": "high",
    "needsReview": false,
    "sources": [
     {
-     "basis": "Law on Enterprises 2020, Article 22 (JSC application dossier) and Article 24 (Company charter contents)",
-     "url": "https://dangkykinhdoanh.gov.vn"
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 22 (Registration dossier for a joint stock company)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
+    },
+    {
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 24 (Company charter)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
+    },
+    {
+     "basis": "Law on Enterprises No. 59/2020/QH14, Article 33 (Provision of information about contents of enterprise registration)",
+     "url": "https://english.luatvietnam.vn/law-on-enterprises-no-59-2020-qh14-dated-june-17-2020-of-the-national-assembly-186272-doc1.html"
     }
    ]
   },

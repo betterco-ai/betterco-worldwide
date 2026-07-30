@@ -9,13 +9,15 @@ Auth: BetterCo REST API key+secret -> Partner JWT (POST /restapi/v1/auth/login),
 
 Endpoints (all under /restapi/v1/workspaces/{workspaceId}/document-search):
     GET  /jurisdictions?includeUncovered=          reference (with price bands)
+    GET  /jurisdictions/coverage                   coverage for all (128 rows)
+    GET  /jurisdictions/{code}/coverage            coverage for one (404 if uncovered)
     GET  /company-types                            reference
     GET  /legal-forms?jurisdiction=                reference (gateway-owned mapping)
     GET  /cases/search?jurisdiction=&query=        registry search (automated only)
-    GET  /cases?scope=&withDocuments=&q=&refresh=  case list (scope=account|workspace)
+    GET  /cases?scope=&withDocuments=&q=&refresh=  case list (scope=workspace|account)
     GET  /cases/{caseCommonId}                     status by caseCommonId
-    GET  /cases/{caseCommonId}/documents           documents by caseCommonId
-    GET  /cases/{caseCommonId}/documents/{id}/content   download (binary)
+    GET  /cases/{caseCommonId}/documents?includePending=      documents by caseCommonId
+    GET  /cases/{caseCommonId}/documents/{id}/content?includePending=   download (binary)
     POST /cases                                      create (BILLABLE, workspace-scoped)
 
 Required .env:
@@ -104,9 +106,9 @@ class KycGatewayClient:
         r.raise_for_status()
         return r.json()
 
-    def _get_bytes(self, path: str) -> tuple[bytes, str]:
+    def _get_bytes(self, path: str, params: dict | None = None) -> tuple[bytes, str]:
         self._ensure_auth()
-        r = self.session.get(self._ws(path), timeout=120)
+        r = self.session.get(self._ws(path), params=params, timeout=120)
         r.raise_for_status()
         return r.content, r.headers.get("content-type", "application/octet-stream")
 
@@ -115,6 +117,17 @@ class KycGatewayClient:
 
     def company_types(self) -> list[str]:
         return self._get("/document-search/company-types")
+
+    def jurisdiction_coverage(self, code: str) -> dict:
+        """Coverage for ONE jurisdiction: sla, registries[], dataFields{...},
+        baseDocuments[]/additionalDocuments[] (each {type, description}).
+        Raises HTTPError 404 for a jurisdiction with no coverage row — AF/BD/GH are
+        priced and orderable but absent from the upstream matrix, which is expected."""
+        return self._get(f"/document-search/jurisdictions/{code}/coverage")
+
+    def jurisdictions_coverage(self) -> list[dict]:
+        """The same coverage detail for every jurisdiction in one call (128 rows)."""
+        return self._get("/document-search/jurisdictions/coverage")
 
     def legal_forms(self, jurisdiction: str | None = None) -> list[dict]:
         return self._get("/document-search/legal-forms", {"jurisdiction": jurisdiction} if jurisdiction else None)
@@ -127,8 +140,12 @@ class KycGatewayClient:
         # give search a longer cap so they succeed, while still bounding the wait.
         return self._get("/document-search/cases/search", params, timeout=90)
 
-    def list_cases(self, scope: str = "account", with_documents: bool = True,
+    def list_cases(self, scope: str = "workspace", with_documents: bool = True,
                    q: str | None = None, refresh: bool = False) -> list[dict]:
+        """scope=workspace is the supported integration path: it carries `ready` and
+        `statusName`. scope=account spans every workspace in the account but returns
+        identity fields only (caseCommonId/name, plus docCount) — no status. Use it
+        for exploration, not to build against."""
         params = {"scope": scope, "withDocuments": str(with_documents).lower(),
                   "refresh": str(refresh).lower()}
         if q:
@@ -138,11 +155,21 @@ class KycGatewayClient:
     def case_status(self, case_common_id) -> dict:
         return self._get(f"/document-search/cases/{case_common_id}")
 
-    def case_documents(self, case_common_id) -> dict:
-        return self._get(f"/document-search/cases/{case_common_id}/documents")
+    def case_documents(self, case_common_id, include_pending: bool = False) -> dict:
+        """include_pending=True surfaces documents while the case is still building
+        (before Ready), each annotated `availability`: available | pending | missing.
+        A `missing` row is a placeholder for a gap — it has no documentId and cannot
+        be downloaded."""
+        params = {"includePending": "true"} if include_pending else None
+        return self._get(f"/document-search/cases/{case_common_id}/documents", params)
 
-    def download_document(self, case_common_id, document_id) -> tuple[bytes, str]:
-        return self._get_bytes(f"/document-search/cases/{case_common_id}/documents/{document_id}/content")
+    def download_document(self, case_common_id, document_id,
+                          include_pending: bool = False) -> tuple[bytes, str]:
+        """Pass include_pending=True for a document that was listed with
+        include_pending=True (the pre-Ready path)."""
+        params = {"includePending": "true"} if include_pending else None
+        return self._get_bytes(
+            f"/document-search/cases/{case_common_id}/documents/{document_id}/content", params)
 
     CREATE_WAIT_SECONDS = 25
 
