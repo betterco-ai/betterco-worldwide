@@ -5,6 +5,22 @@ keine Registrierung eingereicht. Companion: `STP_ARCHITEKTUR_PRODUKT_2026-07-31_
 `curation/registry_intelligence.json` (DK-Zeile), `CONNECTOR_FINDINGS_2026-07-28.md` (Muster
 FR/GB).*
 
+> ## Nachtrag 05.08.2026 — der Plan ist ausgeführt, **Frage 1 ist beantwortet**
+>
+> Zugang beantragt 31.07., freigeschaltet 04.08., Connector gebaut
+> (`betterco_claude_api/dk_cvr_client.py`, 51 Selbsttests grün).
+>
+> **Frage 1 — vedtægter per API? Nein.** Erhvervsstyrelsen am 05.08.2026 wörtlich:
+> *„Articles of association/vedtaegter are not available via the system-to-system solution.
+> These must be ordered for a fee."* Damit tritt genau der in § 1 beschriebene Fall ein:
+> **Hälfte 2 bleibt geschlossen**, DK sieht bei der Satzung aus wie Frankreich/Kbis.
+> Offen ist nur noch der Preis.
+>
+> **Hälfte 1 ist dafür größer als hier angenommen:** Die **reelle ejere** kommen kostenfrei
+> mit — über den Index `cvr-re` auf `https://distribution.virk.dk:8443` (TLS, seit 05.08.).
+> Der Rest dieses Dokuments beschreibt den Stand *vor* diesen beiden Antworten; die
+> gemessene Lage steht in `registry-access/DK_CVR/NOTIZ.md`.
+
 ---
 
 ## 1. Das Ergebnis vorweg
