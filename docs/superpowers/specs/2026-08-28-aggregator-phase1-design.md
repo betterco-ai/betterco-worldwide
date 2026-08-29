@@ -133,6 +133,12 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
   → served from our storage; if not yet stored: fetch, store, serve
 ```
 
+> **Gap found 2026-08-29 while planning P2.** There is **no vendor-neutral document-kind vocabulary
+> in the backend** — `KYCDocumentType` is a seven-value German-KYC enum, and our curation
+> (`curation/document_kinds_*.json`) lives in betterco-worldwide, not in the application. P2
+> therefore stores the vendor's label verbatim; building or importing the vocabulary is P3 work and
+> must happen before the contract below is frozen.
+
 `kind` is the **vendor-neutral document kind** resolved from our document-kinds curation, not the
 vendor's label. The vendor's own `category` / `name` are preserved on the acquisition for
 traceability but are not the contract. `availability` is one of `available` | `pending` | `missing`,
