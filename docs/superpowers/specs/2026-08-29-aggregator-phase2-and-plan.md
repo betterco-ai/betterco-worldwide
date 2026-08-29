@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-29
 **Companion to:** `2026-08-28-aggregator-phase1-design.md`
-**Deadline:** Septeo go-live 1 October 2026 — 4½ working weeks from today
+**Deadline:** Septeo go-live 1 October 2026
 
 ---
 
@@ -11,7 +11,7 @@
 | Phase | What it delivers | Needed for 1 Oct |
 |---|---|---|
 | **1** | The aggregator exists. The platform owns the case, documents are stored with provenance, kyc.com is the only source. | **Yes** |
-| **2** | More than one source behind the same aggregator, chosen by a routing table. France is source two. | **Yes, scoped to FR** |
+| **2** | More than one source behind the same aggregator, chosen by a routing table. France is source two, Britain third. | **Yes** |
 | **3** | The aggregator *decides* rather than looks up: evidence levels, least-cost routing, reuse of stock. | No |
 | **4** | Housekeeping: webhooks replace polling, the kyc.com Java exception is retired, ordering UI in the app. | No |
 
@@ -44,8 +44,8 @@ Prices are one case in each market, measured on staging 2026-08-29:
 |---|---|---|---|
 | **FR** | **$88.00** (High) | INPI + Datainfogreffe, routers live in `api/main.py` | **$88** |
 | IT | $43.50 | none | — |
-| GB | $18.00 | Companies House, router live | $18 |
-| DK | $18.00 | `dk_cvr_client.py` — **library only, no route** | $18, after a service is built |
+| GB | $18.00 | Companies House — **full document route**, downloads filing PDFs free | $18 |
+| DK | $18.00 | `dk_cvr_client.py` returns **data, not documents**; no route; vedtægter are paid | not a document source yet |
 | DE | $18.00 | HR sidecar | policy: we never buy DE from kyc.com |
 
 **France is source two.** It is the most expensive market we buy (five times GB or DK), it is first
@@ -67,8 +67,10 @@ which put DE first.
 2. Add the routing table with a single rule: everything → kyc.com. Still no behaviour change.
 3. Add the sidecar adapter and FR as source two; route FR document kinds to INPI, everything else
    unchanged.
-4. Then, in priority order and *after* go-live: DE (needs decision D4 resolved), GB, DK (needs a
-   service built first).
+4. Britain via Companies House — the same shape as France, and its route already downloads filing
+   PDFs.
+5. Afterwards: Germany once the sidecar drift (D4) is resolved, and Denmark only if a data-only
+   source belongs in a document aggregator at all (D5).
 
 ## 2. Phase 3 — the decision layer
 
@@ -95,76 +97,71 @@ Named so it is not mistaken for phase 3, and so it does not quietly attach itsel
 - Ordering UI in the BetterCo app — today only STP and our internal tool can order.
 - Resolve the DE sidecar drift permanently (see D4).
 
-## 4. Project plan
+## 4. The plan, by phase
 
-Four and a half working weeks. One work package per branch, CI-verified, reviewed by Jappware.
+No weeks. The build is small — the connectors already exist and the Java side reuses existing
+patterns — so a calendar padded into weeks misrepresents the work. What sets the pace is two gates
+we do not control.
 
-### Week 1 — 1 to 5 September · the contract
+### The phases
 
-| # | Activity | Depends on | Done when |
-|---|---|---|---|
-| A1 | Freeze the contract: opaque `caseId`, `bettercoDocumentId`, derived status, `includePending` accepted-and-ignored | — | PR merged, spec §5 matches the code |
-| A2 | Send Björn the migration note: `Long` → `String`, agree a cut-over date | A1 | Written confirmation from Septeo |
-| A3 | Schema: `DocumentAcquisition`, charge record, new `CaseOrigin` value | — | Migration written, indexes in place |
+| | Phase | Exit criterion |
+|---|---|---|
+| **P1** | **Contract.** Opaque `caseId`, `bettercoDocumentId`, derived status, `includePending` accepted-and-ignored. | PR merged and Björn told. Ships first because it is the only part another team must react to. |
+| **P2** | **Ownership.** An order creates client + `Case`; vendor ref into `externalIdentifiers`; orphan `KycCaseLink` retired. | An order produces a client with its documents attached. |
+| **P3** | **Ingestion.** Per-document worker, per-source backoff, content served from storage with fetch-store-serve fallback. | A second download makes no vendor call. |
+| **P4** | **Cost.** `DocumentAcquisition` + charge records, `PER_CASE` for kyc.com. | One charge per (case, source); ten documents, one charge. |
+| **P5** | **Port + routing.** `SourceAdapter` extracted, routing table, per-source policy. | All P1–P4 tests pass unchanged; the DE rule is enforced rather than remembered. |
+| **P6** | **Sources.** France via INPI, Britain via Companies House. | A French and a British order cost nothing at the vendor and return documents. |
 
-**Week 1 is the immovable one.** Björn is integrating now; the contract must land before his polling
-loop ships, or STP migrates twice.
+P1 through P5 are sequential. P6 is parallel per source once P5 lands.
 
-### Week 2 — 8 to 12 September · ownership and ingestion
+### What actually sets the pace
 
-| # | Activity | Depends on | Done when |
-|---|---|---|---|
-| A4 | An order creates client + `Case`, vendor ref into `externalIdentifiers`; orphan `KycCaseLink` retired | A3 | Integration test: order → client exists with the documents attached |
-| A5 | Ingestion worker: per-document, store via `FileStorage`, write acquisitions | A3, A4 | Documents appear in storage before case-ready |
-| A6 | Per-source backoff policy replacing the flat 5-minute poll | A5 | kyc.com runs 1h/6h/12h/24h; give-up flags |
+Three gates, none of them our typing speed:
 
-### Week 3 — 15 to 19 September · serving and cost
+1. **Jappware's review and release train.** We branch and push; they review and merge to `dev`, and
+   it reaches staging on their cadence. Every phase is one PR, so this gate is hit six times.
+2. **Septeo's own migration.** P1 changes `Long` to `String` in Björn's client. That is his work on
+   his calendar, and nothing downstream of P1 can be validated end-to-end until he has done it.
+3. **The retention decision (D1).** A person, not a commit. Storing documents forces it and it
+   cannot be answered by code.
 
-| # | Activity | Depends on | Done when |
-|---|---|---|---|
-| A7 | Content served from our storage, with fetch-store-serve fallback | A5 | No vendor call on a second download |
-| A8 | Charge records; `PER_CASE` model for kyc.com | A3, A5 | One charge per (case, source), ten documents free |
-| A9 | Phase 1 end-to-end on staging; Septeo migrates against it | A1–A8 | Björn's integration green on the new ids |
+The correct move is therefore to ship **P1 immediately** and start gates 2 and 3 in parallel with
+building P2–P6, rather than sequencing them.
 
-### Week 4 — 22 to 26 September · the second source
+### Scope for 1 October
 
-| # | Activity | Depends on | Done when |
-|---|---|---|---|
-| A10 | Extract `SourceAdapter`; kyc.com becomes adapter one | A9 | All phase-1 tests pass unchanged |
-| A11 | Routing table `(jurisdiction, kind) → source`, per-source policy | A10 | DE rule enforced, not remembered |
-| A12 | Sidecar adapter + **France via INPI** as source two, `PER_DOCUMENT` | A11 | A French order costs €0 at the vendor and returns a document |
-
-### Week 5 — 29 September to 1 October · hardening
-
-| # | Activity | Depends on | Done when |
-|---|---|---|---|
-| A13 | Retention implemented (decision D1), monitoring, cost sanity check | A8 | Retention job runs; per-case cost readable |
-| A14 | Go-live checks with Septeo | all | Sign-off |
-
-Only **three days** of buffer. See §6.
+Everything above, including France and Britain. What stays out is not effort but unknowns:
+Germany until the sidecar drift (D4) is resolved, Denmark until we decide whether a data-only
+source belongs in a document aggregator at all.
 
 ## 5. Decisions, with the date each is needed
 
 | | Decision | Needed by | Default if unanswered |
 |---|---|---|---|
-| D1 | Document retention and deletion | Week 5 (A13) | Keep indefinitely — **not acceptable**, must be answered |
-| D2 | Evidence level in the contract | Week 1 (A1) if it rides along | Defer to phase 3; adding it later is additive |
-| D3 | Do document orders count as billable client creations | Week 3 (A8) | Tagged by `CaseOrigin`, billing rule decided later |
-| D4 | DE sidecar drift: which build is current | Week 4 only if DE is pulled forward | DE is out of the 1 Oct path, so this can wait |
-| D5 | DK needs a service built | Post go-live | Out of scope for 1 October |
+| D1 | Document retention and deletion | Before P3 ships to production | Keep indefinitely — **not acceptable**, must be answered |
+| D2 | Evidence level in the contract | P1, only if it rides along | Defer to phase 3; adding it later is additive |
+| D3 | Do document orders count as billable client creations | P4 | Tagged by `CaseOrigin`, billing rule decided later |
+| D4 | DE sidecar drift: which build is current | Only if Germany is pulled forward | DE is out of the 1 Oct path, so this can wait |
+| D5 | DK needs a service built | When Denmark is picked up | Out of scope for 1 October |
 
 ## 6. Risks
 
 | Risk | Assessment | Mitigation |
 |---|---|---|
-| **Phase 2 at full scope does not fit** | Near-certain. DE + FR + GB + DK behind a new port in one week is not a five-day job. | Scope phase 2 for 1 October to **France only**. One second source proves the abstraction; the rest follow after go-live. |
-| Three days of buffer | Real | Phase 1 is independently shippable at end of week 3; France can drop without endangering the go-live |
-| No local build | Certain | Every step is a branch, CI is the verification, no local claims |
-| STP migration slips | Moderate | A2 in week 1, cut-over date agreed in writing |
-| Retention unanswered at week 5 | Moderate | D1 escalated now, not in week 5 |
+| **The gates, not the build** | The likeliest way this misses 1 October is six PR round-trips through another team's release train plus Septeo's own client change — not our coding | Ship P1 immediately and in isolation; start Septeo's migration and the retention decision in parallel with building P2–P6 |
+| Septeo migration slips | Moderate — it is their calendar | Tell Björn at P1, agree a cut-over date in writing |
+| Retention unanswered (D1) | Moderate | Escalate now; it blocks P3 reaching production, not the code |
+| No local build | Certain, minor | Every phase is a branch; CI is the verification; mistakes cost a CI round-trip, not a day |
+| DE sidecar drift (D4) | Contained | Germany is out of the 1 October path, so the drift is not on the critical path |
 
 ## 7. The honest summary
 
-Phase 1 and **France** are achievable by 1 October. Phase 2 as originally described — every direct
-route — is not, and saying so now is cheaper than discovering it on 26 September. Germany, Great
-Britain and Denmark are the first work after go-live, and none of them is on Septeo's critical path.
+The connectors are built. France, Britain and Germany all have working document routes, and the Java
+side reuses patterns that already exist — the case, the storage, the billing strategy. The remaining
+build is small and the earlier week-by-week calendar overstated it.
+
+What is not small is the coordination: six pull requests through Jappware's release train, and one
+client change on Septeo's side that only they can make. Those are the schedule, so P1 ships first
+and the two external gates open in parallel with everything else.
