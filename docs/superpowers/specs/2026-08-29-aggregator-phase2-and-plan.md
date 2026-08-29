@@ -107,12 +107,23 @@ we do not control.
 
 | | Phase | Exit criterion |
 |---|---|---|
-| **P1** | **Contract.** Opaque `caseId`, `bettercoDocumentId`, derived status, `includePending` accepted-and-ignored. | PR merged and Björn told. Ships first because it is the only part another team must react to. |
-| **P2** | **Ownership.** An order creates client + `Case`; vendor ref into `externalIdentifiers`; orphan `KycCaseLink` retired. | An order produces a client with its documents attached. |
-| **P3** | **Ingestion.** Per-document worker, per-source backoff, content served from storage with fetch-store-serve fallback. | A second download makes no vendor call. |
-| **P4** | **Cost.** `DocumentAcquisition` + charge records, `PER_CASE` for kyc.com. | One charge per (case, source); ten documents, one charge. |
-| **P5** | **Port + routing.** `SourceAdapter` extracted, routing table, per-source policy. | All P1–P4 tests pass unchanged; the DE rule is enforced rather than remembered. |
+| **P1** | **Client and matter.** An order creates client + `Case`; vendor ref into `externalIdentifiers`; orphan `KycCaseLink` retired. | An order produces a client with one matter in the platform. |
+| **P2** | **Acquisitions and ingestion.** Per-document worker, per-source backoff, storage with provenance. | Documents land in the client before the vendor case is ready. |
+| **P3** | **Contract cut-over.** Opaque `caseId`, `bettercoDocumentId`, derived status, `includePending` accepted-and-ignored. | One break, and Septeo is on the new ids. |
+| **P4** | **Cost.** Charge records, `PER_CASE` for kyc.com. | Ten documents, one charge. |
+| **P5** | **The aggregator becomes a router.** `SourceAdapter` port, routing table, per-source policy. | All P1–P4 tests pass unchanged; the Germany rule is enforced rather than remembered. |
 | **P6** | **Sources.** France via INPI, Britain via Companies House. | A French and a British order cost nothing at the vendor and return documents. |
+
+**Why ownership comes before the contract.** An opaque `caseId` only means something once a `Case`
+owns it; shipped earlier it is an alias table over kyc.com's number, and the shape may change again
+when ownership lands. Derived status has the same dependency — it is computed from acquisitions,
+which arrive in P2. Building the substance first buys one contract break instead of two. Telling
+Björn is decoupled from shipping: the migration note is a message, not a deploy, so it goes out on
+day one and the cut-over lands at P3.
+
+**Where the code lives.** `com.betterco.app.aggregation` exists from P1 — ownership and ingestion are
+written there rather than in `integration/kyc_com` and moved later. With one source there is nothing
+to route, so the aggregator only *becomes* a router at P5, which makes P5 an addition, not a refactor.
 
 P1 through P5 are sequential. P6 is parallel per source once P5 lands.
 
@@ -122,12 +133,12 @@ Three gates, none of them our typing speed:
 
 1. **The backend dev's review and release train.** We branch and push; they review and merge to `dev`, and
    it reaches staging on their cadence. Every phase is one PR, so this gate is hit six times.
-2. **Septeo's own migration.** P1 changes `Long` to `String` in Björn's client. That is his work on
-   his calendar, and nothing downstream of P1 can be validated end-to-end until he has done it.
+2. **Septeo's own migration.** P3 changes `Long` to `String` in Björn's client, though he is told at P1. That is his work on
+   his calendar, and nothing after P3 can be validated end-to-end until he has done it.
 3. **The retention decision (D1).** A person, not a commit. Storing documents forces it and it
    cannot be answered by code.
 
-The correct move is therefore to ship **P1 immediately** and start gates 2 and 3 in parallel with
+The correct move is therefore to send the migration note **immediately** and start gates 2 and 3 in parallel with
 building P2–P6, rather than sequencing them.
 
 ### Scope for 1 October
@@ -140,8 +151,8 @@ source belongs in a document aggregator at all.
 
 | | Decision | Needed by | Default if unanswered |
 |---|---|---|---|
-| D1 | Document retention and deletion | Before P3 ships to production | Keep indefinitely — **not acceptable**, must be answered |
-| D2 | Evidence level in the contract | P1, only if it rides along | Defer to phase 3; adding it later is additive |
+| D1 | Document retention and deletion | Before P2 ships to production | Keep indefinitely — **not acceptable**, must be answered |
+| D2 | Evidence level in the contract | P3, only if it rides along | Defer to phase 3; adding it later is additive |
 | D3 | Do document orders count as billable client creations | P4 | Tagged by `CaseOrigin`, billing rule decided later |
 | D4 | DE sidecar drift: which build is current | Only if Germany is pulled forward | DE is out of the 1 Oct path, so this can wait |
 | D5 | DK needs a service built | When Denmark is picked up | Out of scope for 1 October |
@@ -150,9 +161,9 @@ source belongs in a document aggregator at all.
 
 | Risk | Assessment | Mitigation |
 |---|---|---|
-| **The gates, not the build** | The likeliest way this misses 1 October is six PR round-trips through another team's release train plus Septeo's own client change — not our coding | Ship P1 immediately and in isolation; start Septeo's migration and the retention decision in parallel with building P2–P6 |
-| Septeo migration slips | Moderate — it is their calendar | Tell Björn at P1, agree a cut-over date in writing |
-| Retention unanswered (D1) | Moderate | Escalate now; it blocks P3 reaching production, not the code |
+| **The gates, not the build** | The likeliest way this misses 1 October is six PR round-trips through another team's release train plus Septeo's own client change — not our coding | Send the migration note at once; start Septeo's migration and the retention decision in parallel with building P1–P6 |
+| Septeo migration slips | Moderate — it is their calendar | Tell Björn on day one, agree a cut-over date in writing |
+| Retention unanswered (D1) | Moderate | Escalate now; it blocks P2 reaching production, not the code |
 | No local build | Certain, minor | Every phase is a branch; CI is the verification; mistakes cost a CI round-trip, not a day |
 | DE sidecar drift (D4) | Contained | Germany is out of the 1 October path, so the drift is not on the critical path |
 
@@ -163,5 +174,5 @@ side reuses patterns that already exist — the case, the storage, the billing s
 build is small and the earlier week-by-week calendar overstated it.
 
 What is not small is the coordination: six pull requests through the backend dev's release train, and one
-client change on Septeo's side that only they can make. Those are the schedule, so P1 ships first
-and the two external gates open in parallel with everything else.
+client change on Septeo's side that only they can make. Those are the schedule, so the migration note goes out
+on day one and the two external gates open in parallel with the build.
