@@ -151,7 +151,7 @@ source belongs in a document aggregator at all.
 
 | | Decision | Needed by | Default if unanswered |
 |---|---|---|---|
-| D1 | Document retention and deletion | Before P2 ships to production | Keep indefinitely — **not acceptable**, must be answered |
+| D1 | Retention and deletion — **DECIDED 2026-08-29** | — | Kept indefinitely; cascaded on client deletion; reusable while fresh (`fetchedAt` < 7 days, per-source configurable) |
 | D2 | Evidence level in the contract | P3, only if it rides along | Defer to phase 3; adding it later is additive |
 | D3 | Do document orders count as billable client creations | P4 | Tagged by `CaseOrigin`, billing rule decided later |
 | D4 | DE sidecar drift: which build is current | Only if Germany is pulled forward | DE is out of the 1 Oct path, so this can wait |
@@ -163,7 +163,7 @@ source belongs in a document aggregator at all.
 |---|---|---|
 | **The gates, not the build** | The likeliest way this misses 1 October is six PR round-trips through another team's release train plus Septeo's own client change — not our coding | Send the migration note at once; start Septeo's migration and the retention decision in parallel with building P1–P6 |
 | Septeo migration slips | Moderate — it is their calendar | Tell Björn on day one, agree a cut-over date in writing |
-| Retention unanswered (D1) | Moderate | Escalate now; it blocks P2 reaching production, not the code |
+| Reuse forbidden by vendor licence (D6) | Moderate | Ask kyc.com now; if forbidden, the least-cost saving shrinks to same-customer reuse |
 | No local build | Certain, minor | Every phase is a branch; CI is the verification; mistakes cost a CI round-trip, not a day |
 | DE sidecar drift (D4) | Contained | Germany is out of the 1 October path, so the drift is not on the critical path |
 
