@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-28
 **Deadline:** 1 October 2026 (phase 1 *and* phase 2)
-**Implemented by:** us, in `betterco-backend`, branch per step, CI-verified, Jappware reviews
+**Implemented by:** us, in `betterco-backend`, branch per step, CI-verified, backend dev reviews
 **Status:** design agreed in conversation; open decisions listed in §10
 
 ---
@@ -245,6 +245,6 @@ as a branch with tests that fail before the change and pass after it.
 |---|---|
 | Five weeks for phase 1 **and** phase 2 | Phase 1 contract lands in week 1 so the customer-visible half is safe even if phase 2 slips |
 | No local build | Every step is a branch; CI runs the tests; no "works on my machine" claims |
-| We push into a repo Jappware releases from | Branch per step, PR review by them, no direct pushes to `dev` |
+| We push into a repo the backend dev releases from | Branch per step, PR review by them, no direct pushes to `dev` |
 | kyc.com case-centric vs sidecar document-centric | Resolved by the model in §4: case is ours, acquisitions are per document |
 | Storing documents raises retention/GDPR | Named as open decision 1, to be settled before go-live |

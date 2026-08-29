@@ -120,7 +120,7 @@ P1 through P5 are sequential. P6 is parallel per source once P5 lands.
 
 Three gates, none of them our typing speed:
 
-1. **Jappware's review and release train.** We branch and push; they review and merge to `dev`, and
+1. **The backend dev's review and release train.** We branch and push; they review and merge to `dev`, and
    it reaches staging on their cadence. Every phase is one PR, so this gate is hit six times.
 2. **Septeo's own migration.** P1 changes `Long` to `String` in Björn's client. That is his work on
    his calendar, and nothing downstream of P1 can be validated end-to-end until he has done it.
@@ -162,6 +162,6 @@ The connectors are built. France, Britain and Germany all have working document 
 side reuses patterns that already exist — the case, the storage, the billing strategy. The remaining
 build is small and the earlier week-by-week calendar overstated it.
 
-What is not small is the coordination: six pull requests through Jappware's release train, and one
+What is not small is the coordination: six pull requests through the backend dev's release train, and one
 client change on Septeo's side that only they can make. Those are the schedule, so P1 ships first
 and the two external gates open in parallel with everything else.
