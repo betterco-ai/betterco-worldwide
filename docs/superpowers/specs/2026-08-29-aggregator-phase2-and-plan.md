@@ -131,8 +131,10 @@ P1 through P5 are sequential. P6 is parallel per source once P5 lands.
 
 Three gates, none of them our typing speed:
 
-1. **The backend dev's review and release train.** We branch and push; they review and merge to `dev`, and
-   it reaches staging on their cadence. Every phase is one PR, so this gate is hit six times.
+1. **The backend dev's review and release train.** We branch and push; they review and merge to `dev`,
+   and it reaches staging on their cadence. Every phase is one PR, so this gate is hit six times.
+   Note it is also the *test* gate: `app-tests.yml` only runs after an approving review, so nothing
+   is verified by CI until a human has already looked at it.
 2. **Septeo's own migration.** P3 changes `Long` to `String` in Björn's client, though he is told at P1. That is his work on
    his calendar, and nothing after P3 can be validated end-to-end until he has done it.
 3. **The retention decision (D1).** A person, not a commit. Storing documents forces it and it
@@ -164,7 +166,7 @@ source belongs in a document aggregator at all.
 | **The gates, not the build** | The likeliest way this misses 1 October is six PR round-trips through another team's release train plus Septeo's own client change — not our coding | Send the migration note at once; start Septeo's migration and the retention decision in parallel with building P1–P6 |
 | Septeo migration slips | Moderate — it is their calendar | Tell Björn on day one, agree a cut-over date in writing |
 | Reuse forbidden by vendor licence (D6) | Moderate | Ask kyc.com now; if forbidden, the least-cost saving shrinks to same-customer reuse |
-| No local build | Certain, minor | Every phase is a branch; CI is the verification; mistakes cost a CI round-trip, not a day |
+| CI verifies nothing before review | Certain | The job is gated on an approving review, so run the suite locally against the `dev` baseline (735 tests / 7 failures / 13 errors) and judge by *no new failures* |
 | DE sidecar drift (D4) | Contained | Germany is out of the 1 October path, so the drift is not on the critical path |
 
 ## 7. The honest summary

@@ -219,9 +219,15 @@ migration.
 
 ## 9. Testing
 
-Nothing compiles on the development machine — no Maven, no `~/.m2`, `.mvn/` is untracked — so
-**CI is the only verification** (`.github/workflows/app-tests.yml`, `mvn -B test`). Every step ships
-as a branch with tests that fail before the change and pass after it.
+**Verification — corrected 2026-08-30.** `app-tests.yml` runs its job only when
+`github.event.review.state == 'approved'`, so **a branch push and even an open PR verify nothing**;
+tests run only after a human submits an approving review. Verification is therefore local: Maven is
+not installed on the authoring machine, but the dependency tree resolves from Central with no
+private repositories, so a scratchpad Maven runs the real `mvn -B test`. Baseline matters — clean
+`origin/dev` is **735 tests, 7 failures, 13 errors** (Testcontainers and a hosts-file quirk), so a
+branch is judged by *no new failures*, never by a green suite.
+
+Every step ships as a branch with tests that fail before the change and pass after it.
 
 - Unit: routing table resolution; charging model per source; backoff schedule advance; acquisition
   state machine including `MISSING` and `MANUAL_QUEUED`.
@@ -250,7 +256,7 @@ as a branch with tests that fail before the change and pass after it.
 | Risk | Mitigation |
 |---|---|
 | Five weeks for phase 1 **and** phase 2 | Phase 1 contract lands in week 1 so the customer-visible half is safe even if phase 2 slips |
-| No local build | Every step is a branch; CI runs the tests; no "works on my machine" claims |
+| CI does not verify branches | Corrected 2026-08-30: the job is gated on an approving review. Verify locally with a scratchpad Maven against the `dev` baseline |
 | We push into a repo the backend dev releases from | Branch per step, PR review by them, no direct pushes to `dev` |
 | kyc.com case-centric vs sidecar document-centric | Resolved by the model in §4: case is ours, acquisitions are per document |
 | Storing documents raises retention/GDPR | Named as open decision 1, to be settled before go-live |

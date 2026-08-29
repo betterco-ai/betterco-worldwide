@@ -13,7 +13,13 @@
 ## Global Constraints
 
 - Repository: `betterco-backend`. Branch off `dev`, one branch per task, PR reviewed by the backend dev. **Never push to `dev` directly.**
-- **Nothing compiles locally** — no Maven, no `~/.m2`, `.mvn/` untracked. CI (`.github/workflows/app-tests.yml`, `mvn -B test`) is the only verification. Never claim a test passes without a CI run.
+- **Verification — corrected 2026-08-30.** `app-tests.yml` runs its job only when
+  `github.event.review.state == 'approved'`, so **a branch push and even an open PR verify nothing**;
+  tests run only after a human submits an approving review. Verification is therefore local: Maven is
+  not installed on the authoring machine, but the dependency tree resolves from Central with no
+  private repositories, so a scratchpad Maven runs the real `mvn -B test`. Baseline matters — clean
+  `origin/dev` is **735 tests, 7 failures, 13 errors** (Testcontainers and a hosts-file quirk), so a
+  branch is judged by *no new failures*, never by a green suite.
 - Reuse, do not reimplement: `CustomerService.createCustomer(...)` is the only sanctioned way to create a client with a matter.
 - **`purchaseDocuments` stays false and `ekrn` stays null** on any client we create. `CustomerService.createClient` triggers Transparenzregister purchasing and `autoKYCService.reCalculateBeneficialOwners` when they are set — a French document order must never trigger a German paid purchase.
 - The hierarchy is `workspace → organization → clients → matters → processes`. Take the **first** organisation of the workspace.
