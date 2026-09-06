@@ -107,12 +107,28 @@ we do not control.
 
 | | Phase | Exit criterion |
 |---|---|---|
-| **P1** | **Client and matter.** An order creates client + `Case`; vendor ref into `externalIdentifiers`; orphan `KycCaseLink` retired. | An order produces a client with one matter in the platform. |
+| **P1** ✅ | **Client and matter.** An order creates client + `Case`; vendor ref into `externalIdentifiers`; orphan `KycCaseLink` retired. | **Met 2026-09-04.** Merged (`#2293`), deployed to `dev`, one sandbox order in a real dev workspace produced client `6a9acdb2…c07b` with exactly one matter carrying `{1000005421, kyc.com}`, 5 documents downloading. |
 | **P2** | **Acquisitions and ingestion.** Per-document worker, per-source backoff, storage with provenance. | Documents land in the client before the vendor case is ready. |
 | **P3** | **Contract cut-over.** Opaque `caseId`, `bettercoDocumentId`, derived status, `includePending` accepted-and-ignored. | One break, and Septeo is on the new ids. |
 | **P4** | **Cost.** Charge records, `PER_CASE` for kyc.com. | Ten documents, one charge. |
 | **P5** | **The aggregator becomes a router.** `SourceAdapter` port, routing table, per-source policy. | All P1–P4 tests pass unchanged; the Germany rule is enforced rather than remembered. |
 | **P6** | **Sources.** France via INPI, Britain via Companies House. | A French and a British order cost nothing at the vendor and return documents. |
+
+### Defects found verifying P1, carried into P2
+
+Verifying P1 on `dev` on 2026-09-04 surfaced two defects. Neither blocks P1's exit criterion —
+both are scheduled into P2 rather than patched separately, because P2 rewrites the same two methods.
+
+| | Defect | Why it matters here | Fixed in |
+|---|---|---|---|
+| **F1** | **A case's stored status freezes at creation.** `isReady` treats a non-blank `caseReadyDatetime` as ready, and the vendor stamps it when the case is *created*. So `completeCreate` saves the link `ready=true, statusName="Initializing Case"`, and `refreshTrackedStatuses` — which selects `findByReadyFalseAndKycCaseCommonIdNotNull()` — never revisits it. Measured: 40 minutes after the order the stored row still read `Initializing Case` while the vendor read `Ready`. | This is P2's own foundation. Task 4 gives the poller a backoff policy, and the poller currently has nothing to poll. It also pre-empts P3's derived status, which is computed from exactly this data. | **P2 Task 4**, steps 0a–0c, including a Mongock backfill for links already frozen |
+| **F2** | **`scope=account` returns HTTP 400.** The vendor's own validation message is copied through by `KycComClient.map4xx`; the sandbox rejects `POST /v2/Case/search-by-properties`. Not a P1 regression — staging worked because staging talks to the live vendor. | One vendor query we cannot satisfy takes down a whole scope of the case list instead of degrading. | **P2 Task 10** (degrade, do not propagate; do not change the vendor payload without asking kyc.com) |
+
+**A note on what the sandbox can and cannot prove.** F1 was only visible because the sandbox stamps
+`caseReadyDatetime` eagerly, and F2 only because the sandbox validates more strictly than the live
+vendor. The reverse also holds: the live status vocabulary is unverified, which is the open question
+recorded in P2 Task 4 step 0b. Anything status-shaped needs one confirmation against the live vendor
+before it is called done.
 
 **Why ownership comes before the contract.** An opaque `caseId` only means something once a `Case`
 owns it; shipped earlier it is an alias table over kyc.com's number, and the shape may change again

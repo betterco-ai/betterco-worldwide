@@ -1,0 +1,800 @@
+<title>Aggregator Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+
+<style>
+  :root {
+    --paper:#F4F7F7;
+    --surface:#FFFFFF;
+    --surface-2:#EDF2F2;
+    --ink:#15202A;
+    --muted:#5B6B76;
+    --line:#D9E2E4;
+    --line-strong:#B9C7CA;
+    --accent:#146560;
+    --accent-soft:#DCEBE8;
+    --ok:#2C6E4C;
+    --build:#9A5F0C;
+    --risk:#9E3B3B;
+    --chip-ok-bg:#E1EFE7;
+    --chip-build-bg:#F6EAD8;
+    --chip-risk-bg:#F5E2E2;
+
+    --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0C1214;
+      --surface:#131C1F;
+      --surface-2:#182226;
+      --ink:#E3EBEC;
+      --muted:#93A4AC;
+      --line:#223034;
+      --line-strong:#33474D;
+      --accent:#5CB8AE;
+      --accent-soft:#16302F;
+      --ok:#5BAE83;
+      --build:#D69A46;
+      --risk:#D4736F;
+      --chip-ok-bg:#15291F;
+      --chip-build-bg:#2A2113;
+      --chip-risk-bg:#2B1A1A;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:#0C1214;
+    --surface:#131C1F;
+    --surface-2:#182226;
+    --ink:#E3EBEC;
+    --muted:#93A4AC;
+    --line:#223034;
+    --line-strong:#33474D;
+    --accent:#5CB8AE;
+    --accent-soft:#16302F;
+    --ok:#5BAE83;
+    --build:#D69A46;
+    --risk:#D4736F;
+    --chip-ok-bg:#15291F;
+    --chip-build-bg:#2A2113;
+    --chip-risk-bg:#2B1A1A;
+  }
+
+  body {
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .page { max-width:1180px; margin:0 auto; padding:0 24px 96px; }
+
+  .masthead { border-bottom:1px solid var(--line); padding:56px 0 28px; margin-bottom:40px; }
+  .eyebrow {
+    font-family:var(--mono); font-size:12px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 14px;
+  }
+  h1 {
+    font-family:var(--serif); font-weight:600;
+    font-size:clamp(30px,4.4vw,46px); line-height:1.14; letter-spacing:-.015em;
+    margin:0 0 18px; text-wrap:balance; max-width:20ch;
+  }
+  .standfirst { font-size:18px; color:var(--muted); max-width:64ch; margin:0 0 30px; }
+  .facts { display:flex; flex-wrap:wrap; gap:10px 40px; font-size:14px; }
+  .fact { display:flex; flex-direction:column; gap:2px; }
+  .fact dt {
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted);
+  }
+  .fact dd { margin:0; font-weight:500; }
+
+  .shell { display:grid; grid-template-columns:1fr; gap:48px; }
+  @media (min-width:1000px) { .shell { grid-template-columns:210px minmax(0,1fr); gap:64px; } }
+
+  nav.toc { font-size:14px; }
+  @media (min-width:1000px) {
+    nav.toc { position:sticky; top:32px; align-self:start; max-height:calc(100vh - 64px); overflow-y:auto; }
+  }
+  nav.toc p.tochead {
+    font-family:var(--mono); font-size:11px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 12px;
+  }
+  nav.toc ol { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px; }
+  nav.toc a {
+    color:var(--muted); text-decoration:none; display:flex; gap:10px;
+    border-left:2px solid transparent; padding-left:10px; margin-left:-12px;
+  }
+  nav.toc a:hover { color:var(--accent); border-left-color:var(--accent); }
+  nav.toc a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  nav.toc .num { font-family:var(--mono); font-size:12px; opacity:.7; }
+
+  main { min-width:0; display:flex; flex-direction:column; gap:56px; }
+  section { scroll-margin-top:24px; }
+
+  h2 {
+    font-family:var(--serif); font-weight:600; font-size:26px; line-height:1.24;
+    letter-spacing:-.01em; margin:0 0 20px; padding-bottom:12px;
+    border-bottom:1px solid var(--line);
+    display:flex; align-items:baseline; gap:14px; text-wrap:balance;
+  }
+  h2 .num { font-family:var(--mono); font-size:13px; color:var(--accent); letter-spacing:.06em; flex:none; }
+  h3 { font-family:var(--sans); font-weight:600; font-size:16px; margin:32px 0 10px; }
+  h4 {
+    font-family:var(--mono); font-weight:500; font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted); margin:26px 0 8px;
+  }
+  p, ul, ol { max-width:68ch; }
+  p { margin:0 0 16px; }
+  ul, ol { margin:0 0 16px; padding-left:22px; }
+  li { margin-bottom:8px; }
+  li::marker { color:var(--line-strong); }
+  strong { font-weight:600; }
+  em { font-style:italic; }
+  code {
+    font-family:var(--mono); font-size:.875em; background:var(--surface-2);
+    border:1px solid var(--line); border-radius:3px; padding:1px 5px; overflow-wrap:break-word;
+  }
+  a { color:var(--accent); }
+
+  .chip {
+    font-family:var(--mono); font-size:11px; letter-spacing:.07em; text-transform:uppercase;
+    padding:3px 8px; border-radius:3px; white-space:nowrap; border:1px solid transparent;
+  }
+  .chip-ok    { background:var(--chip-ok-bg);    color:var(--ok);    border-color:var(--ok); }
+  .chip-build { background:var(--chip-build-bg); color:var(--build); border-color:var(--build); }
+  .chip-open  { background:var(--chip-risk-bg);  color:var(--risk);  border-color:var(--risk); }
+  .legend { display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center; margin:0 0 28px; }
+  .legend span.lbl { font-size:13px; color:var(--muted); }
+
+  /* phase overview cards */
+  .phases { display:grid; grid-template-columns:1fr; gap:14px; margin:0 0 28px; }
+  @media (min-width:760px) { .phases { grid-template-columns:repeat(2,1fr); } }
+  .phase {
+    background:var(--surface); border:1px solid var(--line); border-radius:4px;
+    padding:18px 20px; display:flex; flex-direction:column; gap:8px;
+  }
+  .phase.now { border-color:var(--accent); background:var(--accent-soft); }
+  .phase .ptop { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .phase .pnum {
+    font-family:var(--mono); font-size:11px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--accent);
+  }
+  .phase h3 { margin:0; font-size:17px; font-family:var(--serif); font-weight:600; }
+  .phase p { margin:0; font-size:14.5px; color:var(--muted); max-width:none; }
+
+  figure {
+    margin:28px 0; padding:22px 20px 16px; background:var(--surface);
+    border:1px solid var(--line); border-radius:4px; overflow-x:auto;
+  }
+  figure svg { display:block; width:100%; max-width:720px; height:auto; margin:0 auto; color:var(--ink); }
+  figcaption {
+    font-size:13.5px; color:var(--muted); margin-top:16px; padding-top:12px;
+    border-top:1px solid var(--line); max-width:70ch;
+  }
+  .svg-box { fill:var(--surface); stroke:var(--line-strong); }
+  .svg-box-accent { fill:var(--accent-soft); stroke:var(--accent); }
+  .svg-label { font-family:"IBM Plex Sans", sans-serif; font-size:13px; font-weight:600; fill:var(--ink); }
+  .svg-sub { font-family:"IBM Plex Mono", monospace; font-size:11px; fill:var(--muted); }
+  .svg-edge { font-family:"IBM Plex Mono", monospace; font-size:11px; fill:var(--muted); }
+  .svg-accent-text { fill:var(--accent); }
+  .svg-risk { stroke:var(--risk); }
+  .svg-risk-text { fill:var(--risk); }
+  .svg-grid { stroke:var(--line); }
+
+  .table-wrap { overflow-x:auto; margin:22px 0; border:1px solid var(--line); border-radius:4px; background:var(--surface); }
+  table { border-collapse:collapse; width:100%; font-size:14.5px; }
+  th, td { text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th {
+    font-family:var(--mono); font-size:11px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--muted); font-weight:500; background:var(--surface-2); white-space:nowrap;
+  }
+  tbody tr:last-child td { border-bottom:none; }
+  td.num, th.num { font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap; }
+  td.wp { font-family:var(--mono); font-size:12.5px; color:var(--accent); white-space:nowrap; }
+  tr.hero td { background:var(--accent-soft); }
+
+  pre {
+    font-family:var(--mono); font-size:13px; line-height:1.65; background:var(--surface);
+    border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:4px;
+    padding:16px 18px; overflow-x:auto; margin:20px 0; color:var(--ink);
+  }
+  pre code { background:none; border:none; padding:0; font-size:inherit; }
+
+  .note {
+    background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--line-strong);
+    border-radius:4px; padding:16px 18px; margin:20px 0; max-width:70ch;
+  }
+  .note.decision { border-left-color:var(--risk); }
+  .note.finding  { border-left-color:var(--accent); }
+  .note p:last-child { margin-bottom:0; }
+  .note .kicker {
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); display:block; margin-bottom:7px;
+  }
+
+
+  footer.colophon {
+    margin-top:64px; padding-top:20px; border-top:1px solid var(--line);
+    font-size:13px; color:var(--muted); max-width:70ch;
+  }
+
+  @media (prefers-reduced-motion:reduce) { * { animation:none !important; transition:none !important; } }
+</style>
+
+<div class="page">
+
+  <header class="masthead">
+    <p class="eyebrow">Programme design · phases 1 to 4</p>
+    <h1>From passthrough to aggregator</h1>
+    <p class="standfirst">The BetterCo platform is the reference system. It calls an aggregator, the aggregator routes to a source, and the document lands in a BetterCo client. Today none of that is true for document search. Here is what gets built, in what order, and what fits before 1 October.</p>
+    <dl class="facts">
+      <div class="fact"><dt>Date</dt><dd>29 August, revised 4 September 2026</dd></div>
+      <div class="fact"><dt>Go-live</dt><dd>1 October 2026</dd></div>
+      <div class="fact"><dt>Phases to go-live</dt><dd>Six</dd></div>
+      <div class="fact"><dt>P1</dt><dd>Merged and live on dev, 4 Sep</dd></div>
+      <div class="fact"><dt>Built by</dt><dd>Us, in betterco-backend</dd></div>
+      <div class="fact"><dt>Review</dt><dd>Backend dev, per branch</dd></div>
+    </dl>
+  </header>
+
+  <div class="shell">
+    <nav class="toc" aria-label="Contents">
+      <p class="tochead">Contents</p>
+      <ol>
+        <li><a href="#overview"><span class="num">0</span><span>Overview</span></a></li>
+        <li><a href="#why"><span class="num">1</span><span>Why</span></a></li>
+        <li><a href="#phase1"><span class="num">2</span><span>Phase 1 — the aggregator</span></a></li>
+        <li><a href="#phase2"><span class="num">3</span><span>Phase 2 — a second source</span></a></li>
+        <li><a href="#phase34"><span class="num">4</span><span>Phases 3 and 4</span></a></li>
+        <li><a href="#plan"><span class="num">5</span><span>Project plan</span></a></li>
+        <li><a href="#decisions"><span class="num">6</span><span>Decisions</span></a></li>
+        <li><a href="#risks"><span class="num">7</span><span>Risks</span></a></li>
+      </ol>
+    </nav>
+
+    <main>
+
+      <section id="overview">
+        <h2><span class="num">00</span> Overview</h2>
+
+        <p><strong>Phases 1 and 2 make sources interchangeable. Phase 3 makes the choice between them intelligent.</strong> That distinction is why phase 3 is real work rather than a wish-list — and also why it can wait until after the go-live.</p>
+
+        <div class="phases">
+          <article class="phase now">
+            <div class="ptop"><span class="pnum">Phase 1</span><span class="chip chip-ok">merged &amp; live on dev</span></div>
+            <h3>The aggregator exists</h3>
+            <p>The platform owns the case and kyc.com is the only source. Merged and running on <code>dev</code>, where an order now produces a client with one matter. Storage is P2.</p>
+          </article>
+          <article class="phase now">
+            <div class="ptop"><span class="pnum">Phase 2</span><span class="chip chip-build">1 Oct — France + Britain</span></div>
+            <h3>A second source</h3>
+            <p>A source port, a routing table, then France via INPI and Britain via Companies House — both already built.</p>
+          </article>
+          <article class="phase">
+            <div class="ptop"><span class="pnum">Phase 3</span><span class="chip chip-open">later</span></div>
+            <h3>The decision layer</h3>
+            <p>Evidence levels, least-cost routing, reuse of stock. The aggregator decides instead of looking up.</p>
+          </article>
+          <article class="phase">
+            <div class="ptop"><span class="pnum">Phase 4</span><span class="chip chip-open">later</span></div>
+            <h3>Housekeeping</h3>
+            <p>Webhooks replace polling, the kyc.com Java exception retires, ordering moves into the app UI.</p>
+          </article>
+        </div>
+
+        <div class="legend">
+          <span class="lbl">Throughout:</span>
+          <span class="chip chip-ok">exists today</span>
+          <span class="chip chip-build">to build</span>
+          <span class="chip chip-open">open decision</span>
+        </div>
+      </section>
+
+      <section id="why">
+        <h2><span class="num">01</span> Why</h2>
+
+        <p>Measured in <code>betterco-backend</code> on 28 August 2026 — three findings, each checkable in the code:</p>
+
+        <ul>
+          <li><strong>The order never reaches a client.</strong> <code>KycCaseLink</code>, the record a document order creates, holds <code>workspaceId</code>, <code>customerId</code>, <code>kycCaseCommonId</code>, <code>jurisdiction</code>, <code>companyName</code>, <code>statusName</code>, <code>ready</code>, <code>idempotencyKey</code> — and <strong>no <code>businessRelationId</code>, no reference to <code>domain/Case</code></strong>.</li>
+          <li><strong>Nothing is stored.</strong> Every read is a live vendor call: <code>getCaseStatusById</code> → <code>client.getCompany(…)</code>, <code>listDocumentsById</code> → <code>client.getCompanyDocuments(…)</code>, download → <code>client.downloadDocument(…)</code>. No stock to reuse, no per-case cost record.</li>
+          <li><strong>The consumer's handle is the vendor's identifier.</strong> <code>extractCaseCommonId()</code> reads kyc.com's <code>caseCommonId</code> and it becomes the path parameter in <code>/cases/{case_common_id}</code>. No second source can mint that number.</li>
+        </ul>
+
+        <figure>
+          <svg viewBox="0 0 680 330" role="img" aria-label="Today, the document order path runs from the partner API through KycGatewayService to an orphaned KycCaseLink and out to kyc.com on every read, with no link to the BetterCo platform's Case">
+            <defs>
+              <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+              </marker>
+            </defs>
+            <rect class="svg-box" x="24" y="16" width="250" height="46" rx="3"></rect>
+            <text class="svg-label" x="149" y="38" text-anchor="middle">POST /document-search/cases</text>
+            <text class="svg-sub" x="149" y="54" text-anchor="middle">rest/api/KycApiImpl</text>
+            <line x1="149" y1="62" x2="149" y2="96" stroke="currentColor" marker-end="url(#ar)"></line>
+            <rect class="svg-box" x="24" y="100" width="250" height="46" rx="3"></rect>
+            <text class="svg-label" x="149" y="122" text-anchor="middle">KycGatewayService</text>
+            <text class="svg-sub" x="149" y="138" text-anchor="middle">integration/kyc_com</text>
+            <line x1="149" y1="146" x2="149" y2="180" stroke="currentColor" marker-end="url(#ar)"></line>
+            <rect class="svg-box" x="24" y="184" width="250" height="52" rx="3"></rect>
+            <text class="svg-label" x="149" y="206" text-anchor="middle">KycCaseLink</text>
+            <text class="svg-sub" x="149" y="223" text-anchor="middle">workspaceId · customerId · kycCaseCommonId</text>
+            <line x1="149" y1="236" x2="149" y2="272" stroke="currentColor" marker-end="url(#ar)"></line>
+            <text class="svg-edge" x="160" y="259" text-anchor="start">live call, every read</text>
+            <rect class="svg-box" x="24" y="276" width="250" height="40" rx="3"></rect>
+            <text class="svg-label" x="149" y="301" text-anchor="middle">kyc.com</text>
+            <rect class="svg-box" x="406" y="100" width="250" height="136" rx="3"></rect>
+            <text class="svg-label" x="531" y="140" text-anchor="middle">BetterCo platform</text>
+            <text class="svg-sub" x="531" y="163" text-anchor="middle">client (businessRelation)</text>
+            <text class="svg-sub" x="531" y="181" text-anchor="middle">domain/Case — the matter</text>
+            <text class="svg-sub" x="531" y="199" text-anchor="middle">doc_management → S3 / Azure</text>
+            <line class="svg-risk" x1="278" y1="205" x2="402" y2="170" stroke-dasharray="5 5"></line>
+            <line class="svg-risk" x1="332" y1="177" x2="348" y2="199"></line>
+            <line class="svg-risk" x1="348" y1="177" x2="332" y2="199"></line>
+            <text class="svg-edge svg-risk-text" x="340" y="235" text-anchor="middle">no businessRelationId</text>
+          </svg>
+          <figcaption>Today. The order path and the platform are two disconnected worlds. Routing STP to <code>stg.betterco.ai</code> instead of kyc.com looks like the strangler step, but it is the same coupling under our hostname.</figcaption>
+        </figure>
+      </section>
+
+      <section id="phase1">
+        <h2><span class="num">02</span> Phase 1 — the aggregator</h2>
+
+        <p><strong>In scope.</strong> The aggregator exists, kyc.com is its only source, and a document order produces a BetterCo client with one matter whose documents are stored by us.</p>
+        <p><strong>Not in scope.</strong> Replacing the kyc.com Java client with the python route; changing <code>search</code>, <code>jurisdictions</code>, <code>coverage</code>, <code>company-types</code> or <code>legal-forms</code>; the customer-facing UI.</p>
+
+        <figure>
+          <svg viewBox="0 0 680 400" role="img" aria-label="Target architecture: both kinds of user reach the BetterCo platform, which calls the aggregator, which routes to kyc.com in phase one and to the provider sidecar in phase two">
+            <defs>
+              <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+              </marker>
+              <marker id="ar2a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)"></path>
+              </marker>
+            </defs>
+            <rect class="svg-box" x="60" y="14" width="230" height="44" rx="3"></rect>
+            <text class="svg-label" x="175" y="34" text-anchor="middle">User · BetterCo app</text>
+            <text class="svg-sub" x="175" y="50" text-anchor="middle">betterco-frontend</text>
+            <rect class="svg-box" x="390" y="14" width="230" height="44" rx="3"></rect>
+            <text class="svg-label" x="505" y="34" text-anchor="middle">User · Septeo staff</text>
+            <text class="svg-sub" x="505" y="50" text-anchor="middle">partner REST API</text>
+            <line x1="175" y1="58" x2="175" y2="86" stroke="currentColor"></line>
+            <line x1="505" y1="58" x2="505" y2="86" stroke="currentColor"></line>
+            <line x1="175" y1="86" x2="505" y2="86" stroke="currentColor"></line>
+            <line x1="340" y1="86" x2="340" y2="106" stroke="currentColor" marker-end="url(#ar2)"></line>
+            <rect class="svg-box" x="60" y="110" width="560" height="66" rx="3"></rect>
+            <text class="svg-label" x="340" y="134" text-anchor="middle">BETTERCO PLATFORM — the reference system</text>
+            <text class="svg-sub" x="340" y="154" text-anchor="middle">client (businessRelation) → Case (one matter) → doc_management → S3 / Azure</text>
+            <text class="svg-sub" x="340" y="169" text-anchor="middle">vendor ref → Case.externalIdentifiers</text>
+            <line x1="340" y1="176" x2="340" y2="212" stroke="currentColor" marker-end="url(#ar2)"></line>
+            <text class="svg-edge" x="352" y="198" text-anchor="start">get these documents for this company</text>
+            <rect class="svg-box-accent" x="60" y="216" width="560" height="72" rx="3"></rect>
+            <text class="svg-label svg-accent-text" x="340" y="240" text-anchor="middle">AGGREGATOR — com.betterco.app.aggregation</text>
+            <text class="svg-sub" x="340" y="260" text-anchor="middle">route: jurisdiction + document kind → source · acquisition record per fetch</text>
+            <text class="svg-sub" x="340" y="276" text-anchor="middle">per-source policy: charging model · backoff · route</text>
+            <line x1="200" y1="288" x2="200" y2="322" stroke="var(--accent)" marker-end="url(#ar2a)"></line>
+            <text class="svg-edge" x="212" y="309" text-anchor="start">in-process</text>
+            <line x1="480" y1="288" x2="480" y2="322" stroke="currentColor" stroke-dasharray="5 5" marker-end="url(#ar2)"></line>
+            <text class="svg-edge" x="492" y="309" text-anchor="start">HTTP, loopback</text>
+            <rect class="svg-box-accent" x="60" y="326" width="280" height="60" rx="3"></rect>
+            <text class="svg-label" x="200" y="348" text-anchor="middle">kyc.com — Java client</text>
+            <text class="svg-sub" x="200" y="366" text-anchor="middle">charge: PER_CASE</text>
+            <text class="svg-sub svg-accent-text" x="200" y="380" text-anchor="middle">PHASE 1 — the only source</text>
+            <rect class="svg-box" x="360" y="326" width="260" height="60" rx="3" stroke-dasharray="5 5"></rect>
+            <text class="svg-label" x="490" y="348" text-anchor="middle">provider sidecar — FastAPI</text>
+            <text class="svg-sub" x="490" y="366" text-anchor="middle">127.0.0.1:8090 · charge: PER_DOCUMENT</text>
+            <text class="svg-sub" x="490" y="380" text-anchor="middle">phase 2</text>
+          </svg>
+          <figcaption>The aggregator is the only component that knows which source serves which jurisdiction — and the only one that knows what a fetch costs. It sits in Java because its job is to write into the BetterCo domain, and that domain is Java.</figcaption>
+        </figure>
+
+        <h3>Domain model</h3>
+        <p><strong>The aggregate already exists.</strong> <code>domain/Case</code> carries <code>businessRelationId</code> (the client), <code>workspaceId</code>, <code>status</code>, <code>caseAML</code>, <code>caseOrigin</code> and <code>externalIdentifiers</code>. A BetterCo <em>client with one matter</em> is the case; kyc.com's case maps onto it one-to-one.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Concept</th><th>Where it lives</th><th>State</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Client</td><td><code>businessRelationId</code> on <code>Case</code></td><td><span class="chip chip-ok">exists</span></td><td>created by the order</td></tr>
+              <tr><td>Matter / case</td><td><code>domain/Case</code></td><td><span class="chip chip-ok">exists</span></td><td>one per order</td></tr>
+              <tr><td>Vendor reference</td><td><code>Case.externalIdentifiers</code></td><td><span class="chip chip-ok">exists</span></td><td>kyc.com id goes here, internal only</td></tr>
+              <tr><td>Document</td><td><code>doc_management</code> + <code>FileStorage</code></td><td><span class="chip chip-ok">exists</span></td><td>handle is <code>bettercoDocumentId</code></td></tr>
+              <tr><td>Fetch</td><td><code>DocumentAcquisition</code></td><td><span class="chip chip-build">to build</span></td><td>one per document per source</td></tr>
+              <tr><td>Cost</td><td>charge record</td><td><span class="chip chip-build">to build</span></td><td>per chargeable unit</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure>
+          <svg viewBox="0 0 680 262" role="img" aria-label="Acquisition state machine: requested moves to in progress, which resolves to stored, missing, manually queued, or failed">
+            <defs>
+              <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+              </marker>
+            </defs>
+            <rect class="svg-box" x="14" y="100" width="130" height="42" rx="3"></rect>
+            <text class="svg-label" x="79" y="126" text-anchor="middle">REQUESTED</text>
+            <line x1="144" y1="121" x2="188" y2="121" stroke="currentColor" marker-end="url(#ar3)"></line>
+            <rect class="svg-box" x="192" y="100" width="150" height="42" rx="3"></rect>
+            <text class="svg-label" x="267" y="126" text-anchor="middle">IN_PROGRESS</text>
+            <line x1="342" y1="121" x2="428" y2="32" stroke="currentColor" marker-end="url(#ar3)"></line>
+            <line x1="342" y1="121" x2="428" y2="99" stroke="currentColor" marker-end="url(#ar3)"></line>
+            <line x1="342" y1="121" x2="428" y2="165" stroke="currentColor" marker-end="url(#ar3)"></line>
+            <line x1="342" y1="121" x2="428" y2="231" stroke="currentColor" marker-end="url(#ar3)"></line>
+            <rect class="svg-box-accent" x="432" y="12" width="230" height="42" rx="3"></rect>
+            <text class="svg-label svg-accent-text" x="547" y="30" text-anchor="middle">STORED</text>
+            <text class="svg-sub" x="547" y="45" text-anchor="middle">bytes in our storage, charged</text>
+            <rect class="svg-box" x="432" y="78" width="230" height="42" rx="3"></rect>
+            <text class="svg-label" x="547" y="96" text-anchor="middle">MISSING</text>
+            <text class="svg-sub" x="547" y="111" text-anchor="middle">registry has none — never charged</text>
+            <rect class="svg-box" x="432" y="144" width="230" height="42" rx="3"></rect>
+            <text class="svg-label" x="547" y="162" text-anchor="middle">MANUAL_QUEUED</text>
+            <text class="svg-sub" x="547" y="177" text-anchor="middle">needs a human — the DE case</text>
+            <rect class="svg-box" x="432" y="210" width="230" height="42" rx="3"></rect>
+            <text class="svg-label" x="547" y="228" text-anchor="middle">FAILED</text>
+            <text class="svg-sub" x="547" y="243" text-anchor="middle">give-up point passed, reason kept</text>
+          </svg>
+          <figcaption>One acquisition is one fetch of one document from one source — the unit the scheduler advances, the unit cost attaches to, and the unit the API reports as <code>availability</code>. Each holds source, refs, requested and delivered kind, storage key, <code>fetchedAt</code>, <code>contentDate</code> and cost.</figcaption>
+        </figure>
+
+        <h3>The contract STP sees</h3>
+        <p>Unchanged: <code>search</code>, <code>jurisdictions</code>, <code>coverage</code>, <code>company-types</code>, <code>legal-forms</code>. The break is confined to cases and documents.</p>
+
+<pre><code>POST /document-search/cases
+  → { "caseId": "bc_7f3a91c4", "status": "processing" }
+     creates client + Case; vendor ref → externalIdentifiers; idempotencyKey preserved
+
+GET  /document-search/cases/{caseId}
+  → status derived from OUR acquisitions, not kyc.com's statusName passthrough
+
+GET  /document-search/cases/{caseId}/documents
+  → [ { documentId, kind, availability, source, fetchedAt, contentDate } ]
+     ONE id space, retiring today's pending(numeric) / ready(string) split
+
+GET  /document-search/cases/{caseId}/documents/{documentId}/content
+  → served from our storage; if not yet stored: fetch, store, serve</code></pre>
+
+        <p><code>kind</code> is the vendor-neutral document kind from our curation, not the vendor's label. <code>ready</code> means <em>nothing more is coming</em> — every requested kind has reached a terminal state — not <em>everything was found</em>. <code>includePending</code> is accepted and ignored for one release so STP does not change its calls twice.</p>
+
+        <div class="note decision">
+          <span class="kicker">Migration for STP</span>
+          <p>The case id changes from <code>Long</code> (kyc.com's) to an opaque <code>String</code> (ours). Agreed to break <strong>now</strong>, while Björn Hartenstein is still integrating, rather than after his polling loop ships — the whole point of step 1 is that STP migrates once.</p>
+        </div>
+
+        <div class="note finding">
+          <span class="kicker">Verified on the deployed dev server &mdash; 4 September</span>
+          <p>P1 merged as <code>#2293</code> and was re-tested against a real dev workspace, not a hand-launched jar. One order placed against the KYC.com sandbox, free, through our own API:</p>
+          <div class="table-wrap">
+            <table>
+              <tbody>
+                <tr><td>vendor case</td><td><code>1000005421</code>, GB, ordered on the sandbox fixtures</td></tr>
+                <tr><td>client</td><td><code>6a9acdb2a0e8bb7b310fc07b</code>, under the workspace&rsquo;s organisation</td></tr>
+                <tr><td>matter</td><td><code>6a9acdb3a0e8bb7b310fc07e</code> &mdash; <strong>exactly one</strong>, named after the company</td></tr>
+                <tr><td>vendor reference</td><td><code>externalIdentifiers: [{"externalId":"1000005421","system":"kyc.com"}]</code></td></tr>
+                <tr><td>counts</td><td>customers 38 &rarr; 39, matters 38 &rarr; 39 &mdash; one of each, no strays</td></tr>
+                <tr><td>documents</td><td>5, <strong>all downloading as real PDFs</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The two fixes that rode along are live too. <strong>The vendor&rsquo;s document path is case-sensitive</strong> &mdash; <code>/v2/documents/{id}</code> returns 404, <code>/v2/Documents/{id}</code> returns the bytes, and our client used to send lowercase; every document now downloads from <code>dev</code>. And document type is derived from the vendor&rsquo;s <code>name</code> minus its trailing date, so the case returns <em>Annual Return</em> and <em>Certificate of Change of Name</em> where <code>category</code> says only &ldquo;Other Company Documents&rdquo;.</p>
+          <p>Ordering was checked against the sandbox <em>immediately before</em> the order: five fixtures with <code>CROPWELL BISHOP CREAMERY LIMITED | 00364890</code> first. Real Companies House data there would mean production, and the test aborts.</p>
+        </div>
+
+        <h3>Ingestion and cost</h3>
+        <p>Documents arrive <strong>progressively</strong>, long before the case is ready, so ingestion is driven per document and never by case-ready. <strong>Backoff is a per-source policy object</strong> — kyc.com builds over hours (1h, 6h, 12h, 24h, then flag); a synchronous source declares no polling at all. This replaces today's flat five-minute scheduler.</p>
+
+        <p>A case may draw documents from <strong>several sources at once</strong>, so cost lives in charge records, not on the case:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Charging model</th><th>Unit</th><th>Effect on a case</th></tr></thead>
+            <tbody>
+              <tr><td><code>PER_CASE</code> — kyc.com</td><td>one per (case, source)</td><td>first acquisition charges; the other nine documents are free</td></tr>
+              <tr><td><code>PER_DOCUMENT</code> — sidecar sources</td><td>one per acquisition</td><td>each document charges</td></tr>
+              <tr><td>future models</td><td>—</td><td>new strategy, no schema change</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>This mirrors the existing <code>BillingComputationStrategy</code> pattern rather than inventing a second mechanism. Vendor cost and customer billing stay separate meters: document orders get their own <code>CaseOrigin</code> value, so the billing rule can be decided later without a migration.</p>
+      </section>
+
+      <section id="phase2">
+        <h2><span class="num">03</span> Phase 2 — a second source</h2>
+
+        <h4>What it adds</h4>
+        <ul>
+          <li>A <strong><code>SourceAdapter</code> port</strong>, extracted from two working implementations rather than guessed — the kyc.com Java client and the FastAPI sidecar. Operations: <code>search</code>, <code>availableDocuments</code>, <code>retrieve</code>, <code>pollAcquisition</code>.</li>
+          <li>A <strong>routing table</strong>: <code>(jurisdiction, document kind) → ordered list of sources</code>. Static and deterministic here; phase 3 is what turns lookup into decision.</li>
+          <li>A <strong>sidecar transport adapter</strong> — HTTP over loopback to <code>127.0.0.1:8090</code>, shared-secret auth, the contract already briefed in <code>api/INTEGRATION.md</code>.</li>
+          <li><strong>Per-source policy</strong> for the newcomers: charging <code>PER_DOCUMENT</code>, backoff <em>none</em> for synchronous sources such as INPI.</li>
+        </ul>
+
+        <p>Phase 1's domain model does not change. A second source adds rows to a table and one adapter — it does not touch the case, the acquisition, or the contract STP sees. That is the test of whether phase 1 was designed correctly.</p>
+
+        <h4>Which source is second — measured, not assumed</h4>
+        <p>One case in each market, measured on staging on 29 August:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Market</th><th class="num">kyc.com</th><th>Direct route today</th><th class="num">Saving</th></tr></thead>
+            <tbody>
+              <tr class="hero"><td><strong>France</strong></td><td class="num"><strong>$88.00</strong></td><td>INPI + Datainfogreffe — routers live</td><td class="num"><strong>$88</strong></td></tr>
+              <tr><td>Italy</td><td class="num">$43.50</td><td>none</td><td class="num">—</td></tr>
+              <tr class="hero"><td><strong>Great Britain</strong></td><td class="num">$18.00</td><td>Companies House — <strong>full document route</strong>, downloads filing PDFs free</td><td class="num">$18</td></tr>
+              <tr><td>Denmark</td><td class="num">$18.00</td><td>CVR client returns <strong>data, not documents</strong>; no route; vedtægter are paid</td><td class="num">not a document source yet</td></tr>
+              <tr><td>Germany</td><td class="num">$18.00</td><td>Handelsregister sidecar</td><td class="num">policy: never buy DE</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>France is source two, Britain third.</strong> France is the most expensive market we buy &mdash; five times Britain or Denmark &mdash; and sits first on Septeo&rsquo;s priority list. Britain follows immediately because it is the same shape and its route already downloads filing PDFs; the only difference is that the saving is $18 rather than $88.</p>
+
+        <div class="note finding">
+          <span class="kicker">A correction to yesterday's spec</span>
+          <p>The phase-1 document put Germany first. Two facts say otherwise. Measured prices make France the larger saving by a factor of five — and Björn's opening mail states the requirement plainly: <em>"we would like to find and download registration documents for companies outside of Germany."</em> Germany matters for our own product, not for this go-live.</p>
+        </div>
+
+        <div class="note decision">
+          <span class="kicker">Policy leak worth naming</span>
+          <p>Germany <em>is</em> in kyc.com's list at $18, so after phase 1 the aggregator would happily buy German documents from kyc.com — against the standing rule that we source Germany ourselves. Until the routing table exists, that rule is remembered rather than enforced. The table is the fix.</p>
+        </div>
+
+        <h4>Sequence within phase 2</h4>
+        <ol>
+          <li>Extract the port; kyc.com becomes adapter one with <strong>no behaviour change</strong> — the phase-1 tests prove it.</li>
+          <li>Add the routing table with a single rule: everything → kyc.com. Still no behaviour change.</li>
+          <li>Add the sidecar adapter and France via INPI; route French document kinds there, everything else unchanged.</li>
+          <li>Britain via Companies House — same shape, already downloads PDFs.</li>
+          <li>Afterwards: Germany once the sidecar drift (D4) is resolved, and Denmark only if a data-only source belongs in a document aggregator at all.</li>
+        </ol>
+      </section>
+
+      <section id="phase34">
+        <h2><span class="num">04</span> Phases 3 and 4</h2>
+
+        <h3>Phase 3 — the decision layer</h3>
+        <p>Phases 1 and 2 leave a static table. Phase 3 replaces the lookup with a decision, and it is where the aggregation thesis actually pays:</p>
+        <ul>
+          <li><strong>Evidence levels</strong> — <code>data</code> / <code>document</code> / <code>certified</code>. A Datainfogreffe statement is not a Kbis substitute; without the level, "cheapest source" is a meaningless instruction.</li>
+          <li><strong>Least-cost routing</strong> — the cheapest source <em>that meets the required evidence level</em>, aware that kyc.com charges per case while an INPI acte is a bundle.</li>
+          <li><strong>Reuse of stock</strong> — do not fetch what we already hold fresh. Needs a freshness policy and both clocks phase 1 stores.</li>
+          <li><strong>Per-case cost reporting</strong> — phase 1 instruments the meter; phase 3 is where someone can read it.</li>
+        </ul>
+        <p>Not required for 1 October. A static routing table is correct, just not clever.</p>
+
+        <div class="note decision">
+          <span class="kicker">Vendor guidance that changes P3</span>
+          <p>KYC.com (Latika Puri, 23 July): <em>&ldquo;the document name (excluding the date suffix) is the more reliable field for identifying document types. The category field is currently not normalized across jurisdictions and should not be considered a canonical document type.&rdquo;</em></p>
+          <p>So the document-kind vocabulary P3 has to build should key off <strong>name minus its trailing date</strong>, with <code>category</code> kept only as a fallback for an unnamed document &mdash; not the other way round. That is already how <code>test/p1-on-dev</code> derives it.</p>
+        </div>
+
+        <h3>Phase 4 — housekeeping</h3>
+        <p>Named separately so it does not quietly attach itself to the deadline: replace polling with the kyc.com v2 webhooks (<code>CaseReady</code>, <code>DocumentUploaded</code> — the backend has no webhook endpoint today); retire the kyc.com Java exception so every source reaches the aggregator through one shape; move ordering into the app UI, since today only STP and our internal tool can order.</p>
+      </section>
+
+      <section id="plan">
+        <h2><span class="num">05</span> The plan, by phase</h2>
+
+        <p><strong>No weeks.</strong> The connectors are already built and the Java side reuses patterns that exist &mdash; the case, the storage, the billing strategy. A calendar padded into weeks misrepresents the work. What sets the pace is gates we do not control.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Phase</th><th>Exit criterion</th></tr></thead>
+            <tbody>
+              <tr class="hero"><td class="wp">P1</td><td><strong>Client and matter.</strong> An order creates client + <code>Case</code>; vendor ref into <code>externalIdentifiers</code>; orphan <code>KycCaseLink</code> retired</td><td><strong>Met 4 September.</strong> An order on <code>dev</code> produced a client with one matter carrying the vendor reference</td></tr>
+              <tr><td class="wp">P2</td><td><strong>Acquisitions and ingestion.</strong> Per-document worker, per-source backoff, storage with provenance</td><td>Documents land in the client before the vendor case is ready</td></tr>
+              <tr><td class="wp">P3</td><td><strong>Contract cut-over.</strong> Opaque <code>caseId</code>, <code>bettercoDocumentId</code>, derived status, <code>includePending</code> accepted-and-ignored</td><td>One break, and Septeo is on the new ids</td></tr>
+              <tr><td class="wp">P4</td><td><strong>Cost.</strong> Charge records, <code>PER_CASE</code> for kyc.com</td><td>Ten documents, one charge</td></tr>
+              <tr><td class="wp">P5</td><td><strong>The aggregator becomes a router.</strong> <code>SourceAdapter</code> port, routing table, per-source policy</td><td>All P1&ndash;P4 tests pass unchanged; the Germany rule is enforced, not remembered</td></tr>
+              <tr><td class="wp">P6</td><td><strong>Sources.</strong> France via INPI, Britain via Companies House</td><td>A French and a British order cost nothing at the vendor and return documents</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>P1 through P5 are sequential. P6 runs in parallel per source once P5 lands.</p>
+
+        <div class="note decision">
+          <span class="kicker">Two defects found verifying P1 &mdash; both scheduled into P2</span>
+          <p>Neither blocks P1&rsquo;s exit criterion, and neither is patched separately: P2 rewrites both methods anyway.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Defect</th><th>Why it matters</th><th>Fixed in</th></tr></thead>
+              <tbody>
+                <tr><td class="wp">F1</td><td><strong>A case&rsquo;s stored status freezes at creation.</strong> <code>isReady</code> treats a non-blank <code>caseReadyDatetime</code> as ready, and the vendor stamps it when the case is <em>created</em>. The link is saved <code>ready=true, statusName="Initializing Case"</code>, and <code>refreshTrackedStatuses</code> &mdash; which selects <code>findByReadyFalse&hellip;</code> &mdash; never revisits it. Forty minutes after the order the stored row still read <em>Initializing Case</em> while the vendor read <em>Ready</em></td><td>This is P2&rsquo;s own foundation: P2 gives the poller a backoff policy, and the poller currently has nothing to poll. P3&rsquo;s derived status is computed from the same data</td><td><strong>P2 task 4</strong>, ahead of the backoff work, with a Mongock backfill for the links already frozen</td></tr>
+                <tr><td class="wp">F2</td><td><strong><code>scope=account</code> returns HTTP 400.</strong> The message is the vendor&rsquo;s own, copied through by <code>map4xx</code>: the sandbox rejects <code>POST /v2/Case/search-by-properties</code>. <strong>Not a P1 regression</strong> &mdash; staging worked because staging talks to the live vendor</td><td>One vendor query we cannot satisfy takes down a whole scope of the case list instead of degrading to what we can see</td><td><strong>P2 task 10</strong> &mdash; degrade, do not propagate; ask kyc.com before changing the payload</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>What the sandbox can and cannot prove.</strong> F1 was visible only because the sandbox stamps <code>caseReadyDatetime</code> eagerly, F2 only because it validates more strictly than the live vendor. The reverse also holds: the live status vocabulary is unverified, so anything status-shaped needs one confirmation against the live vendor before it is called done.</p>
+        </div>
+
+        <div class="note finding">
+          <span class="kicker">Why ownership comes before the contract</span>
+          <p>An opaque <code>caseId</code> only means something once a <code>Case</code> owns it &mdash; ship it earlier and it is an alias table over kyc.com&rsquo;s number, with a real chance the shape changes again once ownership lands. Derived status has the same dependency: it is computed from acquisitions, which arrive in P2. Building the substance first buys one contract break instead of two.</p>
+          <p>Telling Bj&ouml;rn is decoupled from shipping it. The migration note goes out immediately &mdash; a message, not a deploy &mdash; so he holds his polling loop while we build, and the cut-over lands at P3.</p>
+        </div>
+
+        <div class="note finding">
+          <span class="kicker">Where the code lives</span>
+          <p>The <code>com.betterco.app.aggregation</code> package exists from P1: ownership and ingestion are written there rather than in <code>integration/kyc_com</code> and moved later. With a single source there is nothing to route, so the aggregator only <em>becomes</em> a router at P5 &mdash; which makes P5 an addition rather than a refactor.</p>
+        </div>
+
+        <figure>
+          <svg viewBox="0 0 680 250" role="img" aria-label="Six phases in sequence from contract to sources, with external gates: every phase is a pull request through the backend dev's review train, and the contract cut-over waits on Septeo changing its client">
+            <defs>
+              <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+              </marker>
+            </defs>
+
+            <line class="svg-grid" x1="20" y1="34" x2="666" y2="34" stroke-dasharray="4 4"></line>
+            <text class="svg-edge" x="343" y="24" text-anchor="middle">gate &mdash; every phase is one PR through the backend dev review</text>
+
+            <rect class="svg-box-accent" x="20" y="52" width="96" height="48" rx="3"></rect>
+            <text class="svg-label svg-accent-text" x="68" y="74" text-anchor="middle">P1</text>
+            <text class="svg-sub" x="68" y="90" text-anchor="middle">client+matter</text>
+
+            <line x1="116" y1="76" x2="128" y2="76" stroke="currentColor" marker-end="url(#ar4)"></line>
+            <rect class="svg-box" x="130" y="52" width="96" height="48" rx="3"></rect>
+            <text class="svg-label" x="178" y="74" text-anchor="middle">P2</text>
+            <text class="svg-sub" x="178" y="90" text-anchor="middle">ingestion</text>
+
+            <line x1="226" y1="76" x2="238" y2="76" stroke="currentColor" marker-end="url(#ar4)"></line>
+            <rect class="svg-box" x="240" y="52" width="96" height="48" rx="3"></rect>
+            <text class="svg-label" x="288" y="74" text-anchor="middle">P3</text>
+            <text class="svg-sub" x="288" y="90" text-anchor="middle">contract</text>
+
+            <line x1="336" y1="76" x2="348" y2="76" stroke="currentColor" marker-end="url(#ar4)"></line>
+            <rect class="svg-box" x="350" y="52" width="96" height="48" rx="3"></rect>
+            <text class="svg-label" x="398" y="74" text-anchor="middle">P4</text>
+            <text class="svg-sub" x="398" y="90" text-anchor="middle">cost</text>
+
+            <line x1="446" y1="76" x2="458" y2="76" stroke="currentColor" marker-end="url(#ar4)"></line>
+            <rect class="svg-box" x="460" y="52" width="96" height="48" rx="3"></rect>
+            <text class="svg-label" x="508" y="74" text-anchor="middle">P5</text>
+            <text class="svg-sub" x="508" y="90" text-anchor="middle">routing</text>
+
+            <line x1="556" y1="76" x2="568" y2="76" stroke="currentColor" marker-end="url(#ar4)"></line>
+            <rect class="svg-box-accent" x="570" y="52" width="96" height="48" rx="3"></rect>
+            <text class="svg-label svg-accent-text" x="618" y="74" text-anchor="middle">P6</text>
+            <text class="svg-sub" x="618" y="90" text-anchor="middle">FR + GB</text>
+
+            <line class="svg-risk" x1="178" y1="100" x2="140" y2="146" stroke-dasharray="4 4"></line>
+            <rect class="svg-box" x="20" y="150" width="230" height="46" rx="3"></rect>
+            <text class="svg-label svg-risk-text" x="135" y="170" text-anchor="middle">gate &mdash; retention (D1)</text>
+            <text class="svg-sub" x="135" y="186" text-anchor="middle">blocks P2 in production</text>
+
+            <line class="svg-risk" x1="288" y1="100" x2="360" y2="146" stroke-dasharray="4 4"></line>
+            <rect class="svg-box" x="270" y="150" width="230" height="46" rx="3"></rect>
+            <text class="svg-label svg-risk-text" x="385" y="170" text-anchor="middle">gate &mdash; Septeo migrates</text>
+            <text class="svg-sub" x="385" y="186" text-anchor="middle">Long &rarr; String, told at P1</text>
+
+            <text class="svg-edge" x="343" y="228" text-anchor="middle">both gates open in parallel with the build &mdash; neither waits for it</text>
+          </svg>
+          <figcaption>The build is the short part. The schedule is set by six pull requests through the backend dev&rsquo;s release train, one client change only Septeo can make, and one decision only a person can make &mdash; which is why the migration note goes out on day one and the gates open alongside the build.</figcaption>
+        </figure>
+
+
+        <h3>P1 in detail &mdash; the five tasks</h3>
+        <p>Every other phase is still one line in the table above. P1 is decomposed because it is the one being built: each task is one branch, one pull request, one review, and ends in a CI-verified commit.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Task</th><th>Exit criterion</th><th>Written by</th></tr></thead>
+            <tbody>
+              <tr><td class="wp">T0</td><td><strong>Fixtures.</strong> Read <code>Actor</code>, build the test helpers the later tasks need</td><td>Helpers exist; no field names guessed</td><td>us</td></tr>
+              <tr><td class="wp">T1</td><td><strong>Organisation resolver.</strong> A workspace&rsquo;s first organisation owns clients created by API orders</td><td>Resolves, and throws <code>organization_not_found</code> when the workspace has none</td><td>us</td></tr>
+              <tr><td class="wp">T2</td><td><strong>Client + matter.</strong> Call <code>CustomerService.createCustomer(&hellip;, createDefaultCase=true, &hellip;)</code></td><td>An order produces a client with one matter, named after the company</td><td>us</td></tr>
+              <tr><td class="wp">T3</td><td><strong>Vendor reference.</strong> Write an <code>ExternalIdentifier</code> onto the matter</td><td>The kyc.com case id is on the matter, and nowhere in the public contract</td><td>us</td></tr>
+              <tr><td class="wp">T4</td><td><strong>Wire into the create path.</strong> <code>KycGatewayService</code> calls the aggregation service; <code>KycCaseLink</code> gains <code>businessRelationId</code> and <code>caseId</code></td><td>An accepted order is linked to its client &mdash; the red line in &sect;1 is gone</td><td><strong>backend dev</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note finding">
+          <span class="kicker">Where the risk changes</span>
+          <p>T0&ndash;T3 create new code in a new package and touch nothing that runs today. T4 reaches into the existing kyc.com create path. That is the line where a mistake stops being invisible, which is why T4 belongs to the backend dev rather than to us.</p>
+          <p>All five are now merged and on <code>dev</code>. They ship behind <code>document-search.create-client</code>, which is <strong>on in <code>development</code> only</strong> &mdash; every other profile still behaves exactly as it did before P1, and turning it on or back off is a config change, not a release.</p>
+        </div>
+
+        <div class="note decision">
+          <span class="kicker">How we know it works &mdash; corrected 30 August</span>
+          <p><code>app-tests.yml</code> runs its job only when <code>github.event.review.state == 'approved'</code>, so <strong>a branch push verifies nothing and neither does an open pull request</strong>. Tests run only after a human submits an approving review. Earlier versions of this page said CI was the gate before review; it is not.</p>
+          <p>Verification is local instead: the dependency tree resolves from Central with no private repositories, so a scratchpad Maven runs the real <code>mvn -B test</code> without touching the repo. The baseline matters &mdash; clean <code>origin/dev</code> is <strong>735 tests, 7 failures, 13 errors</strong> &mdash; so a branch is judged by <em>no new failures</em>, never by a green suite.</p>
+        </div>
+
+        <div class="note decision">
+          <span class="kicker">Tracking</span>
+          <p>Epic <strong>BCP-8337</strong> in <strong>BCP &mdash; BetterCo Platform</strong>. One story per phase carrying the exit criteria above; sub-tasks only for the phase in flight; a QA issue keeping &ldquo;implemented&rdquo; and &ldquo;verified&rdquo; apart.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Key</th><th>Type</th><th>What</th></tr></thead>
+              <tbody>
+                <tr><td class="wp">BCP-8337</td><td>Epic</td><td>Document aggregator &mdash; BetterCo owns the case, sources become interchangeable</td></tr>
+                <tr><td class="wp">BCP-8338</td><td>Story</td><td>P1 &mdash; a document order creates a client with one matter</td></tr>
+                <tr><td class="wp">BCP-8339</td><td>Story</td><td>P2 &mdash; acquisitions and ingestion</td></tr>
+                <tr><td class="wp">BCP-8340</td><td>Story</td><td>P3 &mdash; contract cut-over</td></tr>
+                <tr><td class="wp">BCP-8341</td><td>Story</td><td>P4 &mdash; cost</td></tr>
+                <tr><td class="wp">BCP-8342</td><td>Story</td><td>P5 &mdash; the aggregator becomes a router</td></tr>
+                <tr><td class="wp">BCP-8343</td><td>Story</td><td>P6 &mdash; sources: France, Britain</td></tr>
+                <tr><td class="wp">BCP-8344&ndash;8348</td><td>Sub-tasks</td><td>T0 fixtures · T1 organisation resolver · T2 client and matter · T3 vendor reference · T4 wire the create path</td></tr>
+                <tr><td class="wp">BCP-8349</td><td>QA</td><td>Staging verification of P1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3>What actually sets the pace</h3>
+        <ol>
+          <li><strong>The backend dev&rsquo;s review and release train.</strong> We branch and push; they review, merge to <code>dev</code>, and it reaches staging on their cadence. Six phases, six round-trips.</li>
+          <li><strong>Septeo&rsquo;s own migration.</strong> P3 changes <code>Long</code> to <code>String</code> in Bj&ouml;rn&rsquo;s client, though he is told at P1. That is his work on his calendar, and nothing after P3 validates end-to-end until it is done.</li>
+          <li><strong>The retention decision (D1).</strong> Storing documents forces it, and no amount of code answers it.</li>
+        </ol>
+
+        <h3>Scope for 1 October</h3>
+        <p>All six phases, France and Britain included. What stays out is not effort but unknowns: Germany until the sidecar drift is resolved, Denmark until we decide whether a data-only source belongs in a document aggregator at all.</p>
+      </section>
+
+      <section id="decisions">
+        <h2><span class="num">06</span> Decisions, with the date each is needed</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Decision</th><th>Needed by</th><th>Default if unanswered</th></tr></thead>
+            <tbody>
+              <tr><td class="wp">D1</td><td><strong>Retention &mdash; DECIDED 29 Aug.</strong> Kept indefinitely; deleted with the client; reusable across customers inside a freshness window</td><td>&mdash;</td><td>No retention job; <code>deleteClient</code> cascades; reuse window on <code>fetchedAt</code>, default 7 days, per source</td></tr>
+              <tr><td class="wp">D2</td><td>Evidence level in the contract</td><td>P3, only if it rides along</td><td>Defer to phase 3; adding it later is additive</td></tr>
+              <tr><td class="wp">D3</td><td>Do document orders count as billable client creations</td><td>P4</td><td>Tagged by <code>CaseOrigin</code>, rule decided later</td></tr>
+              <tr><td class="wp">D4</td><td>DE sidecar drift — which build is current</td><td>Only if Germany is pulled forward</td><td>Germany is out of the 1 Oct path; can wait</td></tr>
+              <tr><td class="wp">D5</td><td>Denmark needs a service built</td><td>When Denmark is picked up</td><td>Out of scope for 1 October</td></tr>
+              <tr><td class="wp">D6</td><td>May a document bought for one customer be served to another? <strong>Vendor licence, not policy</strong></td><td>Before the decision layer ships</td><td>Assume no; the stored copy is then a per-customer cache only</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note finding">
+          <span class="kicker">D1 answered &mdash; 29 August</span>
+          <p>Documents are kept <strong>indefinitely</strong> and die only with their client, so there is no retention job to build &mdash; <code>deleteClient</code> gains a cascade instead. A document may be reused for another customer while it is <strong>fresh</strong>: the window applies to <code>fetchedAt</code>, defaults to seven days, and is configurable per source. Where a source offers a free freshness check (INPI, Companies House), prefer asking whether anything changed over trusting the clock.</p>
+          <p>This unblocks P2 for production. It does not settle <strong>D6</strong>: our willingness to reuse a document is not the same as the vendor&rsquo;s permission to, and kyc.com&rsquo;s licence terms have not been asked.</p>
+        </div>
+      </section>
+
+      <section id="risks">
+        <h2><span class="num">07</span> Risks and the honest summary</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Risk</th><th>Assessment</th><th>Mitigation</th></tr></thead>
+            <tbody>
+              <tr><td><strong>The gates, not the build</strong></td><td>The likeliest way this misses 1 October is six PR round-trips plus Septeo&rsquo;s client change &mdash; not our coding</td><td>Send the migration note at once; open both external gates in parallel with building P1&ndash;P6</td></tr>
+              <tr><td>Septeo migration slips</td><td>Moderate &mdash; their calendar</td><td>Tell Bj&ouml;rn at P1, agree a cut-over date in writing</td></tr>
+              <tr><td>Retention unanswered (D1)</td><td>Moderate</td><td>Escalate now; it blocks P2 reaching production, not the code</td></tr>
+              <tr><td><strong>A second backend on the same box points at the LIVE vendor</strong></td><td>Found 31 Aug</td><td>Port 8080, profile <code>azure,local</code>, no sandbox config, running 12+ days. It shares the JobRunr queue, so an async create enqueued by the sandbox instance could be executed by the production-facing one &mdash; and the fixture check would not catch it. Isolate with <code>-Dorg.jobrunr.database.database-name=betterco-jobs-p1</code></td></tr>
+              <tr><td><strong>Case status freezes at creation (F1)</strong></td><td>Found 4 Sep, live on <code>dev</code></td><td>Every case is stored <code>ready=true</code> at creation, so the status poller never revisits it and P2&rsquo;s backoff policy would govern an empty work list. Fixed first thing in P2, with a backfill for the cases already frozen</td></tr>
+              <tr><td>CI verifies nothing before review</td><td>Certain</td><td>Corrected 30 Aug: the job is gated on an approving review. Run the suite locally against the <code>dev</code> baseline and judge by no new failures</td></tr>
+              <tr><td>DE sidecar drift (D4)</td><td>Contained</td><td>Germany is off the 1 October path, so the drift is not on the critical path</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note decision">
+          <span class="kicker">The honest summary</span>
+          <p>The connectors are built. France, Britain and Germany all have working document routes, and the Java side reuses the case, the storage and the billing strategy that already exist. The remaining build is small.</p>
+          <p>What is not small is the coordination: six pull requests through the backend dev&rsquo;s release train, one client change only Septeo can make, and one retention decision only a person can make. Those are the schedule &mdash; so the migration note goes out immediately and both gates open alongside the build rather than after it.</p>
+        </div>
+      </section>
+
+      <footer class="colophon">
+        Source of record: <code>docs/superpowers/specs/2026-08-28-aggregator-phase1-design.md</code> and <code>2026-08-29-aggregator-phase2-and-plan.md</code> in <code>betterco-worldwide</code>. Every claim about current behaviour was measured against <code>betterco-backend</code>, <code>betterco_claude_api</code> and the staging API on 27–29 August 2026, not recalled. Revised 4 September 2026 after P1 was merged (<code>#2293</code>) and re-verified against a dev workspace on the deployed <code>dev</code> server.
+      </footer>
+
+    </main>
+  </div>
+</div>

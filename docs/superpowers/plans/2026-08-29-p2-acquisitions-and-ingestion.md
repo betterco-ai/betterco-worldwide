@@ -13,12 +13,66 @@
 ## Global Constraints
 
 - Repository: `betterco-backend`. Branch off `dev`, one branch per task, PR reviewed by the backend dev. **Never push to `dev` directly.**
-- **Nothing compiles locally** — no Maven, no `~/.m2`. CI (`.github/workflows/app-tests.yml`, `mvn -B test`) is the only verification. Never claim a test passes without a CI run. Note the workflow only runs on `push` to `dev`, `workflow_dispatch`, and an **approved** `pull_request_review` — so a green run needs either a manual dispatch or a review.
+- **Verify locally; CI is not a gate you can rely on.** (Corrected 2026-09-05 — the earlier claim that nothing compiles locally is wrong.) A Maven 3.9.9 plus a populated repo live in the session scratchpad and Java 17 is installed, so `mvn -o -Dmaven.repo.local=<repo> -Djacoco.skip=true test` runs the real suite. Judge a branch by **no new failures** against a freshly measured `origin/dev` baseline, never by a green suite. `app-tests.yml` only runs after an **approved** `pull_request_review`, so pushing a branch verifies nothing. Note the baseline moves with the machine: with no Docker daemon it is 795/7 failures/13 errors; with one, the Testcontainers classes pass and it is 806/7/0.
 - **Everything in P2 ships behind a config flag defaulting to off**: `aggregation.ingestion.enabled=false` in `src/main/resources/application.properties`. With the flag off the scheduler does nothing and the content endpoint falls through to today's `KycGatewayService.downloadDocumentById(...)` path unchanged. This mirrors `kyc-com.create-enabled`, which is `false` in `application.properties` and `true` in `application-staging.properties` / `application-production.properties`.
 - **Two document id spaces, and they are not interchangeable.** `KycGatewayService.listDocumentsById(workspaceId, caseCommonId, includePending)` branches: `includePending=true` uses `KycComUserClient.listCaseDocuments(long)` and yields `caseDocumentId` (numeric, downloaded by `KycComUserClient.downloadDocument(long)`); `includePending=false` uses `KycComClient.getCompanyDocuments(long)` and yields an id parsed out of the document's `link` field (downloaded by `KycComClient.downloadDocument(String)`). **An acquisition must record which space its `sourceRef` came from and always download through the matching pair.** Crossing them silently returns the wrong document or a 404.
+- **An acquisition records the source *and* the vendor world** (`vendorTarget`), decided 2026-09-06
+  and already implemented for `KycCaseLink` in PR #2296. A case id minted in the KYC.com sandbox does
+  not exist in production, so `{source, sourceRef}` is **not** unique across worlds — the unique
+  index must be `{source, vendorTarget, sourceRef}` or a sandbox document and a production document
+  sharing a reference will be silently treated as the same acquisition. This is separate from
+  `SourceRefSpace`, which says which *document id space* a reference came from; both are needed.
+
+- **Store every delivered file; the German roles are a separate overlay** (decided 2026-09-06).
+  A document is never dropped, deferred or left unstored because it plays none of the three roles -
+  most do not. The success condition of ingestion is a count: **delivered == stored**, with any
+  exception recorded explicitly (missing at the source, or blocked by the malware scan), never
+  silently absent. Roles are computed afterwards from the curation and attached as a set that is
+  usually empty. See `docs/DOCUMENT_TYPE_LAYER_2026-09-06.md`.
+
+- **`documentType` must land on a BUILT-IN enum value, or the reviewer cannot see the document.**
+  Measured on the platform (betterco-api skill, 2026-08-04): REST **accepts any custom type string**
+  and reads it back exactly, and the OpenAPI description even advertises custom types - but the
+  customer document area **renders only the built-in enum**. A custom-typed document therefore
+  exists in the API and is unfindable in the UI, which is worse than not filing it: it looks filed.
+  The built-in customer types are `CHRONOLOGICAL_COMPANY_REGISTER_EXCERPT`,
+  `CURRENT_COMPANY_REGISTER_EXCERPT`, `SHAREHOLDER_LIST`, `ARTICLES_OF_ASSOCIATION`,
+  `SUPERVISORY_BOARD_LIST`, `TRANSPARENCY_REGISTER`, `STRUCTURED_XML_REGISTRY_CONTENT`,
+  `AML_GENERAL_CHECK_DOCUMENT`.
+
+  **That enum is German-KYC shaped, and most foreign registry documents do not fit it.** The GB
+  case we ordered returned `CS01`, `Annual Return`, `Certificate of Change of Name`, `Accounts`,
+  `New Incorporation` - none of which is an HR-Auszug, a Gesellschafterliste or a Satzung. Forcing
+  them into a German slot mislabels them; inventing a type hides them. **So a document whose kind
+  has no built-in equivalent is filed as a PROCESS document** (`OTHERKYCDOCS_<LABEL>`, "Sonstige
+  Dokumente"), where the suffix is a free label and the dedup key is the **filename** - name it
+  `<Kind>_<Company>_<Date>.pdf`. Only where the kind genuinely matches (a Satzung, a
+  Gesellschafterliste) does it belong in a customer slot. Task 5 must decide this per document,
+  not per case.
+
+- **Send an explicit `application/pdf`; the server does not sniff.** It stores whatever
+  Content-Type the multipart part carries, so a vendor byte stream forwarded with its claimed type
+  lands as `application/octet-stream` and the browser refuses to preview it - download-only, and it
+  looks broken to the reviewer. Detect the type from the bytes (`%PDF-`) and set it ourselves.
+- **The malware scan is asynchronous.** An upload returns 200 immediately and the file can serve
+  correctly, then later answer `400 "Document is corrupted. Potential malware detected"`. Valid
+  PDFs from registries do false-positive (measured on Bundesanzeiger Transparenzregister files).
+  An acquisition is therefore not provably complete at upload time - task 6 should re-check, and a
+  document that flips to blocked needs a visible state rather than a silent gap.
+
 - Reuse, do not reimplement: `DocumentManagementService.uploadDocument(...)` is the only sanctioned way to put bytes in storage and attach them to a client. Do not call `FileStorage` directly from `aggregation`.
 - Do not change the public contract in this task. `caseCommonId` stays `Long`, document ids stay as they are, `includePending` still means what it means. P3 is the one contract break.
-- No retention job. **Decided 2026-08-29:** documents are kept indefinitely; deletion happens only as a cascade of client deletion; reuse across customers is allowed while `fetchedAt` is under 7 days, per-source configurable.
+- **`KycCaseLink.ready` is not trustworthy — never select work by it.** Measured on dev 2026-09-04
+  (case `1000005421`): `KycGatewayService.isReady` returns true when *either* `statusName == "Ready"`
+  **or** `caseReadyDatetime` is non-blank, and the vendor stamps `caseReadyDatetime` at creation. So
+  `completeCreate` saves the link `ready=true, statusName="Initializing Case"`, and
+  `refreshTrackedStatuses` — which queries `findByReadyFalseAndKycCaseCommonIdNotNull()` — never sees
+  it again. Forty minutes later the stored row still read `Initializing Case` while the vendor read
+  `Ready`. **Task 4 fixes this first**; until it is fixed, any P2 worker that filters on `ready`
+  inherits a permanently frozen status. The ingestion worker (Task 6) must key off acquisitions and
+  document availability, never `ready`.
+
+- No retention job. **Decided 2026-08-29:** documents are kept indefinitely; deletion happens only as a cascade of client deletion. **Refined 2026-09-05:** a document may be reused for another customer **only where we can prove it has not changed at the source** — no new version. The `fetchedAt` clock is a cheap pre-filter, not the gate. Where a source has no free way to answer that question (kyc.com, as far as we know), reuse does not apply — so **task 9 is out of the MVP** and belongs with the direct registry sources.
 
 ---
 
@@ -150,7 +204,7 @@ git commit -am "feat: the document acquisition lifecycle"
 
 **Interfaces:**
 - Consumes: `DocumentAcquisitionRepository extends MongoRepository<DocumentAcquisition, String>`.
-- Produces: `DocumentAcquisitionService.save(DocumentAcquisition)`, `.findBySourceAndSourceRef(String source, String sourceRef)` returning `Optional<DocumentAcquisition>`, `.findOpenByCaseId(String caseId)` returning `List<DocumentAcquisition>`, `.findOpen()` returning `List<DocumentAcquisition>`, `.deleteAllByBusinessRelationId(String)`.
+- Produces: `DocumentAcquisitionService.save(DocumentAcquisition)`, `.findBySourceAndVendorTargetAndSourceRef(String source, KycVendorTarget target, String sourceRef)` returning `Optional<DocumentAcquisition>`, `.findOpenByCaseId(String caseId)` returning `List<DocumentAcquisition>`, `.findOpen()` returning `List<DocumentAcquisition>`, `.deleteAllByBusinessRelationId(String)`.
 
 - [ ] **Step 1: Write the failing tests** — pure Mockito over the repository; there is no Mongo in unit tests.
 
@@ -213,7 +267,7 @@ public enum SourceRefSpace {
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Document(collection = "documentAcquisition")
-@CompoundIndex(name = "acq_unique_source_ref_idx", def = "{'source': 1, 'sourceRef': 1}",
+@CompoundIndex(name = "acq_unique_source_ref_idx", def = "{'source': 1, 'vendorTarget': 1, 'sourceRef': 1}",
         unique = true, partialFilter = "{'sourceRef': {'$type': 'string'}}")
 @CompoundIndex(name = "acq_case_idx", def = "{'caseId': 1}")
 @CompoundIndex(name = "acq_status_idx", def = "{'status': 1}")
@@ -228,12 +282,15 @@ public class DocumentAcquisition extends AuditMetadata {
   private String customerActorId;      // == Document.companyId once stored
 
   private String source;               // "kyc.com" in P2
+  private KycVendorTarget vendorTarget; // SANDBOX or PRODUCTION - see below
   private String sourceRef;
   private SourceRefSpace sourceRefSpace;
 
-  private String requestedKind;
-  private String deliveredKind;
-  private boolean substituted;
+  // Decided 2026-09-06: EVERY delivered file is stored. Roles are an overlay, not a filing key.
+  private Set<DocumentRole> roles;     // REGISTERAUSZUG | GESELLSCHAFTERLISTE | GESELLSCHAFTSVERTRAG
+                                       // 0..n - EMPTY IS NORMAL and must never block storage
+  private String requestedKind;        // only where a source lets you ask for one document (INPI);
+                                       // null for kyc.com, where you order a case and take the set
   private String vendorCategory;       // KycDocument.category, kept verbatim for traceability
   private String vendorName;           // KycDocument.name, likewise
 
@@ -340,7 +397,10 @@ git commit -am "feat: per-source poll policy replaces a flat interval"
 
 ---
 
-### Task 4: Make `refreshTrackedStatuses` obey the policy
+### Task 4: Fix the `ready` flag, then make `refreshTrackedStatuses` obey the policy
+
+Two changes to the same method, in this order. The backoff policy is pointless while the poller is
+handed an empty work list, which is what happens today (see the `ready` constraint above).
 
 **Files:**
 - Modify: `src/main/java/com/betterco/app/integration/kyc_com/KycGatewayService.java` (`refreshTrackedStatuses`, `refreshLinkStatus`, the constructor)
@@ -349,6 +409,31 @@ git commit -am "feat: per-source poll policy replaces a flat interval"
 **Interfaces:**
 - Consumes: `SourcePollPolicies.forSource(String)`.
 - Unchanged: `KycCaseLinkRepository.findByReadyFalseAndKycCaseCommonIdNotNull()`, `KycCaseLink.getLastPolledAt()`, `KycCaseLink.getCreatedAt()` (inherited from `AuditMetadata`), `KycCaseLink.isReady()`.
+
+- [ ] **Step 0a: Write the failing test for the frozen status.**
+
+```java
+  @Test
+  void aCaseIsNotReadyMerelyBecauseTheVendorStampedACaseReadyDatetime() {
+    // The vendor stamps caseReadyDatetime at creation; only statusName says the case is done.
+    KycCaseStatus status = service.getCaseStatusById(1L);   // stub: statusName "Initializing Case",
+                                                            // caseReadyDatetime "2026-09-04T13:55:52"
+    assertThat(status.getReady()).isFalse();
+  }
+```
+
+- [ ] **Step 0b: Fix `isReady` (`KycGatewayService.java:766`).** Drop the `caseReadyDatetime` half;
+  readiness is `"ready".equals(statusName.toLowerCase(Locale.ROOT))` and nothing else. **Open
+  question for the reviewer, state it in the PR:** if the live vendor ever reports a finished case
+  under a `statusName` other than `Ready`, that case now never flips — the sandbox only ever showed
+  `Initializing Case -> Performing AML checks -> Ready`, so the live status vocabulary is unverified.
+  If the reviewer will not accept that risk, the fallback is to keep `caseReadyDatetime` but require
+  it to be *in the past by more than a minute*, which the creation stamp never is.
+
+- [ ] **Step 0c: Backfill the links already frozen.** Every case created before this fix is stored
+  `ready=true` with a creation-time status and will never be re-polled. Add a Mongock changeset that
+  sets `ready=false` on `kycCaseLink` documents whose `statusName` is not `Ready`, so the poller
+  picks them up once and corrects them.
 
 - [ ] **Step 1: Read `KycGatewayService.java:449-500`** — `refreshTrackedStatuses` and `refreshLinkStatus` — and its constructor at `:87-107`, before changing either. The constructor is ten arguments long and every existing test builds the service by hand, so an added dependency is an edit to `KycGatewayServiceTest.setUp()` as well.
 
@@ -388,7 +473,7 @@ git commit -am "feat: per-source poll policy replaces a flat interval"
 - [ ] **Step 6: Push, confirm CI green, commit**
 
 ```bash
-git commit -am "feat: kyc.com status polling backs off on its own schedule"
+git commit -am "fix: ready means the vendor is done; status polling backs off on its own schedule"
 ```
 
 ---
@@ -741,6 +826,54 @@ aggregation.reuse.kyc-com.max-age=P7D
 
 ```bash
 git commit -am "feat: reuse a stored document while it is still fresh"
+```
+
+---
+
+### Task 10: A vendor failure must not take an endpoint down
+
+Found verifying P1 on dev 2026-09-04: `GET /document-search/cases?scope=account` answers **HTTP 400
+"One or more validation errors occurred."** That string is not ours — `KycComClient.map4xx` copies
+the vendor's body through — so the sandbox is rejecting `POST /v2/Case/search-by-properties`
+(we send `propertyValue: null`, `pageNumber` 0-based). Staging never showed it because staging talks
+to the *live* vendor. It is not a P1 regression, but it is the wrong behaviour either way: one
+unhappy vendor query returns 400 for the whole scope instead of the cases we can see.
+
+**Files:**
+- Modify: `src/main/java/com/betterco/app/integration/kyc_com/KycGatewayService.java` (`allAccountCases`)
+- Test: `src/test/java/com/betterco/app/integration/kyc_com/KycGatewayServiceTest.java`
+
+**Interfaces:**
+- Unchanged: `KycComClient.listCasesByProperty(int, int)`, `KycGatewayService.listCases(...)`.
+
+- [ ] **Step 1: Write the failing test.**
+
+```java
+  @Test
+  void accountScopeDegradesWhenTheVendorRejectsTheQuery() {
+    when(client.listCasesByProperty(anyInt(), anyInt()))
+        .thenThrow(new KycGatewayException(HttpStatus.BAD_REQUEST, "One or more validation errors occurred."));
+
+    assertThat(service.listCases(WS, null, false, false, "account")).isEmpty();
+  }
+```
+
+- [ ] **Step 2: Push and watch it fail** — today the exception propagates to the caller as 400.
+
+- [ ] **Step 3: Implement.** Wrap the `client.listCasesByProperty(...)` call in `allAccountCases`:
+  catch `KycGatewayException` whose status is 4xx, log at `warn` with the page number and the vendor
+  message, and stop paging — returning whatever pages already succeeded. A 5xx keeps propagating;
+  a vendor outage is not the same as a query this vendor will not answer.
+
+- [ ] **Step 4: Do not "fix" the payload blind.** Whether `propertyValue: null` or the 0-based
+  `pageNumber` is what the sandbox rejects is unmeasured, and the live vendor accepts both today.
+  Changing the payload to satisfy the sandbox risks breaking the vendor that works. Ask kyc.com
+  what `search-by-properties` requires before touching the body.
+
+- [ ] **Step 5: Push, confirm CI green, commit**
+
+```bash
+git commit -am "fix: account-scope case list degrades instead of 400 when the vendor rejects the query"
 ```
 
 ---
