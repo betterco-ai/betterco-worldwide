@@ -235,10 +235,11 @@
     <h1>From passthrough to aggregator</h1>
     <p class="standfirst">The BetterCo platform is the reference system. It calls an aggregator, the aggregator routes to a source, and the document lands in a BetterCo client. Today none of that is true for document search. Here is what gets built, in what order, and what fits before 1 October.</p>
     <dl class="facts">
-      <div class="fact"><dt>Date</dt><dd>29 August, revised 4 September 2026</dd></div>
+      <div class="fact"><dt>Date</dt><dd>29 August, revised 6 September 2026</dd></div>
       <div class="fact"><dt>Go-live</dt><dd>1 October 2026</dd></div>
-      <div class="fact"><dt>Phases to go-live</dt><dd>Six</dd></div>
-      <div class="fact"><dt>P1</dt><dd>Merged and live on dev, 4 Sep</dd></div>
+      <div class="fact"><dt>Scope to go-live</dt><dd>Six MVP items</dd></div>
+      <div class="fact"><dt>P1</dt><dd>Live on dev, 4 Sep</dd></div>
+      <div class="fact"><dt>In review</dt><dd>Four branches, none merged</dd></div>
       <div class="fact"><dt>Built by</dt><dd>Us, in betterco-backend</dd></div>
       <div class="fact"><dt>Review</dt><dd>Backend dev, per branch</dd></div>
     </dl>
@@ -273,9 +274,9 @@
             <p>The platform owns the case and kyc.com is the only source. Merged and running on <code>dev</code>, where an order now produces a client with one matter. Storage is P2.</p>
           </article>
           <article class="phase now">
-            <div class="ptop"><span class="pnum">Phase 2</span><span class="chip chip-build">1 Oct — France + Britain</span></div>
+            <div class="ptop"><span class="pnum">Phase 2</span><span class="chip chip-build">after 1 Oct</span></div>
             <h3>A second source</h3>
-            <p>A source port, a routing table, then France via INPI and Britain via Companies House — both already built.</p>
+            <p>A source port, a routing table, then France via INPI and Britain via Companies House — both already built. <strong>Cut from the go-live on 5 September:</strong> margin, not the promise.</p>
           </article>
           <article class="phase">
             <div class="ptop"><span class="pnum">Phase 3</span><span class="chip chip-open">later</span></div>
@@ -603,6 +604,42 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
         <p>P1 through P5 are sequential. P6 runs in parallel per source once P5 lands.</p>
 
         <div class="note decision">
+          <span class="kicker">The scope cut &mdash; 5 September</span>
+          <p><strong>France and Britain are out of the 1 October go-live.</strong> The 29 August plan carried all six phases inside the deadline. Three things say otherwise, and none of them is coding speed: P2 alone is ten tasks and had not started; every phase is one pull request through another team&rsquo;s review train, which CI does not verify until a human has approved; and Septeo&rsquo;s own client change sits between us and any end-to-end validation. Carrying FR and GB inside the deadline hid the risk rather than managing it.</p>
+          <p>What ships instead is the promise itself &mdash; <em>order through BetterCo, and BetterCo owns the result</em> &mdash; as six items:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Item</th><th>State</th></tr></thead>
+              <tbody>
+                <tr><td class="wp">M1</td><td>Status truthfulness &mdash; a case whose status never updates cannot be polled</td><td><span class="chip chip-ok">built</span></td></tr>
+                <tr><td class="wp">M2</td><td>A vendor-target switcher: <code>sandbox</code> or <code>production</code>, with billable creates on a second, independent dial</td><td><span class="chip chip-ok">first dial built</span></td></tr>
+                <tr><td class="wp">M3</td><td>P2 core &mdash; acquisition record, bytes stored by us, served from our storage, cascade on deletion</td><td><span class="chip chip-build">in progress</span></td></tr>
+                <tr><td class="wp">M4</td><td>The contract cut-over &mdash; our identifiers, one document id space, derived status</td><td><span class="chip chip-build">to build</span></td></tr>
+                <tr><td class="wp">M5</td><td>Turn <code>document-search.create-client</code> on beyond <code>development</code></td><td><span class="chip chip-open">config</span></td></tr>
+                <tr><td class="wp">M6</td><td>A Germany deny-guard, until the routing table exists to enforce the rule properly</td><td><span class="chip chip-build">to build</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="note finding">
+          <span class="kicker">Where the work sits &mdash; 6 September</span>
+          <p>Four branches, stacked, each targeting the one below it. <strong>None merged, none deployed.</strong> Everything is verified by unit tests against a freshly measured <code>dev</code> baseline &mdash; nothing has yet run in a live system.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>PR</th><th>What it fixes</th><th>Verification</th></tr></thead>
+              <tbody>
+                <tr><td class="wp">#2294</td><td><strong>Status froze at creation.</strong> <code>ready</code> meant &ldquo;the vendor made this&rdquo;, not &ldquo;the vendor finished it&rdquo;, so the poller &mdash; which looks for links that are not ready &mdash; never revisited them</td><td>798 / 7 / 13, no new failures</td></tr>
+                <tr><td class="wp">#2296</td><td><strong>Case ids do not cross vendor worlds.</strong> Every case now records which world produced it; one that a vendor disowns is asked about once, then left alone</td><td>806 / 7 / 0, no new failures</td></tr>
+                <tr><td class="wp">#2297</td><td><strong>An order the vendor had already charged for could be retried.</strong> It was recorded as &ldquo;Create failed&rdquo; &mdash; the one status treated as safe to re-order &mdash; so a replay bought a second case</td><td><span class="chip chip-open">partial</span> 82 tests in the affected packages; one clean full run still owed</td></tr>
+                <tr><td class="wp">&mdash;</td><td>The acquisition record: lifecycle, entity, repository, service. Inert &mdash; nothing calls it yet</td><td>64 in the package, 13 new</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Blast radius is low; waste risk is what is rising.</strong> Nothing is deployed or enabled, so a wrong call cannot reach a customer or spend money &mdash; the worst case is rework on branches nobody merged. But each layer sits on assumptions no running system has tested, and four deep, a wrong one at the bottom costs four rewrites. One deploy collapses that.</p>
+        </div>
+
+        <div class="note decision">
           <span class="kicker">Two defects found verifying P1 &mdash; both scheduled into P2</span>
           <p>Neither blocks P1&rsquo;s exit criterion, and neither is patched separately: P2 rewrites both methods anyway.</p>
           <div class="table-wrap">
@@ -741,7 +778,8 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
         </ol>
 
         <h3>Scope for 1 October</h3>
-        <p>All six phases, France and Britain included. What stays out is not effort but unknowns: Germany until the sidecar drift is resolved, Denmark until we decide whether a data-only source belongs in a document aggregator at all.</p>
+        <p><strong>The six MVP items above &mdash; not all six phases.</strong> France, Britain, the routing table and the cost records follow the go-live. What stays out beyond that is not effort but unknowns: Germany until the sidecar drift is resolved, Denmark until we decide whether a data-only source belongs in a document aggregator at all.</p>
+        <p>The saving those sources represent is real &mdash; $88 on a French case, $18 on a British one &mdash; but it is margin. The promise is that a document ordered through BetterCo lands in a BetterCo client file and stays there, and that is what the six items buy.</p>
       </section>
 
       <section id="decisions">
@@ -755,7 +793,10 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
               <tr><td class="wp">D3</td><td>Do document orders count as billable client creations</td><td>P4</td><td>Tagged by <code>CaseOrigin</code>, rule decided later</td></tr>
               <tr><td class="wp">D4</td><td>DE sidecar drift — which build is current</td><td>Only if Germany is pulled forward</td><td>Germany is out of the 1 Oct path; can wait</td></tr>
               <tr><td class="wp">D5</td><td>Denmark needs a service built</td><td>When Denmark is picked up</td><td>Out of scope for 1 October</td></tr>
-              <tr><td class="wp">D6</td><td>May a document bought for one customer be served to another? <strong>Vendor licence, not policy</strong></td><td>Before the decision layer ships</td><td>Assume no; the stored copy is then a per-customer cache only</td></tr>
+              <tr><td class="wp">D6</td><td>May a document bought for one customer be served to another? <strong>Vendor licence, not policy</strong></td><td>Before the decision layer ships</td><td><strong>Our policy decided 5 Sep:</strong> reuse only where we can prove the document has not changed at the source. Their contract is still unasked</td></tr>
+              <tr><td class="wp">D7</td><td><strong>Vendor target on every case</strong> &mdash; DECIDED 6 Sep</td><td>&mdash;</td><td>Recorded, never inferred. A sandbox case id does not exist in production; the dev box demonstrates it today, answering 400 for its one stored case</td></tr>
+              <tr><td class="wp">D8</td><td><strong>Every delivered file is stored</strong> &mdash; DECIDED 6 Sep</td><td>&mdash;</td><td>Storage has no concept of kinds. The three German roles are an overlay computed on top, and are empty for most documents &mdash; which is a correct outcome, not a gap</td></tr>
+              <tr><td class="wp">D9</td><td><strong>Testing after the sandbox expires (19 Oct)</strong> &mdash; DECIDED 5 Sep</td><td>&mdash;</td><td>Read production for free; creating needs permission. Two dials: <code>kyc-com.target</code> and <code>kyc-com.create-enabled</code></td></tr>
             </tbody>
           </table>
         </div>
@@ -779,6 +820,8 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
               <tr><td><strong>A second backend on the same box points at the LIVE vendor</strong></td><td>Found 31 Aug</td><td>Port 8080, profile <code>azure,local</code>, no sandbox config, running 12+ days. It shares the JobRunr queue, so an async create enqueued by the sandbox instance could be executed by the production-facing one &mdash; and the fixture check would not catch it. Isolate with <code>-Dorg.jobrunr.database.database-name=betterco-jobs-p1</code></td></tr>
               <tr><td><strong>Case status freezes at creation (F1)</strong></td><td>Found 4 Sep, live on <code>dev</code></td><td>Every case is stored <code>ready=true</code> at creation, so the status poller never revisits it and P2&rsquo;s backoff policy would govern an empty work list. Fixed first thing in P2, with a backfill for the cases already frozen</td></tr>
               <tr><td>CI verifies nothing before review</td><td>Certain</td><td>Corrected 30 Aug: the job is gated on an approving review. Run the suite locally against the <code>dev</code> baseline and judge by no new failures</td></tr>
+              <tr><td><strong>Staging orders from the LIVE vendor</strong></td><td>Measured 5 Sep</td><td>A GB search on staging returns 200 real Companies House rows, not the 5 sandbox fixtures &mdash; so every &ldquo;just test on staging&rdquo; is a real order at $18&ndash;$88. The sandbox config is merged but not in effect, and <code>bc-stg-vault</code> is missing the secret it names. That secret resolves lazily, so the next routine staging deploy boots clean and then fails every call</td></tr>
+              <tr><td><strong>We have never retrieved a real document</strong></td><td>Structural</td><td>Every sandbox PDF is the same 904-byte stub. Real documents, real coverage and real timings can only be proven by one billable order &mdash; which is why the roadmap makes that order the last step, not an experiment</td></tr>
               <tr><td>DE sidecar drift (D4)</td><td>Contained</td><td>Germany is off the 1 October path, so the drift is not on the critical path</td></tr>
             </tbody>
           </table>
@@ -792,7 +835,7 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
       </section>
 
       <footer class="colophon">
-        Source of record: <code>docs/superpowers/specs/2026-08-28-aggregator-phase1-design.md</code> and <code>2026-08-29-aggregator-phase2-and-plan.md</code> in <code>betterco-worldwide</code>. Every claim about current behaviour was measured against <code>betterco-backend</code>, <code>betterco_claude_api</code> and the staging API on 27–29 August 2026, not recalled. Revised 4 September 2026 after P1 was merged (<code>#2293</code>) and re-verified against a dev workspace on the deployed <code>dev</code> server.
+        Source of record: <code>docs/superpowers/specs/2026-08-28-aggregator-phase1-design.md</code> and <code>2026-08-29-aggregator-phase2-and-plan.md</code> in <code>betterco-worldwide</code>. Every claim about current behaviour was measured against <code>betterco-backend</code>, <code>betterco_claude_api</code> and the staging API on 27–29 August 2026, not recalled. Revised 6 September 2026: P1 verified on the deployed <code>dev</code> server, France and Britain cut from the go-live, and four branches opened behind it. The repository documents &mdash; <code>AUDIT_AND_MVP_2026-09-05.md</code>, <code>ROADMAP_TO_FIRST_BILLABLE_ORDER_2026-09-06.md</code> and <code>HANDOVER_2026-09-06.md</code> &mdash; carry the working detail.
       </footer>
 
     </main>
