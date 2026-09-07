@@ -70,6 +70,28 @@ minutes, forever**, one warning per pass. Rule 3 retires those links after a sin
 the cheaper of the two options put forward yesterday, and it is strictly better than waiting for
 P2's give-up point to mop it up.
 
+## 2b. Answered early, and for nothing — 7 September
+
+**Real documents come through our stack intact. We did not have to buy that answer.** Staging holds
+20 cases ordered from the LIVE vendor months ago, and reading them is free. Case `92`,
+**HSBC HOLDINGS PLC**, carries 11 documents; nine downloaded as real PDFs between 44 KB and 464 KB,
+1.05 MB in total — New Incorporation, four Certificates of Change of Name and four further filings.
+**Not one 904-byte stub.**
+
+So §1's first bullet is settled without an order, and the remaining case for buying one is narrower
+and still worth it: the full order path on production, R1's status progression on a case we created,
+R2 recording `PRODUCTION`, R3's idempotency, and real timings.
+
+Two defects surfaced in the same read, neither previously known:
+
+| | Defect | Why it matters |
+|---|---|---|
+| **F3** | **Two of the eleven documents fail with HTTP 500** — `CS01 <15/05/2026>` and `Accounts <20/05/2026>`, both returning a 124-byte error body while the other nine serve fine | They are the two most recent filings **and** the two kinds a KYC reviewer most wants: the confirmation statement and the accounts. A case can therefore look complete and be missing exactly the documents that matter. Cause unknown — the pattern (newest two) suggests something time-related rather than random |
+| **F4** | **Four documents carry types like `custom_1784016204186`** | The invisible-custom-type trap, in live production data rather than in theory. Such a document round-trips through the API and **the reviewer can never find it in the UI**. Confirms that the type-mapping layer is not optional, and that filing foreign documents as process documents with their own label is the right call |
+
+Both were found by reading data somebody else had already paid for — which is the cheapest kind of
+evidence there is, and worth doing before every future order.
+
 ## 3. The sequence
 
 Each step is one pull request. Sizes are honest estimates, not padding.
