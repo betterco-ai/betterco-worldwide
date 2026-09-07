@@ -23,6 +23,26 @@
   sharing a reference will be silently treated as the same acquisition. This is separate from
   `SourceRefSpace`, which says which *document id space* a reference came from; both are needed.
 
+- **N1 seam reads, 7 September — three things the plan and the API notes got wrong.** The real
+  signature wins:
+  1. **`KYCDocumentType` has exactly SEVEN values**, not the nine the API notes list:
+     `CURRENT_COMPANY_REGISTER_EXCERPT`, `CHRONOLOGICAL_COMPANY_REGISTER_EXCERPT`,
+     `STRUCTURED_XML_REGISTRY_CONTENT`, `SHAREHOLDER_LIST`, `TRANSPARENCY_REGISTER`,
+     `ARTICLES_OF_ASSOCIATION`, `SUPERVISORY_BOARD_LIST`. There is **no
+     `AML_GENERAL_CHECK_DOCUMENT`** and no `STRUCTURE_CHART_INTERACTIVE`.
+  2. **`DocumentScope` has exactly ONE value: `PROCESS`.** The customer-slot-versus-process-document
+     distinction is therefore *not* expressed through scope. It is expressed by which ids the
+     document carries - `companyId` and `processId` on `Document`. Any design that routes on
+     `DocumentScope` is routing on a field that cannot vary.
+  3. **`UploadData`'s validation is inverted and does not guard anything.** Its compact constructor
+     reads
+     `documentType != null && !isValidEnum(KYCDocumentType) && isValidEnum(IdDocType) && !isValidEnum(FinancialReportType)`
+     - the `IdDocType` check is missing its `!`. So an arbitrary string such as
+     `custom_1784016204186` passes silently (it is not a valid `IdDocType`, so the condition is
+     false), while a legitimate ID-document type like `PASSPORT` throws. **This is how the
+     `custom_<epoch>` types in F4 reached live data.** The ingestor must validate `documentType`
+     against `KYCDocumentType` itself and must not rely on `UploadData` to do it.
+
 - **Store every delivered file; the German roles are a separate overlay** (decided 2026-09-06).
   A document is never dropped, deferred or left unstored because it plays none of the three roles -
   most do not. The success condition of ingestion is a count: **delivered == stored**, with any
