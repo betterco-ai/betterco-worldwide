@@ -92,6 +92,46 @@ Two defects surfaced in the same read, neither previously known:
 Both were found by reading data somebody else had already paid for — which is the cheapest kind of
 evidence there is, and worth doing before every future order.
 
+## 2c. The live order — TATE & LYLE, case 189, 7 September
+
+Ordered through the UI against the production vendor from the Hetzner box, workspace
+`69d51c7adf31370be25de3ec` (org Watson). GB, `00076535`, ~$18.
+
+**Ownership works on production.** Client `6a9f1170d38ac658fd48e468`, exactly one matter
+`6a9f1170d38ac658fd48e46b` named after the company, vendor reference
+`{"externalId": "189", "system": "kyc.com"}` filed on it four seconds after the client was written,
+`registerData GB/00076535`. Customers 51 -> 52, no strays.
+
+**Documents are available DURING the build, not at the end.** At 50% complete
+(`Validating Case`), the case already exposed **7 documents, 6 of them downloading as real PDFs,
+3.3 MB in total** - including a 2.1 MB New Incorporation dated 27/02/1903. They are visible only
+via **`includePending=true`**; the plain documents call returned 0 and reading that as "documents
+come at the end" was wrong. This is exactly the behaviour P2 is designed around - a per-document
+worker that ingests each file as it appears and never waits for case-ready - now demonstrated on a
+live case rather than assumed.
+
+**F3 is systematic, not an artefact.** Two cases ordered months apart, same signature: the *newest*
+filing returns HTTP 500 with a 124-byte error body while older ones serve fine.
+
+| Case | Failing document | Working documents |
+|---|---|---|
+| HSBC `92` (staging, months old) | `CS01 <15/05/2026>`, `Accounts <20/05/2026>` - the two newest | 9 |
+| TATE & LYLE `189` (fresh) | `Accounts <10/08/2026>` - the newest | 6 |
+
+It hits the confirmation statement and the accounts: the two kinds a KYC reviewer most wants. Worth
+raising with the vendor - a case can look complete while missing exactly what matters.
+
+**Three facts for the storage design (M3):**
+
+- **Real files are megabytes, not kilobytes.** One document was 2.1 MB; the case is 3.3 MB so far
+  and still building. The sandbox's uniform 904-byte stubs told us nothing about size, and anything
+  sized against them is wrong.
+- **On the `includePending` path, `type` is a STATUS** (`Received`), not a document kind. The label
+  lives in `name` (`CS01 <17/12/2025>.pdf`). Type mapping must read `name`.
+- **Nothing is stored.** `GET .../customers/6a9f1170.../documents` returned `{"total": 0}` while all
+  seven documents were downloadable through the proxy. That is the gap M3 closes, now demonstrated
+  on production rather than argued on paper.
+
 ## 3. The sequence
 
 Each step is one pull request. Sizes are honest estimates, not padding.
