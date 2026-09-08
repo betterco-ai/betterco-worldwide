@@ -1,6 +1,10 @@
 # Handover — 8 September 2026, closing state
 
-Current entry point. Supersedes `HANDOVER_2026-09-08.md` (overnight run) and
+> **SUPERSEDED by `HANDOVER_2026-09-08-P3.md`** (written later the same day, after the contract
+> cut-over). Still the authoritative write-up of **§6, the fail-open vendor configuration** — the
+> item with a live cost attached.
+
+Was the entry point. Supersedes `HANDOVER_2026-09-08.md` (overnight run) and
 `HANDOVER_2026-09-06.md` (risk memo, branch hygiene — both still worth reading).
 
 **One line: the aggregator's ingestion path is built and proven end to end on the sandbox.
