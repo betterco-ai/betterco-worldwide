@@ -13,5 +13,8 @@ __pycache__/
 .idea/
 
 # Secrets — never commit (use .env.example as the template)
+# The pattern is deliberately broad: a backup like .env.stg-backup-2026-09-07 was sitting
+# untracked and would have been committed by any `git add -A`.
 .env
-.env.local
+.env.*
+!.env.example
