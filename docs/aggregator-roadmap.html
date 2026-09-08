@@ -235,7 +235,7 @@
     <h1>From passthrough to aggregator</h1>
     <p class="standfirst">The BetterCo platform is the reference system. It calls an aggregator, the aggregator routes to a source, and the document lands in a BetterCo client. Today none of that is true for document search. Here is what gets built, in what order, and what fits before 1 October.</p>
     <dl class="facts">
-      <div class="fact"><dt>Date</dt><dd>29 August, revised 6 September 2026</dd></div>
+      <div class="fact"><dt>Date</dt><dd>29 August, revised 8 September 2026</dd></div>
       <div class="fact"><dt>Go-live</dt><dd>1 October 2026</dd></div>
       <div class="fact"><dt>Scope to go-live</dt><dd>Six MVP items</dd></div>
       <div class="fact"><dt>P1</dt><dd>Live on dev, 4 Sep</dd></div>
@@ -408,8 +408,8 @@
               <tr><td>Matter / case</td><td><code>domain/Case</code></td><td><span class="chip chip-ok">exists</span></td><td>one per order</td></tr>
               <tr><td>Vendor reference</td><td><code>Case.externalIdentifiers</code></td><td><span class="chip chip-ok">exists</span></td><td>kyc.com id goes here, internal only</td></tr>
               <tr><td>Document</td><td><code>doc_management</code> + <code>FileStorage</code></td><td><span class="chip chip-ok">exists</span></td><td>handle is <code>bettercoDocumentId</code></td></tr>
-              <tr><td>Fetch</td><td><code>DocumentAcquisition</code></td><td><span class="chip chip-build">to build</span></td><td>one per document per source</td></tr>
-              <tr><td>Cost</td><td>charge record</td><td><span class="chip chip-build">to build</span></td><td>per chargeable unit</td></tr>
+              <tr><td>Fetch</td><td><code>DocumentAcquisition</code></td><td><span class="chip chip-ok">built</span></td><td>one per document per source <em>per client</em> &mdash; vendor document ids repeat across cases</td></tr>
+              <tr><td>Cost</td><td>charge record</td><td><span class="chip chip-risk">still to build</span></td><td>per chargeable unit &mdash; <strong>orders placed before this exists cannot be attributed afterwards</strong></td></tr>
             </tbody>
           </table>
         </div>
@@ -490,7 +490,7 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
         </div>
 
         <h3>Ingestion and cost</h3>
-        <p>Documents arrive <strong>progressively</strong>, long before the case is ready, so ingestion is driven per document and never by case-ready. <strong>Backoff is a per-source policy object</strong> — kyc.com builds over hours (1h, 6h, 12h, 24h, then flag); a synchronous source declares no polling at all. This replaces today's flat five-minute scheduler.</p>
+        <p>Documents arrive <strong>progressively</strong>, long before the case is ready, so ingestion is driven per document and never by case-ready. <strong>Backoff is a per-source policy object</strong> &mdash; a synchronous source declares no polling at all. The kyc.com schedule is now <code>1m, 5m, 15m, 1h, 6h, 12h, 24h</code>, dense at the front because <strong>the spread is enormous</strong>: a sandbox case was ready 40 seconds after the order, while production case 189 was still building after four and a half hours. An earlier version started at one hour, which left the platform reporting &ldquo;Initializing Case&rdquo; for 52 minutes after the vendor had finished. This replaces today&rsquo;s flat five-minute scheduler.</p>
 
         <p>A case may draw documents from <strong>several sources at once</strong>, so cost lives in charge records, not on the case:</p>
 
@@ -567,8 +567,8 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
         <ul>
           <li><strong>Evidence levels</strong> — <code>data</code> / <code>document</code> / <code>certified</code>. A Datainfogreffe statement is not a Kbis substitute; without the level, "cheapest source" is a meaningless instruction.</li>
           <li><strong>Least-cost routing</strong> — the cheapest source <em>that meets the required evidence level</em>, aware that kyc.com charges per case while an INPI acte is a bundle.</li>
-          <li><strong>Reuse of stock</strong> — do not fetch what we already hold fresh. Needs a freshness policy and both clocks phase 1 stores.</li>
-          <li><strong>Per-case cost reporting</strong> — phase 1 instruments the meter; phase 3 is where someone can read it.</li>
+          <li><strong>Reuse of stock</strong> &mdash; do not fetch what we already hold fresh. Needs a freshness policy and both clocks. <strong>Correction, 8 September:</strong> phase 1 was expected to store both. It stores one. <code>contentDate</code> is declared on the acquisition and read when the document is attached, and nothing ever writes it &mdash; so the reuse rule reads only the fetch date, which is the exact failure the two-clock analysis was written to prevent.</li>
+          <li><strong>Per-case cost reporting</strong> &mdash; <strong>Correction, 8 September:</strong> phase 1 did <em>not</em> instrument the meter. There is no cost field. Phase 3 cannot report what was never recorded, and unlike the other gaps here this one loses data permanently while it waits.</li>
         </ul>
         <p>Not required for 1 October. A static routing table is correct, just not clever.</p>
 
@@ -592,7 +592,7 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
             <thead><tr><th>#</th><th>Phase</th><th>Exit criterion</th></tr></thead>
             <tbody>
               <tr class="hero"><td class="wp">P1</td><td><strong>Client and matter.</strong> An order creates client + <code>Case</code>; vendor ref into <code>externalIdentifiers</code>; orphan <code>KycCaseLink</code> retired</td><td><strong>Met 4 September.</strong> An order on <code>dev</code> produced a client with one matter carrying the vendor reference</td></tr>
-              <tr><td class="wp">P2</td><td><strong>Acquisitions and ingestion.</strong> Per-document worker, per-source backoff, storage with provenance</td><td>Documents land in the client before the vendor case is ready</td></tr>
+              <tr class="hero"><td class="wp">P2</td><td><strong>Acquisitions and ingestion.</strong> Per-document worker, per-source backoff, storage with provenance</td><td><strong>Met 8 September.</strong> Five documents landed in a client file on the sandbox, and the same five landed independently under a second client. <strong>Caveat:</strong> every sandbox file is the same 904-byte stub &mdash; the pipeline is proven, carrying a <em>real</em> registry PDF is not. Open as <a href="https://github.com/betterco-ai/betterco-backend/pull/2305">PR&nbsp;#2305</a></td></tr>
               <tr><td class="wp">P3</td><td><strong>Contract cut-over.</strong> Opaque <code>caseId</code>, <code>bettercoDocumentId</code>, derived status, <code>includePending</code> accepted-and-ignored</td><td>One break, and Septeo is on the new ids</td></tr>
               <tr><td class="wp">P4</td><td><strong>Cost.</strong> Charge records, <code>PER_CASE</code> for kyc.com</td><td>Ten documents, one charge</td></tr>
               <tr><td class="wp">P5</td><td><strong>The aggregator becomes a router.</strong> <code>SourceAdapter</code> port, routing table, per-source policy</td><td>All P1&ndash;P4 tests pass unchanged; the Germany rule is enforced, not remembered</td></tr>

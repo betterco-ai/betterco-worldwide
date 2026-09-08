@@ -182,3 +182,21 @@ Independent of the code, and none of it blocks R1–R3:
 The first billable order should buy one thing: proof that a real document reaches a BetterCo client
 file and stays there. Today it would buy a stub-free PDF we do not keep, attached to a case whose
 status never updates, in a world we do not record. R1 through R4 turn that same $18 into evidence.
+
+---
+
+## 7. Closed — 8 September 2026
+
+**The billable order happened.** TATE & LYLE, case `189`, ordered 7 September, ~$18. What it taught
+the design is in §2c above and shaped four decisions the sandbox could not have: documents arrive
+during the build rather than at the end, real files are megabytes rather than 904-byte stubs,
+failure is per document, and the content type must be set explicitly.
+
+This document is now history. The current entry point is
+**`HANDOVER_2026-09-08-GOOD-STATUS.md`**, and the architecture memo carries a §9 reality check
+recording where the implementation diverged from the plan.
+
+One correction to §2c worth carrying forward: case `189` still has **no `businessRelationId`** on
+its `kycCaseLink`, although the client, matter and vendor reference are all correct. That single
+missing back-reference is what blocks the production-pointed run, which is in turn the only way to
+prove a real registry document can be stored.
