@@ -44,17 +44,15 @@ justified by the sandbox and by internal testing, not by customer evidence. If r
 around twenty minutes, the middle of the curve (`PT15M` → `PT1H` → `PT6H`) is too sparse. Revisit
 once production ordering volume exists.
 
-## 3. Branch state — needs a decision before review
+## 3. Branch state
 
-`test/kyc-stack-on-dev` is **22 commits ahead of `dev`, 0 behind**, and there are ~24 remote
-branches in the stack. That is far too much to put in front of one reviewer.
+`test/kyc-stack-on-dev` is **22 commits ahead of `dev`, 0 behind**. That is the number that matters:
+the window for a conflict-free merge is open now and closes on its own.
 
-**Recommendation: squash the P2 branches into one reviewable change before opening PRs.** The
-per-task branches were right for an unattended overnight run — one build per task, each revertable
-— but they are the wrong unit for review. The commit messages carry the reasoning and should be
-preserved in the squashed message.
+An earlier draft of this document recommended pruning the ~24 branches in the stack before review.
+**Withdrawn.** The repository has **461 remote branches**; branch count is invisible noise here and
+tidying ours would change nothing for anyone. The merge shape is in §7.
 
-The user asked to keep PRs open; nothing has been merged or deleted.
 
 ## 4. Open items that need a person
 
@@ -119,10 +117,36 @@ Neither is built. Both need a deploy to validate, and neither should be guessed 
 
 ## 7. How this should reach a reviewer
 
-**One PR from `test/kyc-stack-on-dev` into `dev`, all 22 commits preserved.**
+**One PR, `test/kyc-stack-on-dev` -> `dev`, squash-merged, this week.**
 
-The ~24 branches are an artefact of how the run was executed — one build per task so each was
-separately revertable. They are not how the change should be read. But the *commits* are the
-record: N9 through N13 each exist because deploying found something unit tests structurally could
-not, and squashing them would flatten exactly the reasoning a reviewer needs. Drop the branches,
-keep the commits.
+**The repo squash-merges.** P1 landed as `93ef2291e Test/p1 on dev (#2293)` - one commit, PR number
+in the title - and every recent commit on `dev` has that shape. So "preserve the 22 commits on dev"
+is not an option we control; GitHub's squash setting collapses them regardless. The commits stay
+readable **in the PR**, permanently, which is where the reasoning actually lives. Same bargain every
+other PR in this repo has made.
+
+Merge now rather than after more proving, because:
+
+- the branch is **0 behind `dev`** today, and drift already forced a rebuild once this week;
+- `dev`-the-environment is already running this code - the branch is the fiction, not the deploy;
+- the risky surface is small and the rest is flag-gated off.
+
+**What makes 22 commits reviewable is the PR description.** State the blast radius explicitly:
+
+| Surface | Reviewer's attention |
+|---|---|
+| `KycGatewayService` (+195), `KycComUserClient` (+57), `V000097`, `V000098`, 8 lines in `KycApiImpl` / `CustomerService` | **Everything.** Not flag-gated - changes behaviour for anyone using kyc.com today |
+| the `aggregation` package + `document-roles.json` | Additive. `aggregation.ingestion.enabled=false` everywhere; nothing runs until someone flips it |
+
+**A two-PR split is not cleanly available**: `SourcePollPolicies` lives in the aggregation package
+and `KycGatewayService` depends on it, so carving out "just the fixes" means refactoring for review
+convenience. Not worth it.
+
+**Keep out of this PR:**
+
+1. **Flag flips** - `aggregation.ingestion.enabled`, `document-search.create-client`. Own PRs, one
+   environment at a time, each revertable alone.
+2. **`config/staging-kyc-sandbox`** - must not merge until `know-your-customer-com-sandbox` exists in
+   `bc-stg-vault`, or staging starts clean and then fails every call.
+3. **`fix/kyc-create-validation-errors`** - one commit, never compiled locally, sitting since
+   27 August. Build it or close it; do not let it drift into a third state.
