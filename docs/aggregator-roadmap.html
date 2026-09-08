@@ -235,7 +235,7 @@
     <h1>From passthrough to aggregator</h1>
     <p class="standfirst">The BetterCo platform is the reference system. It calls an aggregator, the aggregator routes to a source, and the document lands in a BetterCo client. Today none of that is true for document search. Here is what gets built, in what order, and what fits before 1 October.</p>
     <dl class="facts">
-      <div class="fact"><dt>Date</dt><dd>29 August, revised 8 September 2026</dd></div>
+      <div class="fact"><dt>Date</dt><dd>29 August, revised 8 September 2026 (evening)</dd></div>
       <div class="fact"><dt>Go-live</dt><dd>1 October 2026</dd></div>
       <div class="fact"><dt>Scope to go-live</dt><dd>Six MVP items</dd></div>
       <div class="fact"><dt>P1</dt><dd>Live on dev, 4 Sep</dd></div>
@@ -593,7 +593,9 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
             <tbody>
               <tr class="hero"><td class="wp">P1</td><td><strong>Client and matter.</strong> An order creates client + <code>Case</code>; vendor ref into <code>externalIdentifiers</code>; orphan <code>KycCaseLink</code> retired</td><td><strong>Met 4 September.</strong> An order on <code>dev</code> produced a client with one matter carrying the vendor reference</td></tr>
               <tr class="hero"><td class="wp">P2</td><td><strong>Acquisitions and ingestion.</strong> Per-document worker, per-source backoff, storage with provenance</td><td><strong>Met 8 September.</strong> Five documents landed in a client file on the sandbox, and the same five landed independently under a second client. <strong>Caveat:</strong> every sandbox file is the same 904-byte stub &mdash; the pipeline is proven, carrying a <em>real</em> registry PDF is not. Open as <a href="https://github.com/betterco-ai/betterco-backend/pull/2305">PR&nbsp;#2305</a></td></tr>
-              <tr><td class="wp">P3</td><td><strong>Contract cut-over.</strong> Opaque <code>caseId</code>, <code>bettercoDocumentId</code>, derived status, <code>includePending</code> accepted-and-ignored</td><td>One break, and Septeo is on the new ids</td></tr>
+              <tr class="hero"><td class="wp">P3</td><td><strong>Contract cut-over.</strong> Opaque <code>caseId</code>, <code>bettercoDocumentId</code>, derived status, <code>includePending</code> accepted-and-ignored</td>
+<td><strong>Met 8 September</strong>, verified on dev. Both id spaces are closed: the vendor&rsquo;s case number <em>and</em> its document number now 404.
+<strong>Septeo has not been told</strong> &mdash; until they are, &ldquo;one break&rdquo; is an intention, not a fact</td></tr>
               <tr><td class="wp">P4</td><td><strong>Cost.</strong> Charge records, <code>PER_CASE</code> for kyc.com</td><td>Ten documents, one charge</td></tr>
               <tr><td class="wp">P5</td><td><strong>The aggregator becomes a router.</strong> <code>SourceAdapter</code> port, routing table, per-source policy</td><td>All P1&ndash;P4 tests pass unchanged; the Germany rule is enforced, not remembered</td></tr>
               <tr><td class="wp">P6</td><td><strong>Sources.</strong> France via INPI, Britain via Companies House</td><td>A French and a British order cost nothing at the vendor and return documents</td></tr>
