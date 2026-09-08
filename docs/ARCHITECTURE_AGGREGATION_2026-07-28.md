@@ -325,3 +325,104 @@ billing decision. That keeps the option open at no cost.
 
 **Cost of deciding late:** low for billing, **high for instrumentation** — unrecorded cost is
 unrecoverable. Instrument now, decide the commercial model later.
+
+---
+
+# 9. Reality check — 2026-09-08
+
+*Appended six weeks later, after P1 and P2 were built and deployed. The memo above is left as
+written; this section records where the implementation diverged from it and why. Where the two
+disagree, **this section is what exists**.*
+
+## 9.1 The layer table in §2 is wrong about the language and the repository
+
+§2 planned a `sourcing/` package in `betterco_claude_api` (Python), alongside the vendor clients.
+**It was built in the Java backend instead**, as `com.betterco.app.aggregation` in
+`betterco-backend`.
+
+That was not a considered architectural decision — it followed from step 1 (§7). Redirecting the
+live kyc.com/STP route meant touching the service that already serves that route, and that service
+is Java. A Python sidecar would have needed the Java backend to call it on the request path for
+every document read: a network hop and a second deployment in front of a customer-facing endpoint.
+
+| §2 planned | What exists |
+|---|---|
+| `sourcing/router.py` | not built — routing is still one vendor |
+| `sourcing/planner.py` | not built |
+| `sourcing/fetchers.py` | `DocumentIngestor` (fetch, store, attach, record) |
+| `sourcing/ingest.py` | `DocumentIngestionWorker` |
+| `sourcing/state.py` | `DocumentAcquisition` + `AcquisitionStatus` |
+
+The Python provider sidecars (DE/FR/DK) still exist and are unaffected. What this changes is that
+**the aggregator's system of record is Mongo in the Java backend**, not a Python service.
+
+## 9.2 Polling was built, not webhooks — and §7's sequence was not followed
+
+§6 called webhooks "the delivery signal", and §7 made wiring `CaseReady` / `DocumentUploaded`
+step 2, a prerequisite for everything asynchronous. **Step 2 was skipped.** Ingestion (step 3) was
+built on **polling** with a cumulative backoff (`SourcePollPolicy`), currently
+`PT1M, PT5M, PT15M, PT1H, PT6H, PT12H, PT24H`.
+
+Two measurements drove this, and both undercut the webhook premise:
+
+- **Documents arrive during the build, not at the end.** Production case 189 had seven downloadable
+  documents at 50% complete and was still not ready four hours later. A `CaseReady` webhook would
+  have delayed ingestion until well after documents were already available.
+- **The spread is enormous.** A sandbox case was Ready 40 seconds after the order; case 189 was
+  still building after 4.5 hours.
+
+So the worker is driven by the **document list**, never by case-ready. Webhooks remain the right end
+state — polling is a cost paid per case — but they are now an optimisation rather than a
+prerequisite. §6's claim that wiring them "is what replaces polling, and it is what tells the
+aggregator when to ingest" is superseded: what tells the aggregator when to ingest is the document
+list.
+
+## 9.3 What §6 required and is NOT built
+
+| §6 requirement | State |
+|---|---|
+| Provenance: vendor, endpoint, fetch timestamp, source reference, evidence level | **partial** — `source`, `vendorTarget`, `sourceRef`, `sourceRefSpace`, `fetchedAt`, `vendorName`, `vendorCategory` recorded. Endpoint and evidence level are not |
+| **Cost incurred per artefact** | **NOT built.** No cost field exists |
+| Content date (the second clock, §5) | **modelled but never populated.** `DocumentAcquisition.contentDate` is declared and read by `DocumentIngestor`; nothing ever writes it, so it is always null — and the stored document's `documentDate` is always null with it |
+| OCR once, at ingestion | **NOT built.** Documents are stored as delivered |
+| Licence obligations attaching to the artefact | **NOT built** |
+
+Two deserve emphasis, because the memo predicted the consequence:
+
+**Cost.** D4 says "unrecorded cost is unrecoverable. Instrument now, decide the commercial model
+later" — and the instrumentation was not done. Every order placed between now and the fix is a case
+whose vendor cost cannot be attributed afterwards. It is the cheapest item on this list to build and
+the only one that loses data permanently by waiting.
+
+**The second clock.** §5 and D1 both warn that a rule reading only the fetch date will call a 2019
+document current. `contentDate` exists in the schema, which makes the gap easy to miss — the field
+is there, it is simply never assigned. The reuse policy decided under D1 therefore reads **only**
+the fetch clock, which is exactly the trap §5 was written to prevent.
+
+## 9.4 Decision register: what has been settled since
+
+- **D1 (freshness) — DECIDED.** Documents are kept for ever; deletion cascades when the client is
+  deleted; a stored document is reused while `fetchedAt` is under 7 days old. **Caveat:** that is a
+  time-based TTL reading one clock, which §5 recommends against and §9.3 explains is currently
+  unavoidable. The event-based check the memo prefers is not built.
+- **D2 (evidence levels) — STILL OPEN, and now on the critical path.** M4 exposes a document `kind`
+  to Septeo, and the memo rates deciding late as **HIGH** cost because it is a breaking change for a
+  customer who has already migrated. A partial vocabulary now exists in code as `DocumentRole`
+  (`REGISTERAUSZUG`, `GESELLSCHAFTERLISTE`, `GESELLSCHAFTSVERTRAG`), driven by a hand-authored
+  curation of 218 rows. **That is a role vocabulary, not an evidence level** — the two are
+  orthogonal, and D2 is untouched by it.
+- **D3 (retention) — DECIDED** with D1: kept for ever, cascade on client delete. One contradiction
+  is open: deleting a client currently orphans its documents rather than deleting them.
+- **D4 (cost pass-through) — instrumentation NOT done.** See §9.3.
+
+## 9.5 What of the memo still stands
+
+Unchanged and still correct: the invariant in §1 (BetterCo is the system of record; no consumer
+talks to a vendor), the vendor-neutral contract in §7 and the reasoning against mirroring kyc.com's
+shape, the evidence-level gate in §4, the two-clock analysis in §5, and the decision-register
+framing in §8. Nothing measured since has contradicted any of them.
+
+**Status against §7's sequence:** step 1's ingestion half is built and proven on the sandbox
+(PR #2305). Steps 4-6 — read path served from BetterCo, parallel running with reconciliation,
+cut-over, then additional vendors behind the unchanged contract — are not started. The consumer
+contract itself is still unfrozen, which is what keeps D2 blocking.

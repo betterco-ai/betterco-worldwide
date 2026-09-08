@@ -66,6 +66,8 @@ tidying ours would change nothing for anyone. The merge shape is in §7.
 | 6 | Deleting a client orphans its documents | Contradicts D1. Deliberately **not** fixed — the asymmetry looks intentional and a document delete is irreversible. Wants a ticket |
 | 7 | `kyc-com.user.base-url` is production-only in every profile | A sandbox instance asks the production user portal about sandbox cases and gets `200` with nothing. Worked around in the worker; the config is still wrong |
 | 8 | **BCP-8429** — `UploadData`'s inverted validation | Filed. Not ours; sits under every uploader in the codebase |
+| 9 | **Per-artefact vendor cost is not recorded** | D4 says explicitly: instrument now, decide the commercial model later, because unrecorded cost is unrecoverable. It was not done. Every order placed until it is cannot be attributed afterwards. **Cheapest item here, and the only one that loses data by waiting** |
+| 10 | **`contentDate` is never populated** | The field is declared on `DocumentAcquisition` and read by `DocumentIngestor`, and nothing writes it — so the second clock is always null and D1's reuse policy reads only the fetch date. That is precisely the trap §5 of the architecture memo was written to prevent, and the field's existence makes it easy to miss |
 
 ## 5. What remains for the MVP
 
@@ -115,9 +117,10 @@ production secret — which would give staging dev's exact failure mode.
 
 Neither is built. Both need a deploy to validate, and neither should be guessed at.
 
-## 7. How this should reach a reviewer
+## 7. How this reaches a reviewer
 
-**One PR, `test/kyc-stack-on-dev` -> `dev`, squash-merged, this week.**
+**OPEN: https://github.com/betterco-ai/betterco-backend/pull/2305** — `test/kyc-stack-on-dev` -> `dev`,
+to be squash-merged.
 
 **The repo squash-merges.** P1 landed as `93ef2291e Test/p1 on dev (#2293)` - one commit, PR number
 in the title - and every recent commit on `dev` has that shape. So "preserve the 22 commits on dev"
@@ -150,3 +153,13 @@ convenience. Not worth it.
    `bc-stg-vault`, or staging starts clean and then fails every call.
 3. **`fix/kyc-create-validation-errors`** - one commit, never compiled locally, sitting since
    27 August. Build it or close it; do not let it drift into a third state.
+
+## 8. Documentation state
+
+- `ARCHITECTURE_AGGREGATION_2026-07-28.md` now carries a **§9 reality check** recording where the
+  implementation diverged from the memo: built in Java rather than Python, polling rather than
+  webhooks with §7's step 2 skipped, and the §6 requirements that are not built (cost, OCR, content
+  date, licence obligations). D1 and D3 are marked decided; D2 remains open and blocking.
+- The `DocumentRole` vocabulary in code is a **role** vocabulary. It is orthogonal to D2's
+  **evidence levels** (`data` / `document` / `certified`) and does not settle that decision — a
+  conflation worth guarding against, since both look like "what kind of document is this".
