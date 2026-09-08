@@ -43,6 +43,24 @@
      `custom_<epoch>` types in F4 reached live data.** The ingestor must validate `documentType`
      against `KYCDocumentType` itself and must not rely on `UploadData` to do it.
 
+- **N7 finding, 8 September: deleting a client orphans its DOCUMENTS, and that is not ours to fix
+  quietly.** The two deletion paths in `CustomerService` disagree.
+  `deleteAdvisorRelatedClientInfo` calls `documentManagementService.deleteDocumentsByCompanyId(...)`
+  and `deleteDocumentsByProcessId(...)`; **`deleteAllClientInfo` calls neither**, and
+  `ActorDeletionManager.deleteActorRelatedData` - the only other candidate - does not touch
+  documents either (it deletes events, business relations, invitation data and duplicate matches).
+  So a client deleted through the ordinary path leaves its documents in storage and in the
+  `document` collection, attached to an actor that no longer exists.
+
+  That contradicts D1, which decided documents die with the client, and it is a data-retention
+  question rather than a tidiness one. **It was NOT fixed here.** The asymmetry between the two
+  methods looks deliberate enough to ask about first - `accountableObjectDeletionProxyService`
+  suggests some deletions are retained on purpose for accounting - and adding a document delete to a
+  deletion path is irreversible if that guess is wrong. Worth a ticket and a five-minute
+  conversation with whoever owns `doc_management`.
+
+  What N7 *does* fix is the acquisition rows, which are ours: they now die with the client.
+
 - **Store every delivered file; the German roles are a separate overlay** (decided 2026-09-06).
   A document is never dropped, deferred or left unstored because it plays none of the three roles -
   most do not. The success condition of ingestion is a count: **delivered == stored**, with any
