@@ -423,6 +423,16 @@ shape, the evidence-level gate in §4, the two-clock analysis in §5, and the de
 framing in §8. Nothing measured since has contradicted any of them.
 
 **Status against §7's sequence:** step 1's ingestion half is built and proven on the sandbox
-(PR #2305). Steps 4-6 — read path served from BetterCo, parallel running with reconciliation,
-cut-over, then additional vendors behind the unchanged contract — are not started. The consumer
-contract itself is still unfrozen, which is what keeps D2 blocking.
+(PR #2305), and **the neutral contract of §7 is now built** on `p3/contract-cutover` — opaque case
+id, one document id space, derived status, `includePending` accepted and ignored. The memo's
+recommendation was followed: the contract is vendor-neutral rather than a mirror of kyc.com's
+shape, so Septeo migrates once.
+
+Two qualifications. The contract is built but **not frozen and not communicated** — the note to
+Septeo has not been sent, and until it is, "migrates once" is an intention rather than a fact. And
+**D2's evidence level is not in it**, which the memo rates as HIGH cost to add late for exactly the
+reason that applies here: retrofitting a field into a contract a customer has already migrated onto
+is a second break. If it is going in, it goes in before this freezes.
+
+Steps 4-6 — read path served from BetterCo, parallel running with reconciliation, cut-over, then
+additional vendors behind the unchanged contract — are not started.

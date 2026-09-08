@@ -67,11 +67,49 @@ tidying ours would change nothing for anyone. The merge shape is in §7.
 | 7 | `kyc-com.user.base-url` is production-only in every profile | A sandbox instance asks the production user portal about sandbox cases and gets `200` with nothing. Worked around in the worker; the config is still wrong |
 | 8 | **BCP-8429** — `UploadData`'s inverted validation | Filed. Not ours; sits under every uploader in the codebase |
 | 9 | **Per-artefact vendor cost is not recorded** | D4 says explicitly: instrument now, decide the commercial model later, because unrecorded cost is unrecoverable. It was not done. Every order placed until it is cannot be attributed afterwards. **Cheapest item here, and the only one that loses data by waiting** |
-| 10 | **`contentDate` is never populated** | The field is declared on `DocumentAcquisition` and read by `DocumentIngestor`, and nothing writes it — so the second clock is always null and D1's reuse policy reads only the fetch date. That is precisely the trap §5 of the architecture memo was written to prevent, and the field's existence makes it easy to miss |
+| 10 | **Septeo has not been told the contract is changing** | `p3/contract-cutover` is a deliberate break. The audit says the note to Björn is already agreed but it has not been sent, and he is integrating against the vendor ids now. Sending it is the thing that decides whether this lands as one migration or two |
+| 11 | **`contentDate` is never populated** | The field is declared on `DocumentAcquisition` and read by `DocumentIngestor`, and nothing writes it — so the second clock is always null and D1's reuse policy reads only the fetch date. That is precisely the trap §5 of the architecture memo was written to prevent, and the field's existence makes it easy to miss |
+
+## 4b. P3 / M4 is built — the contract cut-over
+
+Branch **`p3/contract-cutover`** (`75019e924`), on top of `test/kyc-stack-on-dev`. Not merged, not
+deployed, and **it is a deliberate breaking change for Septeo**.
+
+| Was | Is |
+|---|---|
+| `case_common_id` (int64) in every path | `case_id` (string) |
+| `caseCommonId` | `caseId` |
+| `statusName: "Ready"` | `status: pending \| building \| ready \| incomplete \| failed` |
+| the vendor's `documentId` | our stored-document id |
+| `availability` | `status: stored \| pending \| unavailable \| failed` |
+| `includePending` | accepted, ignored, deprecated |
+
+**The case id is the link's own id** — not the source's number, not the matter id. Both of those
+are sometimes absent: the source assigns its number later, and the matter id is null wherever
+client creation is off and on at least one production case. A side effect worth having is that a
+case the source has not started yet now has an identity and a status, which it could not have
+before.
+
+**Derived means derived.** A source-ready case whose documents we do not hold reports `building`;
+one that has settled with a document missing reports `incomplete`. And status is answered from our
+store, never by calling the source — asserted in a test, because a consumer polling must not be
+able to make us spend money.
+
+**Degraded while ingestion is off.** No acquisitions means no ids of ours, so the source's listing
+is passed through and logged at WARN. That makes turning `aggregation.ingestion.enabled` on a
+**prerequisite for go-live**, not an optimisation.
+
+**Deliberately not included:** `evidenceLevel` and the per-artefact cost field, both outside the
+scope as restated. D2 still rates a late evidence level as HIGH cost because it breaks a consumer
+who has already migrated — so if it is going in, it belongs in *this* contract, before it freezes.
+
+Tests: 166 in the affected packages, 0 failures; full suite 922 run with the same 7 pre-existing
+environmental failures as the baseline. **Application startup is not verified** — that needs a
+deploy.
 
 ## 5. What remains for the MVP
 
-`M3` (BetterCo owns the document) is **complete**. Outstanding: **M4** the contract cut-over,
+`M3` (BetterCo owns the document) is **complete**. Outstanding: ~~M4 the contract cut-over~~ (**built**, see §4b),
 **M5** turning `document-search.create-client` on beyond `development`, **M6** the Germany
 deny-guard, and **M2**'s second half (the vendor-target switcher plus item 1 above).
 
