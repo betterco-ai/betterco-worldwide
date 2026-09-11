@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
 <title>Aggregator Roadmap</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -235,11 +236,11 @@
     <h1>From passthrough to aggregator</h1>
     <p class="standfirst">The BetterCo platform is the reference system. It calls an aggregator, the aggregator routes to a source, and the document lands in a BetterCo client. Today none of that is true for document search. Here is what gets built, in what order, and what fits before 1 October.</p>
     <dl class="facts">
-      <div class="fact"><dt>Date</dt><dd>29 August, revised 8 September 2026 (evening)</dd></div>
+      <div class="fact"><dt>Date</dt><dd>29 August, revised 11 September 2026</dd></div>
       <div class="fact"><dt>Go-live</dt><dd>1 October 2026</dd></div>
       <div class="fact"><dt>Scope to go-live</dt><dd>Six MVP items</dd></div>
       <div class="fact"><dt>P1</dt><dd>Live on dev, 4 Sep</dd></div>
-      <div class="fact"><dt>In review</dt><dd>Four branches, none merged</dd></div>
+      <div class="fact"><dt>In review</dt><dd>Nine branches, none merged</dd></div>
       <div class="fact"><dt>Built by</dt><dd>Us, in betterco-backend</dd></div>
       <div class="fact"><dt>Review</dt><dd>Backend dev, per branch</dd></div>
     </dl>
@@ -409,7 +410,7 @@
               <tr><td>Vendor reference</td><td><code>Case.externalIdentifiers</code></td><td><span class="chip chip-ok">exists</span></td><td>kyc.com id goes here, internal only</td></tr>
               <tr><td>Document</td><td><code>doc_management</code> + <code>FileStorage</code></td><td><span class="chip chip-ok">exists</span></td><td>handle is <code>bettercoDocumentId</code></td></tr>
               <tr><td>Fetch</td><td><code>DocumentAcquisition</code></td><td><span class="chip chip-ok">built</span></td><td>one per document per source <em>per client</em> &mdash; vendor document ids repeat across cases</td></tr>
-              <tr><td>Cost</td><td>charge record</td><td><span class="chip chip-risk">still to build</span></td><td>per chargeable unit &mdash; <strong>orders placed before this exists cannot be attributed afterwards</strong></td></tr>
+              <tr><td>Cost</td><td><code>KycOrderCharge</code> on the link</td><td><span class="chip chip-ok">built</span></td><td>stamped inside <code>completeCreate</code>, past the line the code marks as <em>the vendor will bill for this</em> &mdash; not at <code>buildPendingLink</code>, which runs before the POST and would invent spend out of every upstream outage</td></tr>
             </tbody>
           </table>
         </div>
@@ -567,8 +568,8 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
         <ul>
           <li><strong>Evidence levels</strong> — <code>data</code> / <code>document</code> / <code>certified</code>. A Datainfogreffe statement is not a Kbis substitute; without the level, "cheapest source" is a meaningless instruction.</li>
           <li><strong>Least-cost routing</strong> — the cheapest source <em>that meets the required evidence level</em>, aware that kyc.com charges per case while an INPI acte is a bundle.</li>
-          <li><strong>Reuse of stock</strong> &mdash; do not fetch what we already hold fresh. Needs a freshness policy and both clocks. <strong>Correction, 8 September:</strong> phase 1 was expected to store both. It stores one. <code>contentDate</code> is declared on the acquisition and read when the document is attached, and nothing ever writes it &mdash; so the reuse rule reads only the fetch date, which is the exact failure the two-clock analysis was written to prevent.</li>
-          <li><strong>Per-case cost reporting</strong> &mdash; <strong>Correction, 8 September:</strong> phase 1 did <em>not</em> instrument the meter. There is no cost field. Phase 3 cannot report what was never recorded, and unlike the other gaps here this one loses data permanently while it waits.</li>
+          <li><strong>Reuse of stock</strong> &mdash; do not fetch what we already hold fresh. Needs a freshness policy and both clocks. <strong>Resolved 9&ndash;11 September.</strong> Both clocks now exist: <code>contentDate</code> is written where the vendor inlines a filing date, and the freshness window is built as a per-source policy, off by default. What is <em>not</em> built is reuse across customers, and that is blocked on something the record does not carry: an identity for the company that survives across clients. Vendor document ids repeat across cases and mean different things, and jurisdiction plus company name is not an identity. <strong>That key is the open item, not the window.</strong></li>
+          <li><strong>Per-case cost reporting</strong> &mdash; <strong>Resolved 9 September.</strong> The meter is instrumented: every order records amount, currency, band and <code>chargedAt</code>. The number is labelled a <strong>list price</strong> (<code>LIST_PRICE_CONFIGURED</code>), never an invoiced one, and a sandbox order records <code>NOT_BILLABLE</code> rather than a price it never cost.</li>
         </ul>
         <p>Not required for 1 October. A static routing table is correct, just not clever.</p>
 
@@ -596,14 +597,30 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
               <tr class="hero"><td class="wp">P3</td><td><strong>Contract cut-over.</strong> Opaque <code>caseId</code>, <code>bettercoDocumentId</code>, derived status, <code>includePending</code> accepted-and-ignored</td>
 <td><strong>Met 8 September</strong>, verified on dev. Both id spaces are closed: the vendor&rsquo;s case number <em>and</em> its document number now 404.
 <strong>Septeo has not been told</strong> &mdash; until they are, &ldquo;one break&rdquo; is an intention, not a fact</td></tr>
-              <tr><td class="wp">P4</td><td><strong>Cost.</strong> Charge records, <code>PER_CASE</code> for kyc.com</td><td>Ten documents, one charge</td></tr>
-              <tr><td class="wp">P5</td><td><strong>The aggregator becomes a router.</strong> <code>SourceAdapter</code> port, routing table, per-source policy</td><td>All P1&ndash;P4 tests pass unchanged; the Germany rule is enforced, not remembered</td></tr>
+              <tr class="hero"><td class="wp">P4</td><td><strong>Cost.</strong> Charge records, <code>PER_CASE</code> for kyc.com</td><td><strong>Built 9 September, exit criterion unproven.</strong> One charge is recorded per order at the moment the vendor commits to bill. &ldquo;Ten documents, one charge&rdquo; needs a real multi-document order to demonstrate, and no billable order has been placed</td></tr>
+              <tr><td class="wp">P5</td><td><strong>The aggregator becomes a router.</strong> <code>SourceAdapter</code> port, routing table, per-source policy</td><td><strong>Half met.</strong> <em>The Germany rule is enforced, not remembered</em> &mdash; a deny list that fails closed, 9 September. Per-source policy has a second member: the reuse window joins the backoff schedule. The <code>SourceAdapter</code> port and the routing table are still to build, and until the table exists Germany is guarded rather than routed</td></tr>
               <tr><td class="wp">P6</td><td><strong>Sources.</strong> France via INPI, Britain via Companies House</td><td>A French and a British order cost nothing at the vendor and return documents</td></tr>
             </tbody>
           </table>
         </div>
 
         <p>P1 through P5 are sequential. P6 runs in parallel per source once P5 lands.</p>
+
+        <div class="note finding">
+          <span class="kicker">Two unattended rounds &mdash; 9 and 11 September</span>
+          <p><strong>Nine branches now stand on <code>dev</code>, none merged, nothing deployed, no money spent.</strong> Between them they closed P4, took half of P5, and retired both corrections this page carried on 8 September.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Night</th><th>What it produced</th><th>Phase it moves</th></tr></thead>
+              <tbody>
+                <tr><td class="wp">9 Sep</td><td>A startup assertion that refuses to run ordering against the paying vendor outside production; the charge record; <code>contentDate</code> written; the pre-Ready path refusing the wrong vendor world; the Germany deny-guard</td><td><strong>P4</strong> built &middot; <strong>P5</strong> half met &middot; M6</td></tr>
+                <tr><td class="wp">11 Sep</td><td><code>dev</code> absorbed into the stack; the price table refreshed from the live coverage page; D1&rsquo;s reuse window; <code>document-search.create-client</code> written down with a ratchet on the money flags</td><td><strong>P4</strong> accuracy &middot; <strong>P5</strong> policy &middot; M5</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>The cost records were being priced from a stale table.</strong> The file held the pre-26-August list, and refreshing it found the drift was worse than recorded: <strong>nine</strong> band changes rather than three, and <strong>26 jurisdictions missing outright</strong> (131 rows &rarr; 157). The numbers are labelled list prices, so nothing was mis-invoiced &mdash; but anything quoted from that table before 11 September was quoting a year-old shape of the vendor&rsquo;s catalogue. The United States is still unresolved: it is priced per state, and one number cannot represent it.</p>
+          <p><strong>One naming trap.</strong> The two rounds were called &ldquo;P4&rdquo; and &ldquo;P5&rdquo; in the handovers, after the night rather than after this table. They are <em>not</em> phases P4 and P5. Read the handovers as dates and this page as the programme.</p>
+        </div>
 
         <div class="note decision">
           <span class="kicker">The scope cut &mdash; 5 September</span>
@@ -615,10 +632,10 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
               <tbody>
                 <tr><td class="wp">M1</td><td>Status truthfulness &mdash; a case whose status never updates cannot be polled</td><td><span class="chip chip-ok">built</span></td></tr>
                 <tr><td class="wp">M2</td><td>A vendor-target switcher: <code>sandbox</code> or <code>production</code>, with billable creates on a second, independent dial</td><td><span class="chip chip-ok">first dial built</span></td></tr>
-                <tr><td class="wp">M3</td><td>P2 core &mdash; acquisition record, bytes stored by us, served from our storage, cascade on deletion</td><td><span class="chip chip-build">in progress</span></td></tr>
-                <tr><td class="wp">M4</td><td>The contract cut-over &mdash; our identifiers, one document id space, derived status</td><td><span class="chip chip-build">to build</span></td></tr>
-                <tr><td class="wp">M5</td><td>Turn <code>document-search.create-client</code> on beyond <code>development</code></td><td><span class="chip chip-open">config</span></td></tr>
-                <tr><td class="wp">M6</td><td>A Germany deny-guard, until the routing table exists to enforce the rule properly</td><td><span class="chip chip-build">to build</span></td></tr>
+                <tr><td class="wp">M3</td><td>P2 core &mdash; acquisition record, bytes stored by us, served from our storage, cascade on deletion</td><td><span class="chip chip-ok">built</span></td></tr>
+                <tr><td class="wp">M4</td><td>The contract cut-over &mdash; our identifiers, one document id space, derived status</td><td><span class="chip chip-ok">built</span> &mdash; Septeo still unaware</td></tr>
+                <tr><td class="wp">M5</td><td>Turn <code>document-search.create-client</code> on beyond <code>development</code></td><td><span class="chip chip-open">needs a person</span> &mdash; the flag is now written down and defaults off; which environments get it is not ours to guess</td></tr>
+                <tr><td class="wp">M6</td><td>A Germany deny-guard, until the routing table exists to enforce the rule properly</td><td><span class="chip chip-ok">built</span> &mdash; fails closed</td></tr>
               </tbody>
             </table>
           </div>
@@ -837,9 +854,11 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
       </section>
 
       <footer class="colophon">
-        Source of record: <code>docs/superpowers/specs/2026-08-28-aggregator-phase1-design.md</code> and <code>2026-08-29-aggregator-phase2-and-plan.md</code> in <code>betterco-worldwide</code>. Every claim about current behaviour was measured against <code>betterco-backend</code>, <code>betterco_claude_api</code> and the staging API on 27–29 August 2026, not recalled. Revised 6 September 2026: P1 verified on the deployed <code>dev</code> server, France and Britain cut from the go-live, and four branches opened behind it. The repository documents &mdash; <code>AUDIT_AND_MVP_2026-09-05.md</code>, <code>ROADMAP_TO_FIRST_BILLABLE_ORDER_2026-09-06.md</code> and <code>HANDOVER_2026-09-06.md</code> &mdash; carry the working detail.
+        Source of record: <code>docs/superpowers/specs/2026-08-28-aggregator-phase1-design.md</code> and <code>2026-08-29-aggregator-phase2-and-plan.md</code> in <code>betterco-worldwide</code>. Every claim about current behaviour was measured against <code>betterco-backend</code>, <code>betterco_claude_api</code> and the staging API on 27–29 August 2026, not recalled. Revised 11 September 2026: P4 built and P5 half met across two unattended rounds, the price table refreshed from the live coverage page, and the reuse window built behind a flag that is off. Nine branches stand behind it, none merged. The repository documents &mdash; <code>HANDOVER_2026-09-11.md</code>, <code>MEMO_2026-09-11_PHASE_STATUS.md</code> and <code>HANDOVER_2026-09-08-P3.md</code> &mdash; carry the working detail.
       </footer>
 
     </main>
   </div>
 </div>
+
+</body></html>
