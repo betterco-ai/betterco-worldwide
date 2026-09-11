@@ -4,7 +4,14 @@
 
 This maps what the nights of 9 and 11 September produced onto the programme phases, because the two
 do not share a vocabulary and that has already caused confusion. Working detail is in
-`HANDOVER_2026-09-11.md`; the programme itself is `aggregator-roadmap.html`.
+`HANDOVER_2026-09-11.md`; the programme itself is `aggregator-roadmap.html`, published as
+**[Aggregator Roadmap](https://claude.ai/code/artifact/b690499c-b822-40ab-a2d9-1ae239045f6b)**
+(version 14, 11 September) and carrying the same phase states as this memo.
+
+**One caveat on that link.** Anyone opening it sees a *pinned* version, not the live one, and the pin
+still points at 7 September — a picture in which the cost meter does not exist and `contentDate` is
+never written. Moving it is a click in the artifact's share menu and it has been outstanding since
+8 September. Until it moves, send this memo rather than the link.
 
 ---
 
@@ -104,3 +111,4 @@ one behind. That is the orphaned-document problem in a new place, and it is why 
    AF, BD, GH and Saudi Arabia.
 5. **The cross-client company key**, if reuse is to go beyond same-client freshness.
 6. **M5** — which environments get client creation.
+7. **Move the roadmap's share pin** off the 7 September version, so the link and this memo agree.
