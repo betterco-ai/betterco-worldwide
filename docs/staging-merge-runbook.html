@@ -1,0 +1,306 @@
+<title>Opening Staging for STP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600&display=swap">
+
+<style>
+  :root {
+    --paper:#F4F7F7;
+    --surface:#FFFFFF;
+    --surface-2:#EDF2F2;
+    --ink:#15202A;
+    --muted:#5B6B76;
+    --line:#D9E2E4;
+    --line-strong:#B9C7CA;
+    --accent:#146560;
+    --accent-soft:#DCEBE8;
+    --ok:#2C6E4C;
+    --ok-bg:#E1EFE7;
+    --warn:#9A5F0C;
+    --warn-bg:#F6EAD8;
+    --stop:#9E3B3B;
+    --stop-bg:#F5E2E2;
+    --serif:"IBM Plex Serif", Georgia, serif;
+    --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0C1214; --surface:#131C1F; --surface-2:#182226;
+      --ink:#E3EBEC; --muted:#93A4AC; --line:#223034; --line-strong:#33474D;
+      --accent:#5CB8AE; --accent-soft:#16302F;
+      --ok:#5BAE83; --ok-bg:#15291F;
+      --warn:#D69A46; --warn-bg:#2A2113;
+      --stop:#D4736F; --stop-bg:#2B1A1A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0C1214; --surface:#131C1F; --surface-2:#182226;
+    --ink:#E3EBEC; --muted:#93A4AC; --line:#223034; --line-strong:#33474D;
+    --accent:#5CB8AE; --accent-soft:#16302F;
+    --ok:#5BAE83; --ok-bg:#15291F;
+    --warn:#D69A46; --warn-bg:#2A2113;
+    --stop:#D4736F; --stop-bg:#2B1A1A;
+  }
+
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .page { max-width:1000px; margin:0 auto; padding-inline:24px; padding-block:0 88px; }
+
+  header.top { padding-block:48px 24px; border-bottom:1px solid var(--line); margin-bottom:36px; }
+  .eyebrow { font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+             color:var(--accent); margin:0 0 12px; }
+  h1 { font-family:var(--serif); font-size:clamp(28px,4vw,40px); line-height:1.14; margin:0 0 14px;
+       text-wrap:balance; max-width:18ch; }
+  .lede { font-size:17.5px; color:var(--muted); max-width:62ch; margin:0 0 24px; }
+  .meta { display:flex; flex-wrap:wrap; gap:8px 32px; font-size:13.5px; }
+  .meta div { display:flex; flex-direction:column; gap:1px; }
+  .meta dt { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em;
+             text-transform:uppercase; color:var(--muted); }
+  .meta dd { margin:0; font-weight:500; font-variant-numeric:tabular-nums; }
+
+  h2 { font-family:var(--serif); font-size:23px; line-height:1.25; margin:0 0 6px;
+       display:flex; align-items:baseline; gap:12px; text-wrap:balance; }
+  h2 .g { font-family:var(--mono); font-size:12px; color:var(--accent); letter-spacing:.08em; flex:none; }
+  .sub { color:var(--muted); font-size:14.5px; margin:0 0 18px; max-width:66ch; }
+  main { display:flex; flex-direction:column; gap:44px; }
+  section { scroll-margin-top:20px; }
+  p { margin:0 0 14px; max-width:66ch; }
+  code { font-family:var(--mono); font-size:.86em; background:var(--surface-2);
+         border:1px solid var(--line); border-radius:3px; padding:1px 5px; overflow-wrap:break-word; }
+  strong { font-weight:600; }
+
+  /* blockers */
+  .blockers { display:grid; grid-template-columns:1fr; gap:12px; }
+  @media (min-width:720px) { .blockers { grid-template-columns:repeat(2,1fr); } }
+  .blk { background:var(--surface); border:1px solid var(--line);
+         border-left:3px solid var(--stop); border-radius:4px; padding:16px 18px;
+         display:flex; flex-direction:column; gap:7px; }
+  .blk .who { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em;
+              text-transform:uppercase; color:var(--stop); }
+  .blk h3 { margin:0; font-size:15.5px; font-weight:600; }
+  .blk p { margin:0; font-size:14px; color:var(--muted); max-width:none; }
+
+  /* task list */
+  ol.tasks { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px; }
+  ol.tasks li { background:var(--surface); border:1px solid var(--line); border-radius:4px;
+                padding:13px 16px; display:flex; gap:12px; align-items:flex-start; }
+  ol.tasks li + li { margin-top:6px; }
+  ol.tasks input[type=checkbox] { margin:4px 0 0; width:16px; height:16px; flex:none;
+                                  accent-color:var(--accent); cursor:pointer; }
+  ol.tasks input[type=checkbox]:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .tbody { min-width:0; }
+  .tbody .t { font-weight:600; font-size:15px; }
+  .tbody .d { color:var(--muted); font-size:14px; margin-top:3px; }
+  li.done .tbody .t { text-decoration:line-through; color:var(--muted); }
+
+  .table-wrap { overflow-x:auto; margin:18px 0; border:1px solid var(--line);
+                border-radius:4px; background:var(--surface); }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { text-align:left; padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th { font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
+             color:var(--muted); font-weight:500; background:var(--surface-2); white-space:nowrap; }
+  tbody tr:last-child td { border-bottom:none; }
+  td.br { font-family:var(--mono); font-size:12px; color:var(--accent); white-space:nowrap; }
+
+  pre { font-family:var(--mono); font-size:12.5px; line-height:1.6; background:var(--surface);
+        border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:4px;
+        padding:14px 16px; overflow-x:auto; margin:16px 0; }
+
+  .flag { border-radius:4px; padding:14px 16px; margin:16px 0; max-width:68ch;
+          border:1px solid var(--line); background:var(--surface); border-left:3px solid var(--warn); }
+  .flag.stop { border-left-color:var(--stop); }
+  .flag .k { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+             color:var(--muted); display:block; margin-bottom:6px; }
+  .flag p:last-child { margin-bottom:0; }
+
+  .pill { font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+          padding:2px 7px; border-radius:3px; white-space:nowrap; border:1px solid; }
+  .p-ok { background:var(--ok-bg); color:var(--ok); border-color:var(--ok); }
+  .p-warn { background:var(--warn-bg); color:var(--warn); border-color:var(--warn); }
+  .p-stop { background:var(--stop-bg); color:var(--stop); border-color:var(--stop); }
+
+  footer { margin-top:56px; padding-top:18px; border-top:1px solid var(--line);
+           font-size:13px; color:var(--muted); max-width:70ch; }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+
+<div class="page">
+
+<header class="top">
+  <p class="eyebrow">Backend review &middot; merge train &middot; 14 September 2026</p>
+  <h1>Opening staging for STP</h1>
+  <p class="lede">Nine branches of aggregator work are finished and unmerged. This is the order to review, merge and deploy them in &mdash; and the four things that must be true before Septeo is allowed to point at staging.</p>
+  <dl class="meta">
+    <div><dt>For</dt><dd>Dima, backend</dd></div>
+    <div><dt>Branches</dt><dd>9, none merged</dd></div>
+    <div><dt>PRs open</dt><dd>1 of 9</dd></div>
+    <div><dt>Never started a JVM</dt><dd>5 of 9</dd></div>
+    <div><dt>Go-live</dt><dd>1 October 2026</dd></div>
+  </dl>
+</header>
+
+<main>
+
+<section id="blockers">
+  <h2><span class="g">STOP</span> Four things that must be true first</h2>
+  <p class="sub">None of these is code, and none is yours alone to decide. Opening staging to STP before they clear is the expensive version of this plan.</p>
+
+  <div class="blockers">
+    <div class="blk">
+      <span class="who">Infra &mdash; costs money if skipped</span>
+      <h3>The staging vault has no sandbox secret</h3>
+      <p><code>application-staging.properties</code> in this stack already points staging at the KYC.com <em>sandbox</em>. The matching Key Vault entry <code>know-your-customer-com-sandbox</code> does not exist in <code>bc-stg-vault</code>. It resolves lazily, so staging boots clean and then fails every vendor call. <strong>Do not "fix" it by pointing staging at the production secret</strong> &mdash; that turns every STP test order into a real one at $19&ndash;$119.</p>
+    </div>
+    <div class="blk">
+      <span class="who">Frontend &mdash; breaks the UI</span>
+      <h3>The case list changed shape</h3>
+      <p>P3 returns <code>caseId</code> where the list used to return <code>caseCommonId</code>, and <code>status</code> where it returned <code>statusName</code>. A frontend reading the old field gets <code>undefined</code> and its case links go dead. A compatibility shim does not help &mdash; the shape changed, not the format. Whoever owns the ordering UI needs a matching change in the same window.</p>
+    </div>
+    <div class="blk">
+      <span class="who">Commercial &mdash; not a deploy</span>
+      <h3>Septeo has not been told</h3>
+      <p>Björn is integrating against the vendor's identifiers now. The note is drafted and unsent. Opening staging is the moment the break becomes real for him, so the note goes out <em>before</em> the invitation, not with it.</p>
+    </div>
+    <div class="blk">
+      <span class="who">Expected behaviour, not a bug</span>
+      <h3>Staging may refuse to start</h3>
+      <p>This stack adds a startup assertion: the app <strong>refuses to boot</strong> when ordering is armed against the paying vendor outside the production profile. If staging will not come up after the deploy, read that first &mdash; it is the guard doing its job, and it means the vendor config is wrong.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <h2><span class="g">GATE 1</span> Put the stack back together</h2>
+  <p class="sub">Measured 14 September: the stack is broken in the middle. Nothing below can be reviewed as a coherent series until this is done.</p>
+
+  <div class="flag">
+    <span class="k">What happened</span>
+    <p><code>origin/dev</code> gained <code>4fa7c4dc3</code> (BCP-8451, #2308). Somebody merged it into <code>test/kyc-stack-on-dev</code> as <code>e0eb864ec</code> but did <strong>not</strong> cascade it upward, so the base is no longer an ancestor of the tip. Verified: <code>git merge-base --is-ancestor origin/test/kyc-stack-on-dev origin/p5/t4-create-client-flag</code> fails.</p>
+  </div>
+
+  <ol class="tasks" data-key="gate1">
+    <li><input type="checkbox" id="g1a"><div class="tbody"><div class="t">Re-cascade the eight branches above the base</div><div class="d">In this order, merging each into its child: <code>test/kyc-stack-on-dev → p4/o2 → p4/o3 → p4/o4 → p4/o5 → p4/o6 → p5/t2 → p5/t3 → p5/t4</code>. Push all eight.</div></div></li>
+    <li><input type="checkbox" id="g1b"><div class="tbody"><div class="t">Compile and run the affected packages on the tip</div><div class="d"><code>integration.kyc_com</code> and <code>aggregation</code> &mdash; 213 tests were green on 11 September. Anything new is from the cascade.</div></div></li>
+    <li><input type="checkbox" id="g1c"><div class="tbody"><div class="t">Close the three superseded PRs</div><div class="d"><strong>#2294, #2296, #2297</strong> are all fully contained in <code>test/kyc-stack-on-dev</code> (verified by ancestry). Merging them separately duplicates work; close them as superseded by #2305.</div></div></li>
+    <li><input type="checkbox" id="g1d"><div class="tbody"><div class="t">Open PRs for the six branches that have none</div><div class="d">Only #2305 exists today. <code>p4/o2 … p5/t4</code> have no PR at all, so there is nothing for you to review in GitHub. Each targets the branch below it, not <code>dev</code>.</div></div></li>
+  </ol>
+</section>
+
+<section id="review">
+  <h2><span class="g">GATE 2</span> What to review, and what to look for</h2>
+  <p class="sub">Bottom-up. Each branch is one concern, and the interesting question is different for each &mdash; the column on the right is what actually deserves your attention.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Branch</th><th>What it does</th><th>The question worth asking</th></tr></thead>
+      <tbody>
+        <tr><td class="br">test/kyc-stack-on-dev<br><span style="color:var(--muted)">#2305, draft</span></td><td>P2 acquisitions and ingestion, plus P3's contract cut-over</td><td>Already verified on dev 8081 on 8 September. Review it for the <em>contract</em>, not the plumbing: both vendor id spaces now 404 by design</td></tr>
+        <tr><td class="br">p4/o2</td><td>Refuses to start when ordering is armed at the paying vendor outside production</td><td>It asserts, it does not invert the default. <strong>Should the default be inverted?</strong> That needs someone who knows how production actually starts &mdash; it was deliberately left open</td></tr>
+        <tr><td class="br">p4/o3</td><td>Records what an order cost, at the moment it becomes chargeable</td><td>Cost is stamped inside <code>completeCreate</code>, past the point the vendor commits to bill &mdash; not at <code>buildPendingLink</code>, which runs before the POST. Check that reasoning holds for the retry path</td></tr>
+        <tr><td class="br">p4/o4</td><td>Writes <code>contentDate</code> &mdash; the document's own filing date</td><td>Dates are parsed day-first from vendor labels (<code>&lt;17/12/2025&gt;</code>). Evidence, not assumption &mdash; but worth a second pair of eyes</td></tr>
+        <tr><td class="br">p4/o5</td><td>The pre-Ready path refuses the wrong vendor world instead of silently asking it</td><td>Keyed on the vendor world, not on blanking a property per profile, so a dev box pointed at production still works. Consumer-visible: <code>503 pending_path_unavailable</code></td></tr>
+        <tr><td class="br">p4/o6</td><td>Refuses orders for jurisdictions we source ourselves</td><td>Fails closed: <code>document-search.deny-jurisdictions=DE</code> is the shipped default. Consumer-visible: <code>409 jurisdiction_not_available</code></td></tr>
+        <tr><td class="br">p5/t2</td><td>Price table rebuilt from the vendor's live coverage page</td><td>Data only. 131 rows → 157, nine band changes. <strong>The US row is knowingly stale</strong> &mdash; priced per state, and one row cannot represent it</td></tr>
+        <tr><td class="br">p5/t3</td><td>D1's reuse window: a stored copy is reused only while fresh</td><td><strong>The one to review hardest.</strong> It adds a constructor dependency, so it is the most likely to fail Spring wiring. Flag off by default; a refresh orphans the previous document, which is logged and not resolved</td></tr>
+        <tr><td class="br">p5/t4</td><td>Shipped defaults written down, with a test that ratchets them</td><td>Config plus one test. Turns nothing on. <code>document-search.create-client</code> stays off outside <code>development</code> until somebody decides otherwise</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="flag">
+    <span class="k">Reviewing the tests</span>
+    <p>Two branches have a genuine red-then-green history (O2's refusal assertions, O4's <code>expected &lt;2025-12-17&gt; but was &lt;null&gt;</code>, T2's three price assertions, T3's <em>Wanted but not invoked</em>). The rest add new code, so their first failure was a compile error and the commit messages say so rather than dressing it up. <strong>Verify from build output, not from <code>target/surefire-reports</code></strong> &mdash; a stale report once reported green for a fixture that had never compiled.</p>
+  </div>
+</section>
+
+<section id="merge">
+  <h2><span class="g">GATE 3</span> The merge train</h2>
+  <p class="sub">Nine PRs through one review queue was identified as the schedule risk on 5 September. It has not started, and there are 17 days left.</p>
+
+  <ol class="tasks" data-key="gate3">
+    <li><input type="checkbox" id="g3a"><div class="tbody"><div class="t">Decide: nine PRs, or one</div><div class="d">The stack is a readable series bottom-up, but nine round-trips through review is the thing most likely to miss 1 October. Squashing into one or two PRs trades reviewability for schedule &mdash; your call, and worth making explicitly rather than by default.</div></div></li>
+    <li><input type="checkbox" id="g3b"><div class="tbody"><div class="t">Merge into <code>dev</code> bottom-up</div><div class="d">This lifts the standing "nothing goes into dev" rule, which existed because P3 breaks the ordering UI. It only lifts once blocker 2 (the frontend) has a plan.</div></div></li>
+    <li><input type="checkbox" id="g3c"><div class="tbody"><div class="t">Mark #2305 ready</div><div class="d">It has deliberately been a draft so nobody could merge it early. It stays a draft until you are actively merging.</div></div></li>
+  </ol>
+</section>
+
+<section id="verify">
+  <h2><span class="g">GATE 4</span> Prove it runs &mdash; on dev, before staging</h2>
+  <p class="sub">Five of these nine branches have never started a JVM. 213 green unit tests say nothing about whether the Spring context comes up.</p>
+
+  <p><strong>Start positively.</strong> The obvious negative grep is not diagnostic: <code>UnsatisfiedDependencyException</code> matches any bean failure, most of them unrelated.</p>
+
+<pre>export AZURE_CLIENT_ID= AZURE_USER_USERNAME= AZURE_USER_PASSWORD=
+grep -c "Started Application in" &lt;log&gt;     # expect exactly 1</pre>
+
+  <p>The empty Azure vars matter: <code>application-development.properties:52</code> has an unguarded <code>${AZURE_USER_USERNAME}</code>, and unset it fails in a way that reads exactly like a bean cycle. Only if the count is 0 is the exception worth reading &mdash; and then read the <em>bean name</em>, not the type.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>From</th><th>Check</th><th>Pass looks like</th></tr></thead>
+      <tbody>
+        <tr><td class="br">o6</td><td>Order a German company</td><td><code>409 jurisdiction_not_available</code>, and no client, matter or link created</td></tr>
+        <tr><td class="br">o5</td><td>Documents with <code>includePending=true</code> on a sandbox-scoped box</td><td><code>503 pending_path_unavailable</code> &mdash; not an empty list</td></tr>
+        <tr><td class="br">o3</td><td>Place a sandbox order, read the link</td><td><code>chargedAt</code> set, <code>costSource=NOT_BILLABLE</code></td></tr>
+        <tr><td class="br">o4</td><td>Ingest, then read the acquisition</td><td><code>contentDate</code> populated, and the same date on the stored document</td></tr>
+        <tr><td class="br">t2</td><td><code>GET /jurisdictions</code></td><td>GB <code>19.00</code> Low · BR Medium · IL Low · KY High · VG <code>119.00</code>. If GB reads <code>18.00</code> the branch is not on the box</td></tr>
+        <tr><td class="br">t3</td><td>Leave the reuse flag off</td><td>A stored copy of any age is served; the ingestor is never called</td></tr>
+        <tr><td class="br">t4</td><td>Read the running config</td><td><code>create-client</code>, <code>create-enabled</code>, <code>ingestion.enabled</code>, <code>reuse.enabled</code> all false; <code>deny-jurisdictions=DE</code></td></tr>
+        <tr><td class="br">P3</td><td>Call with the vendor's case number and document number</td><td>Both <code>404</code>. The list returns <code>caseId</code> and <code>status</code>, never <code>caseCommonId</code></td></tr>
+        <tr><td class="br">o2</td><td><strong>Deliberately misconfigure it</strong> &mdash; arm ordering at the live vendor without the production profile</td><td>The app refuses to start. A money guard nobody has watched fire is an assumption, not a control</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="flag">
+    <span class="k">If you run the suite from a git worktree</span>
+    <p>Add <code>-Dmaven.gitcommitid.skip=true</code> or the build fails before compiling &mdash; <code>git-commit-id-plugin</code> 4.9.10 cannot read HEAD through a worktree's <code>.git</code> <em>file</em>, and the error mentions only the dotGitDirectory. And start Docker first: without it 14 <code>MongoTestContainer</code> classes die as <code>ExceptionInInitializerError</code>, which reads like anything but Docker.</p>
+  </div>
+</section>
+
+<section id="staging">
+  <h2><span class="g">GATE 5</span> Staging, then STP</h2>
+  <p class="sub">Only after gates 1 to 4 and all four blockers.</p>
+
+  <ol class="tasks" data-key="gate5">
+    <li><input type="checkbox" id="g5a"><div class="tbody"><div class="t">Create <code>know-your-customer-com-sandbox</code> in <code>bc-stg-vault</code></div><div class="d">JSON, shape <code>{"clientId": "...", "secret": "..."}</code> &mdash; the same mechanism as the production credential. Without it every vendor call on staging fails, and the failure appears only at call time.</div></div></li>
+    <li><input type="checkbox" id="g5b"><div class="tbody"><div class="t">Deploy and confirm it starts</div><div class="d">If it refuses, check the vendor config before anything else &mdash; see blocker 4.</div></div></li>
+    <li><input type="checkbox" id="g5c"><div class="tbody"><div class="t">Prove staging is on the sandbox, not the live vendor</div><div class="d">A GB search must return the five sandbox fixtures (<code>CROPWELL BISHOP CREAMERY LIMITED | 00364890</code> first). <strong>If it returns real Companies House rows, stop</strong> &mdash; staging is on the live vendor and every STP order will be billed.</div></div></li>
+    <li><input type="checkbox" id="g5d"><div class="tbody"><div class="t">Re-run the gate 4 checks on staging</div><div class="d">Same list. Staging is the first environment with a vendor config of its own, so the world-dependent ones (o5, o2) can behave differently here than on dev.</div></div></li>
+    <li><input type="checkbox" id="g5e"><div class="tbody"><div class="t">Confirm the Septeo note has gone out</div><div class="d">Then send the invitation, with the new contract shape stated in it: <code>caseId</code>, <code>status</code>, our document ids, and the two refusals they will meet.</div></div></li>
+  </ol>
+
+  <div class="flag stop">
+    <span class="k">The one thing staging still cannot prove</span>
+    <p>Every file the sandbox serves is the same <strong>904-byte stub</strong>. STP can exercise the whole contract on staging &mdash; ordering, polling, listing, downloading &mdash; and still never see a real registry document. Only one billable order against the production vendor settles that, and it settles three other open questions with it. It is not part of this runbook because it needs a decision, not a merge.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Sources: <code>HANDOVER_2026-09-14.md</code> (what has to be tested), <code>MEMO_2026-09-11_PHASE_STATUS.md</code> (phase status), <code>HANDOVER_2026-09-08-P3.md</code> (the P3 contract and the open list) in <code>betterco-worldwide</code>. Branch state, PR state and stack ancestry were measured against <code>betterco-backend</code> on 14 September 2026, not recalled. Ticking a box here is a private note to yourself &mdash; it stays in your browser and is not shared.
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var boxes = document.querySelectorAll('ol.tasks input[type=checkbox]');
+  function load(b) {
+    try { return localStorage.getItem('runbook:' + b.id) === '1'; } catch (e) { return false; }
+  }
+  function save(b) {
+    try { localStorage.setItem('runbook:' + b.id, b.checked ? '1' : '0'); } catch (e) {}
+  }
+  boxes.forEach(function (b) {
+    b.checked = load(b);
+    b.closest('li').classList.toggle('done', b.checked);
+    b.addEventListener('change', function () {
+      b.closest('li').classList.toggle('done', b.checked);
+      save(b);
+    });
+  });
+})();
+</script>
