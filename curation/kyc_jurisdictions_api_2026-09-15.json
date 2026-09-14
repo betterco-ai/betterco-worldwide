@@ -1,0 +1,4693 @@
+{
+ "jurisdictions": [
+  {
+   "code": "AX",
+   "name": "Aaland Islands",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "US-AL",
+   "name": "Alabama",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "AL",
+   "name": "Albania",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "AO",
+   "name": "Angola",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "AI",
+   "name": "Anguilla",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "AR",
+   "name": "Argentina",
+   "area": "South America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "US-AR",
+   "name": "Arkansas",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "AM",
+   "name": "Armenia",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Registration Certificate",
+      "Certificate enclosure",
+      "Charter"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "AW",
+   "name": "Aruba",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "AU",
+   "name": "Australia",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "AT",
+   "name": "Austria",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "AZ",
+   "name": "Azerbaijan",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "BS",
+   "name": "Bahamas",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "BH",
+   "name": "Bahrain",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "BY",
+   "name": "Belarus",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "BE",
+   "name": "Belgium",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Constitution",
+      "Annual Accounts",
+      "Change of Name"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "BZ",
+   "name": "Belize",
+   "area": "Central America",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "BM",
+   "name": "Bermuda",
+   "area": "Northern America",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "BO",
+   "name": "Bolivia",
+   "area": "South America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Incorporation",
+      "Annual Return"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "BQ",
+   "name": "Bonaire, Sint Eustatius and Saba",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "BA",
+   "name": "Bosnia and Herzegovina",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "BW",
+   "name": "Botswana",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "BR",
+   "name": "Brazil",
+   "area": "South America",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CA-BC",
+   "name": "British Columbia",
+   "area": null,
+   "parentCode": "CA",
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "BN",
+   "name": "Brunei Darussalam",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "BG",
+   "name": "Bulgaria",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "BF",
+   "name": "Burkina Faso",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "KH",
+   "name": "Cambodia",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "General Details",
+      "Addresses",
+      "Controlling Parties, Officers",
+      "Shareholders, Partners and Beneficial Owners"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CA",
+   "name": "Canada",
+   "area": "Northern America",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "KY",
+   "name": "Cayman Islands",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Company Identity"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "CL",
+   "name": "Chile",
+   "area": "South America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Constitution",
+      "Modification"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CN",
+   "name": "China",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Report"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CX",
+   "name": "Christmas Island",
+   "area": "Other",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CC",
+   "name": "Cocos (Keeling) Islands",
+   "area": "Other",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CO",
+   "name": "Colombia",
+   "area": "South America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-CO",
+   "name": "Colorado",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "US-CT",
+   "name": "Connecticut",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "CK",
+   "name": "Cook Islands",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "CR",
+   "name": "Costa Rica",
+   "area": "Central America",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "HR",
+   "name": "Croatia",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Historical Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CW",
+   "name": "Curaçao",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "CY",
+   "name": "Cyprus",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Memorandum and Articles in Foreign Language",
+      "Memorandum and Articles",
+      "Certificate of Incorporation"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CZ",
+   "name": "Czech Republic",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-DE",
+   "name": "Delaware",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "DK",
+   "name": "Denmark",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Report",
+      "Registration Certificate",
+      "Annual Accounts"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "DJ",
+   "name": "Djibouti",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "EC",
+   "name": "Ecuador",
+   "area": "South America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Shareholders Certificate"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "EE",
+   "name": "Estonia",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "ET",
+   "name": "Ethiopia",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "FO",
+   "name": "Faroe Islands",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "FJ",
+   "name": "Fiji",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Business Profile"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "FI",
+   "name": "Finland",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "US-FL",
+   "name": "Florida",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "FR",
+   "name": "France",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Memorandum & Articles of Association"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "PF",
+   "name": "French Polynesia",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "GE",
+   "name": "Georgia",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Registry Extract_English"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "DE",
+   "name": "Germany",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Official Registry Extract",
+      "List of Shareholders",
+      "Memorandum & Articles of Association",
+      "Registration Certificate",
+      "Articles of Association"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "GI",
+   "name": "Gibraltar",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Company Profile"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "GR",
+   "name": "Greece",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Articles of Association",
+      "YMS Document"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "GL",
+   "name": "Greenland",
+   "area": "Northern America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Registration Certificate",
+      "Annual Accounts"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "GP",
+   "name": "Guadeloupe",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "GG",
+   "name": "Guernsey",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "US-HI",
+   "name": "Hawaii",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "HN",
+   "name": "Honduras",
+   "area": "Central America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "HK",
+   "name": "Hong Kong S.A.R. China",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "HK CR Company Particulars",
+      "Certificate of Incorporation / Certificate of Incorporation issued in the place of incorporation",
+      "Certificate of Change of Name",
+      "NSC1 Allotment",
+      "Memorandum & Articles of Association",
+      "Annual Return (FNAR1) or FNNC1 (Incorporation Form)"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "HU",
+   "name": "Hungary",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "IS",
+   "name": "Iceland",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-ID",
+   "name": "Idaho",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "IN",
+   "name": "India",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Certificate of Incorporation",
+      "Certificate of Change of Name",
+      "Annual Return"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "ID",
+   "name": "Indonesia",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Original Document",
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-IA",
+   "name": "Iowa",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "IR",
+   "name": "Iran, Islamic Republic of",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "IQ",
+   "name": "Iraq",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "IE",
+   "name": "Ireland",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "B1 Annual Return",
+      "Company Constitution",
+      "A1 Application to Register as a New Company"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "IM",
+   "name": "Isle of Man",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Annual Return",
+      "Change In Director/Secretary",
+      "Registration Certificate",
+      "Memorandum of Association (only downloaded if no Annual Return filed yet)"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "IL",
+   "name": "Israel",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "IT",
+   "name": "Italy",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "JM",
+   "name": "Jamaica",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "JP",
+   "name": "Japan",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "JE",
+   "name": "Jersey",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registration Certificate",
+      "Certificate of Continuance (when Certificate of Incorporation is not available)",
+      "Certificate of Partnership (for Limited Partnership entities only)",
+      "Entity Profile"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "JO",
+   "name": "Jordan",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "KZ",
+   "name": "Kazakhstan",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-KY",
+   "name": "Kentucky",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "KE",
+   "name": "Kenya",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "KR",
+   "name": "Korea, Republic of",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "List of Major Stockholders"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "XK",
+   "name": "Kosovo",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "KW",
+   "name": "Kuwait",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "KG",
+   "name": "Kyrgyzstan",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Certificate"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "LA",
+   "name": "Lao People's Democratic Republic",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "LV",
+   "name": "Latvia",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "LS",
+   "name": "Lesotho",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "LI",
+   "name": "Liechtenstein",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "LU",
+   "name": "Luxembourg",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registration Extract",
+      "Articles of association",
+      "Registration Certificate",
+      "Annual Accounts"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MO",
+   "name": "Macau S.A.R. China",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MK",
+   "name": "Macedonia, Former Yugoslav Republic of",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MG",
+   "name": "Madagascar",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MY",
+   "name": "Malaysia",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Company/Business Profile"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MV",
+   "name": "Maldives",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MT",
+   "name": "Malta",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registration Certificate",
+      "Annual Return",
+      "Memorandum and Articles of Association"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MH",
+   "name": "Marshall Islands",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "MQ",
+   "name": "Martinique",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "US-MA",
+   "name": "Massachusetts",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "MU",
+   "name": "Mauritius",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "YT",
+   "name": "Mayotte",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "MX",
+   "name": "Mexico",
+   "area": "Central America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Incorporation"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-MN",
+   "name": "Minnesota",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "US-MS",
+   "name": "Mississippi",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "US-MO",
+   "name": "Missouri",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "MD",
+   "name": "Moldova, Republic of",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MC",
+   "name": "Monaco",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "ME",
+   "name": "Montenegro",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registration Document",
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MS",
+   "name": "Montserrat",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "MA",
+   "name": "Morocco",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Company Statutes"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "MM",
+   "name": "Myanmar",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "NP",
+   "name": "Nepal",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "NL",
+   "name": "Netherlands",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Company Registration Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "NC",
+   "name": "New Caledonia",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "US-NJ",
+   "name": "New Jersey",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "US-NM",
+   "name": "New Mexico",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "US-NY",
+   "name": "New York",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "NZ",
+   "name": "New Zealand",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "CA-NL",
+   "name": "Newfoundland and Labrador",
+   "area": null,
+   "parentCode": "CA",
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "NG",
+   "name": "Nigeria",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Company Profile",
+      "List of Officers",
+      "List of Persons with significant control"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-ND",
+   "name": "North Dakota",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "CA-NT",
+   "name": "Northwest Territories",
+   "area": null,
+   "parentCode": "CA",
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "NO",
+   "name": "Norway",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Annual Accounts",
+      "Certificate"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "OM",
+   "name": "Oman",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-OR",
+   "name": "Oregon",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "PK",
+   "name": "Pakistan",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Company Profile"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "PS",
+   "name": "Palestine, State of",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "PA",
+   "name": "Panama",
+   "area": "Central America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "PG",
+   "name": "Papua New Guinea",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "PY",
+   "name": "Paraguay",
+   "area": "South America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "PE",
+   "name": "Peru",
+   "area": "South America",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Legal representative"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "PH",
+   "name": "Philippines",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Articles of Partnership (for partnership type only)",
+      "Certificate"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "PL",
+   "name": "Poland",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Register Report"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "PT",
+   "name": "Portugal",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "PR",
+   "name": "Puerto Rico",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "Registry Extract",
+      "Certificate of Change of Name"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "QA",
+   "name": "Qatar",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "RE",
+   "name": "Reunion",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "US-RI",
+   "name": "Rhode Island",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "RO",
+   "name": "Romania",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "RU",
+   "name": "Russian Federation",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "VC",
+   "name": "Saint Vincent and the Grenadines",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "WS",
+   "name": "Samoa",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "SM",
+   "name": "San Marino",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "SN",
+   "name": "Senegal",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "RS",
+   "name": "Serbia",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "SC",
+   "name": "Seychelles",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "SG",
+   "name": "Singapore",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Business Profile"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "SK",
+   "name": "Slovakia",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "SI",
+   "name": "Slovenia",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "SB",
+   "name": "Solomon Islands",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "Registry Extract",
+      "Certificate of Change of Name"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "ZA",
+   "name": "South Africa",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "ES",
+   "name": "Spain",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "LK",
+   "name": "Sri Lanka",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Annual Return",
+      "Form 1 - Application of Registration of a Company"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "SE",
+   "name": "Sweden",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "High",
+   "priceUsd": 89.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Register Report",
+      "Memorandum & Articles of Association"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "CH",
+   "name": "Switzerland",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract",
+      "Company Registration"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "TW",
+   "name": "Taiwan, China",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Report",
+      "Registry Report_English"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "TH",
+   "name": "Thailand",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Company Information Report",
+      "Financial Statement Report",
+      "Investment by Nationality Report",
+      "Information Change Tracking Report",
+      "List of Shareholders"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "TG",
+   "name": "Togo",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "TO",
+   "name": "Tonga",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "Registry Extract",
+      "Certificate of Change of Name"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "TT",
+   "name": "Trinidad and Tobago",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "TN",
+   "name": "Tunisia",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "TR",
+   "name": "Turkey",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "UA",
+   "name": "Ukraine",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "AE",
+   "name": "United Arab Emirates",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "GB",
+   "name": "United Kingdom",
+   "area": "Europe",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "New Incorporation",
+      "CS01",
+      "Annual Return",
+      "Form SH01 Return of Allotment of Shares",
+      "Form SH03 Notify a purchase of own shares",
+      "Form SH06 Notify a cancellation of shares",
+      "Accounts",
+      "Certificate of Change of Name"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US",
+   "name": "United States of America",
+   "area": "Northern America",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": null,
+   "currency": "usd",
+   "buyable": false,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "UZ",
+   "name": "Uzbekistan",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "VU",
+   "name": "Vanuatu",
+   "area": "Oceania",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Certificate of Incorporation",
+      "Registry Extract",
+      "Certificate of Change of Name"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "US-VT",
+   "name": "Vermont",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "VN",
+   "name": "Viet Nam",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  },
+  {
+   "code": "VG",
+   "name": "Virgin Islands (British)",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Premium",
+   "priceUsd": 119.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": true,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "VI",
+   "name": "Virgin Islands (U.S.)",
+   "area": "Caribbean",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "US-WV",
+   "name": "West Virginia",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "US-WI",
+   "name": "Wisconsin",
+   "area": null,
+   "parentCode": "US",
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "unknown",
+     "documents": []
+    },
+    "controllingEntities": {
+     "state": "unknown"
+    },
+    "beneficialOwners": {
+     "state": "unknown"
+    }
+   }
+  },
+  {
+   "code": "YE",
+   "name": "Yemen",
+   "area": "Asia",
+   "parentCode": null,
+   "tier": "Low",
+   "priceUsd": 19.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": false,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "not-included"
+    },
+    "beneficialOwners": {
+     "state": "not-included"
+    }
+   }
+  },
+  {
+   "code": "ZM",
+   "name": "Zambia",
+   "area": "Africa",
+   "parentCode": null,
+   "tier": "Medium",
+   "priceUsd": 49.0,
+   "currency": "usd",
+   "buyable": true,
+   "searchable": true,
+   "searchSlow": false,
+   "recordIncludes": {
+    "registryFilings": {
+     "state": "included",
+     "documents": [
+      "Registry Extract"
+     ]
+    },
+    "controllingEntities": {
+     "state": "included"
+    },
+    "beneficialOwners": {
+     "state": "included"
+    }
+   }
+  }
+ ],
+ "searchMaxSeconds": 120
+}

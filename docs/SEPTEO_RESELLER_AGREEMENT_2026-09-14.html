@@ -1,0 +1,1070 @@
+<title>Founders1–STP Reseller Agreement</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:#6895FF; --blue-dark:#4a6fc7; --blue-light:#e8efff;
+    --navy:#1a2340; --dark:#222233;
+    --gray-600:#6b7280; --gray-400:#9ca3af; --gray-200:#e5e7eb;
+    --gray-100:#f3f4f6; --gray-50:#f9fafb; --white:#ffffff;
+    --amber:#8a6a12; --amber-bg:#fffaed;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Montserrat', system-ui, sans-serif; -webkit-font-smoothing:antialiased;
+    color:var(--dark); background:var(--gray-100);
+    padding:24px 16px 60px;
+  }
+  .page {
+    width:210mm; max-width:100%; min-height:297mm; margin:0 auto; background:var(--white);
+    box-shadow:0 2px 20px rgba(0,0,0,.08); padding:25mm 22mm 20mm; position:relative;
+  }
+  @media (max-width:720px) { .page { padding:22px 18px 28px; min-height:0; } }
+
+  .doc-header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:6px; padding-bottom:14px; border-bottom:3px solid var(--blue); }
+  .doc-header h1 { font-size:26px; font-weight:800; color:var(--navy); line-height:1.15; }
+  .doc-header .kicker { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--blue); margin-bottom:5px; }
+  .doc-header img { height:22px; flex-shrink:0; }
+  .doc-meta { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:14px 0 0; font-size:11px; color:var(--gray-600); line-height:1.7; }
+  .doc-meta strong { color:var(--dark); font-weight:600; }
+  .doc-meta .right { text-align:right; }
+  @media (max-width:560px) { .doc-meta { grid-template-columns:1fr; } .doc-meta .right { text-align:left; } }
+  .party-line { width:100%; font-size:10px; color:var(--gray-600); line-height:1.7; margin:6px 0 0; display:flex; justify-content:space-between; gap:12px; }
+  .party-line b { color:var(--dark); }
+  .doc-date { font-size:10px; color:var(--gray-600); text-align:right; margin:10px 0 18px; }
+  .lead { font-size:10.5px; color:var(--dark); line-height:1.7; margin:0 0 18px; }
+  .lead strong { font-weight:700; color:var(--navy); }
+
+  .section { margin-bottom:16px; }
+  .section h2 { font-size:13px; font-weight:700; color:var(--navy); padding-bottom:4px; border-bottom:2px solid var(--blue); margin-bottom:9px; }
+  .section h2 .sec-num { color:var(--blue); margin-right:5px; }
+
+  .clauses { display:grid; gap:7px; }
+  .cl { display:grid; grid-template-columns:30px 1fr; gap:8px; font-size:10.5px; line-height:1.65; }
+  .cl > .n { color:var(--blue); font-weight:700; font-variant-numeric:tabular-nums; }
+  .cl p { margin:0; }
+  .cl strong { font-weight:700; color:var(--navy); }
+  .cl em { font-style:normal; font-weight:600; }
+
+  .cl > .annexlist { grid-column:2; }
+  .annexlist { display:grid; grid-template-columns:max-content minmax(0,1fr); gap:5px 12px; width:100%; font-size:10.5px; line-height:1.6; margin-top:4px; }
+  .annexlist dt { color:var(--blue); font-weight:700; }
+  .annexlist dd { margin:0; }
+  .annexlist .status { color:var(--gray-400); }
+
+  .sig-grid { display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:20px; }
+  @media (max-width:560px) { .sig-grid { grid-template-columns:1fr; gap:20px; } }
+  .sig-block h4 { font-size:10.5px; font-weight:700; color:var(--navy); margin-bottom:6px; }
+  .sig-line { border-bottom:1px solid var(--gray-200); height:44px; margin-bottom:3px; }
+  .sig-label { font-size:8.5px; color:var(--gray-400); }
+
+  .footnotes { margin-top:12px; font-size:7.5px; color:var(--gray-400); line-height:1.5; }
+  .doc-footer { margin-top:16px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; gap:12px; font-size:8px; color:var(--gray-400); flex-wrap:wrap; }
+
+  .internal { width:210mm; max-width:100%; margin:18px auto 0; background:var(--amber-bg); border:1px solid var(--gray-200); border-left:4px solid var(--amber); border-radius:6px; padding:16px 20px; }
+  .internal .stamp { font-size:8.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--amber); margin-bottom:10px; }
+  .internal h3 { font-size:12px; font-weight:700; color:var(--navy); margin-bottom:10px; }
+  .internal dl { display:grid; gap:9px; }
+  .internal dt { font-size:10.5px; font-weight:700; color:var(--navy); }
+  .internal dd { font-size:10px; color:var(--gray-600); line-height:1.6; margin:2px 0 0; }
+
+  .page + .page { margin-top:26px; }
+  .tablewrap { overflow-x:auto; margin:4px 0 10px; }
+  .price-table { width:100%; border-collapse:collapse; font-size:10.5px; line-height:1.45; }
+  .price-table thead th { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:var(--white); background:var(--navy); padding:7px 9px; text-align:left; }
+  .price-table tbody tr { border-bottom:1px solid var(--gray-100); }
+  .price-table tbody td { padding:6px 9px; vertical-align:top; }
+  .price-table td.lead-col { font-weight:700; color:var(--navy); white-space:nowrap; }
+  .price-table td.price, .price-table th.price { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+  .price-table td.price { font-weight:700; width:130px; }
+  .price-table td.klass { font-weight:800; color:var(--blue); width:56px; }
+  .price-table td.empty { color:var(--gray-400); }
+  ul.ticks { list-style:none; margin:6px 0 10px; padding:0; font-size:10.5px; line-height:1.65; }
+  ul.ticks li { padding-left:14px; position:relative; margin-bottom:6px; }
+  ul.ticks li::before { content:'\203A'; position:absolute; left:0; color:var(--blue); font-weight:700; }
+  ol.steps { list-style:none; counter-reset:s; margin:6px 0 0; padding:0; font-size:10.5px; line-height:1.7; }
+  ol.steps > li { counter-increment:s; position:relative; padding-left:20px; margin-bottom:9px; }
+  ol.steps > li::before { content:counter(s); position:absolute; left:0; top:0; color:var(--blue); font-weight:700; }
+  .states { font-family:'Courier New', monospace; font-size:9.5px; color:var(--navy); background:var(--blue-light); padding:6px 9px; border-radius:4px; margin-top:5px; display:inline-block; }
+  .card { background:var(--gray-50); border-radius:8px; padding:11px 13px; border:1px solid var(--gray-200); margin:4px 0 10px; }
+  .card h4 { font-size:10.5px; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .card p { font-size:10px; color:var(--gray-600); line-height:1.6; margin:0 0 6px; }
+  .card p:last-child { margin-bottom:0; }
+  .card strong { color:var(--navy); font-weight:700; }
+  .section p { font-size:10.5px; line-height:1.7; margin-bottom:8px; }
+  .section p:last-child { margin-bottom:0; }
+  .section strong { font-weight:700; color:var(--navy); }
+  .section em { font-style:italic; }
+
+  .reg-title { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--gray-400); margin:10px 0 5px; }
+  .reg-title span { color:var(--blue); margin-left:4px; }
+  .chips { display:flex; flex-wrap:wrap; gap:3px; }
+  .chip { display:inline-flex; align-items:baseline; gap:4px; font-size:8.5px; line-height:1.3; padding:2px 6px; border:1px solid var(--gray-200); border-radius:10px; color:var(--gray-600); background:var(--white); }
+  .chip b { font-weight:700; color:var(--gray-400); }
+  .chip.stp { border-color:var(--blue); background:var(--blue-light); color:var(--navy); font-weight:600; }
+  .chip.stp b { color:var(--blue-dark); }
+  .chip.inline { padding:1px 5px; }
+  .price-table td.soft { color:var(--gray-400); font-weight:500; }
+  ul.states-list { margin:5px 0 0; }
+  ul.states-list li { margin-bottom:3px; font-size:10px; }
+  ul.states-list b { color:var(--navy); font-weight:700; }
+
+  @media print {
+    .page { break-before:page; }
+    .page:first-of-type { break-before:auto; }
+    * { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+    body { background:var(--white) !important; padding:0; }
+    .page { margin:0; box-shadow:none; padding:4mm 0; width:100%; min-height:auto; }
+    .internal { display:none !important; }
+    .section, .sig-grid { break-inside:avoid; }
+  }
+  @page { size:A4; margin:18mm 20mm 24mm; }
+</style>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Reseller Agreement</div>
+      <h1>Reselling of company registry<br>documents and registry data</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo">
+  </div>
+
+  <div class="doc-meta">
+    <div><strong>Reseller:</strong><br>
+      STP Business Information GmbH<br>
+      Brauerstraße 12, 76135 Karlsruhe<br>
+      AG Mannheim · HRB 110915 · VAT ID DE227238030<br>
+      Managing Directors: Fabian Padilla Crisol, Laurent Rueff, Martin Ripke</div>
+    <div class="right"><strong>Supplier:</strong><br>
+      Founders1 GmbH<br>
+      Berger Str. 224, 60385 Frankfurt<br>
+      AG Charlottenburg (Berlin) · HRB 234373 B · VAT ID DE347408472<br>
+      Managing Director: Eckhard Ortwein</div>
+  </div>
+  <div class="party-line">
+    <span>hereinafter <b>STP</b></span>
+    <span>hereinafter <b>Founders1</b></span>
+  </div>
+  <div class="doc-date">Draft · 14 September 2026</div>
+
+  <p class="lead">
+    <strong>Founders1 GmbH</strong> (&#8220;Founders1&#8221;) operates <strong>BetterCo</strong>, the platform through which
+    it procures company registry documents and structured registry data from official registers and other
+    procurement routes, holds them, and delivers them with provenance. Throughout this Agreement,
+    <em>Founders1</em> is the contracting party and <em>BetterCo</em> is the service STP connects to.
+    STP supplies software and information services to legal, notarial and tax practices and wishes to
+    offer that service to its clients in its own name. Annex 1 describes the service; this Agreement sets
+    the terms on which STP resells it.
+  </p>
+
+  <div class="section">
+    <h2><span class="sec-num">1</span> Definitions</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">1.1</span><p><strong>Affiliate</strong> — an undertaking affiliated with a party within the meaning of §§ 15 ff. AktG. <strong>Septeo Group</strong> — Septeo SAS and its Affiliates.</p></div>
+      <div class="cl"><span class="n">1.2</span><p><strong>Case</strong> — one order for one company in one jurisdiction, as defined in Annex 1.</p></div>
+      <div class="cl"><span class="n">1.3</span><p><strong>Documents</strong> — the registry documents and structured registry data delivered under a Case, together with their provenance metadata.</p></div>
+      <div class="cl"><span class="n">1.4</span><p><strong>End Client</strong> — a client of STP or of a Permitted Affiliate to whom the service is resold.</p></div>
+      <div class="cl"><span class="n">1.5</span><p><strong>Platform</strong> — the BetterCo platform, its API, and the coverage and routing data behind it.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">2</span> Subject matter</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">2.1</span><p>Founders1 provides the service described in Annex 1. STP resells it in its own name and for its own account.</p></div>
+      <div class="cl"><span class="n">2.2</span><p>The Annexes form part of this Agreement. In case of conflict, this Agreement prevails over the Annexes, and Annex 1 prevails over the remaining Annexes.</p></div>
+      <div class="cl"><span class="n">2.3</span><p>STP's general terms and conditions of purchase do not apply, including where STP refers to them in an order or acceptance.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">3</span> Grant of rights</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">3.1</span><p><strong>Resale right.</strong> Founders1 grants STP the <strong>non-exclusive</strong>, non-transferable right, for the term of this Agreement, to market, sell, invoice and deliver the service to End Clients <strong>in its own name and for its own account</strong>.</p></div>
+      <div class="cl"><span class="n">3.2</span><p><strong>API licence.</strong> Founders1 grants STP the non-exclusive right to access and use the API for the purpose of clause 3.1. This is not a licence to the Platform, to the coverage and routing data, or to the jurisdiction and document-kind classification.</p></div>
+      <div class="cl"><span class="n">3.3</span><p><strong>Own brand.</strong> STP presents the service under its own name and brand. This Agreement grants no licence to any mark of Founders1, and no authority to act for Founders1 or to make representations about the service beyond Annex 1.</p></div>
+      <div class="cl"><span class="n">3.4</span><p><strong>Field of use.</strong> The rights under clause 3.1 apply to the provision of company-information, onboarding, KYC/AML and client-file services to professional End Clients. Professional End Clients include legal, notarial and tax practices, and <strong>regulated institutions such as banks, payment and financial services institutions, insurers and funds</strong>, in each case using the service to discharge their own obligations in respect of their own customers, counterparties and suppliers. The rights do not extend to resale to data vendors, data brokers, or providers of competing registry-aggregation services, nor to an End Client providing the service or the Documents onward as a service to its own customers (clause&nbsp;3.5, Annex&nbsp;5).</p></div>
+      <div class="cl"><span class="n">3.5</span><p><strong>End Client rights.</strong> STP may grant each End Client a non-exclusive right to use the Documents delivered for that End Client for its own KYC/AML, onboarding, advisory and record-retention purposes. <strong>Each End Client may retain those Documents for as long as its statutory retention obligation requires, including after this Agreement ends</strong> (Annex&nbsp;5). Beyond that, the rights follow what Founders1 holds in the underlying content; Founders1 states the applicable scope with each Document.</p></div>
+      <div class="cl"><span class="n">3.6</span><p><strong>Non-exclusivity.</strong> Founders1 remains free to provide the service directly and through other resellers, in any market, including to clients of the kind STP serves.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">4</span> Septeo Group scope</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">4.1</span><p>Members of the Septeo Group may exercise the rights under clauses 3.1 to 3.5 as <strong>Permitted Affiliates</strong>. STP notifies Founders1 in text form of the affiliate to be admitted; it becomes a Permitted Affiliate upon confirmation by Founders1, which will not be unreasonably withheld. Admitted affiliates are listed in Annex 4.</p></div>
+      <div class="cl"><span class="n">4.2</span><p>STP remains the <strong>sole contracting and billing party</strong>. All orders are placed through STP's account and all invoices are issued to STP. Founders1 enters into no contractual relationship with a Permitted Affiliate.</p></div>
+      <div class="cl"><span class="n">4.3</span><p>STP is liable for the acts and omissions of Permitted Affiliates under this Agreement as for its own.</p></div>
+      <div class="cl"><span class="n">4.4</span><p>An entity leaving the Septeo Group ceases to be a Permitted Affiliate at that point. Clause 3.5 remains unaffected for Documents already delivered.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">5</span> Restrictions</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">5.1</span><p>Documents are delivered for the file of the individual End Client. STP will not redistribute them beyond that file, will not resell or license the structured data as a dataset, and will not perform bulk extraction.</p></div>
+      <div class="cl"><span class="n">5.2</span><p>STP will not use the Documents, the coverage classification, or the availability information obtained through the Platform to build, train, operate or supply a competing registry-aggregation, coverage or document-procurement product, whether itself or for a third party.</p></div>
+      <div class="cl"><span class="n">5.3</span><p>STP will not cache or store Documents in order to serve later orders of End Clients outside the re-use mechanism set out in Annex 1. Retention in the End Client's own file under clause 3.5 is unaffected.</p></div>
+      <div class="cl"><span class="n">5.4</span><p>Sub-distribution is permitted only under clause 4.</p></div>
+      <div class="cl"><span class="n">5.5</span><p>Reverse engineering of the Platform or API is permitted only within the limits of mandatory law (§ 69e UrhG).</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">6</span> Procurement routes and non-circumvention</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">6.1</span><p>The identity of the registers, suppliers and routes through which Founders1 procures is confidential business information of Founders1. During the term and for <strong>24 months</strong> thereafter, STP will not seek to identify them, approach them, or contract with them for services of the kind covered by this Agreement.</p></div>
+      <div class="cl"><span class="n">6.2</span><p>During the same period, Founders1 will not use the identity of End Clients disclosed to it through Cases in order to solicit those End Clients for services of the kind covered by this Agreement. Founders1's existing client relationships and clause 3.6 remain unaffected.</p></div>
+      <div class="cl"><span class="n">6.3</span><p>Founders1 may add, change or discontinue procurement routes at any time, provided the service continues to meet Annex 1.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">7</span> Ordering and performance</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">7.1</span><p>Cases are placed and delivered as described in Annex 1. Procurement is <strong>asynchronous</strong>; progress is reported per document kind.</p></div>
+      <div class="cl"><span class="n">7.2</span><p>No fixed turnaround time is owed where a jurisdiction is served by a manual registry route. Expected ranges per jurisdiction are stated in Annex 2. Founders1 notifies STP where a Case materially exceeds the stated range.</p></div>
+      <div class="cl"><span class="n">7.3</span><p>Founders1 targets an API availability of <strong>99 % per calendar month</strong>, excluding announced maintenance and unavailability of a register or route.</p></div>
+      <div class="cl"><span class="n">7.4</span><p>Founders1 may decline or abort a Case where the register is unavailable, the jurisdiction or document kind is not covered, or the order would breach applicable law or sanctions (settlement: clause&nbsp;8.7).</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">8</span> Revenue share, invoicing, price changes</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">8.1</span><p><strong>STP sets its prices towards End Clients at its own discretion.</strong> Founders1 does not prescribe an end-client price and does not publish one.</p></div>
+      <div class="cl"><span class="n">8.2</span><p><strong>Revenue share.</strong> For every Case, the <em>Net Amount</em> is the amount STP invoices to the End Client for that Case &mdash; net of VAT and of documented credits and refunds &mdash; <strong>less the procurement cost</strong> for that jurisdiction under Annex&nbsp;2.1. STP pays Founders1 that procurement cost <strong>plus 50&nbsp;% of the Net Amount</strong>, and retains the other 50&nbsp;%. The procurement cost is thus borne by the Case before the parties share what it earns, and each party carries half of it.</p></div>
+      <div class="cl"><span class="n">8.3</span><p><strong>Floor.</strong> Where the amount STP invoices to the End Client for a Case does not exceed the procurement cost for that jurisdiction, STP pays Founders1 that procurement cost and no share arises under clause&nbsp;8.2. No Case is settled below cost, and in no event does Founders1 owe STP a share.</p></div>
+      <div class="cl"><span class="n">8.4</span><p><strong>Minimum.</strong> Founders1's <strong>share</strong> &mdash; the amounts payable to it under clauses 8.2 and 8.3 less the procurement cost reimbursed in them &mdash; totals at least <strong>EUR&nbsp;1.500 per month</strong>. Any shortfall is invoiced with the following month. The minimum applies from the third full month after the effective date.</p></div>
+      <div class="cl"><span class="n">8.5</span><p><strong>Reporting and invoicing.</strong> STP reports monthly, per Case, the amount invoiced to the End Client. STP may identify the End Client by its own reference rather than by name; Founders1 does not require End Client identities for settlement. Founders1 invoices monthly in arrears on that basis, itemised per Case. Payment is due <strong>14 days</strong> net; amounts are exclusive of VAT at the statutory rate. Once a year Founders1 may ask STP to reconcile the reported amounts against its billing records.</p></div>
+      <div class="cl"><span class="n">8.6</span><p><strong>Cost changes.</strong> The procurement costs in Annex&nbsp;2a are fixed for <strong>12 months</strong> from the effective date, <strong>except for any jurisdiction that Annex&nbsp;2.1 states is not on a tier</strong>, for which the cost is provisional until a schedule is agreed; thereafter Founders1 may change them on 60 days' notice. Where a register or route changes its own fees, Founders1 may adjust the affected jurisdiction on 30 days' notice, evidencing the change; STP may then terminate that jurisdiction within 14 days of the notice.</p></div>
+      <div class="cl"><span class="n">8.7</span><p><strong>Cases that deliver no Document.</strong> Where Founders1 declines or aborts a Case under clause&nbsp;7.4 before procurement, nothing is charged. Where a Case is procured and the register holds no such document, so that the answer is a definitive &bdquo;not available&ldquo;, STP pays the procurement cost for that jurisdiction; no share arises. Where a Case fails for reasons within Founders1's control, nothing is charged. Amounts payable under this clause are reimbursements and do not count towards the minimum in clause&nbsp;8.4.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">9</span> STP's obligations</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">9.1</span><p><strong>Pass-through.</strong> STP ensures that its terms with each End Client include, in substance, the terms set out in <strong>Annex&nbsp;5</strong>, and grants no End Client rights exceeding clause&nbsp;3.5. STP is free to choose its own wording and to include those terms in its general terms of business; it does not have to reproduce Annex&nbsp;5 verbatim or disclose this Agreement. Annex&nbsp;5 obliges STP; it creates no direct contractual relationship between Founders1 and an End Client.</p></div>
+      <div class="cl"><span class="n">9.2</span><p>STP provides first-level support to End Clients. Founders1 provides second-level support to STP during business hours.</p></div>
+      <div class="cl"><span class="n">9.3</span><p>STP makes no statements to End Clients about coverage, evidence value, currency or turnaround that go beyond Annex 1.</p></div>
+      <div class="cl"><span class="n">9.4</span><p>STP informs Founders1 without undue delay of End Client complaints concerning the content or provenance of a Document.</p></div>
+      <div class="cl"><span class="n">9.5</span><p><strong>Regulated End Clients.</strong> Where an End Client is subject to supervisory requirements on outsourcing or on ICT third-party risk, STP meets those requirements towards that End Client itself. STP does not agree on Founders1's behalf, and does not represent that Founders1 has agreed, to audit or inspection rights, to disclosure of procurement routes or sub-suppliers, to exit or transition assistance, to incident-reporting or notification periods, or to entries in a register of information, unless Founders1 has agreed in writing. Founders1 will consider such a request in good faith, and will not unreasonably refuse what the End Client's supervisory position genuinely requires. Towards the End Client, <strong>STP is the supplier</strong>: STP contracts with the End Client in its own name and for its own account (clauses 2.1 and 3.1), Founders1 is STP's own supplier and has no contractual relationship with the End Client, and parties Founders1 engages for procurement are Founders1's sub-suppliers — not STP's and not the End Client's — consistent with clauses 6.1 and Annex&nbsp;3.1.</p></div>
+      <div class="cl"><span class="n">9.6</span><p><strong>Supervisory cooperation.</strong> Where an End Client's supervisory position genuinely requires information or undertakings from Founders1, STP requests them from Founders1 and Founders1 provides, within a reasonable period: its service and security documentation, the information needed for the End Client's register of information in respect of Founders1 as STP's supplier, notification of ICT incidents affecting the service, and reasonable support for STP's own exit planning. Audit and inspection rights are exercised <strong>through STP</strong> and are satisfied in the first instance by documentation, by a third-party certification or report where held, or by a pooled audit serving several of STP's clients. An on-site audit at Founders1 requires reasonable notice, is limited to the service, may be conducted by an independent auditor bound to confidentiality, and does not extend to the identity of procurement routes (clause&nbsp;6.1). Founders1 may charge its reasonable cost for effort going beyond the documentation named above.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">10</span> Data protection</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">10.1</span><p>Documents contain personal data of directors, shareholders and beneficial owners. The parties act as <strong>independent controllers</strong> within the meaning of Art. 4 No. 7 GDPR. This Agreement establishes no processing on behalf of a controller under Art. 28 GDPR.</p></div>
+      <div class="cl"><span class="n">10.2</span><p>Each party is responsible for the lawfulness of its own processing, for its own information duties, and for assessing its own reliance on Art. 14 (5) GDPR.</p></div>
+      <div class="cl"><span class="n">10.3</span><p>The arrangement under Art. 26 / Art. 14 GDPR and the technical and organisational measures are set out in Annex 3.</p></div>
+      <div class="cl"><span class="n">10.4</span><p>Each party informs the other without undue delay of a personal data breach affecting data received from the other, and forwards data-subject requests that the other must answer.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">11</span> Confidentiality</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">11.1</span><p>Each party keeps the other's confidential information secret and uses it only for the purposes of this Agreement, during the term and for <strong>five years</strong> thereafter. The prices in Annex 2 and the information covered by clause 6.1 are confidential.</p></div>
+      <div class="cl"><span class="n">11.2</span><p>The obligation does not apply to information that is public, was already lawfully known, is independently developed, or must be disclosed by law or authority; in the last case the other party is informed in advance where permitted.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">12</span> Warranty</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">12.1</span><p>Founders1 warrants that it procures with professional diligence and that the <strong>provenance metadata</strong> delivered with each Document — source reference, retrieval date, content date, evidence level, version — is accurate.</p></div>
+      <div class="cl"><span class="n">12.2</span><p>Founders1 does <strong>not</strong> warrant the accuracy, completeness or currency of the content of the register itself, nor that a given document exists in a given jurisdiction or for a given legal form. What is owed is the classification and the answer set out in Annex 1, including the answer “not available”.</p></div>
+      <div class="cl"><span class="n">12.3</span><p>A defect exists where a Document does not correspond to the order or to its provenance metadata. Founders1 remedies it by re-procuring at no charge or by crediting the price of the Case.</p></div>
+      <div class="cl"><span class="n">12.4</span><p><strong>No guarantee.</strong> The undertakings in this clause 12 are contractual obligations. They are <strong>not guarantees (Garantien) or warranted characteristics within the meaning of clause&nbsp;13.1</strong>, and neither party's conduct is to be construed as assuming one. Liability for their breach follows clause&nbsp;13.2.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">13</span> Liability</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">13.1</span><p>Founders1 is liable without limitation for intent and gross negligence, for injury to life, body or health, under the Produkthaftungsgesetz, for guarantees given, and for fraudulently concealed defects.</p></div>
+      <div class="cl"><span class="n">13.2</span><p>In cases of slight negligence Founders1 is liable only for breach of an obligation essential to the purpose of this Agreement, limited to the foreseeable damage typical for this type of contract, and in aggregate per contract year to <strong>Founders1's share under clause&nbsp;8.2 in the preceding twelve months</strong>. Procurement cost reimbursed to Founders1 under clauses 8.2, 8.3 and 8.7 is a pass-through of third-party cost and does not form part of that amount.</p></div>
+      <div class="cl"><span class="n">13.3</span><p>Founders1 is not liable for decisions taken by STP or an End Client on the basis of registry content, nor for the regulatory consequences of an End Client's own AML assessment.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">14</span> Term and termination</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">14.1</span><p>The Agreement begins on signature and runs for an initial term of <strong>24 months</strong>. It renews by 12 months at a time unless terminated with three months' notice to the end of a term.</p></div>
+      <div class="cl"><span class="n">14.2</span><p>The right to terminate for cause remains unaffected.</p></div>
+      <div class="cl"><span class="n">14.2a</span><p><strong>Loss of supply.</strong> Where Founders1 permanently loses the ability to procure in a jurisdiction, it notifies STP without undue delay and that jurisdiction falls away; STP owes nothing further for it. Where this affects jurisdictions accounting for more than half of the Cases placed in the preceding six months, either party may terminate this Agreement on 30 days' notice, and the minimum under clause&nbsp;8.4 does not accrue after that notice.</p></div>
+      <div class="cl"><span class="n">14.3</span><p>On termination the right to place Cases ends. <strong>Clause 3.5 survives for Documents already delivered.</strong> STP may export its Case records for 90 days. Clauses 5, 6, 10, 11 and 13 survive.</p></div>
+      <div class="cl"><span class="n">14.4</span><p>Documents held by Founders1 are retained and deleted according to the retention rules in Annex 1.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">15</span> Final provisions</h2>
+    <div class="clauses">
+      <div class="cl"><span class="n">15.1</span><p>Amendments require written form, including any amendment of this clause. There are no side agreements.</p></div>
+      <div class="cl"><span class="n">15.2</span><p>Neither party may assign this Agreement without the other's consent, except to an Affiliate or a successor in the business concerned.</p></div>
+      <div class="cl"><span class="n">15.3</span><p>German law applies, excluding the UN Convention on Contracts for the International Sale of Goods. Place of jurisdiction is <strong>Frankfurt am Main</strong>.</p></div>
+      <div class="cl"><span class="n">15.4</span><p>Should a provision be or become invalid, the remainder stays in force.</p></div>
+      <div class="cl"><span class="n">15.5</span><p><strong>Independent parties.</strong> STP acts as an independent reseller in its own name and for its own account (clause&nbsp;2.1), sets its own prices (clause&nbsp;8.1), bears the credit risk on its End Clients, and decides for itself whether and on what terms to conclude. This Agreement establishes no commercial agency (Handelsvertreterverhältnis), no commission agency (Kommission), no partnership, no joint venture and no company under German law. Neither party may bind the other. STP is not obliged to transfer its End Client base to Founders1 during the term or on termination; information about End Clients transmitted under clause&nbsp;8.5 serves settlement and audit only and is subject to clause&nbsp;6.2.</p></div>
+      <div class="cl"><span class="n">15.6</span><p>Annexes, each forming part of this Agreement:</p></div>
+      <div class="cl"><span class="n"></span><dl class="annexlist">
+          <dt>Annex 1</dt><dd>Service description and reseller use</dd>
+          <dt>Annex 2</dt><dd>Jurisdictions, procurement costs, surcharges, turnaround and end-client rights</dd>
+          <dt>Annex 3</dt><dd>Data protection arrangement between independent controllers</dd>
+          <dt>Annex 2a</dt><dd>Price list &mdash; procurement costs per case; incorporated, dated at signature, amended only under clause&nbsp;8.6, confidential under clause&nbsp;11</dd>
+          <dt>Annex 4</dt><dd>Permitted Affiliates <span class="status">— empty at signature</span></dd>
+          <dt>Annex 5</dt><dd>End-client terms to be passed through</dd>
+        </dl></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sig-grid">
+      <div class="sig-block"><h4>Founders1 GmbH</h4><div class="sig-line"></div><div class="sig-label">Place, date, signature — Eckhard Ortwein</div></div>
+      <div class="sig-block"><h4>STP Business Information GmbH</h4><div class="sig-line"></div><div class="sig-label">Place, date, signature</div></div>
+    </div>
+  </div>
+
+  <div class="footnotes">All amounts excluding VAT. &nbsp;&#183;&nbsp; Non-exclusive resale, 50&nbsp;% revenue share with a monthly minimum. &nbsp;&#183;&nbsp; Septeo Group affiliates admitted per clause 4 and Annex 4. &nbsp;&#183;&nbsp; Draft for legal review.</div>
+  <div class="doc-footer">
+    <span>Founders1 GmbH · Berger Str. 224, 60385 Frankfurt · HRB 234373 B</span>
+    <span>www.betterco.ai — strictly confidential</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Annex 1 to the Reseller Agreement</div>
+      <h1>Service description<br>and reseller use</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo">
+  </div>
+  <div class="doc-date">Founders1 GmbH &mdash; STP Business Information GmbH &middot; Draft, 14 September 2026</div>
+
+  <div class="section">
+    <h2><span class="sec-num">1.1</span> What the service provides</h2>
+    <p>Founders1 supplies <strong>company registry documents and registry data</strong> for the jurisdictions listed in Annex&nbsp;2, through BetterCo. Per company &mdash; one <strong>case</strong> &mdash; Founders1 procures and delivers:</p>
+    <ul class="ticks">
+      <li>the <strong>registry extract</strong>, the <strong>articles of association</strong> and, where the register evidences it, the <strong>shareholder record</strong>, together with the structured registry data;</li>
+      <li>for every document: the source reference at the register, the <strong>retrieval date</strong> and, where the document carries one, the <strong>content date</strong>, the document version, the evidence level, and &mdash; where the document allows it &mdash; a machine-readable text layer, since registry documents are frequently scans without one;</li>
+      <li>an explicit answer where a document does not exist.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">1.2</span> Evidence level</h2>
+    <p>Not every document that carries an item of information is also evidence of it. Each delivery therefore states an <strong>evidence level</strong>:</p>
+    <div class="tablewrap">
+      <table class="price-table">
+        <thead><tr><th>Level</th><th>Meaning</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td class="lead-col">data</td><td>an item of information, not a document &mdash; never evidence in itself</td><td>structured shareholder particulars</td></tr>
+          <tr><td class="lead-col">document</td><td>a document actually filed with the register, without a seal</td><td>articles of association from the register</td></tr>
+          <tr><td class="lead-col">certified</td><td>issued and sealed by the registry authority</td><td>Kbis, certified commercial register extract</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>STP does not have to specify the level when ordering.</strong> Where more than one level is obtainable for a document kind in a jurisdiction, Founders1 delivers the highest obtainable level and labels it. An apostille is a property of a certified document, not a fourth level.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">1.3</span> Availability</h2>
+    <p>Availability is classified per jurisdiction &times; legal form &times; document kind. Exactly one of four cases applies, and the fourth is a definitive answer rather than an error:</p>
+    <div class="tablewrap">
+      <table class="price-table">
+        <thead><tr><th>Case</th><th>Meaning</th><th>Price effect</th></tr></thead>
+        <tbody>
+          <tr><td class="lead-col">Base document</td><td>part of the standard retrieval</td><td>included in the base price</td></tr>
+          <tr><td class="lead-col">Additional document</td><td>held by the register, not part of the standard retrieval</td><td>surcharge per Annex 2</td></tr>
+          <tr><td class="lead-col">Data only</td><td>no document, but structured particulars from the register</td><td>included in the base price</td></tr>
+          <tr><td class="lead-col">Not available</td><td>not obtainable in this jurisdiction for this legal form</td><td>no charge</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h4>One point of supply</h4>
+      <p>STP reads exclusively from BetterCo. The procurement routes behind it are not visible or addressable &mdash; not as an endpoint, a field name, or a status value.</p>
+      <p>BetterCo is the system of record: documents are held, versioned and re-served there. When Founders1 adds or changes a procurement route, STP sees it in cost and provenance &mdash; <strong>not in code</strong>.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">1.4</span> How STP uses the service with its clients</h2>
+    <p>STP integrates the service into its own onboarding, KYC and client-file workflows and offers it to its clients under its own name. Founders1 does not appear towards the end client and has no contractual relationship with them. Per end-client company:</p>
+    <ol class="steps">
+      <li>STP opens a case: jurisdiction, legal form, company identifiers and the document kinds required.</li>
+      <li>Procurement runs <strong>asynchronously</strong>. Some routes take minutes; manual registry routes take hours to days. Progress is reported by callback, and each document kind carries its own state:
+        <ul class="ticks states-list">
+          <li><b>requested</b> &mdash; the document kind has been asked for</li>
+          <li><b>ordered</b> &mdash; procurement has been triggered</li>
+          <li><b>delivered</b> &mdash; the document has arrived at BetterCo</li>
+          <li><b>stored</b> &mdash; it is held and retrievable by STP</li>
+          <li><b>failed</b> or <b>not available</b> &mdash; the two end states that carry no document</li>
+        </ul>
+      </li>
+      <li>STP retrieves the documents and their provenance from BetterCo and files them in the client's file. Case and document identifiers are BetterCo identifiers and stay stable across a change of source.</li>
+      <li>Where a document of the required kind is already held for that company and still current, it is re-served without a new procurement and without a new charge. Founders1 determines the currency criteria per jurisdiction and document kind and states them in Annex&nbsp;2a.</li>
+      <li>Where the register provides it, each document carries two dates: the <strong>retrieval date</strong> and the <strong>content date</strong>. They are often not the same &mdash; a shareholding statement retrieved today may reproduce a much earlier filing. Founders1 delivers both wherever the documents allow, and suggests that STP's own currency rules build on the content date where its process permits.</li>
+    </ol>
+  </div>
+
+  <div class="doc-footer">
+    <span>Annex 1 &middot; Founders1 GmbH &middot; HRB 234373 B</span>
+    <span>www.betterco.ai &mdash; strictly confidential</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Annex 2 to the Reseller Agreement</div>
+      <h1>Jurisdictions, prices<br>and end-client rights</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo">
+  </div>
+  <div class="doc-date">Founders1 GmbH &mdash; STP Business Information GmbH &middot; Draft, 14 September 2026</div>
+
+  <div class="section">
+    <h2><span class="sec-num">2.1</span> Price tiers</h2>
+    <p>The price depends on the jurisdiction, not on the number of documents. One case covers the standard retrieval with all base documents and the structured data, whether that is one document or five. Every covered jurisdiction sits in one of four <strong>price tiers</strong>, and each tier carries a <strong>procurement cost</strong> per case.</p>
+    <p>The amounts are not stated in this Annex. They are set out in <strong>Annex&nbsp;2a &mdash; Price List</strong>, which is attached to and forms part of this Agreement in the version dated at signature. Where this Agreement refers to &bdquo;the procurement cost for that jurisdiction&ldquo;, it means the amount stated for that jurisdiction in Annex&nbsp;2a as then in force.</p>
+    <p>Annex&nbsp;2a is <strong>amended only under clause&nbsp;8.6</strong> &mdash; that is, not before twelve months have run, then on 60 days' notice, and for a change in a register's own fees only on 30 days' notice with evidence of the change and STP's right to terminate the affected jurisdiction. Founders1 cannot set or alter it at will. It is kept as a separate document so that it can be replaced without re-executing this Agreement and so that its circulation can be limited; it is confidential under clause&nbsp;11.</p>
+    <!-- BEGIN generated by scripts/build_annex2.py -- do not edit by hand -->
+    <div class="tablewrap">
+      <table class="price-table">
+        <thead><tr>
+          <th>Tier</th>
+          <th class="price">Jurisdictions</th>
+          <th>Typical registers in this tier</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="klass">A</td><td class="price">104</td><td>the general case &mdash; open national registers</td></tr>
+          <tr><td class="klass">B</td><td class="price">35</td><td>registers charging a per-document fee</td></tr>
+          <tr><td class="klass">C</td><td class="price">12</td><td>fee-heavy or court-administered registers</td></tr>
+          <tr><td class="klass">D</td><td class="price">1</td><td>offshore registers with a special tariff</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>United Kingdom, Germany, United States</strong> are priced individually rather than by tier. A case that has to be worked manually carries a surcharge. All amounts are net of VAT and are stated in Annex&nbsp;2a (clause&nbsp;8.6).</p>
+    <p><strong>United States is not on a tier.</strong> It has no single national register: company records are filed with each state, and availability is determined per state. It is priced individually in the price list, and Annex&nbsp;2.2 marks it accordingly.</p>
+    <!-- END generated -->
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">2.2</span> Covered jurisdictions</h2>
+    <!-- BEGIN generated by scripts/build_annex2.py -- do not edit by hand -->
+    <p>153 jurisdictions are covered. The <span class="chip stp inline">highlighted<b>&nbsp;</b></span> entries are STP's fifteen priority jurisdictions; the letter is the price tier per section&nbsp;2.1, and &mdash; marks a jurisdiction priced individually.</p>
+    <div class="reg-title">Europe <span>49</span></div>
+    <div class="chips">
+      <span class="chip">Aaland Islands<b>B</b></span>
+      <span class="chip">Albania<b>A</b></span>
+      <span class="chip">Austria<b>B</b></span>
+      <span class="chip">Belarus<b>A</b></span>
+      <span class="chip stp">Belgium<b>A</b></span>
+      <span class="chip">Bosnia and Herzegovina<b>A</b></span>
+      <span class="chip">Bulgaria<b>A</b></span>
+      <span class="chip">Croatia<b>A</b></span>
+      <span class="chip">Cyprus<b>B</b></span>
+      <span class="chip">Czech Republic<b>A</b></span>
+      <span class="chip stp">Denmark<b>A</b></span>
+      <span class="chip">Estonia<b>A</b></span>
+      <span class="chip">Faroe Islands<b>A</b></span>
+      <span class="chip">Finland<b>B</b></span>
+      <span class="chip stp">France<b>C</b></span>
+      <span class="chip">Germany<b>A</b></span>
+      <span class="chip">Gibraltar<b>B</b></span>
+      <span class="chip">Greece<b>A</b></span>
+      <span class="chip">Guernsey<b>C</b></span>
+      <span class="chip">Hungary<b>A</b></span>
+      <span class="chip">Iceland<b>A</b></span>
+      <span class="chip">Ireland<b>A</b></span>
+      <span class="chip">Isle of Man<b>B</b></span>
+      <span class="chip stp">Italy<b>B</b></span>
+      <span class="chip">Jersey<b>A</b></span>
+      <span class="chip">Kosovo<b>A</b></span>
+      <span class="chip">Latvia<b>A</b></span>
+      <span class="chip">Liechtenstein<b>B</b></span>
+      <span class="chip stp">Luxembourg<b>B</b></span>
+      <span class="chip">Malta<b>B</b></span>
+      <span class="chip">Moldova<b>A</b></span>
+      <span class="chip">Monaco<b>C</b></span>
+      <span class="chip">Montenegro<b>A</b></span>
+      <span class="chip stp">Netherlands<b>A</b></span>
+      <span class="chip">North Macedonia<b>B</b></span>
+      <span class="chip">Norway<b>A</b></span>
+      <span class="chip">Poland<b>A</b></span>
+      <span class="chip">Portugal<b>C</b></span>
+      <span class="chip">Romania<b>B</b></span>
+      <span class="chip">Russia<b>A</b></span>
+      <span class="chip">San Marino<b>B</b></span>
+      <span class="chip">Serbia<b>A</b></span>
+      <span class="chip">Slovakia<b>A</b></span>
+      <span class="chip">Slovenia<b>A</b></span>
+      <span class="chip stp">Spain<b>B</b></span>
+      <span class="chip">Sweden<b>C</b></span>
+      <span class="chip stp">Switzerland<b>A</b></span>
+      <span class="chip">Ukraine<b>A</b></span>
+      <span class="chip stp">United Kingdom<b>A</b></span>
+    </div>
+    <div class="reg-title">Americas <span>32</span></div>
+    <div class="chips">
+      <span class="chip">Anguilla<b>C</b></span>
+      <span class="chip">Argentina<b>A</b></span>
+      <span class="chip">Aruba<b>B</b></span>
+      <span class="chip">Bahamas<b>B</b></span>
+      <span class="chip">Belize<b>C</b></span>
+      <span class="chip">Bermuda<b>B</b></span>
+      <span class="chip">Bolivia<b>A</b></span>
+      <span class="chip">Bonaire, Sint Eustatius and Saba<b>B</b></span>
+      <span class="chip">Brazil<b>B</b></span>
+      <span class="chip">British Virgin Islands<b>D</b></span>
+      <span class="chip">Canada<b>B</b></span>
+      <span class="chip">Cayman Islands<b>C</b></span>
+      <span class="chip">Chile<b>A</b></span>
+      <span class="chip">Colombia<b>A</b></span>
+      <span class="chip">Costa Rica<b>B</b></span>
+      <span class="chip">Curacao<b>A</b></span>
+      <span class="chip">Ecuador<b>A</b></span>
+      <span class="chip">Greenland<b>A</b></span>
+      <span class="chip">Guadeloupe<b>A</b></span>
+      <span class="chip">Honduras<b>A</b></span>
+      <span class="chip">Jamaica<b>A</b></span>
+      <span class="chip">Martinique<b>A</b></span>
+      <span class="chip">Mexico<b>A</b></span>
+      <span class="chip">Montserrat<b>A</b></span>
+      <span class="chip">Panama<b>A</b></span>
+      <span class="chip">Paraguay<b>A</b></span>
+      <span class="chip">Peru<b>A</b></span>
+      <span class="chip">Puerto Rico<b>A</b></span>
+      <span class="chip">Saint Vincent and the Grenadines<b>A</b></span>
+      <span class="chip">Trinidad and Tobago<b>A</b></span>
+      <span class="chip">U.S. Virgin Islands<b>A</b></span>
+      <span class="chip stp">United States<b>&mdash;</b></span>
+    </div>
+    <div class="reg-title">Asia <span>28</span></div>
+    <div class="chips">
+      <span class="chip">Armenia<b>B</b></span>
+      <span class="chip">Australia<b>B</b></span>
+      <span class="chip">Azerbaijan<b>A</b></span>
+      <span class="chip">Brunei<b>C</b></span>
+      <span class="chip">Cambodia<b>A</b></span>
+      <span class="chip">China<b>A</b></span>
+      <span class="chip">Georgia<b>A</b></span>
+      <span class="chip stp">Hong Kong<b>B</b></span>
+      <span class="chip">India<b>A</b></span>
+      <span class="chip">Indonesia<b>C</b></span>
+      <span class="chip stp">Japan<b>A</b></span>
+      <span class="chip">Kazakhstan<b>A</b></span>
+      <span class="chip">Kyrgyzstan<b>A</b></span>
+      <span class="chip">Laos<b>A</b></span>
+      <span class="chip">Macau<b>A</b></span>
+      <span class="chip">Malaysia<b>B</b></span>
+      <span class="chip">Maldives<b>A</b></span>
+      <span class="chip">Myanmar<b>A</b></span>
+      <span class="chip">Nepal<b>A</b></span>
+      <span class="chip">Pakistan<b>B</b></span>
+      <span class="chip">Philippines<b>B</b></span>
+      <span class="chip stp">Singapore<b>A</b></span>
+      <span class="chip">South Korea<b>A</b></span>
+      <span class="chip">Sri Lanka<b>A</b></span>
+      <span class="chip">Taiwan<b>A</b></span>
+      <span class="chip">Thailand<b>A</b></span>
+      <span class="chip">Uzbekistan<b>A</b></span>
+      <span class="chip">Vietnam<b>B</b></span>
+    </div>
+    <div class="reg-title">Middle East <span>12</span></div>
+    <div class="chips">
+      <span class="chip">Bahrain<b>A</b></span>
+      <span class="chip">Iran<b>A</b></span>
+      <span class="chip">Iraq<b>A</b></span>
+      <span class="chip stp">Israel<b>A</b></span>
+      <span class="chip">Jordan<b>A</b></span>
+      <span class="chip stp">Kuwait<b>A</b></span>
+      <span class="chip">Oman<b>A</b></span>
+      <span class="chip">Palestine<b>A</b></span>
+      <span class="chip">Qatar<b>A</b></span>
+      <span class="chip">Turkey<b>A</b></span>
+      <span class="chip">United Arab Emirates<b>A</b></span>
+      <span class="chip">Yemen<b>A</b></span>
+    </div>
+    <div class="reg-title">Africa <span>19</span></div>
+    <div class="chips">
+      <span class="chip">Angola<b>A</b></span>
+      <span class="chip">Botswana<b>A</b></span>
+      <span class="chip">Burkina Faso<b>A</b></span>
+      <span class="chip">Djibouti<b>A</b></span>
+      <span class="chip">Ethiopia<b>A</b></span>
+      <span class="chip">Kenya<b>B</b></span>
+      <span class="chip">Lesotho<b>A</b></span>
+      <span class="chip">Madagascar<b>A</b></span>
+      <span class="chip">Mauritius<b>A</b></span>
+      <span class="chip">Mayotte<b>A</b></span>
+      <span class="chip">Morocco<b>C</b></span>
+      <span class="chip">Nigeria<b>B</b></span>
+      <span class="chip">Reunion<b>A</b></span>
+      <span class="chip">Senegal<b>A</b></span>
+      <span class="chip">Seychelles<b>C</b></span>
+      <span class="chip">South Africa<b>A</b></span>
+      <span class="chip">Togo<b>A</b></span>
+      <span class="chip">Tunisia<b>A</b></span>
+      <span class="chip">Zambia<b>B</b></span>
+    </div>
+    <div class="reg-title">Oceania <span>13</span></div>
+    <div class="chips">
+      <span class="chip">Christmas Island<b>B</b></span>
+      <span class="chip">Cocos (Keeling) Islands<b>B</b></span>
+      <span class="chip">Cook Islands<b>A</b></span>
+      <span class="chip">Fiji<b>B</b></span>
+      <span class="chip">French Polynesia<b>A</b></span>
+      <span class="chip">Marshall Islands<b>A</b></span>
+      <span class="chip">New Caledonia<b>B</b></span>
+      <span class="chip">New Zealand<b>A</b></span>
+      <span class="chip">Papua New Guinea<b>A</b></span>
+      <span class="chip">Samoa<b>A</b></span>
+      <span class="chip">Solomon Islands<b>A</b></span>
+      <span class="chip">Tonga<b>A</b></span>
+      <span class="chip">Vanuatu<b>A</b></span>
+    </div>
+    <!-- END generated -->
+  </div>
+
+  <div class="doc-footer">
+    <span>Annex 2 &middot; Founders1 GmbH &middot; HRB 234373 B</span>
+    <span>www.betterco.ai &mdash; strictly confidential</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Annex 2 to the Reseller Agreement &middot; continued</div>
+      <h1>Surcharges, turnaround<br>and end-client rights</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo">
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">2.3</span> Surcharge for additional documents</h2>
+    <p>Where a document kind is an <em>additional document</em> in the sense of Annex&nbsp;1.3, a <strong>surcharge</strong> applies on top of the case price. The surcharge differs per jurisdiction and per document kind.</p>
+    <ul class="ticks">
+      <li>The applicable amounts are stated in Annex&nbsp;2a. <strong>A surcharge that has not been notified to STP in advance is not charged.</strong></li>
+      <li>Founders1 notifies a new or changed surcharge at least 30 days before it applies.</li>
+      <li>Per jurisdiction, the parties agree whether the additional document is retrieved <strong>with every case</strong> in that jurisdiction, or <strong>only on request</strong> per case. Where nothing is agreed, it is retrieved only on request.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">2.4</span> Turnaround</h2>
+    <p>Procurement is asynchronous. Automated routes typically complete within minutes to hours; jurisdictions served by a manual registry route take longer, and no fixed turnaround is owed for them (clause&nbsp;7.2). The expected range per jurisdiction is stated in Annex&nbsp;2a; where no range is stated, none is owed.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">2.5</span> End-client rights</h2>
+    <p>What an End Client may and may not do with a Document is set out in <strong>Annex&nbsp;5</strong>, which also states the terms STP passes through under clause&nbsp;9.1. The grant itself is in clause&nbsp;3.5.</p>
+  </div>
+
+  <div class="doc-footer">
+    <span>Annex 2 &middot; Founders1 GmbH &middot; HRB 234373 B</span>
+    <span>www.betterco.ai &mdash; strictly confidential</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Annex 3 to the Reseller Agreement</div>
+      <h1>Data protection between<br>independent controllers</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo">
+  </div>
+  <div class="doc-date">Founders1 GmbH — STP Business Information GmbH · Draft, 14 September 2026</div>
+
+  <div class="section">
+    <h2><span class="sec-num">3.1</span> Roles</h2>
+    <p>Each party determines the purposes and means of its own processing and acts as an <strong>independent controller</strong> under Art. 4 No. 7 GDPR. Neither party processes on behalf of the other; Art. 28 GDPR does not apply, and no joint controllership under Art. 26 GDPR is established. Each party is separately responsible for the lawfulness of its own processing.</p>
+    <p>Founders1 decides which route a Case takes, what is retrieved, and how long it is held, and is the controller of that processing along its whole procurement chain; parties Founders1 engages for procurement act as its processors. Delivery to STP is therefore a transfer between two controllers, not a disclosure by a processor.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">3.2</span> What is processed</h2>
+    <div class="tablewrap">
+      <table class="price-table">
+        <thead><tr><th>Data subjects</th><th>Categories of data</th></tr></thead>
+        <tbody>
+          <tr><td class="lead-col">Directors and officers</td><td>name, function, date of birth, address as held by the register</td></tr>
+          <tr><td class="lead-col">Shareholders</td><td>name, address, shareholding, capital contribution as held by the register</td></tr>
+          <tr><td class="lead-col">Beneficial owners</td><td>name, date of birth, nationality, nature and extent of the interest</td></tr>
+          <tr><td class="lead-col">Users at STP</td><td>name, business contact details, account and log data of the API</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>No special categories under Art. 9 GDPR are processed. The register content originates from public company registers; Founders1 does not obtain it from the data subject.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">3.3</span> Purposes and legal basis</h2>
+    <p>Processing serves the procurement, delivery and documentation of registry information so that STP and its End Clients can meet their obligations under money-laundering law. Each party relies on its own legal basis, as a rule Art. 6 (1) (b) or (f) GDPR, and for End Clients subject to money-laundering law additionally Art. 6 (1) (c) GDPR.</p>
+    <p>The information duty under Art. 14 GDPR falls on each party for its own processing. Each party assesses independently whether Art. 14 (5) GDPR applies.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">3.4</span> Technical and organisational measures</h2>
+    <ul class="ticks">
+      <li>Encryption in transit (TLS) and at rest for stored documents; access only over authenticated, rate-limited API access bound to STP's account.</li>
+      <li>Role-based access within Founders1, restricted to staff who need it; access to production data logged.</li>
+      <li>Documents and case records are held within the EU/EEA. Founders1 names the hosting location and its sub-processors on request and notifies STP before a change.</li>
+      <li>Segregation of test and production environments; backups encrypted; restore tested.</li>
+      <li>Retention and deletion follow Annex 1 and clause 14.4.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">3.5</span> Cooperation</h2>
+    <p>Each party informs the other without undue delay of a personal data breach affecting data received from the other, with the information needed for that party's own notification duties. Data-subject requests are answered by the party that received them; where a request concerns the other party's processing, it is forwarded without undue delay. Each party names a contact point for data protection matters on signature.</p>
+  </div>
+
+  <div class="doc-footer">
+    <span>Annex 3 · Founders1 GmbH · HRB 234373 B</span>
+    <span>www.betterco.ai — strictly confidential</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Annex 4 to the Reseller Agreement</div>
+      <h1>Permitted Affiliates</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo">
+  </div>
+  <div class="doc-date">Founders1 GmbH — STP Business Information GmbH · Draft, 14 September 2026</div>
+
+  <div class="section">
+    <h2><span class="sec-num">4.1</span> Admitted affiliates</h2>
+    <p>The following members of the Septeo Group are admitted as Permitted Affiliates under clause 4 and may exercise the rights under clauses 3.1 to 3.5. STP remains the sole contracting and billing party for all of them.</p>
+    <div class="tablewrap">
+      <table class="price-table">
+        <thead><tr><th>Entity</th><th>Registered seat</th><th>Register / number</th><th>Admitted on</th></tr></thead>
+        <tbody>
+          <tr><td class="empty">&mdash;</td><td class="empty">&mdash;</td><td class="empty">&mdash;</td><td class="empty">&mdash;</td></tr>
+          <tr><td class="empty">&mdash;</td><td class="empty">&mdash;</td><td class="empty">&mdash;</td><td class="empty">&mdash;</td></tr>
+          <tr><td class="empty">&mdash;</td><td class="empty">&mdash;</td><td class="empty">&mdash;</td><td class="empty">&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>This Annex is empty at signature. Admission follows clause 4.1: STP notifies the affiliate in text form, and it is admitted upon confirmation by Founders1. An admission updates this Annex without requiring an amendment to the Agreement.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">4.2</span> Leaving the group</h2>
+    <p>An entity that ceases to belong to the Septeo Group ceases to be a Permitted Affiliate at that point and is struck from this Annex. STP notifies Founders1 without undue delay. Rights already granted to End Clients under clause 3.5 for Documents already delivered remain unaffected.</p>
+  </div>
+
+  <div class="doc-footer">
+    <span>Annex 4 · Founders1 GmbH · HRB 234373 B</span>
+    <span>www.betterco.ai — strictly confidential</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Annex 5 to the Reseller Agreement</div>
+      <h1>End-client terms<br>to be passed through</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo">
+  </div>
+  <div class="doc-date">Founders1 GmbH — STP Business Information GmbH · Draft, 14 September 2026</div>
+
+  <div class="section">
+    <h2><span class="sec-num">5.1</span> How this Annex works</h2>
+    <p>Under clause&nbsp;9.1, STP ensures that its terms with each End Client include, <strong>in substance</strong>, the terms below. STP chooses its own wording and may carry them in its general terms of business. It does not have to reproduce this Annex verbatim, name Founders1, or disclose the Agreement.</p>
+    <p>This Annex obliges STP. It grants Founders1 no rights against an End Client and creates no contract between them. Where STP's existing terms already cover a point in substance, that point is satisfied.</p>
+    <p>Where a Document carries a register-specific restriction notified with it under section&nbsp;5.2&nbsp;(e), that restriction prevails over anything more permissive in STP's own terms.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">5.2</span> The terms</h2>
+    <ul class="ticks">
+      <li><strong>(a) Purpose.</strong> The End Client may use the documents and registry data delivered for it for its own know-your-customer and anti-money-laundering checks, client and supplier onboarding, advisory work, and its own record-keeping. This includes documents about the End Client's own customers, counterparties and suppliers, obtained to discharge the End Client's own obligations. It does not cover discharging another person's compliance obligations, or providing the documents to another person for that purpose.</li>
+      <li><strong>(b) Retention.</strong> The End Client may retain what was delivered for it for as long as its own statutory retention obligation requires, including after its contract with STP ends and after the Agreement between STP and Founders1 ends. Beyond that period, and for any use outside the purpose in&nbsp;(a), the rights follow what Founders1 holds in the underlying content; the applicable scope is stated with each Document.</li>
+      <li><strong>(c) No redistribution.</strong> The documents are for the End Client's own file. The End Client does not pass them on to third parties, does not sell or license the structured data as a dataset, does not publish it, and does not extract it in bulk. Three disclosures are permitted: to its own advisers and auditors bound to confidentiality; to a supervisory authority where required; and to <strong>the company a document concerns</strong>, in connection with the End Client's own check on that company.</li>
+      <li><strong>(d) No competing use.</strong> The End Client does not use the documents, the registry data or the availability information to build, train, operate or supply a company-data, registry-aggregation or document-procurement product or service for third parties.</li>
+      <li><strong>(e) Register restrictions.</strong> Some registers restrict what may be done with their content. Where such a restriction is notified with a document, it applies to the End Client and prevails over the permissions above.</li>
+      <li><strong>(f) The register is the source.</strong> Registry content is reproduced as it was filed or held. Neither STP nor its supplier warrants that the register itself is accurate, complete or up to date, and a document reproduces the state of the register at the retrieval date stated with it.</li>
+      <li><strong>(g) Data protection.</strong> The documents contain personal data of directors, shareholders and beneficial owners. The End Client is an independent controller for its own use of them and is responsible for the lawfulness of that use, for its own information duties, and for its own assessment of Art.&nbsp;14&nbsp;(5)&nbsp;GDPR.</li>
+      <li><strong>(h) No further rights.</strong> The End Client acquires no rights in the platform, the interface, the coverage and routing data, or the jurisdiction and document-kind classification behind the service.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">5.3</span> Changes</h2>
+    <p>Founders1 may amend this Annex where a register, a supplier or applicable law requires it, on 30 days' notice, evidencing the requirement. STP applies the change to End Client terms concluded or renewed after it takes effect; it does not have to reopen terms already agreed.</p>
+  </div>
+
+  <div class="doc-footer">
+    <span>Annex 5 · Founders1 GmbH · HRB 234373 B</span>
+    <span>www.betterco.ai — strictly confidential</span>
+  </div>
+</div>
+
+<div class="internal">
+  <div class="stamp">Internal note — not part of the Agreement, not printed</div>
+  <h3>One blocker, one model to confirm</h3>
+  <dl>
+    <dt>Out of scope for this document — the upstream supply licence</dt>
+    <dd>Whether our own supply terms permit onward supply at all is a live commercial question, and it is
+      <strong>deliberately not treated here</strong> (decision, 15.09.). It is tracked outside this pack and belongs in
+      the mandate to counsel, not in the drafting. Note only that clause&nbsp;3.5 and Annex&nbsp;5(b) already limit
+      what an End Client receives to what Founders1 actually holds in the underlying content, so the Agreement does
+      not over-promise whichever way that question lands. Nothing in the pack needs to change when it does.</dd>
+
+    <dt>ADDED 14.09. — the chain reaches a bank, and what that changed</dt>
+    <dd>The real chain is <strong>Founders1 &rarr; Septeo &rarr; a large bank &rarr; that bank's own customers</strong>.
+      The bank uses the Documents <em>to evaluate its own customers</em> — so the bank's customers are the
+      <em>subjects</em> of the Documents, not recipients of the service. That is the narrow case, and it needs no fourth
+      tier: the bank is an End Client like any other, and nothing is passed on. Four adjustments were made, all
+      conservative, none widening the grant:
+      <strong>(1)</strong> Annex&nbsp;5(a) now says in terms that own-use covers Documents <em>about</em> the End
+      Client's customers, counterparties and suppliers — previously only implied, and a bank's counsel would have asked.
+      <strong>(2)</strong> Annex&nbsp;5(c) permitted only advisers and auditors; it now also permits disclosure to a
+      supervisory authority, and to <em>the company a Document concerns</em>. Without the latter, a bank showing a
+      corporate customer what it holds on it would breach its own terms — routine in practice, and the old wording
+      forbade it. <strong>(3)</strong> Clause&nbsp;3.4 now names regulated institutions as professional End Clients,
+      rather than leaving it to inference, and states expressly that onward provision as a service is not in the field
+      of use. <strong>(4)</strong> New clause&nbsp;9.5, below.
+      <strong>Not done, deliberately:</strong> no sub-licence to the bank's customers, no recursive pass-through, no
+      chain cap. Those belong to the other case — a bank reselling or bundling the service — which is not what is
+      happening and should not be drafted for speculatively. If that changes, it is a real amendment, not a tweak.</dd>
+
+    <dt>ADDED 14.09. — clause 9.5, the protective clause</dt>
+    <dd>A bank brings an apparatus that a Kanzlei does not: DORA (Art.&nbsp;28 ff. VO (EU) 2022/2554), outsourcing
+      requirements, ISMS, register of information, audit rights, exit assistance. The KfW briefing in the marketing repo
+      records exactly this shape — <em>&bdquo;Prüfung nach Art.&nbsp;28 Abs.&nbsp;4 &hellip; vor Zuschlag&ldquo;</em> and
+      <em>&bdquo;Die Risiken liegen nicht in der Funktion, sondern im Bankbetrieb&ldquo;</em>. Septeo will be asked for
+      all of it and could otherwise commit us to it without our knowing.
+      <strong>9.5 puts the obligation on STP</strong> and bars it from agreeing audit rights, route or sub-supplier
+      disclosure, exit assistance, incident-reporting periods or register entries on our behalf without our written
+      agreement — softened by a good-faith undertaking not to refuse unreasonably what the End Client's supervisory
+      position genuinely requires, since a flat refusal would simply lose the deal.
+      <strong>The collision to watch:</strong> DORA subcontractor transparency runs against clause&nbsp;6.1, which makes
+      procurement routes invisible and unaddressable, and which the internal note says has never been breached towards
+      Septeo. 9.5 takes the defensible line — <em>Founders1 is the supplier of record, its procurement parties are its
+      own sub-suppliers</em> — the same position Annex&nbsp;3.1 already takes for data protection, and consistent with
+      the upstream contract's controller/processor split. Expect it to be tested. Decide in advance how far route
+      disclosure to a bank's compliance function under NDA can go before it is worth losing the deal over.</dd>
+
+    <dt>ADDED 14.09. — Annex 5, and why 9.1 had to be rewired</dt>
+    <dd>Clause&nbsp;9.1 previously said STP &bdquo;imposes the restrictions of clause&nbsp;5 on its End Clients in its own
+      terms&ldquo;. That was not performable: clause&nbsp;5 is drafted as <em>STP's</em> obligations, and most of it cannot
+      travel downstream — 5.2 (no competing aggregation product), 5.3 (no caching outside the Annex&nbsp;1 re-use
+      mechanism), 5.4 (sub-distribution only under clause&nbsp;4) and 5.5 (reverse engineering of the Platform or API)
+      are meaningless against an End Client who never touches the API. Only 5.1 partly mapped. A reviewer on their side
+      would have found it. 9.1 now points at <strong>Annex&nbsp;5</strong>, which states eight terms STP must carry
+      into its own End Client terms <em>in substance</em> — not verbatim, and without disclosing this Agreement or
+      naming Founders1, so it does not collide with Septeo's own terms of business. It obliges STP; it creates no
+      privity with End Clients, which is said expressly in both 9.1 and 5.1.
+      <strong>Sequencing:</strong> Annex&nbsp;5 is drafted deliberately no wider than clause&nbsp;3.5 already promises — own-use purposes plus statutory retention. Do not widen it until the upstream distribution
+      question in the blocker above is settled: this is the document in which a licence we do not hold would become a
+      written promise to a third party.</dd>
+
+    <dt>CONSOLIDATED 14.09. — end-client terms now live in one place</dt>
+    <dd>Three provisions described what an End Client may do: clause&nbsp;3.5, Annex&nbsp;2.5 (&bdquo;End-client
+      rights&ldquo;) and Annex&nbsp;5(a)/(b). Redundancy is a liability — one redline round can make them disagree, and
+      the blocker note records that 3.5 and 2.5 were <em>deliberately</em> calibrated to statutory-retention scope.
+      Now: <strong>clause&nbsp;3.5</strong> is the grant (grants belong in the body), <strong>Annex&nbsp;5</strong> is
+      the single statement of what an End Client may and may not do, and <strong>Annex&nbsp;2.5</strong> is a pointer.
+      The upstream-licence limiter — <em>beyond statutory retention the rights follow what Founders1 holds in the
+      underlying content</em> — moved into Annex&nbsp;5(b), where it now does its work. On keeping Annex&nbsp;5 at all:
+      the grants sit in 3.5, and six of Annex&nbsp;5's eight terms are pure restrictions, so deleting it would strip
+      protections while leaving every grant standing. Net-protective, and clause&nbsp;9.1 needs a target.</dd>
+
+    <dt>WHY RESELLER STATUS IS WORTH DEFENDING — it is the DORA shield</dt>
+    <dd>Reseller status and §&nbsp;89b protection point the same way, so the fixes below serve both.
+      <strong>As a reseller</strong>, STP is the bank's ICT third-party service provider and Founders1 is
+      <em>STP's subcontractor</em>. The Art.&nbsp;30 contractual apparatus lands on STP, and only what STP passes down
+      reaches us. <strong>If the relationship were read as agency</strong> — STP selling for Founders1's account — then
+      Founders1 would be supplying the bank, and the bank's contractual requirements, audit rights and register entry
+      would attach to us directly. That is the difference the 50&nbsp;% share puts at risk, and it is a stronger reason
+      to defend the characterisation than the Ausgleichsanspruch is.
+      <strong>A phrase in 9.5 was working against this and has been corrected.</strong> It read
+      &bdquo;Towards the End Client, Founders1 is the supplier of record&ldquo; — intended to mean <em>do not look
+      behind Founders1 at the procurement chain</em>, but on a plain reading it says Founders1 supplies the bank, which
+      is the agency position and the opposite of what is wanted. It now states that STP is the supplier towards the End
+      Client and Founders1 is STP's own supplier.
+      <strong>What reseller status does not do:</strong> it does not make us invisible. DORA follows the functional ICT
+      supply chain, not the commercial label. Art.&nbsp;28(3) requires the bank's register of information to cover
+      subcontractors, and where the service underpins a <em>critical or important function</em> parts of the
+      Art.&nbsp;30(3) catalogue — incident notification, exit support, audit access — genuinely have to reach the
+      subcontractor. Refusing outright would simply end the deal. New <strong>9.6</strong> therefore defines the
+      cooperation package on our terms rather than leaving Septeo to agree one on ours: documentation and certifications
+      first, audits exercised <em>through STP</em> and satisfied by a report or a pooled audit where possible, on-site
+      audits limited to the service and expressly not extending to procurement-route identity (clause&nbsp;6.1), and
+      chargeable beyond the standard documentation.
+      <strong>To settle before a bank is named:</strong> whether the service will be treated as supporting a critical or
+      important function at that bank. If yes, expect the full Art.&nbsp;30(3) list and price the effort in; if no, 9.6
+      is likely sufficient as drafted.</dd>
+
+    <dt>CHECK — are we reselling at all? The 50&nbsp;% share cuts against it</dt>
+    <dd>A profit share rather than a purchase price is the classic indicator that an arrangement is <em>not</em> a
+      resale. It matters for three reasons, and the exposure is real but manageable.
+      <strong>(1) §&nbsp;89b HGB Ausgleichsanspruch.</strong> The BGH applies it by analogy to a Vertragshändler who is
+      integrated into the supplier's sales organisation <em>and</em> is obliged to hand over its customer base, so that
+      the supplier can exploit it after termination. A claim can reach a year's average commission and cannot be waived
+      in advance once the relationship qualifies. We had the second prong half-open: clause&nbsp;8.5 required per-Case
+      reporting of the amount invoiced to the End Client, and clause&nbsp;6.2 assumes we learn End Client identities —
+      ongoing transmission during the term can satisfy the customer-base prong even without a transfer obligation.
+      <strong>Fixed:</strong> 8.5 now lets STP report by its own reference instead of by name and records that we do not
+      require identities for settlement; new <strong>15.5</strong> states that STP is not obliged to transfer its End
+      Client base and that anything transmitted under 8.5 is for settlement and audit only.
+      <strong>(2) The characterisation itself.</strong> The strong reseller indicators are already present and should
+      stay: STP sets its own prices (8.1), invoices in its own name, carries the relationship, and — because
+      &bdquo;Gross Revenue&ldquo; is net only of credits and refunds, <em>not</em> of bad debt — bears the credit risk on
+      its End Clients. Do not concede that last point in negotiation: the moment our share is reduced by an End Client's
+      non-payment, STP stops bearing commercial risk and the agency reading gets much stronger. Clause&nbsp;3.1 said only
+      &bdquo;in its own name&ldquo; where 2.1 said &bdquo;in its own name and for its own account&ldquo;; the grant clause
+      now carries the full formula. New 15.5 adds the express no-agency, no-Kommission, no-partnership statement, which
+      the Agreement previously lacked entirely.
+      <strong>(3) Competition law, and why 8.1 earns its place.</strong> Because STP sets the end price, we avoid resale
+      price maintenance — a hardcore restriction under Art.&nbsp;101 TFEU and the VBER. The mirror image is that a
+      <em>genuine</em> agency falls outside Art.&nbsp;101(1) altogether, so if we ever wanted to control end pricing we
+      would have to accept agency status and the §&nbsp;89b exposure with it. Pick one; we have picked reseller.
+      <strong>What this does not fix:</strong> the upstream blocker is indifferent to the label. Their clause&nbsp;10.2
+      bars use &bdquo;for the benefit of any other entity or person&ldquo;, not merely re-sale, so recharacterising the
+      Septeo relationship does not escape it. Still needs the upstream addendum.
+      <strong>Worth a German lawyer's eye before signature</strong> — this is a characterisation question, and what is
+      set out here is structural analysis, not advice.</dd>
+
+    <dt>CHANGED 14.09. — the liability cap measured the wrong base, and 12.1 was a Garantie trap</dt>
+    <dd><strong>13.2</strong> capped liability at &bdquo;the fees paid by STP in the preceding twelve months&ldquo;. Under
+      the rewritten clause&nbsp;8 those fees are procurement cost <em>plus</em> our share — and most of the first part is
+      not income at all, it is money we already paid the registers. The cap therefore ran at
+      (E&nbsp;+&nbsp;C)&nbsp;/&nbsp;(E&nbsp;&minus;&nbsp;C) times our actual earnings: <strong>2,1&times;</strong> at a
+      tier-A case sold for 30&nbsp;&euro;, <strong>3,0&times;</strong> at one sold for 21,60&nbsp;&euro; — worst exactly
+      where margins are thinnest. An artefact of changing 8.2 without revisiting 13.2. It now caps on
+      <em>Founders1's share under clause&nbsp;8.2</em>, with reimbursed procurement cost expressly excluded.
+      <strong>New 12.4</strong> closes the larger hole: 13.1 accepts unlimited liability &bdquo;for guarantees given&ldquo;,
+      and 12.1 <em>warrants</em> that provenance metadata is accurate. The contract is English but governed by German law
+      (clause&nbsp;15.3, both parties German GmbHs), where &bdquo;warrants&ldquo; can be read as <em>Garantie</em> — which
+      would pull metadata accuracy into 13.1 and switch the 13.2 cap off entirely. Provenance metadata is machine-generated
+      at scale, so one bad source-reference mapping is not one claim but thousands. 12.4 states that clause&nbsp;12 is a
+      contractual obligation and not a Garantie within 13.1.
+      <strong>On carving Annex&nbsp;5 out of the cap:</strong> not needed as drafted. Clause&nbsp;13 limits
+      <em>Founders1's</em> liability only — STP's liability to us, including a failure of the Annex&nbsp;5 pass-through,
+      is uncapped by statute. If Septeo's legal asks to make clause&nbsp;13 mutual, do not simply agree: any cap they
+      obtain must carve out breaches of clause&nbsp;5 (restrictions), clause&nbsp;6 (non-circumvention) and the
+      Annex&nbsp;5 pass-through, because the loss there is upstream-licence exposure and bears no relation to fee volume.
+      <strong>Note also:</strong> this Agreement contains <em>no contractual penalty</em> anywhere. Clause&nbsp;6.1
+      (non-circumvention) and clause&nbsp;11 (confidentiality) rely on provable damage, which for a circumvention breach
+      is close to unprovable. The 2024 Whitelabel agreement with STP Informationstechnologie carried
+      EUR&nbsp;25.000. Worth deciding whether to add one here.</dd>
+
+    <dt>SETTLED 14.09. — clause 8 rewritten to the cost-share construction</dt>
+    <dd>The earlier draft of 8.2 gave us 50&nbsp;% of <em>gross</em> with procurement cost carried out of our half.
+      That is not what was instructed (&bdquo;net revenues = gross revenues &minus; data cost&ldquo;) and it moved the
+      economics against us by half the cost on every Case — 5,40&nbsp;&euro; on tier&nbsp;A, 35,25&nbsp;&euro; on
+      tier&nbsp;D. Its break-even against simply selling STP cases at list came out at <strong>exactly twice the list
+      price</strong> (E&nbsp;=&nbsp;2L), i.e. it only beat the status quo if STP marked up more than 100&nbsp;%.
+      <strong>8.2 now reads:</strong> STP pays the procurement cost plus 50&nbsp;% of the Net Amount (invoiced amount
+      less procurement cost), so each side carries half the cost and the break-even falls to
+      2L&nbsp;&minus;&nbsp;C — 19,20&nbsp;&euro; on tier&nbsp;A, about a 30&nbsp;% markup.
+      <strong>8.4</strong> now measures the EUR&nbsp;1.500 on our <em>share</em>, not on total receipts: as previously
+      drafted the minimum was gross of procurement and delivered EUR&nbsp;1.500 of actual margin only at zero volume.
+      <strong>8.7</strong> now splits the three cases — declined before procurement (nothing charged), definitive
+      &bdquo;not available&ldquo; after procurement (cost reimbursed, no share), failure on our side (nothing charged);
+      previously we bore the register fee for every not-available answer with no recovery, which matters because five
+      of the fifteen priority jurisdictions have no automated search and cannot be pre-checked. 8.3 is kept, adapted.</dd>
+
+    <dt>CLOSED 14.09. (evening) &mdash; the pricing data is re-pulled and the annex is generated</dt>
+    <dd>Verified against <em>records.knowyourcustomer.com/coverage</em> on 14.09.2026:
+      <strong>Brazil A&nbsp;&rarr;&nbsp;B</strong> (US$49), <strong>Luxembourg C&nbsp;&rarr;&nbsp;B</strong> (US$49),
+      <strong>Israel B&nbsp;&rarr;&nbsp;A</strong> (US$19) &mdash; and, found in the full re-pull,
+      <strong>Cayman Islands D&nbsp;&rarr;&nbsp;C</strong>, <strong>Sri Lanka B&nbsp;&rarr;&nbsp;A</strong> and
+      <strong>Tunisia B&nbsp;&rarr;&nbsp;A</strong>. Tier counts are now
+      A&nbsp;104 &middot; B&nbsp;35 &middot; C&nbsp;12 &middot; D&nbsp;1 over <strong>153</strong> jurisdictions.
+      Tier&nbsp;D is now a single jurisdiction (British Virgin Islands).
+      Brazil was the serious one: listed at 10,80&nbsp;&euro; while we actually pay 26,70&nbsp;&euro;, it would have
+      defeated clause&nbsp;8.3's own promise that no Case settles below cost. The other two were overstated in our
+      favour, which in a cost-reimbursement contract reads as hidden margin and is checkable on a public page.
+      <strong>Fixed at the root:</strong> <code>curation/price_bands.json</code> was re-pulled from the live
+      coverage page on 14.09. by browser DOM capture (a plain text fetch silently lost two rows), the 30.07. pull is
+      kept at <code>curation/price_bands_2026-07-30.json</code>, and Annex&nbsp;2.1 and 2.2 are now
+      <strong>generated</strong> by <code>scripts/build_annex2.py</code>. Run
+      <code>python scripts/build_annex2.py --check</code> before any send: it exits 1 if the document and the data
+      have drifted. It immediately found a second defect nobody had noticed &mdash; the hand-built list claimed 139
+      jurisdictions while rendering 138. <strong>Saudi Arabia has left coverage</strong> since July; 16 jurisdictions
+      were added. Do not hand-edit sections 2.1 or 2.2 again.</dd>
+
+    <dt>CORRECTED 15.09. &mdash; &bdquo;direct routes&ldquo; were not direct routes</dt>
+    <dd>Annex&nbsp;2.1 stated that United Kingdom, Germany and United States were served by Founders1's own direct
+      routes at 1,70 / 6,30 / 17,35&nbsp;&euro;. Those three figures are the <strong>supplier's Home Band fees</strong>
+      from our Order Form, not our own sourcing. Our own direct routes are <strong>Germany, France and Denmark</strong>.
+      The document told Septeo we self-source the UK and the US, and priced Germany at a supplier rate we have a
+      standing rule never to use. Both facts are now kept apart in <code>scripts/build_annex2.py</code>, and the
+      Agreement calls these jurisdictions &bdquo;individually priced&ldquo; rather than direct.</dd>
+
+    <dt>OPEN &mdash; the United States: coverage, not price</dt>
+    <dd>The coverage page answers &bdquo;See USA tab for details. Per state&ldquo;, and the state tab has still not been
+      read. Annex&nbsp;2.1 nonetheless fixes the US at 17,35&nbsp;&euro; and clause&nbsp;8.6 freezes it for 12 months.
+      In the STP simulation 18 of 70 rows were US companies, so this is not a corner case. Read the state tab before
+      <strong>Checked properly on 15.09.:</strong> the state page is <em>not</em> a 404 &mdash; the URL is
+      <code>/coverage/united-states</code>, not <code>/coverage/usa</code>, and earlier notes had it wrong. The page
+      says &bdquo;one country, fifty-plus registers&ldquo;, price &bdquo;per state&ldquo;, availability
+      &bdquo;by state&ldquo;, delivery &bdquo;on request&ldquo; &mdash; and publishes <strong>no state list and no
+      per-state prices</strong>. The only state named is Delaware, in editorial prose about its significance, not as
+      a coverage statement.
+      <strong>The price is not the exposure.</strong> Our Order Form contracts the US at a flat case fee, so per-state
+      pricing is the supplier's retail model, not our cost. What is unknown is <strong>which states resolve</strong> &mdash;
+      the same defect as Brazil, where the register named is Jucesp, the S&atilde;o Paulo Junta, one of 27.
+      18 of 70 rows in the STP simulation were US companies. Ask the supplier for the state list and the Brazilian
+      Juntas in one mail; until then Annex&nbsp;2.2 marks the US as individually priced and clause&nbsp;8.6 leaves its
+      cost provisional.</dd>
+
+    <dt>OPEN — Brazil coverage may be São Paulo only</dt>
+    <dd>The coverage page names &bdquo;Jucesp Online&ldquo; as the Brazilian register — the Junta Comercial do Estado de
+      São Paulo, one of 27 state registers. If coverage really is limited to São Paulo, Petrobras (Rio) and Gerdau
+      (Porto Alegre) are unfulfillable, and Brazil is listed here as a covered jurisdiction. Unresolved since 26.08.</dd>
+
+    <dt>DECIDED 15.09.2026 &mdash; six commercial questions closed</dt>
+    <dd><strong>(1) Upstream supply licence:</strong> out of scope for this document, handled separately.
+      <strong>(2) Minimum:</strong> EUR&nbsp;1.500 <em>per month</em>, measured on Founders1's share, from the third
+      full month (clause&nbsp;8.4). Against a fixed upstream cost of EUR&nbsp;322 per month this is a real floor and
+      the clause STP will push on hardest.
+      <strong>(3) Procurement cost:</strong> <em>removed from the Agreement.</em> Annex&nbsp;2.1 now states the tier
+      structure and the counts only; the amounts moved to a confidential <strong>price list</strong>, which the
+      Agreement references and clause&nbsp;8.6 governs. The rate card mapped 1:1 onto the supplier's public bands
+      (19/49/89/119&nbsp;US$) and showed a consistent 35&ndash;40&nbsp;% discount, which identified both the supplier
+      and our buying position to Septeo procurement. <code>build_annex2.py --check</code> now fails if an amount
+      reappears in the contract.
+      <strong>(3a) Refined 15.09.:</strong> the price list is <strong>Annex&nbsp;2a</strong>, incorporated and dated at
+      signature, not an external &bdquo;price list in force&ldquo;. Under clause&nbsp;8.2 the procurement cost is an input
+      to the settlement formula, so half of STP's economics depends on it; a document one party maintains at will would
+      have been the obvious objection from their procurement team, and in an AGB reading a term letting one side
+      determine the consideration is what &sect;&nbsp;307 BGB bites on. As an incorporated annex amendable only under
+      clause&nbsp;8.6, it keeps the separate circulation and the update-without-re-signing, without that weakness.
+      <strong>(4) United States:</strong> see the separate note below.
+      <strong>(5) Contractual penalty:</strong> none. Clause&nbsp;6.1 and clause&nbsp;11 rest on provable damage;
+      circumvention damage is close to unprovable, and that is accepted.
+      <strong>(6) Term:</strong> 24 months as drafted, plus new clause&nbsp;14.2a &mdash; where supply in a
+      jurisdiction permanently ceases it falls away, and where that hits more than half of recent Cases either party
+      may terminate on 30 days' notice. Without it the 24-month commitment ran ahead of an upstream term that renews
+      annually.</dd>
+
+    <dt>Annex 3 checks out against the upstream contract</dt>
+    <dd>Their clause&nbsp;13: “The Customer will be the Data Controller and KYC will be the Data Processor.” So we
+      are controller along the whole chain and our suppliers are our processors — which makes delivery to STP a
+      controller-to-controller transfer, exactly as Annex&nbsp;3 states. The alternative framing (us as STP’s
+      processor) would make our supplier a sub-processor and would not survive their sub-processor consent chain.
+      If STP’s legal team sends an Auftragsverarbeitungsvertrag, it is the wrong instrument.</dd>
+
+    <dt>Also worth knowing before agreeing 14-day terms outbound</dt>
+    <dd>We pay EUR&nbsp;322 per month upstream regardless of volume, and once monthly usage passes EUR&nbsp;1.000 the
+      supplier may require a credit balance — roughly 30 mid-band cases a month. That is a working-capital event
+      on the way up, not on the way down.</dd>
+  </dl>
+</div>

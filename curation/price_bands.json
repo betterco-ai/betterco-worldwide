@@ -1,855 +1,1262 @@
 {
  "_meta": {
+  "source": "records.knowyourcustomer.com/coverage",
+  "retrieved": "2026-09-14",
+  "method": "browser DOM capture of all 153 list rows (a plain text fetch lost 2 rows)",
+  "supersedes": "2026-07-30 pull, kept at curation/price_bands_2026-07-30.json",
   "bandPriceUsd": {
-   "High": 88.0,
-   "Low": 18.0,
-   "Medium": 43.5,
-   "Premium": 114.0
+   "Low": 19.0,
+   "Medium": 49.0,
+   "High": 89.0,
+   "Premium": 119.0
   },
   "classMap": {
-   "High": "C",
    "Low": "A",
    "Medium": "B",
+   "High": "C",
    "Premium": "D"
   },
-  "note": "Baender sind EINKAUF. Kundenseitig nur die Klassen A-D verwenden.",
-  "retrieved": "2026-07-30",
-  "source": "knowyourcustomer.com — Preisbandseite + Report-Preisseite"
+  "note": "Baender sind EINKAUF-Listenpreise der Coverage-Seite, nicht die kontrahierten Saetze des Order Forms. Kundenseitig nur Klassen A-D. US hat KEIN Band.",
+  "jurisdictionCount": 153,
+  "bandCounts": {
+   "Medium": 35,
+   "Low": 104,
+   "High": 12,
+   "Premium": 1,
+   "Varies": 1
+  },
+  "addedSincePreviousPull": [
+   "AI",
+   "BF",
+   "BO",
+   "BQ",
+   "FJ",
+   "HN",
+   "JM",
+   "MG",
+   "MO",
+   "MS",
+   "NC",
+   "NG",
+   "RE",
+   "TG",
+   "XK",
+   "ZM"
+  ],
+  "removedSincePreviousPull": [
+   "HK-IRD",
+   "SA"
+  ]
  },
  "jurisdictions": {
   "AE": {
    "band": "Low",
-   "de": "Vereinigte Arabische Emirate",
-   "en": "UAE",
-   "region": "Naher Osten & Afrika"
+   "en": "United Arab Emirates",
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "National Economic Register",
+   "de": "Vereinigte Arabische Emirate"
+  },
+  "AI": {
+   "band": "High",
+   "en": "Anguilla",
+   "region": "Americas",
+   "priceUsd": 89,
+   "register": "Anguilla Commercial Registry"
   },
   "AL": {
    "band": "Low",
-   "de": "Albanien",
    "en": "Albania",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "National Business Center",
+   "de": "Albanien"
   },
   "AM": {
    "band": "Medium",
-   "de": "Armenien",
    "en": "Armenia",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 49,
+   "register": "Electronic Register, Government of Armenia",
+   "de": "Armenien"
   },
   "AO": {
    "band": "Low",
-   "de": "Angola",
    "en": "Angola",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Guiché Único da Empresa",
+   "de": "Angola"
   },
   "AR": {
    "band": "Low",
-   "de": "Argentinien",
    "en": "Argentina",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Registro Nacional de Sociedades",
+   "de": "Argentinien"
   },
   "AT": {
    "band": "Medium",
-   "de": "Österreich",
    "en": "Austria",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Official register",
+   "de": "Österreich"
   },
   "AU": {
    "band": "Medium",
-   "de": "Australien",
    "en": "Australia",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 49,
+   "register": "ASIC",
+   "de": "Australien"
   },
   "AW": {
    "band": "Medium",
-   "de": "Aruba",
    "en": "Aruba",
-   "region": "Finanz- und Offshore-Plaetze"
+   "region": "Americas",
+   "priceUsd": 49,
+   "register": "Chamber of Commerce",
+   "de": "Aruba"
   },
   "AX": {
    "band": "Medium",
-   "de": "Åland",
    "en": "Aaland Islands",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Finnish Patent and Registration Office",
+   "de": "Åland"
   },
   "AZ": {
    "band": "Low",
-   "de": "Aserbaidschan",
    "en": "Azerbaijan",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "State Register of Commercial Legal Entities",
+   "de": "Aserbaidschan"
   },
   "BA": {
    "band": "Low",
-   "de": "Bosnien und Herzegowina",
-   "en": "Bosnia Herzegovina",
-   "region": "Europa"
+   "en": "Bosnia and Herzegovina",
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Registers of Business Entities",
+   "de": "Bosnien und Herzegowina"
   },
   "BE": {
    "band": "Low",
-   "de": "Belgien",
    "en": "Belgium",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Crossroads Bank for Enterprises",
+   "de": "Belgien"
+  },
+  "BF": {
+   "band": "Low",
+   "en": "Burkina Faso",
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Fichier National du Registre de Commerce et du Credit Mobilier"
   },
   "BG": {
    "band": "Low",
-   "de": "Bulgarien",
    "en": "Bulgaria",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "EPZEU (Commercial Register and Register of Non-profit Legal Entities)",
+   "de": "Bulgarien"
   },
   "BH": {
    "band": "Low",
-   "de": "Bahrain",
    "en": "Bahrain",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "SIJILAT",
+   "de": "Bahrain"
   },
   "BM": {
    "band": "Medium",
-   "de": "Bermuda",
    "en": "Bermuda",
-   "region": "Finanz- und Offshore-Plaetze"
+   "region": "Americas",
+   "priceUsd": 49,
+   "register": "Bermuda Registrar of Companies",
+   "de": "Bermuda"
   },
   "BN": {
    "band": "High",
-   "de": "Brunei",
    "en": "Brunei",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 89,
+   "register": "One Common Portal",
+   "de": "Brunei"
+  },
+  "BO": {
+   "band": "Low",
+   "en": "Bolivia",
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "SEPREC - Servicio Plurinacional de Registro de Comercio"
+  },
+  "BQ": {
+   "band": "Medium",
+   "en": "Bonaire, Sint Eustatius and Saba",
+   "region": "Americas",
+   "priceUsd": 49,
+   "register": "Chambers of Commerce & Industry"
   },
   "BR": {
-   "band": "Low",
-   "de": "Brasilien",
+   "band": "Medium",
    "en": "Brazil",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 49,
+   "register": "Jucesp Online",
+   "de": "Brasilien"
   },
   "BS": {
    "band": "Medium",
-   "de": "Bahamas",
    "en": "Bahamas",
-   "region": "Finanz- und Offshore-Plaetze"
+   "region": "Americas",
+   "priceUsd": 49,
+   "register": "Registry of Companies, Registrar General's Department",
+   "de": "Bahamas"
   },
   "BW": {
    "band": "Low",
-   "de": "Botsuana",
    "en": "Botswana",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Companies and Intellectual Property Authority",
+   "de": "Botsuana"
   },
   "BY": {
    "band": "Low",
-   "de": "Belarus",
    "en": "Belarus",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Unified State Register",
+   "de": "Belarus"
   },
   "BZ": {
    "band": "High",
-   "de": "Belize",
    "en": "Belize",
-   "region": "Finanz- und Offshore-Plaetze"
+   "region": "Americas",
+   "priceUsd": 89,
+   "register": "International Business Companies Registry",
+   "de": "Belize"
   },
   "CA": {
    "band": "Medium",
-   "de": "Kanada",
    "en": "Canada",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 49,
+   "register": "Official register",
+   "de": "Kanada"
   },
   "CC": {
    "band": "Medium",
-   "de": "Kokosinseln",
    "en": "Cocos (Keeling) Islands",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 49,
+   "register": "ASIC",
+   "de": "Kokosinseln"
   },
   "CH": {
    "band": "Low",
-   "de": "Schweiz",
    "en": "Switzerland",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Zefix - Central Business Name Index",
+   "de": "Schweiz"
   },
   "CK": {
    "band": "Low",
-   "de": "Cookinseln",
    "en": "Cook Islands",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "Cook Islands Ministry of Justice",
+   "de": "Cookinseln"
   },
   "CL": {
    "band": "Low",
-   "de": "Chile",
    "en": "Chile",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Registro de Empresas y Sociedades",
+   "de": "Chile"
   },
   "CN": {
    "band": "Low",
-   "de": "China",
    "en": "China",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "National Enterprise Credit Information Publicity System",
+   "de": "China"
   },
   "CO": {
    "band": "Low",
-   "de": "Kolumbien",
    "en": "Colombia",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Registro Unico Empresarial y Social (RUES)",
+   "de": "Kolumbien"
   },
   "CR": {
    "band": "Medium",
-   "de": "Costa Rica",
    "en": "Costa Rica",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 49,
+   "register": "Sistema de Certificaciones e Informes Digitales del Registro Nacional",
+   "de": "Costa Rica"
   },
   "CW": {
    "band": "Low",
-   "de": "Curaçao",
-   "en": "Curaçao",
-   "region": "Finanz- und Offshore-Plaetze"
+   "en": "Curacao",
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Curacao Chamber of Commerce & Industry",
+   "de": "Curaçao"
   },
   "CX": {
    "band": "Medium",
-   "de": "Weihnachtsinsel",
    "en": "Christmas Island",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 49,
+   "register": "ASIC",
+   "de": "Weihnachtsinsel"
   },
   "CY": {
    "band": "Medium",
-   "de": "Zypern",
    "en": "Cyprus",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Department of Registrar of Companies and Intellectual Property",
+   "de": "Zypern"
   },
   "CZ": {
    "band": "Low",
-   "de": "Tschechien",
    "en": "Czech Republic",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Verejny rejstrik a Sbirka listin",
+   "de": "Tschechien"
   },
   "DE": {
    "band": "Low",
-   "de": "Deutschland",
    "en": "Germany",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Common register portal of the German federal states",
+   "de": "Deutschland"
   },
   "DJ": {
    "band": "Low",
-   "de": "Dschibuti",
    "en": "Djibouti",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Publications Registres - ODPIC",
+   "de": "Dschibuti"
   },
   "DK": {
    "band": "Low",
-   "de": "Dänemark",
    "en": "Denmark",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "CVR - Central Business Register",
+   "de": "Dänemark"
   },
   "EC": {
    "band": "Low",
-   "de": "Ecuador",
    "en": "Ecuador",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Superintendencia de Companias",
+   "de": "Ecuador"
   },
   "EE": {
    "band": "Low",
-   "de": "Estland",
    "en": "Estonia",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "e-Ariregister",
+   "de": "Estland"
   },
   "ES": {
    "band": "Medium",
-   "de": "Spanien",
    "en": "Spain",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Colegio de Registradores de la Propiedad y Mercantiles",
+   "de": "Spanien"
   },
   "ET": {
    "band": "Low",
-   "de": "Äthiopien",
    "en": "Ethiopia",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "e-Trade Online Trade Registration & License System",
+   "de": "Äthiopien"
   },
   "FI": {
    "band": "Medium",
-   "de": "Finnland",
    "en": "Finland",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Finnish Patent and Registration Office",
+   "de": "Finnland"
+  },
+  "FJ": {
+   "band": "Medium",
+   "en": "Fiji",
+   "region": "Oceania",
+   "priceUsd": 49,
+   "register": "Fiji ROC Public"
   },
   "FO": {
    "band": "Low",
-   "de": "Färöer",
    "en": "Faroe Islands",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Skraseting Foroya",
+   "de": "Färöer"
   },
   "FR": {
    "band": "High",
-   "de": "Frankreich",
    "en": "France",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 89,
+   "register": "Infogreffe",
+   "de": "Frankreich"
   },
   "GB": {
    "band": "Low",
-   "de": "Vereinigtes Königreich",
    "en": "United Kingdom",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Companies House",
+   "de": "Vereinigtes Königreich"
   },
   "GE": {
    "band": "Low",
-   "de": "Georgien",
    "en": "Georgia",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Registry of entrepreneurial and non-entrepreneurial legal entities",
+   "de": "Georgien"
   },
   "GG": {
    "band": "High",
-   "de": "Guernsey",
    "en": "Guernsey",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 89,
+   "register": "Guernsey Registry",
+   "de": "Guernsey"
   },
   "GI": {
    "band": "Medium",
-   "de": "Gibraltar",
    "en": "Gibraltar",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Companies House",
+   "de": "Gibraltar"
   },
   "GL": {
    "band": "Low",
-   "de": "Grönland",
    "en": "Greenland",
-   "region": "Europa"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "CVR - Central Business Register",
+   "de": "Grönland"
   },
   "GP": {
    "band": "Low",
-   "de": "Guadeloupe",
    "en": "Guadeloupe",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "INPI",
+   "de": "Guadeloupe"
   },
   "GR": {
    "band": "Low",
-   "de": "Griechenland",
    "en": "Greece",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Central Union of Hellenic Chambers",
+   "de": "Griechenland"
   },
   "HK": {
    "band": "Medium",
-   "de": "Hongkong",
-   "en": "Hong Kong S.A.R. China",
-   "region": "Asien-Pazifik"
+   "en": "Hong Kong",
+   "region": "Asia",
+   "priceUsd": 49,
+   "register": "ICRIS Companies Registry Cyber Search Centre and IRD",
+   "de": "Hongkong"
   },
-  "HK-IRD": {
-   "band": "Medium",
-   "de": "Hongkong (Steuerbehörde)",
-   "en": "Hong Kong – Inland Revenue Department",
-   "region": "Asien-Pazifik"
+  "HN": {
+   "band": "Low",
+   "en": "Honduras",
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Camara de Comercio e Industria de Cortes"
   },
   "HR": {
    "band": "Low",
-   "de": "Kroatien",
    "en": "Croatia",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Sudski registar",
+   "de": "Kroatien"
   },
   "HU": {
    "band": "Low",
-   "de": "Ungarn",
    "en": "Hungary",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Hungarian Company Register (e-Cegjegyzek)",
+   "de": "Ungarn"
   },
   "ID": {
    "band": "High",
-   "de": "Indonesien",
    "en": "Indonesia",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 89,
+   "register": "Official register",
+   "de": "Indonesien"
   },
   "IE": {
    "band": "Low",
-   "de": "Irland",
    "en": "Ireland",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "CORE",
+   "de": "Irland"
   },
   "IL": {
-   "band": "Medium",
-   "de": "Israel",
+   "band": "Low",
    "en": "Israel",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Israeli Corporations Authority",
+   "de": "Israel"
   },
   "IM": {
    "band": "Medium",
-   "de": "Isle of Man",
    "en": "Isle of Man",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Online Services",
+   "de": "Isle of Man"
   },
   "IN": {
    "band": "Low",
-   "de": "Indien",
    "en": "India",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Ministry of Corporate Affairs (MCA)",
+   "de": "Indien"
   },
   "IQ": {
    "band": "Low",
-   "de": "Irak",
    "en": "Iraq",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Company Enquiry service",
+   "de": "Irak"
   },
   "IR": {
    "band": "Low",
-   "de": "Iran",
    "en": "Iran",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Search Line",
+   "de": "Iran"
   },
   "IS": {
    "band": "Low",
-   "de": "Island",
    "en": "Iceland",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Skatturinn (Iceland Revenue and Customs)",
+   "de": "Island"
   },
   "IT": {
    "band": "Medium",
-   "de": "Italien",
    "en": "Italy",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Italian Business Register",
+   "de": "Italien"
   },
   "JE": {
    "band": "Low",
-   "de": "Jersey",
    "en": "Jersey",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Jersey Financial Services Commission",
+   "de": "Jersey"
+  },
+  "JM": {
+   "band": "Low",
+   "en": "Jamaica",
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Companies Office of Jamaica"
   },
   "JO": {
    "band": "Low",
-   "de": "Jordanien",
    "en": "Jordan",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Companies Control Department",
+   "de": "Jordanien"
   },
   "JP": {
    "band": "Low",
-   "de": "Japan",
    "en": "Japan",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Civil Legal Affairs Association",
+   "de": "Japan"
   },
   "KE": {
    "band": "Medium",
-   "de": "Kenia",
    "en": "Kenya",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 49,
+   "register": "eCitizen",
+   "de": "Kenia"
   },
   "KG": {
    "band": "Low",
-   "de": "Kirgisistan",
    "en": "Kyrgyzstan",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Register of Legal Entities",
+   "de": "Kirgisistan"
   },
   "KH": {
    "band": "Low",
-   "de": "Kambodscha",
    "en": "Cambodia",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "online Business Registration portal, Ministry of Commerce",
+   "de": "Kambodscha"
   },
   "KR": {
    "band": "Low",
-   "de": "Südkorea",
    "en": "South Korea",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Internet Registry Office (Supreme Court of Korea)",
+   "de": "Südkorea"
   },
   "KW": {
    "band": "Low",
-   "de": "Kuwait",
    "en": "Kuwait",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Kuwait Chamber of Commerce & Industry",
+   "de": "Kuwait"
   },
   "KY": {
-   "band": "Premium",
-   "de": "Kaimaninseln",
+   "band": "High",
    "en": "Cayman Islands",
-   "region": "Finanz- und Offshore-Plaetze"
+   "region": "Americas",
+   "priceUsd": 89,
+   "register": "CIG E-services",
+   "de": "Kaimaninseln"
   },
   "KZ": {
    "band": "Low",
-   "de": "Kasachstan",
    "en": "Kazakhstan",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Astana Financial Services Authority",
+   "de": "Kasachstan"
   },
   "LA": {
    "band": "Low",
-   "de": "Laos",
    "en": "Laos",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "National Enterprise Database",
+   "de": "Laos"
   },
   "LI": {
    "band": "Medium",
-   "de": "Liechtenstein",
    "en": "Liechtenstein",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Handelsregister des Fuerstentums Liechtenstein",
+   "de": "Liechtenstein"
   },
   "LK": {
-   "band": "Medium",
-   "de": "Sri Lanka",
+   "band": "Low",
    "en": "Sri Lanka",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Registrar of Companies",
+   "de": "Sri Lanka"
   },
   "LS": {
    "band": "Low",
-   "de": "Lesotho",
    "en": "Lesotho",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Lesotho Ministry of Trade & Industry",
+   "de": "Lesotho"
   },
   "LU": {
-   "band": "High",
-   "de": "Luxemburg",
+   "band": "Medium",
    "en": "Luxembourg",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Luxembourg Business Registers",
+   "de": "Luxemburg"
   },
   "LV": {
    "band": "Low",
-   "de": "Lettland",
    "en": "Latvia",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Latvijas Republikas Uznemumu registrs",
+   "de": "Lettland"
   },
   "MA": {
    "band": "High",
-   "de": "Marokko",
    "en": "Morocco",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 89,
+   "register": "OMPIC (Registre central du Commerce)",
+   "de": "Marokko"
   },
   "MC": {
    "band": "High",
-   "de": "Monaco",
    "en": "Monaco",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 89,
+   "register": "Consulter le Repertoire du Commerce et de l'Industrie",
+   "de": "Monaco"
   },
   "MD": {
    "band": "Low",
-   "de": "Moldau",
    "en": "Moldova",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "IDNO.MD",
+   "de": "Moldau"
   },
   "ME": {
    "band": "Low",
-   "de": "Montenegro",
    "en": "Montenegro",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Centralni Registar Privrednih Subjekata",
+   "de": "Montenegro"
+  },
+  "MG": {
+   "band": "Low",
+   "en": "Madagascar",
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Registre du Commerce et des Societes (RCS)"
   },
   "MH": {
    "band": "Low",
-   "de": "Marshallinseln",
    "en": "Marshall Islands",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "International Registries",
+   "de": "Marshallinseln"
   },
   "MK": {
    "band": "Medium",
-   "de": "Nordmazedonien",
    "en": "North Macedonia",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Central Registry of North Macedonia",
+   "de": "Nordmazedonien"
   },
   "MM": {
    "band": "Low",
-   "de": "Myanmar",
    "en": "Myanmar",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Myanmar Companies Online",
+   "de": "Myanmar"
+  },
+  "MO": {
+   "band": "Low",
+   "en": "Macau",
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Legal Affairs Bureau"
   },
   "MQ": {
    "band": "Low",
-   "de": "Martinique",
    "en": "Martinique",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "INPI",
+   "de": "Martinique"
+  },
+  "MS": {
+   "band": "Low",
+   "en": "Montserrat",
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Companies and Intellectual Property Office (CIPO)"
   },
   "MT": {
    "band": "Medium",
-   "de": "Malta",
    "en": "Malta",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Malta Business Registry",
+   "de": "Malta"
   },
   "MU": {
    "band": "Low",
-   "de": "Mauritius",
    "en": "Mauritius",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Corporate and Business Registration Department",
+   "de": "Mauritius"
   },
   "MV": {
    "band": "Low",
-   "de": "Malediven",
    "en": "Maldives",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Business Portal - Ministry of Economic Development",
+   "de": "Malediven"
   },
   "MX": {
    "band": "Low",
-   "de": "Mexiko",
    "en": "Mexico",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Registro Publico de Comercio",
+   "de": "Mexiko"
   },
   "MY": {
    "band": "Medium",
-   "de": "Malaysia",
    "en": "Malaysia",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 49,
+   "register": "MYDATA",
+   "de": "Malaysia"
+  },
+  "NC": {
+   "band": "Medium",
+   "en": "New Caledonia",
+   "region": "Oceania",
+   "priceUsd": 49,
+   "register": "Registre du Commerce et des Societes (RCS)"
+  },
+  "NG": {
+   "band": "Medium",
+   "en": "Nigeria",
+   "region": "Africa",
+   "priceUsd": 49,
+   "register": "Corporate Affairs Commission (CAC)"
   },
   "NL": {
    "band": "Low",
-   "de": "Niederlande",
    "en": "Netherlands",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "KVK - Kamer van Koophandel",
+   "de": "Niederlande"
   },
   "NO": {
    "band": "Low",
-   "de": "Norwegen",
    "en": "Norway",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Bronnoysundregistrene",
+   "de": "Norwegen"
   },
   "NP": {
    "band": "Low",
-   "de": "Nepal",
    "en": "Nepal",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Office of Company Registrar",
+   "de": "Nepal"
   },
   "NZ": {
    "band": "Low",
-   "de": "Neuseeland",
    "en": "New Zealand",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "New Zealand Companies Office",
+   "de": "Neuseeland"
   },
   "OM": {
    "band": "Low",
-   "de": "Oman",
    "en": "Oman",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Ministry of Commerce, Industry and Investment Promotion",
+   "de": "Oman"
   },
   "PA": {
    "band": "Low",
-   "de": "Panama",
    "en": "Panama",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Registro Publico de Panama",
+   "de": "Panama"
   },
   "PE": {
    "band": "Low",
-   "de": "Peru",
    "en": "Peru",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Registro Unico de Contribuyentes",
+   "de": "Peru"
   },
   "PF": {
    "band": "Low",
-   "de": "Französisch-Polynesien",
    "en": "French Polynesia",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "Institute of Statistics of French Polynesia",
+   "de": "Französisch-Polynesien"
   },
   "PG": {
    "band": "Low",
-   "de": "Papua-Neuguinea",
    "en": "Papua New Guinea",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "Investment Promotion Authority",
+   "de": "Papua-Neuguinea"
   },
   "PH": {
    "band": "Medium",
-   "de": "Philippinen",
    "en": "Philippines",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 49,
+   "register": "Securities and Exchange Commission and Department of Trade and Industry",
+   "de": "Philippinen"
   },
   "PK": {
    "band": "Medium",
-   "de": "Pakistan",
    "en": "Pakistan",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 49,
+   "register": "Securities & Exchange Commission of Pakistan",
+   "de": "Pakistan"
   },
   "PL": {
    "band": "Low",
-   "de": "Polen",
    "en": "Poland",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "National Court Register (KRS)",
+   "de": "Polen"
   },
   "PR": {
    "band": "Low",
-   "de": "Puerto Rico",
    "en": "Puerto Rico",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Registry of Corporations and Entities",
+   "de": "Puerto Rico"
   },
   "PS": {
    "band": "Low",
-   "de": "Palästina",
    "en": "Palestine",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Ministry of National Economy",
+   "de": "Palästina"
   },
   "PT": {
    "band": "High",
-   "de": "Portugal",
    "en": "Portugal",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 89,
+   "register": "Registo Comercial - Instituto dos Registos e do Notariado",
+   "de": "Portugal"
   },
   "PY": {
    "band": "Low",
-   "de": "Paraguay",
    "en": "Paraguay",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Direccion Nacional de Ingresos Tributarios (DNIT)",
+   "de": "Paraguay"
   },
   "QA": {
    "band": "Low",
-   "de": "Katar",
    "en": "Qatar",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Ministry of Commerce and Industry",
+   "de": "Katar"
+  },
+  "RE": {
+   "band": "Low",
+   "en": "Reunion",
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "INPI"
   },
   "RO": {
    "band": "Medium",
-   "de": "Rumänien",
    "en": "Romania",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "Oficiul National al Registrului Comertului",
+   "de": "Rumänien"
   },
   "RS": {
    "band": "Low",
-   "de": "Serbien",
    "en": "Serbia",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Business Registers Agency",
+   "de": "Serbien"
   },
   "RU": {
    "band": "Low",
-   "de": "Russland",
    "en": "Russia",
-   "region": "Europa"
-  },
-  "SA": {
-   "band": "Low",
-   "de": "Saudi-Arabien",
-   "en": "Saudi Arabia",
-   "region": "Naher Osten & Afrika"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Business Registers (USRLE/USRIE)",
+   "de": "Russland"
   },
   "SB": {
    "band": "Low",
-   "de": "Salomonen",
    "en": "Solomon Islands",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "Solomon Islands Business Registry",
+   "de": "Salomonen"
   },
   "SC": {
    "band": "High",
-   "de": "Seychellen",
    "en": "Seychelles",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 89,
+   "register": "Registrar of Companies and Financial Services Authority",
+   "de": "Seychellen"
   },
   "SE": {
    "band": "High",
-   "de": "Schweden",
    "en": "Sweden",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 89,
+   "register": "Bolagsverket",
+   "de": "Schweden"
   },
   "SG": {
    "band": "Low",
-   "de": "Singapur",
    "en": "Singapore",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Business Filing Portal of ACRA",
+   "de": "Singapur"
   },
   "SI": {
    "band": "Low",
-   "de": "Slowenien",
    "en": "Slovenia",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "AJPES",
+   "de": "Slowenien"
   },
   "SK": {
    "band": "Low",
-   "de": "Slowakei",
    "en": "Slovakia",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Business Register of the Slovak Republic",
+   "de": "Slowakei"
   },
   "SM": {
    "band": "Medium",
-   "de": "San Marino",
    "en": "San Marino",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 49,
+   "register": "San Marino, Chamber of Commerce",
+   "de": "San Marino"
   },
   "SN": {
    "band": "Low",
-   "de": "Senegal",
    "en": "Senegal",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Seninfogreffe",
+   "de": "Senegal"
+  },
+  "TG": {
+   "band": "Low",
+   "en": "Togo",
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Registre du Commerce et du Credit Mobilier"
   },
   "TH": {
    "band": "Low",
-   "de": "Thailand",
    "en": "Thailand",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "DBD - Datawarehouse",
+   "de": "Thailand"
   },
   "TN": {
-   "band": "Medium",
-   "de": "Tunesien",
+   "band": "Low",
    "en": "Tunisia",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Registre National des Entreprises",
+   "de": "Tunesien"
   },
   "TO": {
    "band": "Low",
-   "de": "Tonga",
    "en": "Tonga",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "Tonga Business Register",
+   "de": "Tonga"
   },
   "TR": {
    "band": "Low",
-   "de": "Türkei",
    "en": "Turkey",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Turkiye Ticaret Sicili Gazetesi | TOBBU",
+   "de": "Türkei"
   },
   "TT": {
    "band": "Low",
-   "de": "Trinidad und Tobago",
    "en": "Trinidad and Tobago",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Registrar General's Department",
+   "de": "Trinidad und Tobago"
   },
   "TW": {
    "band": "Low",
-   "de": "Taiwan",
-   "en": "Taiwan, China",
-   "region": "Asien-Pazifik"
+   "en": "Taiwan",
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Administration of Commerce, MOEA",
+   "de": "Taiwan"
   },
   "UA": {
    "band": "Low",
-   "de": "Ukraine",
    "en": "Ukraine",
-   "region": "Europa"
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "Unified State Register of Legal Entities, Individual Entrepreneurs",
+   "de": "Ukraine"
   },
   "US": {
-   "band": "Medium",
+   "band": "Varies",
+   "en": "United States",
+   "region": "Americas",
+   "priceUsd": null,
+   "register": "See USA tab - per state",
    "de": "Vereinigte Staaten",
-   "en": "United States of America",
-   "region": "Amerika"
+   "note": "per state - no flat band. Coverage page says 'See USA tab for details / Per state'; the USA tab 404s as of 14.09.2026."
   },
   "UZ": {
    "band": "Low",
-   "de": "Usbekistan",
    "en": "Uzbekistan",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 19,
+   "register": "Davlat xizmatlari markazi",
+   "de": "Usbekistan"
   },
   "VC": {
    "band": "Low",
-   "de": "St. Vincent und die Grenadinen",
    "en": "Saint Vincent and the Grenadines",
-   "region": "Finanz- und Offshore-Plaetze"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "CIPO E-services",
+   "de": "St. Vincent und die Grenadinen"
   },
   "VG": {
    "band": "Premium",
-   "de": "Britische Jungferninseln",
    "en": "British Virgin Islands",
-   "region": "Finanz- und Offshore-Plaetze"
+   "region": "Americas",
+   "priceUsd": 119,
+   "register": "British Virgin Islands Financial Services Commission",
+   "de": "Britische Jungferninseln"
   },
   "VI": {
    "band": "Low",
-   "de": "Amerikanische Jungferninseln",
    "en": "U.S. Virgin Islands",
-   "region": "Amerika"
+   "region": "Americas",
+   "priceUsd": 19,
+   "register": "Catalyst register",
+   "de": "Amerikanische Jungferninseln"
   },
   "VN": {
    "band": "Medium",
-   "de": "Vietnam",
    "en": "Vietnam",
-   "region": "Asien-Pazifik"
+   "region": "Asia",
+   "priceUsd": 49,
+   "register": "National Business Registration Portal and General Department of Taxation",
+   "de": "Vietnam"
   },
   "VU": {
    "band": "Low",
-   "de": "Vanuatu",
    "en": "Vanuatu",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "Vanuatu Financial Services Commission",
+   "de": "Vanuatu"
   },
   "WS": {
    "band": "Low",
-   "de": "Samoa",
    "en": "Samoa",
-   "region": "Asien-Pazifik"
+   "region": "Oceania",
+   "priceUsd": 19,
+   "register": "Ministry of Commerce, Industry & Labour",
+   "de": "Samoa"
+  },
+  "XK": {
+   "band": "Low",
+   "en": "Kosovo",
+   "region": "Europe",
+   "priceUsd": 19,
+   "register": "ARBK - Agjencia e Regjistrimit te Bizneseve"
   },
   "YE": {
    "band": "Low",
-   "de": "Jemen",
    "en": "Yemen",
-   "region": "Naher Osten & Afrika"
+   "region": "Middle East",
+   "priceUsd": 19,
+   "register": "Ministry of Industry and Trade",
+   "de": "Jemen"
   },
   "YT": {
    "band": "Low",
-   "de": "Mayotte",
    "en": "Mayotte",
-   "region": "Amerika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "INPI",
+   "de": "Mayotte"
   },
   "ZA": {
    "band": "Low",
-   "de": "Südafrika",
    "en": "South Africa",
-   "region": "Naher Osten & Afrika"
+   "region": "Africa",
+   "priceUsd": 19,
+   "register": "Companies and Intellectual Property Commission",
+   "de": "Südafrika"
+  },
+  "ZM": {
+   "band": "Medium",
+   "en": "Zambia",
+   "region": "Africa",
+   "priceUsd": 49,
+   "register": "Patents and Companies Registration Agency"
   }
  }
 }

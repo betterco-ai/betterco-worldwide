@@ -1,0 +1,211 @@
+<title>Septeo Agreement Review Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#6895FF; --blue-light:#e8efff; --navy:#1a2340; --dark:#222233;
+    --gray-600:#6b7280; --gray-400:#9ca3af; --gray-200:#e5e7eb; --gray-100:#f3f4f6;
+    --gray-50:#f9fafb; --white:#ffffff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Montserrat',system-ui,sans-serif; -webkit-font-smoothing:antialiased;
+    color:var(--dark); background:var(--gray-100); padding:24px 16px 60px; }
+  .page { width:210mm; max-width:100%; min-height:297mm; margin:0 auto; background:var(--white);
+    box-shadow:0 2px 20px rgba(0,0,0,.08); padding:25mm 22mm 20mm; }
+  .page + .page { margin-top:26px; }
+  @media (max-width:720px) { .page { padding:22px 18px 28px; min-height:0; } }
+  .doc-header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
+    margin-bottom:6px; padding-bottom:14px; border-bottom:3px solid var(--blue); }
+  .doc-header h1 { font-size:26px; font-weight:800; color:var(--navy); line-height:1.15; }
+  .kicker { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--blue); margin-bottom:5px; }
+  .doc-date { font-size:10px; color:var(--gray-600); text-align:right; margin:10px 0 18px; }
+  .lead { font-size:10.5px; line-height:1.7; margin:0 0 16px; }
+  .lead strong { font-weight:700; color:var(--navy); }
+  .section { margin-bottom:16px; }
+  .section h2 { font-size:13px; font-weight:700; color:var(--navy); padding-bottom:4px;
+    border-bottom:2px solid var(--blue); margin-bottom:9px; }
+  .sec-num { color:var(--blue); margin-right:5px; }
+  .section p { font-size:10.5px; line-height:1.7; margin-bottom:8px; }
+  .section p:last-child { margin-bottom:0; }
+  .section strong { font-weight:700; color:var(--navy); }
+  .section em { font-style:italic; }
+  ul.ticks { list-style:none; margin:6px 0 10px; padding:0; font-size:10.5px; line-height:1.65; }
+  ul.ticks li { padding-left:14px; position:relative; margin-bottom:6px; }
+  ul.ticks li::before { content:'\203A'; position:absolute; left:0; color:var(--blue); font-weight:700; }
+  ol.q { list-style:none; counter-reset:q; margin:6px 0 0; padding:0; font-size:10.5px; line-height:1.7; }
+  ol.q li { counter-increment:q; display:grid; grid-template-columns:22px 1fr; gap:8px; margin-bottom:10px; }
+  ol.q li::before { content:"Q" counter(q); color:var(--blue); font-weight:700; font-size:9px; padding-top:3px; }
+  .tablewrap { overflow-x:auto; margin:4px 0 10px; }
+  table { width:100%; border-collapse:collapse; font-size:10.5px; }
+  thead th { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:.5px;
+    color:var(--white); background:var(--navy); padding:7px 9px; text-align:left; }
+  tbody tr { border-bottom:1px solid var(--gray-100); }
+  tbody td { padding:6px 9px; vertical-align:top; }
+  td.cl { font-weight:700; color:var(--navy); white-space:nowrap; width:78px; }
+  .card { background:var(--gray-50); border-radius:8px; padding:11px 13px;
+    border:1px solid var(--gray-200); margin:4px 0 10px; }
+  .card h4 { font-size:10.5px; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .card p { font-size:10px; color:var(--gray-600); line-height:1.6; margin:0 0 6px; }
+  .card p:last-child { margin-bottom:0; }
+  .doc-footer { margin-top:16px; padding-top:10px; border-top:2px solid var(--navy);
+    display:flex; justify-content:space-between; gap:12px; font-size:8px;
+    color:var(--gray-400); flex-wrap:wrap; }
+  @media print { body { background:var(--white)!important; padding:0; }
+    .page { box-shadow:none; padding:4mm 0; width:100%; min-height:auto; break-before:page; }
+    .page:first-of-type { break-before:auto; }
+    .section, .card { break-inside:avoid; } }
+  @page { size:A4; margin:18mm 20mm 24mm; }
+</style>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Instruction to counsel &middot; German law</div>
+      <h1>Reseller agreement<br>with STP / Septeo</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo" style="height:22px">
+  </div>
+  <div class="doc-date">Founders1 GmbH &middot; 15 September 2026 &middot; draft not yet sent to the counterparty</div>
+
+  <p class="lead">
+    We ask for a review of the attached agreement before it goes to the counterparty. The commercial terms
+    are settled and are not in question. What we need is (1) a view on how the arrangement is
+    <strong>characterised</strong> under German law, because that question drives two consequences we care about,
+    and (2) a check of the clauses listed in section&nbsp;4. The document was drafted by us, not by a lawyer.
+  </p>
+
+  <div class="section">
+    <h2><span class="sec-num">1</span> The deal, in short</h2>
+    <p>Founders1 GmbH operates <strong>BetterCo</strong>, a platform that procures company registry documents and
+    registry data from official registers in 153 jurisdictions and delivers them with provenance. STP Business
+    Information GmbH (Karlsruhe, a company of the Septeo group) sells software and information services to legal,
+    notarial and tax practices, and will offer our service to those clients <strong>in its own name and for its own
+    account</strong>. We never appear towards the end client and have no contract with them.</p>
+    <ul class="ticks">
+      <li><strong>Non-exclusive.</strong> We remain free to sell directly and through other resellers.</li>
+      <li><strong>Group scope.</strong> Other Septeo companies may resell by accession (clause&nbsp;4); STP stays the
+        sole contracting and billing party, so the relationship remains German&ndash;German.</li>
+      <li><strong>Compensation.</strong> Per case, STP pays us the procurement cost <em>plus 50&nbsp;% of the net
+        amount</em> it invoices its client after that cost; STP keeps the other 50&nbsp;%. Minimum
+        EUR&nbsp;1.500 per month on our share from the third month. STP sets its own end-client prices.</li>
+      <li><strong>Term.</strong> 24 months, then 12-month renewals; a jurisdiction falls away if supply ceases.</li>
+      <li><strong>No contractual penalty</strong> anywhere in the agreement &mdash; a deliberate decision.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">2</span> The question that matters most</h2>
+    <div class="card">
+      <h4>Is this a resale, or is it an agency / commission arrangement?</h4>
+      <p>We have drafted it as a <strong>resale</strong>. But the compensation is a <strong>profit share, not a
+      purchase price</strong>, and we understand that to be the classic indicator pointing the other way.</p>
+    </div>
+    <p>Two consequences turn on the answer, which is why we raise it first rather than leaving it to the clause list:</p>
+    <ul class="ticks">
+      <li><strong>&sect;&nbsp;89b HGB by analogy.</strong> If STP were treated as akin to a commercial agent, a
+        compensation claim on termination becomes arguable. We have tried to close the customer-base limb by letting
+        STP report by its own reference rather than naming its clients (clause&nbsp;8.5), so we never acquire the
+        customer base. Does that help, and what else would?</li>
+      <li><strong>DORA.</strong> Our end clients include regulated institutions. On a resale reading, STP is the
+        financial entity's ICT third-party service provider and we are STP's subcontractor, so the Art.&nbsp;30
+        apparatus lands on STP. On an agency reading we would be supplying the regulated institution directly, and it
+        lands on us. Clauses&nbsp;9.5 and 9.6 are written on the first assumption.</li>
+    </ul>
+    <p>Drafting already aimed at this: clause&nbsp;3.1 and 2.1 say &bdquo;in its own name and for its own account&ldquo;,
+    and clause&nbsp;15.5 is an express no-agency / no-Kommission / no-partnership clause. <strong>We would like to know
+    whether that is enough, and if not, what would be</strong> &mdash; including whether the compensation mechanic
+    itself should be restructured as a purchase price with a rebate rather than a share.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">3</span> A second structural question</h2>
+    <p><strong>Is this document AGB?</strong> It is our draft, intended for one counterparty, and we expect it to be
+    negotiated. If it is nonetheless measured against &sect;&sect;&nbsp;305&nbsp;ff. BGB, the clauses most at risk are
+    the liability cap (13.2), the warranty exclusion for register content (12.2) and the restrictions in clause&nbsp;5.
+    We would like to know which of them we should expect to lose in a form-contract reading, and what we should
+    document about the negotiation to avoid that reading.</p>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; Berger Str. 224, 60385 Frankfurt &middot; HRB 234373 B</span>
+    <span>Confidential &mdash; instruction to counsel</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Instruction to counsel &middot; continued</div>
+      <h1>Clauses to check<br>and what we are asking</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo" style="height:22px">
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">4</span> Clauses we want looked at</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Clause</th><th>What it does</th><th>Our concern</th></tr></thead>
+        <tbody>
+          <tr><td class="cl">3.1, 3.4, 15.5</td><td>resale right, field of use, no agency</td><td>the characterisation question in section&nbsp;2</td></tr>
+          <tr><td class="cl">3.5 + Annex 5</td><td>what the end client may do with a delivered document</td><td>rights are limited to what we ourselves hold upstream; is that limiter effective against an end client we have no contract with?</td></tr>
+          <tr><td class="cl">5</td><td>restrictions: no redistribution, no dataset resale, no competing product</td><td>enforceable as drafted? &sect;&nbsp;307 risk if read as AGB</td></tr>
+          <tr><td class="cl">6.1</td><td>non-circumvention of our supply routes, 24 months post-term</td><td>duration and scope acceptable? It has no penalty attached (decision), so it rests on provable damage &mdash; is it worth anything in that form?</td></tr>
+          <tr><td class="cl">8.2&ndash;8.4</td><td>cost + 50&nbsp;% of net, monthly minimum</td><td>the profit-share point in section&nbsp;2; also whether the minimum survives as drafted</td></tr>
+          <tr><td class="cl">9.1 + Annex 5</td><td>terms STP must carry into its own end-client terms, in substance</td><td>is a substance obligation (rather than verbatim wording) workable, given we have no privity?</td></tr>
+          <tr><td class="cl">9.5, 9.6</td><td>DORA: what STP may not agree on our behalf; the cooperation we will give</td><td>sufficient if the service supports a critical or important function?</td></tr>
+          <tr><td class="cl">10 + Annex 3</td><td>parties as independent controllers, not processor</td><td>we believe this is right: we decide routes, retention and sourcing, and our own suppliers act as our processors. Please confirm, and confirm Annex&nbsp;3 is the correct instrument rather than an AVV</td></tr>
+          <tr><td class="cl">12.1, 12.4</td><td>we warrant provenance metadata; 12.4 says clause 12 is not a Garantie</td><td>12.4 was added because &bdquo;warrants&ldquo; could otherwise switch off the 13.2 cap entirely. Does it do its job?</td></tr>
+          <tr><td class="cl">12.2</td><td>no warranty for the content of the register itself</td><td>the clause we least want to lose; it is the difference between selling procurement and underwriting registers</td></tr>
+          <tr><td class="cl">13.2</td><td>cap at our share under 8.2, pass-through excluded</td><td>effective? And if the counterparty asks to make clause 13 mutual, we want breaches of 5, 6 and the Annex 5 pass-through carved out of any cap they obtain</td></tr>
+          <tr><td class="cl">14.1, 14.2a</td><td>24 months; a jurisdiction falls away if supply ceases</td><td>14.2a is new and unreviewed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">5</span> What is deliberately not in the document</h2>
+    <ul class="ticks">
+      <li><strong>Prices.</strong> Procurement costs are not stated in the body of the agreement. They sit in
+        <strong>Annex&nbsp;2a</strong>, a separate but incorporated document, dated at signature and amendable only under
+        clause&nbsp;8.6, so it can be replaced without re-executing the agreement and circulated to fewer people.
+        We would value a view on this: under clause&nbsp;8.2 the procurement cost is an input to the settlement
+        formula, and we want to be sure the construction does not read as one party determining the consideration.</li>
+      <li><strong>Our upstream supply arrangements.</strong> We have a supply agreement whose terms constrain what we
+        may pass on. That is being handled on a separate track and is <em>not</em> part of this instruction; clause&nbsp;3.5
+        and Annex&nbsp;5(b) are drafted so that the agreement does not over-promise whichever way it resolves. Please
+        flag if you think it cannot be left outside this review.</li>
+      <li><strong>Two open factual points</strong> that may need a footnote in Annex&nbsp;2 before signature: for the
+        United States and for Brazil we do not yet know which sub-registers are actually served, while both are listed
+        as covered jurisdictions. We are asking our supplier. This is a disclosure question rather than a drafting one,
+        but tell us if you see it differently.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">6</span> What we are asking for</h2>
+    <ol class="q">
+      <li>Does this read as a resale or as an agency/commission arrangement, and what would make the resale reading safe? If the compensation mechanic is the problem, say so &mdash; we can restructure it before it is sent.</li>
+      <li>Is a &sect;&nbsp;89b HGB analogy a real risk here, and does clause&nbsp;8.5 do useful work against it?</li>
+      <li>AGB or individually negotiated &mdash; and which clauses do we lose if it is AGB?</li>
+      <li>Are the independent-controller construction and Annex&nbsp;3 correct, or should this be an AVV?</li>
+      <li>Do 12.4 and 13.2 hold together, and is 12.2 defensible as drafted?</li>
+      <li>Anything in the clause table in section&nbsp;4 that does not do what we think it does.</li>
+    </ol>
+    <p>We would rather hear that the structure is wrong now than after it is signed. If the answer to Q1 is that it
+    should be built differently, that is a useful answer.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">7</span> Attached</h2>
+    <ul class="ticks">
+      <li>Reseller agreement with Annexes 1&ndash;5 &mdash; <em>SEPTEO_RESELLER_AGREEMENT_2026-09-14.pdf</em>, 17 pages</li>
+      <li>Annex&nbsp;2a &mdash; price list (confidential) &mdash; <em>SEPTEO_ANNEX_2A_PRICE_LIST.pdf</em>, 1 page</li>
+    </ul>
+    <p>Both are drafts. Nothing has been sent to the counterparty, and no version of this has been signed.</p>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; Eckhard Ortwein &middot; HRB 234373 B</span>
+    <span>Confidential &mdash; instruction to counsel</span>
+  </div>
+</div>
