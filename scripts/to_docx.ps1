@@ -44,10 +44,41 @@ try {
         # record the counterparty's edits as revisions by default
         # SaveAs with [ref] fails on Windows PowerShell 5.1 ("psobject cannot be
         # converted to Object"); SaveAs2 takes plain arguments.
+        # Everything below happens AFTER the save: the source is opened
+        # read-only, so it cannot be edited in place.
         $doc.SaveAs2([string]$target, [int]$wdFormatXMLDocument)
 
-        # TrackRevisions set before SaveAs is lost, because the source is opened
-        # read-only. Set it on the saved document and save again.
+        # Table of contents, for anything long enough to need one. The h1/h2 in
+        # the source already carry the built-in heading styles (w:name
+        # "heading 1"/"heading 2", outlineLvl 0/1), so the TOC and the navigation
+        # pane both populate from them.
+        # Track changes stays OFF here, or the TOC itself is recorded as an
+        # insertion and the counterparty opens a document full of our revisions.
+        $doc.TrackRevisions = $false
+        if ($doc.Paragraphs.Count -gt 60) {
+            $doc.Range(0, 0).InsertParagraphBefore()
+            $doc.Range(0, 0).InsertParagraphBefore()
+
+            $head = $doc.Paragraphs.Item(1).Range
+            $head.Text = "Contents"
+            $head.Style = $doc.Styles.Item([int]-2)      # wdStyleHeading1, language-independent
+
+            $tocRange = $doc.Paragraphs.Item(2).Range
+            $toc = $doc.TablesOfContents.Add($tocRange, $true, 1, 2)
+            $toc.Update() | Out-Null
+            $toc.Range.InsertParagraphAfter()
+            $doc.Paragraphs.Item($toc.Range.Paragraphs.Count + 2).Range.InsertBreak(7)
+        }
+
+        # Document properties are a nicety and BuiltInDocumentProperties does not
+        # bind reliably through PowerShell late binding; never fail the build for it.
+        try {
+            $props = $doc.BuiltInDocumentProperties
+            $props.Item("Title").Value   = ($f.Name -replace '\.docx\.html$', '')
+            $props.Item("Company").Value = "Founders1 GmbH"
+        } catch { Write-Output "  (document properties skipped)" }
+
+        # Record the counterparty's edits as revisions, then save.
         $doc.TrackRevisions = $true
         $doc.Save()
 
