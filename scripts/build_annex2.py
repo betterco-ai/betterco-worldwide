@@ -12,6 +12,9 @@ does it anyway.
     python scripts/build_annex2.py --write     # regenerate the two sections
     python scripts/build_annex2.py             # print the fragments
 
+Annex 2a as a separate price list was removed on 15.09.2026: the amounts
+now sit in Annex 2.1 of the Agreement itself.
+
 Procurement costs are the CONTRACTED per-case fees from the supply Order Form,
 not the list prices on the coverage page. They live here because they are a
 commercial term of our own, not a property of the coverage data.
@@ -88,46 +91,51 @@ def counts(js):
 
 
 def tiers_fragment(js):
-    """Annex 2.1 states the tier structure and the counts. It states NO amounts:
-    those live in the confidential price list (decision, 15.09.2026), so that the
-    contract does not carry a rate card that maps 1:1 onto the supplier's public
-    bands and identifies both the supplier and our discount."""
+    """Annex 2.1: the tier structure, the procurement cost per tier, and the
+    number of jurisdictions in each.
+
+    The amounts lived in a separate Annex 2a price list for part of 15.09.2026
+    and were folded back in on instruction. Note what they reveal: the tiers map
+    1:1 onto the supplier's public bands (19/49/89/119 US$), so the cost column
+    shows a consistent 35-40% discount and identifies the supply side to anyone
+    who compares. That is a disclosure decision, taken deliberately."""
     c = counts(js)
     untiered = sorted(cc for cc, e in js.items() if tier_of(e) is None)
     rows = []
     for tier in ("A", "B", "C", "D"):
+        cost, lst = TIER_COST[tier]
         rows.append(
             u'          <tr><td class="klass">%s</td>'
-            u'<td class="price">%d</td>'
-            u'<td>%s</td></tr>' % (tier, c[tier], TIER_BLURB[tier]))
-
-    individual = u", ".join(name for _, name, _ in INDIVIDUAL)
+            u'<td class="price">%s &euro;</td>'
+            u'<td class="price soft">%s &euro;</td>'
+            u'<td class="price">%d</td></tr>' % (tier, cost, lst, c[tier]))
 
     note = u""
     if untiered:
         names = u", ".join(js[cc]["en"] for cc in untiered)
         note = (u'\n    <p><strong>%s is not on a tier.</strong> It has no single '
                 u'national register: company records are filed with each state, and '
-                u'availability is determined per state. It is priced individually in '
-                u'the price list, and Annex&nbsp;2.2 marks it accordingly.</p>' % names)
+                u'availability is determined per state. Its cost is agreed separately '
+                u'and remains provisional under clause&nbsp;8.6; Annex&nbsp;2.2 marks '
+                u'it accordingly.</p>' % names)
 
     return u"""%(begin)s
     <div class="tablewrap">
       <table class="price-table">
         <thead><tr>
           <th>Tier</th>
+          <th class="price">Procurement cost</th>
+          <th class="price">List price (for information)</th>
           <th class="price">Jurisdictions</th>
-          <th>Typical registers in this tier</th>
         </tr></thead>
         <tbody>
 %(rows)s
         </tbody>
       </table>
     </div>
-    <p><strong>%(individual)s</strong> are priced individually rather than by tier. A case that has to be worked manually carries a surcharge. All amounts are net of VAT and are stated in the price list in force (clause&nbsp;8.6).</p>%(note)s
+    <p>A case that has to be worked manually carries a surcharge, notified in advance under Annex&nbsp;2.3. All amounts are net of VAT. The list price column is shown for orientation only and is not the basis of any settlement.</p>%(note)s
     %(end)s""" % {
-        "begin": BEGIN, "rows": u"\n".join(rows), "individual": individual,
-        "note": note, "end": END,
+        "begin": BEGIN, "rows": u"\n".join(rows), "note": note, "end": END,
     }
 
 
@@ -198,141 +206,10 @@ def splice(html, sec, fragment, keep_lead=True):
 PRICE_LIST = os.path.join(REPO, "docs", "SEPTEO_ANNEX_2A_PRICE_LIST.html")
 
 
-def write_price_list(js, data):
-    """Annex 2a -- the amounts the Agreement deliberately omits.
-
-    Kept as a separate document so it can be replaced without re-executing the
-    Agreement and so its circulation can be limited -- but INCORPORATED and dated
-    at signature, and amendable only under clause 8.6. Under clause 8.2 the
-    procurement cost is an input to the settlement formula, so a schedule one
-    party could change at will would be both a negotiation target and a
-    Sec. 307 BGB risk in an AGB reading."""
-    c = counts(js)
-    rows = []
-    for tier in ("A", "B", "C", "D"):
-        cost, lst = TIER_COST[tier]
-        rows.append(u'          <tr><td class="klass">%s</td>'
-                    u'<td class="price">%s &euro;</td>'
-                    u'<td class="price soft">%s &euro;</td>'
-                    u'<td class="price">%d</td></tr>'
-                    % (tier, cost, lst, c[tier]))
-    ind = []
-    for cc, name, price in INDIVIDUAL:
-        how = ("own direct route" if cc in OWN_ROUTES
-               else "supplier home band")
-        ind.append(u'          <tr><td class="lead-col">%s</td>'
-                   u'<td class="price">%s &euro;</td><td>%s</td></tr>'
-                   % (name, price, how))
-    own = u", ".join(js[cc]["en"] for cc in OWN_ROUTES if cc in js)
-    retrieved = data.get("_meta", {}).get("retrieved", "")
-
-    html = u"""<title>Annex 2a Price List</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {{ --blue:#6895FF; --blue-light:#e8efff; --navy:#1a2340; --dark:#222233;
-    --gray-600:#6b7280; --gray-400:#9ca3af; --gray-200:#e5e7eb; --gray-100:#f3f4f6;
-    --gray-50:#f9fafb; --white:#ffffff; }}
-  * {{ margin:0; padding:0; box-sizing:border-box; }}
-  body {{ font-family:'Montserrat',system-ui,sans-serif; color:var(--dark);
-    background:var(--gray-100); padding:24px 16px 60px; }}
-  .page {{ width:210mm; max-width:100%; min-height:297mm; margin:0 auto;
-    background:var(--white); box-shadow:0 2px 20px rgba(0,0,0,.08);
-    padding:25mm 22mm 20mm; }}
-  @media (max-width:720px) {{ .page {{ padding:22px 18px 28px; min-height:0; }} }}
-  .doc-header {{ display:flex; justify-content:space-between; align-items:flex-start;
-    gap:16px; margin-bottom:6px; padding-bottom:14px; border-bottom:3px solid var(--blue); }}
-  .doc-header h1 {{ font-size:26px; font-weight:800; color:var(--navy); line-height:1.15; }}
-  .kicker {{ font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
-    color:var(--blue); margin-bottom:5px; }}
-  .doc-date {{ font-size:10px; color:var(--gray-600); text-align:right; margin:10px 0 18px; }}
-  .section {{ margin-bottom:16px; }}
-  .section h2 {{ font-size:13px; font-weight:700; color:var(--navy); padding-bottom:4px;
-    border-bottom:2px solid var(--blue); margin-bottom:9px; }}
-  .sec-num {{ color:var(--blue); margin-right:5px; }}
-  .section p {{ font-size:10.5px; line-height:1.7; margin-bottom:8px; }}
-  .section strong {{ font-weight:700; color:var(--navy); }}
-  .tablewrap {{ overflow-x:auto; margin:4px 0 10px; }}
-  .price-table {{ width:100%; border-collapse:collapse; font-size:10.5px; }}
-  .price-table thead th {{ font-size:8.5px; font-weight:700; text-transform:uppercase;
-    letter-spacing:.5px; color:var(--white); background:var(--navy); padding:7px 9px;
-    text-align:left; }}
-  .price-table tbody tr {{ border-bottom:1px solid var(--gray-100); }}
-  .price-table tbody td {{ padding:6px 9px; vertical-align:top; }}
-  .price-table td.price, .price-table th.price {{ text-align:right; white-space:nowrap;
-    font-variant-numeric:tabular-nums; font-weight:700; }}
-  .price-table td.soft {{ color:var(--gray-400); font-weight:500; }}
-  .price-table td.klass {{ font-weight:800; color:var(--blue); width:56px; }}
-  .price-table td.lead-col {{ font-weight:700; color:var(--navy); white-space:nowrap; }}
-  .doc-footer {{ margin-top:16px; padding-top:10px; border-top:2px solid var(--navy);
-    display:flex; justify-content:space-between; gap:12px; font-size:8px;
-    color:var(--gray-400); flex-wrap:wrap; }}
-  @media print {{ body {{ background:var(--white)!important; padding:0; }}
-    .page {{ box-shadow:none; padding:4mm 0; width:100%; min-height:auto; }} }}
-  @page {{ size:A4; margin:18mm 20mm 24mm; }}
-</style>
-
-<div class="page">
-  <div class="doc-header">
-    <div>
-      <div class="kicker">Annex 2a to the Reseller Agreement &middot; confidential (clause 11)</div>
-      <h1>Price list &mdash;<br>procurement costs per case</h1>
-    </div>
-    <img src="betterco-logo.png" alt="BetterCo" style="height:22px">
-  </div>
-  <div class="doc-date">Founders1 GmbH &mdash; STP Business Information GmbH &middot; version of {retrieved}</div>
-
-  <p style="font-size:10.5px;line-height:1.7;margin:0 0 16px">This Annex forms part of the Reseller Agreement in the version attached at signature. It is amended <strong>only under clause&nbsp;8.6</strong> &mdash; not before twelve months have run, then on 60 days' notice; for a change in a register's own fees on 30 days' notice with evidence, and STP may terminate the affected jurisdiction within 14 days. It is confidential under clause&nbsp;11.</p>
-
-  <div class="section">
-    <h2><span class="sec-num">1</span> Cost per tier</h2>
-    <p>These are the amounts Annex&nbsp;2.1 refers to as &bdquo;the procurement cost for that jurisdiction&ldquo;. They are the <strong>procurement cost per case</strong> for a jurisdiction in that tier. The list price column is shown for orientation only and is not the basis of any settlement.</p>
-    <div class="tablewrap">
-      <table class="price-table">
-        <thead><tr><th>Tier</th><th class="price">Procurement cost</th><th class="price">List price</th><th class="price">Jurisdictions</th></tr></thead>
-        <tbody>
-{rows}
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2><span class="sec-num">2</span> Individually priced jurisdictions</h2>
-    <div class="tablewrap">
-      <table class="price-table">
-        <thead><tr><th>Jurisdiction</th><th class="price">Procurement cost</th><th>Sourced via</th></tr></thead>
-        <tbody>
-{ind}
-        </tbody>
-      </table>
-    </div>
-    <p>Founders1 procures {own} through its <strong>own routes</strong>. The remaining jurisdictions in the table above are individually priced but not own-sourced; the distinction matters for Annex&nbsp;2.5 and is recorded here rather than in the Agreement.</p>
-    <p><strong>United States:</strong> the register is per state and availability is determined per state. The amount above is the contracted case fee and does not warrant that every state resolves.</p>
-  </div>
-
-  <div class="section">
-    <h2><span class="sec-num">3</span> Surcharges</h2>
-    <p>A case that has to be worked manually carries <strong>{manual}&nbsp;&euro;</strong> in addition. Surcharges for additional documents (Annex&nbsp;2.3) are per jurisdiction and per document kind and are added to this list as they are agreed; an amount not stated here is not charged.</p>
-  </div>
-
-  <div class="doc-footer">
-    <span>Annex 2a &middot; Founders1 GmbH &middot; HRB 234373 B</span>
-    <span>Confidential &mdash; not for onward disclosure</span>
-  </div>
-</div>
-""".format(rows=u"\n".join(rows), ind=u"\n".join(ind), own=own,
-           manual=MANUAL_SURCHARGE, retrieved=retrieved)
-
-    with io.open(PRICE_LIST, "w", encoding="utf-8") as fh:
-        fh.write(html)
-    return PRICE_LIST
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
     ap.add_argument("--check", action="store_true")
-    ap.add_argument("--price-list", action="store_true")
     args = ap.parse_args()
 
     data = load()
@@ -342,11 +219,6 @@ def main():
 
     frag_tiers = tiers_fragment(js)
     frag_juris = jurisdictions_fragment(js)
-
-    if args.price_list:
-        print("price list ->", write_price_list(js, data))
-        if not (args.write or args.check):
-            return 0
 
     if not (args.write or args.check):
         print(frag_tiers)
@@ -371,19 +243,18 @@ def main():
             problems.append("Annex 2.2 renders %d chips, price_bands.json has %d"
                             % (chips, total))
         for tier in ("A", "B", "C", "D"):
-            pat = r'<td class="klass">%s</td><td class="price">(\d+)</td>' % tier
+            cost, _ = TIER_COST[tier]
+            pat = (r'<td class="klass">%s</td><td class="price">%s &euro;</td>'
+                   r'<td class="price soft">[^<]*</td><td class="price">(\d+)</td>'
+                   % (tier, re.escape(cost)))
             mm = re.search(pat, html)
             if not mm:
-                problems.append("tier %s row not found or reformatted" % tier)
+                problems.append("tier %s row missing, reformatted, or its "
+                                "procurement cost changed" % tier)
             elif int(mm.group(1)) != c[tier]:
                 problems.append("tier %s says %s jurisdictions, data has %d"
                                 % (tier, mm.group(1), c[tier]))
-        # amounts must NOT appear in the contract (they live in the price list)
-        for tier, (cost, _) in TIER_COST.items():
-            if cost + " &euro;" in html or cost + " €" in html:
-                problems.append("procurement cost %s for tier %s appears in the "
-                                "contract; amounts belong in the price list only"
-                                % (cost, tier))
+
         if problems:
             print("DRIFT between price_bands.json and Annex 2:")
             for p in problems:

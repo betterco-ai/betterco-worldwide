@@ -30,7 +30,6 @@ BUILD = os.path.join(REPO, "build")
 
 SOURCES = [
     ("SEPTEO_RESELLER_AGREEMENT_2026-09-14.html", "Reseller Agreement"),
-    ("SEPTEO_ANNEX_2A_PRICE_LIST.html", "Annex 2a - Price List"),
 ]
 
 # Anything matching these is internal and must never reach the .docx.

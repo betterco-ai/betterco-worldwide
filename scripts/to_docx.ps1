@@ -82,9 +82,13 @@ try {
         $doc.TrackRevisions = $true
         $doc.Save()
 
-        $pages = $doc.ComputeStatistics(2)   # wdStatisticPages
+        # Page count is deliberately NOT reported: ComputeStatistics(2) returns a
+        # nonsense figure in this headless COM context (4 for a 19-page document,
+        # with or without Repaginate). Paragraph and word counts are reliable; to
+        # check pagination, export the .docx to PDF from Word and count there.
+        $paras = $doc.Paragraphs.Count
         $words = $doc.ComputeStatistics(0)   # wdStatisticWords
-        Write-Output ("  -> " + (Split-Path $target -Leaf) + "  pages=$pages words=$words track-changes=on")
+        Write-Output ("  -> " + (Split-Path $target -Leaf) + "  paragraphs=$paras words=$words track-changes=on")
         $doc.Close($false)
     }
 }
