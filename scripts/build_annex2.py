@@ -139,7 +139,7 @@ def tiers_fragment(js):
     }
 
 
-def jurisdictions_fragment(js):
+def jurisdictions_fragment(js, data=None):
     by_region = collections.defaultdict(list)
     for cc, e in js.items():
         by_region[e.get("region", "Other")].append((cc, e["en"], tier_of(e)))
@@ -159,11 +159,34 @@ def jurisdictions_fragment(js):
             out.append(u'      <span class="%s">%s<b>%s</b></span>' % (cls, name, label))
         out.append(u'    </div>')
 
-    intro = (u'    <p>%d jurisdictions are covered. The '
+    # Sub-registers. A parent with no single national register is NOT covered as
+    # a country: only these resolve. Listing "United States" flat, as the annex
+    # did until 15.09.2026, states coverage the service does not have.
+    subs = (data or {}).get("subJurisdictions") or {}
+    if subs:
+        out.append(u'    <div class="reg-title">Sub-registers &mdash; where the parent '
+                   u'jurisdiction has no single national register <span>%d</span></div>'
+                   % sum(len(v) for v in subs.values()))
+        for parent in sorted(subs):
+            pname = js.get(parent, {}).get("en", parent)
+            out.append(u'    <p class="subnote"><strong>%s</strong> resolves only in the '
+                       u'following %d, and a Case can be placed only in one of them:</p>'
+                       % (pname, len(subs[parent])))
+            out.append(u'    <div class="chips">')
+            for e in subs[parent]:
+                tier = BAND_TO_TIER.get(e.get("band")) or u"&mdash;"
+                out.append(u'      <span class="chip sub">%s<b>%s</b></span>'
+                           % (e["en"], tier))
+            out.append(u'    </div>')
+
+    nsub = sum(len(v) for v in subs.values())
+    intro = (u'    <p>%d jurisdictions are covered, together with %d named sub-registers '
+             u'listed at the end. The '
              u'<span class="chip stp inline">highlighted<b>&nbsp;</b></span> entries are '
              u"STP's fifteen priority jurisdictions; the letter is the price tier per "
-             u'section&nbsp;2.1, and &mdash; marks a jurisdiction priced individually.</p>'
-             % len(js))
+             u'section&nbsp;2.1, and &mdash; marks a jurisdiction that is not on a tier. '
+             u'Where a jurisdiction has no single national register, it is covered only '
+             u'through the sub-registers named below.</p>' % (len(js), nsub))
 
     return u"%s\n%s\n%s\n    %s" % (BEGIN, intro, u"\n".join(out), END)
 
@@ -218,7 +241,7 @@ def main():
     total = len(js)
 
     frag_tiers = tiers_fragment(js)
-    frag_juris = jurisdictions_fragment(js)
+    frag_juris = jurisdictions_fragment(js, data)
 
     if not (args.write or args.check):
         print(frag_tiers)
@@ -237,11 +260,21 @@ def main():
         elif int(m.group(1)) != total:
             problems.append("Annex 2.2 says %s jurisdictions, price_bands.json has %d"
                             % (m.group(1), total))
-        # the legend chip is class="chip stp inline" and is deliberately not counted
-        chips = len(re.findall(r'class="chip(?: stp)?">', html))
-        if chips != total:
-            problems.append("Annex 2.2 renders %d chips, price_bands.json has %d"
-                            % (chips, total))
+        # Compare the SET of names, not the count. On 14.09.2026 the tier counts
+        # matched by coincidence while the underlying sets differed, and a count
+        # check passed on data that was wrong.
+        rendered = set(re.findall(r'<span class="chip(?: stp| sub)?">([^<]+)<b>', html))
+        expected = set(v["en"] for v in js.values())
+        for entries in (data.get("subJurisdictions") or {}).values():
+            expected |= set(e["en"] for e in entries)
+        missing = sorted(expected - rendered)
+        extra = sorted(rendered - expected)
+        if missing:
+            problems.append("Annex 2.2 is missing %d of %d jurisdictions: %s"
+                            % (len(missing), len(expected), ", ".join(missing[:8])))
+        if extra:
+            problems.append("Annex 2.2 renders %d names not in the data: %s"
+                            % (len(extra), ", ".join(extra[:8])))
         for tier in ("A", "B", "C", "D"):
             cost, _ = TIER_COST[tier]
             pat = (r'<td class="klass">%s</td><td class="price">%s &euro;</td>'

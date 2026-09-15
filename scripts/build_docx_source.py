@@ -17,6 +17,7 @@ from __future__ import print_function
 
 import argparse
 import io
+import json
 import os
 import re
 import sys
@@ -128,11 +129,22 @@ def clean(path, title):
             h2 = sec.find("h2")
             if h2:
                 add("h2", h2.get_text(" ", strip=True))
-            for child in sec.find_all(["p", "table", "ul", "ol", "dl"], recursive=True):
+            # NOTE: div.reg-title and div.chips MUST be in this list. They were
+            # not until 15.09.2026, and the .docx silently shipped Annex 2.2
+            # with 1 of 153 jurisdictions -- the chips were never copied into
+            # the output tree, so the chips-to-text pass below matched nothing
+            # and reported success. A contract lost its coverage list in
+            # conversion. verify() now fails on that.
+            for child in sec.find_all(["p", "table", "ul", "ol", "dl", "div"],
+                                      recursive=True):
                 if child.find_parent("table") or child.find_parent(["ul", "ol", "dl"]):
                     continue
                 if child.name == "p" and child.find_parent("div", class_="cl"):
                     continue
+                if child.name == "div":
+                    cls = child.get("class") or []
+                    if not ({"reg-title", "chips"} & set(cls)):
+                        continue
                 body.append(BeautifulSoup(child.decode(), "lxml").find(child.name))
             # clause rows: number and text as one paragraph, which redlines well
             for cl in sec.find_all("div", class_="cl"):
@@ -176,11 +188,34 @@ def clean(path, title):
     return html, removed
 
 
-def verify(html, label):
+def expected_jurisdictions():
+    """Every name Annex 2.2 must carry, straight from the source data."""
+    bands = os.path.join(REPO, "curation", "price_bands.json")
+    if not os.path.exists(bands):
+        return set()
+    with io.open(bands, encoding="utf-8") as fh:
+        data = json.load(fh)
+    names = set(v["en"] for v in data["jurisdictions"].values())
+    for entries in (data.get("subJurisdictions") or {}).values():
+        names |= set(e["en"] for e in entries)
+    return names
+
+
+def verify(html, label, check_coverage):
     txt = BeautifulSoup(html, "lxml").get_text(" ", strip=True)
+
     bad = [m for m in INTERNAL_MARKERS if m.lower() in txt.lower()]
     if bad:
         raise SystemExit("REFUSING: internal content survived in %s: %s" % (label, bad))
+
+    # A contract must not lose its coverage list in conversion. It did once.
+    if check_coverage:
+        want = expected_jurisdictions()
+        missing = sorted(n for n in want if n not in txt)
+        if missing:
+            raise SystemExit(
+                "REFUSING: %s is missing %d of %d jurisdictions, e.g. %s"
+                % (label, len(missing), len(want), ", ".join(missing[:8])))
     return len(txt)
 
 
@@ -198,7 +233,7 @@ def main():
             print("skip (missing):", fname)
             continue
         html, removed = clean(src, title)
-        chars = verify(html, fname)
+        chars = verify(html, fname, check_coverage="AGREEMENT" in fname.upper())
         dest = os.path.join(BUILD, fname.replace(".html", ".docx.html"))
         if not args.check:
             io.open(dest, "w", encoding="utf-8").write(html)

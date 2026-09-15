@@ -46,7 +46,12 @@
   "removedSincePreviousPull": [
    "HK-IRD",
    "SA"
-  ]
+  ],
+  "subJurisdictionNote": "Sub-registers served within a parent jurisdiction, from the vendor's /api/jurisdictions on 2026-09-15. The parent is NOT fully covered: the United States has no national register and only these states resolve; Canada likewise. Tier counts in bandCounts remain over the 153 top-level jurisdictions only.",
+  "subJurisdictionCounts": {
+   "CA": 3,
+   "US": 23
+  }
  },
  "jurisdictions": {
   "AE": {
@@ -1258,5 +1263,193 @@
    "priceUsd": 49,
    "register": "Patents and Companies Registration Agency"
   }
+ },
+ "subJurisdictions": {
+  "CA": [
+   {
+    "code": "CA-BC",
+    "en": "British Columbia",
+    "band": "Medium",
+    "priceUsd": 49.0,
+    "searchSlow": false
+   },
+   {
+    "code": "CA-NL",
+    "en": "Newfoundland and Labrador",
+    "band": "Medium",
+    "priceUsd": 49.0,
+    "searchSlow": false
+   },
+   {
+    "code": "CA-NT",
+    "en": "Northwest Territories",
+    "band": "Medium",
+    "priceUsd": 49.0,
+    "searchSlow": false
+   }
+  ],
+  "US": [
+   {
+    "code": "US-AL",
+    "en": "Alabama",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-AR",
+    "en": "Arkansas",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-CO",
+    "en": "Colorado",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-CT",
+    "en": "Connecticut",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-DE",
+    "en": "Delaware",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-FL",
+    "en": "Florida",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": true
+   },
+   {
+    "code": "US-HI",
+    "en": "Hawaii",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-ID",
+    "en": "Idaho",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-IA",
+    "en": "Iowa",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": true
+   },
+   {
+    "code": "US-KY",
+    "en": "Kentucky",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-MA",
+    "en": "Massachusetts",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": true
+   },
+   {
+    "code": "US-MN",
+    "en": "Minnesota",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": true
+   },
+   {
+    "code": "US-MS",
+    "en": "Mississippi",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": true
+   },
+   {
+    "code": "US-MO",
+    "en": "Missouri",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": true
+   },
+   {
+    "code": "US-NJ",
+    "en": "New Jersey",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": true
+   },
+   {
+    "code": "US-NM",
+    "en": "New Mexico",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-NY",
+    "en": "New York",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-ND",
+    "en": "North Dakota",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-OR",
+    "en": "Oregon",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-RI",
+    "en": "Rhode Island",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-VT",
+    "en": "Vermont",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-WV",
+    "en": "West Virginia",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   },
+   {
+    "code": "US-WI",
+    "en": "Wisconsin",
+    "band": "Low",
+    "priceUsd": 19.0,
+    "searchSlow": false
+   }
+  ]
  }
 }
