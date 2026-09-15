@@ -17,4 +17,5 @@ __pycache__/
 # untracked and would have been committed by any `git add -A`.
 .env
 .env.*
-!.env.examplebuild/
+!.env.example
+build/
