@@ -1,0 +1,387 @@
+<title>Match Score Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600&display=swap">
+
+<style>
+  :root {
+    --paper:#F4F6F7;
+    --surface:#FFFFFF;
+    --surface-2:#E9EFF0;
+    --ink:#15201F;
+    --muted:#5A6B6B;
+    --line:#D5DFDF;
+    --line-strong:#B3C3C3;
+    --accent:#0E5C55;
+    --accent-soft:#DAE9E7;
+    --ok:#2B6B4F;
+    --ok-bg:#E1EEE8;
+    --warn:#8C5A0A;
+    --warn-bg:#F6EBD8;
+    --stop:#9A3A3C;
+    --stop-bg:#F5E2E3;
+    --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, Consolas, "Courier New", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0A1211; --surface:#121C1B; --surface-2:#182322;
+      --ink:#E1EAE9; --muted:#8FA3A2; --line:#203030; --line-strong:#314746;
+      --accent:#54B3A9; --accent-soft:#112F2C;
+      --ok:#5BAC82; --ok-bg:#142A20;
+      --warn:#D2983E; --warn-bg:#2A2112;
+      --stop:#CF7375; --stop-bg:#2B1A1B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0A1211; --surface:#121C1B; --surface-2:#182322;
+    --ink:#E1EAE9; --muted:#8FA3A2; --line:#203030; --line-strong:#314746;
+    --accent:#54B3A9; --accent-soft:#112F2C;
+    --ok:#5BAC82; --ok-bg:#142A20;
+    --warn:#D2983E; --warn-bg:#2A2112;
+    --stop:#CF7375; --stop-bg:#2B1A1B;
+  }
+
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family:var(--sans); font-size:16px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+  .page { max-width:980px; margin:0 auto; padding-inline:24px; padding-block:0 96px; }
+
+  header.top { padding-block:52px 26px; border-bottom:1px solid var(--line); margin-bottom:42px; }
+  .eyebrow { font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+             color:var(--accent); margin:0 0 13px; }
+  h1 { font-family:var(--serif); font-size:clamp(30px,4.4vw,42px); line-height:1.12; margin:0 0 15px;
+       text-wrap:balance; max-width:22ch; }
+  .lede { font-size:17.5px; color:var(--muted); max-width:64ch; margin:0 0 26px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px 32px; font-size:13.5px; margin:0; }
+  .meta div { display:flex; flex-direction:column; gap:1px; }
+  .meta dt { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em;
+             text-transform:uppercase; color:var(--muted); }
+  .meta dd { margin:0; font-weight:500; }
+
+  main { display:flex; flex-direction:column; gap:46px; }
+  section { scroll-margin-top:20px; }
+  h2 { font-family:var(--serif); font-size:24px; line-height:1.24; margin:0 0 8px; text-wrap:balance;
+       display:flex; align-items:baseline; gap:13px; }
+  h2 .n { font-family:var(--mono); font-size:12.5px; color:var(--accent); letter-spacing:.06em; flex:none; }
+  h3 { font-size:15.5px; font-weight:600; margin:28px 0 8px; }
+  .sub { color:var(--muted); font-size:14.5px; margin:0 0 20px; max-width:68ch; }
+  p { margin:0 0 14px; max-width:68ch; }
+  ul, ol { margin:0 0 14px; padding-left:20px; max-width:68ch; }
+  li { margin-bottom:6px; }
+  code { font-family:var(--mono); font-size:.86em; background:var(--surface-2);
+         border:1px solid var(--line); border-radius:3px; padding:1px 5px; overflow-wrap:break-word; }
+  strong { font-weight:600; }
+
+  pre { font-family:var(--mono); font-size:12.5px; line-height:1.62; background:var(--surface);
+        border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:4px;
+        padding:14px 16px; overflow-x:auto; margin:14px 0; }
+  pre .c { color:var(--muted); }
+
+  .table-wrap { overflow-x:auto; margin:18px 0; border:1px solid var(--line);
+                border-radius:4px; background:var(--surface); }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { text-align:left; padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th { font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
+             color:var(--muted); font-weight:500; background:var(--surface-2); white-space:nowrap; }
+  tbody tr:last-child td { border-bottom:none; }
+  td.mono { font-family:var(--mono); font-size:12.5px; overflow-wrap:anywhere; }
+  td.unit { font-family:var(--mono); font-size:12.5px; color:var(--accent); white-space:nowrap; }
+
+  /* the band ladder — the centrepiece */
+  .ladder { display:flex; flex-direction:column; gap:8px; margin:22px 0; }
+  .band { display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:start;
+          background:var(--surface); border:1px solid var(--line); border-radius:4px;
+          padding:14px 16px; border-left:3px solid var(--line-strong); }
+  .band.t-high { border-left-color:var(--ok); }
+  .band.t-mid  { border-left-color:var(--accent); }
+  .band.t-warn { border-left-color:var(--warn); }
+  .band.t-low  { border-left-color:var(--stop); }
+  .band .score { font-family:var(--mono); font-size:26px; font-weight:600; line-height:1;
+                 font-variant-numeric:tabular-nums; text-align:right; padding-top:2px; }
+  .band.t-high .score { color:var(--ok); }
+  .band.t-mid  .score { color:var(--accent); }
+  .band.t-warn .score { color:var(--warn); }
+  .band.t-low  .score { color:var(--stop); }
+  .band .bid { font-family:var(--mono); font-size:12.5px; font-weight:500; display:block;
+               margin-bottom:4px; overflow-wrap:anywhere; }
+  .band .cond { font-size:14px; color:var(--muted); }
+  .band .cond em { color:var(--ink); font-style:normal; font-weight:600; }
+  @media (max-width:460px) {
+    .band { grid-template-columns:1fr; gap:6px; }
+    .band .score { text-align:left; }
+  }
+
+  .flag { border-radius:4px; padding:15px 17px; margin:18px 0; max-width:70ch;
+          border:1px solid var(--line); background:var(--surface); border-left:3px solid var(--warn); }
+  .flag.key { border-left-color:var(--accent); }
+  .flag.open { border-left-color:var(--stop); }
+  .flag .k { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+             color:var(--muted); display:block; margin-bottom:7px; }
+  .flag p:last-child { margin-bottom:0; }
+
+  .steps { counter-reset:s; list-style:none; padding:0; margin:14px 0; max-width:68ch; }
+  .steps li { counter-increment:s; position:relative; padding-left:34px; margin-bottom:8px; font-size:14.5px; }
+  .steps li::before { content:counter(s); position:absolute; left:0; top:1px; width:22px; height:22px;
+                      border-radius:3px; display:grid; place-items:center; background:var(--surface-2);
+                      border:1px solid var(--line); color:var(--accent);
+                      font-family:var(--mono); font-size:11.5px; font-weight:600; }
+
+  footer { margin-top:60px; padding-top:20px; border-top:1px solid var(--line);
+           font-size:13px; color:var(--muted); max-width:70ch; }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+
+<div class="page">
+
+<header class="top">
+  <p class="eyebrow">BetterCo &middot; design &middot; revision 2 &middot; 19 September 2026</p>
+  <h1>Match Score Design</h1>
+  <p class="lede">A free call that answers &ldquo;is this registry entry the company in your record?&rdquo; before the caller spends money on a case &mdash; returning every candidate it considered, with the rule that ranked them published and versioned.</p>
+  <dl class="meta">
+    <div><dt>Branch</dt><dd>feat/match-score</dd></div>
+    <div><dt>Base</dt><dd>origin/dev @ 3a3345605</dd></div>
+    <div><dt>Target</dt><dd>1 October release</dd></div>
+    <div><dt>Upstream calls</dt><dd>up to two, free</dd></div>
+    <div><dt>Asked by</dt><dd>Septeo, 17 Sep</dd></div>
+  </dl>
+</header>
+
+<main>
+
+<section id="why">
+  <h2><span class="n">01</span> The problem</h2>
+  <p>Septeo do not want to open a case when the company in front of them might not be the company in the registry. A case is billable; a wrong one is money spent on the wrong entity, and in a compliance file it is worse than money.</p>
+  <p>The score they saw exists only as a <strong>hand-built column</strong> in our September simulation. Nothing in the API produces it.</p>
+  <p>They offered two ways to close that. The chosen one puts the score <em>in front of</em> the caller and leaves the decision with them. The alternative — a minimum score enforced inside our <code>create</code> — was declined on purpose: it refuses orders silently, and it moves a rule the caller owns into our release cycle.</p>
+</section>
+
+<section id="surface">
+  <h2><span class="n">02</span> Two endpoints, both free</h2>
+  <p class="sub">Creating a case remains the only billable action in this API.</p>
+
+<pre>POST /restapi/v1/workspaces/{workspace_id}/document-search/match
+GET  /restapi/v1/workspaces/{workspace_id}/document-search/match/rules</pre>
+
+<pre><span class="c">// request — three fields, and only two are required</span>
+{ "jurisdiction": "NL", "name": "Sur la Pree B.V.", "registerNumber": "24175625" }
+
+<span class="c">// response — every candidate it considered, and why this one won</span>
+{ "score": 70,
+  "bandId": "NUMBER_AND_NAME_CONFLICT",
+  "rulesVersion": "2026-09-19.2",
+  "checkable": true, "orderable": true, "automated": true,
+  "selection": "highest band; ties to foundBy=NUMBER, then nameMatch=EQUAL, then first returned",
+  "signals": { "lookups": ["NUMBER", "NAME"], "numberSupplied": true,
+               "numberComparable": true, "candidateCount": 2 },
+  "candidates": [
+    { "foundBy": "NUMBER", "score": 70, "bandId": "NUMBER_AND_NAME_CONFLICT",
+      "rawname": "Barcarolle Holding B.V.", "externalCode": "24175625",
+      "signals": { "numberMatches": true, "nameMatch": "DIFFERENT", "scriptDiffers": false } },
+    { "foundBy": "NAME", "score": 85, "bandId": "NAME_ONLY",
+      "rawname": "Sur la Pree B.V.", "externalCode": "54406951",
+      "signals": { "numberMatches": false, "nameMatch": "EQUAL" } }
+  ] }</pre>
+
+  <p>Each candidate carries its own score, band and signals. The top-level score is the best of them under the published <code>selection</code> rule &mdash; stated <em>in the response</em>, not only in documentation, because a ranking nobody can see is the same problem as a score nobody can audit.</p>
+
+  <p>No address, no legal form in the request. Every extra input is another rule we have to publish, and no band below needs them.</p>
+  <p>Candidate fields reuse <code>KycSearchResult</code> exactly, so a caller who consumes <code>cases/search</code> needs no new model. <code>candidates</code> is an empty array when nothing was found, and every <code>signals</code> field is present on every response &mdash; inapplicable ones <code>null</code> rather than omitted, so nobody has to tell <em>false</em> from <em>absent</em>.</p>
+</section>
+
+<section id="how">
+  <h2><span class="n">03</span> Two lookups, then arithmetic</h2>
+
+  <div class="flag open">
+    <span class="k">What revision 1 got wrong</span>
+    <p>Revision 1 performed <em>one</em> lookup, by name, and compared the caller&rsquo;s number against the hits. Replay Sur la Pree through that: a name search for &ldquo;Sur la Pree B.V.&rdquo; returns the real Sur la Pree, never Barcarolle Holding B.V. The number pointing at a different company is never seen and the row scores 85 &mdash; <strong>the finding that motivated the whole feature is the one it would miss.</strong></p>
+    <p>The number has to be resolved <em>independently of the name</em>, which is what the simulation did by hand: &ldquo;gesucht haben wir mit eurer Registernummer bzw. mit mehreren Namensvarianten&rdquo;.</p>
+  </div>
+
+  <ol class="steps">
+    <li><strong>Look up by number</strong>, when one is supplied and the jurisdiction&rsquo;s id scheme is comparable. Answers &ldquo;whose company is this number?&rdquo;</li>
+    <li><strong>Look up by name</strong>, always. Answers &ldquo;is there a company by this name?&rdquo;</li>
+    <li>Merge and de-duplicate on <code>externalCode</code>; a company found by both is marked <code>foundBy: NUMBER</code>.</li>
+    <li>Score every candidate against the published band table, then rank by the published selection rule.</li>
+  </ol>
+
+  <p>Both lookups use the existing free vendor search. Two searches roughly double the latency of one; both are free, and the caller is about to spend money, so the trade is worth stating and not worth agonising over. <code>signals.lookups</code> records which ran, so a caller can see whether the number was resolved at all.</p>
+
+  <div class="flag key">
+    <span class="k">Why no new vendor capability is needed</span>
+    <p><strong><code>externalCode</code> is the registry id</strong>: the contract documents <code>enrichment.registryId</code> as <em>&ldquo;the company&rsquo;s registry id (same value as externalCode)&rdquo;</em>, with a decoder covering CRN, CIN, OGRN, USCC and UEN. So <code>numberMatches</code> is a comparison against data the lookups already returned.</p>
+  </div>
+
+  <h3>The bands</h3>
+  <p class="sub">Scored per candidate; the response&rsquo;s top-level score is the best of them.</p>
+  <div class="ladder">
+    <div class="band t-high">
+      <div class="score">100</div>
+      <div><span class="bid">NUMBER_AND_NAME</span>
+        <span class="cond">This candidate&rsquo;s <code>externalCode</code> equals the number <em>and</em> its name equals theirs.</span></div>
+    </div>
+    <div class="band t-high">
+      <div class="score">95</div>
+      <div><span class="bid">NUMBER_RESOLVES_SCRIPT_DIFFERS</span>
+        <span class="cond">Number matches, names differ, and the two names are in <em>different scripts</em>. The Bulgarian rows: same company, written in Cyrillic.</span></div>
+    </div>
+    <div class="band t-mid">
+      <div class="score">85</div>
+      <div><span class="bid">NAME_ONLY</span>
+        <span class="cond">Found by name; the number matched nothing, or none was supplied.</span></div>
+    </div>
+    <div class="band t-warn">
+      <div class="score">70</div>
+      <div><span class="bid">NUMBER_AND_NAME_CONFLICT</span>
+        <span class="cond">The number resolves to <em>this</em> company and the name resolves to a <em>different</em> one. Two lookups, two companies &mdash; the Sur la Pree case, and the strongest evidence of a wrong number.</span></div>
+    </div>
+    <div class="band t-warn">
+      <div class="score">70</div>
+      <div><span class="bid">NUMBER_RESOLVES_OTHER_COMPANY</span>
+        <span class="cond">The number resolves here, the name differs in the <em>same script</em>, and no competing name candidate exists.</span></div>
+    </div>
+    <div class="band t-low">
+      <div class="score">10</div>
+      <div><span class="bid">NO_HIT</span>
+        <span class="cond">Neither lookup returned anything.</span></div>
+    </div>
+    <div class="band t-low">
+      <div class="score">0</div>
+      <div><span class="bid">NO_COMPANY_REGISTER</span>
+        <span class="cond">Not in a <em>company</em> register at all &mdash; the Austrian association whose number was a ZVR, not a Firmenbuch number.</span></div>
+    </div>
+  </div>
+
+  <div class="flag">
+    <span class="k">Two ids share the score 70, deliberately</span>
+    <p>The <em>score</em> is what a threshold compares against, and Septeo have already seen these six numbers. The <em>id</em> is what tells them which kind of doubt they are looking at.</p>
+    <p>This also demotes the script rule. In revision 1 it carried the whole 95/70 split; with the number resolved independently the conflict identifies itself, and script now only separates 95 from 70 when there is no competing name candidate &mdash; different scripts mean the names cannot be compared and the number is authoritative, the same script and a different name mean the number points elsewhere. Still no similarity metric, still no transliteration table to publish.</p>
+  </div>
+
+  <h3>Name normalisation, published with the rules</h3>
+  <p>Applied to both sides, in order. There is deliberately no fuzzy score: a continuous 0&ndash;100 invites a threshold nobody can reason about, whereas a band can be argued about in words.</p>
+  <ol class="steps">
+    <li>Trim, collapse internal whitespace to single spaces.</li>
+    <li>Uppercase with <code>Locale.ROOT</code>.</li>
+    <li>Remove diacritics (NFD, drop combining marks).</li>
+    <li>Drop <code>. , ' " ( ) -</code> and substitute <code>&amp;</code> &rarr; <code>AND</code>.</li>
+    <li>Strip <strong>one</strong> trailing legal-form token from the published per-jurisdiction list &mdash; <code>B.V.</code>, <code>GMBH</code>, <code>LIMITED</code>, <code>S.L.</code>, <code>S.&Agrave; R.L.</code> &mdash; and only at the end.</li>
+  </ol>
+</section>
+
+<section id="transparency">
+  <h2><span class="n">04</span> Transparency as a property of the code</h2>
+  <p>The band table, the legal-form tokens and the non-company-register patterns live in <strong>one versioned file</strong>, <code>src/main/resources/kyc/match-rules.json</code>.</p>
+  <ul>
+    <li><code>MatchScoringService</code> reads it.</li>
+    <li><code>GET …/match/rules</code> serves it verbatim.</li>
+    <li>A test fails if those two are ever not the same resource.</li>
+    <li>Every scored response carries the <code>rulesVersion</code> that produced it, and a test pins the current value so a rule change cannot ship without bumping it.</li>
+  </ul>
+  <p><strong>The trap this closes:</strong> a caller sets a threshold at 85, we later change how a band is computed, and their threshold silently means something different with nothing failing visibly. With the rules published and stamped, that change is diffable instead of invisible.</p>
+</section>
+
+<section id="three">
+  <h2><span class="n">05</span> Three answers, not one</h2>
+  <p class="sub">A caller needs three separate things before spending money. One call returns all three.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Question</th><th>Field</th><th>Behaviour</th></tr></thead>
+      <tbody>
+        <tr><td>How good is the match?</td><td class="mono">score, bandId, signals</td><td>&sect;03.</td></tr>
+        <tr><td>Was a check even possible?</td><td class="mono">checkable</td><td><code>false</code> + <code>NO_SEARCHABLE_REGISTRY</code> where the jurisdiction has no index, driven off the <strong>same</strong> <code>isAutomated()</code> helper that gates <code>cases/search</code>, so the two can never disagree. A <code>200</code>, not an error &mdash; six of the twenty simulation rows were un-checkable and all six were still orderable.</td></tr>
+        <tr><td>May it be ordered at all?</td><td class="mono">orderable</td><td><code>false</code> + <code>JURISDICTION_NOT_AVAILABLE</code> for Germany, from the same deny list the create path enforces. Without it a caller scores a German company successfully, then meets a blind <code>409</code>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Preconditions &mdash; to be confirmed, with defined fallbacks</h3>
+  <p>Three assumptions this design rests on, none yet measured. Each has defined behaviour if it fails, so none is a TODO.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Assumption</th><th>If it does not hold</th></tr></thead>
+      <tbody>
+        <tr><td>The vendor&rsquo;s <code>query</code> accepts a <strong>register number</strong>, not only a name</td><td>The number lookup is impossible: <code>lookups</code> omits <code>NUMBER</code>, <code>numberComparable: false</code>, band 85 at most &mdash; revision 1&rsquo;s weaker behaviour. Resolving numbers would then need our own per-jurisdiction connectors, which is <strong>well past a 1 October change</strong>.</td></tr>
+        <tr><td><code>externalCode</code> is the registry number in the jurisdiction concerned</td><td>The number cannot be compared there: <code>numberComparable: false</code>, band 85 at most. Confirmed jurisdictions are listed in <code>match-rules.json</code>; absent from the list means not comparable.</td></tr>
+        <tr><td>Non-company registers are recognisable from the number&rsquo;s shape</td><td>Band 0 is never produced for that jurisdiction &mdash; correct rather than a gap.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="flag open">
+    <span class="k">One free call settles the first two</span>
+    <p><code>query=00364890</code> for GB. If Cropwell Bishop comes back, both assumptions hold and this design is buildable as drawn. That same call also reveals which vendor staging is talking to &mdash; worth running first, for an unrelated and more urgent reason.</p>
+  </div>
+
+</section>
+
+<section id="code">
+  <h2><span class="n">06</span> Where the code goes</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Unit</th><th>Responsibility</th><th>Depends on</th></tr></thead>
+      <tbody>
+        <tr><td class="unit">MatchScoringService</td><td><strong>Pure.</strong> (caller record, hits, rules) &rarr; score, band, signals. No I/O.</td><td class="mono">MatchRules</td></tr>
+        <tr><td class="unit">MatchRules</td><td>Loads and validates <code>match-rules.json</code>; exposes bands, tokens, patterns, version.</td><td>&mdash;</td></tr>
+        <tr><td class="unit">CompanyMatchService</td><td>Orchestration: automated? deny-listed? call search, delegate to the scorer.</td><td class="mono">KycGatewayService, MatchScoringService</td></tr>
+        <tr><td class="unit">MatchApiImpl</td><td>Implements the generated interface from <code>betterco_api.yaml</code>.</td><td class="mono">CompanyMatchService</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Declared contract-first under the existing <code>Document Search</code> tag, so the endpoints appear in <code>apidoc.html</code> beside the rest and Septeo can regenerate their client. <strong>The scorer being pure is the point:</strong> the entire band table is testable without a vendor, a database or a Spring context.</p>
+</section>
+
+<section id="tests">
+  <h2><span class="n">07</span> Tests come from measured data</h2>
+  <p class="sub">The twenty rows Septeo sent on 9 September, and our answers of the 11th, become the fixture &mdash; not invented cases.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Vector</th><th>Expected</th></tr></thead>
+      <tbody>
+        <tr><td>Sur la Pree B.V., NL, <code>24175625</code></td><td class="mono">two candidates &middot; best = 70 NUMBER_AND_NAME_CONFLICT &middot; Barcarolle by number, real Sur la Pree (54406951) by name</td></tr>
+        <tr><td>the two Bulgarian rows</td><td class="mono">95 &middot; scriptDiffers: true</td></tr>
+        <tr><td>Modern Hero Academy, AT, ZVR number</td><td class="mono">0 &middot; NO_COMPANY_REGISTER</td></tr>
+        <tr><td>the six rows with no country code</td><td class="mono">checkable per jurisdiction; no crash on a null number</td></tr>
+        <tr><td>any German company</td><td class="mono">orderable: false</td></tr>
+        <tr><td>the seven clean rows</td><td class="mono">100</td></tr>
+        <tr><td>a company returned by <strong>both</strong> lookups</td><td class="mono">one candidate, not two &middot; de-duplicated on externalCode &middot; foundBy: NUMBER</td></tr>
+        <tr><td>two candidates in the same band</td><td class="mono">the published tie-break decides, and the test asserts the order</td></tr>
+        <tr><td>number lookup 503s, name lookup succeeds</td><td class="mono">200 &middot; lookups: [NAME]</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Plus: the rules file is served byte-identical to the one the scorer reads, <code>rulesVersion</code> is pinned, and one integration test through the real filter chain proves the endpoint is reachable and refuses an unauthenticated caller &mdash; the gap that once let an endpoint pass 101 unit tests while being uncallable.</p>
+</section>
+
+<section id="cut">
+  <h2><span class="n">08</span> Cut, and why</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Cut</th><th>Reason</th></tr></thead>
+      <tbody>
+        <tr><td>Per-partner configurable rules, and a minimum-score gate inside <code>create</code></td><td>Both were asked for. Published, versioned rules plus the caller&rsquo;s own threshold cover the need &mdash; and a threshold inside our create refuses orders silently, which is the failure this design exists to avoid.</td></tr>
+        <tr><td>Address and postcode signals</td><td>More inputs, more published rules, no band that needs them.</td></tr>
+        <tr><td>Fuzzy similarity scoring</td><td>Bands are arguable in words; a percentage is not.</td></tr>
+        <tr><td>More than two lookups &mdash; name variants, which the simulation used by hand</td><td>It would raise recall on band 85 and is a defensible later addition, but each variant is another published rule and another call.</td></tr>
+        <tr><td>Transliteration</td><td>The script rule in &sect;03 makes it unnecessary.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="open">
+  <h2><span class="n">09</span> Still open</h2>
+  <ul>
+    <li><strong>The three preconditions in &sect;05</strong> &mdash; the first of which decides whether this is a 1 October change at all.</li>
+    <li><strong>Septeo&rsquo;s threshold</strong>, and whether they adopt the bands as published. Asked in the 17 September draft; not in the version sent on the 18th. Not a blocker — they set their own threshold against published rules — but worth one line when the call happens next week.</li>
+  <li><strong>Recall on band 85</strong> is inherited from the vendor&rsquo;s own name matching. Where only a name lookup is possible, what we get to evaluate is what they chose to return.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  Design for the match score, 19 September 2026. Source of record: <code>docs/superpowers/specs/2026-09-19-match-score-design.md</code> in <code>betterco-worldwide</code>. Every claim about current API behaviour was read from <code>betterco_api.yaml</code> and the source on <code>origin/dev@3a3345605</code>, not recalled — and nothing here has been run: no vendor call and no application start went into this document.
+</footer>
+
+</div>
