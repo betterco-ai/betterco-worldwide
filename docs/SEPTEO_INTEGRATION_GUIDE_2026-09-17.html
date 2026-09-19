@@ -1,0 +1,455 @@
+<title>Document Search Integration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600&display=swap">
+
+<style>
+  :root {
+    --paper:#F5F7F6;
+    --surface:#FFFFFF;
+    --surface-2:#EBF1EF;
+    --ink:#16211F;
+    --muted:#5C6E6A;
+    --line:#D6E0DD;
+    --line-strong:#B5C5C1;
+    --accent:#0F5F58;
+    --accent-soft:#DCEAE7;
+    --ok:#2C6E4C;
+    --ok-bg:#E2EFE8;
+    --warn:#8A5A08;
+    --warn-bg:#F6EBD9;
+    --stop:#9B3A3A;
+    --stop-bg:#F5E3E3;
+    --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, Consolas, "Courier New", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0A1112; --surface:#121B1D; --surface-2:#182326;
+      --ink:#E2EAE9; --muted:#91A4A1; --line:#20302F; --line-strong:#314745;
+      --accent:#57B5AB; --accent-soft:#12302E;
+      --ok:#5CAE84; --ok-bg:#14291E;
+      --warn:#D2993F; --warn-bg:#2A2112;
+      --stop:#D07370; --stop-bg:#2B1A1A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0A1112; --surface:#121B1D; --surface-2:#182326;
+    --ink:#E2EAE9; --muted:#91A4A1; --line:#20302F; --line-strong:#314745;
+    --accent:#57B5AB; --accent-soft:#12302E;
+    --ok:#5CAE84; --ok-bg:#14291E;
+    --warn:#D2993F; --warn-bg:#2A2112;
+    --stop:#D07370; --stop-bg:#2B1A1A;
+  }
+
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family:var(--sans); font-size:16px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+  .page { max-width:960px; margin:0 auto; padding-inline:24px; padding-block:0 96px; }
+
+  header.top { padding-block:52px 26px; border-bottom:1px solid var(--line); margin-bottom:40px; }
+  .eyebrow { font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+             color:var(--accent); margin:0 0 13px; }
+  h1 { font-family:var(--serif); font-size:clamp(30px,4.4vw,42px); line-height:1.12; margin:0 0 15px;
+       text-wrap:balance; max-width:20ch; }
+  .lede { font-size:17.5px; color:var(--muted); max-width:64ch; margin:0 0 26px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px 34px; font-size:13.5px; margin:0; }
+  .meta div { display:flex; flex-direction:column; gap:1px; }
+  .meta dt { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em;
+             text-transform:uppercase; color:var(--muted); }
+  .meta dd { margin:0; font-weight:500; }
+
+  main { display:flex; flex-direction:column; gap:46px; }
+  section { scroll-margin-top:20px; }
+  h2 { font-family:var(--serif); font-size:24px; line-height:1.24; margin:0 0 7px; text-wrap:balance;
+       display:flex; align-items:baseline; gap:13px; }
+  h2 .secnum { font-family:var(--mono); font-size:12.5px; color:var(--accent); letter-spacing:.06em; flex:none; }
+  .note-inline { display:block; margin-top:6px; font-family:var(--sans); font-size:13.5px;
+                 color:var(--muted); font-variant-numeric:normal; }
+  h3 { font-size:15.5px; font-weight:600; margin:26px 0 8px; }
+  .sub { color:var(--muted); font-size:14.5px; margin:0 0 20px; max-width:66ch; }
+  p { margin:0 0 14px; max-width:66ch; }
+  ul { margin:0 0 14px; padding-left:20px; max-width:66ch; }
+  li { margin-bottom:6px; }
+  code { font-family:var(--mono); font-size:.86em; background:var(--surface-2);
+         border:1px solid var(--line); border-radius:3px; padding:1px 5px; overflow-wrap:break-word; }
+  strong { font-weight:600; }
+  a { color:var(--accent); text-underline-offset:3px; }
+  a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+  pre { font-family:var(--mono); font-size:12.5px; line-height:1.62; background:var(--surface);
+        border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:4px;
+        padding:14px 16px; overflow-x:auto; margin:14px 0; }
+  pre .c { color:var(--muted); }
+
+  .table-wrap { overflow-x:auto; margin:18px 0; border:1px solid var(--line);
+                border-radius:4px; background:var(--surface); }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { text-align:left; padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th { font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
+             color:var(--muted); font-weight:500; background:var(--surface-2); white-space:nowrap; }
+  tbody tr:last-child td { border-bottom:none; }
+  td.mono { font-family:var(--mono); font-size:12.5px; overflow-wrap:anywhere; }
+  td.code { font-family:var(--mono); font-size:12.5px; color:var(--accent); overflow-wrap:anywhere; }
+  td.st { font-family:var(--mono); font-size:12.5px; font-variant-numeric:tabular-nums; white-space:nowrap; }
+
+  .ep { font-family:var(--mono); font-size:12.5px; color:var(--accent);
+        margin:0 0 12px; overflow-wrap:anywhere; max-width:none; }
+
+  .flag { border-radius:4px; padding:15px 17px; margin:18px 0; max-width:68ch;
+          border:1px solid var(--line); background:var(--surface); border-left:3px solid var(--warn); }
+  .flag.key { border-left-color:var(--accent); }
+  .flag .k { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+             color:var(--muted); display:block; margin-bottom:7px; }
+  .flag p:last-child { margin-bottom:0; }
+
+  .pill { font-family:var(--mono); font-size:10.5px; letter-spacing:.05em;
+          padding:2px 7px; border-radius:3px; white-space:nowrap; border:1px solid; }
+  .p-warn { background:var(--warn-bg); color:var(--warn); border-color:var(--warn); }
+  .p-stop { background:var(--stop-bg); color:var(--stop); border-color:var(--stop); }
+
+  .divider { margin-top:14px; padding-top:30px; border-top:1px solid var(--line-strong); }
+  .divider .dlabel { font-family:var(--mono); font-size:10.5px; letter-spacing:.14em;
+                     text-transform:uppercase; color:var(--muted); margin:0 0 6px; }
+
+  footer { margin-top:60px; padding-top:20px; border-top:1px solid var(--line);
+           font-size:13px; color:var(--muted); max-width:70ch; }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+
+<div class="page">
+
+<header class="top">
+  <p class="eyebrow">BetterCo &middot; integration guidelines &middot; 17 September 2026</p>
+  <h1>Document Search Integration</h1>
+  <p class="lede">Order a company, wait, collect its documents. Four calls end to end &mdash; sections 01 to 04 are that path in order, and everything after them is reference you look up when you hit it.</p>
+  <dl class="meta">
+    <div><dt>For</dt><dd>Septeo integration team</dd></div>
+    <div><dt>API</dt><dd>BetterCo REST API v2.0.0</dd></div>
+    <div><dt>Area</dt><dd>Document Search</dd></div>
+    <div><dt>Auth</dt><dd>Bearer token, 1 hour</dd></div>
+    <div><dt>Format</dt><dd>JSON &middot; UTF-8</dd></div>
+  </dl>
+</header>
+
+<main>
+
+<section id="access">
+  <h2><span class="secnum">00</span> Getting access</h2>
+  <p class="sub">Nothing here needs a credential from us to read. You need a key and secret only to make calls.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>To do this</th><th>Use this</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Browse the API</strong></td>
+          <td class="mono"><a href="https://dev.betterco.ai/bcapi/apidoc.html#tag/Document-Search">https://dev.betterco.ai/bcapi/apidoc.html#tag/Document-Search</a><br>
+            <span class="note-inline">The reference, opened at the Document Search section.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Generate a client</strong></td>
+          <td class="mono">https://dev.betterco.ai/bcapi/betterco_api.yaml<br>
+            <span class="note-inline">The OpenAPI contract the reference renders from, served openly and always current.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Integrate against</strong></td>
+          <td class="mono">https://dev.betterco.ai/bcapi/restapi/v1<br>
+            <span class="note-inline"><strong>Explicitly not production.</strong> Production is <code>https://app.betterco.ai/bcapi</code>; move there only once we have agreed you should. Note the <code>/bcapi</code> prefix &mdash; without it you reach the web application and get HTML or a <code>405</code> where you expected JSON.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="auth">
+  <h2><span class="secnum">01</span> Authenticate</h2>
+  <p class="sub">Exchange your key and secret for a token. It lasts one hour.</p>
+
+<pre>POST /auth/login
+Content-Type: application/json
+
+{ "key": "&lt;your api key&gt;", "secret": "&lt;your api secret&gt;" }
+
+<span class="c">&rarr; 200</span>
+{ "token": "&lt;jwt&gt;", "expiration": "2026-09-17T14:30:00Z", "refreshToken": "&lt;token&gt;" }</pre>
+
+  <p>Send it on everything that follows as <code>Authorization: Bearer &lt;token&gt;</code>. Wrong credentials come back <code>400 "Credentials are invalid"</code>; a missing or expired token, <code>401</code>.</p>
+  <p><code>POST /auth/refresh-token</code> returns a new access token <em>and</em> a new refresh token &mdash; the refresh token rotates, so store what comes back rather than re-sending what you just used.</p>
+  <p>Your <code>workspaceId</code> is issued once and appears in every path below. Keep the secret server-side; it is not for a browser.</p>
+</section>
+
+<section id="order">
+  <h2><span class="secnum">02</span> Order a company</h2>
+  <p class="sub">One call. You order a <em>company</em>, and the registry&rsquo;s document set for it is what you get back.</p>
+
+  <p class="ep">POST /workspaces/{workspaceId}/document-search/cases</p>
+
+<pre>{
+  "jurisdiction": "ES",
+  "name": "CLOSER LOGISTICS SL",
+  "legalType": "S.L.",
+  "confirm": true,
+  "idempotencyKey": "your-own-reference-0001"
+}
+
+<span class="c">&rarr; 202 Accepted</span>
+{ "created": true, "processing": true,
+  "caseId": "6a9fc02f5583c26b3129c874", "status": "pending" }</pre>
+
+  <p><strong>Store the <code>caseId</code>.</strong> It addresses everything afterwards.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Field</th><th></th></tr></thead>
+      <tbody>
+        <tr><td class="code">jurisdiction</td><td><strong>Required.</strong> ISO code. <code>GET …/document-search/jurisdictions</code> lists where you can order.</td></tr>
+        <tr><td class="code">name</td><td><strong>Required.</strong> The company name.</td></tr>
+        <tr><td class="code">confirm</td><td><strong>Required, and must be <code>true</code>.</strong> The order is billable and we will not place it on a maybe. Anything else returns <code>428 not_confirmed</code>.</td></tr>
+        <tr><td class="code">idempotencyKey</td><td>Your own reference. Re-send it and you get the same case back instead of a second, separately billed one. <strong>Send it on every create, not only on retries</strong> &mdash; a timed-out request whose order actually went through is exactly what it protects against.</td></tr>
+        <tr><td class="code">legalType</td><td>The local legal form or its abbreviation &mdash; <code>GmbH</code>, <code>S.L.</code> Needed where the jurisdiction is not looked up automatically; we resolve the rest from it. Values: <code>GET …/document-search/legal-forms?jurisdiction=ES</code>.</td></tr>
+        <tr><td class="code">companyType</td><td>Use instead of <code>legalType</code> where that list is empty for your jurisdiction. Values: <code>GET …/document-search/company-types</code>. Send one or the other, never both.</td></tr>
+        <tr><td class="code">externalCode</td><td>From a company look-up, if you did one &mdash; see below. Leave it out when entering the company by hand.</td></tr>
+        <tr><td class="code">journeyName</td><td>Optional, defaults to <code>All</code>, and <code>All</code> is what you want unless we have agreed otherwise with you. It selects the document journey at the registry and we pass it through unvalidated, so an unagreed value is a quiet way to get a different set than you expected.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Optionally, find the company first</h3>
+  <p class="ep">GET /workspaces/{workspaceId}/document-search/cases/search?jurisdiction=ES&amp;query=CLOSER+LOGISTICS</p>
+  <p>Matches the company in the official registry so you start from a real record rather than typed-in text. Take <code>externalCode</code> from the result and pass it to the create call. Only <strong>automated</strong> jurisdictions can be searched &mdash; the <code>automated</code> flag on the jurisdictions list says which; elsewhere this returns <code>409 search_not_supported</code> and you enter the details yourself.</p>
+
+  <h3>What the order buys, and what it costs</h3>
+  <p><strong>The price is per case, not per document.</strong> Ten documents on a case cost the same as one, so anything that orders per document pays repeatedly for a set you already hold.</p>
+  <p>You cannot name the document you want: <code>POST …/cases</code> is the only write operation in this API area. What you can do is see in advance exactly what a jurisdiction returns, for free:</p>
+
+<pre>GET /workspaces/{workspaceId}/document-search/jurisdictions/GB/coverage
+
+{ "code": "GB", "name": "United Kingdom",
+  "sla": "25 minutes",
+  "registries": ["Automated"],
+  "baseDocuments": [
+    { "type": "NEW_INCORPORATION", "description": "New Incorporation" } ],
+  "additionalDocuments": [ ... ],
+  "dataFields": { "companyIdentity": [...],
+                  "controllingEntitiesAndIndividuals": [...],
+                  "shareholdersPartnersAndUBOs": [...] } }</pre>
+
+  <p><code>baseDocuments</code> are provided as standard &mdash; that is what an ordinary order returns and what you can safely promise your own users. <code>additionalDocuments</code> are available on request and may cost extra; they are <strong>not selectable in the create call today</strong>, so if you need one routinely, talk to us rather than building around it.</p>
+
+  <div class="flag">
+    <span class="k">Germany is refused, by design</span>
+    <p>A German company returns <strong><code>409 jurisdiction_not_available</code></strong>, and nothing is created. BetterCo holds the German register directly, so ordering it here would buy something we already have. It is not an outage and re-sending will not help &mdash; route German companies the other way.</p>
+  </div>
+</section>
+
+<section id="wait">
+  <h2><span class="secnum">03</span> Wait for it</h2>
+  <p class="sub">Poll the case until it is ready. Minutes to hours, depending on the registry.</p>
+
+  <p class="ep">GET /workspaces/{workspaceId}/document-search/cases/{caseId}</p>
+
+<pre>{ "caseId": "6a9fc02f…", "status": "building",
+  "ready": false, "documentsStored": 2, "documentsTotal": 5 }</pre>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>status</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td class="code">pending</td><td>Accepted, not yet started at the registry.</td></tr>
+        <tr><td class="code">building</td><td>Under way. <strong>Documents may already be listed</strong> &mdash; see section 04.</td></tr>
+        <tr><td class="code">ready</td><td>The registry has finished and every document it produced is stored. <code>readyAt</code> carries when we observed it.</td></tr>
+        <tr><td class="code">incomplete</td><td>It finished but could not produce everything asked of it.</td></tr>
+        <tr><td class="code">failed</td><td>The order did not succeed. Retry with the same <code>idempotencyKey</code>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><code>documentsTotal</code> can rise while the case is building, so read it as a running count rather than a target. <code>ready</code> is a convenience flag, true exactly when <code>status</code> is <code>ready</code>.</p>
+  <p>How long to expect is on the coverage endpoint as <code>sla</code>, per jurisdiction. Treat it as indicative: <strong>drive the loop from the case status, never from a timer.</strong></p>
+</section>
+
+<section id="collect">
+  <h2><span class="secnum">04</span> Get the documents</h2>
+  <p class="sub">List what the case produced, then download each one.</p>
+
+  <p class="ep">GET /workspaces/{workspaceId}/document-search/cases/{caseId}/documents</p>
+
+<pre>{ "caseId": "6a9fc02f…", "name": "CLOSER LOGISTICS SL", "documents": [
+  { "documentId": "6a9fadce43675b6227c0f32c",
+    "name": "CS01 Confirmation statement",
+    "category": "Company Identity Documents",
+    "roles": ["REGISTERAUSZUG", "GESELLSCHAFTERLISTE"],
+    "status": "stored" },
+  { "name": "Articles of association", "status": "pending" } ] }</pre>
+
+  <p><strong>Do not wait for the case to be ready before calling this.</strong> Documents are listed as soon as they are known, so you can show a reader what has arrived while the rest is still coming.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>status</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td class="code">stored</td><td>We hold the bytes. <code>documentId</code> is set and it can be downloaded.</td></tr>
+        <tr><td class="code">pending</td><td>Known but not yet retrieved. Keep polling. <strong>No <code>documentId</code> yet.</strong></td></tr>
+        <tr><td class="code">unavailable</td><td>The registry has no such document for this company.</td></tr>
+        <tr><td class="code">failed</td><td>Retrieval was attempted and did not succeed.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Download one</h3>
+  <p class="ep">GET /workspaces/{workspaceId}/document-search/cases/{caseId}/documents/{documentId}/content</p>
+  <p>Returns the file as <code>application/octet-stream</code>. Each listed document also carries a ready-to-use <code>downloadUrl</code>, which is the same thing by another route. A document is scoped to its case: the right document id under the wrong <code>caseId</code> is a <code>404</code>, not a document.</p>
+
+  <h3>Which document is which</h3>
+  <p>Registries title documents however they like. Where we can say what one <em>evidences</em>, it carries a role &mdash; and the role means the same thing in every jurisdiction, which makes it the field worth reading programmatically:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Role</th><th>Answers</th></tr></thead>
+      <tbody>
+        <tr><td class="code">REGISTERAUSZUG</td><td>The register extract.</td></tr>
+        <tr><td class="code">GESELLSCHAFTERLISTE</td><td>Who the shareholders are.</td></tr>
+        <tr><td class="code">GESELLSCHAFTSVERTRAG</td><td>The constitutional document.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><code>roles</code> is usually empty, and that is an answer rather than a gap: most documents evidence none of these three. A document can hold more than one &mdash; Britain&rsquo;s CS01 is both the register extract and the shareholder list.</p>
+
+  <div class="flag">
+    <span class="k">includePending is obsolete</span>
+    <p>Still accepted on these two endpoints, and ignored. There is one document list and one identifier space, so there is nothing to opt into. Existing callers do not break; new code should not send it.</p>
+  </div>
+</section>
+
+<section id="curl" class="divider">
+  <p class="dlabel">The whole thing</p>
+  <h2><span class="secnum">05</span> End to end, in curl</h2>
+  <p class="sub">The four calls above, in order, with nothing else in the way.</p>
+
+<pre>BASE=https://dev.betterco.ai/bcapi/restapi/v1
+WS=&lt;your workspace id&gt;
+
+<span class="c"># 01 — authenticate</span>
+TOKEN=$(curl -s -X POST "$BASE/auth/login" \
+  -H 'Content-Type: application/json' \
+  -d '{"key":"&lt;key&gt;","secret":"&lt;secret&gt;"}' | jq -r .token)
+
+<span class="c"># 02 — order the company (billable, so confirm must be true)</span>
+CASE=$(curl -s -X POST "$BASE/workspaces/$WS/document-search/cases" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d '{"jurisdiction":"ES","name":"CLOSER LOGISTICS SL","legalType":"S.L.",
+       "confirm":true,"idempotencyKey":"demo-0001"}' | jq -r .caseId)
+
+<span class="c"># 03 — wait for it</span>
+curl -s -H "Authorization: Bearer $TOKEN" \
+  "$BASE/workspaces/$WS/document-search/cases/$CASE" | jq '.status, .documentsStored'
+
+<span class="c"># 04 — get the documents</span>
+curl -s -H "Authorization: Bearer $TOKEN" \
+  "$BASE/workspaces/$WS/document-search/cases/$CASE/documents" | jq .
+curl -s -H "Authorization: Bearer $TOKEN" -o document.pdf \
+  "$BASE/workspaces/$WS/document-search/cases/$CASE/documents/&lt;documentId&gt;/content"</pre>
+
+  <p>To see your cases rather than one: <code>GET /workspaces/{ws}/document-search/cases</code>, with live status on each.</p>
+</section>
+
+<section id="ids">
+  <h2><span class="secnum">06</span> Identifiers &mdash; one change on your side</h2>
+  <p class="sub">The only thing in this document that asks you to change existing code.</p>
+
+  <p>Cases and documents are addressed by <strong>BetterCo identifiers</strong> &mdash; 24 hexadecimal characters, opaque, not to be parsed. They are ours rather than any registry&rsquo;s or supplier&rsquo;s, because a case will not always be served from the same place, and an identifier belonging to one source cannot be the key you store.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>In the case list, previously</th><th>Now</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">caseCommonId</td><td class="mono">caseId</td></tr>
+        <tr><td class="mono">statusName</td><td class="mono">status</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>This is a change of <em>shape</em>, not of format: code reading <code>caseCommonId</code> from the list reads <code>undefined</code>, and no translation layer absorbs that. If you hold an identifier durably anywhere, this is the point to migrate it.</p>
+
+  <div class="flag">
+    <span class="k">There is a grace period, and it ends</span>
+    <p>For <strong>one release</strong>, the status, documents and download endpoints still accept the old numeric case number in place of <code>caseId</code>, so ids stored before the change keep working. The case list never returns it, and it will be removed.</p>
+  </div>
+</section>
+
+<section id="errors">
+  <h2><span class="secnum">07</span> Errors</h2>
+  <p class="sub">One envelope everywhere. The machine-readable code is in <code>message</code>; <code>error</code> is only the HTTP reason phrase.</p>
+
+<pre>{ "error": "Conflict", "status": 409,
+  "message": "jurisdiction_not_available",
+  "timestamp": "2026-09-17T13:30:00" }</pre>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Status</th><th>message</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td class="st"><span class="pill p-stop">409</span></td><td class="code">jurisdiction_not_available</td><td>Germany &mdash; we source it directly. Route those companies the other way.</td></tr>
+        <tr><td class="st"><span class="pill p-stop">409</span></td><td class="code">search_not_supported</td><td>This jurisdiction cannot be searched by name. Create the case directly.</td></tr>
+        <tr><td class="st"><span class="pill p-warn">428</span></td><td class="code">not_confirmed</td><td><code>confirm</code> was not <code>true</code>.</td></tr>
+        <tr><td class="st"><span class="pill p-warn">422</span></td><td class="code">legal_type_or_company_type_required</td><td>This jurisdiction needs a <code>legalType</code> or a <code>companyType</code>.</td></tr>
+        <tr><td class="st"><span class="pill p-warn">422</span></td><td class="code">invalid_company_type</td><td>The <code>companyType</code> sent is not an accepted value.</td></tr>
+        <tr><td class="st"><span class="pill p-warn">422</span></td><td class="code">organization_not_found</td><td>The workspace has no organization to file the case under.</td></tr>
+        <tr><td class="st"><span class="pill p-warn">404</span></td><td class="code">case_not_found</td><td>No such case in this workspace.</td></tr>
+        <tr><td class="st"><span class="pill p-warn">404</span></td><td class="code">document_not_found</td><td>No such document &mdash; including a real document id under the wrong case.</td></tr>
+        <tr><td class="st"><span class="pill p-warn">404</span></td><td class="code">coverage_not_found</td><td>A supported jurisdiction with no coverage detail published yet.</td></tr>
+        <tr><td class="st"><span class="pill p-stop">502</span></td><td class="code">document_not_retrievable</td><td>The registry listed the document and then did not deliver it. Deliberately not a <code>404</code>: the document exists, so calling it missing would hide a real gap in a compliance file.</td></tr>
+        <tr><td class="st"><span class="pill p-stop">503</span></td><td class="code">upstream_unavailable</td><td>The registry is not answering. Retry later.</td></tr>
+        <tr><td class="st"><span class="pill p-stop">504</span></td><td class="code">upstream_timeout</td><td>The registry took too long. Retry later.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="reference">
+  <h2><span class="secnum">08</span> Every endpoint</h2>
+  <p class="sub">Relative to <code>https://dev.betterco.ai/bcapi/restapi/v1</code>, all requiring <code>Authorization: Bearer &lt;token&gt;</code>. <code>{ws}</code> is your workspace id.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Method and path</th><th>Returns</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">POST /auth/login</td><td>Token, expiry, refresh token.</td></tr>
+        <tr><td class="mono">POST /auth/refresh-token</td><td>A new token <em>and</em> a new refresh token.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/jurisdictions</td><td>Where you can order, and which can be searched by name.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/jurisdictions/{code}/coverage</td><td><strong>What an order will return.</strong> <code>sla</code>, registries, data fields, base and additional documents.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/jurisdictions/coverage</td><td>The same for every jurisdiction in one call.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/legal-forms?jurisdiction={code}</td><td>Local legal forms and what each maps to.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/company-types</td><td>Accepted <code>companyType</code> values.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/cases/search</td><td>Registry matches, each with an <code>externalCode</code>.</td></tr>
+        <tr><td class="mono">POST /workspaces/{ws}/document-search/cases</td><td><strong>Orders a company.</strong> <code>202</code> with the <code>caseId</code>.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/cases</td><td>Your cases, with live status.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/cases/{caseId}</td><td>One case&rsquo;s status and document counts.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/cases/{caseId}/documents</td><td>Every document known for the case.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/cases/{caseId}/documents/{documentId}/content</td><td>The file.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="next">
+  <h2><span class="secnum">09</span> What we need from you</h2>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td class="st">1</td><td>Who owns the identifier migration on your side, and whether the agreed date works for it.</td></tr>
+        <tr><td class="st">2</td><td>Whether you store case or document identifiers durably anywhere today. If you do, we should talk before the grace period ends rather than after.</td></tr>
+        <tr><td class="st">3</td><td>The jurisdictions you expect to order first, so we can confirm coverage and typical retrieval times for exactly those.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Anything unclear here is worth one message rather than a workaround. If the contract reads ambiguously to you, it is ambiguous, and we would rather fix it here than in your code.</p>
+</section>
+
+</main>
+
+<footer>
+  BetterCo Document Search &mdash; integration guidelines, 17 September 2026. Describes the API as deployed to the development environment. Endpoint paths, field names, status values and error codes were taken from the live contract rather than from a draft. The reference and the OpenAPI contract linked in section 00 are authoritative wherever they and this guide ever differ.
+</footer>
+
+</div>
