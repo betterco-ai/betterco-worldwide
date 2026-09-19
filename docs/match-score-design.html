@@ -171,7 +171,7 @@ GET  /restapi/v1/workspaces/{workspace_id}/document-search/match/rules</pre>
   "bandId": "NUMBER_AND_NAME_CONFLICT",
   "rulesVersion": "2026-09-19.2",
   "checkable": true, "orderable": true, "automated": true,
-  "selection": "highest band; ties to foundBy=NUMBER, then nameMatch=EQUAL, then first returned",
+  "selection": "a conflict governs; otherwise highest band; ties to foundBy=NUMBER, then nameMatch=EQUAL",
   "signals": { "lookups": ["NUMBER", "NAME"], "numberSupplied": true,
                "numberComparable": true, "candidateCount": 2 },
   "candidates": [
@@ -184,6 +184,12 @@ GET  /restapi/v1/workspaces/{workspace_id}/document-search/match/rules</pre>
   ] }</pre>
 
   <p>Each candidate carries its own score, band and signals. The top-level score is the best of them under the published <code>selection</code> rule &mdash; stated <em>in the response</em>, not only in documentation, because a ranking nobody can see is the same problem as a score nobody can audit.</p>
+
+  <div class="flag">
+    <span class="k">A conflict governs &mdash; a correction found while implementing</span>
+    <p>Revision 2 first published &ldquo;highest band wins&rdquo;. Writing the scorer showed that wrong: in the Sur la Pree case the candidates are Barcarolle at <strong>70</strong> and the real Sur la Pree at <strong>85</strong>, so the highest band reports 85 &mdash; a reassuring score for exactly the record whose number points at somebody else, burying the finding this feature exists for.</p>
+    <p>A <code>NUMBER_AND_NAME_CONFLICT</code> therefore outranks everything else, and the rules file states that and its reason. The same ordering sorts the candidate list, so the order a caller reads <em>is</em> the ranking that chose the score.</p>
+  </div>
 
   <p>No address, no legal form in the request. Every extra input is another rule we have to publish, and no band below needs them.</p>
   <p>Candidate fields reuse <code>KycSearchResult</code> exactly, so a caller who consumes <code>cases/search</code> needs no new model. <code>candidates</code> is an empty array when nothing was found, and every <code>signals</code> field is present on every response &mdash; inapplicable ones <code>null</code> rather than omitted, so nobody has to tell <em>false</em> from <em>absent</em>.</p>

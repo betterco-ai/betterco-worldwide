@@ -52,7 +52,7 @@ No address, no legal form. Every additional input is another rule to publish, an
   "bandId": "NUMBER_AND_NAME_CONFLICT",
   "rulesVersion": "2026-09-19.2",
   "checkable": true, "orderable": true, "automated": true,
-  "selection": "highest band; ties to foundBy=NUMBER, then nameMatch=EQUAL, then first returned",
+  "selection": "a conflict governs; otherwise the highest band; ties to foundBy=NUMBER, then nameMatch=EQUAL, then first returned",
   "signals": { "lookups": ["NUMBER", "NAME"], "numberSupplied": true,
                "numberComparable": true, "candidateCount": 2 },
   "candidates": [
@@ -70,6 +70,14 @@ No address, no legal form. Every additional input is another rule to publish, an
 Each candidate carries its own score, band and signals. The top-level score is the best of them under
 the published `selection` rule — which is stated in the response, not only in documentation, because a
 ranking nobody can see is the same problem as a score nobody can audit.
+
+**A conflict governs, and this was a correction found while implementing.** Revision 2 first
+published "highest band wins". Writing the scorer showed that wrong: in the Sur la Pree case the
+candidates are Barcarolle at 70 and the real Sur la Pree at 85, so the highest band reports **85** — a
+reassuring score for exactly the record whose number points at somebody else. A
+`NUMBER_AND_NAME_CONFLICT` therefore outranks everything, and `match-rules.json` states that and its
+reason. The same ordering sorts the candidate list, so the order a caller reads is the ranking that
+chose the score.
 
 Candidate fields reuse `KycSearchResult` exactly, so a caller who already consumes `cases/search` needs
 no new model. `candidates` is an empty array when nothing was found. Every `signals` field is present on
