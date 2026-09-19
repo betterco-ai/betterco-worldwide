@@ -2,6 +2,14 @@
 
 **11 September 2026. Internal.** Go-live 1 October.
 
+> **Updated 17 September 2026.** The nine branches merged into `dev` on 16 September as one squashed
+> change (**#2319**) and deployed to dev automatically. §2's phase table stands as written with two
+> changes: P4's exit criterion is still unproven, and everything from P4 upward is now *deployed on
+> dev but not re-run there* — the only end-to-end run is 15 September on a developer machine, against
+> the vendor's test system. §7's open list is unchanged apart from item 1: the note to Septeo was
+> corrected on 17 September and is **still unsent**. Current status for the date-owner:
+> `MEMO_2026-09-17_GO_LIVE_STATUS.md`.
+
 This maps what the nights of 9 and 11 September produced onto the programme phases, because the two
 do not share a vocabulary and that has already caused confusion. Working detail is in
 `HANDOVER_2026-09-11.md`; the programme itself is `aggregator-roadmap.html`, published as
@@ -40,7 +48,8 @@ From here on: **rounds are dates, phases are phases.**
 | P5 | The aggregator becomes a router | **Half met.** Germany enforced not remembered; per-source policy has a second member. Port and routing table not built |
 | P6 | Sources — France, Britain | Not started; out of the go-live by the 5 September scope cut |
 
-Nine branches stand behind this, **none merged, nothing deployed, no money spent.**
+Nine branches stand behind this, **none merged, nothing deployed, no money spent.** *(17 September:
+merged as #2319 on 16 September and deployed to dev; still no money spent.)*
 
 ## 3. What the two nights actually moved
 

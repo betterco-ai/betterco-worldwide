@@ -128,12 +128,12 @@
 <div class="page">
 
 <header class="top">
-  <p class="eyebrow">Backend review &middot; merge train &middot; 14 September 2026</p>
+  <p class="eyebrow">Backend review &middot; merge train &middot; 14 September 2026 &middot; merge executed 16 September</p>
   <h1>Opening staging for STP</h1>
-  <p class="lede">Nine branches of aggregator work are finished and unmerged. This is the order to review, merge and deploy them in &mdash; and the four things that must be true before Septeo is allowed to point at staging.</p>
+  <p class="lede">Nine branches of aggregator work are finished and unmerged. This is the order to review, merge and deploy them in &mdash; and the four things that must be true before Septeo is allowed to point at staging. <strong>The merge happened on 16 September</strong> (see the banner below); the four blockers did not move with it.</p>
   <dl class="meta">
     <div><dt>For</dt><dd>Dima, backend</dd></div>
-    <div><dt>Branches</dt><dd>9, none merged</dd></div>
+    <div><dt>Branches</dt><dd>9, merged 16 Sep as #2319</dd></div>
     <div><dt>PRs open</dt><dd>1 of 9</dd></div>
     <div><dt>Never started a JVM</dt><dd>5 of 9</dd></div>
     <div><dt>Go-live</dt><dd>1 October 2026</dd></div>
@@ -141,6 +141,13 @@
 </header>
 
 <main>
+
+<div class="flag">
+  <span class="k">Status &middot; 17 September 2026</span>
+  <p><strong>The merge train has run.</strong> The nine branches went into <code>dev</code> on 16 September as a single squashed change, <strong>#2319</strong>, which deployed to the dev environment automatically. Gate 1 (put the stack back together) and the merge order below are therefore history, not work.</p>
+  <p><strong>What did not happen with it.</strong> Nothing below has been re-run on dev &mdash; the only end-to-end run is 15 September, on a developer machine against the vendor&rsquo;s test system. Of the four blockers in the next section, <strong>one has cleared</strong>: the staging sandbox credential was written to <code>bc-stg-vault</code> on 19 September (the runbook named the right vault all along), though the vendor call has not yet been verified from staging. The rest stand: the ordering screen on dev may be reading <code>caseCommonId</code> against a list that now returns <code>caseId</code> (<strong>check this first</strong>), the note to Septeo is corrected but still unsent, and the startup guard has still never been watched to fire. A fifth item joins them: <strong>document filing is off in every deployed environment</strong>, so dev serves the vendor&rsquo;s identifiers and reads as though the identifier work did not land. That is decision M5.</p>
+  <p>Nine superseded pull requests should now be closed rather than reviewed a second time. Current status: <code>MEMO_2026-09-17_GO_LIVE_STATUS.md</code>.</p>
+</div>
 
 <section id="blockers">
   <h2><span class="g">STOP</span> Four things that must be true first</h2>

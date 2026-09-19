@@ -236,11 +236,11 @@
     <h1>From passthrough to aggregator</h1>
     <p class="standfirst">The BetterCo platform is the reference system. It calls an aggregator, the aggregator routes to a source, and the document lands in a BetterCo client. Today none of that is true for document search. Here is what gets built, in what order, and what fits before 1 October.</p>
     <dl class="facts">
-      <div class="fact"><dt>Date</dt><dd>29 August, revised 11 September 2026</dd></div>
+      <div class="fact"><dt>Date</dt><dd>29 August, revised 17 September 2026</dd></div>
       <div class="fact"><dt>Go-live</dt><dd>1 October 2026</dd></div>
       <div class="fact"><dt>Scope to go-live</dt><dd>Six MVP items</dd></div>
       <div class="fact"><dt>P1</dt><dd>Live on dev, 4 Sep</dd></div>
-      <div class="fact"><dt>In review</dt><dd>Nine branches, none merged</dd></div>
+      <div class="fact"><dt>Merged</dt><dd>#2319, 16 Sep &mdash; on dev only</dd></div>
       <div class="fact"><dt>Built by</dt><dd>Us, in betterco-backend</dd></div>
       <div class="fact"><dt>Review</dt><dd>Backend dev, per branch</dd></div>
     </dl>
@@ -609,6 +609,7 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
         <div class="note finding">
           <span class="kicker">Two unattended rounds &mdash; 9 and 11 September</span>
           <p><strong>Nine branches now stand on <code>dev</code>, none merged, nothing deployed, no money spent.</strong> Between them they closed P4, took half of P5, and retired both corrections this page carried on 8 September.</p>
+          <p><strong>17 September update.</strong> The nine merged into <code>dev</code> on 16 September as one squashed change, <strong>#2319</strong>, and deployed to the dev environment automatically. Still no money spent. Two caveats travel with the merge: nothing in the behaviour list has been re-run on dev &mdash; the only end-to-end run is 15 September against the vendor&rsquo;s test system on a developer machine &mdash; and <strong>document filing is off in every deployed environment</strong>, so dev orders documents, never files them, and serves the vendor&rsquo;s identifiers. That is decision <strong>M5</strong>, still open. Status for the date-owner: <code>MEMO_2026-09-17_GO_LIVE_STATUS.md</code>.</p>
           <div class="table-wrap">
             <table>
               <thead><tr><th>Night</th><th>What it produced</th><th>Phase it moves</th></tr></thead>
@@ -854,7 +855,7 @@ GET  /document-search/cases/{caseId}/documents/{documentId}/content
       </section>
 
       <footer class="colophon">
-        Source of record: <code>docs/superpowers/specs/2026-08-28-aggregator-phase1-design.md</code> and <code>2026-08-29-aggregator-phase2-and-plan.md</code> in <code>betterco-worldwide</code>. Every claim about current behaviour was measured against <code>betterco-backend</code>, <code>betterco_claude_api</code> and the staging API on 27–29 August 2026, not recalled. Revised 11 September 2026: P4 built and P5 half met across two unattended rounds, the price table refreshed from the live coverage page, and the reuse window built behind a flag that is off. Nine branches stand behind it, none merged. The repository documents &mdash; <code>HANDOVER_2026-09-11.md</code>, <code>MEMO_2026-09-11_PHASE_STATUS.md</code> and <code>HANDOVER_2026-09-08-P3.md</code> &mdash; carry the working detail.
+        Source of record: <code>docs/superpowers/specs/2026-08-28-aggregator-phase1-design.md</code> and <code>2026-08-29-aggregator-phase2-and-plan.md</code> in <code>betterco-worldwide</code>. Every claim about current behaviour was measured against <code>betterco-backend</code>, <code>betterco_claude_api</code> and the staging API on 27–29 August 2026, not recalled. Revised 11 September 2026: P4 built and P5 half met across two unattended rounds, the price table refreshed from the live coverage page, and the reuse window built behind a flag that is off. Nine branches stand behind it, none merged. Revised again 17 September 2026: those nine merged as <strong>#2319</strong> on 16 September and deployed to dev; nothing has been re-run there and no real registry document has passed through; staging&rsquo;s sandbox credential was written to <code>bc-stg-vault</code> on 19 September but the vendor call from staging is still unverified. The repository documents &mdash; <code>MEMO_2026-09-17_GO_LIVE_STATUS.md</code>, <code>HANDOVER_2026-09-14.md</code>, <code>MEMO_2026-09-11_PHASE_STATUS.md</code> and <code>HANDOVER_2026-09-08-P3.md</code> &mdash; carry the working detail.
       </footer>
 
     </main>
