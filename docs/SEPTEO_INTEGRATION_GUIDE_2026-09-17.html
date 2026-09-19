@@ -120,9 +120,9 @@
 <div class="page">
 
 <header class="top">
-  <p class="eyebrow">BetterCo &middot; integration guidelines &middot; 17 September 2026</p>
+  <p class="eyebrow">BetterCo &middot; integration guidelines &middot; 17 September, revised 19 September 2026</p>
   <h1>Document Search Integration</h1>
-  <p class="lede">Order a company, wait, collect its documents. Four calls end to end &mdash; sections 01 to 04 are that path in order, and everything after them is reference you look up when you hit it.</p>
+  <p class="lede">Order a company, wait, collect its documents. Four calls end to end &mdash; sections 01 to 04 are that path in order, and everything after them is reference you look up when you hit it. Section 06 covers the company check you asked about on 17 September, which is designed but not yet live.</p>
   <dl class="meta">
     <div><dt>For</dt><dd>Septeo integration team</dd></div>
     <div><dt>API</dt><dd>BetterCo REST API v2.0.0</dd></div>
@@ -353,8 +353,79 @@ curl -s -H "Authorization: Bearer $TOKEN" -o document.pdf \
   <p>To see your cases rather than one: <code>GET /workspaces/{ws}/document-search/cases</code>, with live status on each.</p>
 </section>
 
+<section id="match">
+  <h2><span class="secnum">06</span> Checking a company before you order</h2>
+  <p class="sub">Answering Eric&rsquo;s question of 17 September: a score you can gate on, with the rules published so you can audit it.</p>
+
+  <div class="flag">
+    <span class="k">Not available yet &mdash; please do not build against this as if it were live</span>
+    <p>These two endpoints are <strong>not deployed on any environment</strong>. The design is settled and the implementation sits on a branch with 68 tests, but it has never been called over HTTP. It is documented here so you can design your gate against a fixed shape instead of guessing it. <strong>We will tell you when it is live.</strong></p>
+  </div>
+
+  <p>One free call answers &ldquo;is this registry entry the company in my record?&rdquo; before you create a case. Creating the case remains the only billable action, so checking first costs nothing.</p>
+
+<pre>POST /workspaces/{workspaceId}/document-search/match
+
+{ "jurisdiction": "NL", "name": "Sur la Pree B.V.", "registerNumber": "24175625" }
+
+<span class="c">&rarr; 200</span>
+{ "score": 70,
+  "bandId": "NUMBER_AND_NAME_CONFLICT",
+  "rulesVersion": "2026-09-19.2",
+  "checkable": true, "orderable": true,
+  "selection": "a conflict governs; otherwise the highest band; ties to foundBy=NUMBER",
+  "signals": { "lookups": ["NUMBER","NAME"], "numberSupplied": true,
+               "numberComparable": true, "candidateCount": 2 },
+  "candidates": [
+    { "foundBy": "NUMBER", "score": 70, "bandId": "NUMBER_AND_NAME_CONFLICT",
+      "rawname": "Barcarolle Holding B.V.", "externalCode": "24175625",
+      "signals": { "numberMatches": true, "nameMatch": "DIFFERENT", "scriptDiffers": false } },
+    { "foundBy": "NAME", "score": 85, "bandId": "NAME_ONLY",
+      "rawname": "Sur la Pree B.V.", "externalCode": "54406951",
+      "signals": { "numberMatches": false, "nameMatch": "EQUAL" } }
+  ] }</pre>
+
+  <p>That example is your own row 15 from the September simulation: the <code>24175625</code> you sent is a Vestigingsnummer, and read as a KvK number it resolves to a different company. You get both candidates and the conflict named, rather than a single number to trust.</p>
+
+  <h3>The bands</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Score</th><th>bandId</th><th>Means</th></tr></thead>
+      <tbody>
+        <tr><td class="st">100</td><td class="code">NUMBER_AND_NAME</td><td>Your number and your name both match the same company.</td></tr>
+        <tr><td class="st">95</td><td class="code">NUMBER_RESOLVES_SCRIPT_DIFFERS</td><td>Your number matches; the names are in different scripts and cannot be compared. Your two Bulgarian rows.</td></tr>
+        <tr><td class="st">85</td><td class="code">NAME_ONLY</td><td>Found by name. The number matched nothing, or none was sent.</td></tr>
+        <tr><td class="st">70</td><td class="code">NUMBER_AND_NAME_CONFLICT</td><td>Your number resolves to one company and your name to another. The strongest evidence that a number is wrong.</td></tr>
+        <tr><td class="st">70</td><td class="code">NUMBER_RESOLVES_OTHER_COMPANY</td><td>Your number resolves to a differently named company, and nothing came back for the name.</td></tr>
+        <tr><td class="st">10</td><td class="code">NO_HIT</td><td>Nothing found.</td></tr>
+        <tr><td class="st">0</td><td class="code">NO_COMPANY_REGISTER</td><td>Not a company register at all &mdash; your row 16 was an association with a ZVR number.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Two bands share the score 70 deliberately: the score is what your threshold compares against, and the id tells you which kind of doubt it is.</p>
+
+  <div class="flag">
+    <span class="k">Read signals.numberComparable before acting on an 85</span>
+    <p>A register number can only be compared where we have measured that the registry id in a search result really is that country&rsquo;s register number. Where we have not, <code>numberComparable</code> is <strong>false</strong>, the number is carried but never treated as resolved, and <strong>85 is a ceiling rather than a verdict</strong> &mdash; it does not mean your number is wrong, it means we could not check it.</p>
+    <p>At the time of writing <em>no</em> jurisdiction is on that measured list, so every answer would be capped at 85. We would rather ship that honestly than let a 100 mean two different things. Expect the list to fill jurisdiction by jurisdiction, and read the field rather than the number alone.</p>
+  </div>
+
+  <h3>A company in liquidation is the same company</h3>
+  <p>Where a registrar appends a status to the name &mdash; the Firmenbuch holds <em>&ldquo;E.M.A. Pharma GmbH in Liqu.&rdquo;</em> for your row 7 &mdash; the suffix is removed before names are compared, so those rows do not score as mismatches. The status still reaches you as <code>companyStatus</code> on the candidate. You told us those were the most interesting rows for a monitoring test; a threshold must not discard them.</p>
+
+  <h3>The rules, published and versioned</h3>
+  <p class="ep">GET /workspaces/{workspaceId}/document-search/match/rules</p>
+  <p>Returns the band table, the selection rule, the name-normalisation steps and the per-jurisdiction token lists &mdash; served from the same file the scorer reads, so a score can be checked rather than trusted. Every scored answer carries the <code>rulesVersion</code> that produced it. <strong>Pin that version.</strong> If we later change how a band is computed, your threshold would otherwise come to mean something different without anything failing visibly.</p>
+
+  <h3>Where a check is not possible</h3>
+  <p>Jurisdictions without automatic search have no index to look a company up in beforehand. There you get <code>checkable: false</code> with <code>reason: NO_SEARCHABLE_REGISTRY</code> &mdash; a <code>200</code>, not an error, because it is an answer and those companies are still orderable. Six of your twenty rows were in that position. German companies return <code>orderable: false</code>, so you learn it here instead of from a <code>409</code> on the order.</p>
+
+  <h3>What we need from you</h3>
+  <p>Your threshold, and whether you adopt these bands as published. You set the threshold on your side and we deliberately do not enforce it inside <code>create</code>: a limit in our order call would refuse orders silently and would put a rule you own inside our release cycle.</p>
+</section>
+
 <section id="ids">
-  <h2><span class="secnum">06</span> Identifiers &mdash; one change on your side</h2>
+  <h2><span class="secnum">07</span> Identifiers &mdash; one change on your side</h2>
   <p class="sub">The only thing in this document that asks you to change existing code.</p>
 
   <p>Cases and documents are addressed by <strong>BetterCo identifiers</strong> &mdash; 24 hexadecimal characters, opaque, not to be parsed. They are ours rather than any registry&rsquo;s or supplier&rsquo;s, because a case will not always be served from the same place, and an identifier belonging to one source cannot be the key you store.</p>
@@ -378,7 +449,7 @@ curl -s -H "Authorization: Bearer $TOKEN" -o document.pdf \
 </section>
 
 <section id="errors">
-  <h2><span class="secnum">07</span> Errors</h2>
+  <h2><span class="secnum">08</span> Errors</h2>
   <p class="sub">One envelope everywhere. The machine-readable code is in <code>message</code>; <code>error</code> is only the HTTP reason phrase.</p>
 
 <pre>{ "error": "Conflict", "status": 409,
@@ -407,7 +478,7 @@ curl -s -H "Authorization: Bearer $TOKEN" -o document.pdf \
 </section>
 
 <section id="reference">
-  <h2><span class="secnum">08</span> Every endpoint</h2>
+  <h2><span class="secnum">09</span> Every endpoint</h2>
   <p class="sub">Relative to <code>https://dev.betterco.ai/bcapi/restapi/v1</code>, all requiring <code>Authorization: Bearer &lt;token&gt;</code>. <code>{ws}</code> is your workspace id.</p>
 
   <div class="table-wrap">
@@ -427,13 +498,15 @@ curl -s -H "Authorization: Bearer $TOKEN" -o document.pdf \
         <tr><td class="mono">GET /workspaces/{ws}/document-search/cases/{caseId}</td><td>One case&rsquo;s status and document counts.</td></tr>
         <tr><td class="mono">GET /workspaces/{ws}/document-search/cases/{caseId}/documents</td><td>Every document known for the case.</td></tr>
         <tr><td class="mono">GET /workspaces/{ws}/document-search/cases/{caseId}/documents/{documentId}/content</td><td>The file.</td></tr>
+        <tr><td class="mono">POST /workspaces/{ws}/document-search/match</td><td><strong>Not live yet</strong> &mdash; scores a company before you order. Section 06.</td></tr>
+        <tr><td class="mono">GET /workspaces/{ws}/document-search/match/rules</td><td><strong>Not live yet</strong> &mdash; the published band table and normalisation.</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
 <section id="next">
-  <h2><span class="secnum">09</span> What we need from you</h2>
+  <h2><span class="secnum">10</span> What we need from you</h2>
   <div class="table-wrap">
     <table>
       <tbody>
