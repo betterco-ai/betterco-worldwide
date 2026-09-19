@@ -205,10 +205,17 @@ The existing envelope, code in `message` (`RestApiExceptionHandler`):
 
 | Status | `message` | When |
 |---|---|---|
-| 422 | `jurisdiction_required` | missing, or not a known code |
-| 422 | `name_required` | missing or blank |
+| 400 | `'jurisdiction' must not be null` | a required field is missing |
+| 400 | `'name' must not be null` | likewise |
 | 503 | `upstream_unavailable` | the vendor search is not answering |
 | 504 | `upstream_timeout` | the vendor search timed out |
+
+**Corrected 19 September.** An earlier revision promised `422 jurisdiction_required` and
+`422 name_required`. Those codes exist nowhere in the source and were never going to: `required` in the
+schema generates `@NotNull`, Spring rejects the body before any of our code runs, and
+`RestApiExceptionHandler` renders it as **400** with the field name. That is also how `create` already
+behaves for its own required fields, so inventing a second validation style for this one endpoint would
+have been the inconsistency, not the fix. The table above is what the endpoint does.
 
 If the **number** lookup fails upstream but the name lookup succeeds, the call returns `200` with
 `signals.lookups: ["NAME"]` and `numberComparable: null` — a partial answer beats an error, provided it
@@ -292,6 +299,12 @@ stale surefire report reported a class green that had not run.
    Firmenbuch appends "in Liqu." to the name. Those are the rows the customer called the most
    interesting for a monitoring test, so a threshold would have discarded exactly them.
 5. `MatchApiImpl` cannot exist under this generator; see §6.
+
+**Closed since:** the response was missing three published signals, and the domain computed
+`numberComparable` while the mapper never read it (`50862da90`). Without that field an 85 cannot be told
+apart from "we could not check your number at all" - and with the comparable list empty, every 85 is
+really the second. `signals` now groups what was done and what could be done, per candidate too, in the
+shape §1 published.
 
 **Not verified, and not claimable:** the full unit suite has not run to completion (the background run
 was killed for system memory pressure before any test executed) and the Spring context has never been
