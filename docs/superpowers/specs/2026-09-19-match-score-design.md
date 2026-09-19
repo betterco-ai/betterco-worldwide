@@ -227,7 +227,12 @@ the relevant field set. `search_not_supported` is deliberately not reused — it
 | `MatchScoringService` | pure: (caller record, candidates, rules) → per-candidate bands, best, selection trace. No I/O | `MatchRules` |
 | `MatchRules` | loads and validates `match-rules.json`; bands, selection rule, tokens, patterns, version | — |
 | `CompanyMatchService` | orchestration: automated? deny-listed? run one or two lookups, merge, de-duplicate, delegate | `KycGatewayService`, `MatchScoringService` |
-| `MatchApiImpl` | implements the generated interface from `betterco_api.yaml` | `CompanyMatchService` |
+| ~~`MatchApiImpl`~~ | **Not built, and cannot be.** `useTags=true` generates one interface per tag and
+`KycApiImpl` already implements `DocumentSearchApi`, so a second class cannot implement half of it. The
+two methods are two-line delegations in `KycApiImpl`, which is why `MatchResponses` was extracted: the
+mapping is unit-tested, the controller is glue. | `CompanyMatchService` |
+| `MatchResponses` | pure: domain result → the published DTOs. Where a field quietly fails to travel | the generated domain |
+| `MatchConfiguration` | the three beans; the rules are a startup singleton that fails the context if the resource is missing | — |
 
 Declared contract-first under the existing `Document Search` tag, so the endpoints appear in
 `apidoc.html` beside the rest and Septeo can regenerate their client. The scorer being pure is the
@@ -270,6 +275,28 @@ unauthenticated caller — the gap that once let an endpoint pass 101 unit tests
 - **More than two lookups** — name variants, for instance, which the simulation used by hand. It would
   raise recall on band 85 and it is a defensible later addition, but each variant is another published
   rule and another call.
+
+## 8b. Built, and what is verified
+
+As of 19 September, on `feat/match-score` (`cc26463b6`), seven classes and **65 tests**: the
+normalisation, the published rules, the scorer, the orchestration, the gateway adapter, the simulation
+vectors and the response mapper. Each report's timestamp was checked against the clock, twice after a
+stale surefire report reported a class green that had not run.
+
+**Five corrections came out of writing it, not out of reviewing it:**
+
+1. A conflict must govern the ranking - "highest band wins" reported 85 for Sur la Pree.
+2. The scorer must not claim a number resolved when the lookup that would have resolved it failed.
+3. The deny list must have one reading, not a copy in the adapter.
+4. A company **in liquidation is the same company** - the vectors caught row 7 scoring 70 because the
+   Firmenbuch appends "in Liqu." to the name. Those are the rows the customer called the most
+   interesting for a monitoring test, so a threshold would have discarded exactly them.
+5. `MatchApiImpl` cannot exist under this generator; see §6.
+
+**Not verified, and not claimable:** the full unit suite has not run to completion (the background run
+was killed for system memory pressure before any test executed) and the Spring context has never been
+started. A targeted check stands in for the first: no test constructs `KycApiImpl`, so the constructor
+change cannot break one. The integration test in §7 needs Docker and has not been written.
 
 ## 9. Still open
 
