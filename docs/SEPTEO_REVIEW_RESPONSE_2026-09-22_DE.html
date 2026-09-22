@@ -1,0 +1,511 @@
+<meta charset="utf-8">
+<title>Septeo Verhandlungsblatt</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#6895FF; --blue-light:#e8efff; --navy:#1a2340; --dark:#222233;
+    --red:#b42318; --red-light:#fef3f2; --green:#067647; --green-light:#ecfdf3;
+    --amber:#b54708; --amber-light:#fffaeb;
+    --gray-600:#6b7280; --gray-400:#9ca3af; --gray-200:#e5e7eb; --gray-100:#f3f4f6;
+    --gray-50:#f9fafb; --white:#ffffff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Montserrat',system-ui,sans-serif; -webkit-font-smoothing:antialiased;
+    color:var(--dark); background:var(--gray-100); padding:24px 16px 60px; }
+  .page { width:210mm; max-width:100%; min-height:297mm; margin:0 auto; background:var(--white);
+    box-shadow:0 2px 20px rgba(0,0,0,.08); padding:25mm 22mm 20mm; }
+  .page + .page { margin-top:26px; }
+  @media (max-width:720px) { .page { padding:22px 18px 28px; min-height:0; } }
+  .doc-header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
+    margin-bottom:6px; padding-bottom:14px; border-bottom:3px solid var(--blue); }
+  .doc-header h1 { font-size:26px; font-weight:800; color:var(--navy); line-height:1.15; }
+  .kicker { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--blue); margin-bottom:5px; }
+  .doc-date { font-size:10px; color:var(--gray-600); text-align:right; margin:10px 0 18px; }
+  .lead { font-size:10.5px; line-height:1.7; margin:0 0 14px; }
+  .lead strong { font-weight:700; color:var(--navy); }
+  .section { margin-bottom:16px; }
+  .section h2 { font-size:13px; font-weight:700; color:var(--navy); padding-bottom:4px;
+    border-bottom:2px solid var(--blue); margin-bottom:9px; }
+  .sec-num { color:var(--blue); margin-right:5px; }
+  .section p { font-size:10.5px; line-height:1.7; margin-bottom:8px; }
+  .section p:last-child { margin-bottom:0; }
+  .section strong { font-weight:700; color:var(--navy); }
+  .section em { font-style:italic; }
+  ul.ticks { list-style:none; margin:6px 0 10px; padding:0; font-size:10.5px; line-height:1.65; }
+  ul.ticks li { padding-left:14px; position:relative; margin-bottom:6px; }
+  ul.ticks li::before { content:'\203A'; position:absolute; left:0; color:var(--blue); font-weight:700; }
+  .tablewrap { overflow-x:auto; margin:4px 0 10px; }
+  table { width:100%; border-collapse:collapse; font-size:10px; }
+  thead th { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:.5px;
+    color:var(--white); background:var(--navy); padding:7px 9px; text-align:left; }
+  tbody tr { border-bottom:1px solid var(--gray-100); }
+  tbody td { padding:6px 9px; vertical-align:top; line-height:1.55; }
+  td.cl { font-weight:700; color:var(--navy); white-space:nowrap; width:60px; }
+  .card { background:var(--gray-50); border-radius:8px; padding:11px 13px;
+    border:1px solid var(--gray-200); margin:4px 0 10px; }
+  .card h4 { font-size:10.5px; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .card p { font-size:10px; color:var(--gray-600); line-height:1.6; margin:0 0 6px; }
+  .card p:last-child { margin-bottom:0; }
+  .card.hot { background:var(--red-light); border-color:#fecdca; }
+  .card.hot h4 { color:var(--red); }
+  .card.hot p { color:#7a271a; }
+  .card.ok { background:var(--green-light); border-color:#abefc6; }
+  .card.ok h4 { color:var(--green); }
+  .card.ok p { color:#054f31; }
+  .internal { background:var(--amber-light); border:1px solid #fedf89; border-radius:8px;
+    padding:11px 13px; margin:4px 0 10px; }
+  .internal h4 { font-size:10.5px; font-weight:700; color:var(--amber); margin-bottom:4px; }
+  .internal p { font-size:10px; color:#93370d; line-height:1.6; margin:0 0 6px; }
+  .internal p:last-child { margin-bottom:0; }
+  .item { border:1px solid var(--gray-200); border-radius:8px; margin-bottom:11px;
+    overflow:hidden; break-inside:avoid; }
+  .item-head { display:flex; justify-content:space-between; align-items:baseline; gap:10px;
+    background:var(--navy); color:var(--white); padding:6px 11px; }
+  .item-head h3 { font-size:11px; font-weight:700; }
+  .item-head .refs { font-size:8.5px; font-weight:600; color:#b9c6ea; white-space:nowrap; }
+  .item-body { padding:9px 11px; }
+  .item-body dl { display:grid; grid-template-columns:82px 1fr; gap:4px 9px;
+    font-size:10px; line-height:1.6; }
+  .item-body dt { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:.4px;
+    color:var(--blue); padding-top:2px; }
+  .item-body dd { color:var(--dark); }
+  .item-body dd strong { font-weight:700; color:var(--navy); }
+  .quote { font-style:italic; color:var(--gray-600); }
+  .verdict { display:inline-block; font-size:8px; font-weight:700; text-transform:uppercase;
+    letter-spacing:.5px; padding:2px 7px; border-radius:99px; }
+  .v-no { background:var(--red-light); color:var(--red); }
+  .v-yes { background:var(--green-light); color:var(--green); }
+  .v-trade { background:var(--blue-light); color:#1d4ed8; }
+  .v-ask { background:var(--gray-100); color:var(--gray-600); }
+  .doc-footer { margin-top:16px; padding-top:10px; border-top:2px solid var(--navy);
+    display:flex; justify-content:space-between; gap:12px; font-size:8px;
+    color:var(--gray-400); flex-wrap:wrap; }
+  @media print { body { background:var(--white)!important; padding:0; }
+    .page { box-shadow:none; padding:4mm 0; width:100%; min-height:auto; break-before:page; }
+    .page:first-of-type { break-before:auto; }
+    .section, .card, .item, .internal { break-inside:avoid; } }
+  @page { size:A4; margin:18mm 20mm 24mm; }
+</style>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Verhandlungsblatt &middot; intern</div>
+      <h1>Erste Kommentierung von STP<br>&mdash; unsere Position, Punkt für Punkt</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo" style="height:22px">
+  </div>
+  <div class="doc-date">Founders1 GmbH &middot; 22. September 2026 &middot; für das Gespräch mit M. Ripke (Mi/Do, 13&ndash;17 Uhr)</div>
+
+  <p class="lead">
+    STP hat unseren Entwurf vom 14. September am <strong>21. September um 20:47 Uhr</strong> mit
+    <strong>22 Kommentaren von RAin Anja Nöth</strong> zurückgegeben &mdash; <strong>ausschließlich Kommentare, keine
+    Änderungen im Text</strong>. Es handelt sich also um eine erste juristische Durchsicht, nicht um ein Redline:
+    nichts ist umformuliert, und jeder Punkt steht uns so offen wie ihnen. Ripke bittet um ein Gespräch, weil
+    „es doch einige essentiellere Punkte“ gebe.
+  </p>
+
+  <div class="section">
+    <h2><span class="sec-num">1</span> Was die 22 Kommentare in der Summe bedeuten</h2>
+    <p>Sie sind nicht kosmetisch. Zusammengenommen beschreiben sie <strong>einen anderen Vertrag</strong>: einen
+    Großhandelseinkauf von Daten zu festen Preisen, mit dauerhafter Speicherung und Mehrfachnutzung im eigenen
+    Kundenbestand, ohne Konzernregelung, ohne Umgehungsverbot und mit herausgenommenem deutschem und österreichischem
+    Markt. Unser Entwurf ist ein einzelfallbezogener Wiederverkäufervertrag. Diese Lücke ist der Gegenstand des
+    Gesprächs.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th style="width:150px">Thema</th><th style="width:96px">Kommentare</th><th>Unsere Haltung in einem Satz</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Feste Preise statt Erlösbeteiligung</strong></td><td>#20, #21, #22, #23</td>
+            <td>Im Grundsatz ja &mdash; ein fester Preis ist aber ein Preis <em>je Case</em>, und das funktioniert nur bei einzelfallbezogener Lieferung.</td></tr>
+          <tr><td><strong>Dauerhafte Speicherung, Nutzung für mehrere Kunden</strong></td><td>#6, #7, #9, #13</td>
+            <td>Nicht kostenlos. Das macht aus einem bezahlten Abruf ein unbegrenztes eigenes Register.</td></tr>
+          <tr><td><strong>Deutschland und Österreich aus dem Leistungsumfang</strong></td><td>#17</td>
+            <td>Zugestanden &mdash; und das Billigste, was wir zu geben haben. Also nicht umsonst geben.</td></tr>
+          <tr><td><strong>Ziffer 6 (Umgehungsverbot) streichen</strong></td><td>#16</td>
+            <td>Nein. Sie ist der Grund, warum wir Coverage und Kosten überhaupt offenlegen können.</td></tr>
+          <tr><td><strong>Ziffer 4 (Septeo-Konzern) streichen</strong></td><td>#11</td>
+            <td>Gerne &mdash; sofern es „nur STP“ heißt. Vorher fragen, was gemeint ist.</td></tr>
+          <tr><td><strong>Keine Weitergabe der Pflichten an ihre Endkunden</strong></td><td>#25</td>
+            <td>Auf drei Pflichten dem Inhalt nach reduzieren; Formulierung und Papier gehören ihnen.</td></tr>
+          <tr><td><strong>Weitergehende Gewährleistung für den Inhalt</strong></td><td>#29, #30, #31</td>
+            <td>Der Sache nach annehmen. Es ist das, was wir ohnehin tun &mdash; und ihr eigener #30 erhält unseren Ausschluss.</td></tr>
+          <tr><td><strong>Haftungsbegrenzung abgelehnt</strong></td><td>#33</td>
+            <td>Ohne Gegenvorschlag. Sie sollen eine Zahl nennen.</td></tr>
+          <tr><td><strong>6 Monate Testphase statt 24 Monate</strong></td><td>#35</td>
+            <td>Machbar &mdash; aber nicht zusammen mit festen Preisen <em>und</em> ohne jede Bindung.</td></tr>
+          <tr><td><strong>Erläutern / besprechen</strong></td><td>#4, #8, #14, #36, #37</td>
+            <td>Noch ohne Substanz. Gut beantwortet, erledigen sich drei von fünf.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">2</span> Die Frage, die zuerst zu klären ist</h2>
+    <div class="card hot">
+      <h4>Ist ein geliefertes Dokument eine Einzelfalllieferung oder ein Dauereintrag in der Datenbank von STP?</h4>
+      <p>Die Kommentare #20 und #13 sind keine zwei Punkte, sondern einer. <strong>Feste Preise vertragen sich mit
+      einzelfallbezogener Lieferung, nicht mit dauerhafter Mehrfachnutzung.</strong> Wir bezahlen unsere Quellen
+      <em>je Abruf</em>. Wenn STP ein Dokument einmal speichert und daraus viele Kunden bedient, laufen unsere Kosten
+      je gelieferter Antwort weiter, während unser Erlös aufhört. Jeder feste Preis, der auf dieser Annahme aufsetzt,
+      ist binnen Monaten falsch.</p>
+      <p>Diesen einen Punkt zuerst klären. Mindestumsatz, Laufzeit, Haftung und Ziffer 6 ordnen sich dahinter ein
+      &mdash; und jeder davon ist verhandelbar, sobald er entschieden ist.</p>
+    </div>
+    <div class="card ok">
+      <h4>Ihr eigener Kommentar liefert uns den Hebel</h4>
+      <p>Zu Ziffer 2 (Vertragsgegenstand) schreibt ihre Anwältin: <span class="quote">„Registerinformationen auf
+      Anfrage (Einzelfallbezogen)“</span> (#4). Das ist unser Modell, formuliert von ihrer Seite, vier Ziffern vor
+      den Kommentaren, die dauerhafte Speicherung und Mehrfachnutzung verlangen. Beides nebeneinanderlegen und fragen,
+      was gemeint war.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">3</span> Die Tauschliste</h2>
+    <p>Fünf Dinge, die wir geben können, und was jedes davon einbringen muss. Nichts aus der linken Spalte verlässt
+    den Raum ohne Gegenwert.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th style="width:44%">Wir können geben</th><th>Dafür bekommen wir</th></tr></thead>
+        <tbody>
+          <tr><td>Deutschland und Österreich aus Anlage 2 (#17)</td><td>Ziffer 6 bleibt für die Jurisdiktionen, die wir liefern, und Ziffer 5.2 bekommt die Ausnahme für ihr bestehendes Registergeschäft</td></tr>
+          <tr><td>Feste Preise je Case statt der 50-%-Beteiligung (#20)</td><td>Bestätigte Einzelfalllieferung: ein Case, ein Endkunde, kein Datenpool</td></tr>
+          <tr><td>Streichung von Ziffer 4 (Konzernregelung) (#11)</td><td>Der Vertrag bleibt auf STP beschränkt; jede weitere Septeo-Gesellschaft ist ein Nachtrag, kein Beitritt</td></tr>
+          <tr><td>Anlage 5 als Dokument entfällt (#25)</td><td>Drei Pflichten bleiben dem Inhalt nach bestehen, in ihrer eigenen Formulierung</td></tr>
+          <tr><td>6 Monate Erstlaufzeit (#35)</td><td>Entweder der Mindestumsatz bleibt, oder es gelten Listenpreise ohne Wiederverkäuferrabatt</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; Berger Str. 224, 60385 Frankfurt &middot; HRB 234373 B</span>
+    <span>Intern &mdash; nicht für die Gegenseite</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="section">
+    <h2><span class="sec-num">4</span> Punkt für Punkt</h2>
+    <p>Je Punkt: was sie geschrieben haben, was es bedeutet, die Position, mit der wir eröffnen, und das Zugeständnis,
+    das wir machen können, ohne das Modell zu zerstören.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>A &middot; Feste Preise statt Erlösbeteiligung</h3><span class="refs">#20, #21 &middot; Ziff. 8, 8.2</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Anderes Pricing-Modell gewünscht. Feste definierte Preise notwendig.“
+          &middot; „Feste Preise definieren.“</dd>
+        <dt>Bedeutet</dt><dd>Weg mit der 50-%-Beteiligung am Nettobetrag; stattdessen ein Einkaufspreis je Case, mit dem
+          sie kalkulieren können, und freie Preissetzung gegenüber ihren Endkunden.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Annehmen</span> &mdash; und zwar früh im Gespräch, es ist das
+          billigste Entgegenkommen, das wir haben. Einkauf, Verkauf und Marge <strong>liegen ihnen aus dem Deck ohnehin
+          offen</strong>, eine feste Preisliste kostet uns also keine Information, die sie nicht schon hätten.
+          <strong>Eine Bedingung:</strong> ein fester Preis ist ein Preis je Case &mdash; ein Unternehmen, eine
+          Jurisdiktion, ein Endkunde. Dieser Satz muss im selben Atemzug fallen.</dd>
+        <dt>Rückfallposition</dt><dd>Preisliste je Band mit Mengenstaffel, jährlich überprüft, statt einer Beteiligung
+          &mdash; dasselbe Geld in einer Form, die ihr Einkauf kennt.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>B &middot; Dauerhafte Speicherung und Mehrfachnutzung</h3><span class="refs">#6, #7, #9, #13 &middot; Ziff. 3.1, 3.5, 5.1</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Auch eine dauerhafte Speicherung im eigenen Datenbestand und
+          Verarbeitung für verschiedene Kunden“ &middot; „Nicht nur End Clients“ &middot; „Keine zeitliche Begrenzung
+          der Nutzungsrechte“ &middot; „Mehrfachnutzung muss zulässig sein“</dd>
+        <dt>Bedeutet</dt><dd>Sie wollen aus dem Eingekauften ein eigenes Register aufbauen: dauerhaft speichern,
+          beliebig viele eigene Kunden daraus bedienen und es über die Endkundenbeziehung hinaus für eigene Zwecke
+          nutzen.</dd>
+        <dt>Position</dt><dd><span class="verdict v-no">Nicht kostenlos</span> &mdash; und dies ist der einzige Punkt,
+          für den es sich lohnt, das Gespräch zu riskieren. Wir kaufen <em>je Abruf</em> ein. Eine gespeicherte Kopie,
+          die einen zweiten Kunden bedient, ist eine zweite Lieferung, die niemand bezahlt hat.
+          <strong>Was wir heute geben können und im selben Satz anbieten sollten, damit das „Nein“ nicht leer
+          ist:</strong> (i) unbefristete Aufbewahrung eines gelieferten Dokuments durch den Endkunden, für den es
+          bestellt wurde &mdash; #9 ist damit fast vollständig erfüllt, die zeitliche Grenze kann entfallen;
+          (ii) eine eigene Archiv-, Revisions-, Backup- und Supportkopie bei STP sowie beliebig häufige erneute
+          Auslieferung an <em>denselben</em> Endkunden; (iii) kostenfreie Wiederverwendung innerhalb eines
+          Aktualitätsfensters für dasselbe Unternehmen und dieselbe Jurisdiktion &mdash; das ist in der Plattform
+          bereits umgesetzt, und die Fensterbreite ist ein kommerzieller Regler, den wir aufdrehen können.</dd>
+        <dt>Rückfallposition</dt><dd>Bestehen sie auf dem Datenpool, wird daraus <strong>eine bepreiste Lizenz, keine
+          Erlaubnis</strong> &mdash; eine Wiederverwendungsgebühr je Dokument und weiterem Kunden oder eine jährliche
+          Pool-Lizenz je Jurisdiktion. Niemals eine kostenlose Klausel.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>C &middot; Der Mindestumsatz, neu berechnet</h3><span class="refs">#22 &middot; Ziff. 8.4</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Summe des insgesamt von STP gezahlten Kaufpreises ./. Procurement Costs
+          = Founders1’s Gewinn p.m. Wenn Gewinn &gt; 1.500 =&gt; keine über den vereinbarten regulären Kaufpreis
+          geschuldete Zahlung, wenn Gewinn &lt; 1.500 =&gt; Ausgleich der Differenz“</dd>
+        <dt>Bedeutet</dt><dd>Sie akzeptieren einen Mindestumsatz und haben den Ausgleichsmechanismus selbst formuliert
+          &mdash; bemessen an unserer Marge, nicht am Umsatz. Genau die Konstruktion, die wir wollten.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Formel annehmen</span>. Zwei Korrekturen: sie lässt die
+          <strong>Staffel von 750 € für die Monate 1–3</strong> weg, die wir bereits zugestanden hatten &mdash; also
+          entweder ab Monat 1 volle 1.500 €, oder die Staffel bleibt und wird gegen die 6-Monats-Laufzeit getauscht
+          (Punkt L). Und der Nebeneffekt ihrer eigenen Formel: <strong>sie rechnet nur, wenn sie unsere
+          Beschaffungskosten sehen</strong>. Die Offenlegung in Anlage 2.1 überlebt damit auf ihren Vorschlag hin,
+          nicht auf unseren.</dd>
+        <dt>Rückfallposition</dt><dd>Wollen sie die Kosten doch nicht sehen: fester Monatsbetrag auf unsere Marge ohne
+          Kostenoffenlegung. Für uns einfacher, und die Zahl bleibt.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>D &middot; Kostenänderungen</h3><span class="refs">#23 &middot; Ziff. 8.6</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">Nur bei tatsächlich gestiegenen Kosten &middot; Höchstbetrag der
+          Erhöhung definieren &middot; Preis danach mindestens x Monate fest &middot; „Was ist, wenn die Bezugskosten
+          niedriger werden, besteht dann eine Verpflichtung zur Anpassung nach unten?“</dd>
+        <dt>Bedeutet</dt><dd>Vier berechtigte Forderungen &mdash; und die vierte ist die eigentliche: Symmetrie.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Alle vier geben</span>. Erhöhung nur nachgewiesen; Obergrenze
+          je Jurisdiktion und Jahr; danach 12 Monate Preisstabilität; und <strong>ja, Senkungen werden
+          weitergegeben</strong>, quartalsweise überprüft. Es kostet uns nichts, was wir selbst steuern, und es ist die
+          Antwort, die den Rest von Ziffer 8 fair aussehen lässt.</dd>
+        <dt>Rückfallposition</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>E &middot; Deutschland und Österreich aus dem Leistungsumfang</h3><span class="refs">#17 &middot; Anlage 2</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Es muss der Service in Annex 2 so eingeschränkt werden, dass Länder
+          wie Deutschland und Österreich dort nicht enthalten sind.“</dd>
+        <dt>Bedeutet</dt><dd>Sie schützen ihr eigenes Kerngeschäft. Zugleich sagt es uns klar, wofür sie uns wollen:
+          für alles <em>außer</em> ihrem Heimatmarkt.</dd>
+        <dt>Position</dt><dd><span class="verdict v-trade">Geben, aber gekoppelt</span>. Es kostet uns nichts. Es muss
+          dafür Ziffer 6 für die von uns gelieferten Jurisdiktionen am Leben halten (Punkt F) &mdash; beides in einem
+          Satz sagen, damit das Zugeständnis sichtbar bedingt ist.</dd>
+        <dt>Rückfallposition</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; Antwort auf die STP-Kommentierung vom 21. September 2026</span>
+    <span>Intern &mdash; nicht für die Gegenseite</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="item">
+    <div class="item-head"><h3>F &middot; Ziffer 6 (Umgehungsverbot) ganz streichen</h3><span class="refs">#16 &middot; Ziff. 6</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Ziffer 6 insgesamt streichen“</dd>
+        <dt>Bedeutet</dt><dd>Freie Hand, die Lieferanten und Bezugswege anzusprechen, die sie von uns erfahren
+          &mdash; während Anlage 2 ihnen die Coverage-Karte und die Kosten je Jurisdiktion in die Hand gibt.</dd>
+        <dt>Position</dt><dd><span class="verdict v-no">Nein</span>, und die Begründung ist keine defensive: Ziffer 6
+          ist <strong>die Voraussetzung unserer Transparenz</strong>. Anlage 2 nennt genau, welche Jurisdiktionen wir
+          abdecken und zu welchen Kosten. Diese Offenlegung ist das Know-how, Ziffer 6 ist ihr Preis. Fällt Ziffer 6,
+          wandern die Beschaffungskosten aus dem Vertrag zurück in eine gesonderte vertrauliche Preisliste &mdash; dort
+          standen sie bis zum 15. September.</dd>
+        <dt>Rückfallposition</dt><dd>Nachlauf von 24 auf 12 Monate verkürzen und ausdrücklich klarstellen, dass nur
+          <em>von uns erhaltene</em> Informationen erfasst sind &mdash; was die Klausel bereits sagt. Für sie ein
+          echtes Zugeständnis, für uns keines.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>G &middot; Ziffer 4 (Septeo-Konzern) streichen</h3><span class="refs">#11 &middot; Ziff. 4</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„streichen“</dd>
+        <dt>Bedeutet</dt><dd>Mehrdeutig, und der Unterschied ist groß: entweder <em>keine Konzernnutzung</em> (nur
+          STP) oder <em>Konzernnutzung ohne den Beitrittsmechanismus</em>, also freie Ausdehnung auf jede
+          Septeo-Gesellschaft.</dd>
+        <dt>Position</dt><dd><span class="verdict v-ask">Erst fragen, dann antworten</span>. Ist Ersteres gemeint:
+          gerne streichen &mdash; ein Vertrag nur mit STP ist enger, bleibt deutsch-deutsch und war ohnehin unsere
+          Präferenz. Ist Letzteres gemeint, müssen Ziffer 4.2 und 4.3 in irgendeiner Form bestehen bleiben:
+          <strong>STP allein ist Vertrags- und Rechnungspartner und haftet für ihre Gesellschaften</strong>. Ohne diese
+          beiden ist „Septeo-Konzern“ ein unbestimmter und unabgerechneter Nutzerkreis.</dd>
+        <dt>Rückfallposition</dt><dd>Ziffer 4 streichen und einen Satz aufnehmen: jede weitere Septeo-Gesellschaft tritt
+          durch schriftlichen Nachtrag bei.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>H &middot; Ziffer 5.2 &mdash; „bitte erklären, was ausgeschlossen werden soll“</h3><span class="refs">#14 &middot; Ziff. 5.2</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Bitte erklären, was ausgeschlossen werden soll“</dd>
+        <dt>Bedeutet</dt><dd>Sie befürchten, die Klausel greife in ihr bestehendes Registergeschäft ein. Die Sorge ist
+          real &mdash; und unbegründet.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Klar beantworten und die Ausnahme anbieten, die sie wirklich
+          brauchen.</span> Die Klausel verbietet, <em>unsere</em> Coverage-Klassifikation, Verfügbarkeitsinformationen
+          und Dokumentenarten-Zuordnung zum Bau eines konkurrierenden Aggregationsprodukts zu verwenden. Sie berührt
+          weder ihr bestehendes Geschäft noch ihre eigenen Bezugswege, noch öffentliche Informationen oder allgemeines
+          Erfahrungswissen &mdash; die letzten drei sagt Ziffer 5.2a bereits. Anbieten, ihr bestehendes
+          Registergeschäft ausdrücklich auszunehmen. Kostet nichts und nimmt den Einwand weg.</dd>
+        <dt>Rückfallposition</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>I &middot; Keine Weitergabe der Pflichten an ihre Endkunden</h3><span class="refs">#25 &middot; Ziff. 9, Anlage 5</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Nicht gewünscht. STP soll in der Bestimmung der Vertragsbeziehung zu
+          den eigenen Kunden frei sein.“</dd>
+        <dt>Bedeutet</dt><dd>Sie lassen sich nicht in ihre Kundenverträge hineinschreiben. Nachvollziehbar &mdash; und
+          unsere Klausel stellte die Formulierung ohnehin frei, ein Teil davon ist also ein Missverständnis, das wir
+          ausräumen können.</dd>
+        <dt>Position</dt><dd><span class="verdict v-trade">Die Form abgeben, die Substanz behalten.</span> Anlage 5
+          entfällt als Dokument. An ihre Stelle tritt eine Klausel mit <strong>drei</strong> Pflichten, die dem Inhalt
+          nach abgebildet sein müssen: keine Weitergabe der Dokumente als Dienstleistung an die Kunden des Endkunden;
+          kein Weiterverkauf als Datensatz und keine Massenextraktion; Nutzung beschränkt auf die eigenen Compliance-
+          und Aktenzwecke des Endkunden. Formulierung, Ort und Offenlegung liegen vollständig bei ihnen.</dd>
+        <dt>Rückfallposition</dt><dd>Zwei der drei, wenn die dritte wirklich nicht umsetzbar ist &mdash; aber niemals
+          die erste.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>J &middot; Gewährleistung &mdash; sie wollen mehr</h3><span class="refs">#29, #30, #31 &middot; Ziff. 12</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„der gelieferte Inhalt der Dokumente muss dem Inhalt des betreffenden
+          Registers im Zeitpunkt der Abfrage durch Founders1 oder den beauftragten Dritten entsprechen“ &middot; „nur
+          den korrekten Abruf der dort veröffentlichten Daten und die diesbezügliche Auslieferung an STP“</dd>
+        <dt>Bedeutet</dt><dd>Die Gewährleistung soll korrekten Abruf und unveränderte Auslieferung erfassen &mdash; und
+          ihr eigener #30 <em>bestätigt</em>, dass wir für die Richtigkeit des Registers selbst nicht einstehen.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Der Sache nach annehmen</span> &mdash; es ist das, was wir
+          ohnehin tun. Ziffer 12.1 neu fassen: jedes Dokument entspricht dem Inhalt des betreffenden Registers, wie er
+          im Zeitpunkt des Abrufs durch uns oder einen von uns beauftragten Dritten veröffentlicht war, und wird
+          unverändert mit zutreffenden Provenienzangaben geliefert. Ziffer 12.2 bleibt wie sie ist; ihr Kommentar
+          stützt sie. Rechtsfolge bleibt kostenfreier Neuabruf oder Gutschrift.</dd>
+        <dt>Rückfallposition</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>K &middot; Haftungsbegrenzung abgelehnt</h3><span class="refs">#33 &middot; Ziff. 13.2</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Nein. So nicht gewünscht.“</dd>
+        <dt>Bedeutet</dt><dd>Bislang nichts. Es gibt keinen Gegenvorschlag &mdash; eine bloße Ablehnung. Wer zuerst
+          eine Zahl nennt, setzt den Rahmen.</dd>
+        <dt>Position</dt><dd><span class="verdict v-ask">Sie sollen die Zahl nennen.</span> Danach unsere: Begrenzung
+          auf die <strong>in den vorangegangenen zwölf Monaten gezahlten Vergütungen</strong> &mdash; bei festen
+          Preisen die sauberere Bezugsgröße als „unser Anteil“ &mdash;, ohne die durchgereichten Beschaffungskosten und
+          mit den üblichen Ausnahmen (Vorsatz, grobe Fahrlässigkeit, Körperschäden, Garantien). Eine an die
+          Jahresvergütung gekoppelte Begrenzung ist bei einer Leistung dieser Größenordnung üblich; eine unbegrenzte
+          Haftung ist zu diesem Preis nicht zu haben &mdash; und dieser Satz ist das ganze Argument.</dd>
+        <dt>Rückfallposition</dt><dd>Höheres Vielfaches der Jahresvergütung oder ein gesonderter, höherer Deckel für
+          Datenschutzverstöße.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; Antwort auf die STP-Kommentierung vom 21. September 2026</span>
+    <span>Intern &mdash; nicht für die Gegenseite</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="item">
+    <div class="item-head"><h3>L &middot; Sechs Monate Testphase</h3><span class="refs">#35 &middot; Ziff. 14.1</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Testphase von zunächst 6 Monaten.“</dd>
+        <dt>Bedeutet</dt><dd>Keine 24-monatige Bindung. Zusammen mit #20 und #22 gelesen, ist es die klassische
+          Kombination: kurze Laufzeit, beste Preise, keine Mengenzusage.</dd>
+        <dt>Position</dt><dd><span class="verdict v-trade">Tauschbar, nie geschenkt.</span> Angebot: sechs Monate
+          Erstlaufzeit, die <strong>in 24 Monate übergeht, sofern nicht zum Ende des sechsten Monats gekündigt
+          wird</strong>. Preisbindung und Mindestumsatz folgen der Laufzeit, nicht umgekehrt. In einem Satz:
+          <em>Testphase, feste Preise, keine Bindung &mdash; zwei davon sind zu haben.</em></dd>
+        <dt>Rückfallposition</dt><dd>Sechs Monate ganz ohne Mindestumsatz, dafür zu Listenpreisen ohne
+          Wiederverkäuferrabatt.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>M &middot; Wegfall der Bezugsquelle &mdash; Fälle definieren</h3><span class="refs">#36 &middot; Ziff. 14.2a</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Definieren, welche Fälle hier gemeint sind: Schließung des
+          entsprechenden Registers? Abkündigung des Vertrages mit einem Drittdienstleister?“</dd>
+        <dt>Bedeutet</dt><dd>Berechtigte Frage zu einer Klausel, die wir bewusst weit gefasst hatten.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Definieren.</span> Zwei Auslöser: (i) das Register schließt,
+          stellt die Veröffentlichung ein oder die Veröffentlichung wird rechtlich untersagt; (ii) ein Lieferant kündigt
+          oder verliert seinen eigenen Zugang und binnen 60 Tagen steht kein Ersatzweg zu vergleichbaren Kosten und
+          vergleichbarer Qualität zur Verfügung. Beides nachgewiesen, mit der Pflicht, zunächst nach Ersatz zu
+          suchen.</dd>
+        <dt>Rückfallposition</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>N &middot; Ziffern 3.2 / 3.3 und Nachwirkung &mdash; „zu besprechen“</h3><span class="refs">#8, #37 &middot; Ziff. 3.2, 3.3, 14.4</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>Sie schreiben</dt><dd class="quote">„Zu besprechen.“ (API-Lizenz und eigene Marke) &middot; „Bitte
+          erläutern“ (was die Beendigung überdauert)</dd>
+        <dt>Bedeutet</dt><dd>Noch nichts. Beides sind Fragen, keine Positionen.</dd>
+        <dt>Position</dt><dd><span class="verdict v-ask">Beantworten und zurückfragen.</span> Zu Ziffer 3.2: die
+          Einbettung unseres Dienstes in ihre Produkte ist durch „im eigenen Namen“ bereits gedeckt; nicht lizenziert
+          sind die Coverage- und Routing-Daten als eigenständiges Gut. Fragen, was sie konkret bauen wollen &mdash; die
+          Antwort sagt uns zugleich, wie ernst Punkt B gemeint ist. Zur Nachwirkung: Beschränkungen, Umgehungsverbot,
+          Vertraulichkeit, Datenschutz und Haftung gelten fort; Ziffern 5.2 und 6.1 für die dort genannten Zeiträume;
+          gelieferte Dokumente bleiben nutzbar. Nichts Überraschendes &mdash; es klar zu sagen, erledigt den
+          Kommentar.</dd>
+        <dt>Rückfallposition</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">5</span> Diese vier Fragen mit ins Gespräch nehmen</h2>
+    <ul class="ticks">
+      <li><strong>Einzelfall oder Datenpool?</strong> Ihr Kommentar zu Ziffer 2 sagt einzelfallbezogen, ihre Kommentare
+        zu Ziffern 3 und 5 sagen dauerhafte Speicherung für mehrere Kunden. Was gilt &mdash; denn das Preismodell folgt
+        aus der Antwort, nicht umgekehrt.</li>
+      <li><strong>Ziffer 4 gestrichen &mdash; nur STP oder der ganze Konzern ohne Mechanik?</strong></li>
+      <li><strong>Welchen Haftungsbetrag wollen sie?</strong> Sie haben unseren abgelehnt, ohne einen zu nennen.</li>
+      <li><strong>Was wollen sie auf der API bauen?</strong> („Zu besprechen“ zu Ziffern 3.2/3.3.)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">6</span> Zwei Dinge, die wir nicht tun</h2>
+    <div class="internal">
+      <h4>Punkt B nicht im Gespräch zugestehen</h4>
+      <p>Dauerhafte Speicherung mit Mehrfachnutzung ist der eine Punkt, der verändert, was wir überhaupt verkaufen
+      &mdash; und er kollidiert mit den Bezugsbedingungen auf unserer Lieferantenseite. Wenn sie drängen, lautet die
+      Antwort „das ist eine andere Lizenz, und die hat einen Preis“ &mdash; weder ja noch nein. Nichts sonst in diesen
+      22 Kommentaren verdient dieselbe Festigkeit.</p>
+    </div>
+    <div class="internal">
+      <h4>Festhalten, was verhandelt wurde</h4>
+      <p>Der Hinweis unserer Anwältin zum Entwurf gilt ab jetzt: Wird der Vertrag als AGB gelesen, sind die
+      Haftungsbegrenzung, der Gewährleistungsausschluss und die Beschränkungen in Ziffer 5 die Klauseln, die unter
+      § 307 BGB fallen &mdash; und schwacher Widerstand ist keine Zustimmung. Das Gespräch protokollieren: welche
+      Ziffern besprochen wurden, was jede Seite vorgeschlagen hat und was wogegen zugestanden wurde. Eine kurze
+      schriftliche Zusammenfassung noch am selben Tag ist mehr wert als der Klauseltext, den sie festhält.</p>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; 22. September 2026 &middot; Quelle: 22 Kommentare von RAin Anja Nöth, 21. September 2026</span>
+    <span>Intern &mdash; nicht für die Gegenseite</span>
+  </div>
+</div>

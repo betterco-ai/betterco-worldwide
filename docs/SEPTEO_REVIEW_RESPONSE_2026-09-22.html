@@ -1,0 +1,495 @@
+<meta charset="utf-8">
+<title>Septeo Review Response Sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#6895FF; --blue-light:#e8efff; --navy:#1a2340; --dark:#222233;
+    --red:#b42318; --red-light:#fef3f2; --green:#067647; --green-light:#ecfdf3;
+    --amber:#b54708; --amber-light:#fffaeb;
+    --gray-600:#6b7280; --gray-400:#9ca3af; --gray-200:#e5e7eb; --gray-100:#f3f4f6;
+    --gray-50:#f9fafb; --white:#ffffff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Montserrat',system-ui,sans-serif; -webkit-font-smoothing:antialiased;
+    color:var(--dark); background:var(--gray-100); padding:24px 16px 60px; }
+  .page { width:210mm; max-width:100%; min-height:297mm; margin:0 auto; background:var(--white);
+    box-shadow:0 2px 20px rgba(0,0,0,.08); padding:25mm 22mm 20mm; }
+  .page + .page { margin-top:26px; }
+  @media (max-width:720px) { .page { padding:22px 18px 28px; min-height:0; } }
+  .doc-header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
+    margin-bottom:6px; padding-bottom:14px; border-bottom:3px solid var(--blue); }
+  .doc-header h1 { font-size:26px; font-weight:800; color:var(--navy); line-height:1.15; }
+  .kicker { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--blue); margin-bottom:5px; }
+  .doc-date { font-size:10px; color:var(--gray-600); text-align:right; margin:10px 0 18px; }
+  .lead { font-size:10.5px; line-height:1.7; margin:0 0 14px; }
+  .lead strong { font-weight:700; color:var(--navy); }
+  .section { margin-bottom:16px; }
+  .section h2 { font-size:13px; font-weight:700; color:var(--navy); padding-bottom:4px;
+    border-bottom:2px solid var(--blue); margin-bottom:9px; }
+  .sec-num { color:var(--blue); margin-right:5px; }
+  .section p { font-size:10.5px; line-height:1.7; margin-bottom:8px; }
+  .section p:last-child { margin-bottom:0; }
+  .section strong { font-weight:700; color:var(--navy); }
+  .section em { font-style:italic; }
+  ul.ticks { list-style:none; margin:6px 0 10px; padding:0; font-size:10.5px; line-height:1.65; }
+  ul.ticks li { padding-left:14px; position:relative; margin-bottom:6px; }
+  ul.ticks li::before { content:'\203A'; position:absolute; left:0; color:var(--blue); font-weight:700; }
+  .tablewrap { overflow-x:auto; margin:4px 0 10px; }
+  table { width:100%; border-collapse:collapse; font-size:10px; }
+  thead th { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:.5px;
+    color:var(--white); background:var(--navy); padding:7px 9px; text-align:left; }
+  tbody tr { border-bottom:1px solid var(--gray-100); }
+  tbody td { padding:6px 9px; vertical-align:top; line-height:1.55; }
+  td.cl { font-weight:700; color:var(--navy); white-space:nowrap; width:60px; }
+  .card { background:var(--gray-50); border-radius:8px; padding:11px 13px;
+    border:1px solid var(--gray-200); margin:4px 0 10px; }
+  .card h4 { font-size:10.5px; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .card p { font-size:10px; color:var(--gray-600); line-height:1.6; margin:0 0 6px; }
+  .card p:last-child { margin-bottom:0; }
+  .card.hot { background:var(--red-light); border-color:#fecdca; }
+  .card.hot h4 { color:var(--red); }
+  .card.hot p { color:#7a271a; }
+  .card.ok { background:var(--green-light); border-color:#abefc6; }
+  .card.ok h4 { color:var(--green); }
+  .card.ok p { color:#054f31; }
+  .internal { background:var(--amber-light); border:1px solid #fedf89; border-radius:8px;
+    padding:11px 13px; margin:4px 0 10px; }
+  .internal h4 { font-size:10.5px; font-weight:700; color:var(--amber); margin-bottom:4px; }
+  .internal p { font-size:10px; color:#93370d; line-height:1.6; margin:0 0 6px; }
+  .internal p:last-child { margin-bottom:0; }
+  .item { border:1px solid var(--gray-200); border-radius:8px; margin-bottom:11px;
+    overflow:hidden; break-inside:avoid; }
+  .item-head { display:flex; justify-content:space-between; align-items:baseline; gap:10px;
+    background:var(--navy); color:var(--white); padding:6px 11px; }
+  .item-head h3 { font-size:11px; font-weight:700; }
+  .item-head .refs { font-size:8.5px; font-weight:600; color:#b9c6ea; white-space:nowrap; }
+  .item-body { padding:9px 11px; }
+  .item-body dl { display:grid; grid-template-columns:74px 1fr; gap:4px 9px;
+    font-size:10px; line-height:1.6; }
+  .item-body dt { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:.4px;
+    color:var(--blue); padding-top:2px; }
+  .item-body dd { color:var(--dark); }
+  .item-body dd strong { font-weight:700; color:var(--navy); }
+  .quote { font-style:italic; color:var(--gray-600); }
+  .verdict { display:inline-block; font-size:8px; font-weight:700; text-transform:uppercase;
+    letter-spacing:.5px; padding:2px 7px; border-radius:99px; }
+  .v-no { background:var(--red-light); color:var(--red); }
+  .v-yes { background:var(--green-light); color:var(--green); }
+  .v-trade { background:var(--blue-light); color:#1d4ed8; }
+  .v-ask { background:var(--gray-100); color:var(--gray-600); }
+  .doc-footer { margin-top:16px; padding-top:10px; border-top:2px solid var(--navy);
+    display:flex; justify-content:space-between; gap:12px; font-size:8px;
+    color:var(--gray-400); flex-wrap:wrap; }
+  @media print { body { background:var(--white)!important; padding:0; }
+    .page { box-shadow:none; padding:4mm 0; width:100%; min-height:auto; break-before:page; }
+    .page:first-of-type { break-before:auto; }
+    .section, .card, .item, .internal { break-inside:avoid; } }
+  @page { size:A4; margin:18mm 20mm 24mm; }
+</style>
+
+<div class="page">
+  <div class="doc-header">
+    <div>
+      <div class="kicker">Negotiation sheet &middot; internal</div>
+      <h1>First commentary from STP<br>&mdash; our position, point by point</h1>
+    </div>
+    <img src="betterco-logo.png" alt="BetterCo" style="height:22px">
+  </div>
+  <div class="doc-date">Founders1 GmbH &middot; 22 September 2026 &middot; for the call with M. Ripke (Wed/Thu, 13&ndash;17h)</div>
+
+  <p class="lead">
+    STP returned our draft of 14 September on <strong>21 September, 20:47</strong> with <strong>22 comments by
+    RAin Anja N&ouml;th</strong> &mdash; comments only, <strong>no tracked changes in the text</strong>. So this is a
+    first legal read, not a redline: nothing has been rewritten yet, and every point is still open in our favour as
+    much as in theirs. Ripke asks for a call because &bdquo;es gibt doch einige essentiellere Punkte&ldquo;.
+  </p>
+
+  <div class="section">
+    <h2><span class="sec-num">1</span> What the 22 comments add up to</h2>
+    <p>They are not cosmetic. Taken together they describe <strong>a different deal</strong>: a wholesale data purchase
+    at fixed prices, with permanent storage and reuse across STP&rsquo;s own client base, no group mechanics, no
+    non-circumvention, and Germany and Austria carved out. Our draft is a per-case reseller agreement. That gap is
+    the meeting.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th style="width:150px">Theme</th><th style="width:96px">Comments</th><th>Our stance in one line</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Fixed prices instead of revenue share</strong></td><td>#20, #21, #22, #23</td>
+            <td>Yes in principle &mdash; but a fixed price is a price <em>per case</em>, which only works with per-case delivery.</td></tr>
+          <tr><td><strong>Permanent storage, reuse for several clients</strong></td><td>#6, #7, #9, #13</td>
+            <td>No, not for free. This converts one paid retrieval into an unlimited internal register.</td></tr>
+          <tr><td><strong>Germany and Austria out of scope</strong></td><td>#17</td>
+            <td>Granted &mdash; and it is the cheapest thing we have to give. Charge for it.</td></tr>
+          <tr><td><strong>Delete &sect;6 non-circumvention entirely</strong></td><td>#16</td>
+            <td>No. It is what makes naming our coverage and our cost safe.</td></tr>
+          <tr><td><strong>Delete &sect;4 Septeo group scope</strong></td><td>#11</td>
+            <td>Happy to &mdash; if it means STP only. Ask which they mean.</td></tr>
+          <tr><td><strong>No pass-through to their end clients</strong></td><td>#25</td>
+            <td>Reduce to three obligations in substance; their wording, their paper.</td></tr>
+          <tr><td><strong>Wider warranty on content</strong></td><td>#29, #30, #31</td>
+            <td>Accept in substance. It is what we already do, and their own #30 keeps our carve-out.</td></tr>
+          <tr><td><strong>Liability cap rejected</strong></td><td>#33</td>
+            <td>No counter-proposal given. Make them name a number.</td></tr>
+          <tr><td><strong>6-month test phase instead of 24 months</strong></td><td>#35</td>
+            <td>Available &mdash; but not together with fixed prices <em>and</em> no commitment.</td></tr>
+          <tr><td><strong>Explain / discuss</strong></td><td>#4, #8, #14, #36, #37</td>
+            <td>No substance yet. Answer them well and three of the five disappear.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">2</span> The one question to settle first</h2>
+    <div class="card hot">
+      <h4>Is a delivered Document a per-case delivery, or a permanent entry in STP&rsquo;s own database?</h4>
+      <p>Comments #20 and #13 are not two points, they are one. <strong>Fixed prices are compatible with per-case
+      delivery, not with permanent multi-client reuse.</strong> We pay our sources <em>per retrieval</em>; if STP
+      stores a document once and serves many clients from it, our cost per delivered answer keeps running while our
+      revenue stops. Any fixed price built on that assumption is wrong within months.</p>
+      <p>Settle this single point first. The minimum, the term, the liability cap and &sect;6 all fall into place
+      behind it &mdash; and each of them is negotiable once it is decided.</p>
+    </div>
+    <div class="card ok">
+      <h4>Their own comment gives us the lever</h4>
+      <p>On &sect;2 Subject matter their counsel writes: <span class="quote">&bdquo;Registerinformationen auf Anfrage
+      (Einzelfallbezogen)&ldquo;</span> (#4) &mdash; register information on request, case by case. That is our model,
+      written by their lawyer, four clauses before the comments that ask for permanent storage and multiple use.
+      Put both on the table and ask them which one they meant.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">3</span> The trade map</h2>
+    <p>Five things we can give, and what each should buy. Nothing in the left column should leave the room unpaired.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th style="width:44%">We can give</th><th>We should get</th></tr></thead>
+        <tbody>
+          <tr><td>Germany and Austria out of Annex&nbsp;2 (#17)</td><td>&sect;6 stays for the jurisdictions we do supply, and &sect;5.2 gets the carve-out for their existing register business</td></tr>
+          <tr><td>Fixed per-case prices instead of the 50&nbsp;% share (#20)</td><td>Per-case delivery confirmed: one Case, one End Client, no pool</td></tr>
+          <tr><td>Deleting &sect;4 group scope (#11)</td><td>Contract stays STP-only; any affiliate later is an amendment, not an accession</td></tr>
+          <tr><td>Annex&nbsp;5 dropped as a document (#25)</td><td>Three obligations survive in substance, in their own wording</td></tr>
+          <tr><td>6-month initial term (#35)</td><td>Either the minimum stays, or the prices are list prices without the reseller discount</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; Berger Str. 224, 60385 Frankfurt &middot; HRB 234373 B</span>
+    <span>Internal &mdash; not for the counterparty</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="section">
+    <h2><span class="sec-num">4</span> Point by point</h2>
+    <p>Each item: what they wrote, what it means, the position we open with, and the fallback we can concede
+    without breaking the model.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>A &middot; Fixed prices instead of the revenue share</h3><span class="refs">#20, #21 &middot; &sect;8, &sect;8.2</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Anderes Pricing-Modell gew&uuml;nscht. Feste definierte Preise
+          notwendig.&ldquo; &middot; &bdquo;Feste Preise definieren.&ldquo;</dd>
+        <dt>Means</dt><dd>Drop the 50&nbsp;% net-amount share; give them a per-case wholesale price they can calculate
+          against, and let them set their own end-client price.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Accept</span> &mdash; and say so early, it is the cheapest
+          goodwill in the call. Our purchase, sale and margin are <strong>already open to them</strong> from the deck,
+          so a fixed rate card costs us no information we have not already given. <strong>One condition:</strong> a
+          fixed price is a price per Case &mdash; one company, one jurisdiction, one End Client. That is the sentence
+          that must be said in the same breath.</dd>
+        <dt>Fallback</dt><dd>Rate card per band with volume tiers, reviewed annually, instead of a share &mdash; the
+          same money, a shape their procurement understands.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>B &middot; Permanent storage and reuse for several clients</h3><span class="refs">#6, #7, #9, #13 &middot; &sect;3.1, &sect;3.5, &sect;5.1</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Auch eine dauerhafte Speicherung im eigenen Datenbestand und
+          Verarbeitung f&uuml;r verschiedene Kunden&ldquo; &middot; &bdquo;Nicht nur End Clients&ldquo; &middot;
+          &bdquo;Keine zeitliche Begrenzung der Nutzungsrechte&ldquo; &middot; &bdquo;Mehrfachnutzung muss
+          zul&auml;ssig sein&ldquo;</dd>
+        <dt>Means</dt><dd>They want to build an internal register out of what they buy: store it permanently, serve it
+          to any number of their clients, and use it for their own purposes beyond the End Client relationship.</dd>
+        <dt>Position</dt><dd><span class="verdict v-no">Not for free</span> &mdash; and this is the only point worth
+          risking the meeting over. We buy <em>per retrieval</em>. A stored copy serving a second client is a second
+          delivery that nobody paid for.
+          <strong>What we can grant today, and should offer in the same sentence so the &bdquo;no&ldquo; is not
+          empty:</strong> (i) unlimited retention of a delivered Document by the End Client it was ordered for &mdash;
+          #9 is almost entirely satisfiable, the time limit can go; (ii) STP&rsquo;s own archival, audit, backup and
+          support copy, and free re-delivery to the <em>same</em> End Client, without limit; (iii) free reuse inside a
+          freshness window for the same company and jurisdiction, which our platform already implements &mdash; and
+          the window is a commercial dial we can turn up.</dd>
+        <dt>Fallback</dt><dd>If they insist on the pool: it becomes <strong>a priced licence, not a permission</strong>
+          &mdash; a reuse fee per document served to a further client, or an annual pool licence per jurisdiction.
+          Never a free clause.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>C &middot; The minimum, recalculated</h3><span class="refs">#22 &middot; &sect;8.4</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Summe des insgesamt von STP gezahlten Kaufpreises ./. Procurement
+          Costs = Founders1&rsquo;s Gewinn p.m. Wenn Gewinn &gt; 1.500 =&gt; keine &uuml;ber den vereinbarten
+          regul&auml;ren Kaufpreis geschuldete Zahlung, wenn Gewinn &lt; 1.500 =&gt; Ausgleich der Differenz&ldquo;</dd>
+        <dt>Means</dt><dd>They accept a minimum and have written the top-up mechanic themselves &mdash; measured on our
+          margin, not on turnover. It is the construction we wanted.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Accept the formula</span>. Two points to correct: it drops the
+          <strong>750&nbsp;&euro; ramp for months&nbsp;1&ndash;3</strong> we had already conceded &mdash; take the ramp
+          back to full 1.500&nbsp;&euro; from month&nbsp;1, or keep the ramp and trade it against the 6-month term (item&nbsp;J).
+          And note what their own formula requires: <strong>it only computes if they see our procurement cost</strong>,
+          so Annex&nbsp;2.1 transparency survives on their own proposal, not ours.</dd>
+        <dt>Fallback</dt><dd>If they would rather not see the cost at all: minimum becomes a flat monthly fee on our
+          margin with no cost disclosure. Simpler for us, and we keep the number.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>D &middot; Cost changes</h3><span class="refs">#23 &middot; &sect;8.6</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">Only where costs have actually risen &middot; define a maximum increase
+          &middot; price then fixed for at least x months &middot; &bdquo;Was ist, wenn die Bezugskosten niedriger
+          werden, besteht dann eine Verpflichtung zur Anpassung nach unten?&ldquo;</dd>
+        <dt>Means</dt><dd>Four reasonable asks, and the fourth is the real one: symmetry.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Give all four</span>. Evidenced increases only; a cap per
+          jurisdiction per year; 12 months&rsquo; stability after any change; and <strong>yes to passing decreases
+          on</strong>, reviewed quarterly. It costs us nothing we control and it is the answer that makes the rest of
+          &sect;8 look fair.</dd>
+        <dt>Fallback</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>E &middot; Germany and Austria out of scope</h3><span class="refs">#17 &middot; Annex 2</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Es muss der Service in Annex 2 so eingeschr&auml;nkt werden, dass
+          L&auml;nder wie Deutschland und &Ouml;sterreich dort nicht enthalten sind.&ldquo;</dd>
+        <dt>Means</dt><dd>They protect their own core. It also tells us plainly what they want us for: everything
+          <em>except</em> their home market.</dd>
+        <dt>Position</dt><dd><span class="verdict v-trade">Grant, but paired</span>. It costs us nothing. It must buy
+          &sect;6 staying alive for the jurisdictions we do supply (item&nbsp;F) &mdash; say the two in one sentence so
+          the concession is visibly conditional.</dd>
+        <dt>Fallback</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; response to the STP commentary of 21 September 2026</span>
+    <span>Internal &mdash; not for the counterparty</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="item">
+    <div class="item-head"><h3>F &middot; Delete &sect;6 non-circumvention entirely</h3><span class="refs">#16 &middot; &sect;6</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Ziffer 6 insgesamt streichen&ldquo;</dd>
+        <dt>Means</dt><dd>Free rein to approach the suppliers and routes they learn about from us &mdash; while
+          Annex&nbsp;2 hands them the coverage map and the cost per jurisdiction.</dd>
+        <dt>Position</dt><dd><span class="verdict v-no">No</span>, and the argument is not defensive: &sect;6 is
+          <strong>what makes our transparency possible</strong>. Annex&nbsp;2 tells them exactly which jurisdictions we
+          cover and at what cost. That disclosure is the know-how; &sect;6 is its price. Delete &sect;6 and the
+          procurement costs go back out of the contract into a separate confidential price list &mdash; which is where
+          they were until 15 September.</dd>
+        <dt>Fallback</dt><dd>Shorten the tail from 24 to 12 months, and state expressly that it binds only information
+          <em>obtained from us</em> &mdash; which the clause already says, so the concession is real to them and cheap
+          to us.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>G &middot; Delete &sect;4 Septeo group scope</h3><span class="refs">#11 &middot; &sect;4</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;streichen&ldquo;</dd>
+        <dt>Means</dt><dd>Ambiguous, and the difference is large: either <em>no group use at all</em> (STP only), or
+          <em>group use without the accession mechanics</em> (i.e. free extension to any Septeo company).</dd>
+        <dt>Position</dt><dd><span class="verdict v-ask">Ask before answering</span>. If it is the first, delete it
+          gladly &mdash; a STP-only contract is narrower, stays German&ndash;German, and is what we preferred anyway.
+          If it is the second, &sect;4.2 and &sect;4.3 must survive in some form: <strong>STP as sole contracting and
+          billing party, and liable for its affiliates</strong>. Without those two, &bdquo;Septeo group&ldquo; is an
+          undefined and unbilled set of users.</dd>
+        <dt>Fallback</dt><dd>Delete &sect;4 and add one sentence: any further Septeo entity joins by written amendment.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>H &middot; &sect;5.2 non-compete &mdash; &bdquo;explain what is excluded&ldquo;</h3><span class="refs">#14 &middot; &sect;5.2</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Bitte erkl&auml;ren, was ausgeschlossen werden soll&ldquo;</dd>
+        <dt>Means</dt><dd>They fear the clause reaches their existing register business. That is a real fear and it is
+          not what the clause does.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Answer plainly, then offer the carve-out they actually need.</span>
+          The clause bars using <em>our</em> coverage classification, availability information and document-kind
+          mapping to build a rival aggregation product. It does not touch their existing business, their own sourcing,
+          public information, or general know-how &mdash; &sect;5.2a already says the last three. Offer to name their
+          existing register business in an express carve-out. It costs nothing and removes the objection.</dd>
+        <dt>Fallback</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>I &middot; No pass-through to their end clients</h3><span class="refs">#25 &middot; &sect;9, Annex 5</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Nicht gew&uuml;nscht. STP soll in der Bestimmung der
+          Vertragsbeziehung zu den eigenen Kunden frei sein.&ldquo;</dd>
+        <dt>Means</dt><dd>They will not have us write into their client terms. Understandable &mdash; and our clause
+          already said they may use their own wording, so part of this is a misread we can clear up.</dd>
+        <dt>Position</dt><dd><span class="verdict v-trade">Concede the form, keep the substance.</span> Drop Annex&nbsp;5
+          as a document. Replace it with one clause naming <strong>three</strong> obligations that must be reflected in
+          substance: no onward supply of the Documents as a service to the End Client&rsquo;s own customers; no dataset
+          resale or bulk extraction; use limited to the End Client&rsquo;s own compliance and file purposes. Wording,
+          placement and disclosure entirely theirs.</dd>
+        <dt>Fallback</dt><dd>Two of the three, if the third is genuinely unworkable &mdash; but never the first.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>J &middot; Warranty &mdash; they want more</h3><span class="refs">#29, #30, #31 &middot; &sect;12</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;der gelieferte Inhalt der Dokumente muss dem Inhalt des
+          betreffenden Registers im Zeitpunkt der Abfrage durch Founders1 oder den beauftragten Dritten
+          entsprechen&ldquo; &middot; &bdquo;nur den korrekten Abruf der dort ver&ouml;ffentlichten Daten und die
+          diesbez&uuml;gliche Auslieferung an STP&ldquo;</dd>
+        <dt>Means</dt><dd>They want the warranty to cover correct retrieval and faithful delivery &mdash; and their
+          own #30 <em>confirms</em> we do not warrant the register&rsquo;s own correctness.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Accept in substance</span> &mdash; this is what we already do.
+          Redraft &sect;12.1: each Document corresponds to the content of the relevant register as published at the
+          time of retrieval by us or by a third party we commission, and is delivered unaltered with accurate
+          provenance. Keep &sect;12.2 as it stands; their comment endorses it. Remedy stays re-procurement at no charge
+          or a credit.</dd>
+        <dt>Fallback</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>K &middot; Liability cap rejected</h3><span class="refs">#33 &middot; &sect;13.2</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Nein. So nicht gew&uuml;nscht.&ldquo;</dd>
+        <dt>Means</dt><dd>Nothing, yet. There is no counter-proposal &mdash; it is a blank rejection, so whoever names a
+          number first sets the frame.</dd>
+        <dt>Position</dt><dd><span class="verdict v-ask">Make them name it.</span> Then ours: cap at the
+          <strong>fees paid in the preceding twelve months</strong> &mdash; a cleaner base than &bdquo;our share&ldquo;
+          once prices are fixed &mdash; with procurement pass-through excluded and the usual carve-outs (intent, gross
+          negligence, personal injury, guarantees). A cap tied to a small annual fee is normal for a service at this
+          price; an uncapped one is not available at this price, and that sentence is the whole argument.</dd>
+        <dt>Fallback</dt><dd>Higher multiple of annual fees, or a separate higher cap for data-protection breaches.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; response to the STP commentary of 21 September 2026</span>
+    <span>Internal &mdash; not for the counterparty</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="item">
+    <div class="item-head"><h3>L &middot; Six-month test phase</h3><span class="refs">#35 &middot; &sect;14.1</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Testphase von zun&auml;chst 6 Monaten.&ldquo;</dd>
+        <dt>Means</dt><dd>No 24-month commitment. Read against #20 and #22 it is the classic combination: short term,
+          best prices, no volume promise.</dd>
+        <dt>Position</dt><dd><span class="verdict v-trade">Tradeable, never free.</span> Offer: six-month initial term
+          that <strong>rolls into 24 months unless terminated at the end of month&nbsp;6</strong>. Price protection and
+          the minimum follow the term, not the other way round. Say it in one line: <em>a pilot, fixed prices and no
+          commitment &mdash; pick two.</em></dd>
+        <dt>Fallback</dt><dd>Six months with no minimum at all, at list prices without the reseller discount.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>M &middot; Loss of supply &mdash; define the cases</h3><span class="refs">#36 &middot; &sect;14.2a</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Definieren, welche F&auml;lle gemeint sind: Schlie&szlig;ung des
+          entsprechenden Registers? Abk&uuml;ndigung des Vertrages mit einem Drittdienstleister?&ldquo;</dd>
+        <dt>Means</dt><dd>Fair question about a clause we wrote loosely on purpose.</dd>
+        <dt>Position</dt><dd><span class="verdict v-yes">Define it.</span> Two triggers: (i) the register closes,
+          stops publishing, or publication becomes legally barred; (ii) a supplier terminates or loses its own access
+          and no replacement route is available at comparable cost and quality within 60 days. Both evidenced, with a
+          good-faith duty to seek a replacement first.</dd>
+        <dt>Fallback</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head"><h3>N &middot; &sect;3.2 / &sect;3.3 and survival &mdash; &bdquo;zu besprechen&ldquo;</h3><span class="refs">#8, #37 &middot; &sect;3.2, &sect;3.3, &sect;14.4</span></div>
+    <div class="item-body">
+      <dl>
+        <dt>They wrote</dt><dd class="quote">&bdquo;Zu besprechen.&ldquo; (API licence and own brand) &middot;
+          &bdquo;Bitte erl&auml;utern&ldquo; (what survives termination)</dd>
+        <dt>Means</dt><dd>Nothing yet. Both are questions, not positions.</dd>
+        <dt>Position</dt><dd><span class="verdict v-ask">Answer and ask back.</span> On &sect;3.2: embedding our service
+          inside their products is already covered by &bdquo;in its own name&ldquo;; what is not licensed is the
+          coverage and routing data as a standalone asset. Ask what they actually intend to build &mdash; the answer
+          also tells us how serious item&nbsp;B is. On survival: restrictions, non-circumvention, confidentiality, data
+          protection and liability survive; &sect;5.2 and &sect;6.1 for their stated periods; delivered Documents stay
+          usable. Nothing surprising, and saying it plainly removes the comment.</dd>
+        <dt>Fallback</dt><dd>&mdash;</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">5</span> Take these four questions into the call</h2>
+    <ol class="ticks" style="counter-reset:none">
+      <li><strong>Case-by-case or pool?</strong> Their &sect;2 comment says einzelfallbezogen, their &sect;3 and &sect;5
+        comments say permanent storage for several clients. Which is it &mdash; because the price model follows from
+        the answer, not the other way round.</li>
+      <li><strong>&sect;4 deleted &mdash; STP alone, or the whole group without mechanics?</strong></li>
+      <li><strong>What liability figure do they want?</strong> They rejected ours without naming one.</li>
+      <li><strong>What do they want to build on the API?</strong> (&bdquo;Zu besprechen&ldquo; on &sect;3.2/3.3.)</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2><span class="sec-num">6</span> Two things not to do</h2>
+    <div class="internal">
+      <h4>Do not concede item B in the room</h4>
+      <p>Permanent storage with multi-client reuse is the one point that changes what we are selling, and it collides
+      with the supply terms upstream of us. If they press, the answer is &bdquo;that is a different licence and it has
+      a price&ldquo;, not yes and not no. Nothing else in these 22 comments is worth the same firmness.</p>
+    </div>
+    <div class="internal">
+      <h4>Keep the record of what is negotiated</h4>
+      <p>Counsel&rsquo;s warning on the draft applies now: if this is read as AGB, the liability cap, the warranty
+      carve-out and the restrictions in &sect;5 are the clauses at risk under &sect;&nbsp;307 BGB &mdash; and light
+      resistance is not agreement. Minute the call: which clauses were discussed, what each side proposed, and what
+      was conceded in exchange for what. A short written summary sent the same day is worth more than the clause
+      wording it records.</p>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Founders1 GmbH &middot; 22 September 2026 &middot; source: 22 comments by RAin Anja N&ouml;th, 21 September 2026</span>
+    <span>Internal &mdash; not for the counterparty</span>
+  </div>
+</div>
