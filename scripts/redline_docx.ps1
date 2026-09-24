@@ -5,10 +5,11 @@
 #   powershell -File scripts/redline_docx.ps1
 # Verify by accepting all revisions in a copy: the text must equal the clean draft.
 param(
-    [string]$Original = "C:\bcwt\septeo-v2\build\stp_commented_2026-09-21.docx",
-    [string]$Revised  = "C:\bcwt\septeo-v2\build\SEPTEO_RESELLER_AGREEMENT_2026-09-14.docx",
-    [string]$Replies  = "C:\bcwt\septeo-v2\build\replies_2026-09-24.json",
-    [string]$Out      = "C:\bcwt\septeo-v2\build\Vertragsentwurf BetterCo - Entwurf 2 mit Antworten 2026-09-24.docx"
+    # Original = the counterparty's commented file, copied into build/ (not committed)
+    [string]$Original = "$PSScriptRoot\..\build\stp_commented_2026-09-21.docx",
+    [string]$Revised  = "$PSScriptRoot\..\build\SEPTEO_RESELLER_AGREEMENT_2026-09-14.docx",
+    [string]$Replies  = "$PSScriptRoot\..\docs\SEPTEO_DRAFT2_COMMENT_REPLIES_2026-09-24.json",
+    [string]$Out      = "$PSScriptRoot\..\docs\SEPTEO_RESELLER_AGREEMENT_DRAFT2_REDLINE_2026-09-24.docx"
 )
 $ErrorActionPreference = "Stop"
 $data = Get-Content -Raw -Encoding UTF8 $Replies | ConvertFrom-Json
