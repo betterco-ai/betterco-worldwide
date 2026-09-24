@@ -41,6 +41,16 @@ TIER_COST = {
     "C": ("54,50", "70,00"),
     "D": ("70,50", "90,00"),
 }
+# Fixed fee per Case on top of the procurement cost (clause 8.2). Agreed in the
+# call with STP on 23.09.2026: cost-plus replaced the 50 % revenue share, one
+# uniform fee across all tiers.
+FIXED_FEE = "7,50"
+
+# Jurisdictions taken out of the agreement at STP's request (comment #17,
+# confirmed 23.09.2026): STP has its own register access there. They stay in
+# price_bands.json; they are excluded from Annex 2 only.
+EXCLUDED = {"DE": "Germany", "AT": "Austria"}
+
 BAND_TO_TIER = {"Low": "A", "Medium": "B", "High": "C", "Premium": "D"}
 
 TIER_BLURB = {
@@ -74,7 +84,21 @@ END = "<!-- END generated -->"
 
 def load():
     with io.open(BANDS, encoding="utf-8") as fh:
-        return json.load(fh)
+        data = json.load(fh)
+    js = data["jurisdictions"]
+    for cc, name in EXCLUDED.items():
+        if cc not in js or js[cc]["en"] != name:
+            raise SystemExit("excluded jurisdiction %s (%s) not found in the data" % (cc, name))
+        del js[cc]
+    return data
+
+
+def _eur(s):
+    return float(s.replace(",", "."))
+
+
+def price_per_case(cost):
+    return ("%.2f" % (_eur(cost) + _eur(FIXED_FEE))).replace(".", ",")
 
 
 def tier_of(entry):
@@ -103,12 +127,14 @@ def tiers_fragment(js):
     untiered = sorted(cc for cc, e in js.items() if tier_of(e) is None)
     rows = []
     for tier in ("A", "B", "C", "D"):
-        cost, lst = TIER_COST[tier]
+        cost, _ = TIER_COST[tier]
         rows.append(
             u'          <tr><td class="klass">%s</td>'
             u'<td class="price">%s &euro;</td>'
             u'<td class="price soft">%s &euro;</td>'
-            u'<td class="price">%d</td></tr>' % (tier, cost, lst, c[tier]))
+            u'<td class="price">%s &euro;</td>'
+            u'<td class="price">%d</td></tr>'
+            % (tier, cost, FIXED_FEE, price_per_case(cost), c[tier]))
 
     note = u""
     if untiered:
@@ -116,7 +142,8 @@ def tiers_fragment(js):
         note = (u'\n    <p><strong>%s is not on a tier.</strong> It has no single '
                 u'national register: company records are filed with each state, and '
                 u'availability is determined per state. Its cost is agreed separately '
-                u'and remains provisional under clause&nbsp;8.6; Annex&nbsp;2.2 marks '
+                u'and remains provisional under clause&nbsp;8.6; the Fixed Fee applies '
+                u'to it as to every other jurisdiction. Annex&nbsp;2.2 marks '
                 u'it accordingly.</p>' % names)
 
     return u"""%(begin)s
@@ -125,7 +152,8 @@ def tiers_fragment(js):
         <thead><tr>
           <th>Tier</th>
           <th class="price">Procurement cost</th>
-          <th class="price">List price (for information)</th>
+          <th class="price">Fixed Fee</th>
+          <th class="price">Price per Case</th>
           <th class="price">Jurisdictions</th>
         </tr></thead>
         <tbody>
@@ -133,7 +161,7 @@ def tiers_fragment(js):
         </tbody>
       </table>
     </div>
-    <p>A case that has to be worked manually carries a surcharge, notified in advance under Annex&nbsp;2.3. All amounts are net of VAT. The list price column is shown for orientation only and is not the basis of any settlement.</p>%(note)s
+    <p>A case that has to be worked manually carries a surcharge, notified in advance under Annex&nbsp;2.3. All amounts are net of VAT.</p>%(note)s
     %(end)s""" % {
         "begin": BEGIN, "rows": u"\n".join(rows), "note": note, "end": END,
     }
@@ -186,7 +214,8 @@ def jurisdictions_fragment(js, data=None):
              u"STP's fifteen priority jurisdictions; the letter is the price tier per "
              u'section&nbsp;2.1, and &mdash; marks a jurisdiction that is not on a tier. '
              u'Where a jurisdiction has no single national register, it is covered only '
-             u'through the sub-registers named below.</p>' % (len(js), nsub))
+             u'through the sub-registers named below. %s are not covered by this '
+             u'Agreement.</p>' % (len(js), nsub, u" and ".join(sorted(EXCLUDED.values()))))
 
     return u"%s\n%s\n%s\n    %s" % (BEGIN, intro, u"\n".join(out), END)
 
@@ -272,18 +301,23 @@ def main():
         if missing:
             problems.append("Annex 2.2 is missing %d of %d jurisdictions: %s"
                             % (len(missing), len(expected), ", ".join(missing[:8])))
+        for name in EXCLUDED.values():
+            if name in rendered:
+                problems.append("%s is excluded from the agreement but still in Annex 2.2" % name)
         if extra:
             problems.append("Annex 2.2 renders %d names not in the data: %s"
                             % (len(extra), ", ".join(extra[:8])))
         for tier in ("A", "B", "C", "D"):
             cost, _ = TIER_COST[tier]
             pat = (r'<td class="klass">%s</td><td class="price">%s &euro;</td>'
-                   r'<td class="price soft">[^<]*</td><td class="price">(\d+)</td>'
-                   % (tier, re.escape(cost)))
+                   r'<td class="price soft">%s &euro;</td><td class="price">%s &euro;</td>'
+                   r'<td class="price">(\d+)</td>'
+                   % (tier, re.escape(cost), re.escape(FIXED_FEE),
+                      re.escape(price_per_case(cost))))
             mm = re.search(pat, html)
             if not mm:
                 problems.append("tier %s row missing, reformatted, or its "
-                                "procurement cost changed" % tier)
+                                "procurement cost / fixed fee changed" % tier)
             elif int(mm.group(1)) != c[tier]:
                 problems.append("tier %s says %s jurisdictions, data has %d"
                                 % (tier, mm.group(1), c[tier]))
