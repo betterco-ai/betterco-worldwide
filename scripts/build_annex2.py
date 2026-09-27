@@ -48,8 +48,9 @@ FIXED_FEE = "7,50"
 
 # Jurisdictions taken out of the agreement at STP's request (comment #17,
 # confirmed 23.09.2026): STP has its own register access there. They stay in
-# price_bands.json; they are excluded from Annex 2 only.
-EXCLUDED = {"DE": "Germany", "AT": "Austria"}
+# price_bands.json; they are excluded from Annex 2 only. Austria was excluded
+# too until 27.09.2026, when STP (Fabian Puls, 25.09.) asked to keep it.
+EXCLUDED = {"DE": "Germany"}
 
 BAND_TO_TIER = {"Low": "A", "Medium": "B", "High": "C", "Premium": "D"}
 
@@ -214,8 +215,9 @@ def jurisdictions_fragment(js, data=None):
              u"STP's fifteen priority jurisdictions; the letter is the price tier per "
              u'section&nbsp;2.1, and &mdash; marks a jurisdiction that is not on a tier. '
              u'Where a jurisdiction has no single national register, it is covered only '
-             u'through the sub-registers named below. %s are not covered by this '
-             u'Agreement.</p>' % (len(js), nsub, u" and ".join(sorted(EXCLUDED.values()))))
+             u'through the sub-registers named below. %s %s not covered by this '
+             u'Agreement.</p>' % (len(js), nsub, u" and ".join(sorted(EXCLUDED.values())),
+                                 u"is" if len(EXCLUDED) == 1 else u"are"))
 
     return u"%s\n%s\n%s\n    %s" % (BEGIN, intro, u"\n".join(out), END)
 
