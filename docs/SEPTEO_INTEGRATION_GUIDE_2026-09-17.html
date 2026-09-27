@@ -122,7 +122,7 @@
 <header class="top">
   <p class="eyebrow">BetterCo &middot; integration guidelines &middot; 17 September, revised 19 September 2026</p>
   <h1>Document Search Integration</h1>
-  <p class="lede">Order a company, wait, collect its documents. Four calls end to end &mdash; sections 01 to 04 are that path in order, and everything after them is reference you look up when you hit it. Section 06 covers the company check you asked about on 17 September, which is designed but not yet live.</p>
+  <p class="lede">Order a company, wait, collect its documents. Four calls end to end &mdash; sections 01 to 04 are that path in order, and everything after them is reference you look up when you hit it. Section 06 covers the company check you asked about on 17 September, which is built and in review, not yet deployed.</p>
   <dl class="meta">
     <div><dt>For</dt><dd>Septeo integration team</dd></div>
     <div><dt>API</dt><dd>BetterCo REST API v2.0.0</dd></div>
@@ -359,7 +359,7 @@ curl -s -H "Authorization: Bearer $TOKEN" -o document.pdf \
 
   <div class="flag">
     <span class="k">Not available yet &mdash; please do not build against this as if it were live</span>
-    <p>These two endpoints are <strong>not deployed on any environment</strong>. The design is settled and the implementation sits on a branch with 68 tests, but it has never been called over HTTP. It is documented here so you can design your gate against a fixed shape instead of guessing it. <strong>We will tell you when it is live.</strong></p>
+    <p>These two endpoints are <strong>not yet deployed on stg.betterco.ai or app.betterco.ai</strong>. The implementation is finished and in review: 69 unit tests and an integration test that calls both endpoints over HTTP, all green on 27 September. The shape below is the one being shipped, so you can build your gate against it now. <strong>We will tell you when it is live on staging.</strong></p>
   </div>
 
   <p>One free call answers &ldquo;is this registry entry the company in my record?&rdquo; before you create a case. Creating the case remains the only billable action, so checking first costs nothing.</p>
@@ -369,23 +369,21 @@ curl -s -H "Authorization: Bearer $TOKEN" -o document.pdf \
 { "jurisdiction": "NL", "name": "Sur la Pree B.V.", "registerNumber": "24175625" }
 
 <span class="c">&rarr; 200</span>
-{ "score": 70,
-  "bandId": "NUMBER_AND_NAME_CONFLICT",
-  "rulesVersion": "2026-09-19.2",
+{ "score": 85,
+  "bandId": "NAME_ONLY",
+  "rulesVersion": "2026-09-21.1",
   "checkable": true, "orderable": true,
   "selection": "a conflict governs; otherwise the highest band; ties to foundBy=NUMBER",
-  "signals": { "lookups": ["NUMBER","NAME"], "numberSupplied": true,
-               "numberComparable": true, "candidateCount": 2 },
+  "signals": { "lookups": ["NAME"], "numberSupplied": true,
+               "numberComparable": false, "candidateCount": 1 },
   "candidates": [
-    { "foundBy": "NUMBER", "score": 70, "bandId": "NUMBER_AND_NAME_CONFLICT",
-      "rawname": "Barcarolle Holding B.V.", "externalCode": "24175625",
-      "signals": { "numberMatches": true, "nameMatch": "DIFFERENT", "scriptDiffers": false } },
     { "foundBy": "NAME", "score": 85, "bandId": "NAME_ONLY",
       "rawname": "Sur la Pree B.V.", "externalCode": "54406951",
-      "signals": { "numberMatches": false, "nameMatch": "EQUAL" } }
+      "signals": { "numberMatches": false, "nameMatch": "EQUAL", "scriptDiffers": false } }
   ] }</pre>
 
-  <p>That example is your own row 15 from the September simulation: the <code>24175625</code> you sent is a Vestigingsnummer, and read as a KvK number it resolves to a different company. You get both candidates and the conflict named, rather than a single number to trust.</p>
+  <p>That example is your own row 15 from the September simulation. The <code>24175625</code> you sent is a Vestigingsnummer; read as a KvK number it belongs to a different company. For the Netherlands we have not yet measured that the registry id in a search result is the KvK number, so the number is <strong>not looked up</strong>: <code>lookups</code> contains only <code>NAME</code>, <code>numberComparable</code> is <code>false</code>, and the answer is 85 from the name alone. It does not yet catch the wrong number.</p>
+  <p>In a jurisdiction where the number is comparable (see below), the number is looked up separately from the name. The same record would then return two candidates &mdash; the company the number belongs to, found by <code>NUMBER</code>, and yours, found by <code>NAME</code> &mdash; and the answer would be <strong>70, <code>NUMBER_AND_NAME_CONFLICT</code></strong>, with both candidates listed rather than a single number to trust.</p>
 
   <h3>The bands</h3>
   <div class="table-wrap">
@@ -394,24 +392,25 @@ curl -s -H "Authorization: Bearer $TOKEN" -o document.pdf \
       <tbody>
         <tr><td class="st">100</td><td class="code">NUMBER_AND_NAME</td><td>Your number and your name both match the same company.</td></tr>
         <tr><td class="st">95</td><td class="code">NUMBER_RESOLVES_SCRIPT_DIFFERS</td><td>Your number matches; the names are in different scripts and cannot be compared. Your two Bulgarian rows.</td></tr>
-        <tr><td class="st">85</td><td class="code">NAME_ONLY</td><td>Found by name. The number matched nothing, or none was sent.</td></tr>
+        <tr><td class="st">85</td><td class="code">NAME_ONLY</td><td>Found by the name search. The number matched nothing, was not sent, or could not be compared. <strong>This band does not say the name is equal</strong> &mdash; read <code>candidates[].signals.nameMatch</code>.</td></tr>
         <tr><td class="st">70</td><td class="code">NUMBER_AND_NAME_CONFLICT</td><td>Your number resolves to one company and your name to another. The strongest evidence that a number is wrong.</td></tr>
         <tr><td class="st">70</td><td class="code">NUMBER_RESOLVES_OTHER_COMPANY</td><td>Your number resolves to a differently named company, and nothing came back for the name.</td></tr>
         <tr><td class="st">10</td><td class="code">NO_HIT</td><td>Nothing found.</td></tr>
-        <tr><td class="st">0</td><td class="code">NO_COMPANY_REGISTER</td><td>Not a company register at all &mdash; your row 16 was an association with a ZVR number.</td></tr>
+        <tr><td class="st">0</td><td class="code">NO_COMPANY_REGISTER</td><td>Not a company register at all &mdash; for example an Austrian ZVR number, as in your row 16, which was an association.</td></tr>
       </tbody>
     </table>
   </div>
   <p>Two bands share the score 70 deliberately: the score is what your threshold compares against, and the id tells you which kind of doubt it is.</p>
+  <p><strong>Gate on 85 only together with <code>nameMatch</code>.</strong> Every candidate the name search returns scores 85, whether or not its name equals yours; the ranking puts an equal name first. A rule such as &ldquo;score &ge; 85 and the best candidate&rsquo;s <code>nameMatch</code> is <code>EQUAL</code>&rdquo; accepts your record and not a similarly named company.</p>
 
   <div class="flag">
     <span class="k">Read signals.numberComparable before acting on an 85</span>
     <p>A register number can only be compared where we have measured that the registry id in a search result really is that country&rsquo;s register number. Where we have not, <code>numberComparable</code> is <strong>false</strong>, the number is carried but never treated as resolved, and <strong>85 is a ceiling rather than a verdict</strong> &mdash; it does not mean your number is wrong, it means we could not check it.</p>
-    <p>At the time of writing <em>no</em> jurisdiction is on that measured list, so every answer would be capped at 85. We would rather ship that honestly than let a 100 mean two different things. Expect the list to fill jurisdiction by jurisdiction, and read the field rather than the number alone.</p>
+    <p>Measured so far: <strong>United Kingdom, Ireland, Singapore and Hong Kong</strong>. Only there can an answer reach 95 or 100, or report a number conflict. Everywhere else 85 is the ceiling. We would rather ship that honestly than let a 100 mean two different things. The list grows jurisdiction by jurisdiction and is published in the rules (below); read the field rather than the number alone.</p>
   </div>
 
   <h3>A company in liquidation is the same company</h3>
-  <p>Where a registrar appends a status to the name &mdash; the Firmenbuch holds <em>&ldquo;E.M.A. Pharma GmbH in Liqu.&rdquo;</em> for your row 7 &mdash; the suffix is removed before names are compared, so those rows do not score as mismatches. The status still reaches you as <code>companyStatus</code> on the candidate. You told us those were the most interesting rows for a monitoring test; a threshold must not discard them.</p>
+  <p>Where a registrar appends a status to the name &mdash; the Firmenbuch holds <em>&ldquo;E.M.A. Pharma GmbH in Liqu.&rdquo;</em> for your row 7 &mdash; the suffix is removed before names are compared, so those rows do not score as mismatches. The status itself is not part of the match answer; the free search (<code>GET &hellip;/document-search/cases/search</code>) returns it with each hit. You told us those were the most interesting rows for a monitoring test; a threshold must not discard them.</p>
 
   <h3>The rules, published and versioned</h3>
   <p class="ep">GET /workspaces/{workspaceId}/document-search/match/rules</p>
